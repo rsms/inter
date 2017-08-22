@@ -77,6 +77,7 @@ code {
   /*background: rgba(0,0,0,0.05);*/
   border-radius:1px;
   padding: 0.5em 0;
+  overflow: scroll;
 }
 
 h1, h2, h3 {
@@ -86,8 +87,10 @@ h1 {
   color: #333;
   font-size: 38px;
   letter-spacing: -1.3px;
-  line-height: 60px;
+  line-height: 40px;
   text-indent: -2px;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 h2 {
   font-size: 24px;
@@ -109,6 +112,7 @@ h1 > a, h2 > a, h3 > a {
   /*background: white;*/
 }
 .row > * {
+  width:100%;
   max-width: 888px;
   flex: 1 0 100%;
   /*background: white;*/
@@ -184,7 +188,7 @@ a > img {
     <div class="row white"><div>
       <h2><a id="sample" href="#sample">Sample</a></h2>
       <p>
-        <img src="res/sample.png" width="888">
+        <img src="res/sample.png" style="width:100%">
       </p>
     </div></div>
 

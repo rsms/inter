@@ -2,8 +2,8 @@
 set -e
 cd "$(dirname "$0")"
 
-if [ ! -s docs/lab/fonts ]; then
-  ln -s ../../build/dist docs/lab/fonts
+if [ ! -s lab/fonts ]; then
+  ln -s ../../build/dist lab/fonts
 fi
 
 if (which caddy >/dev/null); then
