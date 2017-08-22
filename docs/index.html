@@ -145,6 +145,20 @@ h1 > a, h2 > a, h3 > a {
   color: #ccc;
   background: none;
 }
+a > img {
+  display: block;
+}
+
+#repertoire-image {
+  display:block;
+  width:100%;
+  height:40vw;
+  background-image: url(res/repertoire.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #f4f4f4;
+}
 
     </style>
   </head>
@@ -221,10 +235,15 @@ h1 > a, h2 > a, h3 > a {
       <p>
       Interface works great for English–language text, and pretty well for other
       latin and cyrillic languages. There's still a lot of work to be done, and
-      <a href="https://github.com/rsms/interface#contributing">contributions are warmly welcomed</a>.
+      <a href="https://github.com/rsms/interface#contributing">contributions are warmly welcomed</a>. The playground contains <a href="lab/?sample=Body%20text%201&size=16">a lot of samples</a>, including some common <a href="lab/?sample=Kerning%20body%20multi-lang&size=16">non English–language words in the playground.</a>
+      </p>
+
+      <p>
+      <a href="lab/?sample=Repertoire&size=42" id="repertoire-image"></a>
+      </p>
+      <p>
       Please refer to the <a href="lab/?sample=Repertoire&size=42">glyph repertoire</a>
       for an overview of currently–available glyphs and their quality.
-      You can also look at some common <a href="lab/?sample=Kerning%20body%20multi-lang&size=16">non English–language words in the playground.</a>
       </p>
     </div></div>
 
