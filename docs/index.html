@@ -169,6 +169,27 @@ h1 > a, h2 > a, h3 > a {
   color: #ccc;
   background: none;
 }
+
+.row ::selection {
+  background: rgb(48, 112, 232);
+  color: white;
+  text-shadow: none;
+}
+.row ::-moz-selection {
+  background: rgb(48, 112, 232);
+  color: white;
+  text-shadow: none;
+}
+
+.row.dark ::selection {
+  background: rgb(218, 228, 255);
+  color: black;
+}
+.row.dark ::-moz-selection {
+  background: rgb(164, 188, 255);
+  color: black;
+}
+
 a > img {
   display: block;
 }
