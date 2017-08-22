@@ -2,6 +2,10 @@
 set -e
 cd "$(dirname "$0")"
 
+if [ ! -s docs/lab/fonts ]; then
+  ln -s ../../build/dist docs/lab/fonts
+fi
+
 if (which caddy >/dev/null); then
   caddy_args=(\
     -host localhost \
