@@ -54,7 +54,14 @@ build system will tell you when a glyph fails to "mix" with an error message.
 To make life a little easier when working on glyphs, the build system will not stop
 if there's a glyph-mixing error, but instead just pick a glyph from one of the
 master weights and continue. For this reason you need to look at the output from
-the build system and watch out for "mix glyph" error messages.
+the build system and watch out for "mixglyph" error messages. They look like this:
+
+```
+mixglyph failed for J
+```
+
+> Note: There's currently one intentional mixglyph error for "quotedblbase" —
+> please ignore this for now (also, feel free to fix it :) )
 
 
 ### Generated glyphs
