@@ -42,33 +42,17 @@ body {
 
 a {
   color: inherit;
-  text-decoration: inherit;
-  background-image:
-    linear-gradient(to bottom,
-      rgba(0,0,0,.6) 50%,
-      rgba(0,0,0,0) 50%);
-  background-repeat: repeat-x;
-  background-size: 2px .1em;
-  background-position: 0 1.07em;
-  text-shadow:
-    /* creates "openings" for descenders in the underline */
-    -1px -1px 0 #f4f4f4,
-    1px -1px 0  #f4f4f4,
-    -1px 1px 0  #f4f4f4,
-    1px 1px 0   #f4f4f4;
+  text-decoration: underline;
   word-break: break-word;
   word-wrap: break-word;
 }
 a:hover {
   color: rgb(48, 112, 232);
-  background-image:
-    linear-gradient(to bottom,
-      rgba(48, 112, 232, 1) 50%,
-      rgba(48, 112, 232, 0) 50%);
 }
 a.plain {
   background:none;
   text-shadow:none;
+  text-decoration:none;
 }
 p {
   margin: 20px 0;
@@ -104,6 +88,7 @@ h2 {
 
 h1 > a, h2 > a, h3 > a {
   color: inherit;
+  text-decoration: none;
   text-shadow: none;
   background: none !important;
 }
@@ -133,14 +118,6 @@ h1 > a, h2 > a, h3 > a {
 .row.white {
   background: white;
 }
-.row.white a {
-  text-shadow:
-    /* creates "openings" for descenders in the underline */
-    -1px -1px 0 white,
-    1px -1px 0  white,
-    -1px 1px 0  white,
-    1px 1px 0   white;
-}
 
 .row.dark {
   background: #2b2b2b;
@@ -148,26 +125,60 @@ h1 > a, h2 > a, h3 > a {
 }
 .row.dark a:hover {
   color: rgb(164, 188, 255);
-  background-image:
-    linear-gradient(to bottom,
-      rgba(164, 188, 255, 1) 50%,
-      rgba(164, 188, 255, 0) 50%);
-}
-.row.dark a {
-  background-image:
-    linear-gradient(to bottom,
-      rgba(255,255,255,.3) 50%,
-      rgba(255,255,255,0) 50%);
-  text-shadow:
-    /* creates "openings" for descenders in the underline */
-    -1px -1px 0 #2b2b2b,
-    1px -1px 0  #2b2b2b,
-    -1px 1px 0  #2b2b2b,
-    1px 1px 0   #2b2b2b;
 }
 .row.dark h2, .row.dark h2 > a {
   color: #ccc;
   background: none;
+}
+
+/* Medium.com-style link underline for high-density displays */
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  a {
+    text-decoration: none;
+    background-image:
+      linear-gradient(to bottom,
+        rgba(0,0,0,.6) 50%,
+        rgba(0,0,0,0) 50%);
+    background-repeat: repeat-x;
+    background-size: 2px .1em;
+    background-position: 0 1.07em;
+    text-shadow:
+      /* creates "openings" for descenders in the underline */
+      -1px -1px 0 #f4f4f4,
+      1px -1px 0  #f4f4f4,
+      -1px 1px 0  #f4f4f4,
+      1px 1px 0   #f4f4f4;
+  }
+  a:hover {
+    background-image:
+      linear-gradient(to bottom,
+        rgba(48, 112, 232, 1) 50%,
+        rgba(48, 112, 232, 0) 50%);
+  }
+  .row.white a {
+    text-shadow:
+      -1px -1px 0 white,
+      1px -1px 0  white,
+      -1px 1px 0  white,
+      1px 1px 0   white;
+  }
+  .row.dark a {
+    background-image:
+      linear-gradient(to bottom,
+        rgba(255,255,255,.3) 50%,
+        rgba(255,255,255,0) 50%);
+    text-shadow:
+      -1px -1px 0 #2b2b2b,
+      1px -1px 0  #2b2b2b,
+      -1px 1px 0  #2b2b2b,
+      1px 1px 0   #2b2b2b;
+  }
+  .row.dark a:hover {
+    background-image:
+      linear-gradient(to bottom,
+        rgba(164, 188, 255, 1) 50%,
+        rgba(164, 188, 255, 0) 50%);
+  }
 }
 
 .row ::selection {
