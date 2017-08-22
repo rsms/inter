@@ -937,10 +937,11 @@ canvas {
     <script type="text/javascript">
 
 const fontVersion = Math.round(Date.now()).toString(36)
-const fontFamilyName = 'Interface-v' + fontVersion
+let fontFamilyName = 'Interface-v' + fontVersion
 const fontCSSTemplate = document.querySelector('#font-css')
 const fontCSS = fontCSSTemplate.cloneNode(true)
 fontCSS.innerHTML = fontCSS.innerHTML.replace(/Interface-VERSION/g, fontFamilyName)
+fontFamilyName += ', Interface'
 fontCSS.setAttribute('id', '')
 fontCSS.setAttribute('type', 'text/css')
 document.head.appendChild(fontCSS)
