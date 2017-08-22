@@ -97,6 +97,7 @@ dist:
 	rm -rf docs/font-files
 	mkdir docs/font-files
 	cp -a build/dist/*.woff build/dist/*.woff2 docs/font-files/
+	misc/versionize-css.py
 	@echo "——————————————————————————————————————————————————————————————————"
 	@echo ""
 	@echo "Next step:"
