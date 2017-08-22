@@ -234,18 +234,29 @@ After you rebuild some font files, reload the web page to refresh fonts.
 
 No, you don't. To build font files, all you need is Python. To edit the font files, you need something that can edit UFO files (like [RoboFont](http://robofont.com/) or a text editor.)
 
+----
 
 > `KeyError: 'Lj'` when building
 
 This probably means that you need to run `./init.sh` to setup the case-sensitive virtual file system mount that is needed by the font build system. Unfortunately the toolchain used (which is the same as for Roboto) requires not only a case-preserving file system, but also a case-sensitive one.
 
+----
 
 > `ImportError: No module named robofab.objects.objectsRF`
 
 Python virtualenv not configured. Run `. init.sh`
 
+----
 
 > `make: *** No rule to make target ...`
 
 Run `./init.sh` to update the generated makefile.
 
+----
+
+> How can I inspect a compiled font file?
+
+Use the fontinfo.py tool which outputs JSON describing all properties of
+one or more font files.
+See `misc/fontinfo.py -h` for details.
+Example use: `misc/fontinfo.py build/dist/Interface-BoldItalic.ttf`
