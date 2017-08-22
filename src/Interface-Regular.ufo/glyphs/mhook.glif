@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="mhook" format="1">
+  <advance width="2528"/>
+  <unicode hex="0271"/>
+  <outline>
+    <contour>
+      <point x="1984" y="472" type="line"/>
+      <point x="1984" y="-192" type="line" smooth="yes"/>
+      <point x="1984" y="-352"/>
+      <point x="1904" y="-408"/>
+      <point x="1776" y="-408" type="curve" smooth="yes"/>
+      <point x="1756" y="-408"/>
+      <point x="1724" y="-404"/>
+      <point x="1700" y="-396" type="curve"/>
+      <point x="1700" y="-580" type="line"/>
+      <point x="1740" y="-592"/>
+      <point x="1800" y="-600"/>
+      <point x="1840" y="-600" type="curve" smooth="yes"/>
+      <point x="2064" y="-600"/>
+      <point x="2260" y="-456"/>
+      <point x="2260" y="-192" type="curve" smooth="yes"/>
+      <point x="2260" y="472" type="line"/>
+    </contour>
+    <component base="m" xOffset="-16"/>
+    <contour>
+      <point x="1232" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1232" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="2448" y="1776" type="move" name="top0315"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2463, 'leftMargin': 256, 'rightMargin': 159}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

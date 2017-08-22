@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kadescendercyrillic" format="1">
+  <advance width="1760"/>
+  <unicode hex="049B"/>
+  <outline>
+    <contour>
+      <point x="1504" y="1744" type="move" name="top0315"/>
+    </contour>
+    <component base="kacyrillic" xOffset="-32"/>
+    <component base="cyrillictic" xOffset="1172"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1680, 'leftMargin': 213, 'rightMargin': 71}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

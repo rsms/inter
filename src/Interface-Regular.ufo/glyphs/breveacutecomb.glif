@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="breveacutecomb" format="1">
+  <advance width="1248"/>
+  <outline>
+    <contour>
+      <point x="632" y="1792" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="820" y="2004" type="line"/>
+      <point x="820" y="1920"/>
+      <point x="764" y="1848"/>
+      <point x="624" y="1848" type="curve" smooth="yes"/>
+      <point x="480" y="1848"/>
+      <point x="428" y="1920"/>
+      <point x="428" y="2004" type="curve"/>
+      <point x="204" y="2004" type="line"/>
+      <point x="204" y="1836"/>
+      <point x="364" y="1716"/>
+      <point x="624" y="1716" type="curve" smooth="yes"/>
+      <point x="884" y="1716"/>
+      <point x="1044" y="1836"/>
+      <point x="1044" y="2004" type="curve"/>
+    </contour>
+    <contour>
+      <point x="544" y="2036" type="line"/>
+      <point x="692" y="2036" type="line"/>
+      <point x="916" y="2308" type="line"/>
+      <point x="692" y="2308" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.87</real>
+        <real>0.87</real>
+        <real>0.87</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1284, 'leftMargin': 176, 'rightMargin': 268}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

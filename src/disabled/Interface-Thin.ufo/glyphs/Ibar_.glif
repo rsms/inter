@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Ibar" format="1">
+  <advance width="1024"/>
+  <unicode hex="0197"/>
+  <outline>
+    <contour>
+      <point x="552" y="2216" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="984" y="2216" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="552" y="0" type="move" name="bottom"/>
+    </contour>
+    <component base="I" xOffset="184"/>
+    <component base="crossbar"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.798</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 862, 'leftMargin': -13, 'rightMargin': 67}</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Hcedilla" format="1">
+  <advance width="2016"/>
+  <unicode hex="1E28"/>
+  <outline>
+    <component base="H" xOffset="-8"/>
+    <component base="cedilla" xOffset="-24"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2012, 'leftMargin': 239, 'rightMargin': 220}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

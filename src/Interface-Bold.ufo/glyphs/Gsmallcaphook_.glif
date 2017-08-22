@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Gsmallcaphook" format="1">
+  <advance width="2048"/>
+  <unicode hex="029B"/>
+  <outline>
+    <contour>
+      <point x="876" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="876" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1908" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1564" y="984" type="line"/>
+      <point x="1564" y="1184" type="line" smooth="yes"/>
+      <point x="1564" y="1336"/>
+      <point x="1696" y="1372"/>
+      <point x="1800" y="1372" type="curve" smooth="yes"/>
+      <point x="1840" y="1372"/>
+      <point x="1872" y="1364"/>
+      <point x="1908" y="1360" type="curve"/>
+      <point x="1908" y="1656" type="line"/>
+      <point x="1844" y="1672"/>
+      <point x="1792" y="1680"/>
+      <point x="1728" y="1680" type="curve" smooth="yes"/>
+      <point x="1436" y="1680"/>
+      <point x="1260" y="1504"/>
+      <point x="1260" y="1184" type="curve" smooth="yes"/>
+      <point x="1260" y="984" type="line"/>
+    </contour>
+    <component base="Gsmallcap" xOffset="16"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1849, 'leftMargin': 79, 'rightMargin': 0}</string>
+    </dict>
+  </lib>
+</glyph>

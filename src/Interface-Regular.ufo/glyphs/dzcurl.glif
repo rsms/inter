@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dzcurl" format="1">
+  <advance width="3040"/>
+  <unicode hex="02A5"/>
+  <outline>
+    <contour>
+      <point x="1820" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1820" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="2904" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1596" y="-140" type="line"/>
+      <point x="1792" y="-284" type="line"/>
+      <point x="2100" y="184" type="line"/>
+      <point x="2256" y="416"/>
+      <point x="2368" y="564"/>
+      <point x="2492" y="564" type="curve" smooth="yes"/>
+      <point x="2560" y="564"/>
+      <point x="2608" y="524"/>
+      <point x="2608" y="456" type="curve" smooth="yes"/>
+      <point x="2608" y="304"/>
+      <point x="2444" y="220"/>
+      <point x="2268" y="220" type="curve" smooth="yes"/>
+      <point x="2120" y="220" type="line"/>
+      <point x="2120" y="0" type="line"/>
+      <point x="2268" y="0" type="line" smooth="yes"/>
+      <point x="2584" y="0"/>
+      <point x="2864" y="188"/>
+      <point x="2864" y="464" type="curve" smooth="yes"/>
+      <point x="2864" y="652"/>
+      <point x="2744" y="788"/>
+      <point x="2508" y="788" type="curve" smooth="yes"/>
+      <point x="2236" y="788"/>
+      <point x="2092" y="568"/>
+      <point x="1824" y="184" type="curve"/>
+    </contour>
+    <contour>
+      <point x="2224" y="220" type="line"/>
+      <point x="1420" y="220" type="line"/>
+      <point x="1420" y="0" type="line"/>
+      <point x="2224" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="2460" y="1300" type="line"/>
+      <point x="2460" y="1488" type="line"/>
+      <point x="2288" y="1488" type="line"/>
+      <point x="1316" y="200" type="line"/>
+      <point x="1316" y="0" type="line"/>
+      <point x="1484" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="2340" y="1488" type="line"/>
+      <point x="1296" y="1488" type="line"/>
+      <point x="1296" y="1268" type="line"/>
+      <point x="2340" y="1268" type="line"/>
+    </contour>
+    <component base="d" xOffset="-80"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2985, 'leftMargin': 256, 'rightMargin': 41}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

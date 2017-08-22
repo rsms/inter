@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="khook" format="1">
+  <advance width="1504"/>
+  <unicode hex="0199"/>
+  <outline>
+    <contour>
+      <point x="404" y="1596" type="line"/>
+      <point x="128" y="1596" type="line"/>
+      <point x="128" y="0" type="line"/>
+      <point x="404" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1308" y="1488" type="line"/>
+      <point x="972" y="1488" type="line"/>
+      <point x="536" y="1012" type="line"/>
+      <point x="268" y="692" type="line"/>
+      <point x="292" y="400" type="line"/>
+      <point x="668" y="792" type="line"/>
+    </contour>
+    <contour>
+      <point x="1056" y="0" type="line"/>
+      <point x="1376" y="0" type="line"/>
+      <point x="684" y="940" type="line"/>
+      <point x="544" y="700" type="line"/>
+    </contour>
+    <contour>
+      <point x="404" y="1528" type="line"/>
+      <point x="404" y="1732" type="line" smooth="yes"/>
+      <point x="404" y="1892"/>
+      <point x="484" y="1948"/>
+      <point x="608" y="1948" type="curve" smooth="yes"/>
+      <point x="632" y="1948"/>
+      <point x="660" y="1944"/>
+      <point x="684" y="1936" type="curve"/>
+      <point x="684" y="2120" type="line"/>
+      <point x="648" y="2132"/>
+      <point x="588" y="2140"/>
+      <point x="548" y="2140" type="curve" smooth="yes"/>
+      <point x="324" y="2140"/>
+      <point x="128" y="1996"/>
+      <point x="128" y="1732" type="curve" smooth="yes"/>
+      <point x="128" y="1528" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1438, 'leftMargin': 190, 'rightMargin': 0}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

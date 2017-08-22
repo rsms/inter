@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniA690" format="1">
+  <advance width="1760"/>
+  <unicode hex="A690"/>
+  <outline>
+    <contour>
+      <point x="668" y="188" type="line"/>
+      <point x="452" y="188"/>
+      <point x="356" y="36"/>
+      <point x="356" y="-120" type="curve" smooth="yes"/>
+      <point x="356" y="-316"/>
+      <point x="500" y="-416"/>
+      <point x="704" y="-416" type="curve" smooth="yes"/>
+      <point x="756" y="-416"/>
+      <point x="844" y="-408"/>
+      <point x="916" y="-352" type="curve"/>
+      <point x="876" y="-216" type="line"/>
+      <point x="840" y="-244"/>
+      <point x="788" y="-256"/>
+      <point x="728" y="-256" type="curve" smooth="yes"/>
+      <point x="640" y="-256"/>
+      <point x="568" y="-220"/>
+      <point x="568" y="-124" type="curve" smooth="yes"/>
+      <point x="568" y="-36"/>
+      <point x="620" y="0"/>
+      <point x="688" y="0" type="curve"/>
+      <point x="688" y="188" type="line"/>
+    </contour>
+    <component base="T" xOffset="-16"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1680, 'leftMargin': 128, 'rightMargin': 16}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

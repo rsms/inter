@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="lrthook" format="1">
+  <advance width="1024"/>
+  <unicode hex="026D"/>
+  <outline>
+    <contour>
+      <point x="312" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="312" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="868" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="268" y="2112" type="line"/>
+      <point x="268" y="-124" type="line" smooth="yes"/>
+      <point x="268" y="-432"/>
+      <point x="360" y="-600"/>
+      <point x="604" y="-600" type="curve" smooth="yes"/>
+      <point x="660" y="-600"/>
+      <point x="704" y="-592"/>
+      <point x="760" y="-572" type="curve"/>
+      <point x="740" y="-504" type="line"/>
+      <point x="712" y="-512"/>
+      <point x="656" y="-528"/>
+      <point x="604" y="-528" type="curve" smooth="yes"/>
+      <point x="400" y="-528"/>
+      <point x="340" y="-380"/>
+      <point x="340" y="-124" type="curve" smooth="yes"/>
+      <point x="340" y="2112" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>2140.875</real>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.939</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 835, 'leftMargin': 234, 'rightMargin': 110}</string>
+    </dict>
+  </lib>
+</glyph>

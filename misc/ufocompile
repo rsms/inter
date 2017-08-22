@@ -1,0 +1,163 @@
+#!/usr/bin/env python
+import os
+import sys
+import argparse
+import logging
+import subprocess
+
+from robofab.objects.objectsRF import RPoint
+from robofab.world import OpenFont
+from fontbuild.Build import FontProject
+from fontbuild.mix import Master
+from fontbuild.mix import Mix
+
+FAMILYNAME = "Interface"
+BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+
+def extractSpecializedGlyphs(masterFont):
+  glyphSpecializations = {}
+  specializationSuffix = '.specz.'
+
+  specializedGlyphNames = []
+  font = masterFont.font
+  for g in font:
+    p = g.name.find(specializationSuffix)
+    if p == -1:
+      continue
+    name = g.name[:p]
+    category = g.name[p + len(specializationSuffix):]
+    g2 = g.copy()
+    g2.name = name
+    if name in font:
+      # copy unicodes
+      masterGlyph = font[name]
+      g2.unicodes = masterGlyph.unicodes
+    if not category in glyphSpecializations:
+      glyphSpecializations[category] = { name: g2 }
+    else:
+      glyphSpecializations[category][name] = g2
+    specializedGlyphNames.append(g.name)
+
+  ffont = masterFont.ffont
+  for name in specializedGlyphNames:
+    del ffont.glyphs[name]
+    font.removeGlyph(name)
+
+  return glyphSpecializations
+
+
+def readVersionControlTag(dir):
+  try:
+    return subprocess.check_output(
+      ['git', '-C', dir, 'rev-parse', '--short', 'HEAD'],
+      shell=False).strip()
+  except:
+    return ''
+
+
+# silence warnings from fontTools.misc.fixedTools that is harmless and caused by
+# the ufo2ft module.
+logging.getLogger('fontTools.misc.fixedTools').setLevel(logging.ERROR)
+
+default_out_dir = os.path.join(BASEDIR,'build','tmp')
+srcDir = os.path.join(BASEDIR, 'src')
+
+argparser = argparse.ArgumentParser(description='Build TTF and OTF font files from UFO sources.')
+
+argparser.add_argument('styles', metavar='<style>', type=str, nargs='*',
+                       help='Build specific styles. Omit to build all.')
+
+argparser.add_argument('--otf', dest='otf', action='store_const',
+                       const=True, default=False,
+                       help='Build OTF files')
+
+argparser.add_argument('--no-ttf', dest='no_ttf', action='store_const',
+                       const=True, default=False,
+                       help='Do not build TTF files')
+
+argparser.add_argument('--out', dest='out', metavar='<dir>', type=str,
+                       default=default_out_dir,
+                       help='Write output to <dir> instead of the default (%r)' % default_out_dir)
+
+args = argparser.parse_args()
+styles = [s.lower() for s in args.styles]
+ALL = len(styles) == 0
+
+# version control tag, if any
+buildTag = readVersionControlTag(BASEDIR)
+
+# Load masters
+rg = Master("%s/src/Interface-Regular.ufo" % BASEDIR)
+
+bd = None
+if ALL or 'bold' in styles or 'bolditalic' in styles or 'medium' in styles or 'mediumitalic' in styles:
+  bd = Master("%s/src/Interface-Bold.ufo" % BASEDIR)
+
+# th = None
+# thFont = None
+# if ALL or 'thin' in styles or 'thinitalic' in styles or 'light' in styles or 'lightitalic' in styles:
+#   th = Master("%s/src/Interface-Thin.ufo" % BASEDIR)
+
+glyphSpecializations = extractSpecializedGlyphs(rg)
+
+
+class Mix2(Mix):
+  def __init__(self, masters, v, glyphSpecializations=None):
+    Mix.__init__(self, masters, v)
+    self.glyphSpecializations = glyphSpecializations
+
+  def mixGlyphs(self, gname):
+    if self.glyphSpecializations is not None:
+      specializedGlyph = self.glyphSpecializations.get(gname)
+      if specializedGlyph is not None:
+        print 'mixglyph using specialized', gname
+        return specializedGlyph
+    return Mix.mixGlyphs(self, gname)
+
+
+proj = FontProject(rg.font, BASEDIR, os.path.join(srcDir,'fontbuild.cfg'), buildTag=buildTag)
+proj.builddir = args.out
+
+if args.otf:
+  proj.buildOTF = True
+
+
+if ALL or 'regular' in styles:
+  proj.generateFont(rg.font, "%s/Regular/Regular/Rg" % FAMILYNAME)
+
+if ALL or 'regularitalic' in styles:
+  proj.generateFont(rg.font, "%s/Regular Italic/Italic/Rg" % FAMILYNAME,
+                    italic=True, stemWidth=232, italicMeanYCenter=-825, italicNarrowAmount=1)
+
+if ALL or 'medium' in styles:
+  proj.generateFont(
+    Mix2([rg, bd], 0.35, glyphSpecializations['medium']),
+    "%s/Medium/Regular/Rg" % FAMILYNAME)
+
+if ALL or 'mediumitalic' in styles:
+  proj.generateFont(
+    Mix2([rg, bd], 0.35, glyphSpecializations['medium']),
+    "%s/Medium Italic/Italic/Rg" % FAMILYNAME,
+    italic=True, stemWidth=256, italicMeanYCenter=-825, italicNarrowAmount=1)
+
+if ALL or 'bold' in styles:
+  proj.generateFont(bd.font, "%s/Bold/Bold/Rg" % FAMILYNAME)
+
+if ALL or 'bolditalic' in styles:
+  proj.generateFont(bd.font, "%s/Bold Italic/Bold Italic/Rg" % FAMILYNAME,
+                    italic=True, stemWidth=290, italicMeanYCenter=-825, italicNarrowAmount=1)
+
+# if ALL or 'light' in styles:
+#   proj.generateFont(Mix([th, rg], 0.45), "%s/Light/Regular/Lt" % FAMILYNAME)
+
+# if ALL or 'lightitalic' in styles:
+#   proj.generateFont(rgFont, "%s/Light Italic/Italic/Lt" % FAMILYNAME,
+#                     italic=True, stemWidth=120)
+
+# proj.generateFont(th.font, "%s/Thin/Regular/Th" % FAMILYNAME)
+# proj.generateFont(th.font, "%s/Thin Italic/Italic/Th" % FAMILYNAME,
+#                   italic=True, stemWidth=80)
+
+# generate TTFs
+if args.no_ttf == False:
+  proj.generateTTFs()

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="trthook" format="1">
+  <advance width="992"/>
+  <unicode hex="0288"/>
+  <outline>
+    <contour>
+      <point x="496" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="624" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1008" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="900" y="1488" type="line"/>
+      <point x="84" y="1488" type="line"/>
+      <point x="84" y="1284" type="line"/>
+      <point x="900" y="1284" type="line"/>
+    </contour>
+    <contour>
+      <point x="352" y="1844" type="line"/>
+      <point x="352" y="-192" type="line" smooth="yes"/>
+      <point x="352" y="-456"/>
+      <point x="548" y="-600"/>
+      <point x="776" y="-600" type="curve" smooth="yes"/>
+      <point x="820" y="-600"/>
+      <point x="876" y="-596"/>
+      <point x="912" y="-584" type="curve"/>
+      <point x="912" y="-400" type="line"/>
+      <point x="888" y="-408"/>
+      <point x="856" y="-408"/>
+      <point x="836" y="-408" type="curve" smooth="yes"/>
+      <point x="708" y="-408"/>
+      <point x="628" y="-352"/>
+      <point x="628" y="-192" type="curve" smooth="yes"/>
+      <point x="628" y="1844" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 932, 'leftMargin': 8, 'rightMargin': 96}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

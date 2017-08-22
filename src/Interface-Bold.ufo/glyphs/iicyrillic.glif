@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="iicyrillic" format="1">
+  <advance width="1536"/>
+  <unicode hex="0438"/>
+  <outline>
+    <contour>
+      <point x="776" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1432" y="0" type="move" name="right"/>
+    </contour>
+    <contour>
+      <point x="1560" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="552" y="624" type="line"/>
+      <point x="552" y="1488" type="line"/>
+      <point x="108" y="1488" type="line"/>
+      <point x="108" y="0" type="line"/>
+      <point x="552" y="0" type="line"/>
+      <point x="988" y="868" type="line"/>
+      <point x="988" y="0" type="line"/>
+      <point x="1432" y="0" type="line"/>
+      <point x="1432" y="1488" type="line"/>
+      <point x="988" y="1488" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1585, 'leftMargin': 132, 'rightMargin': 129}</string>
+    </dict>
+  </lib>
+</glyph>

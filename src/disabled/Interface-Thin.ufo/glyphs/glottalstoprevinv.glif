@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="glottalstoprevinv" format="1">
+  <advance width="1536"/>
+  <unicode hex="0295"/>
+  <outline>
+    <contour>
+      <point x="812" y="2244" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="812" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1476" y="2244" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="796" y="712" type="line"/>
+      <point x="428" y="712"/>
+      <point x="264" y="1008"/>
+      <point x="264" y="1380" type="curve" smooth="yes"/>
+      <point x="264" y="1432" type="line" smooth="yes"/>
+      <point x="264" y="1800"/>
+      <point x="428" y="2100"/>
+      <point x="792" y="2100" type="curve" smooth="yes"/>
+      <point x="1040" y="2100"/>
+      <point x="1260" y="1952"/>
+      <point x="1272" y="1656" type="curve"/>
+      <point x="1348" y="1656" type="line"/>
+      <point x="1336" y="1996"/>
+      <point x="1080" y="2176"/>
+      <point x="792" y="2176" type="curve" smooth="yes"/>
+      <point x="412" y="2176"/>
+      <point x="188" y="1868"/>
+      <point x="188" y="1432" type="curve" smooth="yes"/>
+      <point x="188" y="1380" type="line" smooth="yes"/>
+      <point x="188" y="944"/>
+      <point x="412" y="636"/>
+      <point x="796" y="636" type="curve" smooth="yes"/>
+      <point x="832" y="636" type="line"/>
+      <point x="832" y="712" type="line"/>
+    </contour>
+    <contour>
+      <point x="772" y="0" type="line"/>
+      <point x="848" y="0" type="line"/>
+      <point x="848" y="712" type="line"/>
+      <point x="772" y="712" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>710.875</real>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.939</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1419.0, 'leftMargin': 133, 'rightMargin': 126.0}</string>
+    </dict>
+  </lib>
+</glyph>

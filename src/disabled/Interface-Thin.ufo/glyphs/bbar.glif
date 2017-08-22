@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="bbar" format="1">
+  <advance width="1536"/>
+  <unicode hex="0180"/>
+  <outline>
+    <contour>
+      <point x="880" y="-16" type="move" name="markbottom"/>
+    </contour>
+    <contour>
+      <point x="868" y="2216" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="544" y="1796" type="move" name="parenthesses.w2"/>
+    </contour>
+    <contour>
+      <point x="1636" y="2216" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="880" y="-16" type="move" name="bottom"/>
+    </contour>
+    <component base="b" xOffset="92"/>
+    <component base="crossbar" xOffset="-4" yOffset="768"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.798</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1559, 'leftMargin': 28, 'rightMargin': 201}</string>
+    </dict>
+  </lib>
+</glyph>

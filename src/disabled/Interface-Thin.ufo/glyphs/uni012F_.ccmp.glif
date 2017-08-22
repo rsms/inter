@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni012F.ccmp" format="1">
+  <advance width="512"/>
+  <outline>
+    <contour>
+      <point x="364" y="1744" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="636" y="1744" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="364" y="-632" type="move" name="bottom"/>
+    </contour>
+    <component base="dotlessi" xOffset="76"/>
+    <component base="ogonek" xOffset="-28" yOffset="16"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.798</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 558, 'leftMargin': -7, 'rightMargin': 190}</string>
+    </dict>
+  </lib>
+</glyph>

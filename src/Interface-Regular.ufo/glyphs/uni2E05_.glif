@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni2E05" format="1">
+  <advance width="1248"/>
+  <unicode hex="2E05"/>
+  <outline>
+    <contour>
+      <point x="540" y="2016" type="line"/>
+      <point x="1048" y="1512" type="line"/>
+      <point x="896" y="1360" type="line"/>
+      <point x="392" y="1868" type="line"/>
+    </contour>
+    <contour>
+      <point x="796" y="1512" type="line"/>
+      <point x="1048" y="1512" type="line"/>
+      <point x="1048" y="896" type="line"/>
+      <point x="796" y="896" type="line"/>
+    </contour>
+    <contour>
+      <point x="204" y="1360" type="curve" smooth="yes"/>
+      <point x="204" y="1276"/>
+      <point x="256" y="1212"/>
+      <point x="360" y="1212" type="curve" smooth="yes"/>
+      <point x="468" y="1212"/>
+      <point x="520" y="1276"/>
+      <point x="520" y="1360" type="curve" smooth="yes"/>
+      <point x="520" y="1444"/>
+      <point x="468" y="1512"/>
+      <point x="360" y="1512" type="curve" smooth="yes"/>
+      <point x="256" y="1512"/>
+      <point x="204" y="1444"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1063, 'leftMargin': 110, 'rightMargin': 110}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

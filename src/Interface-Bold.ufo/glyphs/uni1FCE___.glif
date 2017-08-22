@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni1FCE" format="1">
+  <advance width="1280"/>
+  <unicode hex="1FCE"/>
+  <outline>
+    <contour>
+      <point x="1012" y="2000" type="move" name="_tonos"/>
+    </contour>
+    <contour>
+      <point x="552" y="1624" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="612" y="1588" type="line"/>
+      <point x="740" y="1588" type="line"/>
+      <point x="1056" y="2028" type="line"/>
+      <point x="1056" y="2056" type="line"/>
+      <point x="768" y="2056" type="line"/>
+      <point x="612" y="1624" type="line"/>
+    </contour>
+    <contour>
+      <point x="564" y="2056" type="line"/>
+      <point x="328" y="2056" type="line"/>
+      <point x="328" y="1928" type="line" smooth="yes"/>
+      <point x="328" y="1824"/>
+      <point x="304" y="1744"/>
+      <point x="224" y="1692" type="curve"/>
+      <point x="340" y="1560" type="line"/>
+      <point x="468" y="1620"/>
+      <point x="564" y="1748"/>
+      <point x="564" y="1920" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1059, 'leftMargin': 114, 'rightMargin': 113}</string>
+    </dict>
+  </lib>
+</glyph>

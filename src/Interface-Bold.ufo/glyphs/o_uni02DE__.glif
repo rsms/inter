@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="o_uni02DE" format="1">
+  <advance width="2304"/>
+  <outline>
+    <contour>
+      <point x="2088" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="672" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="672" y="-16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="672" y="-16" type="move" name="markbottom"/>
+    </contour>
+    <contour>
+      <point x="1468" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1468" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <component base="o" xOffset="-120"/>
+    <component base="rhotichookmod" xOffset="1404"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.87</real>
+        <real>0.87</real>
+        <real>0.87</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2208, 'leftMargin': 184, 'rightMargin': -150}</string>
+    </dict>
+  </lib>
+</glyph>

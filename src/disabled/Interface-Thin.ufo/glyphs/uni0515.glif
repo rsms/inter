@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni0515" format="1">
+  <advance width="2048"/>
+  <unicode hex="0515"/>
+  <outline>
+    <contour>
+      <point x="468" y="1488" type="line"/>
+      <point x="440" y="812" type="line" smooth="yes"/>
+      <point x="416" y="228"/>
+      <point x="328" y="72"/>
+      <point x="132" y="72" type="curve" smooth="yes"/>
+      <point x="84" y="72" type="line"/>
+      <point x="84" y="0" type="line"/>
+      <point x="128" y="0" type="line" smooth="yes"/>
+      <point x="408" y="0"/>
+      <point x="492" y="232"/>
+      <point x="516" y="812" type="curve" smooth="yes"/>
+      <point x="544" y="1488" type="line"/>
+    </contour>
+    <contour>
+      <point x="884" y="1488" type="line"/>
+      <point x="508" y="1488" type="line"/>
+      <point x="508" y="1412" type="line"/>
+      <point x="884" y="1412" type="line"/>
+    </contour>
+    <component base="x" xOffset="700"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.939</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2008, 'leftMargin': 47, 'rightMargin': 77}</string>
+    </dict>
+  </lib>
+</glyph>

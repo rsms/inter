@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Nsmallcap" format="1">
+  <advance width="1504"/>
+  <unicode hex="0274"/>
+  <outline>
+    <contour>
+      <point x="748" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="748" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1544" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="424" y="1488" type="line"/>
+      <point x="1268" y="132" type="line"/>
+      <point x="1084" y="0" type="line"/>
+      <point x="244" y="1356" type="line"/>
+    </contour>
+    <contour>
+      <point x="424" y="0" type="line"/>
+      <point x="148" y="0" type="line"/>
+      <point x="148" y="1488" type="line"/>
+      <point x="424" y="1488" type="line"/>
+    </contour>
+    <contour>
+      <point x="1356" y="0" type="line"/>
+      <point x="1084" y="0" type="line"/>
+      <point x="1084" y="1488" type="line"/>
+      <point x="1356" y="1488" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1585, 'leftMargin': 188, 'rightMargin': 188}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

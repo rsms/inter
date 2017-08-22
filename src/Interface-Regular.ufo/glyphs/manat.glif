@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="manat" format="1">
+  <advance width="2016"/>
+  <unicode hex="20BC"/>
+  <outline>
+    <contour>
+      <point x="1816" y="0" type="line"/>
+      <point x="1816" y="252" type="line" smooth="yes"/>
+      <point x="1816" y="856"/>
+      <point x="1496" y="1224"/>
+      <point x="1008" y="1224" type="curve" smooth="yes"/>
+      <point x="536" y="1224"/>
+      <point x="200" y="856"/>
+      <point x="200" y="252" type="curve" smooth="yes"/>
+      <point x="200" y="0" type="line"/>
+      <point x="476" y="0" type="line"/>
+      <point x="476" y="252" type="line" smooth="yes"/>
+      <point x="476" y="736"/>
+      <point x="688" y="988"/>
+      <point x="1008" y="988" type="curve" smooth="yes"/>
+      <point x="1344" y="988"/>
+      <point x="1540" y="736"/>
+      <point x="1540" y="252" type="curve" smooth="yes"/>
+      <point x="1540" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1144" y="1488" type="line"/>
+      <point x="868" y="1488" type="line"/>
+      <point x="868" y="0" type="line"/>
+      <point x="1144" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1862, 'leftMargin': 124, 'rightMargin': 124}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="caron" format="1">
+  <advance width="1536"/>
+  <unicode hex="02C7"/>
+  <outline>
+    <contour>
+      <point x="772" y="1776" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="772" y="2268" type="move" name="mkmktop_acc"/>
+    </contour>
+    <contour>
+      <point x="568" y="2112" type="line"/>
+      <point x="188" y="2112" type="line"/>
+      <point x="188" y="2100" type="line"/>
+      <point x="628" y="1708" type="line"/>
+      <point x="912" y="1708" type="line"/>
+      <point x="1348" y="2100" type="line"/>
+      <point x="1348" y="2112" type="line"/>
+      <point x="972" y="2112" type="line"/>
+      <point x="772" y="1928" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1346, 'leftMargin': 89, 'rightMargin': 96}</string>
+    </dict>
+  </lib>
+</glyph>

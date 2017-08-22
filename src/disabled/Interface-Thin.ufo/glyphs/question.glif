@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="question" format="1">
+  <advance width="1280"/>
+  <unicode hex="003F"/>
+  <outline>
+    <contour>
+      <point x="644" y="552" type="line"/>
+      <point x="644" y="708"/>
+      <point x="688" y="856"/>
+      <point x="824" y="960" type="curve" smooth="yes"/>
+      <point x="1032" y="1144"/>
+      <point x="1128" y="1284"/>
+      <point x="1128" y="1528" type="curve" smooth="yes"/>
+      <point x="1128" y="1812"/>
+      <point x="964" y="2032"/>
+      <point x="656" y="2032" type="curve" smooth="yes"/>
+      <point x="388" y="2032"/>
+      <point x="160" y="1852"/>
+      <point x="156" y="1536" type="curve"/>
+      <point x="228" y="1536" type="line"/>
+      <point x="236" y="1784"/>
+      <point x="392" y="1956"/>
+      <point x="656" y="1956" type="curve" smooth="yes"/>
+      <point x="920" y="1956"/>
+      <point x="1052" y="1776"/>
+      <point x="1052" y="1528" type="curve" smooth="yes"/>
+      <point x="1052" y="1276"/>
+      <point x="956" y="1180"/>
+      <point x="788" y="1020" type="curve" smooth="yes"/>
+      <point x="624" y="868"/>
+      <point x="572" y="756"/>
+      <point x="568" y="552" type="curve"/>
+    </contour>
+    <contour>
+      <point x="536" y="68" type="curve" smooth="yes"/>
+      <point x="536" y="24"/>
+      <point x="568" y="-8"/>
+      <point x="612" y="-8" type="curve" smooth="yes"/>
+      <point x="656" y="-8"/>
+      <point x="688" y="24"/>
+      <point x="688" y="68" type="curve" smooth="yes"/>
+      <point x="688" y="112"/>
+      <point x="656" y="144"/>
+      <point x="612" y="144" type="curve" smooth="yes"/>
+      <point x="568" y="144"/>
+      <point x="536" y="112"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>2279.75</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>763.125</real>
+        </dict>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1228, 'leftMargin': 128, 'rightMargin': 127}</string>
+    </dict>
+  </lib>
+</glyph>

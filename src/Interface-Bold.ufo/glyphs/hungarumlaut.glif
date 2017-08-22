@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="hungarumlaut" format="1">
+  <advance width="1280"/>
+  <unicode hex="02DD"/>
+  <outline>
+    <contour>
+      <point x="484" y="1776" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="484" y="2256" type="move" name="mkmktop_acc"/>
+    </contour>
+    <contour>
+      <point x="560" y="1700" type="line"/>
+      <point x="876" y="1700" type="line"/>
+      <point x="1240" y="2112" type="line"/>
+      <point x="868" y="2112" type="line"/>
+    </contour>
+    <contour>
+      <point x="40" y="1700" type="line"/>
+      <point x="356" y="1700" type="line"/>
+      <point x="680" y="2112" type="line"/>
+      <point x="308" y="2112" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>1238.875</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>763.125</real>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1196, 'leftMargin': 63, 'rightMargin': -69}</string>
+    </dict>
+  </lib>
+</glyph>

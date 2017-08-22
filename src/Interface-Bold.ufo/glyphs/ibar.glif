@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ibar" format="1">
+  <advance width="1280"/>
+  <unicode hex="0268"/>
+  <outline>
+    <contour>
+      <point x="688" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1212" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="688" y="0" type="move" name="bottom"/>
+    </contour>
+    <component base="i" xOffset="308"/>
+    <component base="crossbar" yOffset="-244"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>523.875</real>
+          <key>y</key>
+          <real>0.0</real>
+        </dict>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1046, 'leftMargin': -20, 'rightMargin': 74}</string>
+    </dict>
+  </lib>
+</glyph>

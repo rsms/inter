@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="trthook" format="1">
+  <advance width="1024"/>
+  <unicode hex="0288"/>
+  <outline>
+    <contour>
+      <point x="444" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="624" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1000" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="816" y="1488" type="line"/>
+      <point x="128" y="1488" type="line"/>
+      <point x="128" y="1412" type="line"/>
+      <point x="816" y="1412" type="line"/>
+    </contour>
+    <contour>
+      <point x="404" y="1888" type="line"/>
+      <point x="404" y="-124" type="line" smooth="yes"/>
+      <point x="404" y="-432"/>
+      <point x="496" y="-600"/>
+      <point x="744" y="-600" type="curve" smooth="yes"/>
+      <point x="800" y="-600"/>
+      <point x="844" y="-592"/>
+      <point x="896" y="-572" type="curve"/>
+      <point x="880" y="-504" type="line"/>
+      <point x="848" y="-512"/>
+      <point x="792" y="-528"/>
+      <point x="744" y="-528" type="curve" smooth="yes"/>
+      <point x="540" y="-528"/>
+      <point x="480" y="-380"/>
+      <point x="480" y="-124" type="curve" smooth="yes"/>
+      <point x="480" y="1888" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.967</real>
+        <real>0.6</real>
+        <real>1.0</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 924.0, 'leftMargin': 52, 'rightMargin': 104.0}</string>
+    </dict>
+  </lib>
+</glyph>

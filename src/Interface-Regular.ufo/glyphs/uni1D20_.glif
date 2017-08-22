@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni1D20" format="1">
+  <advance width="1504"/>
+  <unicode hex="1D20"/>
+  <outline>
+    <contour>
+      <point x="672" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1348" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="672" y="0" type="move" name="bottom"/>
+    </contour>
+    <component base="v" xOffset="-16"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1368, 'leftMargin': 132, 'rightMargin': -44}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

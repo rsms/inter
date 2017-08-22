@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="koppacyrillic" format="1">
+  <advance width="1504"/>
+  <unicode hex="0481"/>
+  <outline>
+    <contour>
+      <point x="788" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="788" y="-16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1260" y="100" type="move" name="right"/>
+    </contour>
+    <contour>
+      <point x="1516" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="788" y="192" type="line"/>
+      <point x="516" y="192"/>
+      <point x="412" y="464"/>
+      <point x="412" y="716" type="curve" smooth="yes"/>
+      <point x="412" y="772" type="line" smooth="yes"/>
+      <point x="412" y="1024"/>
+      <point x="520" y="1296"/>
+      <point x="788" y="1296" type="curve"/>
+      <point x="972" y="1296"/>
+      <point x="1112" y="1148"/>
+      <point x="1112" y="976" type="curve"/>
+      <point x="1372" y="976" type="line"/>
+      <point x="1372" y="1276"/>
+      <point x="1128" y="1516"/>
+      <point x="788" y="1516" type="curve" smooth="yes"/>
+      <point x="372" y="1516"/>
+      <point x="136" y="1168"/>
+      <point x="136" y="772" type="curve" smooth="yes"/>
+      <point x="136" y="716" type="line" smooth="yes"/>
+      <point x="136" y="320"/>
+      <point x="368" y="-28"/>
+      <point x="788" y="-28" type="curve"/>
+    </contour>
+    <contour>
+      <point x="936" y="192" type="line"/>
+      <point x="660" y="192" type="line"/>
+      <point x="660" y="-528" type="line"/>
+      <point x="936" y="-528" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1514, 'leftMargin': 135, 'rightMargin': 144}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

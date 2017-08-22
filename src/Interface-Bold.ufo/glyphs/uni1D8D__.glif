@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni1D8D" format="1">
+  <advance width="1536"/>
+  <unicode hex="1D8D"/>
+  <outline>
+    <contour>
+      <point x="756" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="756" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1548" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1192" y="360" type="line"/>
+      <point x="1192" y="-80" type="line" smooth="yes"/>
+      <point x="1192" y="-232"/>
+      <point x="1060" y="-264"/>
+      <point x="956" y="-264" type="curve" smooth="yes"/>
+      <point x="916" y="-264"/>
+      <point x="884" y="-260"/>
+      <point x="844" y="-256" type="curve"/>
+      <point x="844" y="-552" type="line"/>
+      <point x="908" y="-568"/>
+      <point x="964" y="-572"/>
+      <point x="1028" y="-572" type="curve" smooth="yes"/>
+      <point x="1320" y="-572"/>
+      <point x="1496" y="-396"/>
+      <point x="1496" y="-80" type="curve" smooth="yes"/>
+      <point x="1496" y="360" type="line"/>
+    </contour>
+    <component base="x" xOffset="20"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1528, 'leftMargin': 21, 'rightMargin': 55}</string>
+    </dict>
+  </lib>
+</glyph>

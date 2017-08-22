@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniA795" format="1">
+  <advance width="1760"/>
+  <unicode hex="A795"/>
+  <outline>
+    <contour>
+      <point x="1272" y="220" type="line"/>
+      <point x="1272" y="-192" type="line" smooth="yes"/>
+      <point x="1272" y="-352"/>
+      <point x="1192" y="-408"/>
+      <point x="1064" y="-408" type="curve" smooth="yes"/>
+      <point x="1044" y="-408"/>
+      <point x="1012" y="-404"/>
+      <point x="992" y="-396" type="curve"/>
+      <point x="992" y="-580" type="line"/>
+      <point x="1028" y="-592"/>
+      <point x="1088" y="-600"/>
+      <point x="1128" y="-600" type="curve" smooth="yes"/>
+      <point x="1352" y="-600"/>
+      <point x="1548" y="-456"/>
+      <point x="1548" y="-192" type="curve" smooth="yes"/>
+      <point x="1548" y="220" type="line"/>
+    </contour>
+    <component base="h" xOffset="-44"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1645, 'leftMargin': 256, 'rightMargin': 55}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tpalatalhook" format="1">
+  <advance width="1024"/>
+  <unicode hex="01AB"/>
+  <outline>
+    <contour>
+      <point x="620" y="188" type="line"/>
+      <point x="620" y="-80" type="line" smooth="yes"/>
+      <point x="620" y="-232"/>
+      <point x="488" y="-264"/>
+      <point x="384" y="-264" type="curve" smooth="yes"/>
+      <point x="344" y="-264"/>
+      <point x="312" y="-260"/>
+      <point x="272" y="-256" type="curve"/>
+      <point x="272" y="-552" type="line"/>
+      <point x="340" y="-568"/>
+      <point x="392" y="-572"/>
+      <point x="456" y="-572" type="curve" smooth="yes"/>
+      <point x="748" y="-572"/>
+      <point x="924" y="-396"/>
+      <point x="924" y="-80" type="curve" smooth="yes"/>
+      <point x="924" y="16" type="line"/>
+    </contour>
+    <component base="t" xOffset="-4"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 963, 'leftMargin': 60, 'rightMargin': -5}</string>
+    </dict>
+  </lib>
+</glyph>

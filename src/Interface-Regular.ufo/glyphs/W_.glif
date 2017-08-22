@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="W" format="1">
+  <advance width="2560"/>
+  <unicode hex="0057"/>
+  <outline>
+    <contour>
+      <point x="368" y="2048" type="line"/>
+      <point x="128" y="2048" type="line"/>
+      <point x="588" y="0" type="line"/>
+      <point x="820" y="0" type="line"/>
+      <point x="1272" y="1592" type="line"/>
+      <point x="1288" y="1592" type="line"/>
+      <point x="1740" y="0" type="line"/>
+      <point x="1972" y="0" type="line"/>
+      <point x="2432" y="2048" type="line"/>
+      <point x="2192" y="2048" type="line"/>
+      <point x="1848" y="400" type="line"/>
+      <point x="1832" y="400" type="line"/>
+      <point x="1396" y="2048" type="line"/>
+      <point x="1164" y="2048" type="line"/>
+      <point x="728" y="400" type="line"/>
+      <point x="712" y="400" type="line"/>
+    </contour>
+    <contour>
+      <point x="1272" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1268" y="16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="2492" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="2492" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="2492" y="2200" type="move" name="top0315"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>M</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>W</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>2560</integer>
+        </dict>
+      </dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

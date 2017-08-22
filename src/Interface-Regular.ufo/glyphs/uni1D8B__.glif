@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni1D8B" format="1">
+  <advance width="1248"/>
+  <unicode hex="1D8B"/>
+  <outline>
+    <contour>
+      <point x="756" y="2340" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="336" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1120" y="2340" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="600" y="220" type="line"/>
+      <point x="600" y="0" type="line"/>
+      <point x="972" y="0" type="line"/>
+      <point x="972" y="-192" type="line" smooth="yes"/>
+      <point x="972" y="-352"/>
+      <point x="896" y="-408"/>
+      <point x="768" y="-408" type="curve" smooth="yes"/>
+      <point x="748" y="-408"/>
+      <point x="716" y="-404"/>
+      <point x="692" y="-396" type="curve"/>
+      <point x="692" y="-580" type="line"/>
+      <point x="728" y="-592"/>
+      <point x="788" y="-600"/>
+      <point x="828" y="-600" type="curve" smooth="yes"/>
+      <point x="1052" y="-600"/>
+      <point x="1248" y="-456"/>
+      <point x="1248" y="-192" type="curve" smooth="yes"/>
+      <point x="1248" y="220" type="line"/>
+    </contour>
+    <component base="esh" xOffset="-40"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1158, 'leftMargin': 41, 'rightMargin': -130}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

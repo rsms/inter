@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="logicalnot" format="1">
+  <advance width="1504"/>
+  <unicode hex="00AC"/>
+  <outline>
+    <contour>
+      <point x="1328" y="1108" type="line"/>
+      <point x="180" y="1108" type="line"/>
+      <point x="180" y="872" type="line"/>
+      <point x="1328" y="872" type="line"/>
+    </contour>
+    <contour>
+      <point x="1328" y="1000" type="line"/>
+      <point x="1052" y="1000" type="line"/>
+      <point x="1052" y="516" type="line"/>
+      <point x="1328" y="516" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1565, 'leftMargin': 176, 'rightMargin': 241}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

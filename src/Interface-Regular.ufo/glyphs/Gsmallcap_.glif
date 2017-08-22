@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Gsmallcap" format="1">
+  <advance width="1760"/>
+  <unicode hex="0262"/>
+  <outline>
+    <contour>
+      <point x="900" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="900" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1732" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1576" y="760" type="line"/>
+      <point x="920" y="760" type="line"/>
+      <point x="920" y="540" type="line"/>
+      <point x="1276" y="540" type="line"/>
+      <point x="1276" y="284" type="line"/>
+      <point x="1232" y="248"/>
+      <point x="1120" y="192"/>
+      <point x="904" y="192" type="curve" smooth="yes"/>
+      <point x="632" y="192"/>
+      <point x="464" y="384"/>
+      <point x="464" y="636" type="curve" smooth="yes"/>
+      <point x="464" y="860" type="line" smooth="yes"/>
+      <point x="464" y="1108"/>
+      <point x="640" y="1300"/>
+      <point x="896" y="1300" type="curve" smooth="yes"/>
+      <point x="1124" y="1300"/>
+      <point x="1244" y="1200"/>
+      <point x="1268" y="1012" type="curve"/>
+      <point x="1540" y="1012" type="line"/>
+      <point x="1512" y="1300"/>
+      <point x="1316" y="1516"/>
+      <point x="896" y="1516" type="curve" smooth="yes"/>
+      <point x="484" y="1516"/>
+      <point x="188" y="1248"/>
+      <point x="188" y="860" type="curve" smooth="yes"/>
+      <point x="188" y="636" type="line" smooth="yes"/>
+      <point x="188" y="244"/>
+      <point x="480" y="-28"/>
+      <point x="904" y="-28" type="curve" smooth="yes"/>
+      <point x="1272" y="-28"/>
+      <point x="1508" y="124"/>
+      <point x="1576" y="216" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1700, 'leftMargin': 154, 'rightMargin': 159}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

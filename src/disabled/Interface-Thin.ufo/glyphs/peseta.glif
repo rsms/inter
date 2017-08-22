@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="peseta" format="1">
+  <advance width="2304"/>
+  <unicode hex="20A7"/>
+  <outline>
+    <contour>
+      <point x="688" y="832" type="line"/>
+      <point x="1116" y="832"/>
+      <point x="1336" y="1080"/>
+      <point x="1336" y="1420" type="curve"/>
+      <point x="1336" y="1752"/>
+      <point x="1116" y="2004"/>
+      <point x="688" y="2004" type="curve"/>
+      <point x="256" y="2004" type="line"/>
+      <point x="256" y="0" type="line"/>
+      <point x="332" y="0" type="line"/>
+      <point x="332" y="1928" type="line"/>
+      <point x="688" y="1928" type="line"/>
+      <point x="1096" y="1928"/>
+      <point x="1260" y="1684"/>
+      <point x="1260" y="1416" type="curve"/>
+      <point x="1260" y="1156"/>
+      <point x="1096" y="908"/>
+      <point x="688" y="908" type="curve"/>
+      <point x="276" y="908" type="line"/>
+      <point x="276" y="832" type="line"/>
+    </contour>
+    <component base="t" xOffset="1260"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2296, 'leftMargin': 279, 'rightMargin': 225}</string>
+    </dict>
+  </lib>
+</glyph>

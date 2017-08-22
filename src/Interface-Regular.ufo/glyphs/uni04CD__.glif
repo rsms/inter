@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni04CD" format="1">
+  <advance width="2784"/>
+  <unicode hex="04CD"/>
+  <outline>
+    <contour>
+      <point x="2448" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="2448" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="2448" y="2200" type="move" name="top0315"/>
+    </contour>
+    <component base="M" xOffset="-16"/>
+    <component base="comma" xOffset="2032" yOffset="-100"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2602, 'leftMargin': 256, 'rightMargin': 44}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uhorn" format="1">
+  <advance width="1792"/>
+  <unicode hex="01B0"/>
+  <outline>
+    <contour>
+      <point x="764" y="1744" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1280" y="0" type="move" name="right"/>
+    </contour>
+    <contour>
+      <point x="1524" y="1744" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="672" y="0" type="move" name="bottomu"/>
+    </contour>
+    <contour>
+      <point x="736" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1524" y="1636" type="line"/>
+      <point x="1524" y="1424"/>
+      <point x="1476" y="1300"/>
+      <point x="1220" y="1300" type="curve"/>
+      <point x="1220" y="1228" type="line"/>
+      <point x="1508" y="1228"/>
+      <point x="1600" y="1372"/>
+      <point x="1600" y="1636" type="curve"/>
+    </contour>
+    <component base="u" xOffset="-36"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.798</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1558, 'leftMargin': 228, 'rightMargin': -74}</string>
+    </dict>
+  </lib>
+</glyph>

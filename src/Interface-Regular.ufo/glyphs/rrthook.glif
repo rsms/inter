@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="rrthook" format="1">
+  <advance width="992"/>
+  <unicode hex="027D"/>
+  <outline>
+    <contour>
+      <point x="360" y="-424" type="move" name="parenthesses.w1"/>
+    </contour>
+    <contour>
+      <point x="536" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="536" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="848" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="80" y="472" type="line"/>
+      <point x="80" y="-192" type="line" smooth="yes"/>
+      <point x="80" y="-456"/>
+      <point x="276" y="-600"/>
+      <point x="500" y="-600" type="curve" smooth="yes"/>
+      <point x="544" y="-600"/>
+      <point x="600" y="-596"/>
+      <point x="636" y="-584" type="curve"/>
+      <point x="636" y="-400" type="line"/>
+      <point x="616" y="-408"/>
+      <point x="580" y="-408"/>
+      <point x="560" y="-408" type="curve" smooth="yes"/>
+      <point x="432" y="-408"/>
+      <point x="352" y="-352"/>
+      <point x="352" y="-192" type="curve" smooth="yes"/>
+      <point x="352" y="472" type="line"/>
+    </contour>
+    <component base="r" xOffset="-112"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 956, 'leftMargin': 188, 'rightMargin': -68}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

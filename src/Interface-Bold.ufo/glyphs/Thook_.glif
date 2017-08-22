@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Thook" format="1">
+  <advance width="2304"/>
+  <unicode hex="01AC"/>
+  <outline>
+    <contour>
+      <point x="1528" y="2004" type="line"/>
+      <point x="1064" y="2004" type="line"/>
+      <point x="1064" y="0" type="line"/>
+      <point x="1528" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="2132" y="2004" type="line"/>
+      <point x="864" y="2004" type="line"/>
+      <point x="864" y="1628" type="line"/>
+      <point x="2132" y="1628" type="line"/>
+    </contour>
+    <contour>
+      <point x="1068" y="1628" type="line"/>
+      <point x="1068" y="2004" type="line"/>
+      <point x="756" y="2004" type="line" smooth="yes"/>
+      <point x="380" y="2004"/>
+      <point x="176" y="1796"/>
+      <point x="176" y="1452" type="curve" smooth="yes"/>
+      <point x="176" y="1376"/>
+      <point x="180" y="1316"/>
+      <point x="200" y="1240" type="curve"/>
+      <point x="568" y="1240" type="line"/>
+      <point x="560" y="1284"/>
+      <point x="556" y="1324"/>
+      <point x="556" y="1368" type="curve" smooth="yes"/>
+      <point x="556" y="1492"/>
+      <point x="592" y="1628"/>
+      <point x="756" y="1628" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2052, 'leftMargin': 41, 'rightMargin': 54}</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ohorn" format="1">
+  <advance width="1792"/>
+  <unicode hex="01A1"/>
+  <outline>
+    <contour>
+      <point x="780" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="780" y="-16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1524" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1496" y="1644" type="line"/>
+      <point x="1496" y="1432"/>
+      <point x="1452" y="1312"/>
+      <point x="1196" y="1312" type="curve"/>
+      <point x="1196" y="1236" type="line"/>
+      <point x="1484" y="1236"/>
+      <point x="1572" y="1380"/>
+      <point x="1572" y="1644" type="curve"/>
+    </contour>
+    <component base="o" xOffset="-24"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1543, 'leftMargin': 240, 'rightMargin': -49}</string>
+    </dict>
+  </lib>
+</glyph>

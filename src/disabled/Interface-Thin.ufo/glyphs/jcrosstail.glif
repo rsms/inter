@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="jcrosstail" format="1">
+  <advance width="1280"/>
+  <unicode hex="029D"/>
+  <outline>
+    <contour>
+      <point x="788" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="788" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1164" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1136" y="24" type="line"/>
+      <point x="440" y="24" type="line" smooth="yes"/>
+      <point x="276" y="24"/>
+      <point x="144" y="-80"/>
+      <point x="144" y="-280" type="curve" smooth="yes"/>
+      <point x="144" y="-452"/>
+      <point x="248" y="-600"/>
+      <point x="456" y="-600" type="curve" smooth="yes"/>
+      <point x="704" y="-600"/>
+      <point x="828" y="-472"/>
+      <point x="828" y="-188" type="curve" smooth="yes"/>
+      <point x="828" y="176" type="line"/>
+      <point x="756" y="176" type="line"/>
+      <point x="756" y="-196" type="line" smooth="yes"/>
+      <point x="756" y="-404"/>
+      <point x="688" y="-528"/>
+      <point x="456" y="-528" type="curve" smooth="yes"/>
+      <point x="300" y="-528"/>
+      <point x="220" y="-416"/>
+      <point x="220" y="-280" type="curve" smooth="yes"/>
+      <point x="220" y="-140"/>
+      <point x="304" y="-52"/>
+      <point x="452" y="-52" type="curve" smooth="yes"/>
+      <point x="1136" y="-52" type="line"/>
+    </contour>
+    <component base="i" xOffset="500"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.939</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1048, 'leftMargin': 28, 'rightMargin': 28}</string>
+    </dict>
+  </lib>
+</glyph>

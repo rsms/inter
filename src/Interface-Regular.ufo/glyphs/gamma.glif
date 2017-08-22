@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="gamma" format="1">
+  <advance width="1504"/>
+  <unicode hex="03B3"/>
+  <outline>
+    <contour>
+      <point x="756" y="88" type="move" name="cross"/>
+    </contour>
+    <contour>
+      <point x="892" y="192" type="line"/>
+      <point x="616" y="192" type="line"/>
+      <point x="616" y="-572" type="line"/>
+      <point x="892" y="-572" type="line"/>
+    </contour>
+    <contour>
+      <point x="736" y="348" type="line"/>
+      <point x="680" y="0" type="line"/>
+      <point x="860" y="0" type="line"/>
+      <point x="1408" y="1488" type="line"/>
+      <point x="1128" y="1488" type="line"/>
+    </contour>
+    <contour>
+      <point x="380" y="1488" type="line"/>
+      <point x="100" y="1488" type="line"/>
+      <point x="652" y="0" type="line"/>
+      <point x="832" y="0" type="line"/>
+      <point x="780" y="348" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1419.0, 'leftMargin': 65, 'rightMargin': 47.0}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

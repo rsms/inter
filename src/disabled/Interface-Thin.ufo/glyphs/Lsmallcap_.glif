@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Lsmallcap" format="1">
+  <advance width="1280"/>
+  <unicode hex="029F"/>
+  <outline>
+    <contour>
+      <point x="212" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="648" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1172" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1108" y="76" type="line"/>
+      <point x="208" y="76" type="line"/>
+      <point x="208" y="0" type="line"/>
+      <point x="1108" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="248" y="1488" type="line"/>
+      <point x="176" y="1488" type="line"/>
+      <point x="176" y="0" type="line"/>
+      <point x="248" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.939</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1231, 'leftMargin': 234, 'rightMargin': 66}</string>
+    </dict>
+  </lib>
+</glyph>

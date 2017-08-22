@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="braceright" format="1">
+  <advance width="1024"/>
+  <unicode hex="007D"/>
+  <outline>
+    <contour>
+      <point x="108" y="1956" type="line"/>
+      <point x="260" y="1900"/>
+      <point x="300" y="1744"/>
+      <point x="300" y="1556" type="curve" smooth="yes"/>
+      <point x="300" y="1276" type="line" smooth="yes"/>
+      <point x="300" y="1000"/>
+      <point x="480" y="780"/>
+      <point x="916" y="780" type="curve"/>
+      <point x="916" y="1008" type="line"/>
+      <point x="756" y="1008"/>
+      <point x="688" y="1112"/>
+      <point x="688" y="1276" type="curve" smooth="yes"/>
+      <point x="688" y="1556" type="line" smooth="yes"/>
+      <point x="688" y="1844"/>
+      <point x="572" y="2092"/>
+      <point x="192" y="2196" type="curve"/>
+    </contour>
+    <contour>
+      <point x="192" y="-496" type="line"/>
+      <point x="572" y="-388"/>
+      <point x="688" y="-144"/>
+      <point x="688" y="148" type="curve"/>
+      <point x="688" y="424" type="line"/>
+      <point x="688" y="588"/>
+      <point x="756" y="696"/>
+      <point x="916" y="696" type="curve"/>
+      <point x="916" y="924" type="line"/>
+      <point x="480" y="924"/>
+      <point x="300" y="704"/>
+      <point x="300" y="424" type="curve"/>
+      <point x="300" y="148" type="line"/>
+      <point x="300" y="-40"/>
+      <point x="260" y="-196"/>
+      <point x="108" y="-252" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 920, 'leftMargin': 54, 'rightMargin': 58}</string>
+    </dict>
+  </lib>
+</glyph>

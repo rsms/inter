@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="schwa" format="1">
+  <advance width="1536"/>
+  <unicode hex="0259"/>
+  <outline>
+    <contour>
+      <point x="756" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="800" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1360" y="44" type="move" name="right"/>
+    </contour>
+    <contour>
+      <point x="1232" y="900" type="move" name="rhotichook"/>
+    </contour>
+    <contour>
+      <point x="1500" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="716" y="1516" type="curve"/>
+      <point x="460" y="1516"/>
+      <point x="252" y="1436"/>
+      <point x="136" y="1352" type="curve"/>
+      <point x="248" y="1068" type="line"/>
+      <point x="368" y="1120"/>
+      <point x="460" y="1160"/>
+      <point x="660" y="1160" type="curve" smooth="yes"/>
+      <point x="884" y="1160"/>
+      <point x="988" y="988"/>
+      <point x="988" y="796" type="curve" smooth="yes"/>
+      <point x="988" y="744" type="line" smooth="yes"/>
+      <point x="988" y="520"/>
+      <point x="932" y="332"/>
+      <point x="748" y="332" type="curve"/>
+      <point x="600" y="332"/>
+      <point x="540" y="420"/>
+      <point x="540" y="564" type="curve"/>
+      <point x="540" y="600" type="line"/>
+      <point x="1256" y="600" type="line" name="hr01"/>
+      <point x="1256" y="892" type="line"/>
+      <point x="108" y="892" type="line"/>
+      <point x="108" y="648" type="line" smooth="yes"/>
+      <point x="108" y="236"/>
+      <point x="340" y="-28"/>
+      <point x="748" y="-28" type="curve" smooth="yes"/>
+      <point x="1192" y="-28"/>
+      <point x="1432" y="308"/>
+      <point x="1432" y="744" type="curve" smooth="yes" name="hr02"/>
+      <point x="1432" y="796" type="line" smooth="yes"/>
+      <point x="1432" y="1200"/>
+      <point x="1160" y="1516"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      </data>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>1061.5</real>
+          <key>y</key>
+          <real>0.0</real>
+        </dict>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1491, 'leftMargin': 96, 'rightMargin': 71}</string>
+    </dict>
+  </lib>
+</glyph>

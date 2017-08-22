@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Ezhcaron" format="1">
+  <advance width="1760"/>
+  <unicode hex="01EE"/>
+  <outline>
+    <component base="Ezh" xOffset="-16"/>
+    <component base="caron" xOffset="200" yOffset="404"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1821, 'leftMargin': 120, 'rightMargin': 149}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

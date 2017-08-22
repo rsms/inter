@@ -1,0 +1,39 @@
+#include <winver.h>
+#define _STR(S) #S
+#define STR(S) _STR(S)
+#define Z "\0"
+#define _FOUR(A,B,C,D,E...) A,B,C,D
+#define FOUR(A...) _FOUR(A,0,0,0)
+
+#ifdef __GNUC__
+VS_VERSION_INFO VERSIONINFO
+#else
+VS_VERSION_INFO VERSIONINFO MOVEABLE IMPURE LOADONCALL DISCARDABLE
+#endif
+ FILEVERSION FOUR(VERNUMS)
+ PRODUCTVERSION FOUR(VERNUMS)
+ FILEFLAGS 0
+ FILEOS VOS__WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE 0
+BEGIN
+ BLOCK "StringFileInfo"
+ BEGIN
+  BLOCK "00000000"
+  BEGIN
+   VALUE "FileDescription", "WOFF font converter" Z
+   VALUE "FileVersion", STR(VERSION) Z
+   VALUE "InternalName", "ttf2woff" Z
+   VALUE "LegalCopyright", "GPL" Z
+   VALUE "OriginalFilename", "ttf2woff.exe" Z
+   VALUE "ProductName", "TTF2WOFF" Z
+   VALUE "ProductVersion", STR(VERSION) Z
+   VALUE "URL", "http://wizard.ae.krakow.pl/~jb/ttf2woff/" Z
+   VALUE "Author", "Jan Bobrowski" Z
+  END
+ END
+ BLOCK "VarFileInfo"
+ BEGIN
+  VALUE "Translation", 0,0
+ END
+END

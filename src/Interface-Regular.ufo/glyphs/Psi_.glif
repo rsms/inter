@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Psi" format="1">
+  <advance width="2016"/>
+  <unicode hex="03A8"/>
+  <outline>
+    <contour>
+      <point x="1572" y="2004" type="line"/>
+      <point x="1572" y="1276" type="line" smooth="yes"/>
+      <point x="1572" y="916"/>
+      <point x="1348" y="716"/>
+      <point x="1016" y="716" type="curve" smooth="yes"/>
+      <point x="976" y="716" type="line"/>
+      <point x="664" y="716"/>
+      <point x="444" y="916"/>
+      <point x="444" y="1276" type="curve" smooth="yes"/>
+      <point x="444" y="2004" type="line"/>
+      <point x="160" y="2004" type="line"/>
+      <point x="160" y="1276" type="line"/>
+      <point x="160" y="772"/>
+      <point x="504" y="488"/>
+      <point x="976" y="488" type="curve" smooth="yes"/>
+      <point x="1016" y="488" type="line"/>
+      <point x="1500" y="488"/>
+      <point x="1856" y="772"/>
+      <point x="1856" y="1276" type="curve"/>
+      <point x="1856" y="2004" type="line"/>
+    </contour>
+    <contour>
+      <point x="1140" y="2004" type="line"/>
+      <point x="856" y="2004" type="line"/>
+      <point x="856" y="0" type="line"/>
+      <point x="1140" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1947.0, 'leftMargin': 114, 'rightMargin': 135.0}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

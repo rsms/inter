@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="idieresisacute" format="1">
+  <advance width="1024"/>
+  <unicode hex="1E2F"/>
+  <outline>
+    <contour>
+      <point x="548" y="900" type="move" name="rhotichook"/>
+    </contour>
+    <contour>
+      <point x="508" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="868" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="508" y="2668" type="move" name="mkmktop_acc"/>
+    </contour>
+    <contour>
+      <point x="504" y="16" type="move" name="bottom"/>
+    </contour>
+    <component base="dotlessi" xOffset="136"/>
+    <component base="dieresisacutecomb.lc" xOffset="1316"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 935.0, 'leftMargin': 14, 'rightMargin': 14.0}</string>
+    </dict>
+  </lib>
+</glyph>

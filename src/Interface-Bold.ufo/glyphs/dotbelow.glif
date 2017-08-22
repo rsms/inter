@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dotbelow" format="1">
+  <advance width="0"/>
+  <unicode hex="0323"/>
+  <outline>
+    <contour>
+      <point x="-824" y="0" type="move" name="_bottom"/>
+    </contour>
+    <contour>
+      <point x="-825" y="0" type="move" name="_markbottom"/>
+    </contour>
+    <contour>
+      <point x="-825" y="-523" type="move" name="mkmkbottom_acc"/>
+    </contour>
+    <contour>
+      <point x="-825" y="0" type="move" name="_bottomu"/>
+    </contour>
+    <contour>
+      <point x="-1068" y="-316" type="curve" smooth="yes"/>
+      <point x="-1068" y="-433"/>
+      <point x="-969" y="-521"/>
+      <point x="-822" y="-521" type="curve" smooth="yes"/>
+      <point x="-675" y="-521"/>
+      <point x="-576" y="-433"/>
+      <point x="-576" y="-316" type="curve" smooth="yes"/>
+      <point x="-576" y="-199"/>
+      <point x="-675" y="-111"/>
+      <point x="-822" y="-111" type="curve" smooth="yes"/>
+      <point x="-969" y="-111"/>
+      <point x="-1068" y="-199"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>1238.875</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>763.125</real>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.98</real>
+        <real>0.89</real>
+        <real>0.89</real>
+        <real>1.0</real>
+      </array>
+    </dict>
+  </lib>
+</glyph>

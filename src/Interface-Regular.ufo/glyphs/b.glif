@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="b" format="1">
+  <advance width="1632"/>
+  <unicode hex="0062"/>
+  <outline>
+    <contour>
+      <point x="992" y="2216" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="936" y="-16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1696" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1696" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1696" y="2216" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="224" y="2048" type="line"/>
+      <point x="224" y="0" type="line"/>
+      <point x="428" y="0" type="line"/>
+      <point x="460" y="288" type="line"/>
+      <point x="368" y="784" type="line"/>
+      <point x="460" y="1172" type="line"/>
+      <point x="460" y="2048" type="line"/>
+    </contour>
+    <component base="rightloop.cn" xOffset="-16"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+      </array>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

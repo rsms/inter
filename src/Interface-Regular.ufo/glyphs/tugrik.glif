@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tugrik" format="1">
+  <advance width="1760"/>
+  <unicode hex="20AE"/>
+  <outline>
+    <contour>
+      <point x="1316" y="1552" type="line"/>
+      <point x="336" y="1104" type="line"/>
+      <point x="336" y="856" type="line"/>
+      <point x="1316" y="1304" type="line"/>
+    </contour>
+    <contour>
+      <point x="1316" y="1084" type="line"/>
+      <point x="336" y="636" type="line"/>
+      <point x="336" y="388" type="line"/>
+      <point x="1316" y="836" type="line"/>
+    </contour>
+    <component base="T" xOffset="-16"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1680, 'leftMargin': 128, 'rightMargin': 16}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

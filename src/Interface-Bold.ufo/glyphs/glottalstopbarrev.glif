@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="glottalstopbarrev" format="1">
+  <advance width="1536"/>
+  <unicode hex="02A2"/>
+  <outline>
+    <contour>
+      <point x="768" y="2244" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1468" y="2244" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="768" y="0" type="move" name="bottom"/>
+    </contour>
+    <component base="glottalstoprevinv"/>
+    <component base="crossbar" xOffset="72" yOffset="-716"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1466, 'leftMargin': 108, 'rightMargin': 38}</string>
+    </dict>
+  </lib>
+</glyph>

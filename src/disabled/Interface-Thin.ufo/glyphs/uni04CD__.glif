@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni04CD" format="1">
+  <advance width="2560"/>
+  <unicode hex="04CD"/>
+  <outline>
+    <contour>
+      <point x="2452" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="2452" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="2452" y="2216" type="move" name="top0315"/>
+    </contour>
+    <component base="M" xOffset="36"/>
+    <component base="comma" xOffset="1928" yOffset="-36"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.6</real>
+        <real>0.609</real>
+        <real>1.0</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2309, 'leftMargin': 275, 'rightMargin': 97}</string>
+    </dict>
+  </lib>
+</glyph>

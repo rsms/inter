@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="rturnascend" format="1">
+  <advance width="1024"/>
+  <unicode hex="027A"/>
+  <outline>
+    <contour>
+      <point x="356" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="356" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1096" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="512" y="368" type="line"/>
+      <point x="540" y="0" type="line"/>
+      <point x="956" y="0" type="line"/>
+      <point x="956" y="2112" type="line"/>
+      <point x="512" y="2112" type="line"/>
+    </contour>
+    <contour>
+      <point x="72" y="-12" type="line"/>
+      <point x="104" y="-24"/>
+      <point x="152" y="-28"/>
+      <point x="196" y="-28" type="curve"/>
+      <point x="464" y="-28"/>
+      <point x="624" y="248"/>
+      <point x="624" y="648" type="curve"/>
+      <point x="540" y="700" type="line"/>
+      <point x="540" y="508"/>
+      <point x="448" y="408"/>
+      <point x="228" y="408" type="curve"/>
+      <point x="188" y="408"/>
+      <point x="116" y="416"/>
+      <point x="76" y="420" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1055, 'leftMargin': 30, 'rightMargin': 141}</string>
+    </dict>
+  </lib>
+</glyph>

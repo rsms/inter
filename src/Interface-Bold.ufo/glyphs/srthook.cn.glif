@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="srthook.cn" format="1">
+  <advance width="1536"/>
+  <outline>
+    <contour>
+      <point x="120" y="464" type="line"/>
+      <point x="120" y="-80" type="line" smooth="yes"/>
+      <point x="120" y="-396"/>
+      <point x="296" y="-572"/>
+      <point x="588" y="-572" type="curve" smooth="yes"/>
+      <point x="652" y="-572"/>
+      <point x="704" y="-568"/>
+      <point x="772" y="-552" type="curve"/>
+      <point x="772" y="-256" type="line"/>
+      <point x="732" y="-260"/>
+      <point x="700" y="-264"/>
+      <point x="660" y="-264" type="curve" smooth="yes"/>
+      <point x="556" y="-264"/>
+      <point x="424" y="-232"/>
+      <point x="424" y="-80" type="curve" smooth="yes"/>
+      <point x="424" y="464" type="line"/>
+    </contour>
+    <component base="s.cn" xOffset="64"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.77</real>
+        <real>0.95</real>
+        <real>0.76</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1445, 'leftMargin': 58, 'rightMargin': 92}</string>
+    </dict>
+  </lib>
+</glyph>

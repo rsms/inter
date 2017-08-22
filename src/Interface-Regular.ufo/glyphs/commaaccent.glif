@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="commaaccent" format="1">
+  <advance width="736"/>
+  <unicode hex="F6C3"/>
+  <outline>
+    <contour>
+      <point x="420" y="504" type="move" name="_bottom"/>
+    </contour>
+    <contour>
+      <point x="244" y="340" type="move" name="_caron"/>
+    </contour>
+    <contour>
+      <point x="364" y="108" type="move" name="_right"/>
+    </contour>
+    <contour>
+      <point x="420" y="-216" type="move" name="mkmkbottom_acc"/>
+    </contour>
+    <contour>
+      <point x="552" y="344" type="line"/>
+      <point x="288" y="344" type="line"/>
+      <point x="288" y="232" type="line" smooth="yes"/>
+      <point x="288" y="104"/>
+      <point x="256" y="-8"/>
+      <point x="188" y="-112" type="curve"/>
+      <point x="344" y="-216" type="line"/>
+      <point x="484" y="-104"/>
+      <point x="552" y="88"/>
+      <point x="552" y="236" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 718, 'leftMargin': 118, 'rightMargin': 235}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

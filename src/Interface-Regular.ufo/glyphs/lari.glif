@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="lari" format="1">
+  <advance width="2016"/>
+  <unicode hex="20BE"/>
+  <outline>
+    <contour>
+      <point x="1332" y="900" type="line"/>
+      <point x="1332" y="2032" type="line"/>
+      <point x="1100" y="2032" type="line"/>
+      <point x="1100" y="900" type="line"/>
+    </contour>
+    <contour>
+      <point x="916" y="900" type="line"/>
+      <point x="916" y="2032" type="line"/>
+      <point x="684" y="2032" type="line"/>
+      <point x="684" y="900" type="line"/>
+    </contour>
+    <contour>
+      <point x="200" y="0" type="line"/>
+      <point x="1800" y="0" type="line"/>
+      <point x="1800" y="220" type="line"/>
+      <point x="200" y="220" type="line"/>
+    </contour>
+    <contour>
+      <point x="1124" y="0" type="curve"/>
+      <point x="1012" y="220" type="line"/>
+      <point x="688" y="220"/>
+      <point x="468" y="468"/>
+      <point x="468" y="908" type="curve" smooth="yes"/>
+      <point x="468" y="1332"/>
+      <point x="684" y="1560"/>
+      <point x="1008" y="1560" type="curve" smooth="yes"/>
+      <point x="1348" y="1560"/>
+      <point x="1552" y="1324"/>
+      <point x="1552" y="900" type="curve"/>
+      <point x="1820" y="900" type="line"/>
+      <point x="1820" y="1456"/>
+      <point x="1500" y="1796"/>
+      <point x="1008" y="1796" type="curve" smooth="yes"/>
+      <point x="532" y="1796"/>
+      <point x="200" y="1464"/>
+      <point x="200" y="904" type="curve" smooth="yes"/>
+      <point x="200" y="340"/>
+      <point x="584" y="0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1944, 'leftMargin': 161, 'rightMargin': 162}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

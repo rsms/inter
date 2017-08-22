@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="btopbar" format="1">
+  <advance width="1760"/>
+  <unicode hex="0183"/>
+  <outline>
+    <contour>
+      <point x="1132" y="2112" type="line"/>
+      <point x="364" y="2112" type="line"/>
+      <point x="364" y="1892" type="line"/>
+      <point x="1132" y="1892" type="line"/>
+    </contour>
+    <component base="b" xOffset="-16"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1585, 'leftMargin': 256, 'rightMargin': 49}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

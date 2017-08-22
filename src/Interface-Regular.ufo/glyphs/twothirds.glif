@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="twothirds" format="1">
+  <advance width="2784"/>
+  <unicode hex="2154"/>
+  <outline>
+    <component base="two.sup" xOffset="112" yOffset="912"/>
+    <component base="fraction" xOffset="776"/>
+    <component base="three.sup" xOffset="1664"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.89</real>
+        <real>0.96</real>
+        <real>0.92</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2779, 'leftMargin': 144, 'rightMargin': 248}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

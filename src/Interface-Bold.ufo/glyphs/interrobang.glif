@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="interrobang" format="1">
+  <advance width="1536"/>
+  <unicode hex="203D"/>
+  <outline>
+    <contour>
+      <point x="1012" y="1512" type="line"/>
+      <point x="652" y="1512" type="line"/>
+      <point x="652" y="636" type="line"/>
+      <point x="1012" y="636" type="line"/>
+    </contour>
+    <component base="question" xOffset="80"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1425, 'leftMargin': 50, 'rightMargin': 98}</string>
+    </dict>
+  </lib>
+</glyph>

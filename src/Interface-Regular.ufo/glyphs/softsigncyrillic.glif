@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="softsigncyrillic" format="1">
+  <advance width="1504"/>
+  <unicode hex="044C"/>
+  <outline>
+    <contour>
+      <point x="280" y="1232" type="move" name="cross"/>
+    </contour>
+    <contour>
+      <point x="356" y="980" type="line"/>
+      <point x="356" y="760" type="line"/>
+      <point x="796" y="760" type="line"/>
+      <point x="1004" y="760"/>
+      <point x="1076" y="612"/>
+      <point x="1076" y="484" type="curve"/>
+      <point x="1076" y="352"/>
+      <point x="1004" y="220"/>
+      <point x="796" y="220" type="curve"/>
+      <point x="428" y="220" type="line"/>
+      <point x="428" y="1488" type="line"/>
+      <point x="152" y="1488" type="line"/>
+      <point x="152" y="0" type="line"/>
+      <point x="796" y="0" type="line"/>
+      <point x="1156" y="0"/>
+      <point x="1352" y="220"/>
+      <point x="1352" y="496" type="curve"/>
+      <point x="1352" y="776"/>
+      <point x="1156" y="980"/>
+      <point x="796" y="980" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1535, 'leftMargin': 213, 'rightMargin': 121}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

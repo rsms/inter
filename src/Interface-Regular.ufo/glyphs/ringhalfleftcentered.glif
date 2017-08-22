@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ringhalfleftcentered" format="1">
+  <advance width="480"/>
+  <unicode hex="02D3"/>
+  <outline>
+    <contour>
+      <point x="384" y="304" type="line"/>
+      <point x="304" y="304"/>
+      <point x="244" y="364"/>
+      <point x="244" y="448" type="curve" smooth="yes"/>
+      <point x="244" y="532"/>
+      <point x="304" y="596"/>
+      <point x="384" y="596" type="curve"/>
+      <point x="384" y="724" type="line"/>
+      <point x="228" y="724"/>
+      <point x="100" y="608"/>
+      <point x="100" y="448" type="curve" smooth="yes"/>
+      <point x="100" y="284"/>
+      <point x="228" y="176"/>
+      <point x="384" y="176" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 393, 'leftMargin': 55, 'rightMargin': 55}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

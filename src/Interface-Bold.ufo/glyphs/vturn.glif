@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="vturn" format="1">
+  <advance width="1536"/>
+  <unicode hex="028C"/>
+  <outline>
+    <contour>
+      <point x="772" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="772" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1488" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="824" y="1172" type="line"/>
+      <point x="824" y="1488" type="line"/>
+      <point x="548" y="1488" type="line"/>
+      <point x="56" y="0" type="line"/>
+      <point x="520" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1016" y="0" type="line"/>
+      <point x="1480" y="0" type="line"/>
+      <point x="992" y="1488" type="line"/>
+      <point x="712" y="1488" type="line"/>
+      <point x="712" y="1172" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1441.0, 'leftMargin': 8, 'rightMargin': 8.0}</string>
+    </dict>
+  </lib>
+</glyph>

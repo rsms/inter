@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="breveinvsubnosp" format="1">
+  <advance width="0"/>
+  <unicode hex="032F"/>
+  <outline>
+    <contour>
+      <point x="-804" y="0" type="move" name="_markbottom"/>
+    </contour>
+    <contour>
+      <point x="-804" y="-512" type="move" name="mkmkbottom_acc"/>
+    </contour>
+    <contour>
+      <point x="-393" y="-512" type="line"/>
+      <point x="-393" y="-294"/>
+      <point x="-551" y="-142"/>
+      <point x="-807" y="-142" type="curve" smooth="yes"/>
+      <point x="-1063" y="-142"/>
+      <point x="-1222" y="-294"/>
+      <point x="-1222" y="-512" type="curve"/>
+      <point x="-1001" y="-512" type="line"/>
+      <point x="-1001" y="-406"/>
+      <point x="-949" y="-312"/>
+      <point x="-807" y="-312" type="curve" smooth="yes"/>
+      <point x="-668" y="-312"/>
+      <point x="-615" y="-406"/>
+      <point x="-615" y="-512" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.98</real>
+        <real>0.89</real>
+        <real>0.89</real>
+        <real>1.0</real>
+      </array>
+    </dict>
+  </lib>
+</glyph>

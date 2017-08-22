@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dblapostrophe" format="1">
+  <advance width="1248"/>
+  <unicode hex="02EE"/>
+  <outline>
+    <contour>
+      <point x="600" y="2144" type="line"/>
+      <point x="328" y="2144" type="line"/>
+      <point x="328" y="1888" type="line" smooth="yes"/>
+      <point x="328" y="1728"/>
+      <point x="284" y="1592"/>
+      <point x="196" y="1464" type="curve"/>
+      <point x="352" y="1356" type="line"/>
+      <point x="512" y="1492"/>
+      <point x="600" y="1716"/>
+      <point x="600" y="1892" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="1056" y="2144" type="line"/>
+      <point x="784" y="2144" type="line"/>
+      <point x="784" y="1888" type="line" smooth="yes"/>
+      <point x="784" y="1728"/>
+      <point x="736" y="1592"/>
+      <point x="648" y="1464" type="curve"/>
+      <point x="804" y="1356" type="line"/>
+      <point x="964" y="1492"/>
+      <point x="1056" y="1716"/>
+      <point x="1056" y="1892" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1079, 'leftMargin': 110, 'rightMargin': 110}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

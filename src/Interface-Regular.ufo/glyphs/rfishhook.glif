@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="rfishhook" format="1">
+  <advance width="992"/>
+  <unicode hex="027E"/>
+  <outline>
+    <contour>
+      <point x="360" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="360" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="816" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="492" y="0" type="line"/>
+      <point x="492" y="1108" type="line" smooth="yes"/>
+      <point x="492" y="1264"/>
+      <point x="572" y="1320"/>
+      <point x="700" y="1320" type="curve" smooth="yes"/>
+      <point x="720" y="1320"/>
+      <point x="752" y="1316"/>
+      <point x="776" y="1312" type="curve"/>
+      <point x="776" y="1496" type="line"/>
+      <point x="740" y="1508"/>
+      <point x="680" y="1516"/>
+      <point x="640" y="1516" type="curve" smooth="yes"/>
+      <point x="416" y="1516"/>
+      <point x="220" y="1372"/>
+      <point x="220" y="1108" type="curve" smooth="yes"/>
+      <point x="220" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 787, 'leftMargin': 188, 'rightMargin': 42}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

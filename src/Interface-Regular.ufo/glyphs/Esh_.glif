@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Esh" format="1">
+  <advance width="1760"/>
+  <unicode hex="01A9"/>
+  <outline>
+    <contour>
+      <point x="788" y="2216" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1600" y="2216" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="788" y="16" type="move" name="bottom"/>
+    </contour>
+    <component base="Sigma" xOffset="-16"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1616, 'leftMargin': 192, 'rightMargin': 16}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

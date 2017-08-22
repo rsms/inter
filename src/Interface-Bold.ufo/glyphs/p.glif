@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="p" format="1">
+  <advance width="1536"/>
+  <unicode hex="0070"/>
+  <outline>
+    <contour>
+      <point x="1000.0" y="1760.0" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="428.0" y="-560.0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1000.0" y="1760.0" type="move" name="marktop"/>
+    </contour>
+    <contour>
+      <point x="1656.0" y="2200.0" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1656.0" y="-560.0" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1656.0" y="1760.0" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="528" y="1200" type="line"/>
+      <point x="496" y="1488" type="line"/>
+      <point x="84" y="1488" type="line"/>
+      <point x="84" y="-576" type="line"/>
+      <point x="528" y="-576" type="line"/>
+      <point x="528" y="312" type="line"/>
+      <point x="376" y="736" type="line"/>
+      <point x="528" y="1112" type="line"/>
+    </contour>
+    <component base="rightloop.cn" xOffset="-128"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1585, 'leftMargin': 144.0, 'rightMargin': 79}</string>
+    </dict>
+  </lib>
+</glyph>

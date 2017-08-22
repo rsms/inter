@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="P" format="1">
+  <advance width="1772"/>
+  <unicode hex="0050"/>
+  <outline>
+    <contour>
+      <point x="952" y="772" type="line"/>
+      <point x="1296" y="772"/>
+      <point x="1612" y="1012"/>
+      <point x="1612" y="1400" type="curve"/>
+      <point x="1612" y="1756"/>
+      <point x="1396" y="2048"/>
+      <point x="924" y="2048" type="curve"/>
+      <point x="240" y="2048" type="line"/>
+      <point x="240" y="0" type="line"/>
+      <point x="488" y="0" type="line"/>
+      <point x="488" y="1828" type="line"/>
+      <point x="924" y="1828" type="line"/>
+      <point x="1248" y="1828"/>
+      <point x="1368" y="1656"/>
+      <point x="1368" y="1400" type="curve"/>
+      <point x="1368" y="1176"/>
+      <point x="1208" y="992"/>
+      <point x="888" y="992" type="curve"/>
+      <point x="440" y="992" type="line"/>
+      <point x="440" y="772" type="line"/>
+    </contour>
+    <contour>
+      <point x="36" y="2000" type="move" name="tonos"/>
+    </contour>
+    <contour>
+      <point x="896" y="2176" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="728" y="16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1788" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1788" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1788" y="2216" type="move" name="top0315"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>R</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>P</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>1772</integer>
+        </dict>
+      </dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

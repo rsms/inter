@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Hbar" format="1">
+  <advance width="2048"/>
+  <unicode hex="0126"/>
+  <outline>
+    <contour>
+      <point x="1024" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1024" y="16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="2040" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="2008" y="1708" type="line"/>
+      <point x="40" y="1708" type="line"/>
+      <point x="40" y="1460" type="line"/>
+      <point x="2008" y="1460" type="line"/>
+    </contour>
+    <component base="H" xOffset="24"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2045, 'leftMargin': 45, 'rightMargin': 32}</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tonebarmidmod" format="1">
+  <advance width="992"/>
+  <unicode hex="02E7"/>
+  <outline>
+    <contour>
+      <point x="812" y="2004" type="line"/>
+      <point x="536" y="2004" type="line"/>
+      <point x="536" y="0" type="line"/>
+      <point x="812" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="744" y="1112" type="line"/>
+      <point x="180" y="1112" type="line"/>
+      <point x="180" y="892" type="line"/>
+      <point x="744" y="892" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 919, 'leftMargin': 55, 'rightMargin': 234}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

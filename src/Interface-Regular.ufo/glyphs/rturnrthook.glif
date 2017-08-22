@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="rturnrthook" format="1">
+  <advance width="1248"/>
+  <unicode hex="027B"/>
+  <outline>
+    <contour>
+      <point x="456" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="456" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1168" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="628" y="336" type="line"/>
+      <point x="628" y="-192" type="line" smooth="yes"/>
+      <point x="628" y="-456"/>
+      <point x="824" y="-600"/>
+      <point x="1048" y="-600" type="curve" smooth="yes"/>
+      <point x="1092" y="-600"/>
+      <point x="1148" y="-596"/>
+      <point x="1184" y="-584" type="curve"/>
+      <point x="1184" y="-400" type="line"/>
+      <point x="1164" y="-408"/>
+      <point x="1128" y="-408"/>
+      <point x="1108" y="-408" type="curve" smooth="yes"/>
+      <point x="980" y="-408"/>
+      <point x="900" y="-352"/>
+      <point x="900" y="-192" type="curve" smooth="yes"/>
+      <point x="900" y="336" type="line"/>
+    </contour>
+    <component base="r" xScale="-1" yScale="-1" xOffset="1092" yOffset="1488"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1035, 'leftMargin': -68, 'rightMargin': -14}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

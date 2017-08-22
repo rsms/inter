@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kabashkircyrillic" format="1">
+  <advance width="2016"/>
+  <unicode hex="04A1"/>
+  <outline>
+    <contour>
+      <point x="792" y="1488" type="line"/>
+      <point x="76" y="1488" type="line"/>
+      <point x="76" y="1268" type="line"/>
+      <point x="792" y="1268" type="line"/>
+    </contour>
+    <component base="kacyrillic" xOffset="432"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1959, 'leftMargin': 89, 'rightMargin': 5}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

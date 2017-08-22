@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="E" format="1">
+  <advance width="1664"/>
+  <unicode hex="0045"/>
+  <outline>
+    <contour>
+      <point x="932.0" y="2200.0" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="940.0" y="16.0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="-88.0" y="2004.0" type="move" name="tonos"/>
+    </contour>
+    <contour>
+      <point x="1332.0" y="0.0" type="move" name="ogonek"/>
+    </contour>
+    <contour>
+      <point x="1632.0" y="2200.0" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1632.0" y="-560.0" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1632.0" y="2200.0" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1496" y="384" type="line"/>
+      <point x="432" y="384" type="line"/>
+      <point x="432" y="0" type="line"/>
+      <point x="1496" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="592" y="2004" type="line"/>
+      <point x="128" y="2004" type="line"/>
+      <point x="128" y="0" type="line"/>
+      <point x="592" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1356" y="1208" type="line"/>
+      <point x="432" y="1208" type="line"/>
+      <point x="432" y="824" type="line"/>
+      <point x="1356" y="824" type="line"/>
+    </contour>
+    <contour>
+      <point x="1496" y="2004" type="line"/>
+      <point x="432" y="2004" type="line"/>
+      <point x="432" y="1620" type="line"/>
+      <point x="1496" y="1620" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>1358.5</real>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>F</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>E</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>1664</integer>
+        </dict>
+      </dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1579, 'leftMargin': 161, 'rightMargin': 50}</string>
+    </dict>
+  </lib>
+</glyph>

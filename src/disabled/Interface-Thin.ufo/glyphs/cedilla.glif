@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cedilla" format="1">
+  <advance width="768"/>
+  <unicode hex="00B8"/>
+  <outline>
+    <contour>
+      <point x="320" y="0" type="move" name="_bottom"/>
+    </contour>
+    <contour>
+      <point x="320" y="-600" type="move" name="mkmkbottom_acc"/>
+    </contour>
+    <contour>
+      <point x="284" y="0" type="line"/>
+      <point x="248" y="-168" type="line"/>
+      <point x="420" y="-184"/>
+      <point x="508" y="-216"/>
+      <point x="508" y="-336" type="curve" smooth="yes"/>
+      <point x="508" y="-472"/>
+      <point x="332" y="-532"/>
+      <point x="184" y="-532" type="curve"/>
+      <point x="192" y="-600" type="line"/>
+      <point x="436" y="-600"/>
+      <point x="584" y="-496"/>
+      <point x="584" y="-336" type="curve" smooth="yes"/>
+      <point x="584" y="-172"/>
+      <point x="464" y="-116"/>
+      <point x="344" y="-104" type="curve"/>
+      <point x="356" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 674, 'leftMargin': 111, 'rightMargin': 161}</string>
+    </dict>
+  </lib>
+</glyph>

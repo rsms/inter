@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="eiotifiedcyrillic" format="1">
+  <advance width="2304"/>
+  <unicode hex="0465"/>
+  <outline>
+    <contour>
+      <point x="1640" y="880" type="line"/>
+      <point x="452" y="880" type="line"/>
+      <point x="452" y="616" type="line"/>
+      <point x="1640" y="616" type="line"/>
+    </contour>
+    <component base="c" xOffset="720"/>
+    <component base="dotlessi" xOffset="24"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2133, 'leftMargin': 134, 'rightMargin': 69}</string>
+    </dict>
+  </lib>
+</glyph>

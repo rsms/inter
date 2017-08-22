@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kturn" format="1">
+  <advance width="1536"/>
+  <unicode hex="029E"/>
+  <outline>
+    <contour>
+      <point x="820" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="820" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1624" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1040" y="-572" type="line"/>
+      <point x="1484" y="-572" type="line"/>
+      <point x="1484" y="1488" type="line"/>
+      <point x="1040" y="1488" type="line"/>
+    </contour>
+    <contour>
+      <point x="92" y="0" type="line"/>
+      <point x="624" y="0" type="line"/>
+      <point x="984" y="436" type="line"/>
+      <point x="1264" y="804" type="line"/>
+      <point x="1080" y="1096" type="line"/>
+      <point x="740" y="760" type="line"/>
+    </contour>
+    <contour>
+      <point x="564" y="1488" type="line"/>
+      <point x="56" y="1488" type="line"/>
+      <point x="652" y="568" type="line"/>
+      <point x="972" y="812" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>-570.625</real>
+        </dict>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1529.0, 'leftMargin': -39, 'rightMargin': 140.0}</string>
+    </dict>
+  </lib>
+</glyph>

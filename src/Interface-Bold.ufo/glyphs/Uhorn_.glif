@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Uhorn" format="1">
+  <advance width="2048"/>
+  <unicode hex="01AF"/>
+  <outline>
+    <contour>
+      <point x="816" y="2216" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="816" y="-16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1844" y="2216" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1800" y="2112" type="line"/>
+      <point x="1800" y="1848"/>
+      <point x="1784" y="1684"/>
+      <point x="1484" y="1684" type="curve"/>
+      <point x="1484" y="1456" type="line"/>
+      <point x="1948" y="1456"/>
+      <point x="2076" y="1700"/>
+      <point x="2076" y="2112" type="curve"/>
+    </contour>
+    <component base="U" xOffset="-176"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2021, 'leftMargin': 150, 'rightMargin': -230}</string>
+    </dict>
+  </lib>
+</glyph>

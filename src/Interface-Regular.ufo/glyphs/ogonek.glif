@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ogonek" format="1">
+  <advance width="736"/>
+  <unicode hex="02DB"/>
+  <outline>
+    <contour>
+      <point x="592" y="0" type="move" name="_ogonek"/>
+    </contour>
+    <contour>
+      <point x="592" y="0" type="move" name="_right"/>
+    </contour>
+    <contour>
+      <point x="480" y="0" type="move" name="_bottom"/>
+    </contour>
+    <contour>
+      <point x="480" y="-600" type="move" name="mkmkbottom_acc"/>
+    </contour>
+    <contour>
+      <point x="484" y="84" type="line"/>
+      <point x="220" y="-36"/>
+      <point x="120" y="-188"/>
+      <point x="120" y="-336" type="curve" smooth="yes"/>
+      <point x="120" y="-508"/>
+      <point x="240" y="-600"/>
+      <point x="392" y="-600" type="curve" smooth="yes"/>
+      <point x="504" y="-600"/>
+      <point x="572" y="-568"/>
+      <point x="616" y="-540" type="curve"/>
+      <point x="600" y="-364" type="line"/>
+      <point x="572" y="-380"/>
+      <point x="524" y="-400"/>
+      <point x="464" y="-400" type="curve" smooth="yes"/>
+      <point x="384" y="-400"/>
+      <point x="360" y="-364"/>
+      <point x="360" y="-304" type="curve" smooth="yes"/>
+      <point x="360" y="-184"/>
+      <point x="472" y="-88"/>
+      <point x="592" y="0" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 776, 'leftMargin': 66, 'rightMargin': 214}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

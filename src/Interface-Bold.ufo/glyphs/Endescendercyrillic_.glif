@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Endescendercyrillic" format="1">
+  <advance width="2304"/>
+  <unicode hex="04A2"/>
+  <outline>
+    <contour>
+      <point x="1964" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1964" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1964" y="2200" type="move" name="top0315"/>
+    </contour>
+    <component base="H" xOffset="-20"/>
+    <component base="cyrillictic" xOffset="1564"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2223, 'leftMargin': 196, 'rightMargin': 78}</string>
+    </dict>
+  </lib>
+</glyph>

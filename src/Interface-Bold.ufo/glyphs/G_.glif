@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="G" format="1">
+  <advance width="1920"/>
+  <unicode hex="0047"/>
+  <outline>
+    <contour>
+      <point x="1044.0" y="2200.0" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1072.0" y="0.0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1996.0" y="2200.0" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1996.0" y="-560.0" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1996.0" y="2200.0" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1800" y="1072" type="line"/>
+      <point x="992" y="1072" type="line"/>
+      <point x="992" y="740" type="line"/>
+      <point x="1356" y="740" type="line"/>
+      <point x="1356" y="460"/>
+      <point x="1248" y="344"/>
+      <point x="1044" y="344" type="curve" smooth="yes"/>
+      <point x="744" y="344"/>
+      <point x="604" y="544"/>
+      <point x="604" y="1000" type="curve"/>
+      <point x="604" y="1464"/>
+      <point x="756" y="1660"/>
+      <point x="1000" y="1660" type="curve" smooth="yes"/>
+      <point x="1232" y="1660"/>
+      <point x="1328" y="1548"/>
+      <point x="1356" y="1348" type="curve"/>
+      <point x="1800" y="1348" type="line"/>
+      <point x="1756" y="1748"/>
+      <point x="1528" y="2032"/>
+      <point x="988" y="2032" type="curve" smooth="yes"/>
+      <point x="488" y="2032"/>
+      <point x="136" y="1680"/>
+      <point x="136" y="1004" type="curve"/>
+      <point x="136" y="324"/>
+      <point x="488" y="-28"/>
+      <point x="1016" y="-28" type="curve" smooth="yes"/>
+      <point x="1448" y="-28"/>
+      <point x="1800" y="216"/>
+      <point x="1800" y="704" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>1238.875</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>763.125</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>1652.75</real>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>C</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>G</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>1920</integer>
+        </dict>
+      </dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1920, 'leftMargin': 118, 'rightMargin': 138}</string>
+    </dict>
+  </lib>
+</glyph>

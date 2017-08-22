@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="srthook" format="1">
+  <advance width="1536"/>
+  <unicode hex="0282"/>
+  <outline>
+    <contour>
+      <point x="740" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="740" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1476" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="88" y="476" type="line"/>
+      <point x="88" y="-80" type="line" smooth="yes"/>
+      <point x="88" y="-396"/>
+      <point x="264" y="-572"/>
+      <point x="556" y="-572" type="curve" smooth="yes"/>
+      <point x="620" y="-572"/>
+      <point x="672" y="-568"/>
+      <point x="740" y="-552" type="curve"/>
+      <point x="740" y="-256" type="line"/>
+      <point x="700" y="-260"/>
+      <point x="668" y="-264"/>
+      <point x="628" y="-264" type="curve" smooth="yes"/>
+      <point x="524" y="-264"/>
+      <point x="392" y="-232"/>
+      <point x="392" y="-80" type="curve" smooth="yes"/>
+      <point x="392" y="476" type="line"/>
+    </contour>
+    <component base="s" xOffset="32"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1445, 'leftMargin': 58, 'rightMargin': 29}</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Yuslittleiotifiedcyrillic" format="1">
+  <advance width="2816"/>
+  <unicode hex="0468"/>
+  <outline>
+    <contour>
+      <point x="1300" y="872" type="line"/>
+      <point x="448" y="872" type="line"/>
+      <point x="448" y="568" type="line"/>
+      <point x="1300" y="568" type="line"/>
+    </contour>
+    <component base="Yuslittlecyrillic" xOffset="732"/>
+    <component base="I" xOffset="-44"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2691, 'leftMargin': 142, 'rightMargin': -39}</string>
+    </dict>
+  </lib>
+</glyph>

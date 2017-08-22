@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="austral" format="1">
+  <advance width="2016"/>
+  <unicode hex="20B3"/>
+  <outline>
+    <contour>
+      <point x="1916" y="1228" type="line"/>
+      <point x="100" y="1228" type="line"/>
+      <point x="100" y="1008" type="line"/>
+      <point x="1916" y="1008" type="line"/>
+    </contour>
+    <contour>
+      <point x="1916" y="748" type="line"/>
+      <point x="100" y="748" type="line"/>
+      <point x="100" y="528" type="line"/>
+      <point x="1916" y="528" type="line"/>
+    </contour>
+    <component base="A" xOffset="100"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1896, 'leftMargin': 41, 'rightMargin': 41}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dyogh" format="1">
+  <advance width="2560"/>
+  <unicode hex="02A4"/>
+  <outline>
+    <contour>
+      <point x="1804" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1804" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="2616" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1212" y="1488" type="line"/>
+      <point x="1212" y="1416" type="line"/>
+      <point x="2328" y="1416" type="line"/>
+      <point x="1656" y="576" type="line"/>
+      <point x="1656" y="552" type="line"/>
+      <point x="1736" y="552" type="line"/>
+      <point x="2412" y="1396" type="line"/>
+      <point x="2404" y="1488" type="line"/>
+    </contour>
+    <contour>
+      <point x="1656" y="564" type="line"/>
+      <point x="1656" y="500" type="line"/>
+      <point x="1796" y="500" type="line" smooth="yes"/>
+      <point x="2140" y="500"/>
+      <point x="2324" y="340"/>
+      <point x="2324" y="-48" type="curve" smooth="yes"/>
+      <point x="2324" y="-344"/>
+      <point x="2136" y="-528"/>
+      <point x="1804" y="-528" type="curve" smooth="yes"/>
+      <point x="1476" y="-528"/>
+      <point x="1284" y="-408"/>
+      <point x="1260" y="-156" type="curve"/>
+      <point x="1184" y="-156" type="line"/>
+      <point x="1220" y="-508"/>
+      <point x="1500" y="-600"/>
+      <point x="1804" y="-600" type="curve" smooth="yes"/>
+      <point x="2148" y="-600"/>
+      <point x="2400" y="-396"/>
+      <point x="2400" y="-40" type="curve" smooth="yes"/>
+      <point x="2400" y="348"/>
+      <point x="2208" y="564"/>
+      <point x="1804" y="564" type="curve"/>
+    </contour>
+    <component base="d" xOffset="-48"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.939</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2666, 'leftMargin': 200, 'rightMargin': 207}</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="itildebelow" format="1">
+  <advance width="1004"/>
+  <unicode hex="1E2D"/>
+  <outline>
+    <contour>
+      <point x="548" y="16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="592" y="900" type="move" name="rhotichook"/>
+    </contour>
+    <contour>
+      <point x="548" y="-580" type="move" name="mkmkbottom_acc"/>
+    </contour>
+    <contour>
+      <point x="552" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="896" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="896" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="664" y="0" type="move" name="ogonek"/>
+    </contour>
+    <contour>
+      <point x="896" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <component base="i" xOffset="188"/>
+    <component base="tilde" xOffset="-132" yOffset="-2216"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 997, 'leftMargin': -20, 'rightMargin': 33}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

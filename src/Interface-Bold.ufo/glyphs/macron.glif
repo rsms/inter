@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="macron" format="1">
+  <advance width="1536"/>
+  <unicode hex="00AF"/>
+  <outline>
+    <contour>
+      <point x="768" y="1784" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="768" y="2216" type="move" name="mkmktop_acc"/>
+    </contour>
+    <contour>
+      <point x="1244" y="2004" type="line"/>
+      <point x="292" y="2004" type="line"/>
+      <point x="292" y="1768" type="line"/>
+      <point x="1244" y="1768" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1448, 'leftMargin': 243, 'rightMargin': 252}</string>
+    </dict>
+  </lib>
+</glyph>

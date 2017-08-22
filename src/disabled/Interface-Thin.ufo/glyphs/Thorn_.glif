@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Thorn" format="1">
+  <advance width="1792"/>
+  <unicode hex="00DE"/>
+  <outline>
+    <contour>
+      <point x="296" y="2004" type="line"/>
+      <point x="296" y="0" type="line"/>
+      <point x="368" y="0" type="line"/>
+      <point x="368" y="2004" type="line"/>
+    </contour>
+    <contour>
+      <point x="320" y="1572" type="line"/>
+      <point x="340" y="1496" type="line"/>
+      <point x="880" y="1496" type="line" smooth="yes"/>
+      <point x="1268" y="1496"/>
+      <point x="1424" y="1252"/>
+      <point x="1424" y="1012" type="curve" smooth="yes"/>
+      <point x="1424" y="784"/>
+      <point x="1268" y="536"/>
+      <point x="880" y="536" type="curve" smooth="yes"/>
+      <point x="312" y="536" type="line"/>
+      <point x="312" y="460" type="line"/>
+      <point x="880" y="460" type="line" smooth="yes"/>
+      <point x="1280" y="460"/>
+      <point x="1500" y="696"/>
+      <point x="1500" y="1016" type="curve" smooth="yes"/>
+      <point x="1500" y="1336"/>
+      <point x="1280" y="1572"/>
+      <point x="880" y="1572" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>1238.875</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>763.125</real>
+        </dict>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1676, 'leftMargin': 275, 'rightMargin': 198}</string>
+    </dict>
+  </lib>
+</glyph>

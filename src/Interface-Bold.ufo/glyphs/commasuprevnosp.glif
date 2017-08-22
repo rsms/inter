@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="commasuprevnosp" format="1">
+  <advance width="0"/>
+  <unicode hex="0314"/>
+  <outline>
+    <contour>
+      <point x="-765" y="1470" type="move" name="_marktop"/>
+    </contour>
+    <contour>
+      <point x="-765" y="2316" type="move" name="mkmktop"/>
+    </contour>
+    <contour>
+      <point x="-792" y="1792" type="move" name="parent_top"/>
+    </contour>
+    <contour>
+      <point x="-1024" y="2200" type="line"/>
+      <point x="-666" y="2200" type="line"/>
+      <point x="-666" y="1924" type="line" smooth="yes"/>
+      <point x="-666" y="1733"/>
+      <point x="-622" y="1605"/>
+      <point x="-561" y="1493" type="curve"/>
+      <point x="-773" y="1383" type="line"/>
+      <point x="-903" y="1504"/>
+      <point x="-1024" y="1728"/>
+      <point x="-1024" y="1922" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.98</real>
+        <real>0.89</real>
+        <real>0.89</real>
+        <real>1.0</real>
+      </array>
+    </dict>
+  </lib>
+</glyph>

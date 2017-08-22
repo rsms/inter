@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dcroat" format="1">
+  <advance width="1792"/>
+  <unicode hex="0111"/>
+  <outline>
+    <contour>
+      <point x="1644" y="2112" type="move" name="caron"/>
+    </contour>
+    <contour>
+      <point x="832" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="692" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1620" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1620" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="832" y="0" type="move" name="markbottom"/>
+    </contour>
+    <contour>
+      <point x="1840" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1188" y="1804" type="move" name="parenthesses.w2"/>
+    </contour>
+    <contour>
+      <point x="1036" y="340" type="line"/>
+      <point x="1080" y="0" type="line"/>
+      <point x="1480" y="0" type="line"/>
+      <point x="1480" y="2112" type="line"/>
+      <point x="1036" y="2112" type="line"/>
+    </contour>
+    <contour>
+      <point x="1684" y="1932" type="line"/>
+      <point x="692" y="1932" type="line"/>
+      <point x="692" y="1672" type="line"/>
+      <point x="1684" y="1672" type="line"/>
+    </contour>
+    <component base="leftloop.cn"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1804.0, 'leftMargin': 78, 'rightMargin': 158.0}</string>
+    </dict>
+  </lib>
+</glyph>

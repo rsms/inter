@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="bhook" format="1">
+  <advance width="1792"/>
+  <unicode hex="0253"/>
+  <outline>
+    <contour>
+      <point x="996" y="2340" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1008" y="-16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1660" y="2340" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="656" y="1416" type="line"/>
+      <point x="656" y="1680" type="line" smooth="yes"/>
+      <point x="656" y="1832"/>
+      <point x="788" y="1868"/>
+      <point x="892" y="1868" type="curve" smooth="yes"/>
+      <point x="932" y="1868"/>
+      <point x="964" y="1864"/>
+      <point x="1000" y="1856" type="curve"/>
+      <point x="1000" y="2152" type="line"/>
+      <point x="936" y="2168"/>
+      <point x="868" y="2176"/>
+      <point x="768" y="2176" type="curve" smooth="yes"/>
+      <point x="528" y="2176"/>
+      <point x="212" y="2124"/>
+      <point x="212" y="1680" type="curve" smooth="yes"/>
+      <point x="212" y="1416" type="line"/>
+    </contour>
+    <contour>
+      <point x="212" y="1596" type="line"/>
+      <point x="212" y="0" type="line"/>
+      <point x="612" y="0" type="line"/>
+      <point x="656" y="368" type="line"/>
+      <point x="656" y="1596" type="line"/>
+    </contour>
+    <contour>
+      <point x="1580" y="760" type="line"/>
+      <point x="1580" y="1196"/>
+      <point x="1396" y="1516"/>
+      <point x="1000" y="1516" type="curve" smooth="yes"/>
+      <point x="640" y="1516"/>
+      <point x="496" y="1176"/>
+      <point x="436" y="764" type="curve"/>
+      <point x="436" y="728" type="line"/>
+      <point x="496" y="308"/>
+      <point x="640" y="-28"/>
+      <point x="1000" y="-28" type="curve" smooth="yes"/>
+      <point x="1396" y="-28"/>
+      <point x="1580" y="284"/>
+      <point x="1580" y="732" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="1136" y="732" type="line"/>
+      <point x="1136" y="492"/>
+      <point x="1096" y="328"/>
+      <point x="892" y="328" type="curve" smooth="yes"/>
+      <point x="684" y="328"/>
+      <point x="616" y="460"/>
+      <point x="616" y="692" type="curve" smooth="yes"/>
+      <point x="616" y="800" type="line" smooth="yes"/>
+      <point x="616" y="1024"/>
+      <point x="684" y="1160"/>
+      <point x="888" y="1160" type="curve" smooth="yes"/>
+      <point x="1092" y="1160"/>
+      <point x="1136" y="976"/>
+      <point x="1136" y="760" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1585, 'leftMargin': 140, 'rightMargin': 79}</string>
+    </dict>
+  </lib>
+</glyph>

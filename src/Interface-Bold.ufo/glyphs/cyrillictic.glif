@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cyrillictic" format="1">
+  <advance width="768"/>
+  <outline>
+    <contour>
+      <point x="280" y="0" type="move" name="_right"/>
+    </contour>
+    <contour>
+      <point x="504" y="0" type="move" name="_left"/>
+    </contour>
+    <contour>
+      <point x="384" y="184" type="move" name="_bottom"/>
+    </contour>
+    <contour>
+      <point x="608" y="308" type="line"/>
+      <point x="164" y="308" type="line"/>
+      <point x="164" y="-492" type="line"/>
+      <point x="608" y="-492" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.87</real>
+        <real>0.87</real>
+        <real>0.87</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 688, 'leftMargin': 122, 'rightMargin': 123}</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tilde" format="1">
+  <advance width="1248"/>
+  <unicode hex="02DC"/>
+  <outline>
+    <contour>
+      <point x="624" y="1772" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="624" y="2208" type="move" name="mkmktop_acc"/>
+    </contour>
+    <contour>
+      <point x="936" y="2084" type="line"/>
+      <point x="936" y="2000"/>
+      <point x="876" y="1932"/>
+      <point x="800" y="1932" type="curve" smooth="yes"/>
+      <point x="656" y="1932"/>
+      <point x="588" y="2060"/>
+      <point x="436" y="2060" type="curve" smooth="yes"/>
+      <point x="264" y="2060"/>
+      <point x="132" y="1916"/>
+      <point x="132" y="1712" type="curve"/>
+      <point x="316" y="1704" type="line"/>
+      <point x="316" y="1788"/>
+      <point x="372" y="1856"/>
+      <point x="448" y="1856" type="curve" smooth="yes"/>
+      <point x="600" y="1856"/>
+      <point x="628" y="1728"/>
+      <point x="812" y="1728" type="curve" smooth="yes"/>
+      <point x="984" y="1728"/>
+      <point x="1116" y="1860"/>
+      <point x="1116" y="2068" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1352, 'leftMargin': 175, 'rightMargin': 194}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="daggerdbl" format="1">
+  <advance width="1504"/>
+  <unicode hex="2021"/>
+  <outline>
+    <contour>
+      <point x="884" y="2004" type="line"/>
+      <point x="612" y="2004" type="line"/>
+      <point x="612" y="-572" type="line"/>
+      <point x="884" y="-572" type="line"/>
+    </contour>
+    <contour>
+      <point x="1432" y="1488" type="line"/>
+      <point x="72" y="1488" type="line"/>
+      <point x="72" y="1268" type="line"/>
+      <point x="1432" y="1268" type="line"/>
+    </contour>
+    <contour>
+      <point x="1432" y="220" type="line"/>
+      <point x="72" y="220" type="line"/>
+      <point x="72" y="0" type="line"/>
+      <point x="1432" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1610, 'leftMargin': 121, 'rightMargin': 129}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

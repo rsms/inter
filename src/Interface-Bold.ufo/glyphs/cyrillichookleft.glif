@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cyrillichookleft" format="1">
+  <advance width="768"/>
+  <outline>
+    <contour>
+      <point x="628" y="0" type="move" name="_left"/>
+    </contour>
+    <contour>
+      <point x="184" y="0" type="move" name="_right"/>
+    </contour>
+    <contour>
+      <point x="420" y="0" type="move" name="_bottom"/>
+    </contour>
+    <contour>
+      <point x="248" y="0" type="line"/>
+      <point x="308" y="-72"/>
+      <point x="368" y="-128"/>
+      <point x="368" y="-228" type="curve" smooth="yes"/>
+      <point x="368" y="-236"/>
+      <point x="368" y="-308"/>
+      <point x="256" y="-308" type="curve" smooth="yes"/>
+      <point x="196" y="-308"/>
+      <point x="156" y="-292"/>
+      <point x="128" y="-284" type="curve"/>
+      <point x="80" y="-512" type="line"/>
+      <point x="132" y="-540"/>
+      <point x="212" y="-572"/>
+      <point x="336" y="-572" type="curve" smooth="yes"/>
+      <point x="532" y="-572"/>
+      <point x="692" y="-472"/>
+      <point x="692" y="-280" type="curve" smooth="yes"/>
+      <point x="692" y="-152"/>
+      <point x="624" y="-20"/>
+      <point x="456" y="84" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>2817.375</real>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.87</real>
+        <real>0.87</real>
+        <real>0.87</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 875, 'leftMargin': 52, 'rightMargin': 212}</string>
+    </dict>
+  </lib>
+</glyph>

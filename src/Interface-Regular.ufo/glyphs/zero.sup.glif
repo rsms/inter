@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="zero.sup" format="1">
+  <advance width="1248"/>
+  <outline>
+    <contour>
+      <point x="1032" y="640" type="line"/>
+      <point x="1032" y="952"/>
+      <point x="868" y="1100"/>
+      <point x="624" y="1100" type="curve" smooth="yes"/>
+      <point x="380" y="1100"/>
+      <point x="216" y="952"/>
+      <point x="216" y="640" type="curve"/>
+      <point x="216" y="448" type="line"/>
+      <point x="216" y="132"/>
+      <point x="380" y="-16"/>
+      <point x="628" y="-16" type="curve" smooth="yes"/>
+      <point x="868" y="-16"/>
+      <point x="1032" y="132"/>
+      <point x="1032" y="448" type="curve"/>
+    </contour>
+    <contour>
+      <point x="800" y="428" type="line"/>
+      <point x="800" y="248"/>
+      <point x="736" y="172"/>
+      <point x="628" y="172" type="curve" smooth="yes"/>
+      <point x="512" y="172"/>
+      <point x="448" y="248"/>
+      <point x="448" y="428" type="curve" smooth="yes"/>
+      <point x="448" y="660" type="line" smooth="yes"/>
+      <point x="448" y="836"/>
+      <point x="512" y="912"/>
+      <point x="624" y="912" type="curve" smooth="yes"/>
+      <point x="736" y="912"/>
+      <point x="800" y="836"/>
+      <point x="800" y="660" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.87</real>
+        <real>0.87</real>
+        <real>0.87</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1037, 'leftMargin': 109, 'rightMargin': 110}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

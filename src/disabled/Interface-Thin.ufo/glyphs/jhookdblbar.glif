@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="jhookdblbar" format="1">
+  <advance width="1280"/>
+  <unicode hex="0284"/>
+  <outline>
+    <contour>
+      <point x="884" y="2340" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1212" y="2340" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="380" y="-616" type="move" name="bottom"/>
+    </contour>
+    <component base="esh" xOffset="72"/>
+    <component base="crossbar" xOffset="124" yOffset="-992"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.967</real>
+        <real>0.6</real>
+        <real>1.0</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1139, 'leftMargin': 41, 'rightMargin': 42}</string>
+    </dict>
+  </lib>
+</glyph>

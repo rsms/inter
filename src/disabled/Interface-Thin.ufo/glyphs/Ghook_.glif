@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Ghook" format="1">
+  <advance width="2048"/>
+  <unicode hex="0193"/>
+  <outline>
+    <contour>
+      <point x="1512" y="1460" type="line"/>
+      <point x="1512" y="1640" type="line" smooth="yes"/>
+      <point x="1512" y="1900"/>
+      <point x="1572" y="2044"/>
+      <point x="1772" y="2044" type="curve" smooth="yes"/>
+      <point x="1824" y="2044"/>
+      <point x="1880" y="2032"/>
+      <point x="1908" y="2020" type="curve"/>
+      <point x="1928" y="2092" type="line"/>
+      <point x="1872" y="2108"/>
+      <point x="1828" y="2120"/>
+      <point x="1772" y="2120" type="curve" smooth="yes"/>
+      <point x="1528" y="2120"/>
+      <point x="1436" y="1952"/>
+      <point x="1436" y="1640" type="curve" smooth="yes"/>
+      <point x="1436" y="1460" type="line"/>
+    </contour>
+    <component base="G" xOffset="-176"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.939</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1976, 'leftMargin': 296, 'rightMargin': -125}</string>
+    </dict>
+  </lib>
+</glyph>

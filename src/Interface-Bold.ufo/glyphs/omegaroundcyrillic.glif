@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="omegaroundcyrillic" format="1">
+  <advance width="1792"/>
+  <unicode hex="047B"/>
+  <outline>
+    <contour>
+      <point x="788" y="1872" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1584" y="1872" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="900" y="1656" type="line"/>
+      <point x="692" y="1656" type="line"/>
+      <point x="692" y="1000" type="line"/>
+      <point x="900" y="1000" type="line"/>
+    </contour>
+    <contour>
+      <point x="892" y="512" type="line"/>
+      <point x="680" y="512" type="line"/>
+      <point x="680" y="-172" type="line"/>
+      <point x="892" y="-172" type="line"/>
+    </contour>
+    <component base="o" xOffset="-4"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1585, 'leftMargin': 184, 'rightMargin': -27}</string>
+    </dict>
+  </lib>
+</glyph>

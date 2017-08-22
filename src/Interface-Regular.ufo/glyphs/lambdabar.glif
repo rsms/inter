@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="lambdabar" format="1">
+  <advance width="1760"/>
+  <unicode hex="019B"/>
+  <outline>
+    <contour>
+      <point x="1328" y="2216" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="936" y="1952" type="line"/>
+      <point x="260" y="1692" type="line"/>
+      <point x="260" y="1460" type="line"/>
+      <point x="936" y="1716" type="line"/>
+    </contour>
+    <component base="lambda" xOffset="-16"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1562.0, 'leftMargin': 176, 'rightMargin': -54.0}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

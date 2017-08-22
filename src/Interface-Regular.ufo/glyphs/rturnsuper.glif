@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="rturnsuper" format="1">
+  <advance width="736"/>
+  <unicode hex="02B4"/>
+  <outline>
+    <contour>
+      <point x="84" y="888" type="line"/>
+      <point x="100" y="880"/>
+      <point x="140" y="876"/>
+      <point x="180" y="876" type="curve" smooth="yes"/>
+      <point x="368" y="876"/>
+      <point x="500" y="1100"/>
+      <point x="500" y="1408" type="curve"/>
+      <point x="436" y="1408" type="line"/>
+      <point x="436" y="1236"/>
+      <point x="372" y="1112"/>
+      <point x="224" y="1112" type="curve" smooth="yes"/>
+      <point x="172" y="1112"/>
+      <point x="128" y="1124"/>
+      <point x="84" y="1144" type="curve"/>
+    </contour>
+    <contour>
+      <point x="404" y="1132" type="line"/>
+      <point x="464" y="896" type="line"/>
+      <point x="656" y="896" type="line"/>
+      <point x="656" y="1996" type="line"/>
+      <point x="404" y="1996" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 763, 'leftMargin': 55, 'rightMargin': 137}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

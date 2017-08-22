@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Oslash" format="1">
+  <advance width="1792"/>
+  <unicode hex="00D8"/>
+  <outline>
+    <contour>
+      <point x="952" y="2304" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1852" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1852" y="2304" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1680" y="2056" type="line"/>
+      <point x="1588" y="2056" type="line"/>
+      <point x="216" y="-104" type="line"/>
+      <point x="308" y="-104" type="line"/>
+    </contour>
+    <component base="O" xOffset="-28"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1876, 'leftMargin': 140, 'rightMargin': 171}</string>
+    </dict>
+  </lib>
+</glyph>

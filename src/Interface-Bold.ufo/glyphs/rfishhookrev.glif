@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="rfishhookrev" format="1">
+  <advance width="1024"/>
+  <unicode hex="027F"/>
+  <outline>
+    <contour>
+      <point x="692" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="692" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1048" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="908" y="-572" type="line" name="hr00"/>
+      <point x="908" y="1024" type="line" smooth="yes"/>
+      <point x="908" y="1464"/>
+      <point x="592" y="1516"/>
+      <point x="352" y="1516" type="curve" smooth="yes"/>
+      <point x="252" y="1516"/>
+      <point x="184" y="1508"/>
+      <point x="120" y="1496" type="curve"/>
+      <point x="120" y="1200" type="line"/>
+      <point x="156" y="1204"/>
+      <point x="192" y="1208"/>
+      <point x="228" y="1208" type="curve" smooth="yes"/>
+      <point x="332" y="1208"/>
+      <point x="464" y="1172"/>
+      <point x="464" y="1024" type="curve" smooth="yes"/>
+      <point x="464" y="-572" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      </data>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 958, 'leftMargin': 30, 'rightMargin': 140}</string>
+    </dict>
+  </lib>
+</glyph>

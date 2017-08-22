@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="acute" format="1">
+  <advance width="1024"/>
+  <unicode hex="00B4"/>
+  <outline>
+    <contour>
+      <point x="348" y="1776" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="348" y="2296" type="move" name="mkmktop_acc"/>
+    </contour>
+    <contour>
+      <point x="140" y="1680" type="line"/>
+      <point x="504" y="1680" type="line"/>
+      <point x="884" y="2112" type="line"/>
+      <point x="412" y="2112" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 946.0, 'leftMargin': 129, 'rightMargin': 74.0}</string>
+    </dict>
+  </lib>
+</glyph>

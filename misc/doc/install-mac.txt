@@ -1,0 +1,24 @@
+
+Installing on macOS:
+
+1. Open the "Interface (OTF)" folder
+2. Select all font files
+3. Right-click (or ctrl-click) the selected files
+   and choose "Open with..." → "Font Book"
+4. Press the "Install" button
+
+If you get any errors, like Font Book saying there're duplicate fonts,
+cancel the installation and instead try the instructions below:
+
+
+Installing on macOS, manually:
+
+1. Copy the "Interface (OTF)" folder
+2. Press cmd-shift-G in Finder
+3. Enter "~/Library/Fonts" into the dialog that shows up and press RETURN.
+4. Paste the "Interface (OTF)" folder.
+
+If you have a previous installation of Interface, you should make sure to
+remove those fonts files before installing new ones.
+
+See https://github.com/rsms/interface for more information

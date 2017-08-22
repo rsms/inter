@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniA708" format="1">
+  <advance width="1024"/>
+  <unicode hex="A708"/>
+  <outline>
+    <contour>
+      <point x="952" y="2004" type="line"/>
+      <point x="704" y="2004" type="line"/>
+      <point x="704" y="-372" type="line"/>
+      <point x="952" y="-372" type="line"/>
+    </contour>
+    <contour>
+      <point x="72" y="1828" type="curve" smooth="yes"/>
+      <point x="72" y="1708"/>
+      <point x="172" y="1620"/>
+      <point x="320" y="1620" type="curve" smooth="yes"/>
+      <point x="468" y="1620"/>
+      <point x="568" y="1708"/>
+      <point x="568" y="1828" type="curve" smooth="yes"/>
+      <point x="568" y="1944"/>
+      <point x="468" y="2032"/>
+      <point x="320" y="2032" type="curve" smooth="yes"/>
+      <point x="172" y="2032"/>
+      <point x="72" y="1944"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1088, 'leftMargin': 41, 'rightMargin': 168}</string>
+    </dict>
+  </lib>
+</glyph>

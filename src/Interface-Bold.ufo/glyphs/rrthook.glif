@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="rrthook" format="1">
+  <advance width="1280"/>
+  <unicode hex="027D"/>
+  <outline>
+    <contour>
+      <point x="592" y="-424" type="move" name="parenthesses.w1"/>
+    </contour>
+    <contour>
+      <point x="796" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="796" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1112" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="200" y="296" type="line" name="hr00"/>
+      <point x="200" y="-108" type="line" smooth="yes"/>
+      <point x="200" y="-548"/>
+      <point x="512" y="-600"/>
+      <point x="752" y="-600" type="curve" smooth="yes"/>
+      <point x="852" y="-600"/>
+      <point x="920" y="-592"/>
+      <point x="984" y="-580" type="curve"/>
+      <point x="984" y="-284" type="line"/>
+      <point x="948" y="-288"/>
+      <point x="912" y="-292"/>
+      <point x="876" y="-292" type="curve" smooth="yes"/>
+      <point x="772" y="-292"/>
+      <point x="640" y="-256"/>
+      <point x="640" y="-108" type="curve" smooth="yes"/>
+      <point x="640" y="296" type="line"/>
+    </contour>
+    <component base="r" xOffset="60"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      </data>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1055, 'leftMargin': 140, 'rightMargin': 31}</string>
+    </dict>
+  </lib>
+</glyph>

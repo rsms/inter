@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="circumflex" format="1">
+  <advance width="1248"/>
+  <unicode hex="02C6"/>
+  <outline>
+    <contour>
+      <point x="644" y="1776" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="624" y="2256" type="move" name="mkmktop_acc"/>
+    </contour>
+    <contour>
+      <point x="704" y="2116" type="line"/>
+      <point x="540" y="2116" type="line"/>
+      <point x="200" y="1736" type="line"/>
+      <point x="200" y="1724" type="line"/>
+      <point x="424" y="1724" type="line"/>
+      <point x="624" y="1952" type="line"/>
+      <point x="824" y="1724" type="line"/>
+      <point x="1048" y="1724" type="line"/>
+      <point x="1048" y="1736" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

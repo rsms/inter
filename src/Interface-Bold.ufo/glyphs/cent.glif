@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cent" format="1">
+  <advance width="1536"/>
+  <unicode hex="00A2"/>
+  <outline>
+    <contour>
+      <point x="916" y="1812" type="line"/>
+      <point x="640" y="1812" type="line"/>
+      <point x="640" y="1412" type="line"/>
+      <point x="916" y="1412" type="line"/>
+    </contour>
+    <contour>
+      <point x="916" y="64" type="line"/>
+      <point x="640" y="64" type="line"/>
+      <point x="640" y="-336" type="line"/>
+      <point x="916" y="-336" type="line"/>
+    </contour>
+    <component base="c"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1650.0, 'leftMargin': 166, 'rightMargin': 164.0}</string>
+    </dict>
+  </lib>
+</glyph>

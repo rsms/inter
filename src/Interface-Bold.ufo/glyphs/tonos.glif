@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tonos" format="1">
+  <advance width="1024"/>
+  <unicode hex="0384"/>
+  <outline>
+    <contour>
+      <point x="420" y="1776" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="664" y="2000" type="move" name="_tonos"/>
+    </contour>
+    <contour>
+      <point x="256" y="1728" type="line"/>
+      <point x="520" y="1728" type="line"/>
+      <point x="768" y="2204" type="line"/>
+      <point x="368" y="2204" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1033, 'leftMargin': 320, 'rightMargin': 201}</string>
+    </dict>
+  </lib>
+</glyph>

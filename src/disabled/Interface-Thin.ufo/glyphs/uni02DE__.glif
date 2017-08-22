@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni02DE" format="1">
+  <advance width="768"/>
+  <unicode hex="02DE"/>
+  <outline>
+    <contour>
+      <point x="28" y="888" type="move" name="_markrhotichook"/>
+    </contour>
+    <contour>
+      <point x="24" y="852" type="line"/>
+      <point x="368" y="932" type="line"/>
+      <point x="368" y="576"/>
+      <point x="456" y="528"/>
+      <point x="584" y="528" type="curve" smooth="yes"/>
+      <point x="632" y="528"/>
+      <point x="688" y="544"/>
+      <point x="744" y="564" type="curve"/>
+      <point x="728" y="632" type="line"/>
+      <point x="684" y="620"/>
+      <point x="628" y="604"/>
+      <point x="588" y="604" type="curve" smooth="yes"/>
+      <point x="508" y="604"/>
+      <point x="432" y="632"/>
+      <point x="440" y="1020" type="curve"/>
+      <point x="24" y="924" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.798</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 576, 'leftMargin': -254, 'rightMargin': 110}</string>
+    </dict>
+  </lib>
+</glyph>

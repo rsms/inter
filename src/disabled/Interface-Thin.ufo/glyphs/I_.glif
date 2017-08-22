@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="I" format="1">
+  <advance width="768"/>
+  <unicode hex="0049"/>
+  <outline>
+    <contour>
+      <point x="388" y="2216" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="388" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="-28" y="1996" type="move" name="tonos"/>
+    </contour>
+    <contour>
+      <point x="420" y="0" type="move" name="right"/>
+    </contour>
+    <contour>
+      <point x="412" y="0" type="move" name="ogonek"/>
+    </contour>
+    <contour>
+      <point x="752" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="752" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="752" y="2216" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="420" y="2004" type="line"/>
+      <point x="348" y="2004" type="line"/>
+      <point x="348" y="0" type="line"/>
+      <point x="420" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>1238.875</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>763.125</real>
+        </dict>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 734, 'leftMargin': 330, 'rightMargin': 330}</string>
+    </dict>
+  </lib>
+</glyph>

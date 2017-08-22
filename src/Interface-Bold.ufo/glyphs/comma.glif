@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="comma" format="1">
+  <advance width="768"/>
+  <unicode hex="002C"/>
+  <outline>
+    <contour>
+      <point x="620" y="364" type="move" name="_bottom"/>
+    </contour>
+    <contour>
+      <point x="312" y="48" type="move" name="_right"/>
+    </contour>
+    <contour>
+      <point x="592" y="348" type="line"/>
+      <point x="232" y="348" type="line"/>
+      <point x="232" y="28" type="line"/>
+      <point x="232" y="-188"/>
+      <point x="148" y="-304"/>
+      <point x="88" y="-428" type="curve"/>
+      <point x="312" y="-540" type="line"/>
+      <point x="472" y="-404"/>
+      <point x="592" y="-168"/>
+      <point x="592" y="56" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>1238.875</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>763.125</real>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 737.0, 'leftMargin': 56, 'rightMargin': 175.0}</string>
+    </dict>
+  </lib>
+</glyph>

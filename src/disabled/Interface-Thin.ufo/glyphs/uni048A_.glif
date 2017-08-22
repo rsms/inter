@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni048A" format="1">
+  <advance width="2048"/>
+  <unicode hex="048A"/>
+  <outline>
+    <contour>
+      <point x="972" y="2528" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1952" y="2216" type="move" name="top0315"/>
+    </contour>
+    <component base="uni0418" xOffset="-40"/>
+    <component base="breve" xOffset="388" yOffset="448"/>
+    <component base="comma" xOffset="1428" yOffset="-36"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.6</real>
+        <real>0.609</real>
+        <real>1.0</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1887, 'leftMargin': 304, 'rightMargin': 64}</string>
+    </dict>
+  </lib>
+</glyph>

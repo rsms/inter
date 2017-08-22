@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ring" format="1">
+  <advance width="768"/>
+  <unicode hex="02DA"/>
+  <outline>
+    <contour>
+      <point x="380" y="1780" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="380" y="2224" type="move" name="mkmktop_acc"/>
+    </contour>
+    <contour>
+      <point x="148" y="1900" type="curve"/>
+      <point x="148" y="1768"/>
+      <point x="252" y="1668"/>
+      <point x="384" y="1668" type="curve" smooth="yes"/>
+      <point x="516" y="1668"/>
+      <point x="620" y="1768"/>
+      <point x="620" y="1900" type="curve" smooth="yes"/>
+      <point x="620" y="2036"/>
+      <point x="516" y="2140"/>
+      <point x="384" y="2140" type="curve" smooth="yes"/>
+      <point x="252" y="2140"/>
+      <point x="148" y="2036"/>
+    </contour>
+    <contour>
+      <point x="224" y="1900" type="curve"/>
+      <point x="224" y="2000"/>
+      <point x="292" y="2064"/>
+      <point x="384" y="2064" type="curve" smooth="yes"/>
+      <point x="476" y="2064"/>
+      <point x="544" y="2000"/>
+      <point x="544" y="1900" type="curve" smooth="yes"/>
+      <point x="544" y="1804"/>
+      <point x="476" y="1740"/>
+      <point x="384" y="1740" type="curve" smooth="yes"/>
+      <point x="292" y="1740"/>
+      <point x="224" y="1804"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 806, 'leftMargin': 157, 'rightMargin': 179}</string>
+    </dict>
+  </lib>
+</glyph>

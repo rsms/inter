@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="l" format="1">
+  <advance width="768"/>
+  <unicode hex="006C"/>
+  <outline>
+    <contour>
+      <point x="384.0" y="2308.0" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="384.0" y="16.0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="756.0" y="2112.0" type="move" name="caron"/>
+    </contour>
+    <contour>
+      <point x="740.0" y="1072.0" type="move" name="dot"/>
+    </contour>
+    <contour>
+      <point x="948.0" y="2044.0" type="move" name="marktop"/>
+    </contour>
+    <contour>
+      <point x="768.0" y="2200.0" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="768.0" y="-560.0" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="768.0" y="2308.0" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="604" y="2104" type="line"/>
+      <point x="160" y="2104" type="line"/>
+      <point x="160" y="0" type="line"/>
+      <point x="604" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 766, 'leftMargin': 161, 'rightMargin': 161}</string>
+    </dict>
+  </lib>
+</glyph>

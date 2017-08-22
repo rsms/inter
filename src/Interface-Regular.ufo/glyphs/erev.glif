@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="erev" format="1">
+  <advance width="1504"/>
+  <unicode hex="0258"/>
+  <outline>
+    <contour>
+      <point x="1208" y="900" type="move" name="rhotichook"/>
+    </contour>
+    <contour>
+      <point x="736" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="700" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1516" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="700" y="-28" type="curve" smooth="yes"/>
+      <point x="1124" y="-28"/>
+      <point x="1388" y="272"/>
+      <point x="1388" y="692" type="curve" smooth="yes"/>
+      <point x="1388" y="748" type="line" smooth="yes"/>
+      <point x="1388" y="1240"/>
+      <point x="1068" y="1516"/>
+      <point x="736" y="1516" type="curve" smooth="yes"/>
+      <point x="296" y="1516"/>
+      <point x="116" y="1200"/>
+      <point x="116" y="780" type="curve" smooth="yes"/>
+      <point x="116" y="660" type="line"/>
+      <point x="1224" y="660" type="line"/>
+      <point x="1224" y="880" type="line"/>
+      <point x="392" y="880" type="line"/>
+      <point x="392" y="900" type="line"/>
+      <point x="408" y="1088"/>
+      <point x="480" y="1296"/>
+      <point x="736" y="1296" type="curve" smooth="yes"/>
+      <point x="956" y="1296"/>
+      <point x="1112" y="1104"/>
+      <point x="1112" y="748" type="curve" smooth="yes"/>
+      <point x="1112" y="692" type="line" smooth="yes"/>
+      <point x="1112" y="416"/>
+      <point x="960" y="192"/>
+      <point x="688" y="192" type="curve" smooth="yes"/>
+      <point x="508" y="192"/>
+      <point x="388" y="276"/>
+      <point x="300" y="392" type="curve"/>
+      <point x="132" y="264" type="line"/>
+      <point x="232" y="116"/>
+      <point x="400" y="-28"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1502, 'leftMargin': 102, 'rightMargin': 130}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

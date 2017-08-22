@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ibar" format="1">
+  <advance width="992"/>
+  <unicode hex="0268"/>
+  <outline>
+    <contour>
+      <point x="496" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="968" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="496" y="0" type="move" name="bottom"/>
+    </contour>
+    <component base="i" xOffset="148"/>
+    <component base="crossbar" xOffset="-148" yOffset="-164"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 938, 'leftMargin': 27, 'rightMargin': 28}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

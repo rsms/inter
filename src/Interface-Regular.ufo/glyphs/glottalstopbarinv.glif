@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="glottalstopbarinv" format="1">
+  <advance width="1504"/>
+  <unicode hex="01BE"/>
+  <outline>
+    <contour>
+      <point x="1076" y="396" type="curve" smooth="yes"/>
+      <point x="1076" y="280"/>
+      <point x="968" y="192"/>
+      <point x="772" y="192" type="curve" smooth="yes"/>
+      <point x="616" y="192"/>
+      <point x="440" y="260"/>
+      <point x="432" y="468" type="curve"/>
+      <point x="156" y="468" type="line"/>
+      <point x="156" y="216"/>
+      <point x="372" y="-28"/>
+      <point x="772" y="-28" type="curve" smooth="yes"/>
+      <point x="1120" y="-28"/>
+      <point x="1352" y="156"/>
+      <point x="1352" y="420" type="curve" smooth="yes"/>
+      <point x="1352" y="832"/>
+      <point x="852" y="744"/>
+      <point x="852" y="1084" type="curve" smooth="yes"/>
+      <point x="852" y="1844" type="line"/>
+      <point x="576" y="1844" type="line"/>
+      <point x="576" y="1076" type="line" smooth="yes"/>
+      <point x="576" y="624"/>
+      <point x="1076" y="668"/>
+    </contour>
+    <contour>
+      <point x="1124" y="1488" type="line"/>
+      <point x="308" y="1488" type="line"/>
+      <point x="308" y="1284" type="line"/>
+      <point x="1124" y="1284" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1459, 'leftMargin': 129, 'rightMargin': 135}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

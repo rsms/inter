@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="bbar" format="1">
+  <advance width="1792"/>
+  <unicode hex="0180"/>
+  <outline>
+    <contour>
+      <point x="996" y="-16" type="move" name="markbottom"/>
+    </contour>
+    <contour>
+      <point x="988" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="588" y="1792" type="move" name="parenthesses.w2"/>
+    </contour>
+    <contour>
+      <point x="1760" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="996" y="-16" type="move" name="bottom"/>
+    </contour>
+    <component base="b" xOffset="176"/>
+    <component base="crossbar" xOffset="-108" yOffset="764"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1701, 'leftMargin': -20, 'rightMargin': 5}</string>
+    </dict>
+  </lib>
+</glyph>

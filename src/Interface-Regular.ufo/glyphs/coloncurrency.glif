@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="coloncurrency" format="1">
+  <advance width="2016"/>
+  <unicode hex="20A1"/>
+  <outline>
+    <contour>
+      <point x="1600" y="2160" type="line"/>
+      <point x="1368" y="2160" type="line"/>
+      <point x="604" y="-172" type="line"/>
+      <point x="840" y="-172" type="line"/>
+    </contour>
+    <contour>
+      <point x="1200" y="2160" type="line"/>
+      <point x="968" y="2160" type="line"/>
+      <point x="208" y="-172" type="line"/>
+      <point x="440" y="-172" type="line"/>
+    </contour>
+    <component base="C" xOffset="-24"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.8</real>
+        <real>0.94</real>
+        <real>0.95</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1834, 'leftMargin': 228, 'rightMargin': 2}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

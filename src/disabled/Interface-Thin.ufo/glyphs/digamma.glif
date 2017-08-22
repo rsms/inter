@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="digamma" format="1">
+  <advance width="1536"/>
+  <unicode hex="03DD"/>
+  <outline>
+    <contour>
+      <point x="316" y="1488" type="line"/>
+      <point x="240" y="1488" type="line"/>
+      <point x="240" y="-572" type="line"/>
+      <point x="316" y="-572" type="line"/>
+    </contour>
+    <contour>
+      <point x="1176" y="744" type="line"/>
+      <point x="268" y="744" type="line"/>
+      <point x="268" y="668" type="line"/>
+      <point x="1176" y="668" type="line"/>
+    </contour>
+    <contour>
+      <point x="1296" y="1488" type="line"/>
+      <point x="268" y="1488" type="line"/>
+      <point x="268" y="1416" type="line"/>
+      <point x="1296" y="1416" type="line"/>
+    </contour>
+    <contour>
+      <point x="1176" y="308" type="line"/>
+      <point x="1176" y="744" type="line"/>
+      <point x="1100" y="744" type="line"/>
+      <point x="1100" y="308" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.939</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1400, 'leftMargin': 237, 'rightMargin': 109}</string>
+    </dict>
+  </lib>
+</glyph>

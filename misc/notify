@@ -1,0 +1,41 @@
+#!/bin/bash
+#
+# Shows macOS desktop notifications when a command completes.
+# Depending on exit status of the command, a different notification message is shown.
+#
+# Examples:
+#   misc/nofify make -j 8 >/dev/null
+#     Make all font styles in all formats without printing detailed messages
+#
+#   misc/notify make Regular
+#     Make the regular style in all formats
+#
+
+HAS_NOTIFIER=true
+if ! (which terminal-notifier >/dev/null); then
+  HAS_NOTIFIER=false
+  echo "$0: terminal-notifier not found in PATH (will not notify)" >&2
+  echo "$0: You can install through: brew install terminal-notifier"
+fi
+
+CMDS="$@"
+"$@"
+STATUS=$?
+
+if $HAS_NOTIFIER; then
+  if [[ $STATUS -eq 0 ]]; then
+    terminal-notifier \
+      -title "$1 ✅" \
+      -message "$CMDS" \
+      -activate com.apple.Terminal \
+      -timeout 8 >/dev/null &
+  else
+    terminal-notifier \
+      -title "$1 failed ❌" \
+      -message "$CMDS => $STATUS" \
+      -activate com.apple.Terminal \
+      -timeout 20 >/dev/null &
+  fi
+fi
+
+exit $STATUS

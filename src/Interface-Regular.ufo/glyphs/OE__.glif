@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="OE" format="1">
+  <advance width="2636"/>
+  <unicode hex="0152"/>
+  <outline>
+    <contour>
+      <point x="1340" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1340" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="2728" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="2728" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="2728" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="944" y="2032" type="curve" smooth="yes"/>
+      <point x="484" y="2032"/>
+      <point x="176" y="1696"/>
+      <point x="176" y="1212" type="curve"/>
+      <point x="176" y="792" type="line"/>
+      <point x="176" y="308"/>
+      <point x="488" y="-28"/>
+      <point x="944" y="-28" type="curve" smooth="yes"/>
+      <point x="1084" y="-28"/>
+      <point x="1220" y="-16"/>
+      <point x="1340" y="0" type="curve"/>
+      <point x="1340" y="232" type="line"/>
+      <point x="1224" y="208"/>
+      <point x="1088" y="192"/>
+      <point x="944" y="192" type="curve" smooth="yes"/>
+      <point x="644" y="192"/>
+      <point x="448" y="396"/>
+      <point x="448" y="792" type="curve"/>
+      <point x="448" y="1212" type="line"/>
+      <point x="448" y="1608"/>
+      <point x="640" y="1812"/>
+      <point x="944" y="1812" type="curve" smooth="yes"/>
+      <point x="1088" y="1812"/>
+      <point x="1224" y="1796"/>
+      <point x="1340" y="1772" type="curve"/>
+      <point x="1340" y="2004" type="line"/>
+      <point x="1220" y="2016"/>
+      <point x="1084" y="2032"/>
+    </contour>
+    <component base="E" xOffset="1004"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2698, 'leftMargin': 143, 'rightMargin': 191}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

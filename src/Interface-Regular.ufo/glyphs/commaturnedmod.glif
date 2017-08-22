@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="commaturnedmod" format="1">
+  <advance width="736"/>
+  <unicode hex="02BB"/>
+  <outline>
+    <contour>
+      <point x="164" y="1356" type="line"/>
+      <point x="436" y="1356" type="line"/>
+      <point x="436" y="1612" type="line" smooth="yes"/>
+      <point x="436" y="1772"/>
+      <point x="484" y="1908"/>
+      <point x="572" y="2040" type="curve"/>
+      <point x="416" y="2144" type="line"/>
+      <point x="256" y="2008"/>
+      <point x="164" y="1784"/>
+      <point x="164" y="1608" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 626, 'leftMargin': 110, 'rightMargin': 110}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

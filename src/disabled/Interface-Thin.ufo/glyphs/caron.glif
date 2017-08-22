@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="caron" format="1">
+  <advance width="1024"/>
+  <unicode hex="02C7"/>
+  <outline>
+    <contour>
+      <point x="516" y="1772" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="516" y="2120" type="move" name="mkmktop_acc"/>
+    </contour>
+    <contour>
+      <point x="248" y="2072" type="line"/>
+      <point x="172" y="2072" type="line"/>
+      <point x="172" y="2056" type="line"/>
+      <point x="472" y="1708" type="line"/>
+      <point x="556" y="1708" type="line"/>
+      <point x="856" y="2052" type="line"/>
+      <point x="856" y="2072" type="line"/>
+      <point x="780" y="2072" type="line"/>
+      <point x="516" y="1772" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.798</real>
+        <real>1.0</real>
+        <real>0.6</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1051, 'leftMargin': 201, 'rightMargin': 167}</string>
+    </dict>
+  </lib>
+</glyph>

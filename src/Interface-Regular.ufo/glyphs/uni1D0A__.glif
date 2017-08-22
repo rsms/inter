@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni1D0A" format="1">
+  <advance width="1248"/>
+  <unicode hex="1D0A"/>
+  <outline>
+    <contour>
+      <point x="1056" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="636" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1376" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="920" y="488" type="line"/>
+      <point x="920" y="312"/>
+      <point x="796" y="196"/>
+      <point x="640" y="196" type="curve" smooth="yes"/>
+      <point x="448" y="196"/>
+      <point x="332" y="280"/>
+      <point x="332" y="464" type="curve"/>
+      <point x="56" y="464" type="line"/>
+      <point x="56" y="136"/>
+      <point x="292" y="-24"/>
+      <point x="640" y="-24" type="curve" smooth="yes"/>
+      <point x="956" y="-24"/>
+      <point x="1192" y="172"/>
+      <point x="1192" y="488" type="curve" smooth="yes"/>
+      <point x="1192" y="1488" type="line"/>
+      <point x="920" y="1488" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1363, 'leftMargin': 44, 'rightMargin': 183}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

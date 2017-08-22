@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ordmasculine" format="1">
+  <advance width="1280"/>
+  <unicode hex="00BA"/>
+  <outline>
+    <contour>
+      <point x="164" y="1436" type="line"/>
+      <point x="164" y="1152"/>
+      <point x="348" y="948"/>
+      <point x="644" y="948" type="curve" smooth="yes"/>
+      <point x="936" y="948"/>
+      <point x="1116" y="1152"/>
+      <point x="1116" y="1436" type="curve"/>
+      <point x="1116" y="1540" type="line"/>
+      <point x="1116" y="1828"/>
+      <point x="936" y="2032"/>
+      <point x="640" y="2032" type="curve" smooth="yes"/>
+      <point x="348" y="2032"/>
+      <point x="164" y="1828"/>
+      <point x="164" y="1540" type="curve"/>
+    </contour>
+    <contour>
+      <point x="404" y="1540" type="line"/>
+      <point x="404" y="1704"/>
+      <point x="484" y="1828"/>
+      <point x="640" y="1828" type="curve" smooth="yes"/>
+      <point x="800" y="1828"/>
+      <point x="876" y="1704"/>
+      <point x="876" y="1540" type="curve"/>
+      <point x="876" y="1436" type="line"/>
+      <point x="876" y="1272"/>
+      <point x="800" y="1152"/>
+      <point x="644" y="1152" type="curve" smooth="yes"/>
+      <point x="484" y="1152"/>
+      <point x="404" y="1272"/>
+      <point x="404" y="1436" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>2715.625</real>
+        </dict>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1290, 'leftMargin': 162, 'rightMargin': 175}</string>
+    </dict>
+  </lib>
+</glyph>

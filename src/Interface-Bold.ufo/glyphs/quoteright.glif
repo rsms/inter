@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="quoteright" format="1">
+  <advance width="640"/>
+  <unicode hex="2019"/>
+  <outline>
+    <contour>
+      <point x="160.0" y="2112.0" type="move" name="_caron"/>
+    </contour>
+    <contour>
+      <point x="544" y="2048" type="line"/>
+      <point x="212" y="2048" type="line"/>
+      <point x="212" y="1824" type="line" smooth="yes"/>
+      <point x="212" y="1648"/>
+      <point x="156" y="1528"/>
+      <point x="96" y="1424" type="curve"/>
+      <point x="292" y="1312" type="line"/>
+      <point x="424" y="1428"/>
+      <point x="544" y="1640"/>
+      <point x="544" y="1824" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>0.94</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 672, 'leftMargin': 88, 'rightMargin': 134}</string>
+    </dict>
+  </lib>
+</glyph>

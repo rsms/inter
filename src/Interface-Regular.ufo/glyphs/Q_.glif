@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Q" format="1">
+  <advance width="2032"/>
+  <unicode hex="0051"/>
+  <outline>
+    <contour>
+      <point x="964" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="960" y="-16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1944" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1944" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1944" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1204" y="612" type="line"/>
+      <point x="996" y="460" type="line"/>
+      <point x="1552" y="-272" type="line"/>
+      <point x="1740" y="-124" type="line"/>
+    </contour>
+    <component base="O"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

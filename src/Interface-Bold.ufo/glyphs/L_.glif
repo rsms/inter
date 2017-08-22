@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="L" format="1">
+  <advance width="1536"/>
+  <unicode hex="004C"/>
+  <outline>
+    <contour>
+      <point x="356" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="768" y="16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="880" y="2004" type="move" name="caron"/>
+    </contour>
+    <contour>
+      <point x="776" y="1168" type="move" name="dot"/>
+    </contour>
+    <contour>
+      <point x="1476" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1476" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1476" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="1420" y="384" type="line"/>
+      <point x="432" y="384" type="line"/>
+      <point x="432" y="0" type="line"/>
+      <point x="1420" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="592" y="2004" type="line"/>
+      <point x="128" y="2004" type="line"/>
+      <point x="128" y="0" type="line"/>
+      <point x="592" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>1304.875</real>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1526, 'leftMargin': 161, 'rightMargin': 53}</string>
+    </dict>
+  </lib>
+</glyph>

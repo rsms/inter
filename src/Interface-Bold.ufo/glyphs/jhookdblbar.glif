@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="jhookdblbar" format="1">
+  <advance width="1280"/>
+  <unicode hex="0284"/>
+  <outline>
+    <contour>
+      <point x="928" y="2340" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1224" y="2340" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="340" y="-616" type="move" name="bottom"/>
+    </contour>
+    <component base="esh" xOffset="56"/>
+    <component base="crossbar" xOffset="-48" yOffset="-896"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1166.0, 'leftMargin': 30, 'rightMargin': 30.0}</string>
+    </dict>
+  </lib>
+</glyph>

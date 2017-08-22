@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="braceleft" format="1">
+  <advance width="1024"/>
+  <unicode hex="007B"/>
+  <outline>
+    <contour>
+      <point x="892" y="2196" type="line"/>
+      <point x="556" y="2092"/>
+      <point x="452" y="1844"/>
+      <point x="452" y="1556" type="curve"/>
+      <point x="452" y="1216" type="line"/>
+      <point x="452" y="988"/>
+      <point x="352" y="836"/>
+      <point x="108" y="836" type="curve"/>
+      <point x="108" y="780" type="line"/>
+      <point x="408" y="780"/>
+      <point x="524" y="972"/>
+      <point x="524" y="1216" type="curve"/>
+      <point x="524" y="1556" type="line"/>
+      <point x="524" y="1832"/>
+      <point x="640" y="2048"/>
+      <point x="912" y="2136" type="curve"/>
+    </contour>
+    <contour>
+      <point x="916" y="-544" type="line"/>
+      <point x="648" y="-452"/>
+      <point x="524" y="-248"/>
+      <point x="524" y="28" type="curve" smooth="yes"/>
+      <point x="524" y="364" type="line" smooth="yes"/>
+      <point x="524" y="612"/>
+      <point x="408" y="808"/>
+      <point x="108" y="808" type="curve"/>
+      <point x="108" y="748" type="line"/>
+      <point x="352" y="748"/>
+      <point x="452" y="596"/>
+      <point x="452" y="364" type="curve" smooth="yes"/>
+      <point x="452" y="28" type="line" smooth="yes"/>
+      <point x="452" y="-260"/>
+      <point x="556" y="-500"/>
+      <point x="892" y="-608" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 908, 'leftMargin': 100, 'rightMargin': -2}</string>
+    </dict>
+  </lib>
+</glyph>

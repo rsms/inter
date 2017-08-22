@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni1D03" format="1">
+  <advance width="1760"/>
+  <unicode hex="1D03"/>
+  <outline>
+    <contour>
+      <point x="852" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="852" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1768" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="372" y="864" type="line" name="hr00"/>
+      <point x="40" y="864" type="line"/>
+      <point x="40" y="648" type="line"/>
+      <point x="372" y="648" type="line"/>
+    </contour>
+    <contour>
+      <point x="1720" y="864" type="line"/>
+      <point x="1252" y="864" type="line"/>
+      <point x="1252" y="648" type="line"/>
+      <point x="1720" y="648" type="line"/>
+    </contour>
+    <component base="vecyrillic" xOffset="100"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.adobe.type.autohint</key>
+      <data>
+      </data>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1756, 'leftMargin': 28, 'rightMargin': 48}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

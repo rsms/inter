@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="G" format="1">
+  <advance width="2032"/>
+  <unicode hex="0047"/>
+  <outline>
+    <contour>
+      <point x="1840" y="1016" type="line"/>
+      <point x="1100" y="1016" type="line"/>
+      <point x="1100" y="796" type="line"/>
+      <point x="1584" y="796" type="line"/>
+      <point x="1584" y="436"/>
+      <point x="1380" y="200"/>
+      <point x="1020" y="200" type="curve" smooth="yes"/>
+      <point x="760" y="200"/>
+      <point x="416" y="412"/>
+      <point x="416" y="1024" type="curve"/>
+      <point x="416" y="1552"/>
+      <point x="668" y="1852"/>
+      <point x="1016" y="1852" type="curve" smooth="yes"/>
+      <point x="1312" y="1852"/>
+      <point x="1500" y="1640"/>
+      <point x="1552" y="1448" type="curve"/>
+      <point x="1824" y="1448" type="line"/>
+      <point x="1772" y="1800"/>
+      <point x="1468" y="2076"/>
+      <point x="1008" y="2076" type="curve" smooth="yes"/>
+      <point x="536" y="2076"/>
+      <point x="176" y="1716"/>
+      <point x="176" y="1024" type="curve"/>
+      <point x="176" y="340"/>
+      <point x="560" y="-28"/>
+      <point x="996" y="-28" type="curve" smooth="yes"/>
+      <point x="1564" y="-28"/>
+      <point x="1840" y="332"/>
+      <point x="1840" y="792" type="curve"/>
+    </contour>
+    <contour>
+      <point x="972" y="2244" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1056" y="-16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1968" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1968" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1968" y="2244" type="move" name="top0315"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>O</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>G</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>2032</integer>
+        </dict>
+      </dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

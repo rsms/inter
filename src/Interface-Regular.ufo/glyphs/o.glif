@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="o" format="1">
+  <advance width="1664"/>
+  <unicode hex="006F"/>
+  <outline>
+    <contour>
+      <point x="828" y="184" type="curve" smooth="yes"/>
+      <point x="536" y="184"/>
+      <point x="384" y="440"/>
+      <point x="384" y="768" type="curve" smooth="yes"/>
+      <point x="384" y="1100"/>
+      <point x="552" y="1344"/>
+      <point x="828" y="1344" type="curve" smooth="yes"/>
+      <point x="1116" y="1344"/>
+      <point x="1268" y="1132"/>
+      <point x="1268" y="768" type="curve" smooth="yes"/>
+      <point x="1268" y="400"/>
+      <point x="1116" y="184"/>
+    </contour>
+    <contour>
+      <point x="828" y="-32" type="curve" smooth="yes"/>
+      <point x="1264" y="-32"/>
+      <point x="1524" y="276"/>
+      <point x="1524" y="768" type="curve" smooth="yes"/>
+      <point x="1524" y="1256"/>
+      <point x="1264" y="1556"/>
+      <point x="828" y="1556" type="curve" smooth="yes"/>
+      <point x="400" y="1556"/>
+      <point x="140" y="1224"/>
+      <point x="140" y="768" type="curve" smooth="yes"/>
+      <point x="140" y="296"/>
+      <point x="400" y="-32"/>
+    </contour>
+    <contour>
+      <point x="824" y="1792" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="824" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1608" y="2176" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1608" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1360" y="896" type="move" name="rhotichook"/>
+    </contour>
+    <contour>
+      <point x="1544" y="1792" type="move" name="top0315"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>c</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>o</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>1664</integer>
+        </dict>
+      </dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

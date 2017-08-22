@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="seveneighths" format="1">
+  <advance width="2272"/>
+  <unicode hex="215E"/>
+  <outline>
+    <component base="seven.sup" xOffset="60" yOffset="900"/>
+    <component base="fraction" xOffset="416"/>
+    <component base="eight.sup" xOffset="1208"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.89</real>
+        <real>0.96</real>
+        <real>0.92</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2258, 'leftMargin': 119, 'rightMargin': 142}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

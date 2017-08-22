@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="naira" format="1">
+  <advance width="2304"/>
+  <unicode hex="20A6"/>
+  <outline>
+    <contour>
+      <point x="2148" y="1224" type="line"/>
+      <point x="156" y="1224" type="line"/>
+      <point x="156" y="1148" type="line"/>
+      <point x="2148" y="1148" type="line"/>
+    </contour>
+    <contour>
+      <point x="2148" y="812" type="line"/>
+      <point x="156" y="812" type="line"/>
+      <point x="156" y="736" type="line"/>
+      <point x="2148" y="736" type="line"/>
+    </contour>
+    <component base="N" xOffset="156"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.967</real>
+        <real>0.6</real>
+        <real>1.0</real>
+        <real>1.0</real>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 2102, 'leftMargin': 55, 'rightMargin': 55}</string>
+    </dict>
+  </lib>
+</glyph>
