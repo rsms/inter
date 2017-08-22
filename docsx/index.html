@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <title>Interface font family</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta property="og:title" content="Interface font family">
+    <meta property="twitter:title" content="Interface font family">
+    <meta property="description" content="Interface is a new typeface optimized for high legibility on computer screens">
+    <meta property="og:description" content="Interface is a new typeface optimized for high legibility on computer screens">
+    <meta property="twitter:description" content="Interface is a new typeface optimized for high legibility on computer screens">
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@rsms">
+    <meta property="twitter:creator" content="@rsms">
+    <meta property="og:image" content="https://rsms.me/interface/res/poster.png">
+    <meta property="twitter:image" content="https://rsms.me/interface/res/poster.png">
+
+    <meta property="fb:app_id" content="38027689216">
+    <meta property="og:url" content="https://rsms.me/interface/">
+    <meta property="og:site_name" content="rsms.me">
+    <meta property="og:type" content="product">
+    <meta property="og:locale" content="en_US" />
+
+    <link rel="icon" type="image/png" href="favicon.ico" />
+
+    <link href="interface.css" rel="stylesheet">
+    <style type="text/css">
+
+* { margin:0; padding:0; }
+html { }
+body {
+  background-color: #f4f4f4;
+  color: #414141;
+  font: 16px/22px Interface, sans-serif;
+  letter-spacing: -0.1px;
+  font-weight: 400;
+  padding-bottom: 30px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  background-image:
+    linear-gradient(to bottom,
+      rgba(0,0,0,.6) 50%,
+      rgba(0,0,0,0) 50%);
+  background-repeat: repeat-x;
+  background-size: 2px .1em;
+  background-position: 0 1.07em;
+  text-shadow:
+    /* creates "openings" for descenders in the underline */
+    -1px -1px 0 #f4f4f4,
+    1px -1px 0  #f4f4f4,
+    -1px 1px 0  #f4f4f4,
+    1px 1px 0   #f4f4f4;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+a:hover {
+  color: rgb(48, 112, 232);
+  background-image:
+    linear-gradient(to bottom,
+      rgba(48, 112, 232, 1) 50%,
+      rgba(48, 112, 232, 0) 50%);
+}
+a.plain {
+  background:none;
+  text-shadow:none;
+}
+p {
+  margin: 20px 0;
+}
+code {
+  display: block;
+  font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
+  font-size:0.96em;
+  border-radius:1px;
+  padding: 0.5em 0;
+  overflow: scroll;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+h1 {
+  color: #333;
+  font-size: 38px;
+  letter-spacing: -1.3px;
+  line-height: 40px;
+  text-indent: -2px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+h2 {
+  font-size: 24px;
+  letter-spacing: -0.4px;
+  line-height: 30px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+h1 > a, h2 > a, h3 > a {
+  color: inherit;
+  text-shadow: none;
+  background: none !important;
+}
+
+.row {
+  padding: 50px;
+  /*background: salmon;*/
+  display: flex;
+  justify-content: center;
+  /*background: white;*/
+}
+.row > * {
+  width:100%;
+  max-width: 888px;
+  flex: 1 0 100%;
+  /*background: white;*/
+}
+
+/* small screens */
+@media only screen and (max-device-width: 736px) {
+  .row {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.row.white {
+  background: white;
+}
+.row.white a {
+  text-shadow:
+    /* creates "openings" for descenders in the underline */
+    -1px -1px 0 white,
+    1px -1px 0  white,
+    -1px 1px 0  white,
+    1px 1px 0   white;
+}
+
+.row.dark {
+  background: #2b2b2b;
+  color: #99999b;
+}
+.row.dark a:hover {
+  color: rgb(164, 188, 255);
+  background-image:
+    linear-gradient(to bottom,
+      rgba(164, 188, 255, 1) 50%,
+      rgba(164, 188, 255, 0) 50%);
+}
+.row.dark a {
+  background-image:
+    linear-gradient(to bottom,
+      rgba(255,255,255,.3) 50%,
+      rgba(255,255,255,0) 50%);
+  text-shadow:
+    /* creates "openings" for descenders in the underline */
+    -1px -1px 0 #2b2b2b,
+    1px -1px 0  #2b2b2b,
+    -1px 1px 0  #2b2b2b,
+    1px 1px 0   #2b2b2b;
+}
+.row.dark h2, .row.dark h2 > a {
+  color: #ccc;
+  background: none;
+}
+
+.row ::selection {
+  background: rgb(48, 112, 232);
+  color: white;
+  text-shadow: none;
+}
+.row ::-moz-selection {
+  background: rgb(48, 112, 232);
+  color: white;
+  text-shadow: none;
+}
+
+.row.dark ::selection {
+  background: rgb(218, 228, 255);
+  color: black;
+}
+.row.dark ::-moz-selection {
+  background: rgb(164, 188, 255);
+  color: black;
+}
+
+a > img {
+  display: block;
+}
+
+#repertoire-image {
+  display:block;
+  width:100%;
+  height:40vw;
+  background-image: url(res/repertoire.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #f4f4f4;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <div class="row"><div>
+      <h1>The Interface font family</h1>
+      <p>
+      Interface is a font for highly legible text on computer screens.<br>
+      <a href="https://github.com/rsms/interface/releases/latest/">Download the latest release</a>
+      or try it out in the <a href="lab/">playground</a>
+      </p>
+    </div></div>
+
+    <div class="row white" style="padding-bottom:0"><div>
+      <h2><a id="sample" href="#sample">Sample</a></h2>
+      <p style="margin-bottom:0">
+        <img src="res/sample.png" style="width:100%;display:block">
+      </p>
+    </div></div>
+
+    <div class="row dark"><div>
+      <h2><a id="free" href="#free">How much does it cost?</a></h2>
+      <p>
+        Interface is a <a href="https://github.com/rsms/interface">free and open source</a> font family. You are free to use this font in almost any way imaginable.
+        Refer to the <a href="https://choosealicense.com/licenses/ofl-1.1/">SIL Open Font License 1.1</a> for exact details on what the conditions and restrictions are.
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2><a id="usage" href="#usage">How do I use it?</a></h2>
+      <p>
+        Using the font is as easy as
+        <a href="https://github.com/rsms/interface/releases/latest/">download &amp; installing</a> locally on your computer.
+      </p>
+      <p>
+        You're free to bundle copies of Interface with your software, even if it's
+        commercial and you charge money for your software. Interface can also be used
+        on the web by either hosting the font files yourself or by including this CSS:
+      </p>
+      <code>@import url('https://rsms.me/interface/interface.css');</code>
+      <p>Use the following CSS rules to specify the Interface family:</p>
+      <code>font-family: Interface, sans-serif;</code>
+    </div></div>
+
+    <div class="row"><div>
+      <h2><a id="story" href="#story">The story behind Interface</a></h2>
+      <p>
+      Interface started out in late 2016 as an experiment to build a perfectly
+      pixel–fitting font at a specific small size (11px.) The idea was that
+      by crafting a font in a particular way, with a particular coordinate system
+      (Units Per EM), and for a particular target rasterization size (11), it would
+      be possible to get the best of both sharpness and readability.
+      </p>
+      <p>
+      However after a few months of using an early version of Interface, it dawned
+      on everyone exposed to the test that this approach had some serious real–world
+      problems. Most notably that it was really hard to read longer text. Because of
+      the pixel–aligning nature of that approach, the font took an almost mono–spaced
+      appearance, making it really easy to read numbers, punctuation and very short
+      words, but eye–straining to read anything longer.
+      </p>
+      <p>
+      The project was rebooted with a different approach, sticking with the
+      specific UPM, but crafting glyphs and kerning in a way that made for
+      more variation in the rythm and smoother vertical and horizontal stems.
+      As Interface was being developed, it was tested on an internal version of
+      <a href="https://www.figma.com/">Figma</a>—where the author of Interface works as a designer—and slowly improved upon based on experience and feedback.
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2><a id="status" href="#status">Current status &amp; usability</a></h2>
+      <p>
+      Interface works great for English–language text, and pretty well for other
+      Latin and Cyrillic languages. There's still a lot of work to be done, and
+      <a href="https://github.com/rsms/interface#contributing">contributions are warmly welcomed</a>. The playground contains <a href="lab/?sample=Body%20text%201&size=16">a lot of samples</a>, including some common <a href="lab/?sample=Kerning%20body%20multi-lang&size=16">non English–language words in the playground.</a>
+      </p>
+
+      <p>
+      <a href="lab/?sample=Repertoire&size=42" id="repertoire-image"></a>
+      </p>
+      <p>
+      Please refer to the <a href="lab/?sample=Repertoire&size=42">glyph repertoire</a>
+      for an overview of currently–available glyphs and their quality.
+      </p>
+    </div></div>
+
+
+    <div class="row"><div>
+      — <a href="https://twitter.com/rsms" class="plain">@rsms</a>
+    </div></div>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-105091131-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
