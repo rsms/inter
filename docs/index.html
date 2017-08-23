@@ -49,21 +49,35 @@ a {
 a:hover {
   color: rgb(48, 112, 232);
 }
-a.plain {
-  background:none;
-  text-shadow:none;
-  text-decoration:none;
+a.plain, a.fat {
+  /* !important needed for qualification over @media further down */
+  background: none !important;
+  text-shadow: none !important;
+  text-decoration: none;
+}
+a.fat {
+  font-weight:500;
 }
 p {
   margin: 20px 0;
 }
-code {
-  display: block;
+code, pre {
   font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
   font-size:0.96em;
+}
+code {
+  display: block;
   border-radius:1px;
   padding: 0.5em 0;
-  overflow: scroll;
+  overflow: auto;
+}
+pre {
+  display: inline;
+  white-space: pre-wrap;
+}
+dem { /* de-emphasize */
+  font-weight: 400;
+  opacity: 0.7;
 }
 
 h1, h2, h3 {
@@ -131,7 +145,11 @@ h1 > a, h2 > a, h3 > a {
   background: none;
 }
 
-/* Medium.com-style link underline for high-density displays */
+/*
+  Medium.com-style link underline for high-density displays.
+  Currently only enabled on Mac as the lines don't render correctly on
+  Windows (even in Chrome) for some reason.
+*/
 @media (-webkit-min-device-pixel-ratio: 1.5) {
   a {
     text-decoration: none;
@@ -141,13 +159,17 @@ h1 > a, h2 > a, h3 > a {
         rgba(0,0,0,0) 50%);
     background-repeat: repeat-x;
     background-size: 2px .1em;
-    background-position: 0 1.07em;
+    background-position: 0 1.15em;
     text-shadow:
       /* creates "openings" for descenders in the underline */
       -1px -1px 0 #f4f4f4,
       1px -1px 0  #f4f4f4,
       -1px 1px 0  #f4f4f4,
       1px 1px 0   #f4f4f4;
+  }
+  body.mac_or_ios a {
+    /* line height calculated differently on mac c/t windows */
+    background-position: 0 1.045em;
   }
   a:hover {
     background-image:
@@ -216,16 +238,58 @@ a > img {
   background-color: #f4f4f4;
 }
 
+
+/* FAQ */
+ul.faq {
+  list-style:none;
+  display: flex;
+  flex-direction: column;
+}
+ul.faq > li {
+  padding-right: 6px;
+  margin-bottom: 6px;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+ul.faq > li > a {
+  display: inline;
+}
+ul.faq > li:target {
+  background: #fafa88;
+}
+li.q {
+  font-weight: 500;
+  margin-top:1.5em;
+}
+ul > li.q:first-child, ul > li.q:not([id]) {
+  margin-top:0;
+}
+li.q:before {
+  content: "Q  "; /* contains NO-BREAK SPACE */
+  opacity: 0.6;
+}
+li.a:before {
+  content: "A  "; /* contains NO-BREAK SPACE */
+  opacity: 0.6;
+}
+
     </style>
   </head>
   <body>
+    <script>
+      if (!window.MSStream &&
+          /mac|ipad|iphone|ipod/i.test(navigator.userAgent))
+      {
+        document.body.classList = 'mac_or_ios'
+      }
+    </script>
 
     <div class="row"><div>
       <h1>The Interface font family</h1>
       <p>
       Interface is a font for highly legible text on computer screens.<br>
-      <a href="https://github.com/rsms/interface/releases/latest/">Download the latest release</a>
-      or try it out in the <a href="lab/">playground</a>
+      <a class="fat" href="https://github.com/rsms/interface/releases/latest/">Download the latest release</a>
+      or try it out in the <a href="lab/" class="fat">playground</a>
       </p>
     </div></div>
 
@@ -301,6 +365,100 @@ a > img {
       Please refer to the <a href="lab/?sample=Repertoire&size=42">glyph repertoire</a>
       for an overview of currently–available glyphs and their quality.
       </p>
+
+      <p>&nbsp;</p>
+
+      <h2><a id="faq" href="#faq">FAQ</a></h2>
+      <ul class="faq">
+
+        <li class="q" id="faq-roboto-similar">
+          Some glyphs looks just like Roboto, is this typeface based on Roboto?
+        </li>
+        <li class="a">
+          Since this font is very <em>similar to Roboto</em>, glyph
+          outlines from Roboto are indeed being used, mainly as "placeholders"
+          while the glyph set is expanded. The Roboto license can be found in the
+          source directory.
+        </li>
+
+        <li class="q" id="faq-naming">
+          There's another font family with a similar name (InterFace).
+          How do I make sure I'm talking about the right font?
+        </li>
+        <li class="a">
+          The world is a small place and just like all the
+          <a href="https://en.wikipedia.org/wiki/Eric_Erickson">Eric Ericksons</a>,
+          name alone somtimes does not suffice for unambiguous identity.
+          The best way to be clear about what font you are talking about is to
+          use the URL of this page (<pre>rsms.me/interface</pre>) when telling
+          people about it.
+          <a href="https://figma.com/">Design tools</a> and other software uses
+          <a href="https://www.microsoft.com/typography/otspec/name.htm#nameIDs">a set of information embedded into every font</a> for identity, so names are only
+          important for humans, not computers, and so you need not to worry about
+          "conflicts." At least not with well-behaved software.
+        </li>
+
+        <li class="q" id="faq-contribute">
+          Can I help with improving Interface?
+        </li>
+        <li class="a">
+          Yes you can! Interface is an open–source project, meaning the source
+          code—or "source design" if you will—that is used to build the font files
+          <a href="https://github.com/rsms/interface">are freely available</a> to improve upon.
+          Font making requires a fair bit of technical work and
+          depending on what you'd like to do, some things might be more fun
+          depending on your technical skills.
+          The <a href="https://github.com/rsms/interface/blob/master/CONTRIBUTING.md">"Contributing" document</a> is a great place to start. The document outlines where
+          you can have the biggest impact, how things are setup and how to get
+          started.
+        </li>
+
+        <li class="q" id="faq-start-date">
+          This website claims work started in 2016, but the git repository's log says it started later?
+        </li>
+        <li class="a">
+          Interface was developed in an a private, internal git repository
+          starting in November 2016, prior to being published on August 22, 2017.
+          Between November 2016 and August 2017, there were 2&#x2006;990&#x2006;150 line edits made across 247 versions.
+          The reason the public github repository does not reflect this is the
+          fact that the project was initially only internal at the company where
+          the author works and had some sensitive information "checked in",
+          like AWS server details and internal author identity in
+          all commit messages. Maybe one day we can write an elaborate git
+          filter-branch program and convert the filter the old repository to make
+          it public, but what would be the point of that?&nbsp; :—)
+        </li>
+
+        <li class="q" id="faq-contact">
+          I've made a cool thing that uses Interface, can I share it with you?
+          &nbsp;<dem>or</dem>
+        </li>
+        <li class="q">
+          I have a different question
+        </li>
+        <li class="a">
+          Reach out on <a href="https://twitter.com/rsms">Twitter (@rsms)</a> or over <a href="mailto:rasmus@notion.se">email</a>
+        </li>
+
+
+      </ul>
+
+      <script>
+        var av = document.querySelectorAll('ul.faq > li.q'), a, i, e, id
+        for (i = 0; i < av.length; ++i) {
+          e = av[i]
+          id = e.id
+          if (id) {
+            a = document.createElement('a')
+            a.href = '#' + id
+            a.className = 'plain'
+            a.innerHTML = e.innerHTML
+            e.innerText = ''
+            e.appendChild(a)
+          }
+        }
+      </script>
+
     </div></div>
 
 
