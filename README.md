@@ -1,6 +1,6 @@
 # Interface
 
-Interface is a typeface specially designed for user interfaces, with excellent ligibility at small sizes.
+Interface is a typeface specially designed for user interfaces, with excellent legibility at small sizes.
 
 ![Sample](docs/res/sample.png)
 
