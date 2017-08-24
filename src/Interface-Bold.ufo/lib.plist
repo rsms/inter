@@ -444,7 +444,7 @@
 				<string>dzeabkhasiancyrillic</string>
 				<string>izhitsacyrillic</string>
 				<string>dz</string>
-				<string>Dzcaron</string>
+				<string>Dzcaron_</string>
 				<string>dzcaron</string>
 				<string>germandbls</string>
 				<string>dotlessi</string>
@@ -487,6 +487,16 @@
 				<string>seven</string>
 				<string>eight</string>
 				<string>nine</string>
+				<string>zero.tnum</string>
+				<string>one.tnum</string>
+				<string>two.tnum</string>
+				<string>three.tnum</string>
+				<string>four.tnum</string>
+				<string>five.tnum</string>
+				<string>six.tnum</string>
+				<string>seven.tnum</string>
+				<string>eight.tnum</string>
+				<string>nine.tnum</string>
 				<string>ampersand</string>
 				<string>exclam</string>
 				<string>exclamdown</string>
@@ -1311,7 +1321,6 @@
 				<string>uni02E8_uni02E7_uni02E9</string>
 				<string>uni02E8_uni02E7_uni02E8</string>
 				<string>shindagesh</string>
-				<string>N.unic</string>
 				<string>uni034B</string>
 				<string>uni034C</string>
 				<string>uni034A</string>
@@ -1354,12 +1363,10 @@
 				<string>Fturn</string>
 				<string>uni023F</string>
 				<string>p.cn</string>
-				<string>f_f</string>
 				<string>uni023E</string>
 				<string>uni023B</string>
 				<string>uni023C</string>
 				<string>uni023A</string>
-				<string>f_l</string>
 				<string>uniA685</string>
 				<string>uniA686</string>
 				<string>uniA687</string>
@@ -1384,7 +1391,6 @@
 				<string>breveacutecomb</string>
 				<string>uni2C69</string>
 				<string>uni2C66</string>
-				<string>U.unic</string>
 				<string>mhook</string>
 				<string>uni2C67</string>
 				<string>uni0500</string>
@@ -1400,7 +1406,6 @@
 				<string>rturn</string>
 				<string>referencemark</string>
 				<string>Ghook</string>
-				<string>A.unic</string>
 				<string>overscorenosp</string>
 				<string>breveinvsubnosp_uni1ABD</string>
 				<string>commaaboverightcomb</string>
@@ -1653,7 +1658,6 @@
 				<string>uniE001</string>
 				<string>uniAB49</string>
 				<string>Nhook</string>
-				<string>fi</string>
 				<string>tildemacroncomb.lc</string>
 				<string>response</string>
 				<string>iota1</string>
@@ -1954,7 +1958,6 @@
 				<string>uniA76B</string>
 				<string>eshshortrev</string>
 				<string>b.cn</string>
-				<string>M.unic</string>
 				<string>uni1D7C</string>
 				<string>uni1D7B</string>
 				<string>uni1D7A</string>
@@ -2048,7 +2051,6 @@
 				<string>iotasubnosp</string>
 				<string>dieresisgravecomb</string>
 				<string>tildemacroncomb</string>
-				<string>E.unic</string>
 				<string>uni0221</string>
 				<string>gamma1</string>
 				<string>uniA7AB</string>
@@ -2169,9 +2171,7 @@
 				<string>elevenroman</string>
 				<string>lambdabar</string>
 				<string>uniA677</string>
-				<string>f_f_i</string>
 				<string>uniA671</string>
-				<string>f_f_l</string>
 				<string>uniA767.cn</string>
 				<string>rfishhook</string>
 				<string>uniA7A7</string>
@@ -2395,7 +2395,6 @@
 				<string>uniE003</string>
 				<string>placeofinterestsign</string>
 				<string>.notdef</string>
-				<string>Dzcaron</string>
 			</array>
 			<key>type</key>
 			<string>glyphList</string>
@@ -2637,7 +2636,7 @@
 		<string>dzeabkhasiancyrillic</string>
 		<string>izhitsacyrillic</string>
 		<string>dz</string>
-		<string>Dzcaron</string>
+		<string>Dzcaron_</string>
 		<string>dzcaron</string>
 		<string>germandbls</string>
 		<string>dotlessi</string>
@@ -2680,6 +2679,16 @@
 		<string>seven</string>
 		<string>eight</string>
 		<string>nine</string>
+		<string>zero.tnum</string>
+		<string>one.tnum</string>
+		<string>two.tnum</string>
+		<string>three.tnum</string>
+		<string>four.tnum</string>
+		<string>five.tnum</string>
+		<string>six.tnum</string>
+		<string>seven.tnum</string>
+		<string>eight.tnum</string>
+		<string>nine.tnum</string>
 		<string>ampersand</string>
 		<string>exclam</string>
 		<string>exclamdown</string>
@@ -3504,7 +3513,6 @@
 		<string>uni02E8_uni02E7_uni02E9</string>
 		<string>uni02E8_uni02E7_uni02E8</string>
 		<string>shindagesh</string>
-		<string>N.unic</string>
 		<string>uni034B</string>
 		<string>uni034C</string>
 		<string>uni034A</string>
@@ -3547,12 +3555,10 @@
 		<string>Fturn</string>
 		<string>uni023F</string>
 		<string>p.cn</string>
-		<string>f_f</string>
 		<string>uni023E</string>
 		<string>uni023B</string>
 		<string>uni023C</string>
 		<string>uni023A</string>
-		<string>f_l</string>
 		<string>uniA685</string>
 		<string>uniA686</string>
 		<string>uniA687</string>
@@ -3577,7 +3583,6 @@
 		<string>breveacutecomb</string>
 		<string>uni2C69</string>
 		<string>uni2C66</string>
-		<string>U.unic</string>
 		<string>mhook</string>
 		<string>uni2C67</string>
 		<string>uni0500</string>
@@ -3593,7 +3598,6 @@
 		<string>rturn</string>
 		<string>referencemark</string>
 		<string>Ghook</string>
-		<string>A.unic</string>
 		<string>overscorenosp</string>
 		<string>breveinvsubnosp_uni1ABD</string>
 		<string>commaaboverightcomb</string>
@@ -3846,7 +3850,6 @@
 		<string>uniE001</string>
 		<string>uniAB49</string>
 		<string>Nhook</string>
-		<string>fi</string>
 		<string>tildemacroncomb.lc</string>
 		<string>response</string>
 		<string>iota1</string>
@@ -4147,7 +4150,6 @@
 		<string>uniA76B</string>
 		<string>eshshortrev</string>
 		<string>b.cn</string>
-		<string>M.unic</string>
 		<string>uni1D7C</string>
 		<string>uni1D7B</string>
 		<string>uni1D7A</string>
@@ -4241,7 +4243,6 @@
 		<string>iotasubnosp</string>
 		<string>dieresisgravecomb</string>
 		<string>tildemacroncomb</string>
-		<string>E.unic</string>
 		<string>uni0221</string>
 		<string>gamma1</string>
 		<string>uniA7AB</string>
@@ -4362,9 +4363,7 @@
 		<string>elevenroman</string>
 		<string>lambdabar</string>
 		<string>uniA677</string>
-		<string>f_f_i</string>
 		<string>uniA671</string>
-		<string>f_f_l</string>
 		<string>uniA767.cn</string>
 		<string>rfishhook</string>
 		<string>uniA7A7</string>
@@ -4588,7 +4587,6 @@
 		<string>uniE003</string>
 		<string>placeofinterestsign</string>
 		<string>.notdef</string>
-		<string>Dzcaron</string>
 	</array>
 </dict>
 </plist>
