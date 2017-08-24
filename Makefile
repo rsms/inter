@@ -87,13 +87,13 @@ build/release/Interface-%.zip: build/.zip.zip
 zip: ${ZIP_FILE_DEV}
 zip_dist: ${ZIP_FILE_DIST}
 
-dist:
+pre_dist:
 	@echo "Creating distribution for version ${VERSION}"
 	@if [ -f "${ZIP_FILE_DIST}" ]; \
 		then echo "${ZIP_FILE_DIST} already exists. Bump version or remove the zip file to continue." >&2; \
 		exit 1; \
   fi
-	@$(MAKE) zip_dist
+dist: pre_dist zip_dist glyphinfo
 	rm -rf docs/font-files
 	mkdir docs/font-files
 	cp -a build/dist/*.woff build/dist/*.woff2 docs/font-files/
@@ -134,4 +134,4 @@ _local/UnicodeData.txt:
 clean:
 	rm -vrf build/tmp/* build/dist/Interface-*.*
 
-.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist dist glyphinfo
+.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist glyphinfo
