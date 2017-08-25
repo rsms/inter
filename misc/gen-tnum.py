@@ -45,11 +45,11 @@ def main():
 
       tnum = font.newGlyph(name + '.tnum')
       tnum.width = width
-      print('[%s] gen' % fontName, tnum.name)
 
       # calculate component x-offset
       xoffs = 0
       if g.width != width:
+        print('[%s] gen (adjust width)' % fontName, tnum.name)
         # center shape, ignoring existing margins
         # xMin, yMin, xMax, yMax = g.box
         # graphicWidth = xMax - xMin
@@ -61,6 +61,8 @@ def main():
         leftMargin  = g.leftMargin + int(floor(widthDelta / 2))
         rightMargin = g.rightMargin + int(ceil(widthDelta / 2))
         xoffs = leftMargin - g.leftMargin
+      else:
+        print('[%s] gen (same width)' % fontName, tnum.name)
 
       tnum.appendComponent(name, (xoffs, 0))
 
