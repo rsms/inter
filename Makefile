@@ -75,6 +75,7 @@ build/.zip.zip: all
 	@cp -a build/dist-unhinted/*.ttf             "build/.zip/Interface (TTF)/"
 	@cp -a build/dist-unhinted/*.otf             "build/.zip/Interface (OTF)/"
 	@cp -a misc/doc/install-*.txt                "build/.zip/"
+	@cp -a LICENSE.txt                           "build/.zip/"
 	cd build/.zip && zip -v -X -r "../../build/.zip.zip" * >/dev/null && cd ../..
 	@rm -rf build/.zip
 
@@ -123,7 +124,7 @@ install: all install_otf
 
 glyphinfo: _local/UnicodeData.txt
 	misc/gen-glyphinfo.py -ucd _local/UnicodeData.txt \
-	  src/Interface-*.ufo > misc/preview/glyphinfo.json
+	  src/Interface-*.ufo > docs/lab/glyphinfo.json
 
 # Download latest Unicode data
 _local/UnicodeData.txt:
