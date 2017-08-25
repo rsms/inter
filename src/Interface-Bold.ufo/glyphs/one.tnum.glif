@@ -2,6 +2,23 @@
 <glyph name="one.tnum" format="1">
   <advance width="1792"/>
   <outline>
+    <contour>
+      <point x="128" y="0" type="line"/>
+      <point x="1600" y="0" type="line"/>
+      <point x="1600" y="384" type="line"/>
+      <point x="128" y="384" type="line"/>
+    </contour>
     <component base="one" xOffset="-4"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.9230863777</real>
+        <real>0.9647658846</real>
+        <real>0.7857136537</real>
+        <real>1.0</real>
+      </array>
+    </dict>
+  </lib>
 </glyph>

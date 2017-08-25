@@ -5,6 +5,7 @@ import argparse
 import logging
 import subprocess
 
+from shutil import copyfile
 from robofab.objects.objectsRF import RPoint
 from robofab.world import OpenFont
 from fontbuild.Build import FontProject
@@ -86,17 +87,20 @@ ALL = len(styles) == 0
 # version control tag, if any
 buildTag = readVersionControlTag(BASEDIR)
 
+# Since we reference a shared feature file, copy it to build dir so includes works
+copyfile(
+  os.path.join(srcDir, 'features.fea'),
+  os.path.join(args.out, 'InterfaceUFO', 'features.fea'))
+
 # Load masters
+print('loading master: Regular')
 rg = Master("%s/src/Interface-Regular.ufo" % BASEDIR)
 
 bd = None
 if ALL or 'bold' in styles or 'bolditalic' in styles or 'medium' in styles or 'mediumitalic' in styles:
+  print('loading master: Bold')
   bd = Master("%s/src/Interface-Bold.ufo" % BASEDIR)
 
-# th = None
-# thFont = None
-# if ALL or 'thin' in styles or 'thinitalic' in styles or 'light' in styles or 'lightitalic' in styles:
-#   th = Master("%s/src/Interface-Thin.ufo" % BASEDIR)
 
 glyphSpecializations = extractSpecializedGlyphs(rg)
 
@@ -114,13 +118,14 @@ class Mix2(Mix):
         return specializedGlyph
     return Mix.mixGlyphs(self, gname)
 
-
 proj = FontProject(rg.font, BASEDIR, os.path.join(srcDir,'fontbuild.cfg'), buildTag=buildTag)
 proj.builddir = args.out
+
 
 if args.otf:
   proj.buildOTF = True
 
+# name syntax: family/longstyle/shortstyle/subfamilyAbbrev
 
 if ALL or 'regular' in styles:
   proj.generateFont(rg.font, "%s/Regular/Regular/Rg" % FAMILYNAME)
@@ -132,12 +137,12 @@ if ALL or 'regularitalic' in styles:
 if ALL or 'medium' in styles:
   proj.generateFont(
     Mix2([rg, bd], 0.35, glyphSpecializations['medium']),
-    "%s/Medium/Regular/Rg" % FAMILYNAME)
+    "%s/Medium/Regular/Lt" % FAMILYNAME)
 
 if ALL or 'mediumitalic' in styles:
   proj.generateFont(
     Mix2([rg, bd], 0.35, glyphSpecializations['medium']),
-    "%s/Medium Italic/Italic/Rg" % FAMILYNAME,
+    "%s/Medium Italic/Italic/Lt" % FAMILYNAME,
     italic=True, stemWidth=256, italicMeanYCenter=-825, italicNarrowAmount=1)
 
 if ALL or 'bold' in styles:
@@ -146,17 +151,6 @@ if ALL or 'bold' in styles:
 if ALL or 'bolditalic' in styles:
   proj.generateFont(bd.font, "%s/Bold Italic/Bold Italic/Rg" % FAMILYNAME,
                     italic=True, stemWidth=290, italicMeanYCenter=-825, italicNarrowAmount=1)
-
-# if ALL or 'light' in styles:
-#   proj.generateFont(Mix([th, rg], 0.45), "%s/Light/Regular/Lt" % FAMILYNAME)
-
-# if ALL or 'lightitalic' in styles:
-#   proj.generateFont(rgFont, "%s/Light Italic/Italic/Lt" % FAMILYNAME,
-#                     italic=True, stemWidth=120)
-
-# proj.generateFont(th.font, "%s/Thin/Regular/Th" % FAMILYNAME)
-# proj.generateFont(th.font, "%s/Thin Italic/Italic/Th" % FAMILYNAME,
-#                   italic=True, stemWidth=80)
 
 # generate TTFs
 if args.no_ttf == False:

@@ -88,8 +88,8 @@ class FontProject:
 
         n = names.split("/")
         log("---------------------\n%s %s\n----------------------" %(n[0],n[1]))
-        log(">> Mixing masters")
         if isinstance( mix, Mix):
+            log(">> Mixing masters")
             f = mix.generateFont(self.basefont)
         else:
             f = mix.copy()
@@ -133,15 +133,15 @@ class FontProject:
 
         log(">> Generating glyphs")
         generateGlyphs(f, self.diacriticList, self.adobeGlyphList)
-        log(">> Copying features")
-        readFeatureFile(f, self.basefont.features.text)
+        # log(">> Reading features")
+        # readFeatureFile(f, f.features.text)
         log(">> Decomposing")
-        for g in f:
-            if len(g.components) > 0:
-                decomposeGlyph(f, g)
-        # for gname in self.decompose:
-        #     if f.has_key(gname):
-        #         decomposeGlyph(f, f[gname])
+        # for g in f:
+        #     if len(g.components) > 0:
+        #         decomposeGlyph(f, g)
+        for gname in self.decompose:
+            if f.has_key(gname):
+                decomposeGlyph(f, f[gname])
         
         copyrightHolderName = ''
         if self.config.has_option('main', 'copyrightHolderName'):
