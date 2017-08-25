@@ -109,9 +109,18 @@ f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fA fB fC fD fE fF fa fb fc fd fe ff
 `)
 
 samples.set('Contextual alternates', `
-(m) (M) (6)
-[m] [M] [6]
-{m} {M} {6}
+(m) (M) (6) [m] [M] [6] {m} {M} {6}
+m@n M@N
+3x5 x5 8x  3×5 ×5 8×
+3-5 -5 8-  3+5 +5 8+
+3÷5 ÷5 8÷
+3=5 =5 8=  3≠5 ≠5 8≠
+B-O B–O B‒O B—O M•N
+b-o b–o b‒o b—o m•n
+X→Y X←Y X↑Y X↓Y
+x→y x←y x↑y x↓y
+A → B ← C ↑ D ↓ E
+a → b ← c ↑ d ↓ e
 `)
 
 // From http://justanotherfoundry.com/generator
@@ -1089,7 +1098,7 @@ document.head.appendChild(fontCSS)
       <!-- <label><input type="checkbox" class="featopt" name="feat:pnum"> Enable pnum</label> -->
       <label><input type="checkbox" class="featopt" name="feat:tnum"> Enable tnum *</label>
       <!-- <label><input type="checkbox" class="featopt" name="feat:lnum"> Enable lnum</label> -->
-      <label><input type="checkbox" class="featopt" name="feat:kern"> Enable kern</label>
+      <!-- <label><input type="checkbox" class="featopt" name="feat:kern"> Enable kern</label> -->
       <label><input type="checkbox" class="featopt" name="feat:case"> Enable case</label>
       <label><input type="checkbox" class="featopt" name="feat:calt=0"> <em>Disable</em> calt *</label>
       <label><input type="checkbox" class="featopt" name="feat:zero"> Enable (slashed) zero *</label>

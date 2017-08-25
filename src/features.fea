@@ -21,10 +21,11 @@ languagesystem grek dflt;
 
 @UC_SET1 = [ zero one two three four five six seven eight nine Euro Idotaccent Mu dollar lira sterling afii10023 afii10051 afii10052 afii10053 afii10054 afii10055 afii10056 afii10057 afii10058 afii10059 afii10060 afii10061 afii10062 afii10145 afii10017 afii10018 afii10019 afii10020 afii10021 afii10022 afii10024 afii10025 afii10026 afii10027 afii10029 afii10030 afii10031 afii10032 afii10033 afii10034 afii10035 afii10036 afii10037 afii10038 afii10039 afii10040 afii10041 afii10042 afii10043 afii10044 afii10045 afii10046 afii10047 afii10048 afii10049 afii10050 Ghestrokecyrillic Zhedescendercyrillic Zedescendercyrillic Kadescendercyrillic Kaverticalstrokecyrillic Kabashkircyrillic Endescendercyrillic Haabkhasiancyrillic Esdescendercyrillic Ustraightcyrillic Ustraightstrokecyrillic Hadescendercyrillic Tetsecyrillic Cheverticalstrokecyrillic Shhacyrillic Cheabkhasiancyrillic Chedescenderabkhasiancyrillic Schwacyrillic Dzeabkhasiancyrillic Imacroncyrillic Obarredcyrillic Umacroncyrillic hryvnia tenge uni20BD numero yen ];
 
-@UC = [ @UC_ROMAN @UC_SET1 ];
+@LC_SET1 = [ dotlessi sigma1 mugreek afii10065 becyrillic vecyrillic gecyrillic decyrillic iecyrillic zhecyrillic zecyrillic iicyrillic iishortcyrillic kacyrillic elcyrillic emcyrillic encyrillic ocyrillic pecyrillic ercyrillic escyrillic tecyrillic ucyrillic efcyrillic khacyrillic tsecyrillic checyrillic shacyrillic shchacyrillic hardsigncyrillic yericyrillic softsigncyrillic ereversedcyrillic iucyrillic iacyrillic iocyrillic djecyrillic gjecyrillic ecyrillic dzecyrillic icyrillic yicyrillic jecyrillic ljecyrillic njecyrillic tshecyrillic kjecyrillic ushortcyrillic dzhecyrillic gheupturncyrillic ghestrokecyrillic zhedescendercyrillic zedescendercyrillic kadescendercyrillic kaverticalstrokecyrillic kabashkircyrillic endescendercyrillic haabkhasiancyrillic esdescendercyrillic ustraightcyrillic ustraightstrokecyrillic hadescendercyrillic tetsecyrillic cheverticalstrokecyrillic shhacyrillic cheabkhasiancyrillic chedescenderabkhasiancyrillic schwacyrillic dzeabkhasiancyrillic imacroncyrillic obarredcyrillic umacroncyrillic ];
 
-@LC_SET2 = [ dotlessi sigma1 mugreek afii10065 becyrillic vecyrillic gecyrillic decyrillic iecyrillic zhecyrillic zecyrillic iicyrillic iishortcyrillic kacyrillic elcyrillic emcyrillic encyrillic ocyrillic pecyrillic ercyrillic escyrillic tecyrillic ucyrillic efcyrillic khacyrillic tsecyrillic checyrillic shacyrillic shchacyrillic hardsigncyrillic yericyrillic softsigncyrillic ereversedcyrillic iucyrillic iacyrillic iocyrillic djecyrillic gjecyrillic ecyrillic dzecyrillic icyrillic yicyrillic jecyrillic ljecyrillic njecyrillic tshecyrillic kjecyrillic ushortcyrillic dzhecyrillic gheupturncyrillic ghestrokecyrillic zhedescendercyrillic zedescendercyrillic kadescendercyrillic kaverticalstrokecyrillic kabashkircyrillic endescendercyrillic haabkhasiancyrillic esdescendercyrillic ustraightcyrillic ustraightstrokecyrillic hadescendercyrillic tetsecyrillic cheverticalstrokecyrillic shhacyrillic cheabkhasiancyrillic chedescenderabkhasiancyrillic schwacyrillic dzeabkhasiancyrillic imacroncyrillic obarredcyrillic umacroncyrillic ];
+@NUM = [ zero one two three four five six seven eight nine ];
 
+@SPACE = [ space enspace emspace thirdemspace quarteremspace sixthemspace figurespace punctuationspace thinspace hairspace zerowidthspace ];
 
 @frac1 = [ zero one two three four five six seven eight nine ];
 @frac2 = [ zero.frac onesuperior twosuperior threesuperior four.frac five.frac six.frac seven.frac eight.frac nine.frac ];
@@ -834,6 +835,64 @@ feature numr {
 } numr;
 
 feature calt {
+  @UC = [ @UC_ROMAN @UC_SET1 exclam question ];
+
+  sub @UC at' @UC by at.cap;
+
+  sub @NUM x' by multiply.cap;
+  sub x' @NUM by multiply.cap;
+  sub multiply' @UC by multiply.cap;
+  sub @UC multiply' by multiply.cap;
+
+  sub hyphen' @NUM by minus.cap;
+  sub @NUM hyphen' by minus.cap;
+  sub minus' @UC by minus.cap;
+  sub @UC minus' by minus.cap;
+
+  sub plus' @UC by plus.cap;
+  sub @UC plus' by plus.cap;
+
+  sub divide' @UC by divide.cap;
+  sub @UC divide' by divide.cap;
+
+  sub equal' @UC by equal.cap;
+  sub @UC equal' by equal.cap;
+
+  sub notequal' @UC by notequal.cap;
+  sub @UC notequal' by notequal.cap;
+
+  sub endash' @UC by endash.cap;
+  sub @UC endash' by endash.cap;
+
+  sub figuredash' @UC by figuredash.cap;
+  sub @UC figuredash' by figuredash.cap;
+
+  sub emdash' @UC by emdash.cap;
+  sub @UC emdash' by emdash.cap;
+
+  sub hyphen' @UC by hyphen.cap;
+  sub @UC hyphen' by hyphen.cap;
+
+  sub @UC bullet' by bullet.cap;
+  sub bullet' @SPACE @SPACE @UC by bullet.cap;
+  sub bullet' @SPACE @UC by bullet.cap;
+  sub bullet' @UC by bullet.cap;
+
+  sub arrowleft' @UC by arrowleft.cap;
+  sub @UC arrowleft' by arrowleft.cap;
+
+  sub arrowup' @UC by arrowup.cap;
+  sub @UC arrowup' by arrowup.cap;
+
+  sub arrowright' @UC by arrowright.cap;
+  sub @UC arrowright' by arrowright.cap;
+
+  sub arrowdown' @UC by arrowdown.cap;
+  sub @UC arrowdown' by arrowdown.cap;
+
+  sub notequal' @UC by notequal.cap;
+  sub @UC notequal' by notequal.cap;
+
   sub braceleft' @UC by braceleft.cap;
   sub @UC braceright' by braceright.cap;
 

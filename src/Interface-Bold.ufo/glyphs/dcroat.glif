@@ -4,6 +4,20 @@
   <unicode hex="0111"/>
   <outline>
     <contour>
+      <point x="1036" y="340" type="line"/>
+      <point x="1080" y="0" type="line"/>
+      <point x="1480" y="0" type="line"/>
+      <point x="1480" y="2048" type="line"/>
+      <point x="1036" y="2048" type="line"/>
+    </contour>
+    <contour>
+      <point x="1684" y="1868" type="line"/>
+      <point x="692" y="1868" type="line"/>
+      <point x="692" y="1608" type="line"/>
+      <point x="1684" y="1608" type="line"/>
+    </contour>
+    <component base="leftloop.cn"/>
+    <contour>
       <point x="1644" y="2112" type="move" name="caron"/>
     </contour>
     <contour>
@@ -27,20 +41,6 @@
     <contour>
       <point x="1188" y="1804" type="move" name="parenthesses.w2"/>
     </contour>
-    <contour>
-      <point x="1036" y="340" type="line"/>
-      <point x="1080" y="0" type="line"/>
-      <point x="1480" y="0" type="line"/>
-      <point x="1480" y="2112" type="line"/>
-      <point x="1036" y="2112" type="line"/>
-    </contour>
-    <contour>
-      <point x="1684" y="1932" type="line"/>
-      <point x="692" y="1932" type="line"/>
-      <point x="692" y="1672" type="line"/>
-      <point x="1684" y="1672" type="line"/>
-    </contour>
-    <component base="leftloop.cn"/>
   </outline>
   <lib>
     <dict>
