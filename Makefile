@@ -13,7 +13,8 @@ VERSION := $(shell misc/version.py)
 # all styles and alias targets
 include build/etc/generated.make
 
-res_files := src/fontbuild.cfg src/diacritics.txt src/glyphlist.txt src/glyphorder.txt
+res_files := src/fontbuild.cfg src/diacritics.txt src/glyphlist.txt \
+             src/glyphorder.txt src/features.fea
 
 # UFO -> TTF & OTF (note that UFO deps are defined by generated.make)
 build/tmp/InterfaceTTF/Interface-%.ttf: $(res_files)

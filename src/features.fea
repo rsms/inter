@@ -21,6 +21,8 @@ languagesystem grek dflt;
 
 @UC_SET1 = [ zero one two three four five six seven eight nine Euro Idotaccent Mu dollar lira sterling afii10023 afii10051 afii10052 afii10053 afii10054 afii10055 afii10056 afii10057 afii10058 afii10059 afii10060 afii10061 afii10062 afii10145 afii10017 afii10018 afii10019 afii10020 afii10021 afii10022 afii10024 afii10025 afii10026 afii10027 afii10029 afii10030 afii10031 afii10032 afii10033 afii10034 afii10035 afii10036 afii10037 afii10038 afii10039 afii10040 afii10041 afii10042 afii10043 afii10044 afii10045 afii10046 afii10047 afii10048 afii10049 afii10050 Ghestrokecyrillic Zhedescendercyrillic Zedescendercyrillic Kadescendercyrillic Kaverticalstrokecyrillic Kabashkircyrillic Endescendercyrillic Haabkhasiancyrillic Esdescendercyrillic Ustraightcyrillic Ustraightstrokecyrillic Hadescendercyrillic Tetsecyrillic Cheverticalstrokecyrillic Shhacyrillic Cheabkhasiancyrillic Chedescenderabkhasiancyrillic Schwacyrillic Dzeabkhasiancyrillic Imacroncyrillic Obarredcyrillic Umacroncyrillic hryvnia tenge uni20BD numero yen ];
 
+@UC = [ @UC_ROMAN @UC_SET1 ];
+
 @LC_SET2 = [ dotlessi sigma1 mugreek afii10065 becyrillic vecyrillic gecyrillic decyrillic iecyrillic zhecyrillic zecyrillic iicyrillic iishortcyrillic kacyrillic elcyrillic emcyrillic encyrillic ocyrillic pecyrillic ercyrillic escyrillic tecyrillic ucyrillic efcyrillic khacyrillic tsecyrillic checyrillic shacyrillic shchacyrillic hardsigncyrillic yericyrillic softsigncyrillic ereversedcyrillic iucyrillic iacyrillic iocyrillic djecyrillic gjecyrillic ecyrillic dzecyrillic icyrillic yicyrillic jecyrillic ljecyrillic njecyrillic tshecyrillic kjecyrillic ushortcyrillic dzhecyrillic gheupturncyrillic ghestrokecyrillic zhedescendercyrillic zedescendercyrillic kadescendercyrillic kaverticalstrokecyrillic kabashkircyrillic endescendercyrillic haabkhasiancyrillic esdescendercyrillic ustraightcyrillic ustraightstrokecyrillic hadescendercyrillic tetsecyrillic cheverticalstrokecyrillic shhacyrillic cheabkhasiancyrillic chedescenderabkhasiancyrillic schwacyrillic dzeabkhasiancyrillic imacroncyrillic obarredcyrillic umacroncyrillic ];
 
 
@@ -830,6 +832,17 @@ feature dnom {
 feature numr {
   sub @frac1 by @frac2;
 } numr;
+
+feature calt {
+  sub braceleft' @UC by braceleft.cap;
+  sub @UC braceright' by braceright.cap;
+
+  sub bracketleft' @UC by bracketleft.cap;
+  sub @UC bracketright' by bracketright.cap;
+
+  sub parenleft' @UC by parenleft.cap;
+  sub @UC parenright' by parenright.cap;
+} calt;
 
 # Stylistic set 1: open digits
 feature ss01 {

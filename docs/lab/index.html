@@ -108,23 +108,10 @@ e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 eA eB eC eD eE eF ea eb ec ed ee ef
 f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fA fB fC fD fE fF fa fb fc fd fe ff
 `)
 
-samples.set('Kerning wip', `
-Var Vcr Vdlav Verify Vgi Vox Vqms
-var vcr vdlav verify vgi vox vqms
-Yar Ycr Ydlav Year Ygi Yox Yqms
-yar ycr ydlav year ygi yox yqms
-// \\\\  A\\ VA VJ V/ WA WJ W/ \\W \\w \\V \\v
-AV AW Av Aw WAV WAW wav waw Wav Waw
-FF3345 FA3345 FA8  7F6544  7A6544
-far fcr fdlav fear fgi fox fqms
-Far Fcr Fdlav Fear Fgi Fox Fqms
-Ear Ecr Edlav Eear Egi Eox Eqms
-AO AU AT AY BT BY CT ET Ec
-".x." '.x.' ‘.x.’ “.x.” x.‛ x.‟
-",x," ',x,' ‘,x,’ “,x,” x,‛ x,‟
-L" L' L’ L” L‛ L‟
-version  (s -><- i)
-Viewed  (e -><- w)
+samples.set('Contextual alternates', `
+(m) (M) (6)
+[m] [M] [6]
+{m} {M} {6}
 `)
 
 // From http://justanotherfoundry.com/generator
@@ -155,7 +142,21 @@ ji ug um ob ns dz qe sn hr ap uh ea rc nt yu ae oj zj ud js fu pu cl vs gg
 `)
 
 
-samples.set('Kerning German sample', `
+samples.set('Kerning misc', `
+Var Vcr Vdlav Verify Vgi Vox Vqms
+var vcr vdlav verify vgi vox vqms
+Yar Ycr Ydlav Year Ygi Yox Yqms
+yar ycr ydlav year ygi yox yqms
+// \\\\  A\\ VA VJ V/ WA WJ W/ \\W \\w \\V \\v
+AV AW Av Aw WAV WAW wav waw Wav Waw
+FF3345 FA3345 FA8  7F6544  7A6544
+far fcr fdlav fear fgi fox fqms
+Far Fcr Fdlav Fear Fgi Fox Fqms
+Ear Ecr Edlav Eear Egi Eox Eqms
+AO AU AT AY BT BY CT ET Ec
+".x." '.x.' ‘.x.’ “.x.” x.‛ x.‟
+",x," ',x,' ‘,x,’ “,x,” x,‛ x,‟
+L" L' L’ L” L‛ L‟
 aufkauf aufhalt aufbleib
 ver/fl ixt auflassen 
 ho/f_f e auffassen
@@ -715,14 +716,15 @@ h2 {
   width: 275px;
   box-sizing:border-box;
   position:fixed;
-  top:0; right:0; bottom:-1000px;
+  top:0; right:0; bottom:0;
   background:#f4f4f4;
   border-left:1px solid #ddd;
-  border-bottom:1px solid rgba(0,0,0,0.15);
-  margin-bottom:24px;
+  /*border-bottom:1px solid rgba(0,0,0,0.15);*/
+  /*margin-bottom:24px;*/
   padding: 24px;
   user-select:none;
   font-family: sans-serif !important;
+  overflow: auto;
 }
 .options > * {
   display: block;
@@ -1082,21 +1084,23 @@ document.head.appendChild(fontCSS)
 
       <div class="checkbox-group">
       <span>Features:</span>
-      <label><input type="checkbox" class="featopt" name="feat:ss01"> Stylistic set 1 *</label>
-      <label><input type="checkbox" class="featopt" name="feat:ss02"> Stylistic set 2</label>
-      <label><input type="checkbox" class="featopt" name="feat:ss03"> Stylistic set 3</label>
-      <label><input type="checkbox" class="featopt" name="feat:ss04"> Stylistic set 4</label>
-      <label><input type="checkbox" class="featopt" name="feat:ss05"> Stylistic set 5</label>
-      <label><input type="checkbox" class="featopt" name="feat:ss06"> Stylistic set 6</label>
-      <label><input type="checkbox" class="featopt" name="feat:salt"> Stylistic alternates</label>
-      <label><input type="checkbox" class="featopt" name="feat:c2sc"> c2sc</label>
-      <label><input type="checkbox" class="featopt" name="feat:dlig"> dlig</label>
-      <label><input type="checkbox" class="featopt" name="feat:onum"> onum</label>
-      <label><input type="checkbox" class="featopt" name="feat:pnum"> pnum</label>
-      <label><input type="checkbox" class="featopt" name="feat:tnum"> tnum *</label>
-      <label><input type="checkbox" class="featopt" name="feat:lnum"> lnum</label>
-      <label><input type="checkbox" class="featopt" name="feat:kern"> kern</label>
-      <label><input type="checkbox" class="featopt" name="feat:zero"> (slashed) zero *</label>
+      <!-- <label><input type="checkbox" class="featopt" name="feat:dlig"> Enable dlig</label> -->
+      <!-- <label><input type="checkbox" class="featopt" name="feat:onum"> Enable onum</label> -->
+      <!-- <label><input type="checkbox" class="featopt" name="feat:pnum"> Enable pnum</label> -->
+      <label><input type="checkbox" class="featopt" name="feat:tnum"> Enable tnum *</label>
+      <!-- <label><input type="checkbox" class="featopt" name="feat:lnum"> Enable lnum</label> -->
+      <label><input type="checkbox" class="featopt" name="feat:kern"> Enable kern</label>
+      <label><input type="checkbox" class="featopt" name="feat:case"> Enable case</label>
+      <label><input type="checkbox" class="featopt" name="feat:calt=0"> <em>Disable</em> calt *</label>
+      <label><input type="checkbox" class="featopt" name="feat:zero"> Enable (slashed) zero *</label>
+      <!-- <label><input type="checkbox" class="featopt" name="feat:c2sc"> Enable c2sc</label> -->
+      <label><input type="checkbox" class="featopt" name="feat:ss01"> Enable Stylistic set 1 *</label>
+      <label><input type="checkbox" class="featopt" name="feat:ss02"> Enable Stylistic set 2</label>
+      <label><input type="checkbox" class="featopt" name="feat:ss03"> Enable Stylistic set 3</label>
+      <label><input type="checkbox" class="featopt" name="feat:ss04"> Enable Stylistic set 4</label>
+      <label><input type="checkbox" class="featopt" name="feat:ss05"> Enable Stylistic set 5</label>
+      <label><input type="checkbox" class="featopt" name="feat:ss06"> Enable Stylistic set 6</label>
+      <label><input type="checkbox" class="featopt" name="feat:salt"> Enable Stylistic alternates</label>
       <small>* currently implemented</small>
       </div>
 
@@ -1580,9 +1584,10 @@ function main() {
 
   let features = new Set()
   for (let e of Array.prototype.slice.call(document.querySelectorAll('input.featopt'))) {
-    let feat = e.name.replace(/^feat\:/, '')
-    vars.bind('feat-' + feat, e, (e, on) => {
-      let val = '"'+feat+'" 1'
+    let p = e.name.replace(/^feat\:/, '').split('=')
+    let name = p[0], value = p[1] || '1'
+    vars.bind('feat-' + name, e, (e, on) => {
+      let val = '"' + name + '" ' + value
       if (on) {
         features.add(val)
       } else {

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="bracketright" format="1">
-  <advance width="640"/>
-  <unicode hex="005D"/>
+<glyph name="bracketright.cap" format="1">
+  <advance width="1024"/>
   <outline>
-    <component base="bracketleft" xScale="-1" xOffset="640"/>
+    <component base="bracketright" yOffset="64"/>
   </outline>
   <lib>
     <dict>
@@ -14,6 +13,8 @@
         <real>0.94</real>
         <real>1.0</real>
       </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 791, 'leftMargin': 19, 'rightMargin': 154}</string>
     </dict>
   </lib>
 </glyph>

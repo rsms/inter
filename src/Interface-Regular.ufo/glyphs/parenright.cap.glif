@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="bracketright" format="1">
-  <advance width="640"/>
-  <unicode hex="005D"/>
+<glyph name="parenright.cap" format="1">
+  <advance width="984"/>
   <outline>
-    <component base="bracketleft" xScale="-1" xOffset="640"/>
+    <component base="parenright" yOffset="192"/>
   </outline>
   <lib>
     <dict>
@@ -13,6 +12,10 @@
         <real>0.94</real>
         <real>0.94</real>
         <real>1.0</real>
+      </array>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
       </array>
     </dict>
   </lib>
