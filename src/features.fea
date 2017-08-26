@@ -872,9 +872,7 @@ feature numr {
   hyphen
   bullet
   arrowleft
-  arrowup
   arrowright
-  arrowdown
   notequal
   braceleft   braceright
   bracketleft bracketright
@@ -897,9 +895,7 @@ feature numr {
   hyphen.case
   bullet.case
   arrowleft.case
-  arrowup.case
   arrowright.case
-  arrowdown.case
   notequal.case
   braceleft.case   braceright.case
   bracketleft.case bracketright.case
@@ -956,14 +952,8 @@ feature calt {
   sub arrowleft' @UC by arrowleft.case;
   sub @UC arrowleft' by arrowleft.case;
 
-  sub arrowup' @UC by arrowup.case;
-  sub @UC arrowup' by arrowup.case;
-
   sub arrowright' @UC by arrowright.case;
   sub @UC arrowright' by arrowright.case;
-
-  sub arrowdown' @UC by arrowdown.case;
-  sub @UC arrowdown' by arrowdown.case;
 
   sub notequal' @UC by notequal.case;
   sub @UC notequal' by notequal.case;

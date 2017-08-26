@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="arrowleft" format="1">
-  <advance width="3072"/>
+  <advance width="2560"/>
   <unicode hex="2190"/>
   <outline>
     <contour>
-      <point x="1092" y="-24" type="line"/>
-      <point x="1364" y="252" type="line"/>
-      <point x="976" y="640" type="line"/>
-      <point x="2816" y="640" type="line"/>
-      <point x="2816" y="1024" type="line"/>
-      <point x="976" y="1024" type="line"/>
-      <point x="1368" y="1416" type="line"/>
-      <point x="1092" y="1688" type="line"/>
-      <point x="236" y="832" type="line"/>
+      <point x="2304" y="656" type="line"/>
+      <point x="2304" y="1008" type="line"/>
+      <point x="904" y="1008" type="line"/>
+      <point x="904" y="1024" type="line"/>
+      <point x="1360" y="1480" type="line"/>
+      <point x="1124" y="1716" type="line"/>
+      <point x="240" y="832" type="line"/>
+      <point x="1124" y="-52" type="line"/>
+      <point x="1360" y="184" type="line"/>
+      <point x="904" y="640" type="line"/>
+      <point x="904" y="656" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>904</integer>
+          <key>y</key>
+          <integer>832</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.8</real>

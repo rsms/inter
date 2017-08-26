@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="arrowdown" format="1">
-  <advance width="1792"/>
+  <advance width="2560"/>
   <unicode hex="2193"/>
   <outline>
-    <contour>
-      <point x="1756" y="324" type="line"/>
-      <point x="1480" y="596" type="line"/>
-      <point x="1092" y="208" type="line"/>
-      <point x="1092" y="2048" type="line"/>
-      <point x="708" y="2048" type="line"/>
-      <point x="708" y="208" type="line"/>
-      <point x="316" y="600" type="line"/>
-      <point x="44" y="324" type="line"/>
-      <point x="900" y="-532" type="line"/>
-    </contour>
+    <component base="arrowup" yScale="-1" yOffset="2048"/>
   </outline>
   <lib>
     <dict>
