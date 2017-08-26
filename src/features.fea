@@ -856,7 +856,12 @@ feature numr {
   sub @frac1 by @frac2;
 } numr;
 
-@CASE_L = [
+@CASE_DELIM_L = [
+  braceleft   braceright
+  bracketleft bracketright
+  parenleft   parenright
+];
+@CASE_NONDELIM_L = [
   asterisk
   at
   multiply
@@ -872,14 +877,18 @@ feature numr {
   hyphen
   bullet
   arrowleft
+  arrowleftlong
   arrowright
+  arrowrightlong
   notequal
-  braceleft   braceright
-  bracketleft bracketright
-  parenleft   parenright
   colon
 ];
+@CASE_L = [ @CASE_DELIM_L @CASE_NONDELIM_L ];
 @CASE_R = [
+  braceleft.case   braceright.case
+  bracketleft.case bracketright.case
+  parenleft.case   parenright.case
+
   asterisk.case
   at.case
   multiply.case
@@ -895,11 +904,10 @@ feature numr {
   hyphen.case
   bullet.case
   arrowleft.case
+  arrowleftlong.case
   arrowright.case
+  arrowrightlong.case
   notequal.case
-  braceleft.case   braceright.case
-  bracketleft.case bracketright.case
-  parenleft.case   parenright.case
   colon.case
 ];
 
@@ -909,66 +917,21 @@ feature case {
 
 feature calt {
   @UC = [ @UC_ROMAN @UC_SET1 exclam question ];
+  @LC = [ @LC_ROMAN @LC_SET1 ];
 
-  sub @UC at' @UC by at.case;
-  sub @UC asterisk' by asterisk.case;
+  sub @UC @CASE_L' by @CASE_R;
+  ignore sub @LC @CASE_NONDELIM_L' @UC;
+  sub @CASE_L' @UC by @CASE_R;
 
-  sub multiply' @UC by multiply.case;
-  sub @UC multiply' by multiply.case;
-
-  sub minus' @UC by minus.case;
-  sub @UC minus' by minus.case;
-
-  sub plus' @UC by plus.case;
-  sub @UC plus' by plus.case;
-
-  sub plusminus' @UC by plusminus.case;
-  sub @UC plusminus' by plusminus.case;
-
-  sub divide' @UC by divide.case;
-  sub @UC divide' by divide.case;
-
-  sub equal' @UC by equal.case;
-  sub @UC equal' by equal.case;
-
-  sub notequal' @UC by notequal.case;
-  sub @UC notequal' by notequal.case;
-
-  sub endash' @UC by endash.case;
-  sub @UC endash' by endash.case;
-
-  sub figuredash' @UC by figuredash.case;
-  sub @UC figuredash' by figuredash.case;
-
-  sub emdash' @UC by emdash.case;
-  sub @UC emdash' by emdash.case;
-
-  sub hyphen' @UC by hyphen.case;
-  sub @UC hyphen' by hyphen.case;
-
-  sub bullet' @UC by bullet.case;
-  sub @UC bullet' by bullet.case;
-
-  sub arrowleft' @UC by arrowleft.case;
-  sub @UC arrowleft' by arrowleft.case;
-
-  sub arrowright' @UC by arrowright.case;
-  sub @UC arrowright' by arrowright.case;
-
-  sub notequal' @UC by notequal.case;
-  sub @UC notequal' by notequal.case;
-
-  sub braceleft' @UC by braceleft.case;
-  sub @UC braceright' by braceright.case;
-
-  sub bracketleft' @UC by bracketleft.case;
-  sub @UC bracketright' by bracketright.case;
-
-  sub parenleft' @UC by parenleft.case;
-  sub @UC parenright' by parenright.case;
-
-  sub colon' @UC by colon.case;
-  sub @UC colon' by colon.case;
+  # ->, <-
+  @ARROW_DASH = [ hyphen endash emdash ];
+  @ARROW_DASH_CASE = [ hyphen.case endash.case emdash.case ];
+  sub @ARROW_DASH' greater' by arrowrightlong;
+  sub @ARROW_DASH_CASE' greater' by arrowrightlong.case;
+  ignore sub less' @ARROW_DASH' @NUM;
+  ignore sub less' @ARROW_DASH_CASE' @NUM;
+  sub less' @ARROW_DASH' by arrowleftlong;
+  sub less' @ARROW_DASH_CASE' by arrowleftlong.case;
 
   sub period' @NUM by period.num;
 } calt;

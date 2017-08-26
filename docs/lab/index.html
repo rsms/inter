@@ -117,7 +117,7 @@ e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 eA eB eC eD eE eF ea eb ec ed ee ef
 f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fA fB fC fD fE fF fa fb fc fd fe ff
 `)
 
-samples.set('Contextual alternates', `
+samples.set('Features test', `
 (m) (M) (6) [m] [M] [6] {m} {M} {6}
 m@n M@N
 3×5 ×9 8×  3x4 x9 2x
@@ -126,11 +126,17 @@ m@n M@N
 3=5 =5 8=  3≠5 ≠5 8≠
 8*5 8 * 7  WALLPAPER*
 B-O B–O B‒O B—O M•N
+-Selvece
+darest-Selvece
 b-o b–o b‒o b—o m•n
-X→Y X←Y X↑Y X↓Y
-x→y x←y x↑y x↓y
-A → B ← C ↑ D ↓ E
-a → b ← c ↑ d ↓ e
+A→B←C⟵D⟶E
+a→b←c⟵d⟶e
+A → B ← C ⟵ D ⟶ E
+a → b ← c ⟵ d ⟶ e
+A -> B <- C
+A –> B <– C
+A —> B <— C
+x<-4  x < -4  x<-y
 12:35
 1.2  34.56.78.90.12
 A*Y V*V W*W N*N X*X
@@ -289,7 +295,7 @@ da 27. es 38. an 87, in 68, 674
 
 
 samples.set('Symbols', `
-→ ← ↑ ↓
+→ ⟶ ← ⟵ ↑ ↓ ↖ ↗ ↘ ↙
 ► Next             (U+25BA)
 ◀ Previous         (U+25C0)
 ▼ AMZ              (U+25BC)
@@ -297,12 +303,12 @@ samples.set('Symbols', `
 ◆ King              (U+25C6)
 ● Black Circle      (U+25CF)
 ○ White Circle      (U+25CB)
-⌘C                 (U+2318)
-\uE001           (U+E001)
-\uE000           (U+E000)
-\uE002           (U+E002)
-\uE003           (U+E003)
-\uE004           (U+E004)
+⌘ Place of interest (U+2318)
+\uE001 Registration (private-area, U+E001)
+\uE000 White Component (private-area, U+E000)
+\uE002 Black Component (private-area, U+E002)
+\uE003 Black Component instance (private-area, U+E003)
+\uE004 White Component instance (private-area, U+E004)
 `)
 
 samples.set('────── body ──────', null)
@@ -826,6 +832,7 @@ samples {
     padding: 0 24px;
     min-width:100px;
     /*max-width:450px;*/
+    white-space: pre;
   }
     sample p {
       white-space: pre;
