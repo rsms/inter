@@ -508,19 +508,19 @@
 				<string>question</string>
 				<string>questiondown</string>
 				<string>parenleft</string>
-				<string>parenleft.cap</string>
+				<string>parenleft.case</string>
 				<string>parenright</string>
-				<string>parenright.cap</string>
+				<string>parenright.case</string>
 				<string>bracketleft</string>
-				<string>bracketleft.cap</string>
+				<string>bracketleft.case</string>
 				<string>bracketright</string>
-				<string>bracketright.cap</string>
+				<string>bracketright.case</string>
 				<string>braceleft</string>
-				<string>braceleft.cap</string>
+				<string>braceleft.case</string>
 				<string>braceright</string>
-				<string>braceright.cap</string>
+				<string>braceright.case</string>
 				<string>at</string>
-				<string>at.cap</string>
+				<string>at.case</string>
 				<string>numbersign</string>
 				<string>currency</string>
 				<string>slash</string>
@@ -529,15 +529,15 @@
 				<string>backslash</string>
 				<string>hyphenbullet</string>
 				<string>hyphen</string>
-				<string>hyphen.cap</string>
+				<string>hyphen.case</string>
 				<string>endash</string>
-				<string>endash.cap</string>
+				<string>endash.case</string>
 				<string>figuredash</string>
-				<string>figuredash.cap</string>
+				<string>figuredash.case</string>
 				<string>emdash</string>
-				<string>emdash.cap</string>
+				<string>emdash.case</string>
 				<string>bullet</string>
-				<string>bullet.cap</string>
+				<string>bullet.case</string>
 				<string>quoteleft</string>
 				<string>quoteright</string>
 				<string>primetripl1</string>
@@ -549,8 +549,10 @@
 				<string>quotesinglbase</string>
 				<string>comma</string>
 				<string>period</string>
+				<string>period.num</string>
 				<string>ellipsis</string>
 				<string>colon</string>
+				<string>colon.case</string>
 				<string>semicolon</string>
 				<string>guilsinglleft</string>
 				<string>guilsinglright</string>
@@ -561,18 +563,19 @@
 				<string>lessequal</string>
 				<string>greaterequal</string>
 				<string>equal</string>
-				<string>equal.cap</string>
+				<string>equal.case</string>
 				<string>notequal</string>
-				<string>notequal.cap</string>
+				<string>notequal.case</string>
 				<string>plus</string>
-				<string>plus.cap</string>
+				<string>plus.case</string>
 				<string>minus</string>
-				<string>minus.cap</string>
+				<string>minus.case</string>
 				<string>multiply</string>
-				<string>multiply.cap</string>
+				<string>multiply.case</string>
 				<string>divide</string>
-				<string>divide.cap</string>
+				<string>divide.case</string>
 				<string>plusminus</string>
+				<string>plusminus.case</string>
 				<string>approxequal</string>
 				<string>asciitilde</string>
 				<string>logicalnot</string>
@@ -584,6 +587,7 @@
 				<string>daggerdbl</string>
 				<string>asciicircum</string>
 				<string>asterisk</string>
+				<string>asterisk.case</string>
 				<string>registered</string>
 				<string>trademark</string>
 				<string>servicemark</string>
@@ -692,13 +696,13 @@
 				<string>hairspace</string>
 				<string>zerowidthspace</string>
 				<string>arrowleft</string>
-				<string>arrowleft.cap</string>
+				<string>arrowleft.case</string>
 				<string>arrowup</string>
-				<string>arrowup.cap</string>
+				<string>arrowup.case</string>
 				<string>arrowright</string>
-				<string>arrowright.cap</string>
+				<string>arrowright.case</string>
 				<string>arrowdown</string>
-				<string>arrowdown.cap</string>
+				<string>arrowdown.case</string>
 				<string>triagrt</string>
 				<string>triagdn</string>
 				<string>triagup</string>
@@ -1861,7 +1865,6 @@
 				<string>uni1AB9</string>
 				<string>uni1AB8</string>
 				<string>uni1D61</string>
-				<string>colon.pnum</string>
 				<string>glottalstopbarrev</string>
 				<string>uni1D66</string>
 				<string>cyrillichook</string>
@@ -2727,19 +2730,19 @@
 		<string>question</string>
 		<string>questiondown</string>
 		<string>parenleft</string>
-		<string>parenleft.cap</string>
+		<string>parenleft.case</string>
 		<string>parenright</string>
-		<string>parenright.cap</string>
+		<string>parenright.case</string>
 		<string>bracketleft</string>
-		<string>bracketleft.cap</string>
+		<string>bracketleft.case</string>
 		<string>bracketright</string>
-		<string>bracketright.cap</string>
+		<string>bracketright.case</string>
 		<string>braceleft</string>
-		<string>braceleft.cap</string>
+		<string>braceleft.case</string>
 		<string>braceright</string>
-		<string>braceright.cap</string>
+		<string>braceright.case</string>
 		<string>at</string>
-		<string>at.cap</string>
+		<string>at.case</string>
 		<string>numbersign</string>
 		<string>currency</string>
 		<string>slash</string>
@@ -2748,15 +2751,15 @@
 		<string>backslash</string>
 		<string>hyphenbullet</string>
 		<string>hyphen</string>
-		<string>hyphen.cap</string>
+		<string>hyphen.case</string>
 		<string>endash</string>
-		<string>endash.cap</string>
+		<string>endash.case</string>
 		<string>figuredash</string>
-		<string>figuredash.cap</string>
+		<string>figuredash.case</string>
 		<string>emdash</string>
-		<string>emdash.cap</string>
+		<string>emdash.case</string>
 		<string>bullet</string>
-		<string>bullet.cap</string>
+		<string>bullet.case</string>
 		<string>quoteleft</string>
 		<string>quoteright</string>
 		<string>primetripl1</string>
@@ -2768,8 +2771,10 @@
 		<string>quotesinglbase</string>
 		<string>comma</string>
 		<string>period</string>
+		<string>period.num</string>
 		<string>ellipsis</string>
 		<string>colon</string>
+		<string>colon.case</string>
 		<string>semicolon</string>
 		<string>guilsinglleft</string>
 		<string>guilsinglright</string>
@@ -2780,18 +2785,19 @@
 		<string>lessequal</string>
 		<string>greaterequal</string>
 		<string>equal</string>
-		<string>equal.cap</string>
+		<string>equal.case</string>
 		<string>notequal</string>
-		<string>notequal.cap</string>
+		<string>notequal.case</string>
 		<string>plus</string>
-		<string>plus.cap</string>
+		<string>plus.case</string>
 		<string>minus</string>
-		<string>minus.cap</string>
+		<string>minus.case</string>
 		<string>multiply</string>
-		<string>multiply.cap</string>
+		<string>multiply.case</string>
 		<string>divide</string>
-		<string>divide.cap</string>
+		<string>divide.case</string>
 		<string>plusminus</string>
+		<string>plusminus.case</string>
 		<string>approxequal</string>
 		<string>asciitilde</string>
 		<string>logicalnot</string>
@@ -2803,6 +2809,7 @@
 		<string>daggerdbl</string>
 		<string>asciicircum</string>
 		<string>asterisk</string>
+		<string>asterisk.case</string>
 		<string>registered</string>
 		<string>trademark</string>
 		<string>servicemark</string>
@@ -2911,13 +2918,13 @@
 		<string>hairspace</string>
 		<string>zerowidthspace</string>
 		<string>arrowleft</string>
-		<string>arrowleft.cap</string>
+		<string>arrowleft.case</string>
 		<string>arrowup</string>
-		<string>arrowup.cap</string>
+		<string>arrowup.case</string>
 		<string>arrowright</string>
-		<string>arrowright.cap</string>
+		<string>arrowright.case</string>
 		<string>arrowdown</string>
-		<string>arrowdown.cap</string>
+		<string>arrowdown.case</string>
 		<string>triagrt</string>
 		<string>triagdn</string>
 		<string>triagup</string>
@@ -4080,7 +4087,6 @@
 		<string>uni1AB9</string>
 		<string>uni1AB8</string>
 		<string>uni1D61</string>
-		<string>colon.pnum</string>
 		<string>glottalstopbarrev</string>
 		<string>uni1D66</string>
 		<string>cyrillichook</string>

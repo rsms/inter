@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="asterisk.case" format="1">
+  <advance width="1536"/>
+  <note>
+    Recipe:
+    1. make horizontal rect
+    2. copy rect and paste
+    3. rotate by 60 deg
+    4. enter transform mode and center it
+    5. copy the rotated piece and paste
+    6. flip on vertical axis
+    7. enter transform mode and center it
+  </note>
+  <outline>
+    <contour>
+      <point x="544" y="428" type="line"/>
+      <point x="760" y="820" type="line"/>
+      <point x="776" y="820" type="line"/>
+      <point x="992" y="428" type="line"/>
+      <point x="1172" y="532" type="line"/>
+      <point x="936" y="916" type="line"/>
+      <point x="944" y="932" type="line"/>
+      <point x="1396" y="920" type="line"/>
+      <point x="1396" y="1128" type="line"/>
+      <point x="952" y="1116" type="line"/>
+      <point x="944" y="1132" type="line"/>
+      <point x="1176" y="1516" type="line"/>
+      <point x="992" y="1620" type="line"/>
+      <point x="776" y="1224" type="line"/>
+      <point x="760" y="1224" type="line"/>
+      <point x="544" y="1620" type="line"/>
+      <point x="360" y="1516" type="line"/>
+      <point x="596" y="1132" type="line"/>
+      <point x="588" y="1116" type="line"/>
+      <point x="140" y="1128" type="line"/>
+      <point x="140" y="920" type="line"/>
+      <point x="592" y="932" type="line"/>
+      <point x="600" y="916" type="line"/>
+      <point x="364" y="532" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1072</integer>
+          <key>y</key>
+          <integer>1024</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1132</integer>
+          <key>y</key>
+          <integer>1448</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1132</integer>
+          <key>y</key>
+          <integer>460</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>940</integer>
+          <key>y</key>
+          <integer>352</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>768</integer>
+          <key>y</key>
+          <integer>1708</integer>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

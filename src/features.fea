@@ -45,8 +45,30 @@ languagesystem grek dflt;
 @GDEF_COMPONENT = [ acutedotcomb breveacutecomb brevegravecomb brevehookcomb brevetildecomb carondotcomb circumflexacutecomb circumflexgravecomb circumflexhookcomb circumflextildecomb commaaccentrotate dieresisacutecomb dieresiscaroncomb dieresisgravecomb dieresismacroncomb dotmacroncomb macronacutecomb macrondieresiscomb macrongravecomb ringacute tildeacutecomb tildedieresiscomb tildemacroncomb tonebarextrahighmod tonebarhighmod tonebarmidmod tonebarlowmod tonebarextralowmod uni1AB9 uni1ABA uni1ABD ];
 
 table GDEF {
-    GlyphClassDef @GDEF_BASE, @GDEF_LIGATURE, @GDEF_MARK, @GDEF_COMPONENT;
+  GlyphClassDef @GDEF_BASE, @GDEF_LIGATURE, @GDEF_MARK, @GDEF_COMPONENT;
 } GDEF;
+
+
+feature aalt { # Access All Alternates
+  feature locl;
+  feature frac;
+  feature numr;
+  feature dnom;
+  feature tnum;
+  feature ss01;
+  feature zero;
+  feature calt;
+} aalt;
+
+feature locl {
+ script latn; language dflt; #set comment (#) for FDK 2.5
+ language MOL  exclude_dflt; # Moldavian
+  sub [Scedilla scedilla] by [Scommaaccent scommaaccent];
+ language ROM  exclude_dflt; # Romanian
+  sub [Scedilla scedilla] by [Scommaaccent scommaaccent];
+ language FRA  exclude_dflt; # French
+  sub [thinspace] by [uni2009.fra];
+} locl;
 
 
 feature mark {
@@ -834,73 +856,131 @@ feature numr {
   sub @frac1 by @frac2;
 } numr;
 
+@CASE_L = [
+  asterisk
+  at
+  multiply
+  minus
+  plus
+  plusminus
+  divide
+  equal
+  notequal
+  endash
+  figuredash
+  emdash
+  hyphen
+  bullet
+  arrowleft
+  arrowup
+  arrowright
+  arrowdown
+  notequal
+  braceleft   braceright
+  bracketleft bracketright
+  parenleft   parenright
+  colon
+];
+@CASE_R = [
+  asterisk.case
+  at.case
+  multiply.case
+  minus.case
+  plus.case
+  plusminus.case
+  divide.case
+  equal.case
+  notequal.case
+  endash.case
+  figuredash.case
+  emdash.case
+  hyphen.case
+  bullet.case
+  arrowleft.case
+  arrowup.case
+  arrowright.case
+  arrowdown.case
+  notequal.case
+  braceleft.case   braceright.case
+  bracketleft.case bracketright.case
+  parenleft.case   parenright.case
+  colon.case
+];
+
+feature case {
+  sub @CASE_L by @CASE_R;
+} case;
+
 feature calt {
   @UC = [ @UC_ROMAN @UC_SET1 exclam question ];
 
-  sub @UC at' @UC by at.cap;
+  sub @UC at' @UC by at.case;
+  sub @UC asterisk' by asterisk.case;
 
-  sub @NUM x' by multiply.cap;
-  sub x' @NUM by multiply.cap;
-  sub multiply' @UC by multiply.cap;
-  sub @UC multiply' by multiply.cap;
+  sub multiply' @UC by multiply.case;
+  sub @UC multiply' by multiply.case;
 
-  sub hyphen' @NUM by minus.cap;
-  sub @NUM hyphen' by minus.cap;
-  sub minus' @UC by minus.cap;
-  sub @UC minus' by minus.cap;
+  sub minus' @UC by minus.case;
+  sub @UC minus' by minus.case;
 
-  sub plus' @UC by plus.cap;
-  sub @UC plus' by plus.cap;
+  sub plus' @UC by plus.case;
+  sub @UC plus' by plus.case;
 
-  sub divide' @UC by divide.cap;
-  sub @UC divide' by divide.cap;
+  sub plusminus' @UC by plusminus.case;
+  sub @UC plusminus' by plusminus.case;
 
-  sub equal' @UC by equal.cap;
-  sub @UC equal' by equal.cap;
+  sub divide' @UC by divide.case;
+  sub @UC divide' by divide.case;
 
-  sub notequal' @UC by notequal.cap;
-  sub @UC notequal' by notequal.cap;
+  sub equal' @UC by equal.case;
+  sub @UC equal' by equal.case;
 
-  sub endash' @UC by endash.cap;
-  sub @UC endash' by endash.cap;
+  sub notequal' @UC by notequal.case;
+  sub @UC notequal' by notequal.case;
 
-  sub figuredash' @UC by figuredash.cap;
-  sub @UC figuredash' by figuredash.cap;
+  sub endash' @UC by endash.case;
+  sub @UC endash' by endash.case;
 
-  sub emdash' @UC by emdash.cap;
-  sub @UC emdash' by emdash.cap;
+  sub figuredash' @UC by figuredash.case;
+  sub @UC figuredash' by figuredash.case;
 
-  sub hyphen' @UC by hyphen.cap;
-  sub @UC hyphen' by hyphen.cap;
+  sub emdash' @UC by emdash.case;
+  sub @UC emdash' by emdash.case;
 
-  sub @UC bullet' by bullet.cap;
-  sub bullet' @SPACE @SPACE @UC by bullet.cap;
-  sub bullet' @SPACE @UC by bullet.cap;
-  sub bullet' @UC by bullet.cap;
+  sub hyphen' @UC by hyphen.case;
+  sub @UC hyphen' by hyphen.case;
 
-  sub arrowleft' @UC by arrowleft.cap;
-  sub @UC arrowleft' by arrowleft.cap;
+  sub bullet' @UC by bullet.case;
+  sub @UC bullet' by bullet.case;
 
-  sub arrowup' @UC by arrowup.cap;
-  sub @UC arrowup' by arrowup.cap;
+  sub arrowleft' @UC by arrowleft.case;
+  sub @UC arrowleft' by arrowleft.case;
 
-  sub arrowright' @UC by arrowright.cap;
-  sub @UC arrowright' by arrowright.cap;
+  sub arrowup' @UC by arrowup.case;
+  sub @UC arrowup' by arrowup.case;
 
-  sub arrowdown' @UC by arrowdown.cap;
-  sub @UC arrowdown' by arrowdown.cap;
+  sub arrowright' @UC by arrowright.case;
+  sub @UC arrowright' by arrowright.case;
 
-  sub notequal' @UC by notequal.cap;
-  sub @UC notequal' by notequal.cap;
+  sub arrowdown' @UC by arrowdown.case;
+  sub @UC arrowdown' by arrowdown.case;
 
-  sub braceleft' @UC by braceleft.cap;
-  sub @UC braceright' by braceright.cap;
+  sub notequal' @UC by notequal.case;
+  sub @UC notequal' by notequal.case;
 
-  sub bracketleft' @UC by bracketleft.cap;
-  sub @UC bracketright' by bracketright.cap;
+  sub braceleft' @UC by braceleft.case;
+  sub @UC braceright' by braceright.case;
 
-  sub parenleft' @UC by parenleft.cap;
-  sub @UC parenright' by parenright.cap;
+  sub bracketleft' @UC by bracketleft.case;
+  sub @UC bracketright' by bracketright.case;
+
+  sub parenleft' @UC by parenleft.case;
+  sub @UC parenright' by parenright.case;
+
+  sub colon' @UC by colon.case;
+  sub @UC colon' by colon.case;
+
+  sub period' @NUM by period.num;
 } calt;
 
 # Stylistic set 1: open digits

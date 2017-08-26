@@ -57,11 +57,16 @@ HAHBHCHDHEHFHGHHIHJHKHLHMHNHOHPHQHRHSHTHUHVHWHXHYHZH
 
 
 samples.set('Numbers', `
-0123456789
+0123456789  12:35 4:1 8-3
+3×5 ×9 8×  3x4 x9 2x
+3−5 −5 8−  3+5 +5 3+
+3÷5 ÷5 8÷  3±5 ±5 8±
+3=5 =5 8=  3≠5 ≠5 8≠
+5 > 4  8 < 9  x ≤ z  y ≥ z
 
 FFFFFF  000000  FF00  4296DE  3200  9000  198.3  5300
-12,385,900  43.2e9
--0 -1 -2 -3 -4 -5 -6 -7 -8 -9  +0 +1 +2 +3 +4 +5 +6 +7 +8 +9
+12,385,900  43.2e9  0xA04D
+−0 −1 −2 −3 −4 −5 −6 −7 −8 −9  +0 +1 +2 +3 +4 +5 +6 +7 +8 +9
 
 00102030405060708090
 10112131415161718191
@@ -73,6 +78,10 @@ FFFFFF  000000  FF00  4296DE  3200  9000  198.3  5300
 70717273747576778797
 80818283848586878898
 90919293949596979899
+
+001020304050607080910112131415161
+171819202122324252627282930313233
+34353637383940414243445464748495
 
 .0.0.1.1.2.2.3.3.4.4.5.5.6.6.7.7.8.8.9.9.
 ,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,
@@ -111,16 +120,19 @@ f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fA fB fC fD fE fF fa fb fc fd fe ff
 samples.set('Contextual alternates', `
 (m) (M) (6) [m] [M] [6] {m} {M} {6}
 m@n M@N
-3x5 x5 8x  3×5 ×5 8×
-3-5 -5 8-  3+5 +5 8+
-3÷5 ÷5 8÷
+3×5 ×9 8×  3x4 x9 2x
+3−5 −5 8−  3+5 +5 3+
+3÷5 ÷5 8÷  3±5 ±5 8±
 3=5 =5 8=  3≠5 ≠5 8≠
+8*5 8 * 7  WALLPAPER*
 B-O B–O B‒O B—O M•N
 b-o b–o b‒o b—o m•n
 X→Y X←Y X↑Y X↓Y
 x→y x←y x↑y x↓y
 A → B ← C ↑ D ↓ E
 a → b ← c ↑ d ↓ e
+12:35
+1.2  34.56.78.90.12
 `)
 
 // From http://justanotherfoundry.com/generator
@@ -977,7 +989,7 @@ document.head.appendChild(fontCSS)
       <select name="sample"></select>
 
       <label>
-        <input type="number" value="11" step="1" min="4" max="1024" name="size">
+        <input type="number" value="13" step="1" min="4" max="1024" name="size">
         <select name="weight" style="max-width:120px">
           <!--option value="200">Thin (200)</option>
           <option value="300">Light (300)</option-->
@@ -1099,7 +1111,7 @@ document.head.appendChild(fontCSS)
       <label><input type="checkbox" class="featopt" name="feat:tnum"> Enable tnum *</label>
       <!-- <label><input type="checkbox" class="featopt" name="feat:lnum"> Enable lnum</label> -->
       <!-- <label><input type="checkbox" class="featopt" name="feat:kern"> Enable kern</label> -->
-      <label><input type="checkbox" class="featopt" name="feat:case"> Enable case</label>
+      <label><input type="checkbox" class="featopt" name="feat:case"> Enable case *</label>
       <label><input type="checkbox" class="featopt" name="feat:calt=0"> <em>Disable</em> calt *</label>
       <label><input type="checkbox" class="featopt" name="feat:zero"> Enable (slashed) zero *</label>
       <!-- <label><input type="checkbox" class="featopt" name="feat:c2sc"> Enable c2sc</label> -->
@@ -1109,7 +1121,7 @@ document.head.appendChild(fontCSS)
       <label><input type="checkbox" class="featopt" name="feat:ss04"> Enable Stylistic set 4</label>
       <label><input type="checkbox" class="featopt" name="feat:ss05"> Enable Stylistic set 5</label>
       <label><input type="checkbox" class="featopt" name="feat:ss06"> Enable Stylistic set 6</label>
-      <label><input type="checkbox" class="featopt" name="feat:salt"> Enable Stylistic alternates</label>
+      <!-- <label><input type="checkbox" class="featopt" name="feat:salt"> Enable Stylistic alternates</label> -->
       <small>* currently implemented</small>
       </div>
 
