@@ -14,7 +14,7 @@ VERSION := $(shell misc/version.py)
 include build/etc/generated.make
 
 res_files := src/fontbuild.cfg src/diacritics.txt src/glyphlist.txt \
-             src/glyphorder.txt src/features.fea
+             src/features.fea src/glyphorder.txt
 
 # UFO -> TTF & OTF (note that UFO deps are defined by generated.make)
 build/tmp/InterfaceTTF/Interface-%.ttf: $(res_files)
@@ -123,9 +123,19 @@ install_otf: all_otf
 
 install: all install_otf
 
-glyphinfo: _local/UnicodeData.txt
+
+glyphinfo: docs/lab/glyphinfo.json docs/glyphs/metrics.json
+
+src/glyphorder.txt: $(all_ufo)
+	misc/gen-glyphorder.py src/Interface-*.ufo > src/glyphorder.txt
+
+docs/lab/glyphinfo.json: _local/UnicodeData.txt src/glyphorder.txt
 	misc/gen-glyphinfo.py -ucd _local/UnicodeData.txt \
 	  src/Interface-*.ufo > docs/lab/glyphinfo.json
+
+docs/glyphs/metrics.json: src/glyphorder.txt
+	misc/gen-metrics-and-svgs.py -f src/Interface-Regular.ufo
+
 
 # Download latest Unicode data
 _local/UnicodeData.txt:

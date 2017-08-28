@@ -213,8 +213,8 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
     'id': fontpath,
   }
 
-  # for tableName in tt.keys():
-  #   print 'table', tableName
+  for tableName in tt.keys():
+    print 'table', tableName
 
   nameDict = {}
   if 'name' in tt:

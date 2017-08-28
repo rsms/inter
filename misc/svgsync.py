@@ -171,7 +171,7 @@ def glyphToSVG(g):
 <svg xmlns="http://www.w3.org/2000/svg" width="%(width)d" height="%(height)d">
   <g id="%(name)s">
     <path d="%(glyphSVGPath)s" transform="translate(0 %(effectiveAscender)d)" />
-    <rect x="0" y="0" width="%(width)d" height="%(height)d" fill="" stroke="black" />
+    <rect x="0" y="0" width="%(width)d" height="%(height)d" fill="none" stroke="black" />
   </g>
 </svg>
   ''' % d
@@ -421,7 +421,10 @@ print 'sync %s (%s)' % (font.info.familyName, font.info.styleName)
 glyphnames = args.glyphs if len(args.glyphs) else font.keys()
 
 modifiedGlifFiles = []
+ignoreGlyphs = set(['.notdef', '.null'])
 for glyphname in glyphnames:
+  if glyphname in ignoreGlyphs:
+    continue
   glyphFile, mtime = syncGlyph(glyphname)
   if glyphFile is not None:
     modifiedGlifFiles.append((glyphFile, mtime))

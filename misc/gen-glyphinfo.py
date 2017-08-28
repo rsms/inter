@@ -225,6 +225,7 @@ def main():
             glyph = [name, uc, ucName]
           else:
             glyph = [name, uc]
+
           glyphs.append(glyph)
       else:
         glyph = [name, None, None, color] if color else [name]

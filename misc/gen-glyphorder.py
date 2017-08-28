@@ -46,16 +46,17 @@ def main():
     else:
       fontPaths.append(fontPath)
 
+  nameLists = []
+
   for fontPath in fontPaths:
     libPlist = plistlib.readPlist(os.path.join(fontPath, 'lib.plist'))
+    names = []
     if 'public.glyphOrder' in libPlist:
-      for name in libPlist['public.glyphOrder']:
-        glyphorderUnion[name] = True
+      nameLists.append(libPlist['public.glyphOrder'])
 
-  # incorporate src/diacritics.txt
-  # diacriticComps = loadGlyphCompositions('src/diacritics.txt')
-  # for glyphName in diacriticComps.iterkeys():
-  #   glyphorderUnion[glyphName] = True
+  for names in zip(*nameLists):
+    for name in names:
+      glyphorderUnion[name] = True
 
   glyphorderUnionNames = glyphorderUnion.keys()
   print('\n'.join(glyphorderUnionNames))

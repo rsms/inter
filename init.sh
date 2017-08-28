@@ -200,6 +200,12 @@ else
       echo "$BUILD_TMP_DIR/InterfaceOTF/Interface-${style}.otf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
     done
 
+    echo -n "all_ufo:" >> "$GEN_MAKE_FILE"
+    for style in "${master_styles[@]}"; do
+      echo -n " \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+
     for e in "${derived_styles[@]}"; do
       style=$(echo "${e%%:*}" | xargs)
       dependent_styles=$(echo "${e#*:}" | xargs)
@@ -271,7 +277,7 @@ else
     echo "" >> "$GEN_MAKE_FILE"
     
 
-    echo -n ".PHONY: all_ttf all_ttf_unhinted all_web all_web_unhinted all_otf" >> "$GEN_MAKE_FILE"
+    echo -n ".PHONY: all_ttf all_ttf_unhinted all_web all_web_unhinted all_otf all_ufo" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " ${style} ${style}_ttf ${style}_ttf_unhinted ${style}_otf" >> "$GEN_MAKE_FILE"
     done
