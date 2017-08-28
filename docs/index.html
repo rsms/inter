@@ -27,267 +27,10 @@
     <link rel="icon" type="image/png" href="favicon.ico" />
 
     <link href="interface.css" rel="stylesheet">
-    <style type="text/css">
-
-* { margin:0; padding:0; }
-html { }
-body {
-  background-color: #f4f4f4;
-  color: #414141;
-  font: 16px/22px Interface, sans-serif;
-  letter-spacing: -0.1px;
-  font-weight: 400;
-  padding-bottom: 30px;
-
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern";
-  -webkit-font-feature-settings: "kern";
-  font-feature-settings: "kern";
-}
-
-a {
-  color: inherit;
-  text-decoration: underline;
-  word-break: break-word;
-  word-wrap: break-word;
-}
-a:hover {
-  color: rgb(48, 112, 232);
-}
-a.plain, a.fat {
-  /* !important needed for qualification over @media further down */
-  background: none !important;
-  text-shadow: none !important;
-  text-decoration: none;
-}
-a.fat {
-  font-weight:500;
-}
-p {
-  margin: 20px 0;
-}
-code, pre {
-  font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
-  font-size:0.96em;
-}
-code {
-  display: block;
-  border-radius:1px;
-  padding: 0.5em 0;
-  overflow: auto;
-}
-pre {
-  display: inline;
-  white-space: pre-wrap;
-}
-dem { /* de-emphasize */
-  font-weight: 400;
-  opacity: 0.7;
-}
-
-h1, h2, h3 {
-  font-weight: 500;
-}
-h1 {
-  color: #333;
-  font-size: 38px;
-  letter-spacing: -1.3px;
-  line-height: 40px;
-  text-indent: -2px;
-  margin-bottom: 30px;
-  margin-top: 10px;
-}
-h2 {
-  font-size: 24px;
-  letter-spacing: -0.4px;
-  line-height: 30px;
-  margin-bottom: 25px;
-  margin-top: 10px;
-}
-
-h1 > a, h2 > a, h3 > a {
-  color: inherit;
-  text-decoration: none;
-  text-shadow: none;
-  background: none !important;
-}
-
-.row {
-  padding: 50px;
-  /*background: salmon;*/
-  display: flex;
-  justify-content: center;
-  /*background: white;*/
-}
-.row > * {
-  width:100%;
-  max-width: 888px;
-  flex: 1 0 100%;
-  /*background: white;*/
-}
-
-/* small screens */
-@media only screen and (max-device-width: 736px) {
-  .row {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-.row.white {
-  background: white;
-}
-
-.row.dark {
-  background: #2b2b2b;
-  color: #99999b;
-}
-.row.dark a:hover {
-  color: rgb(164, 188, 255);
-}
-.row.dark h2, .row.dark h2 > a {
-  color: #ccc;
-  background: none;
-}
-
-/*
-  Medium.com-style link underline for high-density displays.
-  Currently only enabled on Mac as the lines don't render correctly on
-  Windows (even in Chrome) for some reason.
-*/
-@media (-webkit-min-device-pixel-ratio: 1.5) {
-  a {
-    text-decoration: none;
-    background-image:
-      linear-gradient(to bottom,
-        rgba(0,0,0,.6) 50%,
-        rgba(0,0,0,0) 50%);
-    background-repeat: repeat-x;
-    background-size: 2px .1em;
-    background-position: 0 1.15em;
-    text-shadow:
-      /* creates "openings" for descenders in the underline */
-      -1px -1px 0 #f4f4f4,
-      1px -1px 0  #f4f4f4,
-      -1px 1px 0  #f4f4f4,
-      1px 1px 0   #f4f4f4;
-  }
-  body.mac_or_ios a {
-    /* line height calculated differently on mac c/t windows */
-    background-position: 0 1.045em;
-  }
-  a:hover {
-    background-image:
-      linear-gradient(to bottom,
-        rgba(48, 112, 232, 1) 50%,
-        rgba(48, 112, 232, 0) 50%);
-  }
-  .row.white a {
-    text-shadow:
-      -1px -1px 0 white,
-      1px -1px 0  white,
-      -1px 1px 0  white,
-      1px 1px 0   white;
-  }
-  .row.dark a {
-    background-image:
-      linear-gradient(to bottom,
-        rgba(255,255,255,.3) 50%,
-        rgba(255,255,255,0) 50%);
-    text-shadow:
-      -1px -1px 0 #2b2b2b,
-      1px -1px 0  #2b2b2b,
-      -1px 1px 0  #2b2b2b,
-      1px 1px 0   #2b2b2b;
-  }
-  .row.dark a:hover {
-    background-image:
-      linear-gradient(to bottom,
-        rgba(164, 188, 255, 1) 50%,
-        rgba(164, 188, 255, 0) 50%);
-  }
-}
-
-.row ::selection {
-  background: rgb(48, 112, 232);
-  color: white;
-  text-shadow: none;
-}
-.row ::-moz-selection {
-  background: rgb(48, 112, 232);
-  color: white;
-  text-shadow: none;
-}
-
-.row.dark ::selection {
-  background: rgb(218, 228, 255);
-  color: black;
-}
-.row.dark ::-moz-selection {
-  background: rgb(164, 188, 255);
-  color: black;
-}
-
-a > img {
-  display: block;
-}
-
-#repertoire-image {
-  display:block;
-  width:100%;
-  height:40vw;
-  background-image: url(res/repertoire.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-blend-mode: multiply;
-  background-color: #f4f4f4;
-}
-
-
-/* FAQ */
-ul.faq {
-  list-style:none;
-  display: flex;
-  flex-direction: column;
-}
-ul.faq > li {
-  padding-right: 6px;
-  margin-bottom: 6px;
-  padding-left: 1.5em;
-  text-indent: -1.5em;
-}
-ul.faq > li > a {
-  display: inline;
-}
-ul.faq > li:target {
-  background: #fafa88;
-}
-li.q {
-  font-weight: 500;
-  margin-top:1.5em;
-}
-ul > li.q:first-child, ul > li.q:not([id]) {
-  margin-top:0;
-}
-li.q:before {
-  content: "Q  "; /* contains NO-BREAK SPACE */
-  opacity: 0.6;
-}
-li.a:before {
-  content: "A  "; /* contains NO-BREAK SPACE */
-  opacity: 0.6;
-}
-
-    </style>
+    <link href="index.css" rel="stylesheet">
   </head>
   <body>
-    <script>
-      if (!window.MSStream &&
-          /mac|ipad|iphone|ipod/i.test(navigator.userAgent))
-      {
-        document.body.classList = 'mac_or_ios'
-      }
-    </script>
+    <script src="index.js"></script>
 
     <div class="row"><div>
       <h1>The Interface font family</h1>
@@ -330,6 +73,101 @@ li.a:before {
     </div></div>
 
     <div class="row"><div>
+      <p>
+      There are currently three <a id="weights" href="#weights">weights</a>
+      </p>
+      <img src="res/weights-and-styles.svg" style="opacity:0.76;width:100%;display:block;margin:2em 0 3em 0">
+      <h2><a id="features" href="#features">Features</a></h2>
+      <boxes>
+        <box>
+          <h3>Contextual alternates (<q title='OpenType feature ID'>calt</q>)</h3>
+          <tablex><t>
+            <h><in>Disabled</in><to></to><out>Enabled</out></h>
+            <r><in>12<em>:</em>34,  FE<em>—</em>X</in><to></to><out>12:34,  FE—X</out></r>
+            <r><in>4<em>.</em>2</in><to></to><out>4.2</out></r>
+            <r><in>SFO -> STO</in><to></to><out>SFO -> STO</out></r>
+            <r><in>M<em>@</em>N m@n</in><to></to><out>M@N m@n</out></r>
+          </t></tablex>
+        </box>
+
+        <box>
+          <h3>Tabular numbers (<q title='OpenType feature ID'>tnum</q>)</h3>
+          <tablex><t>
+            <h><in>Disabled</in><to></to><out>Enabled</out></h>
+            <r><in><em>1</em>23456<em>7</em>890</in><to></to><out class="tnum">1234567890</out></r>
+            <r><in>1131711<em>&nbsp;</em></in><to></to><out class="tnum">1131711<em>&nbsp;</em></out></r>
+            <r><in>0040900<em>&nbsp;</em></in><to></to><out class="tnum">0040900<em>&nbsp;</em></out></r>
+          </t></tablex>
+        </box>
+
+        <box>
+          <h3>Slashed zero (<q title='OpenType feature ID'>zero</q>)</h3>
+          <tablex><t>
+            <h><in>Disabled</in><to></to><out>Enabled</out></h>
+            <r><in><em>0</em>123</in><to></to><out class="zero">0123</out></r>
+          </t></tablex>
+        </box>
+
+        <box>
+          <h3>Fractions (<q title='OpenType feature ID'>frac</q>)</h3>
+          <tablex><t>
+            <h><in>Disabled</in><to></to><out>Enabled</out></h>
+            <r>
+              <in><em>1/3</em>  <em>22/9</em>  <em>3/4/5</em></in>
+              <to></to><out class="frac">1/3  22/9  3/4/5</out>
+            </r>
+          </t></tablex>
+        </box>
+
+        <box>
+          <h3>Stylistic set #1: Open digits (<q title='OpenType feature ID'>ss01</q>)</h3>
+          <tablex><t>
+            <h><in>Disabled</in><to></to><out>Enabled</out></h>
+            <r>
+              <in>123<em>4</em>5<em>6</em>78<em>9</em>0</in>
+              <to></to><out class="ss01">1234567890</out>
+            </r>
+          </t></tablex>
+        </box>
+
+        <box>
+          <h3>Case alternates (<q title='OpenType feature ID'>case</q>)</h3>
+          <tablex><t>
+            <h><in>Disabled</in><to></to><out>Enabled</out></h>
+            <r>
+              <in><em>(</em>Hello<em>)</em> <em>[</em>World<em>]</em> <em>{</em>9000<em>}</em></in>
+              <to></to><out class="case">(Hello) [World] {9000}</out>
+            </r>
+            <r><in>SCHOOL <em>@</em> RUN</in><to></to><out class="case">SCHOOL @ RUN</out></r>
+            <r><in>3 <em>+</em> 9 <em>=</em> 12*</in><to></to><out class="case">3 + 9 = 12*</out></r>
+            <r><in><em>*</em> <em>+</em> <em>÷</em> <em>±</em> <em>×</em> <em>=</em> <em>≠</em> <em>•</em></in><to></to><out class="case">* + ÷ ± × = ≠ •</out></r>
+            <r><in><em>→</em> <em>←</em> <em>⟶</em> <em>⟵</em> <em>−</em> <em>-</em> <em>–</em> <em>—</em> <em>:</em></in><to></to><out class="case">→ ← ⟶ ⟵ − - – — :</out></r>
+          </t></tablex>
+        </box>
+
+      </boxes>
+
+      <p>
+        Also includes some
+        Localized Forms (<q title='OpenType feature ID'>locl</q>),
+        Numerators (<q title='OpenType feature ID'>numr</q>) and
+        Denominators (<q title='OpenType feature ID'>dnom</q>).
+      </p>
+
+      <p>&nbsp;</p>
+
+      <h2><a href="glyphs/">Glyph repertoire</a></h2>
+      <p>
+        <a class="plain glyph-repertoire" href="glyphs/">
+          <iframe id="glyph-repertoire-iframe" src="glyphs/?iframe"
+           style="width:100%;height:510px" frameborder="0"></iframe>
+        </a>
+      </p>
+    </div></div>
+
+    <div class="row-divider"></div>
+
+    <div class="row"><div>
       <h2><a id="story" href="#story">The story behind Interface</a></h2>
       <p>
       Interface started out in late 2016 as an experiment to build a perfectly
@@ -365,10 +203,7 @@ li.a:before {
       </p>
 
       <p>
-      <a href="lab/?sample=Repertoire&size=42" id="repertoire-image"></a>
-      </p>
-      <p>
-      Please refer to the <a href="lab/?sample=Repertoire&size=42">glyph repertoire</a>
+      Please refer to the <a href="glyphs/">glyph repertoire</a>
       for an overview of currently–available glyphs and their quality.
       </p>
 
@@ -396,7 +231,7 @@ li.a:before {
           <a href="https://en.wikipedia.org/wiki/Eric_Erickson">Eric Ericksons</a>,
           name alone somtimes does not suffice for unambiguous identity.
           The best way to be clear about what font you are talking about is to
-          use the URL of this page (<pre>rsms.me/interface</pre>) when telling
+          use the URL of this page (<q>rsms.me/interface</q>) when telling
           people about it.
           <a href="https://figma.com/">Design tools</a> and other software uses
           <a href="https://www.microsoft.com/typography/otspec/name.htm#nameIDs">a set of information embedded into every font</a> for identity, so names are only
@@ -471,14 +306,5 @@ li.a:before {
     <div class="row"><div>
       — <a href="https://twitter.com/rsms" class="plain">@rsms</a>
     </div></div>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-105091131-2', 'auto');
-      ga('send', 'pageview');
-    </script>
   </body>
 </html>
