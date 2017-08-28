@@ -3,8 +3,25 @@ var kSVGScale  = 0.1 // how bmuch metrics are scaled in the SVGs
 var kGlyphSize = 346 // at kSVGScale. In sync with CSS and SVGs
 var kUPM       = 2816
 
+
+function pxround(n) {
+  return Math.round(n * 2) / 2
+}
+
+// forEachElement(selector, fun)
+// forEachElement(parent, selector, fun)
+function eachElement(parent, selector, fun) {
+  if (typeof selector == 'function') {
+    fun = selector
+    selector = parent
+    parent = document
+  }
+  Array.prototype.forEach.call(parent.querySelectorAll(selector), fun)
+}
+
+
 if (!isMac) {
-  Array.prototype.forEach.call(document.querySelectorAll('kbd'), function(e) {
+  eachElement('kbd', function(e) {
     if (e.innerText == '\u2318') {
       e.innerText = 'Ctrl'
     }
@@ -226,7 +243,9 @@ function updateLocation() {
   var h1 = document.querySelector('h1')
   if (queryString.g) {
     if (!glyphNameEl) {
-      glyphNameEl = document.createElement('span')
+      glyphNameEl = document.createElement('a')
+      glyphNameEl.href = '?g=' + encodeURIComponent(queryString.g)
+      wrapIntLink(glyphNameEl)
       glyphNameEl.className = 'glyph-name'
     }
     document.title = queryString.g + ' – ' + baseTitle
@@ -260,8 +279,10 @@ window.onpopstate = function(ev) {
 }
 
 function navto(url) {
-  history.pushState({}, "Glyphs", url)
-  updateLocation()
+  if (location.href != url) {
+    history.pushState({}, "Glyphs", url)
+    updateLocation()
+  }
   window.scrollTo(0,0)
 }
 
@@ -497,6 +518,8 @@ function renderSingleInfo(g) {
   var unicode = e.querySelector('.unicode')
 
   function configureUnicodeView(el, g) {
+    var a = el.querySelector('a')
+    a.href = "https://codepoints.net/U+" + fmthex(g.unicode, 4)
     setv(el, 'unicodeCodePoint', g.unicode ? 'U+' + fmthex(g.unicode, 4) : '–')
     setv(el, 'unicodeName', g.unicodeName || '')
   }
@@ -553,35 +576,51 @@ function renderSingleInfo(g) {
 
 var cachedSVGDataURIs = {}
 
-function getSvgDataURI(svg) {
-  var cached = cachedSVGDataURIs[svg.id]
+function getSvgDataURI(svg, fill) {
+  if (!fill) {
+    fill = ''
+  }
+  var cached = cachedSVGDataURIs[svg.id + '-' + fill]
   if (!cached) {
-    cached = 'data:image/svg+xml,' + svg.outerHTML.replace(/[\r\n]+/g, '')
-    cachedSVGDataURIs[svg.id] = cached
+    var src = svg.outerHTML.replace(/[\r\n]+/g, '')
+    if (fill) {
+      src = src.replace(/<path /g, '<path fill="' + fill + '" ')
+    }
+    cached = 'data:image/svg+xml,' + src
+    cachedSVGDataURIs[svg.id + '-' + fill] = cached
   }
   return cached
 }
 
 
-function pxround(n) {
-  return Math.round(n * 2) / 2
-}
-
 
 function selectKerningPair(id, directly) {
-  Array.prototype.forEach.call(
-    document.querySelectorAll('.kernpair.selected'),
-    function(e) {
-      e.classList.remove('selected')
-    }
-  )
+  // deselect existing
+  eachElement('.kernpair.selected', function(kernpair) {
+    eachElement(kernpair, '.g', function (glyph) {
+      var svgURI = getSvgDataURI(svgRepository[glyph.dataset.name])
+      glyph.style.backgroundImage = "url('" + svgURI + "')"
+    })
+    kernpair.classList.remove('selected')
+  })
+
   var el = document.getElementById(id)
-  if (el) {
-    el.classList.add('selected')
-    if (!directly) {
-      el.scrollIntoViewIfNeeded()
-    }
+  
+  if (!el) {
+    history.replaceState({}, '', location.search)
+    return
   }
+  
+  el.classList.add('selected')
+  eachElement(el, '.g', function (glyph) {
+    var svgURI = getSvgDataURI(svgRepository[glyph.dataset.name], 'white')
+    glyph.style.backgroundImage = "url('" + svgURI + "')"
+  })
+
+  if (!directly) {
+    el.scrollIntoViewIfNeeded()
+  }
+  
   history.replaceState({}, '', location.search + '#' + id)
 }
 
@@ -632,7 +671,8 @@ function renderSingleKerning(g) {
     leftMargin = leftMargin * kSVGScale * lilScale
     rightMargin = rightMargin * kSVGScale * lilScale
 
-    el.className = side
+    el.dataset.name = glyphName
+    el.className = 'g ' + side
     el.style.backgroundImage = "url('" + svgURI + "')"
     el.style.backgroundSize = svgWidth + 'px ' + lilGlyphSize + 'px'
     el.style.width = svgWidth + 'px'
@@ -653,7 +693,7 @@ function renderSingleKerning(g) {
       var otherSvg = svgRepository[glyphName]
 
       var pair = document.createElement('a')
-      pair.className = 'kernpair'
+      pair.className = 'kernpair ' + side
       pair.title = (
         asLeftSide ? selfName + '/' + glyphName + '  ' + kerningValue :
         glyphName + '/' + selfName + '  ' + kerningValue
@@ -701,6 +741,34 @@ function renderSingleKerning(g) {
       label.innerText = kerningValue
       kern.appendChild(label)
 
+      if (glyphName != selfName) {
+        var link = document.createElement('div')
+        link.className = 'link'
+        var linkA = document.createElement('a')
+        linkA.href = '?g=' + encodeURIComponent(glyphName)
+        linkA.title = 'View ' + glyphName
+        linkA.innerText = '\u2197'
+        linkA.tabIndex = -1
+        wrapIntLink(linkA)
+        link.appendChild(linkA)
+
+        var kLinkAWidth = 16 // sync with CSS .kernpair .link a
+
+        if (asLeftSide) {
+          var rightMetrics = glyphMetrics.metrics[asLeftSide ? glyphName : selfName]
+          linkA.style.marginRight = pxround(
+            ((rightMetrics.advance / 2) * kSVGScale * lilScale) - (kLinkAWidth / 2)
+          ) + 'px'
+        } else {
+          linkA.style.marginLeft = pxround(
+            ((leftMetrics.advance / 2) * kSVGScale * lilScale) - (kLinkAWidth / 2)
+          ) + 'px'
+        }
+
+        pair.appendChild(link)
+      }
+      
+
       kerningList.appendChild(pair)
     })
 
@@ -710,7 +778,9 @@ function renderSingleKerning(g) {
   var selfLeft = mkpairGlyph(g.name, 'left', 0, thisSvgURI)
   var selfRight = mkpairGlyph(g.name, 'right', 0, thisSvgURI)
 
-  if (mkpairs(kerningAsLeft, g.name, selfLeft, 'left')) {
+  if (mkpairs(kerningAsLeft, g.name, selfLeft, 'left') &&
+      kerningAsRightKeys.length != 0)
+  {
     var div = document.createElement('div')
     div.className = 'divider'
     kerningList.appendChild(div)

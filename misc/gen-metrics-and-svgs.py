@@ -285,10 +285,10 @@ def genKerningInfo(font, glyphnames, nameToIdMap):
 
     for lname in leftnames:
       for rname in rightnames:
-        lnameId = nameToIdMap[lname]
-        rnameId = nameToIdMap[rname]
-        # print('%r' % [lnameId, rnameId, v])
-        pairs.append([lnameId, rnameId, v])
+        lnameId = nameToIdMap.get(lname)
+        rnameId = nameToIdMap.get(rname)
+        if lnameId and rnameId:
+          pairs.append([lnameId, rnameId, v])
 
   # print('pairs: %r' % pairs)
   return pairs
