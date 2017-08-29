@@ -519,7 +519,11 @@ function renderSingleInfo(g) {
 
   function configureUnicodeView(el, g) {
     var a = el.querySelector('a')
-    a.href = "https://codepoints.net/U+" + fmthex(g.unicode, 4)
+    if (g.unicode) {
+      a.href = "https://codepoints.net/U+" + fmthex(g.unicode, 4)
+    } else {
+      a.href = ''
+    }
     setv(el, 'unicodeCodePoint', g.unicode ? 'U+' + fmthex(g.unicode, 4) : '–')
     setv(el, 'unicodeName', g.unicodeName || '')
   }
