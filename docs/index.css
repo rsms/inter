@@ -336,9 +336,7 @@ tablex {
     color: rgba(0,0,0,0.2);
   }
   tablex in, tablex out {
-    /*background: #E3E6F1;*/
     color: rgba(0,0,0,0.8);
-    border-radius: 1px;
   }
   tablex in {
     font-feature-settings: 'calt' 0;
@@ -365,15 +363,21 @@ boxes {
   margin-right:-1em;
 }
 box {
+  overflow: auto;
+  max-width:100%;
   display: flex;
   flex-direction: column;
   background: white;
   padding:2em;
-  border-radius: 1px;
+  border-radius: 3px;
   margin-right:1em;
   margin-bottom:1em;
   flex: 1 1 10%;
   /*width:220px;*/
+}
+body.safari box {
+  /* Fix for broken flex wrap in safari */
+  flex-basis: 40%;
 }
 box:first-child {
   margin-left:0;
@@ -382,12 +386,53 @@ box h3 {
   margin-bottom:0.8em;
 }
 
-#glyph-repertoire-iframe {
+.glyph-repertoire {
+  position: relative;
+  background: white;
+  margin-bottom:0;
+  border-top-left-radius:3px;
+  border-top-right-radius:3px;
+  padding-top:3px;
+}
+.glyph-repertoire-link {
+  margin-top:0;
+  background: white;
+  border-bottom-left-radius:3px;
+  border-bottom-right-radius:3px;
+}
+  .glyph-repertoire-link a {
+    display: block;
+    padding: 2em;
+    text-align: center;
+  }
+.glyph-repertoire .fade {
+  position: absolute;
+  display: block;
+  left:0; bottom:0; right:0;
+  height:50px;
   pointer-events: none;
+
+  background-image:
+    linear-gradient(to bottom,
+      rgba(255,255,255,0) 0%,
+      rgba(255,255,255,1) 100%);
+  background-repeat: repeat-x;
+  background-size: 2px 50px;
+  background-position: 0 0;
 }
-/*#glyph-repertoire-p {
-  cursor: pointer;
-}*/
-a.glyph-repertoire {
-  display:block;
+.glyph-repertoire a {
+  display: block;
+  font-feature-settings: 'case' 1;
 }
+  .glyph-repertoire iframe {
+    pointer-events: none;
+
+    /*width: 100%;
+    height: 100px;*/
+    /*height: 0.5vh;*/
+    height: 330px;
+
+    width: 1px;
+    min-width: 100%;
+    *width: 100%;
+  }
