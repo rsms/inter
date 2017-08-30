@@ -884,11 +884,13 @@ feature numr {
   colon
 ];
 @CASE_L = [ @CASE_DELIM_L @CASE_NONDELIM_L ];
-@CASE_R = [
+
+@CASE_DELIM_R = [
   braceleft.case   braceright.case
   bracketleft.case bracketright.case
   parenleft.case   parenright.case
-
+];
+@CASE_NONDELIM_R = [
   asterisk.case
   at.case
   multiply.case
@@ -910,6 +912,7 @@ feature numr {
   notequal.case
   colon.case
 ];
+@CASE_R = [ @CASE_DELIM_R @CASE_NONDELIM_R ];
 
 feature case {
   sub @CASE_L by @CASE_R;
@@ -919,9 +922,11 @@ feature calt {
   @UC = [ @UC_ROMAN @UC_SET1 exclam question ];
   @LC = [ @LC_ROMAN @LC_SET1 ];
 
-  sub @UC @CASE_L' by @CASE_R;
+  sub [ @UC @CASE_R ] @CASE_L' by @CASE_R;
   ignore sub @LC @CASE_NONDELIM_L' @UC;
-  sub @CASE_L' @UC by @CASE_R;
+  sub @CASE_L' [ @CASE_R @UC ] by @CASE_R;
+  
+  sub @CASE_DELIM_L' @CASE_DELIM_L [ @CASE_R @UC ] by @CASE_DELIM_R;
 
   # ->, <-
   @ARROW_DASH = [ hyphen endash emdash ];
