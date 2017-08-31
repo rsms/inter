@@ -37,26 +37,32 @@ def main():
   argparser.add_argument('fontPaths', metavar='<ufofile>', type=str, nargs='+', help='UFO files')
   args = argparser.parse_args()
 
-  glyphorderUnion = OrderedDict()
+  srcdir = os.path.abspath(os.path.join(__file__, '..', '..'))
 
+  nameLists = []
   fontPaths = []
+
   for fontPath in args.fontPaths:
     if 'regular' or 'Regular' in fontPath:
       fontPaths = [fontPath] + fontPaths
     else:
       fontPaths.append(fontPath)
 
-  nameLists = []
-
   for fontPath in fontPaths:
     libPlist = plistlib.readPlist(os.path.join(fontPath, 'lib.plist'))
-    names = []
     if 'public.glyphOrder' in libPlist:
       nameLists.append(libPlist['public.glyphOrder'])
+
+  glyphorderUnion = OrderedDict()
 
   for names in zip(*nameLists):
     for name in names:
       glyphorderUnion[name] = True
+
+  # add any composed glyphs to the end
+  diacriticComps = loadGlyphCompositions(os.path.join(srcdir, 'src', 'diacritics.txt'))
+  for name in diacriticComps.keys():
+    glyphorderUnion[name] = True
 
   glyphorderUnionNames = glyphorderUnion.keys()
   print('\n'.join(glyphorderUnionNames))
