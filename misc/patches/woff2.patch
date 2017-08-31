@@ -1,0 +1,33 @@
+From 25319cecf58faf9d92f489ad52323fe4762b8087 Mon Sep 17 00:00:00 2001
+From: Rasmus Andersson <rasmus@notion.se>
+Date: Mon, 21 Aug 2017 07:53:23 -0700
+Subject: [PATCH] Exclude invalid ar flag in makefile on macOS
+
+---
+ Makefile | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 4b3bd7b..5bf878f 100644
+--- a/Makefile
++++ b/Makefile
+@@ -11,13 +11,15 @@ CANONICAL_PREFIXES ?= -no-canonical-prefixes
+ NOISY_LOGGING ?= -DFONT_COMPRESSION_BIN
+ COMMON_FLAGS = -fno-omit-frame-pointer $(CANONICAL_PREFIXES) $(NOISY_LOGGING) -D __STDC_FORMAT_MACROS
+ 
++ARFLAGS = cr
++
+ ifeq ($(OS), Darwin)
+   CPPFLAGS += -DOS_MACOSX
+ else
+   COMMON_FLAGS += -fno-tree-vrp
++  ARFLAGS += f
+ endif
+ 
+-ARFLAGS = crf
+ CFLAGS += $(COMMON_FLAGS)
+ CXXFLAGS += $(COMMON_FLAGS) -std=c++11
+ 
+-- 
+2.11.0
+

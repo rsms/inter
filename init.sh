@@ -288,7 +288,12 @@ else
   # summary
   if ! $VENV_ACTIVE; then
     echo "You now need to activate virtualenv by:"
-    echo "  source '$0'"
+    if [ "$0" == "./init.sh" ]; then
+      # pretty format for common case
+      echo "  source init.sh"
+    else
+      echo "  source '$0'"
+    fi
     echo "Or directly by sourcing the activate script:"
     echo "  source '$VENV_DIR/bin/activate'"
   fi
