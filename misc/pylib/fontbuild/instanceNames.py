@@ -31,7 +31,8 @@ class InstanceNames:
     designerURL = ""
     license = ""
     licenseURL = ""
-    
+    italicAngle = -12
+
     def __init__(self,names):
         if type(names) == type(" "):
             names = names.split("/")
@@ -90,7 +91,7 @@ class InstanceNames:
         f.info.macintoshFONDName = re.sub(' ','',self.longfamily) + " " + re.sub(' ','',self.longstyle)
         f.info.postscriptFontName = f.info.macintoshFONDName.replace(" ", "-")
         if self.italic:
-            f.info.italicAngle = -12.0
+            f.info.italicAngle = self.italicAngle
         
     
     def setFLNames(self,flFont):

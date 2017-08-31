@@ -98,14 +98,12 @@ class FontProject:
             log(">> Italicizing")
             i = 0
             for g in f:
-                i += 1
-                if i % 10 == 0: print g.name
-
-                if g.name == "uniFFFD":
-                    continue
-
                 decomposeGlyph(f, g)
                 removeGlyphOverlap(g)
+
+            for g in f:
+                i += 1
+                if i % 10 == 0: print g.name
 
                 if g.name in self.lessItalic:
                     italicizeGlyph(f, g, 9, stemWidth=stemWidth,
@@ -162,6 +160,7 @@ class FontProject:
             'version':      getcfg('version'),
             'license':      getcfg('license'),
             'licenseURL':   getcfg('licenseURL'),
+            'italicAngle':  float(getcfg('italicAngle', '-12')),
         })
 
         if not self.compatible:
