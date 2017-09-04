@@ -12,6 +12,7 @@ from fontbuild.Build import FontProject
 from fontbuild.mix import Master
 from fontbuild.mix import Mix
 
+
 FAMILYNAME = "Interface"
 BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
@@ -56,102 +57,116 @@ def readVersionControlTag(dir):
     return ''
 
 
-# silence warnings from fontTools.misc.fixedTools that is harmless and caused by
-# the ufo2ft module.
-logging.getLogger('fontTools.misc.fixedTools').setLevel(logging.ERROR)
+def main():
+  # silence warnings from fontTools.misc.fixedTools that is harmless and caused by
+  # the ufo2ft module.
+  logging.getLogger('fontTools.misc.fixedTools').setLevel(logging.ERROR)
 
-default_out_dir = os.path.join(BASEDIR,'build','tmp')
-srcDir = os.path.join(BASEDIR, 'src')
+  default_out_dir = os.path.join(BASEDIR,'build','tmp')
+  srcDir = os.path.join(BASEDIR, 'src')
 
-argparser = argparse.ArgumentParser(description='Build TTF and OTF font files from UFO sources.')
+  argparser = argparse.ArgumentParser(description='Build TTF and OTF font files from UFO sources.')
 
-argparser.add_argument('styles', metavar='<style>', type=str, nargs='*',
-                       help='Build specific styles. Omit to build all.')
+  argparser.add_argument('styles', metavar='<style>', type=str, nargs='*',
+                         help='Build specific styles. Omit to build all.')
 
-argparser.add_argument('--otf', dest='otf', action='store_const',
-                       const=True, default=False,
-                       help='Build OTF files')
+  argparser.add_argument('--otf', dest='otf', action='store_const',
+                         const=True, default=False,
+                         help='Build OTF files')
 
-argparser.add_argument('--no-ttf', dest='no_ttf', action='store_const',
-                       const=True, default=False,
-                       help='Do not build TTF files')
+  argparser.add_argument('--no-ttf', dest='no_ttf', action='store_const',
+                         const=True, default=False,
+                         help='Do not build TTF files')
 
-argparser.add_argument('--out', dest='out', metavar='<dir>', type=str,
-                       default=default_out_dir,
-                       help='Write output to <dir> instead of the default (%r)' % default_out_dir)
+  argparser.add_argument('--out', dest='out', metavar='<dir>', type=str,
+                         default=default_out_dir,
+                         help='Write output to <dir> instead of the default (%r)' % default_out_dir)
 
-args = argparser.parse_args()
-styles = [s.lower() for s in args.styles]
-ALL = len(styles) == 0
+  args = argparser.parse_args()
+  styles = [s.lower() for s in args.styles]
+  ALL = len(styles) == 0
 
-# version control tag, if any
-buildTag = readVersionControlTag(BASEDIR)
+  # version control tag, if any
+  buildTag = readVersionControlTag(BASEDIR)
 
-# Since we reference a shared feature file, copy it to build dir so includes works
-copyfile(
-  os.path.join(srcDir, 'features.fea'),
-  os.path.join(args.out, 'InterfaceUFO', 'features.fea'))
+  # Since we reference a shared feature file, copy it to build dir so includes works
+  ufoTmpDir = os.path.join(args.out, 'InterfaceUFO')
+  os.makedirs(ufoTmpDir)
+  copyfile(
+    os.path.join(srcDir, 'features.fea'),
+    os.path.join(ufoTmpDir, 'features.fea'))
 
-# Load masters
-print('loading master: Regular')
-rg = Master("%s/src/Interface-Regular.ufo" % BASEDIR)
+  # Load masters
+  print('loading master: Regular')
+  rg = Master("%s/src/Interface-Regular.ufo" % BASEDIR)
 
-bd = None
-if ALL or 'bold' in styles or 'bolditalic' in styles or 'medium' in styles or 'mediumitalic' in styles:
-  print('loading master: Bold')
-  bd = Master("%s/src/Interface-Bold.ufo" % BASEDIR)
-
-
-glyphSpecializations = extractSpecializedGlyphs(rg)
-
-
-class Mix2(Mix):
-  def __init__(self, masters, v, glyphSpecializations=None):
-    Mix.__init__(self, masters, v)
-    self.glyphSpecializations = glyphSpecializations
-
-  def mixGlyphs(self, gname):
-    if self.glyphSpecializations is not None:
-      specializedGlyph = self.glyphSpecializations.get(gname)
-      if specializedGlyph is not None:
-        print 'mixglyph using specialized', gname
-        return specializedGlyph
-    return Mix.mixGlyphs(self, gname)
-
-proj = FontProject(rg.font, BASEDIR, os.path.join(srcDir,'fontbuild.cfg'), buildTag=buildTag)
-proj.builddir = args.out
+  bd = None
+  if ALL or 'bold' in styles or 'bolditalic' in styles or 'medium' in styles or 'mediumitalic' in styles:
+    print('loading master: Bold')
+    bd = Master("%s/src/Interface-Bold.ufo" % BASEDIR)
 
 
-if args.otf:
-  proj.buildOTF = True
+  glyphSpecializations = extractSpecializedGlyphs(rg)
 
-# name syntax: family/longstyle/shortstyle/subfamilyAbbrev
 
-if ALL or 'regular' in styles:
-  proj.generateFont(rg.font, "%s/Regular/Regular/Rg" % FAMILYNAME)
+  class Mix2(Mix):
+    def __init__(self, masters, v, glyphSpecializations=None):
+      Mix.__init__(self, masters, v)
+      self.glyphSpecializations = glyphSpecializations
 
-if ALL or 'regularitalic' in styles:
-  proj.generateFont(rg.font, "%s/Regular Italic/Italic/Rg" % FAMILYNAME,
-                    italic=True, stemWidth=232, italicMeanYCenter=-825, italicNarrowAmount=1)
+    def mixGlyphs(self, gname):
+      if self.glyphSpecializations is not None:
+        specializedGlyph = self.glyphSpecializations.get(gname)
+        if specializedGlyph is not None:
+          print 'mixglyph using specialized', gname
+          return specializedGlyph
+      return Mix.mixGlyphs(self, gname)
 
-if ALL or 'medium' in styles:
-  proj.generateFont(
-    Mix2([rg, bd], 0.35, glyphSpecializations['medium']),
-    "%s/Medium/Regular/Lt" % FAMILYNAME)
+  proj = FontProject(rg.font, BASEDIR, os.path.join(srcDir,'fontbuild.cfg'), buildTag=buildTag)
+  proj.builddir = args.out
 
-if ALL or 'mediumitalic' in styles:
-  proj.generateFont(
-    Mix2([rg, bd], 0.35, glyphSpecializations['medium']),
-    "%s/Medium Italic/Italic/Lt" % FAMILYNAME,
-    italic=True, stemWidth=256, italicMeanYCenter=-825, italicNarrowAmount=1)
 
-if ALL or 'bold' in styles:
-  proj.generateFont(bd.font, "%s/Bold/Bold/Rg" % FAMILYNAME)
+  if args.otf:
+    proj.buildOTF = True
 
-if ALL or 'bolditalic' in styles:
-  proj.generateFont(bd.font, "%s/Bold Italic/Bold Italic/Rg" % FAMILYNAME,
-                    italic=True, stemWidth=290, italicMeanYCenter=-825, italicNarrowAmount=1)
+  # name syntax: family/longstyle/shortstyle/subfamilyAbbrev
 
-# generate TTFs
-if args.no_ttf == False:
-  proj.generateTTFs()
+  if ALL or 'regular' in styles:
+    proj.generateFont(rg.font, "%s/Regular/Regular/Rg" % FAMILYNAME)
+
+  if ALL or 'regularitalic' in styles:
+    proj.generateFont(rg.font, "%s/Regular Italic/Italic/Rg" % FAMILYNAME,
+                      italic=True, stemWidth=232, italicMeanYCenter=-825, italicNarrowAmount=1)
+
+  if ALL or 'medium' in styles:
+    proj.generateFont(
+      Mix2([rg, bd], 0.35, glyphSpecializations['medium']),
+      "%s/Medium/Regular/Lt" % FAMILYNAME)
+
+  if ALL or 'mediumitalic' in styles:
+    proj.generateFont(
+      Mix2([rg, bd], 0.35, glyphSpecializations['medium']),
+      "%s/Medium Italic/Italic/Lt" % FAMILYNAME,
+      italic=True, stemWidth=256, italicMeanYCenter=-825, italicNarrowAmount=1)
+
+  if ALL or 'bold' in styles:
+    proj.generateFont(bd.font, "%s/Bold/Bold/Rg" % FAMILYNAME)
+
+  if ALL or 'bolditalic' in styles:
+    proj.generateFont(bd.font, "%s/Bold Italic/Bold Italic/Rg" % FAMILYNAME,
+                      italic=True, stemWidth=290, italicMeanYCenter=-825, italicNarrowAmount=1)
+
+  # generate TTFs
+  if args.no_ttf == False:
+    proj.generateTTFs()
+
+main()
+
+# import hotshot, hotshot.stats, test.pystone
+# prof = hotshot.Profile("ufocompile.prof")
+# benchtime = prof.runcall(main)
+# prof.close()
+# stats = hotshot.stats.load("ufocompile.prof")
+# # stats.strip_dirs()
+# stats.sort_stats('time', 'calls')
+# stats.print_stats(40)

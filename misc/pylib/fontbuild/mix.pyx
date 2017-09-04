@@ -269,7 +269,7 @@ class Mix:
     
     def getFGlyph(self, master, gname):
         if isinstance(master.font, Mix):
-            return font.mixGlyphs(gname)
+            return master.font.mixGlyphs(gname)
         return master.ffont.getGlyph(gname)
     
     def getGlyphMasters(self,gname):

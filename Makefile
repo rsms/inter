@@ -30,6 +30,7 @@ build/dist-unhinted/Interface-%.ttf: build/tmp/InterfaceTTF/Interface-%.ttf
 
 # OTF
 build/dist-unhinted/Interface-%.otf: build/tmp/InterfaceOTF/Interface-%.otf
+	@mkdir -p build/dist-unhinted
 	cp -a "$<" "$@"
 
 build/dist:

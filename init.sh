@@ -142,6 +142,35 @@ else
     ln -vfs ../../../misc/ttf2woff/ttf2woff "$VENV_DIR/bin"
   fi
 
+  has_newer() {
+    DIR=$1
+    REF_FILE=$2
+    for f in $(find "$DIR" -type f -name '*.pyx' -newer "$REF_FILE" -print -quit); do
+      return 0
+    done
+    return 1
+  }
+
+  check_cython_dep() {
+    DIR=$1
+    REF_FILE=$DIR/$2
+    set -e
+    if [ ! -f "$REF_FILE" ] || has_newer "$DIR" "$REF_FILE"; then
+      pushd "$DIR" >/dev/null
+      if [ -f requirements.txt ]; then
+        pip install -r requirements.txt
+      fi
+      python setup.py build_ext --inplace
+      popd >/dev/null
+    fi
+  }
+
+  # native booleanOperations module
+  check_cython_dep  misc/pylib/booleanOperations  flatten.so
+  check_cython_dep  misc/pylib/copy  copy.so
+  check_cython_dep  misc/pylib/fontbuild  mix.so
+  check_cython_dep  misc/pylib/robofab  glifLib.so
+
   # ————————————————————————————————————————————————————————————————————————————————————————————————
   # $BUILD_TMP_DIR
   # create and mount spare disk image needed on macOS to support case-sensitive filenames
@@ -179,10 +208,9 @@ else
       if $NEED_GENERATE; then
         break
       fi
-      for srcfile in $(find src/Interface-${style}.ufo -type f -newer "$GEN_MAKE_FILE"); do
+      if has_newer "src/Interface-${style}.ufo" "$GEN_MAKE_FILE"; then
         NEED_GENERATE=true
-        break
-      done
+      fi
     done
   fi
 

@@ -59,8 +59,8 @@ def italicize(glyph, angle=12, stemWidth=180, xoffset=-50):
     ga, subsegments = segmentGlyph(glyph,25)
     va, e  = glyphToMesh(ga)
     n = len(va)
-    grad = mapEdges(lambda a,(p,n): normalize(p-a), va, e)
-    cornerWeights = mapEdges(lambda a,(p,n): normalize(p-a).dot(normalize(a-n)), grad, e)[:,0].reshape((-1,1))
+    grad = mapEdges(lambda a, pn: normalize(pn[0]-a), va, e)
+    cornerWeights = mapEdges(lambda a, pn: normalize(pn[0]-a).dot(normalize(a-pn[1])), grad, e)[:,0].reshape((-1,1))
     smooth = np.ones((n,1)) * CURVE_CORRECTION_WEIGHT
 
     controlPoints = findControlPointsInMesh(glyph, va, subsegments)
@@ -182,7 +182,7 @@ def findControlPointsInMesh(glyph, va, subsegments):
 def recompose(v, grad, e, smooth=1, P=None, distance=None):
     n = len(v)
     if distance == None:
-        distance = mapEdges(lambda a,(p,n): norm(p - a), v, e)
+        distance = mapEdges(lambda a, pn: norm(pn[0] - a), v, e)
     if (P == None):
         P = mP(v,e)
         P += np.identity(n) * smooth
@@ -233,7 +233,7 @@ def getNormal(a,b,c):
 
 def edgeNormals(v,e):
     "Assumes a mesh where each vertex has exactly least two edges"
-    return mapEdges(lambda a,(p,n) : getNormal(a,p,n),v,e)
+    return mapEdges(lambda a, pn : getNormal(a,pn[0],pn[1]),v,e)
 
 
 def rangePrevNext(count):
@@ -268,10 +268,10 @@ def copyGradDetails(a,b,e,scale=15):
 
 
 def copyMeshDetails(va,vb,e,scale=5,smooth=.01):
-    gradA = mapEdges(lambda a,(p,n): normalize(p-a), va, e)
-    gradB = mapEdges(lambda a,(p,n): normalize(p-a), vb, e)
+    gradA = mapEdges(lambda a, pn: normalize(pn[0]-a), va, e)
+    gradB = mapEdges(lambda a, pn: normalize(pn[0]-a), vb, e)
     grad = copyGradDetails(gradA, gradB, e, scale)
-    grad = mapEdges(lambda a,(p,n): normalize(a), grad, e)
+    grad = mapEdges(lambda a, pn: normalize(a), grad, e)
     return recompose(vb, grad, e, smooth=smooth)
 
 
@@ -282,7 +282,7 @@ def condenseGlyph(glyph, scale=.8, stemWidth=185):
 
     normals = edgeNormals(va,e)
     cn = va.dot(np.array([[scale, 0],[0,1]]))
-    grad = mapEdges(lambda a,(p,n): normalize(p-a), cn, e)
+    grad = mapEdges(lambda a, pn: normalize(pn[0]-a), cn, e)
     # ograd = mapEdges(lambda a,(p,n): normalize(p-a), va, e)
 
     cn[:,0] -= normals[:,0] * stemWidth * .5 * (1 - scale)

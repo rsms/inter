@@ -108,13 +108,18 @@ def findCorner(pp, nn):
         # print "parallel lines", np.arctan2(prev[1],prev[0]), np.arctan2(next[1],next[0])
         # print prev, next
         assert 0, "parallel lines"
-    if glyph.name is None:
-        # Never happens, but here to fix a bug in Python 2.7 with -OO
-        print ''
+    # if glyph.name is None:
+    #     # Never happens, but here to fix a bug in Python 2.7 with -OO
+    #     print ''
     return lineIntersect(pStart, pEnd, nStart, nEnd)
 
 
-def lineIntersect((x1,y1),(x2,y2),(x3,y3),(x4,y4)):
+def lineIntersect(p1, p2, p3, p4):
+    x1, y1 = p1
+    x2, y2 = p2
+    x3, y3 = p3
+    x4, y4 = p4
+
     x12 = x1 - x2
     x34 = x3 - x4
     y12 = y1 - y2

@@ -18,6 +18,7 @@ import os
 import sys
 
 from booleanOperations import BooleanOperationManager
+
 from cu2qu.ufo import fonts_to_quadratic
 from fontTools.misc.transform import Transform
 from robofab.world import OpenFont
@@ -201,25 +202,25 @@ class FontProject:
             saveOTF(font, ttfName, self.glyphOrder, truetype=True)
 
 
-def transformGlyphMembers(g, m):
-    g.width = int(g.width * m.a)
-    g.Transform(m)
-    for a in g.anchors:
-        p = Point(a.p)
-        p.Transform(m)
-        a.p = p
-    for c in g.components:
-        # Assumes that components have also been individually transformed
-        p = Point(0,0)
-        d = Point(c.deltas[0])
-        d.Transform(m)
-        p.Transform(m)
-        d1 = d - p
-        c.deltas[0].x = d1.x
-        c.deltas[0].y = d1.y
-        s = Point(c.scale)
-        s.Transform(m)
-        #c.scale = s
+# def transformGlyphMembers(g, m):
+#     g.width = int(g.width * m.a)
+#     g.Transform(m)
+#     for a in g.anchors:
+#         p = Point(a.p)
+#         p.Transform(m)
+#         a.p = p
+#     for c in g.components:
+#         # Assumes that components have also been individually transformed
+#         p = Point(0,0)
+#         d = Point(c.deltas[0])
+#         d.Transform(m)
+#         p.Transform(m)
+#         d1 = d - p
+#         c.deltas[0].x = d1.x
+#         c.deltas[0].y = d1.y
+#         s = Point(c.scale)
+#         s.Transform(m)
+#         #c.scale = s
 
 
 def swapContours(f,gName1,gName2):
