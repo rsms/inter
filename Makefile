@@ -127,7 +127,7 @@ install: all install_otf
 
 glyphinfo: docs/lab/glyphinfo.json docs/glyphs/metrics.json
 
-src/glyphorder.txt: $(all_ufo) misc/gen-glyphorder.py
+src/glyphorder.txt: src/Interface-Regular.ufo/lib.plist src/Interface-Black.ufo/lib.plist src/diacritics.txt misc/gen-glyphorder.py
 	misc/gen-glyphorder.py src/Interface-*.ufo > src/glyphorder.txt
 
 docs/lab/glyphinfo.json: _local/UnicodeData.txt src/glyphorder.txt misc/gen-glyphinfo.py
