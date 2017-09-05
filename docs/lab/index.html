@@ -705,6 +705,21 @@ for (const ch of uniqueChars) {
        url("fonts/Interface-BoldItalic.woff") format("woff");
 }
 
+@font-face {
+  font-family: 'Interface-VERSION';
+  font-style:  normal;
+  font-weight: 900;
+  src: url("fonts/Interface-Black.woff2") format("woff2"),
+       url("fonts/Interface-Black.woff") format("woff");
+}
+@font-face {
+  font-family: 'Interface-VERSION';
+  font-style:  italic;
+  font-weight: 900;
+  src: url("fonts/Interface-BlackItalic.woff2") format("woff2"),
+       url("fonts/Interface-BlackItalic.woff") format("woff");
+}
+
 .interface, .interface input, .interface select {
   font-family: 'Interface-VERSION', 'Interface', serif !important;
 }
@@ -1015,6 +1030,7 @@ document.head.appendChild(fontCSS)
           <option value="400" selected>Regular (400)</option>
           <option value="500">Medium (500)</option>
           <option value="700">Bold (700)</option>
+          <option value="900">Black (900)</option>
         </select>
         <label style="display:inline-block; margin-left:4px"><input type="checkbox" name="italic"> <em>Italic</em></label>
       </label>

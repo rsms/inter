@@ -42,3 +42,18 @@
   src: url("font-files/Interface-BoldItalic.woff2?v=1.5") format("woff2"),
        url("font-files/Interface-BoldItalic.woff?v=1.5") format("woff");
 }
+
+@font-face {
+  font-family: 'Interface';
+  font-style:  normal;
+  font-weight: 900;
+  src: url("font-files/Interface-Black.woff2?v=1.5") format("woff2"),
+       url("font-files/Interface-Black.woff?v=1.5") format("woff");
+}
+@font-face {
+  font-family: 'Interface';
+  font-style:  italic;
+  font-weight: 900;
+  src: url("font-files/Interface-BlackItalic.woff2?v=1.5") format("woff2"),
+       url("font-files/Interface-BlackItalic.woff?v=1.5") format("woff");
+}

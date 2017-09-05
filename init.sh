@@ -162,6 +162,7 @@ else
       fi
       python setup.py build_ext --inplace
       popd >/dev/null
+      touch "$REF_FILE"
     fi
   }
 
@@ -184,15 +185,15 @@ else
   # $BUILD_DIR/etc/generated.make
   master_styles=( \
     Regular \
-    Bold \
+    Black \
   )
   derived_styles=( \
-    "RegularItalic : Regular" \
-    "Medium        : Regular Bold" \
-    "MediumItalic  : Regular Bold" \
-    "BoldItalic    : Bold" \
-    # "Black         : Regular Bold" \
-    # "BlackItalic   : Regular Bold" \
+    "RegularItalic  : Regular" \
+    "Medium         : Regular Black" \
+    "MediumItalic   : Regular Black" \
+    "Bold           : Black" \
+    "BoldItalic     : Black" \
+    "BlackItalic    : Regular Black" \
   )
   web_formats=( woff woff2 )  # Disabled/unused: eot
 

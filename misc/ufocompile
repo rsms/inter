@@ -91,7 +91,10 @@ def main():
 
   # Since we reference a shared feature file, copy it to build dir so includes works
   ufoTmpDir = os.path.join(args.out, 'InterfaceUFO')
-  os.makedirs(ufoTmpDir)
+  try:
+    os.makedirs(ufoTmpDir)
+  except:
+    pass
   copyfile(
     os.path.join(srcDir, 'features.fea'),
     os.path.join(ufoTmpDir, 'features.fea'))
@@ -100,10 +103,13 @@ def main():
   print('loading master: Regular')
   rg = Master("%s/src/Interface-Regular.ufo" % BASEDIR)
 
-  bd = None
-  if ALL or 'bold' in styles or 'bolditalic' in styles or 'medium' in styles or 'mediumitalic' in styles:
-    print('loading master: Bold')
-    bd = Master("%s/src/Interface-Bold.ufo" % BASEDIR)
+  bl = None
+  if ALL \
+  or 'black' in styles or 'blackitalic' in styles \
+  or 'bold' in styles or 'bolditalic' in styles \
+  or 'medium' in styles or 'mediumitalic' in styles:
+    print('loading master: Black')
+    bl = Master("%s/src/Interface-Black.ufo" % BASEDIR)
 
 
   glyphSpecializations = extractSpecializedGlyphs(rg)
@@ -138,22 +144,36 @@ def main():
     proj.generateFont(rg.font, "%s/Regular Italic/Italic/Rg" % FAMILYNAME,
                       italic=True, stemWidth=232, italicMeanYCenter=-825, italicNarrowAmount=1)
 
+
   if ALL or 'medium' in styles:
     proj.generateFont(
-      Mix2([rg, bd], 0.35, glyphSpecializations['medium']),
-      "%s/Medium/Regular/Lt" % FAMILYNAME)
+      Mix2([rg, bl], 0.35, glyphSpecializations.get('medium', {})),
+      "%s/Medium/Regular/Me" % FAMILYNAME)
 
   if ALL or 'mediumitalic' in styles:
     proj.generateFont(
-      Mix2([rg, bd], 0.35, glyphSpecializations['medium']),
-      "%s/Medium Italic/Italic/Lt" % FAMILYNAME,
-      italic=True, stemWidth=256, italicMeanYCenter=-825, italicNarrowAmount=1)
+      Mix2([rg, bl], 0.35, glyphSpecializations.get('medium', {})),
+      "%s/Medium Italic/Italic/Me" % FAMILYNAME,
+      italic=True, stemWidth=320, italicMeanYCenter=-825, italicNarrowAmount=1)
+
 
   if ALL or 'bold' in styles:
-    proj.generateFont(bd.font, "%s/Bold/Bold/Rg" % FAMILYNAME)
+    proj.generateFont(
+      Mix2([rg, bl], 0.65, glyphSpecializations.get('bold', {})),
+      "%s/Bold/Bold/Rg" % FAMILYNAME)
 
   if ALL or 'bolditalic' in styles:
-    proj.generateFont(bd.font, "%s/Bold Italic/Bold Italic/Rg" % FAMILYNAME,
+    proj.generateFont(
+      Mix2([rg, bl], 0.65, glyphSpecializations.get('bold', {})),
+      "%s/Bold Italic/Italic/Rg" % FAMILYNAME,
+      italic=True, stemWidth=384, italicMeanYCenter=-825, italicNarrowAmount=1)
+
+
+  if ALL or 'black' in styles:
+    proj.generateFont(bl.font, "%s/Black/Regular/Bl" % FAMILYNAME)
+
+  if ALL or 'blackitalic' in styles:
+    proj.generateFont(bl.font, "%s/Black Italic/Italic/Bl" % FAMILYNAME,
                       italic=True, stemWidth=290, italicMeanYCenter=-825, italicNarrowAmount=1)
 
   # generate TTFs

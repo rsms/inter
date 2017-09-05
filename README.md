@@ -24,14 +24,14 @@ Current font styles:
 
 - Regular — master
   - Italic
-- Bold — master
-  - BoldItalic
-- Medium — derived from Regular and Bold by mixing
+- Medium — derived from Regular and Black by mixing
   - MediumItalic
-- Black — derived from Regular and Bold by mixing
+- Bold — derived from Regular and Black by mixing
+  - BoldItalic
+- Black — master
   - BlackItalic
 
-Future versions will hopefully include lighter weights.
+Future versions may include lighter weights.
 
 
 ### Font metrics
