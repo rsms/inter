@@ -4,6 +4,13 @@
   <unicode hex="1D7D"/>
   <outline>
     <contour>
+      <point x="1904" y="912" type="line"/>
+      <point x="144" y="912" type="line"/>
+      <point x="144" y="652" type="line"/>
+      <point x="1904" y="652" type="line"/>
+    </contour>
+    <component base="p" xOffset="200"/>
+    <contour>
       <point x="1024" y="1776" type="move" name="top"/>
     </contour>
     <contour>
@@ -12,13 +19,6 @@
     <contour>
       <point x="1948" y="1776" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="1904" y="912" type="line"/>
-      <point x="144" y="912" type="line"/>
-      <point x="144" y="652" type="line"/>
-      <point x="1904" y="652" type="line"/>
-    </contour>
-    <component base="p" xOffset="200"/>
   </outline>
   <lib>
     <dict>
