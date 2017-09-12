@@ -96,19 +96,25 @@ pre_dist:
 		then echo "${ZIP_FILE_DIST} already exists. Bump version or remove the zip file to continue." >&2; \
 		exit 1; \
   fi
-dist: pre_dist zip_dist glyphinfo
-	rm -rf docs/font-files
-	mkdir docs/font-files
-	cp -a build/dist/*.woff build/dist/*.woff2 docs/font-files/
+dist: pre_dist zip_dist glyphinfo copy_docs_fonts
 	misc/versionize-css.py
 	@echo "——————————————————————————————————————————————————————————————————"
 	@echo ""
-	@echo "Next step:"
-	@echo "  Create new release with ${ZIP_FILE_DIST} at"
+	@echo "Next steps:"
 	@echo ""
-	@echo "  https://github.com/rsms/interface/releases/new?tag=v${VERSION}"
+	@echo "1) Commit & push changes"
+	@echo ""
+	@echo "2) Create new release with ${ZIP_FILE_DIST} at"
+	@echo "   https://github.com/rsms/interface/releases/new?tag=v${VERSION}"
+	@echo ""
+	@echo "3) Bump version in src/fontbuild.cfg and commit"
 	@echo ""
 	@echo "——————————————————————————————————————————————————————————————————"
+
+copy_docs_fonts:
+	rm -rf docs/font-files
+	mkdir docs/font-files
+	cp -a build/dist/*.woff build/dist/*.woff2 docs/font-files/
 
 install_ttf: all_ttf
 	@echo "Installing TTF files locally at ~/Library/Fonts/Interface"
@@ -147,4 +153,4 @@ _local/UnicodeData.txt:
 clean:
 	rm -vrf build/tmp/* build/dist/Interface-*.*
 
-.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist glyphinfo
+.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist glyphinfo copy_docs_fonts
