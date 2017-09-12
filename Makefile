@@ -114,7 +114,7 @@ dist: pre_dist zip_dist glyphinfo copy_docs_fonts
 copy_docs_fonts:
 	rm -rf docs/font-files
 	mkdir docs/font-files
-	cp -a build/dist/*.woff build/dist/*.woff2 docs/font-files/
+	cp -a build/dist/*.woff build/dist/*.woff2 build/dist-unhinted/*.otf docs/font-files/
 
 install_ttf: all_ttf
 	@echo "Installing TTF files locally at ~/Library/Fonts/Interface"
