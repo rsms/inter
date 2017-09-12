@@ -140,7 +140,7 @@ docs/lab/glyphinfo.json: _local/UnicodeData.txt src/glyphorder.txt misc/gen-glyp
 	misc/gen-glyphinfo.py -ucd _local/UnicodeData.txt \
 	  src/Interface-*.ufo > docs/lab/glyphinfo.json
 
-docs/glyphs/metrics.json: src/glyphorder.txt misc/gen-metrics-and-svgs.py
+docs/glyphs/metrics.json: src/glyphorder.txt misc/gen-metrics-and-svgs.py $(Regular_ufo_d)
 	misc/gen-metrics-and-svgs.py -f src/Interface-Regular.ufo
 
 
