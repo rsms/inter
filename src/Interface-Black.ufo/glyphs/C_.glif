@@ -5,8 +5,8 @@
   <outline>
     <contour>
       <point x="1360" y="696" type="line"/>
-      <point x="1340" y="480"/>
-      <point x="1244" y="360"/>
+      <point x="1336" y="564"/>
+      <point x="1280" y="360"/>
       <point x="1024" y="360" type="curve" smooth="yes"/>
       <point x="756" y="360"/>
       <point x="624" y="584"/>
@@ -14,12 +14,12 @@
       <point x="624" y="1468"/>
       <point x="756" y="1688"/>
       <point x="1024" y="1688" type="curve" smooth="yes"/>
-      <point x="1244" y="1688"/>
-      <point x="1344" y="1556"/>
+      <point x="1280" y="1688"/>
+      <point x="1340" y="1488"/>
       <point x="1364" y="1340" type="curve"/>
-      <point x="1820" y="1340" type="line"/>
-      <point x="1784" y="1764"/>
-      <point x="1512" y="2076"/>
+      <point x="1812" y="1404" type="line"/>
+      <point x="1756" y="1796"/>
+      <point x="1484" y="2076"/>
       <point x="996" y="2076" type="curve" smooth="yes"/>
       <point x="488" y="2076"/>
       <point x="156" y="1692"/>
@@ -27,9 +27,9 @@
       <point x="156" y="352"/>
       <point x="472" y="-28"/>
       <point x="1000" y="-28" type="curve" smooth="yes"/>
-      <point x="1492" y="-28"/>
-      <point x="1796" y="268"/>
-      <point x="1820" y="696" type="curve"/>
+      <point x="1468" y="-28"/>
+      <point x="1764" y="240"/>
+      <point x="1816" y="632" type="curve"/>
     </contour>
     <contour>
       <point x="1040.0" y="2200.0" type="move" name="top"/>
@@ -61,9 +61,37 @@
           <key>name</key>
           <string></string>
           <key>x</key>
-          <integer>1244</integer>
+          <integer>1280</integer>
           <key>y</key>
-          <integer>920</integer>
+          <integer>640</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>8.027237510431954</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1364</integer>
+          <key>y</key>
+          <integer>1340</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>-8.035710710534794</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1360</integer>
+          <key>y</key>
+          <integer>696</integer>
         </dict>
       </array>
       <key>com.typemytype.robofont.layerData</key>

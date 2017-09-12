@@ -4,39 +4,39 @@
   <unicode hex="005A"/>
   <outline>
     <contour>
-      <point x="1672" y="372" type="line"/>
-      <point x="236" y="372" type="line"/>
-      <point x="236" y="0" type="line"/>
+      <point x="1672" y="384" type="line"/>
+      <point x="300" y="384" type="line"/>
+      <point x="300" y="0" type="line"/>
       <point x="1672" y="0" type="line"/>
     </contour>
     <contour>
-      <point x="1660" y="1800" type="line"/>
-      <point x="1660" y="2048" type="line"/>
-      <point x="1340" y="2048" type="line"/>
-      <point x="124" y="256" type="line"/>
-      <point x="124" y="0" type="line"/>
-      <point x="456" y="0" type="line"/>
+      <point x="1672" y="1776" type="line"/>
+      <point x="1672" y="2048" type="line"/>
+      <point x="1364" y="2048" type="line"/>
+      <point x="120" y="272" type="line"/>
+      <point x="120" y="0" type="line"/>
+      <point x="428" y="0" type="line"/>
     </contour>
     <contour>
-      <point x="1508" y="2048" type="line"/>
+      <point x="1484" y="2048" type="line"/>
       <point x="120" y="2048" type="line"/>
-      <point x="120" y="1672" type="line"/>
-      <point x="1508" y="1672" type="line"/>
+      <point x="120" y="1664" type="line"/>
+      <point x="1484" y="1664" type="line"/>
     </contour>
     <contour>
-      <point x="900" y="2200" type="move" name="top"/>
+      <point x="900.0" y="2200.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="900" y="16" type="move" name="bottom"/>
+      <point x="900.0" y="16.0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1744" y="2200" type="move" name="top_dd"/>
+      <point x="1744.0" y="2200.0" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="1744" y="-560" type="move" name="bottom_dd"/>
+      <point x="1744.0" y="-560.0" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="1744" y="2200" type="move" name="top0315"/>
+      <point x="1744.0" y="2200.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
@@ -54,6 +54,62 @@
           <real>0.0</real>
           <key>y</key>
           <real>1553.75</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>55.0453303694967</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1680</integer>
+          <key>y</key>
+          <integer>1788</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>55.034266286604115</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>124</integer>
+          <key>y</key>
+          <integer>276</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>120</integer>
+          <key>y</key>
+          <integer>1664</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1672</integer>
+          <key>y</key>
+          <integer>384</integer>
         </dict>
       </array>
       <key>com.typemytype.robofont.mark</key>
