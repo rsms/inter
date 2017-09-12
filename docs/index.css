@@ -70,6 +70,10 @@ dem { /* de-emphasize */
   font-weight: 400;
   opacity: 0.7;
 }
+num { /* number */
+  font-feature-settings: 'calt' 1, 'ss01' 1;
+  white-space: pre;
+}
 
 h1, h2, h3 {
   font-weight: 500;
