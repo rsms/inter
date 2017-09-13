@@ -4,20 +4,17 @@
   <unicode hex="042C"/>
   <outline>
     <contour>
-      <point x="300" y="1616" type="move" name="cross"/>
-    </contour>
-    <contour>
-      <point x="380" y="1196" type="line"/>
-      <point x="380" y="964" type="line"/>
-      <point x="924" y="964" type="line"/>
-      <point x="1204" y="964"/>
-      <point x="1320" y="804"/>
-      <point x="1320" y="608" type="curve"/>
-      <point x="1320" y="408"/>
-      <point x="1204" y="228"/>
-      <point x="924" y="228" type="curve"/>
-      <point x="444" y="228" type="line"/>
-      <point x="444" y="2004" type="line"/>
+      <point x="340" y="1188" type="line"/>
+      <point x="340" y="968" type="line"/>
+      <point x="924" y="968" type="line"/>
+      <point x="1204" y="968"/>
+      <point x="1360" y="804"/>
+      <point x="1360" y="608" type="curve"/>
+      <point x="1360" y="408"/>
+      <point x="1204" y="216"/>
+      <point x="924" y="216" type="curve"/>
+      <point x="404" y="216" type="line"/>
+      <point x="404" y="2004" type="line"/>
       <point x="156" y="2004" type="line"/>
       <point x="156" y="0" type="line"/>
       <point x="924" y="0" type="line"/>
@@ -25,8 +22,11 @@
       <point x="1604" y="248"/>
       <point x="1604" y="604" type="curve"/>
       <point x="1604" y="960"/>
-      <point x="1364" y="1196"/>
-      <point x="924" y="1196" type="curve"/>
+      <point x="1364" y="1188"/>
+      <point x="924" y="1188" type="curve"/>
+    </contour>
+    <contour>
+      <point x="300" y="1616" type="move" name="cross"/>
     </contour>
   </outline>
   <lib>
