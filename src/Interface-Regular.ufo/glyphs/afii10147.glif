@@ -4,21 +4,84 @@
   <unicode hex="0472"/>
   <outline>
     <contour>
-      <point x="1544" y="1096" type="line"/>
-      <point x="392" y="1096" type="line"/>
-      <point x="392" y="876" type="line"/>
-      <point x="1544" y="876" type="line"/>
+      <point x="1640" y="1136" type="line"/>
+      <point x="1128" y="1024"/>
+      <point x="872" y="1280"/>
+      <point x="360" y="1136" type="curve"/>
+      <point x="360" y="916" type="line"/>
+      <point x="872" y="1024"/>
+      <point x="1128" y="768"/>
+      <point x="1640" y="916" type="curve"/>
     </contour>
     <component base="O" xOffset="-16"/>
     <contour>
-      <point x="996" y="2212" type="move" name="top"/>
+      <point x="996.0" y="2212.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1928" y="2212" type="move" name="top0315"/>
+      <point x="1928.0" y="2212.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1192</integer>
+          <key>y</key>
+          <integer>1104</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>808</integer>
+          <key>y</key>
+          <integer>1280</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1200</integer>
+          <key>y</key>
+          <integer>1280</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>808</integer>
+          <key>y</key>
+          <integer>768</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1921, 'leftMargin': 233, 'rightMargin': 152}</string>
       <key>interface.width-adjustments</key>
