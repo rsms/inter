@@ -339,15 +339,6 @@ def interpolate(a,b,v,e=0):
     return le + (qe-le) * e
 
 def interpolateKerns(kA, kB, v):
-    # to yield correct kerning for Roboto output, we must emulate the behavior
-    # of old versions of this code; namely, take the kerning values of the first
-    # master instead of actually interpolating.
-    # old code:
-    # https://github.com/google/roboto/blob/7f083ac31241cc86d019ea6227fa508b9fcf39a6/scripts/lib/fontbuild/mix.py
-    # bug:
-    # https://github.com/google/roboto/issues/213
-    # return dict(kA)
-
     kerns = {}
     for pair, val in kA.items():
        kerns[pair] = interpolate(val, kB.get(pair, 0), v.x)

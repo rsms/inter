@@ -620,7 +620,7 @@ for (const ch of uniqueChars) {
     },
   })
 
-  samples.set(ch + ' – combinations', {
+  samples.set(ch + ' – combinations + words', {
     _cachedHTMLResult: null,
     toHTML() {
       if (this._cachedHTMLResult) {
@@ -646,6 +646,45 @@ for (const ch of uniqueChars) {
         // only cache value when we have word map
         this._cachedHTMLResult = html
       }
+      return html
+    }
+  })
+
+  samples.set(ch + ' – combinations', {
+    _cachedHTMLResult: null,
+    toHTML() {
+      if (this._cachedHTMLResult) {
+        return this._cachedHTMLResult
+      }
+      let s = []
+      for (const comb of combs1) {
+        s.push(comb)
+      }
+      let html = s.join(' ')
+      this._cachedHTMLResult = html
+      return html
+    }
+  })
+
+  samples.set(ch + ' – combinations (upper case)', {
+    _cachedHTMLResult: null,
+    toHTML() {
+      if (this._cachedHTMLResult) {
+        return this._cachedHTMLResult
+      }
+      let s = []
+      for (const comb of combs1) {
+        let p = comb.indexOf(ch)
+        if (p == 0) {
+          s.push(comb[0].toUpperCase() + comb[1])
+        } else if (p == 1) {
+          s.push(comb[0] + comb[1].toUpperCase())
+        } else {
+          s.push(comb)
+        }
+      }
+      let html = s.join(' ')
+      this._cachedHTMLResult = html
       return html
     }
   })
