@@ -490,6 +490,8 @@
 		<integer>-32</integer>
 		<key>@KERN_RIGHT_b</key>
 		<integer>-48</integer>
+		<key>@KERN_RIGHT_dotlessj</key>
+		<integer>-32</integer>
 		<key>backslash</key>
 		<integer>55</integer>
 	</dict>
@@ -1498,6 +1500,8 @@
 		<integer>-8</integer>
 		<key>@KERN_RIGHT_dagger</key>
 		<integer>-29</integer>
+		<key>@KERN_RIGHT_dotlessj</key>
+		<integer>-32</integer>
 		<key>@KERN_RIGHT_quotedblleft</key>
 		<integer>-123</integer>
 		<key>@KERN_RIGHT_t</key>
@@ -1689,7 +1693,7 @@
 		<key>@KERN_RIGHT_u</key>
 		<integer>-16</integer>
 		<key>@KERN_RIGHT_v</key>
-		<integer>-54</integer>
+		<integer>-56</integer>
 		<key>@KERN_RIGHT_w</key>
 		<integer>-55</integer>
 		<key>@KERN_RIGHT_x</key>
@@ -1756,31 +1760,33 @@
 	<key>@KERN_LEFT_c</key>
 	<dict>
 		<key>@KERN_RIGHT_A</key>
-		<integer>-40</integer>
+		<integer>-20</integer>
 		<key>@KERN_RIGHT_B</key>
-		<integer>-80</integer>
+		<integer>-60</integer>
 		<key>@KERN_RIGHT_T</key>
-		<integer>-227</integer>
+		<integer>-207</integer>
 		<key>@KERN_RIGHT_V</key>
-		<integer>-82</integer>
+		<integer>-62</integer>
 		<key>@KERN_RIGHT_W</key>
-		<integer>-82</integer>
+		<integer>-62</integer>
 		<key>@KERN_RIGHT_X</key>
-		<integer>-41</integer>
+		<integer>-21</integer>
 		<key>@KERN_RIGHT_Y</key>
-		<integer>-124</integer>
+		<integer>-104</integer>
 		<key>@KERN_RIGHT_c</key>
-		<integer>-16</integer>
+		<integer>4</integer>
 		<key>@KERN_RIGHT_dagger</key>
-		<integer>-28</integer>
+		<integer>-8</integer>
 		<key>@KERN_RIGHT_f</key>
-		<integer>56</integer>
+		<integer>36</integer>
 		<key>@KERN_RIGHT_quotedblleft</key>
-		<integer>-27</integer>
+		<integer>-7</integer>
 		<key>@KERN_RIGHT_t</key>
-		<integer>3</integer>
+		<integer>23</integer>
+		<key>@KERN_RIGHT_v</key>
+		<integer>-42</integer>
 		<key>seven</key>
-		<integer>-56</integer>
+		<integer>-36</integer>
 	</dict>
 	<key>@KERN_LEFT_colon</key>
 	<dict>
@@ -2034,6 +2040,8 @@
 	</dict>
 	<key>@KERN_LEFT_dotlessi</key>
 	<dict>
+		<key>@KERN_RIGHT_dotlessj</key>
+		<integer>-32</integer>
 		<key>@KERN_RIGHT_quotedbl</key>
 		<integer>-42</integer>
 		<key>@KERN_RIGHT_quotedblleft</key>
