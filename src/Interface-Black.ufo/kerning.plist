@@ -305,6 +305,10 @@
 	</dict>
 	<key>@KERN_LEFT_E</key>
 	<dict>
+		<key>@KERN_RIGHT_B</key>
+		<integer>-128</integer>
+		<key>@KERN_RIGHT_v</key>
+		<integer>-80</integer>
 		<key>backslash</key>
 		<integer>40</integer>
 		<key>four</key>
@@ -410,7 +414,7 @@
 		<key>@KERN_RIGHT_J</key>
 		<integer>-70</integer>
 		<key>@KERN_RIGHT_a</key>
-		<integer>-70</integer>
+		<integer>-118</integer>
 		<key>@KERN_RIGHT_approxequal</key>
 		<integer>-48</integer>
 		<key>@KERN_RIGHT_c</key>
@@ -421,12 +425,20 @@
 		<integer>-128</integer>
 		<key>@KERN_RIGHT_eightsub</key>
 		<integer>-137</integer>
+		<key>@KERN_RIGHT_m</key>
+		<integer>-138</integer>
 		<key>@KERN_RIGHT_quotedblbase</key>
 		<integer>-254</integer>
 		<key>@KERN_RIGHT_six</key>
 		<integer>-42</integer>
+		<key>@KERN_RIGHT_u</key>
+		<integer>-167</integer>
+		<key>@KERN_RIGHT_v</key>
+		<integer>-160</integer>
 		<key>@KERN_RIGHT_z</key>
 		<integer>-63</integer>
+		<key>F</key>
+		<integer>-128</integer>
 		<key>ampersand</key>
 		<integer>-54</integer>
 		<key>backslash</key>
@@ -437,6 +449,8 @@
 		<integer>-21</integer>
 		<key>periodcentered</key>
 		<integer>-15</integer>
+		<key>r</key>
+		<integer>-128</integer>
 		<key>slash</key>
 		<integer>-103</integer>
 		<key>three</key>
@@ -1387,17 +1401,19 @@
 		<key>@KERN_RIGHT_S</key>
 		<integer>-13</integer>
 		<key>@KERN_RIGHT_a</key>
-		<integer>-173</integer>
+		<integer>-221</integer>
 		<key>@KERN_RIGHT_approxequal</key>
 		<integer>-173</integer>
 		<key>@KERN_RIGHT_c</key>
-		<integer>-165</integer>
+		<integer>-261</integer>
 		<key>@KERN_RIGHT_colon</key>
 		<integer>-116</integer>
 		<key>@KERN_RIGHT_comma</key>
 		<integer>-304</integer>
 		<key>@KERN_RIGHT_divide</key>
 		<integer>-132</integer>
+		<key>@KERN_RIGHT_dotlessi</key>
+		<integer>-144</integer>
 		<key>@KERN_RIGHT_eightsub</key>
 		<integer>-240</integer>
 		<key>@KERN_RIGHT_guillemotleft</key>
@@ -1409,7 +1425,7 @@
 		<key>@KERN_RIGHT_quotedblbase</key>
 		<integer>-288</integer>
 		<key>@KERN_RIGHT_s</key>
-		<integer>-144</integer>
+		<integer>-240</integer>
 		<key>@KERN_RIGHT_six</key>
 		<integer>-34</integer>
 		<key>@KERN_RIGHT_u</key>
@@ -1977,7 +1993,7 @@
 		<key>@KERN_RIGHT_U</key>
 		<integer>-33</integer>
 		<key>@KERN_RIGHT_V</key>
-		<integer>-166</integer>
+		<integer>-240</integer>
 		<key>@KERN_RIGHT_W</key>
 		<integer>-166</integer>
 		<key>@KERN_RIGHT_X</key>
@@ -2092,7 +2108,7 @@
 		<key>@KERN_RIGHT_U</key>
 		<integer>-18</integer>
 		<key>@KERN_RIGHT_V</key>
-		<integer>-122</integer>
+		<integer>-202</integer>
 		<key>@KERN_RIGHT_W</key>
 		<integer>-120</integer>
 		<key>@KERN_RIGHT_X</key>
@@ -4256,18 +4272,6 @@
 		<integer>-128</integer>
 		<key>eth</key>
 		<integer>-21</integer>
-	</dict>
-	<key>E</key>
-	<dict>
-		<key>E</key>
-		<integer>-128</integer>
-	</dict>
-	<key>F</key>
-	<dict>
-		<key>F</key>
-		<integer>-128</integer>
-		<key>r</key>
-		<integer>-128</integer>
 	</dict>
 	<key>Gamma</key>
 	<dict>
