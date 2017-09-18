@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf8
 #
-# Updates the "?v=x" in docs/interface.css
+# Updates the "?v=x" in docs/inter-ui.css
 #
 from __future__ import print_function
 import os, sys, re
@@ -18,7 +18,7 @@ def main():
 
   regex = re.compile(r'(url\("[^"]+?v=)([^"]+)("\))')
 
-  cssFileName = os.path.join(rootDir, 'docs', 'interface.css')
+  cssFileName = os.path.join(rootDir, 'docs', 'inter-ui.css')
   
   s = ''
   with open(cssFileName, 'r') as f:

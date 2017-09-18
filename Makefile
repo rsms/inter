@@ -17,19 +17,19 @@ res_files := src/fontbuild.cfg src/diacritics.txt src/glyphlist.txt \
              src/features.fea src/glyphorder.txt
 
 # UFO -> TTF & OTF (note that UFO deps are defined by generated.make)
-build/tmp/InterfaceTTF/Interface-%.ttf: $(res_files)
+build/tmp/InterUITTF/InterUI-%.ttf: $(res_files)
 	misc/ufocompile --otf $*
 
-build/tmp/InterfaceOTF/Interface-%.otf: build/tmp/InterfaceTTF/Interface-%.ttf $(res_files)
+build/tmp/InterUIOTF/InterUI-%.otf: build/tmp/InterUITTF/InterUI-%.ttf $(res_files)
 	@true
 
-# build/tmp/ttf -> build (generated.make handles build/tmp/InterfaceTTF/Interface-%.ttf)
-build/dist-unhinted/Interface-%.ttf: build/tmp/InterfaceTTF/Interface-%.ttf
+# build/tmp/ttf -> build (generated.make handles build/tmp/InterUITTF/InterUI-%.ttf)
+build/dist-unhinted/Inter-UI-%.ttf: build/tmp/InterUITTF/InterUI-%.ttf
 	@mkdir -p build/dist-unhinted
 	cp -a "$<" "$@"
 
 # OTF
-build/dist-unhinted/Interface-%.otf: build/tmp/InterfaceOTF/Interface-%.otf
+build/dist-unhinted/Inter-UI-%.otf: build/tmp/InterUIOTF/InterUI-%.otf
 	@mkdir -p build/dist-unhinted
 	cp -a "$<" "$@"
 
@@ -37,7 +37,7 @@ build/dist:
 	@mkdir -p build/dist
 
 # autohint
-build/dist/Interface-%.ttf: build/dist-unhinted/Interface-%.ttf build/dist
+build/dist/Inter-UI-%.ttf: build/dist-unhinted/Inter-UI-%.ttf build/dist
 	ttfautohint \
 	  --hinting-limit=256 \
 	  --hinting-range-min=8 \
@@ -60,29 +60,29 @@ build/%.woff: build/%.ttf
 # build/%.eot: build/%.ttf
 # 	ttf2eot "$<" > "$@"
 
-ZIP_FILE_DIST := build/release/Interface-${VERSION}.zip
-ZIP_FILE_DEV  := build/release/Interface-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
+ZIP_FILE_DIST := build/release/Inter-UI-${VERSION}.zip
+ZIP_FILE_DEV  := build/release/Inter-UI-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
 
 # zip intermediate
 build/.zip.zip: all
 	@rm -rf build/.zip
 	@rm -f build/.zip.zip
 	@mkdir -p \
-		"build/.zip/Interface (web)" \
-		"build/.zip/Interface (hinted TTF)" \
-		"build/.zip/Interface (TTF)" \
-		"build/.zip/Interface (OTF)"
-	@cp -a build/dist/*.woff build/dist/*.woff2  "build/.zip/Interface (web)/"
-	@cp -a build/dist/*.ttf                      "build/.zip/Interface (hinted TTF)/"
-	@cp -a build/dist-unhinted/*.ttf             "build/.zip/Interface (TTF)/"
-	@cp -a build/dist-unhinted/*.otf             "build/.zip/Interface (OTF)/"
+		"build/.zip/Inter UI (web)" \
+		"build/.zip/Inter UI (hinted TTF)" \
+		"build/.zip/Inter UI (TTF)" \
+		"build/.zip/Inter UI (OTF)"
+	@cp -a build/dist/*.woff build/dist/*.woff2  "build/.zip/Inter UI (web)/"
+	@cp -a build/dist/*.ttf                      "build/.zip/Inter UI (hinted TTF)/"
+	@cp -a build/dist-unhinted/*.ttf             "build/.zip/Inter UI (TTF)/"
+	@cp -a build/dist-unhinted/*.otf             "build/.zip/Inter UI (OTF)/"
 	@cp -a misc/doc/install-*.txt                "build/.zip/"
 	@cp -a LICENSE.txt                           "build/.zip/"
 	cd build/.zip && zip -v -X -r "../../build/.zip.zip" * >/dev/null && cd ../..
 	@rm -rf build/.zip
 
 # zip
-build/release/Interface-%.zip: build/.zip.zip
+build/release/Inter-UI-%.zip: build/.zip.zip
 	@mkdir -p "$(shell dirname "$@")"
 	@mv -f "$<" "$@"
 	@echo write "$@"
@@ -105,7 +105,7 @@ dist: pre_dist zip_dist glyphinfo copy_docs_fonts
 	@echo "1) Commit & push changes"
 	@echo ""
 	@echo "2) Create new release with ${ZIP_FILE_DIST} at"
-	@echo "   https://github.com/rsms/interface/releases/new?tag=v${VERSION}"
+	@echo "   https://github.com/rsms/inter/releases/new?tag=v${VERSION}"
 	@echo ""
 	@echo "3) Bump version in src/fontbuild.cfg and commit"
 	@echo ""
@@ -117,31 +117,31 @@ copy_docs_fonts:
 	cp -a build/dist/*.woff build/dist/*.woff2 build/dist-unhinted/*.otf docs/font-files/
 
 install_ttf: all_ttf
-	@echo "Installing TTF files locally at ~/Library/Fonts/Interface"
-	rm -rf ~/Library/Fonts/Interface
-	mkdir -p ~/Library/Fonts/Interface
-	cp -va build/dist/*.ttf ~/Library/Fonts/Interface
+	@echo "Installing TTF files locally at ~/Library/Fonts/Inter UI"
+	rm -rf ~/'Library/Fonts/Inter UI'
+	mkdir -p ~/'Library/Fonts/Inter UI'
+	cp -va build/dist/*.ttf ~/'Library/Fonts/Inter UI'
 
 install_otf: all_otf
-	@echo "Installing OTF files locally at ~/Library/Fonts/Interface"
-	rm -rf ~/Library/Fonts/Interface
-	mkdir -p ~/Library/Fonts/Interface
-	cp -va build/dist-unhinted/*.otf ~/Library/Fonts/Interface
+	@echo "Installing OTF files locally at ~/Library/Fonts/Inter UI"
+	rm -rf ~/'Library/Fonts/Inter UI'
+	mkdir -p ~/'Library/Fonts/Inter UI'
+	cp -va build/dist-unhinted/*.otf ~/'Library/Fonts/Inter UI'
 
 install: all install_otf
 
 
 glyphinfo: docs/lab/glyphinfo.json docs/glyphs/metrics.json
 
-src/glyphorder.txt: src/Interface-Regular.ufo/lib.plist src/Interface-Black.ufo/lib.plist src/diacritics.txt misc/gen-glyphorder.py
-	misc/gen-glyphorder.py src/Interface-*.ufo > src/glyphorder.txt
+src/glyphorder.txt: src/Inter-UI-Regular.ufo/lib.plist src/Inter-UI-Black.ufo/lib.plist src/diacritics.txt misc/gen-glyphorder.py
+	misc/gen-glyphorder.py src/Inter-UI-*.ufo > src/glyphorder.txt
 
 docs/lab/glyphinfo.json: _local/UnicodeData.txt src/glyphorder.txt misc/gen-glyphinfo.py
 	misc/gen-glyphinfo.py -ucd _local/UnicodeData.txt \
-	  src/Interface-*.ufo > docs/lab/glyphinfo.json
+	  src/Inter-UI-*.ufo > docs/lab/glyphinfo.json
 
 docs/glyphs/metrics.json: src/glyphorder.txt misc/gen-metrics-and-svgs.py $(Regular_ufo_d)
-	misc/gen-metrics-and-svgs.py -f src/Interface-Regular.ufo
+	misc/gen-metrics-and-svgs.py -f src/Inter-UI-Regular.ufo
 
 
 # Download latest Unicode data
@@ -151,6 +151,6 @@ _local/UnicodeData.txt:
 	  http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 
 clean:
-	rm -vrf build/tmp/* build/dist/Interface-*.*
+	rm -vrf build/tmp/* build/dist/Inter-UI-*.*
 
 .PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist glyphinfo copy_docs_fonts

@@ -314,7 +314,7 @@ def main():
 
     # FeaParser(featuresFilename + '2', allNames).parse()
 
-    # font = TTFont('build/dist-unhinted/Interface-Regular.otf')
+    # font = TTFont('build/dist-unhinted/Inter-UI-Regular.otf')
     # FeaBuilder(font, featuresFilename + '2').build()
 
 

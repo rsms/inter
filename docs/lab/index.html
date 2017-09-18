@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="../favicon.ico" />
-    <link href="../interface.css" rel="stylesheet">
+    <link href="../inter-ui.css" rel="stylesheet">
     <script type="text/javascript">
 
 const samples = new Map()
@@ -700,67 +700,67 @@ for (const ch of uniqueChars) {
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
 
 @font-face {
-  font-family: 'Interface-VERSION';
+  font-family: 'Inter-UI-VERSION';
   font-style:  normal;
   font-weight: 400;
-  src: url("fonts/Interface-Regular.woff2") format("woff2"),
-       url("fonts/Interface-Regular.woff") format("woff");
+  src: url("fonts/Inter-UI-Regular.woff2") format("woff2"),
+       url("fonts/Inter-UI-Regular.woff") format("woff");
 }
 @font-face {
-  font-family: 'Interface-VERSION';
+  font-family: 'Inter-UI-VERSION';
   font-style:  italic;
   font-weight: 400;
-  src: url("fonts/Interface-RegularItalic.woff2") format("woff2"),
-       url("fonts/Interface-RegularItalic.woff") format("woff");
+  src: url("fonts/Inter-UI-RegularItalic.woff2") format("woff2"),
+       url("fonts/Inter-UI-RegularItalic.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Interface-VERSION';
+  font-family: 'Inter-UI-VERSION';
   font-style:  normal;
   font-weight: 500;
-  src: url("fonts/Interface-Medium.woff2") format("woff2"),
-       url("fonts/Interface-Medium.woff") format("woff");
+  src: url("fonts/Inter-UI-Medium.woff2") format("woff2"),
+       url("fonts/Inter-UI-Medium.woff") format("woff");
 }
 @font-face {
-  font-family: 'Interface-VERSION';
+  font-family: 'Inter-UI-VERSION';
   font-style:  italic;
   font-weight: 500;
-  src: url("fonts/Interface-MediumItalic.woff2") format("woff2"),
-       url("fonts/Interface-MediumItalic.woff") format("woff");
+  src: url("fonts/Inter-UI-MediumItalic.woff2") format("woff2"),
+       url("fonts/Inter-UI-MediumItalic.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Interface-VERSION';
+  font-family: 'Inter-UI-VERSION';
   font-style:  normal;
   font-weight: 700;
-  src: url("fonts/Interface-Bold.woff2") format("woff2"),
-       url("fonts/Interface-Bold.woff") format("woff");
+  src: url("fonts/Inter-UI-Bold.woff2") format("woff2"),
+       url("fonts/Inter-UI-Bold.woff") format("woff");
 }
 @font-face {
-  font-family: 'Interface-VERSION';
+  font-family: 'Inter-UI-VERSION';
   font-style:  italic;
   font-weight: 700;
-  src: url("fonts/Interface-BoldItalic.woff2") format("woff2"),
-       url("fonts/Interface-BoldItalic.woff") format("woff");
+  src: url("fonts/Inter-UI-BoldItalic.woff2") format("woff2"),
+       url("fonts/Inter-UI-BoldItalic.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Interface-VERSION';
+  font-family: 'Inter-UI-VERSION';
   font-style:  normal;
   font-weight: 900;
-  src: url("fonts/Interface-Black.woff2") format("woff2"),
-       url("fonts/Interface-Black.woff") format("woff");
+  src: url("fonts/Inter-UI-Black.woff2") format("woff2"),
+       url("fonts/Inter-UI-Black.woff") format("woff");
 }
 @font-face {
-  font-family: 'Interface-VERSION';
+  font-family: 'Inter-UI-VERSION';
   font-style:  italic;
   font-weight: 900;
-  src: url("fonts/Interface-BlackItalic.woff2") format("woff2"),
-       url("fonts/Interface-BlackItalic.woff") format("woff");
+  src: url("fonts/Inter-UI-BlackItalic.woff2") format("woff2"),
+       url("fonts/Inter-UI-BlackItalic.woff") format("woff");
 }
 
-.interface, .interface input, .interface select {
-  font-family: 'Interface-VERSION', 'Interface', serif !important;
+.inter-ui, .inter-ui input, .inter-ui select {
+  font-family: 'Inter-UI-VERSION', 'Inter UI', serif !important;
 }
 
 </style>
@@ -1046,11 +1046,11 @@ canvas {
     <script type="text/javascript">
 
 const fontVersion = Math.round(Date.now()).toString(36)
-let fontFamilyName = 'Interface-v' + fontVersion
+let fontFamilyName = 'Inter-UI-v' + fontVersion
 const fontCSSTemplate = document.querySelector('#font-css')
 const fontCSS = fontCSSTemplate.cloneNode(true)
-fontCSS.innerHTML = fontCSS.innerHTML.replace(/Interface-VERSION/g, fontFamilyName)
-fontFamilyName += ', Interface'
+fontCSS.innerHTML = fontCSS.innerHTML.replace(/Inter-UI-VERSION/g, fontFamilyName)
+fontFamilyName += ", 'Inter UI'"
 fontCSS.setAttribute('id', '')
 fontCSS.setAttribute('type', 'text/css')
 document.head.appendChild(fontCSS)
@@ -1058,7 +1058,7 @@ document.head.appendChild(fontCSS)
     </script>
   </head>
   <body>
-    <div class="options interface">
+    <div class="options inter-ui">
       <select name="sample"></select>
 
       <label>
@@ -1219,7 +1219,7 @@ document.head.appendChild(fontCSS)
 
     <div class="preview">
       <samples>
-        <sample contenteditable class="primary interface"></sample>
+        <sample contenteditable class="primary inter-ui"></sample>
         <sample contenteditable class="secondary"></sample>
       </samples>
 
@@ -1227,7 +1227,7 @@ document.head.appendChild(fontCSS)
       <canvas id="renderCanvas" width="120" height="50"></canvas>
     </div>
 
-    <div id="measure" class="interface">Åj</div>
+    <div id="measure" class="inter-ui">Åj</div>
 
     <script type="text/javascript">
 
@@ -1422,9 +1422,9 @@ class Vars {
 function main() {
   const vars = new Vars(document.location.search)
 
-  let interfaceSample = document.querySelector('sample.interface');
+  let interUISample = document.querySelector('sample.inter-ui');
   let secondarySample = document.querySelector('sample.secondary');
-  secondarySample.innerText = interfaceSample.innerText;
+  secondarySample.innerText = interUISample.innerText;
 
   const renderCanvas = document.querySelector('#renderCanvas')
   const displayCanvas = document.querySelector('#displayCanvas')
@@ -1465,12 +1465,12 @@ function main() {
 
     if (typeof sampleText == 'object' && sampleText.toHTML) {
       const html = sampleText.toHTML()
-      interfaceSample.innerHTML   = html
+      interUISample.innerHTML   = html
       secondarySample.innerHTML = html
     } else {
       sampleText = String(sampleText).replace(/^[\s\r\n\r]+|[\s\r\n\r]+$/g, '')
       if (sampleText) {
-        interfaceSample.innerText   = sampleText
+        interUISample.innerText   = sampleText
         secondarySample.innerText = sampleText
       }
     }
@@ -1499,7 +1499,7 @@ function main() {
   window.addEventListener('load', measure)
 
   const cssAffectedElements = [
-    interfaceSample,
+    interUISample,
     secondarySample,
     measureDiv
   ].concat(secondaryFontElements).concat(primaryFontElements)

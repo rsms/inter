@@ -209,7 +209,7 @@ else
       if $NEED_GENERATE; then
         break
       fi
-      if has_newer "src/Interface-${style}.ufo" "$GEN_MAKE_FILE"; then
+      if has_newer "src/Inter-UI-${style}.ufo" "$GEN_MAKE_FILE"; then
         NEED_GENERATE=true
       fi
     done
@@ -224,9 +224,9 @@ else
     for style in "${master_styles[@]}"; do
       all_styles+=( $style )
       echo "${style}_ufo_d := " \
-        "\$(wildcard src/Interface-${style}.ufo/* src/Interface-${style}.ufo/*/*)" >> "$GEN_MAKE_FILE"
-      echo "$BUILD_TMP_DIR/InterfaceTTF/Interface-${style}.ttf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
-      echo "$BUILD_TMP_DIR/InterfaceOTF/Interface-${style}.otf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
+        "\$(wildcard src/Inter-UI-${style}.ufo/* src/Inter-UI-${style}.ufo/*/*)" >> "$GEN_MAKE_FILE"
+      echo "$BUILD_TMP_DIR/InterUITTF/InterUI-${style}.ttf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
+      echo "$BUILD_TMP_DIR/InterUIOTF/InterUI-${style}.otf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
     done
 
     echo -n "all_ufo:" >> "$GEN_MAKE_FILE"
@@ -240,13 +240,13 @@ else
       dependent_styles=$(echo "${e#*:}" | xargs)
       all_styles+=( $style )
 
-      echo -n "$BUILD_TMP_DIR/InterfaceTTF/Interface-${style}.ttf:" >> "$GEN_MAKE_FILE"
+      echo -n "$BUILD_TMP_DIR/InterUITTF/InterUI-${style}.ttf:" >> "$GEN_MAKE_FILE"
       for depstyle in $dependent_styles; do
         echo -n " \$(${depstyle}_ufo_d)" >> "$GEN_MAKE_FILE"
       done
       echo "" >> "$GEN_MAKE_FILE"
 
-      echo -n "$BUILD_TMP_DIR/InterfaceOTF/Interface-${style}.otf:" >> "$GEN_MAKE_FILE"
+      echo -n "$BUILD_TMP_DIR/InterUIOTF/InterUI-${style}.otf:" >> "$GEN_MAKE_FILE"
       for depstyle in $dependent_styles; do
         echo -n " \$(${depstyle}_ufo_d)" >> "$GEN_MAKE_FILE"
       done
@@ -255,19 +255,19 @@ else
 
     # STYLE and STYLE_ttf targets
     for style in "${all_styles[@]}"; do
-      echo "${style}_ttf: $DIST_DIR/Interface-${style}.ttf" >> "$GEN_MAKE_FILE"
-      echo "${style}_otf: $DIST_DIR-unhinted/Interface-${style}.otf" >> "$GEN_MAKE_FILE"
-      echo "${style}_ttf_unhinted: $DIST_DIR-unhinted/Interface-${style}.ttf" >> "$GEN_MAKE_FILE"
+      echo "${style}_ttf: $DIST_DIR/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
+      echo "${style}_otf: $DIST_DIR-unhinted/Inter-UI-${style}.otf" >> "$GEN_MAKE_FILE"
+      echo "${style}_ttf_unhinted: $DIST_DIR-unhinted/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
 
       echo -n "${style}: ${style}_otf" >> "$GEN_MAKE_FILE"
       for format in "${web_formats[@]}"; do
-        echo -n " $DIST_DIR/Interface-${style}.${format}" >> "$GEN_MAKE_FILE"
+        echo -n " $DIST_DIR/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
       done
       echo "" >> "$GEN_MAKE_FILE"
 
       echo -n "${style}_unhinted: ${style}_otf" >> "$GEN_MAKE_FILE"
       for format in "${web_formats[@]}"; do
-        echo -n " $DIST_DIR-unhinted/Interface-${style}.${format}" >> "$GEN_MAKE_FILE"
+        echo -n " $DIST_DIR-unhinted/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
       done
       echo "" >> "$GEN_MAKE_FILE"
     done

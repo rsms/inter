@@ -1,6 +1,6 @@
-# Contributing to the Interface font project
+# Contributing to the Inter UI font project
 
-First off, thank you for considering contributing to Interface.
+First off, thank you for considering contributing to Inter UI.
 It's people like you that make the Internet such a great place.
 
 Following these guidelines helps to communicate that you respect the time of
@@ -8,17 +8,17 @@ the people managing and developing this open source project.
 In return, they should reciprocate that respect in addressing your issue or
 suggestion.
 
-By contributing work to the Interface font project you agree to have all work
-contributed becoming the intellectual property of the Interface font project as
+By contributing work to the Inter UI font project you agree to have all work
+contributed becoming the intellectual property of the Inter UI font project as
 described by [SIL Open Font License, Version 1.1](http://scripts.sil.org/OFL)
 
 
 ## Types of contributions this project is looking for
 
-Interface is still an early product and so there is a lot of fun things to do.
+Inter UI is still an early product and so there is a lot of fun things to do.
 
 - More glyphs! There are many placeholder glyphs that need to be replaced with
-  ones designed in the style of Interface.
+  ones designed in the style of Inter UI.
   - Non-English glyphs are especially needed
 
 - Improvements and corrections to existing glyphs
@@ -154,15 +154,15 @@ Or just specific styles and formats:
 $ make Regular BoldItalic_ttf
 ```
 
-You can also specify specific style + file format to `make` through `build/Interface-STYLE.FORMAT`.
+You can also specify specific style + file format to `make` through `build/InterUI-STYLE.FORMAT`.
 E.g.
 
-- `make build/Interface-MediumItalic.eot`
-- `make build/Interface-Bold.woff2`
-- `make build/Interface-Regular.ttf`
+- `make build/dist-unhinted/InterUI-MediumItalic.otf`
+- `make build/dist/InterUI-Bold.woff2`
+- `make build/dist/InterUI-Regular.ttf`
 - `...`
 
-All resulting font files are written to the `build` directory with `Interface-` as the filename prefix.
+All resulting font files are written to the `build` directory with `InterUI-` as the filename prefix.
 
 Note: Making all files takes a considerable amount of time.
 It's a CPU and I/O intensive task to compile the fonts and so the build system has been setup to
@@ -214,7 +214,7 @@ previewing the font. It's a very useful tool to have when working on the font.
   alternate numerics, etc.
 - Controls for web-browser text features like `capitalize`, `uppercase`,
   `lowercase`, etc.
-- Ability to compare Interface side-by-side with other fonts.
+- Ability to compare Inter UI side-by-side with other fonts.
 
 ![Preview app screenshot](docs/res/preview-app.png)
 
@@ -259,4 +259,4 @@ Run `./init.sh` to update the generated makefile.
 Use the fontinfo.py tool which outputs JSON describing all properties of
 one or more font files.
 See `misc/fontinfo.py -h` for details.
-Example use: `misc/fontinfo.py build/dist/Interface-BoldItalic.ttf`
+Example use: `misc/fontinfo.py build/dist/InterUI-BoldItalic.ttf`

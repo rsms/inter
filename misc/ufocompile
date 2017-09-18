@@ -13,7 +13,7 @@ from fontbuild.mix import Master
 from fontbuild.mix import Mix
 
 
-FAMILYNAME = "Interface"
+FAMILYNAME = "Inter UI"
 BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 def extractSpecializedGlyphs(masterFont):
@@ -90,7 +90,7 @@ def main():
   buildTag = readVersionControlTag(BASEDIR)
 
   # Since we reference a shared feature file, copy it to build dir so includes works
-  ufoTmpDir = os.path.join(args.out, 'InterfaceUFO')
+  ufoTmpDir = os.path.join(args.out, 'InterUIUFO')
   try:
     os.makedirs(ufoTmpDir)
   except:
@@ -101,7 +101,7 @@ def main():
 
   # Load masters
   print('loading master: Regular')
-  rg = Master("%s/src/Interface-Regular.ufo" % BASEDIR)
+  rg = Master("%s/src/Inter-UI-Regular.ufo" % BASEDIR)
 
   bl = None
   if ALL \
@@ -109,7 +109,7 @@ def main():
   or 'bold' in styles or 'bolditalic' in styles \
   or 'medium' in styles or 'mediumitalic' in styles:
     print('loading master: Black')
-    bl = Master("%s/src/Interface-Black.ufo" % BASEDIR)
+    bl = Master("%s/src/Inter-UI-Black.ufo" % BASEDIR)
 
 
   glyphSpecializations = extractSpecializedGlyphs(rg)
