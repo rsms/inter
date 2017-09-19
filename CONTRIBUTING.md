@@ -228,6 +228,45 @@ You can now visit `http://localhost:2015/lab/`.
 After you rebuild some font files, reload the web page to refresh fonts.
 
 
+### Kerning
+
+Kerning is the concept of harmony in the pace of characters, defined as a set of distances
+between specific character pairs, like "A" & "c".
+Good kerning makes words more readable. Oftentimes this means that when adjusting kerning,
+you have to look at whole words and sentences when adjusting the kerning of a pair, since
+the spacing between two characters should work in harmony with the spacing of all other characters.
+
+All major font editors provide user interfaces for previewing and adjusting kerning.
+
+When adding or adjusting kerning:
+
+- Make sure to use kerning groups (`src/Inter-UI-*.ufo/groups.plist`)
+
+- If a glyphname is missing in kerning groups, define a new group for it.
+  Group naming scheme is: `@KERN_<DIRECTION>_<NAME>` where `<DIRECTION>`
+  is either `LEFT` or `RIGHT`, depending on if the group represents the left-hand side
+  of a pair or the right-hand side. `<NAME>` is the name of a glyph that most commonly
+  represents the group. For instance, for all glyphs that has a left-side shape similar
+  to "c", like "d", the group name is "c". This makes it easy to test kerning of groups
+  by just using the `<NAME>` part in previews.
+
+- Try to submit image samples of kerning adjustments with your pull requests whenever
+  feasible.
+
+The script `misc/kernsample.py` is helpful in generating samples for all existing
+right-hand side characters given a left-hand side glyphname.
+
+```txt
+$ misc/kernsample.py src/Inter-UI-Black.ufo P -suffix MOR
+PAMOR P/AE MOR PJMOR PXMOR PYMOR PZMOR P/ae mor P/ampersand mor P/backslash mor P/dzcaron mor P/eightsub mor P/ellipsis mor Pfmor P/four mor P/guilsinglleft mor P/idieresisacute mor P/periodcentered mor P/quotedblbase mor Psmor P/seven mor P/slash mor Ptmor P/two mor P/underscore mor Pymor
+```
+
+Type `misc/kernsample.py -h` for help on how to use the program.
+
+This only includes existing kerning and is thus only useful for adjustments.
+Additions must still be done manually.
+
+
 ## FAQ
 
 > Do I need RoboFont?
