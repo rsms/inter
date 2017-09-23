@@ -1,3 +1,4 @@
+glyphinfo copy_docs_fonts
 # Targets:
 #   all           Build all styles in all formats (default)
 #   all_ttf       Build all styles as TrueType
@@ -104,7 +105,8 @@ pre_dist:
 		then echo "${ZIP_FILE_DIST} already exists. Bump version or remove the zip file to continue." >&2; \
 		exit 1; \
   fi
-dist: pre_dist zip_dist glyphinfo copy_docs_fonts
+dist: pre_dist zip_dist
+	$(MAKE) glyphinfo copy_docs_fonts -j8
 	misc/versionize-css.py
 	@echo "——————————————————————————————————————————————————————————————————"
 	@echo ""
