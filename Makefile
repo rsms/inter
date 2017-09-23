@@ -29,8 +29,13 @@ build/tmp/InterUITTF/InterUI-%.ttf: $(res_files)
 build/tmp/InterUIOTF/InterUI-%.otf: build/tmp/InterUITTF/InterUI-%.ttf $(res_files)
 	@true
 
-# build/tmp/ttf -> build (generated.make handles build/tmp/InterUITTF/InterUI-%.ttf)
-build/dist-unhinted/Inter-UI-%: build/tmp/InterUITTF/InterUI-% build/dist-unhinted
+# tmp/ttf -> dist
+build/dist-unhinted/Inter-UI-%.ttf: build/tmp/InterUITTF/InterUI-%.ttf
+	@mkdir -p build/dist-unhinted
+	cp -a "$<" "$@"
+
+# tmp/otf -> dist
+build/dist-unhinted/Inter-UI-%.otf: build/tmp/InterUIOTF/InterUI-%.otf
 	@mkdir -p build/dist-unhinted
 	cp -a "$<" "$@"
 
@@ -131,13 +136,13 @@ install_ttf_hinted: all_ttf
 	mkdir -p ~/'Library/Fonts/Inter UI'
 	cp -va build/dist-hinted/*.ttf ~/'Library/Fonts/Inter UI'
 
-install_otf: all_otf
+install_otf: all_otf all_web
 	@echo "Installing OTF files locally at ~/Library/Fonts/Inter UI"
 	rm -rf ~/'Library/Fonts/Inter UI'
 	mkdir -p ~/'Library/Fonts/Inter UI'
 	cp -va build/dist-unhinted/*.otf ~/'Library/Fonts/Inter UI'
 
-install: all_web install_otf
+install: install_otf
 
 
 glyphinfo: docs/lab/glyphinfo.json docs/glyphs/metrics.json
