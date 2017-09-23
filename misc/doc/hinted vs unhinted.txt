@@ -1,0 +1,17 @@
+
+Inter UI font files comes in two versions:
+
+1. Without TrueType hints (the default)
+
+2. With TrueType hints (folder with "hinted" in their name)
+
+
+The TrueType hints are used by ClearType on Windows machines where ClearType
+is enabled. This usually changes the appearance of the fonts and can in some
+cases increase the legibility of text.
+
+However, the hints for Inter UI are automatically generated and are not always
+a good thing. Additionally, hints are little computer programs that takes up
+considerable disk space, meaning that font files with hints are larger than
+those without hints. This might be a consideration when using web fonts.
+

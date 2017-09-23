@@ -1,11 +1,17 @@
 # Targets:
-#    all        Build all styles in all formats (default)
-#    all_ttf    Build all styles as TrueType
-#    STYLE      Build STYLE in all formats (e.g. MediumItalic)
-#    STYLE_ttf  Build STYLE as TrueType (e.g. MediumItalic_ttf)
-#    zip        Build all styles as TrueType and package into a zip archive
+#   all           Build all styles in all formats (default)
+#   all_ttf       Build all styles as TrueType
+#   all_otf       Build all styles as OpenType
+#   all_hinted    Build all styles as autohinted TrueType
+#   STYLE         Build STYLE in all formats (e.g. MediumItalic)
+#   STYLE_hinted  Build STYLE in TTF and web formats with autohints
+#   STYLE_ttf     Build STYLE as TrueType (e.g. MediumItalic_ttf)
+#   zip           Build all styles as TrueType and package into a zip archive
+#   install       Build all (web, ttf and otf) and install. Mac-only for now.
+#   dist          Create a new release distribution. Does everything.
 #
 all: all_web all_otf
+all_hinted: all_web_hinted
 
 VERSION := $(shell misc/version.py)
 
@@ -24,20 +30,13 @@ build/tmp/InterUIOTF/InterUI-%.otf: build/tmp/InterUITTF/InterUI-%.ttf $(res_fil
 	@true
 
 # build/tmp/ttf -> build (generated.make handles build/tmp/InterUITTF/InterUI-%.ttf)
-build/dist-unhinted/Inter-UI-%.ttf: build/tmp/InterUITTF/InterUI-%.ttf
+build/dist-unhinted/Inter-UI-%: build/tmp/InterUITTF/InterUI-% build/dist-unhinted
 	@mkdir -p build/dist-unhinted
 	cp -a "$<" "$@"
-
-# OTF
-build/dist-unhinted/Inter-UI-%.otf: build/tmp/InterUIOTF/InterUI-%.otf
-	@mkdir -p build/dist-unhinted
-	cp -a "$<" "$@"
-
-build/dist:
-	@mkdir -p build/dist
 
 # autohint
-build/dist/Inter-UI-%.ttf: build/dist-unhinted/Inter-UI-%.ttf build/dist
+build/dist-hinted/Inter-UI-%.ttf: build/dist-unhinted/Inter-UI-%.ttf
+	@mkdir -p build/dist-hinted
 	ttfautohint \
 	  --hinting-limit=256 \
 	  --hinting-range-min=8 \
@@ -64,20 +63,24 @@ ZIP_FILE_DIST := build/release/Inter-UI-${VERSION}.zip
 ZIP_FILE_DEV  := build/release/Inter-UI-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
 
 # zip intermediate
-build/.zip.zip: all
+build/.zip.zip: all_otf all_web all_web_hinted
 	@rm -rf build/.zip
 	@rm -f build/.zip.zip
 	@mkdir -p \
 		"build/.zip/Inter UI (web)" \
-		"build/.zip/Inter UI (hinted TTF)" \
+		"build/.zip/Inter UI (web hinted)" \
 		"build/.zip/Inter UI (TTF)" \
+		"build/.zip/Inter UI (TTF hinted)" \
 		"build/.zip/Inter UI (OTF)"
-	@cp -a build/dist/*.woff build/dist/*.woff2  "build/.zip/Inter UI (web)/"
-	@cp -a build/dist/*.ttf                      "build/.zip/Inter UI (hinted TTF)/"
-	@cp -a build/dist-unhinted/*.ttf             "build/.zip/Inter UI (TTF)/"
-	@cp -a build/dist-unhinted/*.otf             "build/.zip/Inter UI (OTF)/"
-	@cp -a misc/doc/install-*.txt                "build/.zip/"
-	@cp -a LICENSE.txt                           "build/.zip/"
+	@cp -a build/dist-unhinted/*.woff build/dist-unhinted/*.woff2 \
+	  "build/.zip/Inter UI (web)/"
+	@cp -a build/dist-hinted/*.woff build/dist-hinted/*.woff2 \
+		"build/.zip/Inter UI (web hinted)/"
+	@cp -a build/dist-unhinted/*.ttf   "build/.zip/Inter UI (TTF)/"
+	@cp -a build/dist-hinted/*.ttf     "build/.zip/Inter UI (TTF hinted)/"
+	@cp -a build/dist-unhinted/*.otf   "build/.zip/Inter UI (OTF)/"
+	@cp -a misc/doc/*.txt              "build/.zip/"
+	@cp -a LICENSE.txt                 "build/.zip/"
 	cd build/.zip && zip -v -X -r "../../build/.zip.zip" * >/dev/null && cd ../..
 	@rm -rf build/.zip
 
@@ -114,13 +117,19 @@ dist: pre_dist zip_dist glyphinfo copy_docs_fonts
 copy_docs_fonts:
 	rm -rf docs/font-files
 	mkdir docs/font-files
-	cp -a build/dist/*.woff build/dist/*.woff2 build/dist-unhinted/*.otf docs/font-files/
+	cp -a build/dist-unhinted/*.woff build/dist-unhinted/*.woff2 build/dist-unhinted/*.otf docs/font-files/
 
-install_ttf: all_ttf
+install_ttf: all_ttf_unhinted
 	@echo "Installing TTF files locally at ~/Library/Fonts/Inter UI"
 	rm -rf ~/'Library/Fonts/Inter UI'
 	mkdir -p ~/'Library/Fonts/Inter UI'
-	cp -va build/dist/*.ttf ~/'Library/Fonts/Inter UI'
+	cp -va build/dist-unhinted/*.ttf ~/'Library/Fonts/Inter UI'
+
+install_ttf_hinted: all_ttf
+	@echo "Installing autohinted TTF files locally at ~/Library/Fonts/Inter UI"
+	rm -rf ~/'Library/Fonts/Inter UI'
+	mkdir -p ~/'Library/Fonts/Inter UI'
+	cp -va build/dist-hinted/*.ttf ~/'Library/Fonts/Inter UI'
 
 install_otf: all_otf
 	@echo "Installing OTF files locally at ~/Library/Fonts/Inter UI"
@@ -128,7 +137,7 @@ install_otf: all_otf
 	mkdir -p ~/'Library/Fonts/Inter UI'
 	cp -va build/dist-unhinted/*.otf ~/'Library/Fonts/Inter UI'
 
-install: all install_otf
+install: all_web install_otf
 
 
 glyphinfo: docs/lab/glyphinfo.json docs/glyphs/metrics.json
@@ -151,6 +160,6 @@ _local/UnicodeData.txt:
 	  http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 
 clean:
-	rm -vrf build/tmp/* build/dist/Inter-UI-*.*
+	rm -vrf build/tmp/* build/dist-hinted build/dist-unhinted
 
-.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist glyphinfo copy_docs_fonts
+.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist glyphinfo copy_docs_fonts all_hinted

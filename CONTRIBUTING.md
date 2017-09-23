@@ -158,8 +158,8 @@ You can also specify specific style + file format to `make` through `build/Inter
 E.g.
 
 - `make build/dist-unhinted/InterUI-MediumItalic.otf`
-- `make build/dist/InterUI-Bold.woff2`
-- `make build/dist/InterUI-Regular.ttf`
+- `make build/dist-unhinted/InterUI-Bold.woff2`
+- `make build/dist-hinted/InterUI-Regular.ttf`
 - `...`
 
 All resulting font files are written to the `build` directory with `InterUI-` as the filename prefix.
@@ -298,4 +298,4 @@ Run `./init.sh` to update the generated makefile.
 Use the fontinfo.py tool which outputs JSON describing all properties of
 one or more font files.
 See `misc/fontinfo.py -h` for details.
-Example use: `misc/fontinfo.py build/dist/InterUI-BoldItalic.ttf`
+Example use: `misc/fontinfo.py -pretty build/dist-unhinted/Inter-UI-BoldItalic.ttf`

@@ -7,7 +7,7 @@ if [[ "${BUILD_DIR:0:2}" == "./" ]]; then
   BUILD_DIR=${BUILD_DIR:2}
 fi
 
-DIST_DIR=$BUILD_DIR/dist
+DIST_DIR=$BUILD_DIR/dist #-hinted|-unhinted
 BUILD_TMP_DIR=$BUILD_DIR/tmp
 VENV_DIR=$BUILD_DIR/venv
 
@@ -255,19 +255,19 @@ else
 
     # STYLE and STYLE_ttf targets
     for style in "${all_styles[@]}"; do
-      echo "${style}_ttf: $DIST_DIR/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
+      echo "${style}_ttf_hinted: $DIST_DIR-hinted/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
+      echo "${style}_ttf: $DIST_DIR-unhinted/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
       echo "${style}_otf: $DIST_DIR-unhinted/Inter-UI-${style}.otf" >> "$GEN_MAKE_FILE"
-      echo "${style}_ttf_unhinted: $DIST_DIR-unhinted/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
 
       echo -n "${style}: ${style}_otf" >> "$GEN_MAKE_FILE"
       for format in "${web_formats[@]}"; do
-        echo -n " $DIST_DIR/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
+        echo -n " $DIST_DIR-unhinted/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
       done
       echo "" >> "$GEN_MAKE_FILE"
 
-      echo -n "${style}_unhinted: ${style}_otf" >> "$GEN_MAKE_FILE"
+      echo -n "${style}_hinted: ${style}_ttf_hinted" >> "$GEN_MAKE_FILE"
       for format in "${web_formats[@]}"; do
-        echo -n " $DIST_DIR-unhinted/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
+        echo -n " $DIST_DIR-hinted/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
       done
       echo "" >> "$GEN_MAKE_FILE"
     done
@@ -286,9 +286,10 @@ else
     done
     echo "" >> "$GEN_MAKE_FILE"
 
-    echo -n "all_ttf_unhinted:" >> "$GEN_MAKE_FILE"
+    # all_ttf_hinted target
+    echo -n "all_ttf_hinted:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
-      echo -n " ${style}_ttf_unhinted" >> "$GEN_MAKE_FILE"
+      echo -n " ${style}_ttf_hinted" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
 
@@ -299,16 +300,17 @@ else
     done
     echo "" >> "$GEN_MAKE_FILE"
 
-    echo -n "all_web_unhinted:" >> "$GEN_MAKE_FILE"
+    # all_web_hinted target
+    echo -n "all_web_hinted:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
-      echo -n " ${style}_unhinted" >> "$GEN_MAKE_FILE"
+      echo -n " ${style}_hinted" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
     
 
-    echo -n ".PHONY: all_ttf all_ttf_unhinted all_web all_web_unhinted all_otf all_ufo" >> "$GEN_MAKE_FILE"
+    echo -n ".PHONY: all_otf all_ttf_hinted all_ttf all_web all_web_hinted all_ufo" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
-      echo -n " ${style} ${style}_ttf ${style}_ttf_unhinted ${style}_otf" >> "$GEN_MAKE_FILE"
+      echo -n " ${style} ${style}_ttf ${style}_ttf_hinted ${style}_otf" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
   fi
