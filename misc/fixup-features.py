@@ -126,6 +126,25 @@ def loadLocalNamesDB(fonts, agl, diacriticComps):
   return uc2names, name2ucs, allNames
 
 
+
+includeRe = re.compile(r'^include\(([^\)]+)\);\s*$')
+
+
+def loadFeaturesFile(filepath):
+  print('read', filepath)
+  lines = []
+  with open(filepath, 'r') as f:
+    for line in f:
+      m = includeRe.match(line)
+      if m is not None:
+        includedFilename = m.group(1)
+        includedPath = os.path.normpath(os.path.join(os.path.dirname(filepath), includedFilename))
+        lines = lines + loadFeaturesFile(includedPath)
+      else:
+        lines.append(line)
+  return lines
+
+
 def main():
   argparser = ArgumentParser(description='Fixup features.fea')
 
@@ -146,18 +165,10 @@ def main():
   fonts = [OpenFont(fontPath) for fontPath in args.fontPaths]
   uc2names, name2ucs, allNames = loadLocalNamesDB(fonts, agl, diacriticComps)
 
-  # open feature.fea
-  featuresFilename = ''
-  featuresLines = []
-  for fontPath in args.fontPaths:
-    try:
-      featuresFilename = os.path.join(fontPath, 'features.fea')
-      with open(featuresFilename, 'r') as f:
-        print('read', featuresFilename)
-        featuresLines = f.read().splitlines()
-      break
-    except:
-      pass
+  includeRe = re.compile(r'^include\(([^\)]+)\);\s*$')
+
+  # open features.fea
+  featuresLines = loadFeaturesFile(os.path.join(fontPath, 'features.fea'))
 
   classDefRe = re.compile(r'^@([^\s=]+)\s*=\s*\[([^\]]+)\]\s*;\s*$')
   subRe = re.compile(r'^\s*sub\s+(.+)(\'?)\s+by\s+(.+)\s*;\s*$')
