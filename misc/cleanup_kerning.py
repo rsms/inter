@@ -173,7 +173,7 @@ class RefTracker:
     return name in self.refs
 
 
-def main():
+def main(argv=sys.argv):
   argparser = ArgumentParser(description='Remove unused kerning')
 
   argparser.add_argument(
@@ -183,7 +183,7 @@ def main():
   argparser.add_argument(
     'fontPaths', metavar='<ufofile>', type=str, nargs='+', help='UFO fonts to update')
 
-  args = argparser.parse_args()
+  args = argparser.parse_args(argv)
   dryRun = args.dryRun
 
   agl = loadAGL('src/glyphlist.txt') # { 2126: 'Omega', ... }
@@ -350,4 +350,5 @@ def main():
   # [end] for fontPath in args.fontPaths
 
 
-main()
+if __name__ == '__main__':
+  main()
