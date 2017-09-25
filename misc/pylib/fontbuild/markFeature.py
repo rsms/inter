@@ -29,10 +29,7 @@ class RobotoFeatureCompiler(FeatureOTFCompiler):
             ["bottom_dd", "_markbottom_dd"],
             ["rhotichook", "_markrhotichook"],
             ["top0315", "_marktop0315"],
-            ["parent_top", "_markparent_top"],
-            ["parenthesses.w1", "_markparenthesses.w1"],
-            ["parenthesses.w2", "_markparenthesses.w2"],
-            ["parenthesses.w3", "_markparenthesses.w3"]]
+        ]
 
         self.mkmkAnchorPairs = [
             ["mkmktop", "_marktop"],
