@@ -9,6 +9,10 @@ from math import ceil, floor
 from robofab.objects.objectsRF import OpenFont
 from collections import OrderedDict
 from fontbuild.generateGlyph import generateGlyph
+from ConfigParser import RawConfigParser
+
+
+BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 font = None  # RFont
 ufopath = ''
@@ -337,6 +341,17 @@ argparser.add_argument('glyphs', metavar='<glyphname>', type=str, nargs='*',
 
 args = argparser.parse_args()
 
+srcDir = os.path.join(BASEDIR, 'src')
+
+# load fontbuild config
+config = RawConfigParser(dict_type=OrderedDict)
+configFilename = os.path.join(srcDir, 'fontbuild.cfg')
+config.read(configFilename)
+deleteNames = set()
+for sectionName, value in config.items('glyphs'):
+  if sectionName == 'delete':
+    deleteNames = set(value.split())
+
 if len(args.scale):
   scale = float(args.scale)
 
@@ -345,26 +360,26 @@ ufopath = args.ufopath.rstrip('/')
 font = OpenFont(ufopath)
 effectiveAscender = max(font.info.ascender, font.info.unitsPerEm)
 
-srcdir = os.path.abspath(os.path.join(__file__, '..', '..'))
-
 # print('\n'.join(font.keys()))
 # sys.exit(0)
 
-agl = loadAGL(os.path.join(srcdir, 'src', 'glyphlist.txt')) # { 2126: 'Omega', ... }
+agl = loadAGL(os.path.join(srcDir, 'glyphlist.txt')) # { 2126: 'Omega', ... }
 
-ignoreGlyphs = set(['.notdef', '.null'])
+deleteNames.add('.notdef')
+deleteNames.add('.null')
+
 glyphnames = args.glyphs if len(args.glyphs) else font.keys()
 glyphnameSet = set(glyphnames)
 generatedGlyphNames = set()
 
-diacriticComps = loadGlyphCompositions(os.path.join(srcdir, 'src', 'diacritics.txt'))
+diacriticComps = loadGlyphCompositions(os.path.join(srcDir, 'diacritics.txt'))
 for glyphName, comp in diacriticComps.iteritems():
   if glyphName not in glyphnameSet:
     generatedGlyphNames.add(glyphName)
     glyphnames.append(glyphName)
     glyphnameSet.add(glyphName)
 
-glyphnames = [gn for gn in glyphnames if gn not in ignoreGlyphs]
+glyphnames = [gn for gn in glyphnames if gn not in deleteNames]
 glyphnames.sort()
 
 nameToIdMap, idToNameMap = genGlyphIDs(glyphnames)
@@ -387,7 +402,7 @@ for glyphname in glyphnames:
 svgtext = '\n'.join(svgLines)
 # print(svgtext)
 
-glyphsHtmlFilename = os.path.join(srcdir, 'docs', 'glyphs', 'index.html')
+glyphsHtmlFilename = os.path.join(BASEDIR, 'docs', 'glyphs', 'index.html')
 
 html = ''
 with open(glyphsHtmlFilename, 'r') as f:
@@ -425,7 +440,7 @@ with open(glyphsHtmlFilename, 'w') as f:
   f.write(html)
 
 # JSON
-jsonFilename = os.path.join(srcdir, 'docs', 'glyphs', 'metrics.json')
+jsonFilename = os.path.join(BASEDIR, 'docs', 'glyphs', 'metrics.json')
 jsonFilenameRel = os.path.relpath(jsonFilename, os.getcwd())
 print('write', jsonFilenameRel)
 with open(jsonFilename, 'w') as f:

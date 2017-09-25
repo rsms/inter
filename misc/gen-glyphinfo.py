@@ -9,6 +9,10 @@ from argparse import ArgumentParser
 from robofab.objects.objectsRF import OpenFont
 from collections import OrderedDict
 from unicode_util import parseUnicodeDataFile
+from ConfigParser import RawConfigParser
+
+
+BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 
 # Regex matching "default" glyph names, like "uni2043" and "u01C5"
@@ -156,6 +160,17 @@ def main():
   args = argparser.parse_args()
   markLibKey = 'com.typemytype.robofont.mark'
 
+  srcDir = os.path.join(BASEDIR, 'src')
+
+  # load fontbuild config
+  config = RawConfigParser(dict_type=OrderedDict)
+  configFilename = os.path.join(srcDir, 'fontbuild.cfg')
+  config.read(configFilename)
+  deleteNames = set()
+  for sectionName, value in config.items('glyphs'):
+    if sectionName == 'delete':
+      deleteNames = set(value.split())
+
   fontPaths = []
   for fontPath in args.fontPaths:
     fontPath = fontPath.rstrip('/ ')
@@ -166,8 +181,8 @@ def main():
 
   fonts = [OpenFont(fontPath) for fontPath in args.fontPaths]
 
-  agl = loadAGL('src/glyphlist.txt') # { 2126: 'Omega', ... }
-  diacriticComps = loadGlyphCompositions('src/diacritics.txt')
+  agl = loadAGL(os.path.join(srcDir, 'glyphlist.txt')) # { 2126: 'Omega', ... }
+  diacriticComps = loadGlyphCompositions(os.path.join(srcDir, 'diacritics.txt'))
   uc2names, name2ucs, allNames = loadLocalNamesDB(fonts, agl, diacriticComps)
 
   ucd = {}
@@ -189,6 +204,8 @@ def main():
 
   for font in fonts:
     for name, v in glyphorder.iteritems():
+      if name in deleteNames:
+        continue
       if name in visitedGlyphNames:
         continue
 

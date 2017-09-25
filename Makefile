@@ -151,11 +151,11 @@ glyphinfo: docs/lab/glyphinfo.json docs/glyphs/metrics.json
 src/glyphorder.txt: src/Inter-UI-Regular.ufo/lib.plist src/Inter-UI-Black.ufo/lib.plist src/diacritics.txt misc/gen-glyphorder.py
 	misc/gen-glyphorder.py src/Inter-UI-*.ufo > src/glyphorder.txt
 
-docs/lab/glyphinfo.json: _local/UnicodeData.txt src/glyphorder.txt misc/gen-glyphinfo.py
+docs/lab/glyphinfo.json: _local/UnicodeData.txt src/glyphorder.txt src/fontbuild.cfg misc/gen-glyphinfo.py
 	misc/gen-glyphinfo.py -ucd _local/UnicodeData.txt \
 	  src/Inter-UI-*.ufo > docs/lab/glyphinfo.json
 
-docs/glyphs/metrics.json: src/glyphorder.txt misc/gen-metrics-and-svgs.py $(Regular_ufo_d)
+docs/glyphs/metrics.json: src/glyphorder.txt src/fontbuild.cfg misc/gen-metrics-and-svgs.py $(Regular_ufo_d)
 	misc/gen-metrics-and-svgs.py -f src/Inter-UI-Regular.ufo
 
 
