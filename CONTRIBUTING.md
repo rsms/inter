@@ -267,6 +267,27 @@ This only includes existing kerning and is thus only useful for adjustments.
 Additions must still be done manually.
 
 
+### Removing glyphs
+
+Removal of glyphs is a bit tricky both because there are a lot of places in
+which a glyph might be referenced and used, as well as the fact that many
+glyphs uses composition where removal of one glyph might cause other glyphs to
+have their component instances be broken disappear.
+
+There's a script which takes care of 95% of this process for you: `misc/rmglyph.py`
+
+Before running, make sure your git working tree is clean (at least the `src` folder),
+then run something like this:
+
+```
+misc/rmglyph.py -decompose -dry glyphname1 U+1234 U+1235-1238
+```
+
+Run without `-dry` to write the effects to the file system (safe when you have a clean working directory; just `git checkout src` to "undo")
+
+Run with `-h` for details on usage.
+
+
 ## FAQ
 
 > Do I need RoboFont?
