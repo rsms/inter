@@ -173,7 +173,7 @@ class RefTracker:
     return name in self.refs
 
 
-def main(argv=sys.argv):
+def main(argv=None):
   argparser = ArgumentParser(description='Remove unused kerning')
 
   argparser.add_argument(
