@@ -1,4 +1,3 @@
-glyphinfo copy_docs_fonts
 # Targets:
 #   all           Build all styles in all formats (default)
 #   all_ttf       Build all styles as TrueType
