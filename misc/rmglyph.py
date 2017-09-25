@@ -13,6 +13,7 @@ import cleanup_kerning
 
 
 dryRun = False
+BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 
 def readLines(filename):
@@ -291,6 +292,32 @@ def updateFeaturesFile(filename, rmnames):
   return didChange
 
 
+def grep(filename, names):
+  hasPrintedFilename = False
+  relFilename = os.path.relpath(os.path.abspath(filename), BASEDIR)
+  findCount = 0
+  with open(filename, 'r') as f:
+    lineno = 1
+    for line in f:
+      foundNames = []
+      for name in names:
+        col = line.find(name)
+        if col != -1:
+          foundNames.append((name, lineno, col, line))
+          findCount += 1
+      if len(foundNames):
+        if not hasPrintedFilename:
+          print('%s:' % relFilename)
+          hasPrintedFilename = True
+        for name, lineno, col, line in foundNames:
+          line = line.strip()
+          if len(line) > 50:
+            line = line[:47] + '...'
+          print('  %s\t%d:%d\t%s' % (name, lineno, col, line))
+      lineno += 1
+  return findCount
+
+
 
 def main(argv=None):
   argparser = ArgumentParser(
@@ -320,7 +347,6 @@ def main(argv=None):
   args = argparser.parse_args(argv)
   global dryRun
   dryRun = args.dryRun
-  BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
   srcDir = os.path.join(BASEDIR, 'src')
 
   # check if src font has modifications
@@ -476,11 +502,34 @@ def main(argv=None):
   featuresChanged = updateFeaturesFile(featuresFile, rmnamesUnion)
 
 
+  # TMP for testing fuzzy
+  # rmnamesUnion = set()
+  # featuresChanged = False
+  # with open('_local/rmlog') as f:
+  #   for line in f:
+  #     line = line.strip()
+  #     if len(line):
+  #       rmnamesUnion.add(line)
+
+
   print('\n————————————————————————————————————————————————————\n'+
         'Removed %d glyphs:\n  %s' % (
           len(rmnamesUnion), '\n  '.join(sorted(rmnamesUnion))))
 
   print('\n————————————————————————————————————————————————————\n')
+
+  # find possibly-missed instances
+  print('Fuzzy matches:')
+  fuzzyMatchCount = 0
+  fuzzyMatchCount += grep(diacriticsFile, rmnamesUnion)
+  fuzzyMatchCount += grep(configFilename, rmnamesUnion)
+  fuzzyMatchCount += grep(featuresFile, rmnamesUnion)
+  for fontPath in fontPaths:
+    fuzzyMatchCount += grep(os.path.join(fontPath, 'lib.plist'), rmnamesUnion)
+  if fuzzyMatchCount == 0:
+    print('  (none)\n')
+  else:
+    print('You may want to look into those ^\n')
 
   if featuresChanged:
     print('You need to manually edit features.\n'+
