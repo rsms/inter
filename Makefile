@@ -96,7 +96,7 @@ build/release/Inter-UI-%.zip: build/.zip.zip
 	@echo write "$@"
 
 zip: ${ZIP_FILE_DEV}
-zip_dist: ${ZIP_FILE_DIST}
+zip_dist: pre_dist ${ZIP_FILE_DIST}
 
 pre_dist:
 	@echo "Creating distribution for version ${VERSION}"
@@ -104,6 +104,7 @@ pre_dist:
 		then echo "${ZIP_FILE_DIST} already exists. Bump version or remove the zip file to continue." >&2; \
 		exit 1; \
   fi
+
 dist: pre_dist zip_dist
 	$(MAKE) glyphinfo copy_docs_fonts -j8
 	misc/versionize-css.py
