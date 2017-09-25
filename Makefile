@@ -167,6 +167,6 @@ _local/UnicodeData.txt:
 	  http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 
 clean:
-	rm -vrf build/tmp/* build/dist-hinted build/dist-unhinted
+	rm -rf build/tmp/* build/dist-hinted build/dist-unhinted
 
 .PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist glyphinfo copy_docs_fonts all_hinted
