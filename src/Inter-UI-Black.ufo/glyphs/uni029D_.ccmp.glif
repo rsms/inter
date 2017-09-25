@@ -3,6 +3,15 @@
   <advance width="1536"/>
   <outline>
     <contour>
+      <point x="896" y="1744" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="880" y="-632" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1520" y="1744" type="move" name="top0315"/>
+    </contour>
+    <contour>
       <point x="1492" y="172" type="line"/>
       <point x="520" y="172" type="line" smooth="yes"/>
       <point x="212" y="172"/>
@@ -29,15 +38,6 @@
       <point x="1492" y="-124" type="line"/>
     </contour>
     <component base="dotlessi" xOffset="496"/>
-    <contour>
-      <point x="896" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="880" y="-632" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1520" y="1744" type="move" name="top0315"/>
-    </contour>
   </outline>
   <lib>
     <dict>

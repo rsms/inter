@@ -4,18 +4,6 @@
   <unicode hex="F6C3"/>
   <outline>
     <contour>
-      <point x="468" y="392" type="line"/>
-      <point x="148" y="392" type="line"/>
-      <point x="148" y="136" type="line"/>
-      <point x="148" y="-80"/>
-      <point x="104" y="-160"/>
-      <point x="48" y="-284" type="curve"/>
-      <point x="272" y="-396" type="line"/>
-      <point x="412" y="-256"/>
-      <point x="468" y="-60"/>
-      <point x="468" y="164" type="curve"/>
-    </contour>
-    <contour>
       <point x="304.0" y="508.0" type="move" name="_bottom"/>
     </contour>
     <contour>
@@ -26,6 +14,18 @@
     </contour>
     <contour>
       <point x="304.0" y="-200.0" type="move" name="mkmkbottom_acc"/>
+    </contour>
+    <contour>
+      <point x="468" y="392" type="line"/>
+      <point x="148" y="392" type="line"/>
+      <point x="148" y="136" type="line"/>
+      <point x="148" y="-80"/>
+      <point x="104" y="-160"/>
+      <point x="48" y="-284" type="curve"/>
+      <point x="272" y="-396" type="line"/>
+      <point x="412" y="-256"/>
+      <point x="468" y="-60"/>
+      <point x="468" y="164" type="curve"/>
     </contour>
   </outline>
   <lib>

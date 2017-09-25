@@ -4,6 +4,15 @@
   <unicode hex="0298"/>
   <outline>
     <contour>
+      <point x="960" y="2244" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="960" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1928" y="2244" type="move" name="top0315"/>
+    </contour>
+    <contour>
       <point x="792" y="1008" type="curve" smooth="yes"/>
       <point x="792" y="920"/>
       <point x="848" y="852"/>
@@ -18,15 +27,6 @@
       <point x="792" y="1096"/>
     </contour>
     <component base="O" xOffset="-16"/>
-    <contour>
-      <point x="960" y="2244" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="960" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1928" y="2244" type="move" name="top0315"/>
-    </contour>
   </outline>
   <lib>
     <dict>

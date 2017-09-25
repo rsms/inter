@@ -4,17 +4,6 @@
   <unicode hex="0070"/>
   <outline>
     <contour>
-      <point x="224" y="-576" type="line"/>
-      <point x="460" y="-576" type="line"/>
-      <point x="460" y="392" type="line"/>
-      <point x="360" y="728" type="line"/>
-      <point x="464" y="1148" type="line"/>
-      <point x="464" y="1244" type="line"/>
-      <point x="436" y="1536" type="line"/>
-      <point x="224" y="1536" type="line"/>
-    </contour>
-    <component base="rightloop.cn" xOffset="-16"/>
-    <contour>
       <point x="880" y="1792" type="move" name="top"/>
     </contour>
     <contour>
@@ -32,6 +21,17 @@
     <contour>
       <point x="1568" y="1760" type="move" name="top0315"/>
     </contour>
+    <contour>
+      <point x="224" y="-576" type="line"/>
+      <point x="460" y="-576" type="line"/>
+      <point x="460" y="392" type="line"/>
+      <point x="360" y="728" type="line"/>
+      <point x="464" y="1148" type="line"/>
+      <point x="464" y="1244" type="line"/>
+      <point x="436" y="1536" type="line"/>
+      <point x="224" y="1536" type="line"/>
+    </contour>
+    <component base="rightloop.cn" xOffset="-16"/>
   </outline>
   <lib>
     <dict>
