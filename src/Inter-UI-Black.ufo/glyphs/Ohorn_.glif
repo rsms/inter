@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Ohorn" format="1">
-  <advance width="2048"/>
+  <advance width="2036"/>
   <unicode hex="01A0"/>
   <outline>
     <contour>
-      <point x="904" y="2212" type="move" name="top"/>
+      <point x="1760" y="2140" type="line"/>
+      <point x="1760" y="1888"/>
+      <point x="1712" y="1740"/>
+      <point x="1528" y="1740" type="curve"/>
+      <point x="1528" y="1516" type="line"/>
+      <point x="1884" y="1516"/>
+      <point x="2036" y="1744"/>
+      <point x="2036" y="2140" type="curve"/>
+    </contour>
+    <component base="O"/>
+    <contour>
+      <point x="976" y="2212" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="864" y="0" type="move" name="bottom"/>
+      <point x="936" y="0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1920" y="2212" type="move" name="top0315"/>
+      <point x="1992" y="2212" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="1688" y="2140" type="line"/>
-      <point x="1688" y="1888"/>
-      <point x="1640" y="1740"/>
-      <point x="1456" y="1740" type="curve"/>
-      <point x="1456" y="1516" type="line"/>
-      <point x="1812" y="1516"/>
-      <point x="1964" y="1744"/>
-      <point x="1964" y="2140" type="curve"/>
-    </contour>
-    <component base="O" xOffset="-72"/>
   </outline>
   <lib>
     <dict>
