@@ -1463,6 +1463,8 @@ function main() {
   const repertoireOrderControl = document.querySelector('label.repertoireOrder')
   const samplesElement = document.querySelector('samples')
 
+  let sizeVar = null
+
   // sample text
   const samplesSelect = document.querySelector('select[name="sample"]')
   for (let [k,v] of samples) {
@@ -1497,6 +1499,10 @@ function main() {
         interUISample.innerText   = sampleText
         secondarySample.innerText = sampleText
       }
+    }
+
+    if (sizeVar && v == 'Repertoire') {
+      sizeVar.refreshValue(null)
     }
   })
 
@@ -1555,7 +1561,7 @@ function main() {
   }
 
   const boxes = document.querySelector('boxes')
-  vars.bind('size', (e, v) => {
+  sizeVar = vars.bind('size', (e, v) => {
     boxes.style.display = (v > 20) ? 'none' : null
     setCSSProp('font-size', v + 'px')
     let glyphlist = samplesElement.querySelector('.glyphlist')
