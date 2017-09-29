@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uhorn" format="1">
-  <advance width="1916"/>
+  <advance width="1852"/>
   <unicode hex="01B0"/>
   <outline>
+    <contour>
+      <point x="1604" y="1624" type="line"/>
+      <point x="1604" y="1392"/>
+      <point x="1568" y="1280"/>
+      <point x="1292" y="1280" type="curve"/>
+      <point x="1292" y="1084" type="line"/>
+      <point x="1716" y="1084"/>
+      <point x="1852" y="1268"/>
+      <point x="1852" y="1624" type="curve"/>
+    </contour>
+    <component base="u"/>
     <contour>
       <point x="792" y="1744" type="move" name="top"/>
     </contour>
@@ -18,17 +29,6 @@
     <contour>
       <point x="792" y="0" type="move" name="bottom"/>
     </contour>
-    <contour>
-      <point x="1604" y="1624" type="line"/>
-      <point x="1604" y="1392"/>
-      <point x="1568" y="1280"/>
-      <point x="1292" y="1280" type="curve"/>
-      <point x="1292" y="1084" type="line"/>
-      <point x="1716" y="1084"/>
-      <point x="1852" y="1268"/>
-      <point x="1852" y="1624" type="curve"/>
-    </contour>
-    <component base="u"/>
   </outline>
   <lib>
     <dict>

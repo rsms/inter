@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="d" format="1">
-  <advance width="1648"/>
+  <advance width="1644"/>
   <unicode hex="0064"/>
   <outline>
+    <contour>
+      <point x="1208" y="344" type="line"/>
+      <point x="1228" y="0" type="line"/>
+      <point x="1444" y="0" type="line"/>
+      <point x="1444" y="2048" type="line"/>
+      <point x="1208" y="2048" type="line"/>
+      <point x="1208" y="1156" type="line"/>
+      <point x="1280" y="748" type="line"/>
+    </contour>
+    <component base="leftloop.cn"/>
     <contour>
       <point x="1536" y="2112" type="move" name="caron"/>
     </contour>
@@ -24,16 +34,6 @@
     <contour>
       <point x="1596" y="2216" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="1208" y="344" type="line"/>
-      <point x="1228" y="0" type="line"/>
-      <point x="1444" y="0" type="line"/>
-      <point x="1444" y="2048" type="line"/>
-      <point x="1208" y="2048" type="line"/>
-      <point x="1208" y="1156" type="line"/>
-      <point x="1280" y="748" type="line"/>
-    </contour>
-    <component base="leftloop.cn"/>
   </outline>
   <lib>
     <dict>

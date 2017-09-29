@@ -315,8 +315,10 @@
 	</dict>
 	<key>@KERN_LEFT_E</key>
 	<dict>
+		<key>@KERN_RIGHT_A</key>
+		<integer>-32</integer>
 		<key>@KERN_RIGHT_B</key>
-		<integer>-128</integer>
+		<integer>0</integer>
 		<key>@KERN_RIGHT_C</key>
 		<integer>-144</integer>
 		<key>@KERN_RIGHT_v</key>
@@ -600,12 +602,10 @@
 	</dict>
 	<key>@KERN_LEFT_H</key>
 	<dict>
-		<key>@KERN_RIGHT_B</key>
-		<integer>0</integer>
+		<key>@KERN_RIGHT_A</key>
+		<integer>-24</integer>
 		<key>@KERN_RIGHT_C</key>
-		<integer>-48</integer>
-		<key>@KERN_RIGHT_b</key>
-		<integer>-48</integer>
+		<integer>-32</integer>
 		<key>@KERN_RIGHT_dotlessj</key>
 		<integer>-224</integer>
 		<key>backslash</key>
@@ -1089,7 +1089,7 @@
 		<key>@KERN_RIGHT_AE</key>
 		<integer>-63</integer>
 		<key>@KERN_RIGHT_V</key>
-		<integer>-33</integer>
+		<integer>-163</integer>
 		<key>@KERN_RIGHT_W</key>
 		<integer>-80</integer>
 		<key>@KERN_RIGHT_X</key>

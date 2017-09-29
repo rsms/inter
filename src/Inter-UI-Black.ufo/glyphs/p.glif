@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="p" format="1">
-  <advance width="1568"/>
+  <advance width="1572"/>
   <unicode hex="0070"/>
   <outline>
+    <contour>
+      <point x="128" y="-576" type="line"/>
+      <point x="588" y="-576" type="line"/>
+      <point x="588" y="292" type="line"/>
+      <point x="420" y="736" type="line"/>
+      <point x="572" y="1192" type="line"/>
+      <point x="572" y="1244" type="line"/>
+      <point x="544" y="1536" type="line"/>
+      <point x="128" y="1536" type="line"/>
+    </contour>
+    <component base="rightloop.cn" xOffset="-84"/>
     <contour>
       <point x="1044" y="1760" type="move" name="top"/>
     </contour>
@@ -21,17 +32,6 @@
     <contour>
       <point x="1700" y="1760" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="128" y="-576" type="line"/>
-      <point x="588" y="-576" type="line"/>
-      <point x="588" y="292" type="line"/>
-      <point x="420" y="736" type="line"/>
-      <point x="572" y="1192" type="line"/>
-      <point x="572" y="1244" type="line"/>
-      <point x="544" y="1536" type="line"/>
-      <point x="128" y="1536" type="line"/>
-    </contour>
-    <component base="rightloop.cn" xOffset="-84"/>
   </outline>
   <lib>
     <dict>

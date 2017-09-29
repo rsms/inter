@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="itildebelow" format="1">
-  <advance width="1004"/>
+  <advance width="896"/>
   <unicode hex="1E2D"/>
   <outline>
+    <component base="i" xOffset="80"/>
+    <component base="tilde" xOffset="-176" yOffset="-2216"/>
     <contour>
-      <point x="548" y="16" type="move" name="bottom"/>
+      <point x="440" y="16" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="592" y="900" type="move" name="rhotichook"/>
+      <point x="484" y="900" type="move" name="rhotichook"/>
     </contour>
     <contour>
-      <point x="548" y="-580" type="move" name="mkmkbottom_acc"/>
+      <point x="440" y="-580" type="move" name="mkmkbottom_acc"/>
     </contour>
     <contour>
-      <point x="552" y="2304" type="move" name="top"/>
+      <point x="444" y="2304" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="896" y="2200" type="move" name="top0315"/>
+      <point x="788" y="2200" type="move" name="top0315"/>
     </contour>
     <contour>
-      <point x="896" y="2200" type="move" name="top_dd"/>
+      <point x="788" y="2200" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="664" y="0" type="move" name="ogonek"/>
+      <point x="556" y="0" type="move" name="ogonek"/>
     </contour>
     <contour>
-      <point x="896" y="-560" type="move" name="bottom_dd"/>
+      <point x="788" y="-560" type="move" name="bottom_dd"/>
     </contour>
-    <component base="i" xOffset="188"/>
-    <component base="tilde" xOffset="-132" yOffset="-2216"/>
   </outline>
   <lib>
     <dict>

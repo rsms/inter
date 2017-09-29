@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lslash" format="1">
-  <advance width="1020"/>
+  <advance width="716"/>
   <unicode hex="0142"/>
   <outline>
     <contour>
-      <point x="512" y="2308" type="move" name="top"/>
+      <point x="760" y="1344" type="line"/>
+      <point x="-52" y="1084" type="line"/>
+      <point x="-52" y="836" type="line"/>
+      <point x="760" y="1096" type="line"/>
+    </contour>
+    <component base="l"/>
+    <contour>
+      <point x="384.0" y="2308.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="512" y="16" type="move" name="bottom"/>
+      <point x="384.0" y="16.0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="964" y="2308" type="move" name="top0315"/>
+      <point x="836.0" y="2308.0" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="916" y="1332" type="line"/>
-      <point x="104" y="1072" type="line"/>
-      <point x="104" y="824" type="line"/>
-      <point x="916" y="1084" type="line"/>
-    </contour>
-    <component base="l" xOffset="128"/>
   </outline>
   <lib>
     <dict>

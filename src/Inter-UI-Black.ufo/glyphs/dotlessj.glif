@@ -1,40 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dotlessj" format="1">
-  <advance width="768"/>
+  <advance width="916"/>
   <unicode hex="0237"/>
   <outline>
     <contour>
-      <point x="504" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="768" y="0" type="move" name="_right"/>
-    </contour>
-    <contour>
-      <point x="948" y="1744" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="324" y="1488" type="line"/>
-      <point x="324" y="-20" type="line"/>
-      <point x="324" y="-168"/>
-      <point x="264" y="-244"/>
-      <point x="160" y="-244" type="curve" smooth="yes"/>
-      <point x="104" y="-244"/>
-      <point x="68" y="-240"/>
-      <point x="24" y="-228" type="curve"/>
+      <point x="316" y="1536" type="line"/>
+      <point x="316" y="-40" type="line"/>
+      <point x="316" y="-140"/>
+      <point x="280" y="-220"/>
+      <point x="100" y="-220" type="curve"/>
+      <point x="4" y="-220" type="line"/>
       <point x="4" y="-580" type="line"/>
-      <point x="80" y="-596"/>
-      <point x="140" y="-600"/>
-      <point x="216" y="-600" type="curve" smooth="yes"/>
-      <point x="560" y="-600"/>
-      <point x="768" y="-396"/>
-      <point x="768" y="-20" type="curve"/>
-      <point x="768" y="1488" type="line"/>
+      <point x="172" y="-580" type="line"/>
+      <point x="516" y="-580"/>
+      <point x="776" y="-420"/>
+      <point x="776" y="-48" type="curve"/>
+      <point x="776" y="1536" type="line"/>
+    </contour>
+    <contour>
+      <point x="452.0" y="2200.0" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="408.0" y="-632.0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="900.0" y="2200.0" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="900.0" y="-560.0" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="900.0" y="2200.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>906.125</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>0.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>x</key>
+          <real>0.0</real>
+          <key>y</key>
+          <real>1381.875</real>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.mark</key>
+      <array>
+        <real>0.86</real>
+        <real>0.92</real>
+        <real>0.97</real>
+        <real>1.0</real>
+      </array>
       <key>interface.gridadjust.original</key>
-      <string>{'width': 820, 'leftMargin': -124, 'rightMargin': 181}</string>
+      <string>{'width': 752, 'leftMargin': -151, 'rightMargin': 125}</string>
     </dict>
   </lib>
 </glyph>
