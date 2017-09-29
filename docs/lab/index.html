@@ -320,6 +320,30 @@ samples.set('Symbols', `
 \uE004 White Component instance (private-area, U+E004)
 `)
 
+
+samples.set('Color names', {
+  _cachedHTML: null,
+  _isFetching: false,
+  toHTML() {
+    if (this._cachedHTML) {
+      return this._cachedHTML
+    }
+    fetch('color-names.json').then(r => r.json()).then(names => {
+      if (!this._cachedHTML) {
+        let namestr = names.join('\n')
+        let r = document.createElement('div')
+        r.innerText = namestr
+        this._cachedHTML = r.innerHTML
+      }
+      if (sampleVar) {
+        sampleVar.refreshValue(null)
+      }
+    })
+
+    return 'fetching color names...'
+  },
+})
+
 samples.set('────── body ──────', null)
 
 samples.set('Body text 1', `
