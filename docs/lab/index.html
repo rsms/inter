@@ -1572,12 +1572,14 @@ function main() {
   sizeVar = vars.bind('size', (e, v) => {
     boxes.style.display = (v > 20) ? 'none' : null
     setCSSProp('font-size', v + 'px')
-    let glyphlist = samplesElement.querySelector('.glyphlist')
-    if (glyphlist) {
-      if (v >= 36) {
-        glyphlist.classList.remove('hideNames')
-      } else {
-        glyphlist.classList.add('hideNames')
+    let glyphlists = samplesElement.querySelectorAll('.glyphlist')
+    if (glyphlists && glyphlists.length) {
+      for (let i = 0; i < glyphlists.length; ++i) {
+        if (v >= 36) {
+          glyphlists[i].classList.remove('hideNames')
+        } else {
+          glyphlists[i].classList.add('hideNames')
+        }
       }
     }
     // setCSSProp('line-height', Math.ceil(v * 1.5) + 'px')
