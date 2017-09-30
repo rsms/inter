@@ -28,6 +28,13 @@ else
   set -e
   cd "$SRCDIR"
 
+  if [[ "$1" == "-h" ]] || [[ "$1" == "-help" ]] || [[ "$1" == "--help" ]]; then
+    echo "usage: $0 [options]" >&2
+    echo "options:" >&2
+    echo "  -f  Force generation of build/etc/generated.make" >&2
+    exit 1
+  fi
+
   # ————————————————————————————————————————————————————————————————————————————————————————————————
   # virtualenv
 
@@ -202,7 +209,9 @@ else
 
   # Only generate if there are changes to the font sources
   NEED_GENERATE=false
-  if [[ ! -f "$GEN_MAKE_FILE" ]] || [[ "$0" -nt "$GEN_MAKE_FILE" ]]; then
+  if [[ "$1" == "-f" ]]; then
+    NEED_GENERATE=true
+  elif [[ ! -f "$GEN_MAKE_FILE" ]] || [[ "$0" -nt "$GEN_MAKE_FILE" ]]; then
     NEED_GENERATE=true
   else
     for style in "${master_styles[@]}"; do
