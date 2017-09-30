@@ -358,6 +358,12 @@
 		<string>parenleft</string>
 		<string>braceleft</string>
 	</array>
+	<key>@KERN_LEFT_braceleft.case</key>
+	<array>
+		<string>bracketleft.case</string>
+		<string>parenleft.case</string>
+		<string>braceleft.case</string>
+	</array>
 	<key>@KERN_LEFT_c</key>
 	<array>
 		<string>c</string>
@@ -380,7 +386,6 @@
 		<string>ellipsis</string>
 		<string>comma</string>
 		<string>period</string>
-		<string>period.num</string>
 	</array>
 	<key>@KERN_LEFT_dagger</key>
 	<array>
@@ -454,7 +459,6 @@
 	<array>
 		<string>eight</string>
 		<string>three</string>
-		<string>three.tnum</string>
 	</array>
 	<key>@KERN_LEFT_eightsub</key>
 	<array>
@@ -558,10 +562,8 @@
 	<array>
 		<string>zero</string>
 		<string>zero.slash</string>
-		<string>zero.tnum</string>
 		<string>nine</string>
 		<string>nine.1</string>
-		<string>nine.tnum.1</string>
 	</array>
 	<key>@KERN_LEFT_ohorn</key>
 	<array>
@@ -931,6 +933,12 @@
 		<string>bracketright</string>
 		<string>braceright</string>
 	</array>
+	<key>@KERN_RIGHT_braceright.case</key>
+	<array>
+		<string>parenright.case</string>
+		<string>bracketright.case</string>
+		<string>braceright.case</string>
+	</array>
 	<key>@KERN_RIGHT_c</key>
 	<array>
 		<string>dzcaron</string>
@@ -990,7 +998,6 @@
 		<string>ellipsis</string>
 		<string>comma</string>
 		<string>period</string>
-		<string>period.num</string>
 	</array>
 	<key>@KERN_RIGHT_dagger</key>
 	<array>
@@ -1201,11 +1208,8 @@
 	<array>
 		<string>zero</string>
 		<string>zero.slash</string>
-		<string>zero.tnum</string>
 		<string>six</string>
 		<string>six.1</string>
-		<string>six.tnum</string>
-		<string>six.tnum.1</string>
 	</array>
 	<key>@KERN_RIGHT_t</key>
 	<array>

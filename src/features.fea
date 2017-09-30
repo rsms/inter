@@ -883,8 +883,6 @@ feature calt {
   ignore sub less' @ARROW_DASH_CASE' @NUM;
   sub less' @ARROW_DASH' by arrowleftlong;
   sub less' @ARROW_DASH_CASE' by arrowleftlong.case;
-
-  sub period' @NUM by period.num;
 } calt;
 
 # Stylistic set 1: open digits

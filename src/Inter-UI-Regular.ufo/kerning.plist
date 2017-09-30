@@ -209,6 +209,8 @@
 		<integer>-96</integer>
 		<key>@KERN_RIGHT_Z</key>
 		<integer>-83</integer>
+		<key>@KERN_RIGHT_braceright.case</key>
+		<integer>-64</integer>
 		<key>@KERN_RIGHT_comma</key>
 		<integer>-125</integer>
 		<key>@KERN_RIGHT_dagger</key>
@@ -394,6 +396,8 @@
 		<integer>-40</integer>
 		<key>@KERN_RIGHT_Y</key>
 		<integer>-41</integer>
+		<key>@KERN_RIGHT_braceright.case</key>
+		<integer>-32</integer>
 		<key>slash</key>
 		<integer>-42</integer>
 	</dict>
@@ -1764,6 +1768,11 @@
 		<integer>-29</integer>
 		<key>zeta</key>
 		<integer>-29</integer>
+	</dict>
+	<key>@KERN_LEFT_braceleft.case</key>
+	<dict>
+		<key>@KERN_RIGHT_C</key>
+		<integer>-64</integer>
 	</dict>
 	<key>@KERN_LEFT_c</key>
 	<dict>
@@ -4739,8 +4748,6 @@
 		<integer>-176</integer>
 		<key>nine.1</key>
 		<integer>-64</integer>
-		<key>period.num</key>
-		<integer>-302</integer>
 		<key>seven</key>
 		<integer>-103</integer>
 		<key>slash</key>
@@ -4802,33 +4809,6 @@
 		<integer>-144</integer>
 		<key>one</key>
 		<integer>-144</integer>
-		<key>six</key>
-		<integer>-112</integer>
-		<key>six.1</key>
-		<integer>-112</integer>
-		<key>three</key>
-		<integer>-96</integer>
-		<key>zero</key>
-		<integer>-110</integer>
-	</dict>
-	<key>period.num</key>
-	<dict>
-		<key>eight</key>
-		<integer>-96</integer>
-		<key>five</key>
-		<integer>-80</integer>
-		<key>four</key>
-		<integer>0</integer>
-		<key>four.1</key>
-		<integer>0</integer>
-		<key>nine</key>
-		<integer>-32</integer>
-		<key>nine.1</key>
-		<integer>-144</integer>
-		<key>one</key>
-		<integer>-112</integer>
-		<key>seven</key>
-		<integer>-64</integer>
 		<key>six</key>
 		<integer>-112</integer>
 		<key>six.1</key>
