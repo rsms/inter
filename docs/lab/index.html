@@ -930,6 +930,8 @@ samples {
     sample .glyphlist {
       display: flex;
       flex-wrap: wrap;
+      letter-spacing:0;
+      line-height: normal;
     }
       sample .glyphlist g {
         margin:1px;
@@ -957,6 +959,8 @@ samples {
         flex: 0 0 auto;
         font-size:9px;
         color: rgba(0,0,0,0.3);
+        font-weight: 400;
+        padding-bottom:2px;
         /*height: 16px;*/
       }
       sample .glyphlist.hideNames g span.name {
@@ -1501,8 +1505,12 @@ function main() {
       }
     }
 
-    if (sizeVar && v == 'Repertoire') {
-      sizeVar.refreshValue(null)
+    if (v == 'Repertoire') {
+      requestAnimationFrame(() => {
+        if (sizeVar) {
+          sizeVar.refreshValue(null)
+        }
+      })
     }
   })
 
