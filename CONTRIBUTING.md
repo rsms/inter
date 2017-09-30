@@ -60,9 +60,6 @@ the build system and watch out for "mixglyph" error messages. They look like thi
 mixglyph failed for J
 ```
 
-> Note: There's currently one intentional mixglyph error for "quotedblbase" —
-> please ignore this for now (also, feel free to fix it :) )
-
 
 ### Generated glyphs
 
