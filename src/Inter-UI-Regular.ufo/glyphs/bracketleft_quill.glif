@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni2046" format="1">
-  <advance width="736"/>
-  <unicode hex="2046"/>
+<glyph name="bracketleft_quill" format="1">
+  <advance width="992"/>
+  <unicode hex="2045"/>
   <outline>
     <contour>
-      <point x="528" y="1048" type="line"/>
-      <point x="128" y="1048" type="line"/>
-      <point x="128" y="828" type="line"/>
-      <point x="528" y="828" type="line"/>
+      <point x="628" y="1008" type="line"/>
+      <point x="240" y="1008" type="line"/>
+      <point x="240" y="788" type="line"/>
+      <point x="628" y="788" type="line"/>
     </contour>
-    <component base="bracketright" xOffset="112"/>
+    <component base="bracketleft" xOffset="-12"/>
   </outline>
   <lib>
     <dict>
@@ -21,7 +21,7 @@
         <real>1.0</real>
       </array>
       <key>interface.gridadjust.original</key>
-      <string>{'width': 891.0, 'leftMargin': 107, 'rightMargin': 272.0}</string>
+      <string>{'width': 890, 'leftMargin': 289, 'rightMargin': 85}</string>
       <key>interface.width-adjustments</key>
       <array>
         <integer>-16</integer>
