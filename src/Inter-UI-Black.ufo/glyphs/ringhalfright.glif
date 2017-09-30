@@ -4,12 +4,6 @@
   <unicode hex="02BE"/>
   <outline>
     <contour>
-      <point x="172" y="1652" type="move" name="_top"/>
-    </contour>
-    <contour>
-      <point x="-112" y="1624" type="move" name="_rhalfring"/>
-    </contour>
-    <contour>
       <point x="112" y="1576" type="line"/>
       <point x="276" y="1576"/>
       <point x="400" y="1684"/>
@@ -24,6 +18,12 @@
       <point x="236" y="1756"/>
       <point x="188" y="1704"/>
       <point x="112" y="1704" type="curve"/>
+    </contour>
+    <contour>
+      <point x="172.0" y="1652.0" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="242" y="1624" type="move" name="_rhalfring"/>
     </contour>
   </outline>
   <lib>

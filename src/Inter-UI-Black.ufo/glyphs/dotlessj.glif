@@ -18,19 +18,13 @@
       <point x="776" y="1536" type="line"/>
     </contour>
     <contour>
-      <point x="452.0" y="2200.0" type="move" name="top"/>
+      <point x="544" y="1744" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="408.0" y="-632.0" type="move" name="bottom"/>
+      <point x="768" y="0" type="move" name="_right"/>
     </contour>
     <contour>
-      <point x="900.0" y="2200.0" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="900.0" y="-560.0" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="900.0" y="2200.0" type="move" name="top0315"/>
+      <point x="948" y="1744" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
@@ -39,27 +33,17 @@
       <array>
         <dict>
           <key>angle</key>
-          <real>0.0</real>
+          <real>90.0</real>
           <key>isGlobal</key>
           <false/>
           <key>magnetic</key>
           <integer>5</integer>
+          <key>name</key>
+          <string></string>
           <key>x</key>
-          <real>0.0</real>
+          <integer>544</integer>
           <key>y</key>
-          <real>906.125</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1381.875</real>
+          <integer>1416</integer>
         </dict>
       </array>
       <key>com.typemytype.robofont.mark</key>
