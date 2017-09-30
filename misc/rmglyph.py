@@ -79,7 +79,7 @@ def getGlyphNamesFont(font, ucmap, glyphs):
         # range, e.g. "U+1D0A-1DBC"
         cpStart = int(s[2:p], 16)
         cpEnd = int(s[p+1:], 16)
-        for cp in range(cpStart, cpEnd):
+        for cp in range(cpStart, cpEnd+1):
           addGlyphsForCPFont(cp, ucmap, glyphnames)
       else:
         # single code point e.g. "U+1D0A"
@@ -110,7 +110,7 @@ def getGlyphNamesComps(comps, agl, glyphs):
         # range, e.g. "U+1D0A-1DBC"
         cpStart = int(s[2:p], 16)
         cpEnd = int(s[p+1:], 16)
-        for cp in range(cpStart, cpEnd):
+        for cp in range(cpStart, cpEnd+1):
           addGlyphsForCPComps(cp, comps, agl, glyphnames)
       else:
         # single code point e.g. "U+1D0A"
