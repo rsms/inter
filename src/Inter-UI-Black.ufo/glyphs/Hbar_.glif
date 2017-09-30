@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Hbar" format="1">
-  <advance width="2048"/>
+  <advance width="1920"/>
   <unicode hex="0126"/>
   <outline>
     <contour>
-      <point x="1024.0" y="2200.0" type="move" name="top"/>
+      <point x="1944" y="1708" type="line"/>
+      <point x="-24" y="1708" type="line"/>
+      <point x="-24" y="1460" type="line"/>
+      <point x="1944" y="1460" type="line"/>
+    </contour>
+    <component base="H"/>
+    <contour>
+      <point x="960" y="2200" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1024.0" y="16.0" type="move" name="bottom"/>
+      <point x="960" y="16" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="2040.0" y="2200.0" type="move" name="top0315"/>
+      <point x="1976" y="2200" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="2008" y="1708" type="line"/>
-      <point x="40" y="1708" type="line"/>
-      <point x="40" y="1460" type="line"/>
-      <point x="2008" y="1460" type="line"/>
-    </contour>
-    <component base="H" xOffset="64"/>
   </outline>
   <lib>
     <dict>
