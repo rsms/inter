@@ -967,9 +967,6 @@ samples {
       sample .glyphlist.hideNames g span.name {
         display:none;
       }
-      /*sample .glyphlist.hideNames g span.glyph {
-        margin-top:0;
-      }*/
 
 body.secondarySampleDisabled .showOnlyWithSecondarySample {
   display: none;
@@ -1103,13 +1100,15 @@ document.head.appendChild(fontCSS)
         <label style="display:inline-block; margin-left:4px"><input type="checkbox" name="italic"> <em>Italic</em></label>
       </label>
 
-      <label class="label-and-value repertoireOrder">
-      <span>Repertoire order:</span>
-      <select name="repertoireOrder">
-        <option value="" selected>Original</option>
-        <option value="u">Unicode</option>
-      </select>
-      </label>
+      <div class="checkbox-group repertoireControl">
+        <label class="label-and-value">
+          <span>Repertoire order:</span>
+          <select name="repertoireOrder">
+            <option value="" selected>Original</option>
+            <option value="u">Unicode</option>
+          </select>
+        </label>
+      </div>
 
       <label class="label-and-value">
       <span>Anti-alias:</span>
@@ -1465,10 +1464,29 @@ function main() {
   const primaryFontElements =
     Array.prototype.slice.call(document.querySelectorAll('.primaryFont'))
 
-  const repertoireOrderControl = document.querySelector('label.repertoireOrder')
+  const repertoireControl = document.querySelector('.repertoireControl')
   const samplesElement = document.querySelector('samples')
 
   let sizeVar = null
+
+  function forEachGlyphlist(fn) {
+    let elements = samplesElement.querySelectorAll('.glyphlist')
+    if (elements) {
+      for (let i = 0; i < elements.length; ++i) {
+        fn(elements[i], i)
+      }
+    }
+  }
+
+  function setGlyphlistClass(className, add) {
+    forEachGlyphlist(gl => {
+      if (add) {
+        gl.classList.add(className)
+      } else {
+        gl.classList.remove(className)
+      }
+    })
+  }
 
   // sample text
   const samplesSelect = document.querySelector('select[name="sample"]')
@@ -1489,9 +1507,9 @@ function main() {
     }
 
     if (v == 'Repertoire') {
-      repertoireOrderControl.style.display = null
+      repertoireControl.style.display = null
     } else {
-      repertoireOrderControl.style.display = 'none'
+      repertoireControl.style.display = 'none'
     }
 
     if (typeof sampleText == 'object' && sampleText.toHTML) {
@@ -1573,16 +1591,7 @@ function main() {
   sizeVar = vars.bind('size', (e, v) => {
     boxes.style.display = (v > 20) ? 'none' : null
     setCSSProp('font-size', v + 'px')
-    let glyphlists = samplesElement.querySelectorAll('.glyphlist')
-    if (glyphlists && glyphlists.length) {
-      for (let i = 0; i < glyphlists.length; ++i) {
-        if (v >= 36) {
-          glyphlists[i].classList.remove('hideNames')
-        } else {
-          glyphlists[i].classList.add('hideNames')
-        }
-      }
-    }
+    setGlyphlistClass('hideNames', v < 36)
     // setCSSProp('line-height', Math.ceil(v * 1.5) + 'px')
   })
 
