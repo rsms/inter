@@ -1,7 +1,15 @@
 include(../features.fea);
 
-@TNUM_L = [one two seven four.1 six.1 nine.1];
-@TNUM_R = [one.tnum two.tnum seven.tnum four.tnum.1 six.tnum.1 nine.tnum.1];
+@TNUM_L = [
+  one two seven
+  four.1 six.1 nine.1
+  period comma
+];
+@TNUM_R = [
+  one.tnum two.tnum seven.tnum
+  four.tnum.1 six.tnum.1 nine.tnum.1
+  period.tnum comma.tnum
+];
 
 feature tnum {
   sub @TNUM_L by @TNUM_R;
