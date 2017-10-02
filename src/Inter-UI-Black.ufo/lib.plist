@@ -178,6 +178,20 @@
 			<key>y</key>
 			<integer>384</integer>
 		</dict>
+		<dict>
+			<key>angle</key>
+			<integer>0</integer>
+			<key>isGlobal</key>
+			<true/>
+			<key>magnetic</key>
+			<integer>5</integer>
+			<key>name</key>
+			<string></string>
+			<key>x</key>
+			<integer>1624</integer>
+			<key>y</key>
+			<integer>-576</integer>
+		</dict>
 	</array>
 	<key>com.typemytype.robofont.italicSlantOffset</key>
 	<integer>0</integer>
@@ -224,7 +238,7 @@
 				<string>K</string>
 				<string>Kacyr</string>
 				<string>L</string>
-				<string>Lslash</string>
+				<string>L_slash</string>
 				<string>M</string>
 				<string>uni04CD</string>
 				<string>N</string>
@@ -319,6 +333,7 @@
 				<string>g</string>
 				<string>h</string>
 				<string>hcedilla</string>
+				<string>hturnhook2</string>
 				<string>dotlessi</string>
 				<string>i</string>
 				<string>idieresisacute</string>
@@ -328,6 +343,7 @@
 				<string>k</string>
 				<string>l</string>
 				<string>lslash</string>
+				<string>lrthook</string>
 				<string>m</string>
 				<string>n</string>
 				<string>o</string>
@@ -456,6 +472,7 @@
 				<string>cedi</string>
 				<string>cruzeiro</string>
 				<string>tugrik</string>
+				<string>uni20AF</string>
 				<string>mill</string>
 				<string>afii57636</string>
 				<string>manat</string>
@@ -778,12 +795,12 @@
 				<string>degreefarenheit</string>
 				<string>Upsilon2</string>
 				<string>degreekelvin</string>
-				<string>uni02AE</string>
+				<string>hturnlthook</string>
 				<string>uni02AB</string>
 				<string>uni02AC</string>
 				<string>uni1FCD</string>
 				<string>kappa1</string>
-				<string>uni02A9</string>
+				<string>feng</string>
 				<string>onethird</string>
 				<string>vturn</string>
 				<string>uni2159</string>
@@ -835,7 +852,7 @@
 				<string>undertie</string>
 				<string>barmidshortnosp</string>
 				<string>glottalstoprevinv</string>
-				<string>uni023D</string>
+				<string>L_bar</string>
 				<string>uni037C</string>
 				<string>uni037B</string>
 				<string>uni037D</string>
@@ -956,7 +973,7 @@
 				<string>uni1E9D</string>
 				<string>uni1E9F</string>
 				<string>slongdotaccent</string>
-				<string>uni1E9C</string>
+				<string>slongstroke</string>
 				<string>Dtopbar</string>
 				<string>uni1EFE</string>
 				<string>uni1EFD</string>
@@ -1027,7 +1044,7 @@
 				<string>uni0220</string>
 				<string>uni0223</string>
 				<string>uni035F</string>
-				<string>uni0225</string>
+				<string>zhook</string>
 				<string>uni0224</string>
 				<string>uni035C</string>
 				<string>uni035B</string>
@@ -1097,9 +1114,9 @@
 				<string>perispomenigreekcmb</string>
 				<string>koroniscmb</string>
 				<string>uni0347</string>
-				<string>uni0236</string>
-				<string>uni0234</string>
-				<string>uni0235</string>
+				<string>tcurl</string>
+				<string>lcurl</string>
+				<string>ncurl</string>
 				<string>nlfthook</string>
 				<string>uni0238</string>
 				<string>uni0239</string>
@@ -1134,7 +1151,6 @@
 				<string>phi1</string>
 				<string>uni02E5_uni02E5_uni02E8</string>
 				<string>uni02E5_uni02E5_uni02E9</string>
-				<string>phook.cn</string>
 				<string>breveacutecomb</string>
 				<string>mhook</string>
 				<string>wynn</string>
@@ -1148,7 +1164,6 @@
 				<string>hyphen__</string>
 				<string>uni02E5_uni02E9_uni02E8</string>
 				<string>uni02E5_uni02E9_uni02E9</string>
-				<string>lrthook</string>
 				<string>diaeresistonosnosp</string>
 				<string>stigma</string>
 				<string>afii57596</string>
@@ -1159,8 +1174,8 @@
 				<string>romanfivehundred</string>
 				<string>uni0069.ccmp</string>
 				<string>caret</string>
-				<string>uni024B</string>
-				<string>uni024A</string>
+				<string>qrthook</string>
+				<string>Q_rthook</string>
 				<string>uni024F</string>
 				<string>uni024E</string>
 				<string>uni024D</string>
@@ -1197,7 +1212,6 @@
 				<string>uni02FA</string>
 				<string>uni02FC</string>
 				<string>uni02FB</string>
-				<string>dhook.cn</string>
 				<string>uni2185.cn</string>
 				<string>angstrom</string>
 				<string>macrongravecomb.lc</string>
@@ -1226,7 +1240,6 @@
 				<string>Esh</string>
 				<string>zero.sup</string>
 				<string>acutedotcomb</string>
-				<string>ghook.cn</string>
 				<string>uni02E7_uni02E6_uni02E5</string>
 				<string>uni02E7_uni02E6_uni02E7</string>
 				<string>uni02E7_uni02E6_uni02E6</string>
@@ -1265,7 +1278,6 @@
 				<string>uni037D.cn</string>
 				<string>macronacutecomb.lc</string>
 				<string>c.cn</string>
-				<string>Oopen.cn</string>
 				<string>oopen_uni02DE</string>
 				<string>four.frac</string>
 				<string>hhook</string>
@@ -1305,7 +1317,6 @@
 				<string>uniFE28</string>
 				<string>hooksubretronosp</string>
 				<string>circumflexhookcomb</string>
-				<string>qhook.cn</string>
 				<string>ghook</string>
 				<string>Eturn</string>
 				<string>primerev1</string>
@@ -1314,7 +1325,6 @@
 				<string>trthook</string>
 				<string>uni02E5_uni02E6</string>
 				<string>twodotleader</string>
-				<string>Chook.cn</string>
 				<string>uni02E8_uni02E6</string>
 				<string>uni02E8_uni02E7</string>
 				<string>uni02E8_uni02E5</string>
@@ -1364,8 +1374,7 @@
 				<string>uni1DE9</string>
 				<string>nine.sup</string>
 				<string>kturn</string>
-				<string>uni20AF</string>
-				<string>Ibar</string>
+				<string>Istroke</string>
 				<string>Omegaroundcyrillic</string>
 				<string>omegaroundcyrillic</string>
 				<string>Omegatitlocyrillic</string>
@@ -1454,7 +1463,6 @@
 				<string>tildemacroncomb</string>
 				<string>uni0221</string>
 				<string>gamma1</string>
-				<string>bhook.cn</string>
 				<string>pipedblbar</string>
 				<string>YR</string>
 				<string>kgreenlandic</string>
@@ -1590,7 +1598,6 @@
 				<string>uniFE2B</string>
 				<string>uniFE2C</string>
 				<string>uniFE2D</string>
-				<string>finalnun</string>
 				<string>brevehookcomb</string>
 				<string>gammasuper</string>
 				<string>chook</string>
@@ -1629,7 +1636,6 @@
 				<string>uni1DEB</string>
 				<string>pipedbl</string>
 				<string>yhook</string>
-				<string>chook.cn</string>
 				<string>uni029D.ccmp</string>
 				<string>wturn</string>
 				<string>hv</string>
@@ -1692,7 +1698,7 @@
 		<string>K</string>
 		<string>Kacyr</string>
 		<string>L</string>
-		<string>Lslash</string>
+		<string>L_slash</string>
 		<string>M</string>
 		<string>uni04CD</string>
 		<string>N</string>
@@ -1787,6 +1793,7 @@
 		<string>g</string>
 		<string>h</string>
 		<string>hcedilla</string>
+		<string>hturnhook2</string>
 		<string>dotlessi</string>
 		<string>i</string>
 		<string>idieresisacute</string>
@@ -1796,6 +1803,7 @@
 		<string>k</string>
 		<string>l</string>
 		<string>lslash</string>
+		<string>lrthook</string>
 		<string>m</string>
 		<string>n</string>
 		<string>o</string>
@@ -1924,6 +1932,7 @@
 		<string>cedi</string>
 		<string>cruzeiro</string>
 		<string>tugrik</string>
+		<string>uni20AF</string>
 		<string>mill</string>
 		<string>afii57636</string>
 		<string>manat</string>
@@ -2246,12 +2255,12 @@
 		<string>degreefarenheit</string>
 		<string>Upsilon2</string>
 		<string>degreekelvin</string>
-		<string>uni02AE</string>
+		<string>hturnlthook</string>
 		<string>uni02AB</string>
 		<string>uni02AC</string>
 		<string>uni1FCD</string>
 		<string>kappa1</string>
-		<string>uni02A9</string>
+		<string>feng</string>
 		<string>onethird</string>
 		<string>vturn</string>
 		<string>uni2159</string>
@@ -2303,7 +2312,7 @@
 		<string>undertie</string>
 		<string>barmidshortnosp</string>
 		<string>glottalstoprevinv</string>
-		<string>uni023D</string>
+		<string>L_bar</string>
 		<string>uni037C</string>
 		<string>uni037B</string>
 		<string>uni037D</string>
@@ -2424,7 +2433,7 @@
 		<string>uni1E9D</string>
 		<string>uni1E9F</string>
 		<string>slongdotaccent</string>
-		<string>uni1E9C</string>
+		<string>slongstroke</string>
 		<string>Dtopbar</string>
 		<string>uni1EFE</string>
 		<string>uni1EFD</string>
@@ -2495,7 +2504,7 @@
 		<string>uni0220</string>
 		<string>uni0223</string>
 		<string>uni035F</string>
-		<string>uni0225</string>
+		<string>zhook</string>
 		<string>uni0224</string>
 		<string>uni035C</string>
 		<string>uni035B</string>
@@ -2565,9 +2574,9 @@
 		<string>perispomenigreekcmb</string>
 		<string>koroniscmb</string>
 		<string>uni0347</string>
-		<string>uni0236</string>
-		<string>uni0234</string>
-		<string>uni0235</string>
+		<string>tcurl</string>
+		<string>lcurl</string>
+		<string>ncurl</string>
 		<string>nlfthook</string>
 		<string>uni0238</string>
 		<string>uni0239</string>
@@ -2602,7 +2611,6 @@
 		<string>phi1</string>
 		<string>uni02E5_uni02E5_uni02E8</string>
 		<string>uni02E5_uni02E5_uni02E9</string>
-		<string>phook.cn</string>
 		<string>breveacutecomb</string>
 		<string>mhook</string>
 		<string>wynn</string>
@@ -2616,7 +2624,6 @@
 		<string>hyphen__</string>
 		<string>uni02E5_uni02E9_uni02E8</string>
 		<string>uni02E5_uni02E9_uni02E9</string>
-		<string>lrthook</string>
 		<string>diaeresistonosnosp</string>
 		<string>stigma</string>
 		<string>afii57596</string>
@@ -2627,8 +2634,8 @@
 		<string>romanfivehundred</string>
 		<string>uni0069.ccmp</string>
 		<string>caret</string>
-		<string>uni024B</string>
-		<string>uni024A</string>
+		<string>qrthook</string>
+		<string>Q_rthook</string>
 		<string>uni024F</string>
 		<string>uni024E</string>
 		<string>uni024D</string>
@@ -2665,7 +2672,6 @@
 		<string>uni02FA</string>
 		<string>uni02FC</string>
 		<string>uni02FB</string>
-		<string>dhook.cn</string>
 		<string>uni2185.cn</string>
 		<string>angstrom</string>
 		<string>macrongravecomb.lc</string>
@@ -2694,7 +2700,6 @@
 		<string>Esh</string>
 		<string>zero.sup</string>
 		<string>acutedotcomb</string>
-		<string>ghook.cn</string>
 		<string>uni02E7_uni02E6_uni02E5</string>
 		<string>uni02E7_uni02E6_uni02E7</string>
 		<string>uni02E7_uni02E6_uni02E6</string>
@@ -2733,7 +2738,6 @@
 		<string>uni037D.cn</string>
 		<string>macronacutecomb.lc</string>
 		<string>c.cn</string>
-		<string>Oopen.cn</string>
 		<string>oopen_uni02DE</string>
 		<string>four.frac</string>
 		<string>hhook</string>
@@ -2773,7 +2777,6 @@
 		<string>uniFE28</string>
 		<string>hooksubretronosp</string>
 		<string>circumflexhookcomb</string>
-		<string>qhook.cn</string>
 		<string>ghook</string>
 		<string>Eturn</string>
 		<string>primerev1</string>
@@ -2782,7 +2785,6 @@
 		<string>trthook</string>
 		<string>uni02E5_uni02E6</string>
 		<string>twodotleader</string>
-		<string>Chook.cn</string>
 		<string>uni02E8_uni02E6</string>
 		<string>uni02E8_uni02E7</string>
 		<string>uni02E8_uni02E5</string>
@@ -2832,8 +2834,7 @@
 		<string>uni1DE9</string>
 		<string>nine.sup</string>
 		<string>kturn</string>
-		<string>uni20AF</string>
-		<string>Ibar</string>
+		<string>Istroke</string>
 		<string>Omegaroundcyrillic</string>
 		<string>omegaroundcyrillic</string>
 		<string>Omegatitlocyrillic</string>
@@ -2922,7 +2923,6 @@
 		<string>tildemacroncomb</string>
 		<string>uni0221</string>
 		<string>gamma1</string>
-		<string>bhook.cn</string>
 		<string>pipedblbar</string>
 		<string>YR</string>
 		<string>kgreenlandic</string>
@@ -3058,7 +3058,6 @@
 		<string>uniFE2B</string>
 		<string>uniFE2C</string>
 		<string>uniFE2D</string>
-		<string>finalnun</string>
 		<string>brevehookcomb</string>
 		<string>gammasuper</string>
 		<string>chook</string>
@@ -3097,7 +3096,6 @@
 		<string>uni1DEB</string>
 		<string>pipedbl</string>
 		<string>yhook</string>
-		<string>chook.cn</string>
 		<string>uni029D.ccmp</string>
 		<string>wturn</string>
 		<string>hv</string>

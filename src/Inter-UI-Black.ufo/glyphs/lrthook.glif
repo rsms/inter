@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lrthook" format="1">
-  <advance width="1024"/>
+  <advance width="716"/>
   <unicode hex="026D"/>
   <outline>
+    <contour>
+      <point x="588" y="184" type="line"/>
+      <point x="128" y="184" type="line"/>
+      <point x="128" y="-80" type="line" smooth="yes"/>
+      <point x="128" y="-516"/>
+      <point x="428" y="-576"/>
+      <point x="668" y="-576" type="curve" smooth="yes"/>
+      <point x="768" y="-576"/>
+      <point x="844" y="-568"/>
+      <point x="900" y="-560" type="curve"/>
+      <point x="900" y="-212" type="line"/>
+      <point x="868" y="-216"/>
+      <point x="832" y="-220"/>
+      <point x="792" y="-220" type="curve" smooth="yes"/>
+      <point x="688" y="-220"/>
+      <point x="588" y="-192"/>
+      <point x="588" y="-80" type="curve" smooth="yes"/>
+    </contour>
+    <component base="l"/>
     <contour>
       <point x="336" y="2200" type="move" name="top"/>
     </contour>
@@ -11,24 +30,6 @@
     </contour>
     <contour>
       <point x="908" y="2200" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="120" y="2112" type="line"/>
-      <point x="120" y="-108" type="line" smooth="yes"/>
-      <point x="120" y="-548"/>
-      <point x="432" y="-600"/>
-      <point x="672" y="-600" type="curve" smooth="yes"/>
-      <point x="772" y="-600"/>
-      <point x="840" y="-592"/>
-      <point x="908" y="-580" type="curve"/>
-      <point x="908" y="-284" type="line"/>
-      <point x="868" y="-288"/>
-      <point x="836" y="-292"/>
-      <point x="796" y="-292" type="curve" smooth="yes"/>
-      <point x="692" y="-292"/>
-      <point x="564" y="-256"/>
-      <point x="564" y="-108" type="curve" smooth="yes"/>
-      <point x="564" y="2112" type="line"/>
     </contour>
   </outline>
   <lib>

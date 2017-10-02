@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zbar" format="1">
-  <advance width="1536"/>
+  <advance width="1512"/>
   <unicode hex="01B6"/>
   <outline>
-    <contour>
-      <point x="1312" y="896" type="line"/>
-      <point x="224" y="896" type="line"/>
-      <point x="224" y="636" type="line"/>
-      <point x="1312" y="636" type="line"/>
-    </contour>
-    <component base="z" xOffset="48"/>
+    <component base="z"/>
+    <component base="crossbar" xOffset="116" yOffset="-244"/>
     <contour>
       <point x="768" y="1776" type="move" name="top"/>
     </contour>

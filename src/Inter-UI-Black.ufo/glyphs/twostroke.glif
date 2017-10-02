@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="twostroke" format="1">
-  <advance width="1792"/>
+  <advance width="1664"/>
   <unicode hex="01BB"/>
   <outline>
-    <contour>
-      <point x="1608" y="1160" type="line"/>
-      <point x="356" y="1160" type="line"/>
-      <point x="356" y="896" type="line"/>
-      <point x="1608" y="896" type="line"/>
-    </contour>
     <component base="two"/>
+    <component base="crossbar" xOffset="400"/>
   </outline>
   <lib>
     <dict>

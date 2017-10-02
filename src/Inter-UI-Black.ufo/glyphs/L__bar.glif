@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="L_bar" format="1">
+  <advance width="1792"/>
+  <unicode hex="023D"/>
+  <outline>
+    <component base="crossbar" xOffset="-60"/>
+    <component base="L" xOffset="232"/>
+    <contour>
+      <point x="608.0" y="2200.0" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1760.0" y="2200.0" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="924.0" y="16.0" type="move" name="bottom"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1653, 'leftMargin': -20, 'rightMargin': 53}</string>
+    </dict>
+  </lib>
+</glyph>

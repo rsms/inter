@@ -5,6 +5,7 @@
 	<key>@KERN_LEFT_A</key>
 	<array>
 		<string>A</string>
+		<string>uni023A</string>
 		<string>Agrave</string>
 		<string>Aacute</string>
 		<string>Acircumflex</string>
@@ -31,21 +32,28 @@
 	<key>@KERN_LEFT_B</key>
 	<array>
 		<string>B</string>
+		<string>uni0243</string>
+		<string>Bhook</string>
 	</array>
 	<key>@KERN_LEFT_C</key>
 	<array>
 		<string>C</string>
+		<string>coloncurrency</string>
+		<string>cedi</string>
 		<string>Ccedilla</string>
 		<string>Cacute</string>
 		<string>Ccircumflex</string>
 		<string>Ccaron</string>
+		<string>uni023B</string>
 	</array>
 	<key>@KERN_LEFT_D</key>
 	<array>
 		<string>Oslash</string>
 		<string>D</string>
+		<string>Dhook</string>
 		<string>Q</string>
 		<string>O</string>
+		<string>Oopen</string>
 		<string>Eth</string>
 		<string>Ograve</string>
 		<string>Oacute</string>
@@ -68,6 +76,7 @@
 	<key>@KERN_LEFT_E</key>
 	<array>
 		<string>E</string>
+		<string>uni0246</string>
 		<string>OE</string>
 		<string>Egrave</string>
 		<string>Eacute</string>
@@ -95,10 +104,13 @@
 	<key>@KERN_LEFT_F</key>
 	<array>
 		<string>F</string>
+		<string>Fhook</string>
 	</array>
 	<key>@KERN_LEFT_G</key>
 	<array>
 		<string>G</string>
+		<string>guarani</string>
+		<string>Ghook</string>
 		<string>Gcircumflex</string>
 		<string>Gbreve</string>
 		<string>Gcommaaccent</string>
@@ -118,7 +130,13 @@
 		<string>l</string>
 		<string>M</string>
 		<string>N</string>
+		<string>Eng</string>
+		<string>Nhook</string>
 		<string>H</string>
+		<string>afii10026</string>
+		<string>uni0376</string>
+		<string>Enhookcyrillic</string>
+		<string>uni01F6</string>
 		<string>Igrave</string>
 		<string>Iacute</string>
 		<string>Icircumflex</string>
@@ -145,7 +163,9 @@
 	<key>@KERN_LEFT_IJacute</key>
 	<array>
 		<string>J</string>
+		<string>uni0248</string>
 		<string>U</string>
+		<string>uni0244</string>
 		<string>Ugrave</string>
 		<string>Uacute</string>
 		<string>Ucircumflex</string>
@@ -162,6 +182,7 @@
 	<key>@KERN_LEFT_K</key>
 	<array>
 		<string>K</string>
+		<string>Khook</string>
 		<string>Kcommaaccent</string>
 		<string>Kcaron</string>
 		<string>Kacyr</string>
@@ -172,6 +193,7 @@
 		<string>Lacute</string>
 		<string>Lcommaaccent</string>
 		<string>Lcaron</string>
+		<string>L_bar</string>
 	</array>
 	<key>@KERN_LEFT_Ohorn</key>
 	<array>
@@ -193,6 +215,7 @@
 	<key>@KERN_LEFT_R</key>
 	<array>
 		<string>R</string>
+		<string>uni024C</string>
 		<string>Racute</string>
 		<string>Rcommaaccent</string>
 		<string>Rcaron</string>
@@ -210,7 +233,10 @@
 	<key>@KERN_LEFT_T</key>
 	<array>
 		<string>T</string>
+		<string>Trthook</string>
+		<string>uni023E</string>
 		<string>Tcaron</string>
+		<string>Thook</string>
 	</array>
 	<key>@KERN_LEFT_Ucyrillic</key>
 	<array>
@@ -223,6 +249,7 @@
 	<key>@KERN_LEFT_V</key>
 	<array>
 		<string>V</string>
+		<string>Gamma1</string>
 	</array>
 	<key>@KERN_LEFT_Vecyrillic</key>
 	<array>
@@ -243,6 +270,7 @@
 	<key>@KERN_LEFT_Y</key>
 	<array>
 		<string>Y</string>
+		<string>Yhook</string>
 		<string>Yacute</string>
 		<string>Ycircumflex</string>
 		<string>Ydieresis</string>
@@ -251,6 +279,9 @@
 	<key>@KERN_LEFT_Z</key>
 	<array>
 		<string>Z</string>
+		<string>uni0224</string>
+		<string>Zbar</string>
+		<string>uni2C7F</string>
 		<string>Zacute</string>
 		<string>Zdotaccent</string>
 		<string>Zcaron</string>
@@ -260,8 +291,15 @@
 		<string>hcedilla</string>
 		<string>a</string>
 		<string>h</string>
+		<string>hhook</string>
+		<string>henghook</string>
 		<string>m</string>
+		<string>mhook</string>
 		<string>n</string>
+		<string>eng</string>
+		<string>feng</string>
+		<string>nlfthook</string>
+		<string>end</string>
 		<string>hbar</string>
 		<string>agrave</string>
 		<string>aacute</string>
@@ -289,7 +327,9 @@
 	<array>
 		<string>ae</string>
 		<string>e</string>
+		<string>uni0247</string>
 		<string>oe</string>
+		<string>tccurl</string>
 		<string>egrave</string>
 		<string>eacute</string>
 		<string>ecircumflex</string>
@@ -325,9 +365,11 @@
 	<array>
 		<string>oslash</string>
 		<string>b</string>
+		<string>bhook</string>
 		<string>thorn</string>
 		<string>o</string>
 		<string>p</string>
+		<string>phook</string>
 		<string>ograve</string>
 		<string>oacute</string>
 		<string>ocircumflex</string>
@@ -361,6 +403,7 @@
 	<key>@KERN_LEFT_c</key>
 	<array>
 		<string>c</string>
+		<string>chook</string>
 		<string>ccedilla</string>
 		<string>cacute</string>
 		<string>ccircumflex</string>
@@ -421,6 +464,7 @@
 	<array>
 		<string>idieresisacute</string>
 		<string>j</string>
+		<string>jcrosstail</string>
 		<string>dotlessj</string>
 		<string>dotlessi</string>
 		<string>itildebelow</string>
@@ -492,11 +536,16 @@
 	<key>@KERN_LEFT_f</key>
 	<array>
 		<string>f</string>
+		<string>slongstroke</string>
+		<string>yturn</string>
 	</array>
 	<key>@KERN_LEFT_g</key>
 	<array>
 		<string>g</string>
 		<string>q</string>
+		<string>mturndescend</string>
+		<string>hturn</string>
+		<string>hturnlthook</string>
 		<string>gcircumflex</string>
 		<string>gbreve</string>
 		<string>gcommaaccent</string>
@@ -536,6 +585,7 @@
 	<key>@KERN_LEFT_k</key>
 	<array>
 		<string>k</string>
+		<string>khook</string>
 		<string>kcommaaccent</string>
 		<string>kcaron</string>
 	</array>
@@ -587,13 +637,25 @@
 	<key>@KERN_LEFT_r</key>
 	<array>
 		<string>r</string>
+		<string>rfishhook</string>
+		<string>rrthook</string>
+		<string>uni024D</string>
 		<string>racute</string>
 		<string>rcommaaccent</string>
 		<string>rcaron</string>
 	</array>
+	<key>@KERN_LEFT_rthook</key>
+	<array>
+		<string>drthook</string>
+		<string>nrthook</string>
+		<string>qrthook</string>
+		<string>Q_rthook</string>
+		<string>hturnhook2</string>
+	</array>
 	<key>@KERN_LEFT_s</key>
 	<array>
 		<string>s</string>
+		<string>srthook</string>
 		<string>sacute</string>
 		<string>scircumflex</string>
 		<string>scedilla</string>
@@ -604,10 +666,12 @@
 	<array>
 		<string>t</string>
 		<string>tcaron</string>
+		<string>tpalatalhook</string>
 	</array>
 	<key>@KERN_LEFT_u</key>
 	<array>
 		<string>u</string>
+		<string>mturn</string>
 		<string>ugrave</string>
 		<string>uacute</string>
 		<string>ucircumflex</string>
@@ -620,15 +684,6 @@
 		<string>uogonek</string>
 		<string>ucaron</string>
 	</array>
-	<key>@KERN_LEFT_u01C5</key>
-	<array>
-		<string>Dzcaron_</string>
-		<string>dzcaron</string>
-		<string>z</string>
-		<string>zacute</string>
-		<string>zdotaccent</string>
-		<string>zcaron</string>
-	</array>
 	<key>@KERN_LEFT_uhorn</key>
 	<array>
 		<string>uhorn</string>
@@ -636,7 +691,10 @@
 	<key>@KERN_LEFT_v</key>
 	<array>
 		<string>y</string>
+		<string>yhook</string>
+		<string>uni024F</string>
 		<string>v</string>
+		<string>gamma1</string>
 		<string>yacute</string>
 		<string>ydieresis</string>
 		<string>ycircumflex</string>
@@ -659,9 +717,24 @@
 	<array>
 		<string>x</string>
 	</array>
+	<key>@KERN_LEFT_z</key>
+	<array>
+		<string>Dzcaron_</string>
+		<string>dzcaron</string>
+		<string>z</string>
+		<string>zrthook</string>
+		<string>uni0240</string>
+		<string>zhook</string>
+		<string>zbar</string>
+		<string>zacute</string>
+		<string>zdotaccent</string>
+		<string>zcaron</string>
+	</array>
 	<key>@KERN_RIGHT_A</key>
 	<array>
 		<string>A</string>
+		<string>yturn</string>
+		<string>uni023A</string>
 		<string>Agrave</string>
 		<string>Aacute</string>
 		<string>Acircumflex</string>
@@ -690,20 +763,29 @@
 		<string>numero</string>
 		<string>D</string>
 		<string>H</string>
+		<string>afii10026</string>
+		<string>uni0376</string>
+		<string>Enhookcyrillic</string>
 		<string>L</string>
 		<string>P</string>
 		<string>I</string>
 		<string>K</string>
-		<string>k</string>
+		<string>Khook</string>
 		<string>Idieresisacute</string>
 		<string>Hcedilla</string>
 		<string>B</string>
 		<string>F</string>
+		<string>Fhook</string>
 		<string>N</string>
+		<string>Eng</string>
+		<string>Nhook</string>
+		<string>uni048A</string>
 		<string>R</string>
+		<string>Rx</string>
 		<string>Dzcaron_</string>
 		<string>Itildebelow</string>
 		<string>E</string>
+		<string>uni0246</string>
 		<string>Thorn</string>
 		<string>M</string>
 		<string>Egrave</string>
@@ -746,8 +828,13 @@
 		<string>OE</string>
 		<string>Oslash</string>
 		<string>C</string>
+		<string>cedi</string>
+		<string>uni023B</string>
 		<string>G</string>
+		<string>guarani</string>
+		<string>Ghook</string>
 		<string>O</string>
+		<string>Oopen</string>
 		<string>Q</string>
 		<string>Ccedilla</string>
 		<string>Ograve</string>
@@ -790,6 +877,7 @@
 	<key>@KERN_RIGHT_J</key>
 	<array>
 		<string>J</string>
+		<string>uni0248</string>
 		<string>Jcircumflex</string>
 	</array>
 	<key>@KERN_RIGHT_Omicrongreek</key>
@@ -809,12 +897,15 @@
 	<key>@KERN_RIGHT_T</key>
 	<array>
 		<string>T</string>
+		<string>Trthook</string>
+		<string>uni023E</string>
 		<string>Tcaron</string>
 	</array>
 	<key>@KERN_RIGHT_U</key>
 	<array>
 		<string>Uhorn</string>
 		<string>U</string>
+		<string>uni0244</string>
 		<string>Ugrave</string>
 		<string>Uacute</string>
 		<string>Ucircumflex</string>
@@ -834,6 +925,7 @@
 	<key>@KERN_RIGHT_V</key>
 	<array>
 		<string>V</string>
+		<string>Gamma1</string>
 	</array>
 	<key>@KERN_RIGHT_W</key>
 	<array>
@@ -850,6 +942,7 @@
 	<key>@KERN_RIGHT_Y</key>
 	<array>
 		<string>Y</string>
+		<string>Yhook</string>
 		<string>Yacute</string>
 		<string>Ycircumflex</string>
 		<string>Ydieresis</string>
@@ -858,6 +951,9 @@
 	<key>@KERN_RIGHT_Z</key>
 	<array>
 		<string>Z</string>
+		<string>uni0224</string>
+		<string>Zbar</string>
+		<string>uni2C7F</string>
 		<string>Zacute</string>
 		<string>Zdotaccent</string>
 		<string>Zcaron</string>
@@ -905,9 +1001,15 @@
 		<string>germandbls</string>
 		<string>hcedilla</string>
 		<string>b</string>
+		<string>bhook</string>
 		<string>h</string>
+		<string>hhook</string>
+		<string>henghook</string>
 		<string>k</string>
+		<string>khook</string>
+		<string>slongdotaccent</string>
 		<string>l</string>
+		<string>lcurl</string>
 		<string>thorn</string>
 		<string>hcircumflex</string>
 		<string>kcommaaccent</string>
@@ -935,12 +1037,17 @@
 		<string>dcroat</string>
 		<string>oslash</string>
 		<string>d</string>
+		<string>uni0221</string>
 		<string>g</string>
 		<string>c</string>
+		<string>chook</string>
+		<string>ccurl</string>
 		<string>e</string>
+		<string>uni0247</string>
 		<string>oe</string>
 		<string>o</string>
 		<string>q</string>
+		<string>qrthook</string>
 		<string>eth</string>
 		<string>ccedilla</string>
 		<string>egrave</string>
@@ -956,6 +1063,13 @@
 		<string>ccircumflex</string>
 		<string>ccaron</string>
 		<string>dcaron</string>
+		<string>dyogh</string>
+		<string>dz</string>
+		<string>dzcurl</string>
+		<string>dzcaron</string>
+		<string>dhook</string>
+		<string>drthook</string>
+		<string>dcroat</string>
 		<string>emacron</string>
 		<string>ebreve</string>
 		<string>edotaccent</string>
@@ -1033,6 +1147,7 @@
 	<array>
 		<string>dotlessj</string>
 		<string>j</string>
+		<string>jcrosstail</string>
 		<string>jcircumflex</string>
 	</array>
 	<key>@KERN_RIGHT_dzhecyrillic</key>
@@ -1111,6 +1226,8 @@
 	<key>@KERN_RIGHT_f</key>
 	<array>
 		<string>f</string>
+		<string>slongstroke</string>
+		<string>feng</string>
 	</array>
 	<key>@KERN_RIGHT_gammagreek</key>
 	<array>
@@ -1133,9 +1250,17 @@
 	<key>@KERN_RIGHT_m</key>
 	<array>
 		<string>r</string>
+		<string>rfishhook</string>
+		<string>rrthook</string>
+		<string>uni024D</string>
 		<string>n</string>
+		<string>ncurl</string>
+		<string>nrthook</string>
+		<string>eng</string>
 		<string>p</string>
+		<string>phook</string>
 		<string>m</string>
+		<string>mhook</string>
 		<string>ntilde</string>
 		<string>nacute</string>
 		<string>ncommaaccent</string>
@@ -1177,6 +1302,7 @@
 	<key>@KERN_RIGHT_s</key>
 	<array>
 		<string>s</string>
+		<string>srthook</string>
 		<string>sacute</string>
 		<string>scircumflex</string>
 		<string>scedilla</string>
@@ -1193,11 +1319,17 @@
 	<array>
 		<string>t</string>
 		<string>tcaron</string>
+		<string>tccurl</string>
+		<string>tpalatalhook</string>
 	</array>
 	<key>@KERN_RIGHT_u</key>
 	<array>
 		<string>uhorn</string>
 		<string>u</string>
+		<string>mturndescend</string>
+		<string>mturn</string>
+		<string>uni01F6</string>
+		<string>hturn</string>
 		<string>ugrave</string>
 		<string>uacute</string>
 		<string>ucircumflex</string>
@@ -1213,7 +1345,10 @@
 	<key>@KERN_RIGHT_v</key>
 	<array>
 		<string>y</string>
+		<string>yhook</string>
+		<string>uni024F</string>
 		<string>v</string>
+		<string>gamma1</string>
 		<string>yacute</string>
 		<string>ydieresis</string>
 		<string>ycircumflex</string>
@@ -1234,9 +1369,14 @@
 	<key>@KERN_RIGHT_z</key>
 	<array>
 		<string>z</string>
+		<string>zrthook</string>
+		<string>uni0240</string>
+		<string>zbar</string>
+		<string>zhook</string>
 		<string>zacute</string>
 		<string>zdotaccent</string>
 		<string>zcaron</string>
+		<string>zcurl</string>
 	</array>
 </dict>
 </plist>

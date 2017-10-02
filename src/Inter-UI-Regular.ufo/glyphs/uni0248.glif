@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni0248" format="1">
-  <advance width="1764"/>
+  <advance width="1448"/>
   <unicode hex="0248"/>
   <outline>
+    <component base="J"/>
+    <component base="crossbar" xOffset="364" yOffset="96"/>
     <contour>
       <point x="1192" y="2200" type="move" name="top"/>
     </contour>
@@ -12,8 +14,6 @@
     <contour>
       <point x="704" y="-16" type="move" name="bottom"/>
     </contour>
-    <component base="J"/>
-    <component base="crossbar" xOffset="556"/>
   </outline>
   <lib>
     <dict>

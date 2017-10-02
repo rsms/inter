@@ -1,59 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="eng" format="1">
-  <advance width="1536"/>
+  <advance width="1624"/>
   <unicode hex="014B"/>
   <outline>
     <contour>
-      <point x="768" y="1776" type="move" name="top"/>
+      <point x="1036" y="128" type="line"/>
+      <point x="1036" y="-20" type="line" smooth="yes"/>
+      <point x="1036" y="-160"/>
+      <point x="976" y="-224"/>
+      <point x="872" y="-224" type="curve" smooth="yes"/>
+      <point x="812" y="-224"/>
+      <point x="776" y="-216"/>
+      <point x="736" y="-208" type="curve"/>
+      <point x="700" y="-580" type="line"/>
+      <point x="776" y="-596"/>
+      <point x="852" y="-600"/>
+      <point x="928" y="-600" type="curve" smooth="yes"/>
+      <point x="1272" y="-600"/>
+      <point x="1496" y="-396"/>
+      <point x="1496" y="-20" type="curve" smooth="yes"/>
+      <point x="1496" y="128" type="line"/>
+    </contour>
+    <component base="n"/>
+    <contour>
+      <point x="768.0" y="1776.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="768" y="16" type="move" name="bottom"/>
+      <point x="768.0" y="16.0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1048" y="-424" type="move" name="parenthesses.w1"/>
+      <point x="1048.0" y="-424.0" type="move" name="parenthesses.w1"/>
     </contour>
     <contour>
-      <point x="768" y="16" type="move" name="markbottom"/>
+      <point x="768.0" y="16.0" type="move" name="markbottom"/>
     </contour>
     <contour>
-      <point x="1560" y="1776" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="548" y="1172" type="line"/>
-      <point x="520" y="1488" type="line"/>
-      <point x="108" y="1488" type="line"/>
-      <point x="108" y="0" type="line"/>
-      <point x="548" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="464" y="796" type="line"/>
-      <point x="464" y="1004"/>
-      <point x="580" y="1160"/>
-      <point x="796" y="1160" type="curve" smooth="yes"/>
-      <point x="916" y="1160"/>
-      <point x="988" y="1096"/>
-      <point x="988" y="896" type="curve" smooth="yes"/>
-      <point x="988" y="-20" type="line" smooth="yes"/>
-      <point x="988" y="-168"/>
-      <point x="928" y="-244"/>
-      <point x="824" y="-244" type="curve" smooth="yes"/>
-      <point x="764" y="-244"/>
-      <point x="732" y="-240"/>
-      <point x="688" y="-228" type="curve"/>
-      <point x="668" y="-580" type="line"/>
-      <point x="744" y="-596"/>
-      <point x="804" y="-600"/>
-      <point x="880" y="-600" type="curve" smooth="yes"/>
-      <point x="1224" y="-600"/>
-      <point x="1432" y="-396"/>
-      <point x="1432" y="-20" type="curve" smooth="yes"/>
-      <point x="1432" y="896" type="line" smooth="yes"/>
-      <point x="1432" y="1348"/>
-      <point x="1240" y="1516"/>
-      <point x="960" y="1516" type="curve" smooth="yes"/>
-      <point x="632" y="1516"/>
-      <point x="412" y="1212"/>
-      <point x="412" y="792" type="curve"/>
+      <point x="1560.0" y="1776.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>

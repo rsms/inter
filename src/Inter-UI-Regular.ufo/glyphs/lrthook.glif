@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lrthook" format="1">
-  <advance width="992"/>
+  <advance width="652"/>
   <unicode hex="026D"/>
   <outline>
     <contour>
-      <point x="356" y="2200" type="move" name="top"/>
+      <point x="444" y="36" type="line"/>
+      <point x="208" y="36" type="line"/>
+      <point x="208" y="-164" type="line" smooth="yes"/>
+      <point x="208" y="-428"/>
+      <point x="384" y="-576"/>
+      <point x="608" y="-576" type="curve" smooth="yes"/>
+      <point x="656" y="-576"/>
+      <point x="708" y="-576"/>
+      <point x="744" y="-564" type="curve"/>
+      <point x="744" y="-364" type="line"/>
+      <point x="724" y="-368"/>
+      <point x="696" y="-372"/>
+      <point x="668" y="-372" type="curve" smooth="yes"/>
+      <point x="540" y="-372"/>
+      <point x="444" y="-324"/>
+      <point x="444" y="-164" type="curve" smooth="yes"/>
+    </contour>
+    <component base="l"/>
+    <contour>
+      <point x="356.0" y="2200.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="356" y="-616" type="move" name="bottom"/>
+      <point x="356.0" y="-616.0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="840" y="2200" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="220" y="2112" type="line"/>
-      <point x="220" y="-192" type="line" smooth="yes"/>
-      <point x="220" y="-456"/>
-      <point x="412" y="-600"/>
-      <point x="640" y="-600" type="curve" smooth="yes"/>
-      <point x="684" y="-600"/>
-      <point x="740" y="-596"/>
-      <point x="776" y="-584" type="curve"/>
-      <point x="776" y="-400" type="line"/>
-      <point x="756" y="-408"/>
-      <point x="720" y="-408"/>
-      <point x="700" y="-408" type="curve" smooth="yes"/>
-      <point x="572" y="-408"/>
-      <point x="492" y="-352"/>
-      <point x="492" y="-192" type="curve" smooth="yes"/>
-      <point x="492" y="2112" type="line"/>
+      <point x="840.0" y="2200.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>

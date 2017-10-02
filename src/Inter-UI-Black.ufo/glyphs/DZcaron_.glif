@@ -1,40 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Dzcaron_" format="1">
-  <advance width="3220"/>
+  <advance width="3184"/>
   <unicode hex="01C5"/>
   <outline>
-    <contour>
-      <point x="3080" y="360" type="line"/>
-      <point x="1936" y="360" type="line"/>
-      <point x="1936" y="0" type="line"/>
-      <point x="3080" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="3060" y="1240" type="line"/>
-      <point x="3060" y="1488" type="line"/>
-      <point x="2760" y="1488" type="line"/>
-      <point x="1824" y="260" type="line"/>
-      <point x="1824" y="0" type="line"/>
-      <point x="2124" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="2912" y="1488" type="line"/>
-      <point x="1852" y="1488" type="line"/>
-      <point x="1852" y="1132" type="line"/>
-      <point x="2912" y="1132" type="line"/>
-    </contour>
-    <contour>
-      <point x="2288" y="2100" type="line"/>
-      <point x="1908" y="2100" type="line"/>
-      <point x="1908" y="2084" type="line"/>
-      <point x="2308" y="1724" type="line"/>
-      <point x="2620" y="1724" type="line"/>
-      <point x="3016" y="2080" type="line"/>
-      <point x="3016" y="2100" type="line"/>
-      <point x="2640" y="2100" type="line"/>
-      <point x="2464" y="1916" type="line"/>
-    </contour>
-    <component base="D" xOffset="8"/>
+    <component base="D"/>
+    <component base="z" xOffset="1672"/>
+    <component base="caron" xOffset="1672"/>
   </outline>
   <lib>
     <dict>

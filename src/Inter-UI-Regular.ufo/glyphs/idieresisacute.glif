@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="idieresisacute" format="1">
-  <advance width="877"/>
+  <advance width="900"/>
   <unicode hex="1E2F"/>
   <outline>
     <component base="dotlessi" xOffset="124"/>
-    <component base="dieresisacutecomb.lc" xOffset="1244"/>
+    <component base="dieresisacutecomb.lc" xOffset="1252"/>
     <contour>
       <point x="536" y="900" type="move" name="rhotichook"/>
     </contour>
@@ -23,6 +23,23 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>448</integer>
+          <key>y</key>
+          <integer>1440</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 935.0, 'leftMargin': 14, 'rightMargin': 14.0}</string>
     </dict>

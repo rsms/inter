@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Q_rthook" format="1">
+  <advance width="2112"/>
+  <unicode hex="024A"/>
+  <outline>
+    <contour>
+      <point x="1904" y="2048" type="line"/>
+      <point x="1688" y="2048" type="line"/>
+      <point x="1668" y="1796" type="line"/>
+      <point x="1640" y="1796" type="line"/>
+      <point x="1540" y="1948"/>
+      <point x="1364" y="2076"/>
+      <point x="1076" y="2076" type="curve" smooth="yes"/>
+      <point x="528" y="2076"/>
+      <point x="176" y="1640"/>
+      <point x="176" y="1032" type="curve" smooth="yes"/>
+      <point x="176" y="404"/>
+      <point x="532" y="-32"/>
+      <point x="1076" y="-32" type="curve" smooth="yes"/>
+      <point x="1364" y="-32"/>
+      <point x="1548" y="96"/>
+      <point x="1652" y="260" type="curve"/>
+      <point x="1668" y="260" type="line"/>
+      <point x="1668" y="0" type="line"/>
+      <point x="1904" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="420" y="1028" type="curve" smooth="yes"/>
+      <point x="420" y="1504"/>
+      <point x="668" y="1852"/>
+      <point x="1048" y="1852" type="curve" smooth="yes"/>
+      <point x="1332" y="1852"/>
+      <point x="1548" y="1660"/>
+      <point x="1628" y="1388" type="curve"/>
+      <point x="1664" y="1244"/>
+      <point x="1672" y="1076"/>
+      <point x="1672" y="1028" type="curve"/>
+      <point x="1672" y="972"/>
+      <point x="1664" y="800"/>
+      <point x="1632" y="664" type="curve"/>
+      <point x="1564" y="376"/>
+      <point x="1312" y="204"/>
+      <point x="1044" y="204" type="curve" smooth="yes"/>
+      <point x="680" y="204"/>
+      <point x="420" y="520"/>
+    </contour>
+    <contour>
+      <point x="1904" y="100" type="line"/>
+      <point x="1668" y="100" type="line"/>
+      <point x="1668" y="-164" type="line" smooth="yes"/>
+      <point x="1668" y="-428"/>
+      <point x="1844" y="-576"/>
+      <point x="2068" y="-576" type="curve" smooth="yes"/>
+      <point x="2116" y="-576"/>
+      <point x="2168" y="-576"/>
+      <point x="2204" y="-564" type="curve"/>
+      <point x="2204" y="-364" type="line"/>
+      <point x="2184" y="-368"/>
+      <point x="2156" y="-372"/>
+      <point x="2128" y="-372" type="curve" smooth="yes"/>
+      <point x="2000" y="-372"/>
+      <point x="1904" y="-324"/>
+      <point x="1904" y="-164" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>O</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>Q_rthook</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>2112</integer>
+        </dict>
+      </dict>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 1998, 'leftMargin': 161, 'rightMargin': 14}</string>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>

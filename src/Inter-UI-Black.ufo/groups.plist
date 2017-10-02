@@ -33,10 +33,13 @@
 	<key>@KERN_LEFT_B</key>
 	<array>
 		<string>B</string>
+		<string>Bhook</string>
 	</array>
 	<key>@KERN_LEFT_C</key>
 	<array>
 		<string>C</string>
+		<string>coloncurrency</string>
+		<string>cedi</string>
 		<string>Ccedilla</string>
 		<string>Cacute</string>
 		<string>Ccircumflex</string>
@@ -47,6 +50,7 @@
 	<array>
 		<string>Oslash</string>
 		<string>D</string>
+		<string>Dhook</string>
 		<string>Q</string>
 		<string>O</string>
 		<string>Eth</string>
@@ -101,10 +105,13 @@
 	<key>@KERN_LEFT_F</key>
 	<array>
 		<string>F</string>
+		<string>Fhook</string>
 	</array>
 	<key>@KERN_LEFT_G</key>
 	<array>
 		<string>G</string>
+		<string>guarani</string>
+		<string>Gbar</string>
 		<string>Gcircumflex</string>
 		<string>Gbreve</string>
 		<string>Gcommaaccent</string>
@@ -124,7 +131,10 @@
 		<string>l</string>
 		<string>M</string>
 		<string>N</string>
+		<string>Nhook</string>
+		<string>Eng</string>
 		<string>H</string>
+		<string>Enhookcyrillic</string>
 		<string>Igrave</string>
 		<string>Iacute</string>
 		<string>Icircumflex</string>
@@ -168,6 +178,7 @@
 	<key>@KERN_LEFT_K</key>
 	<array>
 		<string>K</string>
+		<string>Khook</string>
 		<string>Kcommaaccent</string>
 		<string>Kcaron</string>
 		<string>Kacyr</string>
@@ -248,6 +259,7 @@
 	<key>@KERN_LEFT_Y</key>
 	<array>
 		<string>Y</string>
+		<string>Yhook</string>
 		<string>Yacute</string>
 		<string>Ycircumflex</string>
 		<string>Ydieresis</string>
@@ -256,6 +268,8 @@
 	<key>@KERN_LEFT_Z</key>
 	<array>
 		<string>Z</string>
+		<string>Zbar</string>
+		<string>uni0224</string>
 		<string>Zacute</string>
 		<string>Zdotaccent</string>
 		<string>Zcaron</string>
@@ -265,8 +279,13 @@
 		<string>hcedilla</string>
 		<string>a</string>
 		<string>h</string>
+		<string>hhook</string>
+		<string>henghook</string>
 		<string>m</string>
+		<string>mhook</string>
 		<string>n</string>
+		<string>feng</string>
+		<string>eng</string>
 		<string>eta</string>
 		<string>hbar</string>
 		<string>agrave</string>
@@ -295,6 +314,9 @@
 	<array>
 		<string>ae</string>
 		<string>e</string>
+		<string>uni0247</string>
+		<string>tccurl</string>
+		<string>ccurl</string>
 		<string>oe</string>
 		<string>egrave</string>
 		<string>eacute</string>
@@ -334,6 +356,7 @@
 		<string>thorn</string>
 		<string>o</string>
 		<string>p</string>
+		<string>phook</string>
 		<string>ograve</string>
 		<string>oacute</string>
 		<string>ocircumflex</string>
@@ -551,6 +574,7 @@
 	<key>@KERN_LEFT_k</key>
 	<array>
 		<string>k</string>
+		<string>khook</string>
 		<string>kcommaaccent</string>
 		<string>kcaron</string>
 	</array>
@@ -620,9 +644,14 @@
 		<string>t</string>
 		<string>tcaron</string>
 	</array>
+	<key>@KERN_LEFT_two</key>
+	<array>
+		<string>two</string>
+	</array>
 	<key>@KERN_LEFT_u</key>
 	<array>
 		<string>u</string>
+		<string>mu</string>
 		<string>ugrave</string>
 		<string>uacute</string>
 		<string>ucircumflex</string>
@@ -642,6 +671,7 @@
 	<key>@KERN_LEFT_v</key>
 	<array>
 		<string>y</string>
+		<string>yhook</string>
 		<string>v</string>
 		<string>yacute</string>
 		<string>ydieresis</string>
@@ -670,6 +700,9 @@
 		<string>Dzcaron_</string>
 		<string>dzcaron</string>
 		<string>z</string>
+		<string>zbar</string>
+		<string>zhook</string>
+		<string>dz</string>
 		<string>zacute</string>
 		<string>zdotaccent</string>
 		<string>zcaron</string>
@@ -702,17 +735,21 @@
 		<string>numero</string>
 		<string>D</string>
 		<string>H</string>
+		<string>Enhookcyrillic</string>
 		<string>L</string>
 		<string>P</string>
 		<string>I</string>
 		<string>K</string>
+		<string>Khook</string>
 		<string>Kacyr</string>
-		<string>k</string>
 		<string>Idieresisacute</string>
 		<string>Hcedilla</string>
 		<string>B</string>
 		<string>F</string>
+		<string>Fhook</string>
 		<string>N</string>
+		<string>Nhook</string>
+		<string>Eng</string>
 		<string>R</string>
 		<string>Dzcaron_</string>
 		<string>Itildebelow</string>
@@ -759,7 +796,12 @@
 		<string>OE</string>
 		<string>Oslash</string>
 		<string>C</string>
+		<string>coloncurrency</string>
+		<string>cedi</string>
+		<string>Chook</string>
 		<string>G</string>
+		<string>guarani</string>
+		<string>Gbar</string>
 		<string>O</string>
 		<string>Q</string>
 		<string>Ccedilla</string>
@@ -862,6 +904,7 @@
 	<key>@KERN_RIGHT_Y</key>
 	<array>
 		<string>Y</string>
+		<string>Yhook</string>
 		<string>Yacute</string>
 		<string>Ycircumflex</string>
 		<string>Ydieresis</string>
@@ -870,6 +913,8 @@
 	<key>@KERN_RIGHT_Z</key>
 	<array>
 		<string>Z</string>
+		<string>Zbar</string>
+		<string>uni0224</string>
 		<string>Zacute</string>
 		<string>Zdotaccent</string>
 		<string>Zcaron</string>
@@ -918,7 +963,10 @@
 		<string>hcedilla</string>
 		<string>b</string>
 		<string>h</string>
+		<string>hhook</string>
+		<string>henghook</string>
 		<string>k</string>
+		<string>khook</string>
 		<string>l</string>
 		<string>thorn</string>
 		<string>hcircumflex</string>
@@ -943,13 +991,21 @@
 	<key>@KERN_RIGHT_c</key>
 	<array>
 		<string>dzcaron</string>
+		<string>dzcurl</string>
 		<string>ohorn</string>
 		<string>dcroat</string>
 		<string>oslash</string>
 		<string>d</string>
+		<string>drthook</string>
+		<string>dz</string>
+		<string>dhook</string>
+		<string>dcroat</string>
 		<string>g</string>
+		<string>ghook</string>
+		<string>gbar</string>
 		<string>c</string>
 		<string>e</string>
+		<string>uni0247</string>
 		<string>oe</string>
 		<string>o</string>
 		<string>q</string>
@@ -1133,6 +1189,7 @@
 	<key>@KERN_RIGHT_f</key>
 	<array>
 		<string>f</string>
+		<string>feng</string>
 	</array>
 	<key>@KERN_RIGHT_gammagreek</key>
 	<array>
@@ -1155,8 +1212,13 @@
 	<key>@KERN_RIGHT_m</key>
 	<array>
 		<string>n</string>
+		<string>ncurl</string>
+		<string>eng</string>
 		<string>p</string>
+		<string>phook</string>
+		<string>mu</string>
 		<string>m</string>
+		<string>mhook</string>
 		<string>r</string>
 		<string>eta</string>
 		<string>ntilde</string>
@@ -1215,7 +1277,13 @@
 	<key>@KERN_RIGHT_t</key>
 	<array>
 		<string>t</string>
+		<string>tccurl</string>
 		<string>tcaron</string>
+	</array>
+	<key>@KERN_RIGHT_two</key>
+	<array>
+		<string>two</string>
+		<string>twostroke</string>
 	</array>
 	<key>@KERN_RIGHT_u</key>
 	<array>
@@ -1236,6 +1304,7 @@
 	<key>@KERN_RIGHT_v</key>
 	<array>
 		<string>y</string>
+		<string>yhook</string>
 		<string>v</string>
 		<string>yacute</string>
 		<string>ydieresis</string>
@@ -1257,6 +1326,9 @@
 	<key>@KERN_RIGHT_z</key>
 	<array>
 		<string>z</string>
+		<string>zbar</string>
+		<string>uni0240</string>
+		<string>zhook</string>
 		<string>zacute</string>
 		<string>zdotaccent</string>
 		<string>zcaron</string>

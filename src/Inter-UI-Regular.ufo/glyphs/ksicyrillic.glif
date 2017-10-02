@@ -4,12 +4,6 @@
   <unicode hex="046F"/>
   <outline>
     <contour>
-      <point x="608" y="2392" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1320" y="2392" type="move" name="top0315"/>
-    </contour>
-    <contour>
       <point x="140" y="1488" type="line"/>
       <point x="140" y="1268" type="line"/>
       <point x="556" y="1268" type="line" smooth="yes"/>
@@ -62,6 +56,12 @@
       <point x="532" y="796" type="curve" smooth="yes"/>
     </contour>
     <component base="caron" xOffset="-24" yOffset="64"/>
+    <contour>
+      <point x="608" y="2392" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1320" y="2392" type="move" name="top0315"/>
+    </contour>
   </outline>
   <lib>
     <dict>

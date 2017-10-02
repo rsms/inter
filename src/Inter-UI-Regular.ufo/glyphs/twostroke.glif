@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="twostroke" format="1">
-  <advance width="1760"/>
+  <advance width="1664"/>
   <unicode hex="01BB"/>
   <outline>
-    <contour>
-      <point x="1452" y="1108" type="line" name="hr00"/>
-      <point x="364" y="1108" type="line"/>
-      <point x="364" y="888" type="line"/>
-      <point x="1452" y="888" type="line"/>
-    </contour>
-    <component base="two" xOffset="-32"/>
+    <component base="two"/>
+    <component base="crossbar" xOffset="440"/>
   </outline>
   <lib>
     <dict>
       <key>com.adobe.type.autohint</key>
       <data>
       </data>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1476</integer>
+          <key>y</key>
+          <integer>80</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1596, 'leftMargin': 256, 'rightMargin': 28}</string>
       <key>interface.width-adjustments</key>

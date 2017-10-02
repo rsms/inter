@@ -248,7 +248,7 @@
 		<key>@KERN_RIGHT_X</key>
 		<integer>-256</integer>
 		<key>@KERN_RIGHT_Y</key>
-		<integer>-116</integer>
+		<integer>-292</integer>
 		<key>@KERN_RIGHT_Z</key>
 		<integer>-116</integer>
 		<key>@KERN_RIGHT_a</key>
@@ -256,7 +256,7 @@
 		<key>@KERN_RIGHT_braceright.case</key>
 		<integer>-80</integer>
 		<key>@KERN_RIGHT_c</key>
-		<integer>-64</integer>
+		<integer>-48</integer>
 		<key>@KERN_RIGHT_comma</key>
 		<integer>-138</integer>
 		<key>@KERN_RIGHT_dagger</key>
@@ -271,6 +271,8 @@
 		<integer>-83</integer>
 		<key>@KERN_RIGHT_s</key>
 		<integer>-8</integer>
+		<key>@KERN_RIGHT_v</key>
+		<integer>-32</integer>
 		<key>@KERN_RIGHT_x</key>
 		<integer>-28</integer>
 		<key>backslash</key>
@@ -447,6 +449,8 @@
 		<integer>-254</integer>
 		<key>@KERN_RIGHT_six</key>
 		<integer>-42</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-14</integer>
 		<key>@KERN_RIGHT_u</key>
 		<integer>-167</integer>
 		<key>@KERN_RIGHT_v</key>
@@ -471,8 +475,6 @@
 		<integer>-103</integer>
 		<key>three</key>
 		<integer>-14</integer>
-		<key>two</key>
-		<integer>-14</integer>
 		<key>underscore</key>
 		<integer>-173</integer>
 	</dict>
@@ -487,7 +489,7 @@
 		<key>@KERN_RIGHT_X</key>
 		<integer>-196</integer>
 		<key>@KERN_RIGHT_Y</key>
-		<integer>-56</integer>
+		<integer>-216</integer>
 		<key>@KERN_RIGHT_a</key>
 		<integer>-13</integer>
 		<key>@KERN_RIGHT_braceright.case</key>
@@ -535,6 +537,8 @@
 		<integer>-400</integer>
 		<key>@KERN_RIGHT_six</key>
 		<integer>-77</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-14</integer>
 		<key>afii10021</key>
 		<integer>-48</integer>
 		<key>afii10024</key>
@@ -593,8 +597,6 @@
 		<integer>-130</integer>
 		<key>three</key>
 		<integer>-29</integer>
-		<key>two</key>
-		<integer>-14</integer>
 		<key>underscore</key>
 		<integer>-180</integer>
 		<key>uni20BD</key>
@@ -877,7 +879,7 @@
 		<integer>-27</integer>
 		<key>Hbar</key>
 		<integer>62</integer>
-		<key>Lslash</key>
+		<key>L_slash</key>
 		<integer>82</integer>
 		<key>Tbar</key>
 		<integer>109</integer>
@@ -1042,6 +1044,8 @@
 		<integer>-88</integer>
 		<key>@KERN_RIGHT_t</key>
 		<integer>7</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-8</integer>
 		<key>@KERN_RIGHT_v</key>
 		<integer>-5</integer>
 		<key>ampersand</key>
@@ -1056,8 +1060,6 @@
 		<integer>-42</integer>
 		<key>slash</key>
 		<integer>-315</integer>
-		<key>two</key>
-		<integer>-8</integer>
 		<key>underscore</key>
 		<integer>-288</integer>
 	</dict>
@@ -1202,6 +1204,8 @@
 		<integer>-432</integer>
 		<key>@KERN_RIGHT_six</key>
 		<integer>-48</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-63</integer>
 		<key>afii10021</key>
 		<integer>-54</integer>
 		<key>afii10024</key>
@@ -1263,8 +1267,6 @@
 		<key>tenge</key>
 		<integer>-6</integer>
 		<key>three</key>
-		<integer>-63</integer>
-		<key>two</key>
 		<integer>-63</integer>
 		<key>underscore</key>
 		<integer>-268</integer>
@@ -1629,6 +1631,8 @@
 		<integer>-75</integer>
 		<key>@KERN_RIGHT_t</key>
 		<integer>-96</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-33</integer>
 		<key>@KERN_RIGHT_u</key>
 		<integer>-84</integer>
 		<key>@KERN_RIGHT_v</key>
@@ -1659,8 +1663,6 @@
 		<integer>-40</integer>
 		<key>three</key>
 		<integer>-48</integer>
-		<key>two</key>
-		<integer>-33</integer>
 	</dict>
 	<key>@KERN_LEFT_Y</key>
 	<dict>
@@ -1712,6 +1714,8 @@
 		<integer>-125</integer>
 		<key>@KERN_RIGHT_t</key>
 		<integer>-70</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-40</integer>
 		<key>@KERN_RIGHT_u</key>
 		<integer>-151</integer>
 		<key>@KERN_RIGHT_v</key>
@@ -1756,8 +1760,6 @@
 		<integer>-206</integer>
 		<key>three</key>
 		<integer>-70</integer>
-		<key>two</key>
-		<integer>-40</integer>
 		<key>underscore</key>
 		<integer>-288</integer>
 	</dict>
@@ -2069,6 +2071,8 @@
 		<integer>-7</integer>
 		<key>@KERN_RIGHT_quotedblbase</key>
 		<integer>-33</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-27</integer>
 		<key>checyrillic</key>
 		<integer>-14</integer>
 		<key>decyrillic</key>
@@ -2089,8 +2093,6 @@
 		<integer>-40</integer>
 		<key>three</key>
 		<integer>-21</integer>
-		<key>two</key>
-		<integer>-27</integer>
 		<key>zecyrillic</key>
 		<integer>-28</integer>
 		<key>zhecyrillic</key>
@@ -2185,6 +2187,8 @@
 		<integer>-158</integer>
 		<key>@KERN_RIGHT_quotedblleft</key>
 		<integer>-62</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>8</integer>
 		<key>Psi</key>
 		<integer>-157</integer>
 		<key>afii10044</key>
@@ -2197,8 +2201,6 @@
 		<integer>-14</integer>
 		<key>three</key>
 		<integer>-7</integer>
-		<key>two</key>
-		<integer>8</integer>
 	</dict>
 	<key>@KERN_LEFT_colon.case</key>
 	<dict>
@@ -2206,14 +2208,14 @@
 		<integer>-27</integer>
 		<key>@KERN_RIGHT_six</key>
 		<integer>-20</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>8</integer>
 		<key>five</key>
 		<integer>24</integer>
 		<key>seven</key>
 		<integer>-14</integer>
 		<key>three</key>
 		<integer>-7</integer>
-		<key>two</key>
-		<integer>8</integer>
 	</dict>
 	<key>@KERN_LEFT_comma</key>
 	<dict>
@@ -2305,6 +2307,8 @@
 		<integer>88</integer>
 		<key>@KERN_RIGHT_quotedblright</key>
 		<integer>56</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>62</integer>
 		<key>Hbar</key>
 		<integer>144</integer>
 		<key>Tbar</key>
@@ -2325,8 +2329,6 @@
 		<integer>109</integer>
 		<key>three</key>
 		<integer>6</integer>
-		<key>two</key>
-		<integer>62</integer>
 	</dict>
 	<key>@KERN_LEFT_decyrillic</key>
 	<dict>
@@ -2973,6 +2975,8 @@
 		<integer>-116</integer>
 		<key>@KERN_RIGHT_t</key>
 		<integer>-48</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-96</integer>
 		<key>@KERN_RIGHT_v</key>
 		<integer>-109</integer>
 		<key>@KERN_RIGHT_w</key>
@@ -3017,8 +3021,6 @@
 		<integer>-15</integer>
 		<key>three</key>
 		<integer>-61</integer>
-		<key>two</key>
-		<integer>-96</integer>
 		<key>zecyrillic</key>
 		<integer>-56</integer>
 		<key>zhecyrillic</key>
@@ -3036,6 +3038,8 @@
 		<integer>-34</integer>
 		<key>@KERN_RIGHT_quotedblright</key>
 		<integer>-76</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-14</integer>
 		<key>checyrillic</key>
 		<integer>-34</integer>
 		<key>hardsigncyrillic</key>
@@ -3050,8 +3054,6 @@
 		<integer>-42</integer>
 		<key>tecyrillic</key>
 		<integer>-83</integer>
-		<key>two</key>
-		<integer>-14</integer>
 		<key>zecyrillic</key>
 		<integer>-13</integer>
 		<key>zhecyrillic</key>
@@ -3339,7 +3341,7 @@
 		<integer>54</integer>
 		<key>Hbar</key>
 		<integer>103</integer>
-		<key>Lslash</key>
+		<key>L_slash</key>
 		<integer>22</integer>
 		<key>ampersand</key>
 		<integer>-15</integer>
@@ -3889,6 +3891,47 @@
 		<key>periodcentered</key>
 		<integer>-13</integer>
 	</dict>
+	<key>@KERN_LEFT_two</key>
+	<dict>
+		<key>@KERN_RIGHT_Ucyrillic</key>
+		<integer>-15</integer>
+		<key>@KERN_RIGHT_Y</key>
+		<integer>-29</integer>
+		<key>@KERN_RIGHT_alphagreek</key>
+		<integer>-8</integer>
+		<key>@KERN_RIGHT_c</key>
+		<integer>-7</integer>
+		<key>@KERN_RIGHT_comma</key>
+		<integer>-21</integer>
+		<key>@KERN_RIGHT_dagger</key>
+		<integer>-21</integer>
+		<key>@KERN_RIGHT_deltagreek</key>
+		<integer>-8</integer>
+		<key>@KERN_RIGHT_epsilongreek</key>
+		<integer>-6</integer>
+		<key>@KERN_RIGHT_guillemotleft</key>
+		<integer>-70</integer>
+		<key>@KERN_RIGHT_iotadieresisgreek</key>
+		<integer>-6</integer>
+		<key>@KERN_RIGHT_omegagreek</key>
+		<integer>-6</integer>
+		<key>Psi</key>
+		<integer>-29</integer>
+		<key>afii10024</key>
+		<integer>-7</integer>
+		<key>at</key>
+		<integer>-6</integer>
+		<key>eight</key>
+		<integer>-16</integer>
+		<key>four</key>
+		<integer>-21</integer>
+		<key>rho</key>
+		<integer>-6</integer>
+		<key>theta</key>
+		<integer>-6</integer>
+		<key>xi</key>
+		<integer>-7</integer>
+	</dict>
 	<key>@KERN_LEFT_u</key>
 	<dict>
 		<key>@KERN_RIGHT_T</key>
@@ -3956,9 +3999,11 @@
 		<integer>-48</integer>
 		<key>@KERN_RIGHT_t</key>
 		<integer>42</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>13</integer>
 		<key>Hbar</key>
 		<integer>63</integer>
-		<key>Lslash</key>
+		<key>L_slash</key>
 		<integer>22</integer>
 		<key>ampersand</key>
 		<integer>-20</integer>
@@ -4030,8 +4075,6 @@
 		<integer>21</integer>
 		<key>threequarters</key>
 		<integer>21</integer>
-		<key>two</key>
-		<integer>13</integer>
 		<key>underscore</key>
 		<integer>-96</integer>
 	</dict>
@@ -4393,14 +4436,7 @@
 		<key>quotereversed</key>
 		<integer>-128</integer>
 	</dict>
-	<key>Lambda</key>
-	<dict>
-		<key>asterisk.case</key>
-		<integer>-128</integer>
-		<key>eth</key>
-		<integer>-21</integer>
-	</dict>
-	<key>Lslash</key>
+	<key>L_slash</key>
 	<dict>
 		<key>@KERN_RIGHT_C</key>
 		<integer>-61</integer>
@@ -4436,6 +4472,13 @@
 		<integer>-165</integer>
 		<key>question</key>
 		<integer>-69</integer>
+	</dict>
+	<key>Lambda</key>
+	<dict>
+		<key>asterisk.case</key>
+		<integer>-128</integer>
+		<key>eth</key>
+		<integer>-21</integer>
 	</dict>
 	<key>Ohorn</key>
 	<dict>
@@ -4488,6 +4531,8 @@
 		<integer>-275</integer>
 		<key>@KERN_RIGHT_six</key>
 		<integer>-125</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-42</integer>
 		<key>Omega</key>
 		<integer>-27</integer>
 		<key>ampersand</key>
@@ -4530,8 +4575,6 @@
 		<integer>-27</integer>
 		<key>three</key>
 		<integer>-69</integer>
-		<key>two</key>
-		<integer>-42</integer>
 		<key>underscore</key>
 		<integer>-171</integer>
 		<key>xi</key>
@@ -4777,6 +4820,8 @@
 		<integer>-55</integer>
 		<key>@KERN_RIGHT_six</key>
 		<integer>-48</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-13</integer>
 		<key>afii10024</key>
 		<integer>-13</integer>
 		<key>afii10025</key>
@@ -4839,8 +4884,6 @@
 		<integer>-61</integer>
 		<key>three</key>
 		<integer>-48</integer>
-		<key>two</key>
-		<integer>-13</integer>
 		<key>zecyrillic</key>
 		<integer>-83</integer>
 		<key>zhecyrillic</key>
@@ -5096,6 +5139,8 @@
 		<integer>-20</integer>
 		<key>@KERN_RIGHT_quotedblleft</key>
 		<integer>-83</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-13</integer>
 		<key>@KERN_RIGHT_v</key>
 		<integer>-40</integer>
 		<key>@KERN_RIGHT_w</key>
@@ -5110,8 +5155,6 @@
 		<integer>-70</integer>
 		<key>tenge</key>
 		<integer>-21</integer>
-		<key>two</key>
-		<integer>-13</integer>
 	</dict>
 	<key>backslash</key>
 	<dict>
@@ -5145,6 +5188,8 @@
 		<integer>-268</integer>
 		<key>@KERN_RIGHT_quotedblright</key>
 		<integer>-233</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>13</integer>
 		<key>@KERN_RIGHT_v</key>
 		<integer>-84</integer>
 		<key>@KERN_RIGHT_w</key>
@@ -5165,8 +5210,6 @@
 		<integer>-28</integer>
 		<key>tenge</key>
 		<integer>-88</integer>
-		<key>two</key>
-		<integer>13</integer>
 	</dict>
 	<key>beta</key>
 	<dict>
@@ -5248,9 +5291,9 @@
 	</dict>
 	<key>eight</key>
 	<dict>
-		<key>seven</key>
+		<key>@KERN_RIGHT_two</key>
 		<integer>-48</integer>
-		<key>two</key>
+		<key>seven</key>
 		<integer>-48</integer>
 	</dict>
 	<key>emdash</key>
@@ -5807,6 +5850,8 @@
 		<integer>-34</integer>
 		<key>@KERN_RIGHT_quotedblright</key>
 		<integer>-35</integer>
+		<key>@KERN_RIGHT_two</key>
+		<integer>-80</integer>
 		<key>ampersand</key>
 		<integer>-14</integer>
 		<key>eight</key>
@@ -5831,8 +5876,6 @@
 		<integer>-112</integer>
 		<key>three</key>
 		<integer>-160</integer>
-		<key>two</key>
-		<integer>-80</integer>
 	</dict>
 	<key>percent</key>
 	<dict>
@@ -5900,7 +5943,7 @@
 		<integer>-63</integer>
 		<key>@KERN_RIGHT_z</key>
 		<integer>-33</integer>
-		<key>Lslash</key>
+		<key>L_slash</key>
 		<integer>33</integer>
 		<key>Tbar</key>
 		<integer>-84</integer>
@@ -6505,47 +6548,6 @@
 	<dict>
 		<key>nine.1</key>
 		<integer>-82</integer>
-	</dict>
-	<key>two</key>
-	<dict>
-		<key>@KERN_RIGHT_Ucyrillic</key>
-		<integer>-15</integer>
-		<key>@KERN_RIGHT_Y</key>
-		<integer>-29</integer>
-		<key>@KERN_RIGHT_alphagreek</key>
-		<integer>-8</integer>
-		<key>@KERN_RIGHT_c</key>
-		<integer>-7</integer>
-		<key>@KERN_RIGHT_comma</key>
-		<integer>-21</integer>
-		<key>@KERN_RIGHT_dagger</key>
-		<integer>-21</integer>
-		<key>@KERN_RIGHT_deltagreek</key>
-		<integer>-8</integer>
-		<key>@KERN_RIGHT_epsilongreek</key>
-		<integer>-6</integer>
-		<key>@KERN_RIGHT_guillemotleft</key>
-		<integer>-70</integer>
-		<key>@KERN_RIGHT_iotadieresisgreek</key>
-		<integer>-6</integer>
-		<key>@KERN_RIGHT_omegagreek</key>
-		<integer>-6</integer>
-		<key>Psi</key>
-		<integer>-29</integer>
-		<key>afii10024</key>
-		<integer>-7</integer>
-		<key>at</key>
-		<integer>-6</integer>
-		<key>eight</key>
-		<integer>-16</integer>
-		<key>four</key>
-		<integer>-21</integer>
-		<key>rho</key>
-		<integer>-6</integer>
-		<key>theta</key>
-		<integer>-6</integer>
-		<key>xi</key>
-		<integer>-7</integer>
 	</dict>
 	<key>underscore</key>
 	<dict>

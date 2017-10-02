@@ -30,8 +30,6 @@
 	<string>Cheverticalstrokecyrillic_.glif</string>
 	<key>Chook</key>
 	<string>Chook_.glif</string>
-	<key>Chook.cn</key>
-	<string>Chook_.cn.glif</string>
 	<key>D</key>
 	<string>D_.glif</string>
 	<key>D.cn</key>
@@ -116,14 +114,14 @@
 	<string>Hcedilla_.glif</string>
 	<key>I</key>
 	<string>I_.glif</string>
-	<key>Ibar</key>
-	<string>Ibar_.glif</string>
 	<key>Idieresisacute</key>
 	<string>Idieresisacute_.glif</string>
 	<key>Iota1</key>
 	<string>Iota1_.glif</string>
 	<key>Ismallcap</key>
 	<string>Ismallcap_.glif</string>
+	<key>Istroke</key>
+	<string>Istroke_.glif</string>
 	<key>Itildebelow</key>
 	<string>Itildebelow_.glif</string>
 	<key>J</key>
@@ -150,10 +148,12 @@
 	<string>Ksicyrillic_.glif</string>
 	<key>L</key>
 	<string>L_.glif</string>
+	<key>L_bar</key>
+	<string>L__bar.glif</string>
+	<key>L_slash</key>
+	<string>L__slash.glif</string>
 	<key>Lambda</key>
 	<string>Lambda_.glif</string>
-	<key>Lslash</key>
-	<string>Lslash_.glif</string>
 	<key>Lsmallcap</key>
 	<string>Lsmallcap_.glif</string>
 	<key>M</key>
@@ -184,8 +184,6 @@
 	<string>Omegatitlocyrillic_.glif</string>
 	<key>Oopen</key>
 	<string>Oopen_.glif</string>
-	<key>Oopen.cn</key>
-	<string>Oopen_.cn.glif</string>
 	<key>Oslash</key>
 	<string>Oslash_.glif</string>
 	<key>Otcyrillic</key>
@@ -206,6 +204,8 @@
 	<string>Q_.glif</string>
 	<key>Q.cn</key>
 	<string>Q_.cn.glif</string>
+	<key>Q_rthook</key>
+	<string>Q__rthook.glif</string>
 	<key>R</key>
 	<string>R_.glif</string>
 	<key>Rsmallcap</key>
@@ -482,8 +482,6 @@
 	<string>beta1.glif</string>
 	<key>bhook</key>
 	<string>bhook.glif</string>
-	<key>bhook.cn</key>
-	<string>bhook.cn.glif</string>
 	<key>blackleftpointingtriangle</key>
 	<string>blackleftpointingtriangle.glif</string>
 	<key>braceleft</key>
@@ -590,8 +588,6 @@
 	<string>cheverticalstrokecyrillic.glif</string>
 	<key>chook</key>
 	<string>chook.glif</string>
-	<key>chook.cn</key>
-	<string>chook.cn.glif</string>
 	<key>circleblack</key>
 	<string>circleblack.glif</string>
 	<key>circlewhite</key>
@@ -700,8 +696,6 @@
 	<string>deltaturn.glif</string>
 	<key>dhook</key>
 	<string>dhook.glif</string>
-	<key>dhook.cn</key>
-	<string>dhook.cn.glif</string>
 	<key>diaeresistonosnosp</key>
 	<string>diaeresistonosnosp.glif</string>
 	<key>diamondblack</key>
@@ -892,6 +886,8 @@
 	<string>ezhtail.glif</string>
 	<key>f</key>
 	<string>f.glif</string>
+	<key>feng</key>
+	<string>feng.glif</string>
 	<key>figuredash</key>
 	<string>figuredash.glif</string>
 	<key>figuredash.case</key>
@@ -902,8 +898,6 @@
 	<string>finalkaf.glif</string>
 	<key>finalmem</key>
 	<string>finalmem.glif</string>
-	<key>finalnun</key>
-	<string>finalnun.glif</string>
 	<key>finaltsadi</key>
 	<string>finaltsadi.glif</string>
 	<key>firsttonechinese</key>
@@ -970,8 +964,6 @@
 	<string>gheupturncyrillic.glif</string>
 	<key>ghook</key>
 	<string>ghook.glif</string>
-	<key>ghook.cn</key>
-	<string>ghook.cn.glif</string>
 	<key>glottalstop</key>
 	<string>glottalstop.glif</string>
 	<key>glottalstopbar</key>
@@ -1046,6 +1038,10 @@
 	<string>hsuper.glif</string>
 	<key>hturn</key>
 	<string>hturn.glif</string>
+	<key>hturnhook2</key>
+	<string>hturnhook2.glif</string>
+	<key>hturnlthook</key>
+	<string>hturnlthook.glif</string>
 	<key>hungarumlaut</key>
 	<string>hungarumlaut.glif</string>
 	<key>hv</key>
@@ -1148,6 +1144,8 @@
 	<string>lbar.glif</string>
 	<key>lbelt</key>
 	<string>lbelt.glif</string>
+	<key>lcurl</key>
+	<string>lcurl.glif</string>
 	<key>leftloop.cn</key>
 	<string>leftloop.cn.glif</string>
 	<key>less</key>
@@ -1240,6 +1238,8 @@
 	<string>n.glif</string>
 	<key>naira</key>
 	<string>naira.glif</string>
+	<key>ncurl</key>
+	<string>ncurl.glif</string>
 	<key>nine</key>
 	<string>nine.glif</string>
 	<key>nine.1</key>
@@ -1402,8 +1402,6 @@
 	<string>philatin.glif</string>
 	<key>phook</key>
 	<string>phook.glif</string>
-	<key>phook.cn</key>
-	<string>phook.cn.glif</string>
 	<key>pi</key>
 	<string>pi.glif</string>
 	<key>pipe</key>
@@ -1458,10 +1456,10 @@
 	<string>q.cn.glif</string>
 	<key>qhook</key>
 	<string>qhook.glif</string>
-	<key>qhook.cn</key>
-	<string>qhook.cn.glif</string>
 	<key>qofdagesh</key>
 	<string>qofdagesh.glif</string>
+	<key>qrthook</key>
+	<string>qrthook.glif</string>
 	<key>quarteremspace</key>
 	<string>quarteremspace.glif</string>
 	<key>question</key>
@@ -1654,6 +1652,8 @@
 	<string>slashshortnosp.glif</string>
 	<key>slongdotaccent</key>
 	<string>slongdotaccent.glif</string>
+	<key>slongstroke</key>
+	<string>slongstroke.glif</string>
 	<key>softsigncyrillic</key>
 	<string>softsigncyrillic.glif</string>
 	<key>space</key>
@@ -1692,6 +1692,8 @@
 	<string>tavdages.glif</string>
 	<key>tccurl</key>
 	<string>tccurl.glif</string>
+	<key>tcurl</key>
+	<string>tcurl.glif</string>
 	<key>tecyrillic</key>
 	<string>tecyrillic.glif</string>
 	<key>tel</key>
@@ -1860,14 +1862,6 @@
 	<string>uni0223.glif</string>
 	<key>uni0224</key>
 	<string>uni0224.glif</string>
-	<key>uni0225</key>
-	<string>uni0225.glif</string>
-	<key>uni0234</key>
-	<string>uni0234.glif</string>
-	<key>uni0235</key>
-	<string>uni0235.glif</string>
-	<key>uni0236</key>
-	<string>uni0236.glif</string>
 	<key>uni0238</key>
 	<string>uni0238.glif</string>
 	<key>uni0239</key>
@@ -1878,8 +1872,6 @@
 	<string>uni023B_.glif</string>
 	<key>uni023C</key>
 	<string>uni023C_.glif</string>
-	<key>uni023D</key>
-	<string>uni023D_.glif</string>
 	<key>uni023E</key>
 	<string>uni023E_.glif</string>
 	<key>uni023F</key>
@@ -1906,10 +1898,6 @@
 	<string>uni0249.glif</string>
 	<key>uni0249.ccmp</key>
 	<string>uni0249.ccmp.glif</string>
-	<key>uni024A</key>
-	<string>uni024A_.glif</string>
-	<key>uni024B</key>
-	<string>uni024B_.glif</string>
 	<key>uni024C</key>
 	<string>uni024C_.glif</string>
 	<key>uni024D</key>
@@ -1922,14 +1910,10 @@
 	<string>uni0268.ccmp.glif</string>
 	<key>uni029D.ccmp</key>
 	<string>uni029D_.ccmp.glif</string>
-	<key>uni02A9</key>
-	<string>uni02A9_.glif</string>
 	<key>uni02AB</key>
 	<string>uni02AB__.glif</string>
 	<key>uni02AC</key>
 	<string>uni02AC__.glif</string>
-	<key>uni02AE</key>
-	<string>uni02AE__.glif</string>
 	<key>uni02B2.ccmp</key>
 	<string>uni02B2_.ccmp.glif</string>
 	<key>uni02E5_uni02E5_uni02E6</key>
@@ -2544,8 +2528,6 @@
 	<string>uni1DFE___.glif</string>
 	<key>uni1DFF</key>
 	<string>uni1DFF___.glif</string>
-	<key>uni1E9C</key>
-	<string>uni1E9C__.glif</string>
 	<key>uni1E9D</key>
 	<string>uni1E9D__.glif</string>
 	<key>uni1E9F</key>
@@ -2908,6 +2890,8 @@
 	<string>zhecyrillic.glif</string>
 	<key>zhedescendercyrillic</key>
 	<string>zhedescendercyrillic.glif</string>
+	<key>zhook</key>
+	<string>zhook.glif</string>
 	<key>zrthook</key>
 	<string>zrthook.glif</string>
 </dict>
