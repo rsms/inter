@@ -1501,10 +1501,7 @@ function main() {
     samplesSelect.appendChild(opt)
   }
   sampleVar = vars.bind('sample', samplesSelect, (e, v) => {
-    let sampleText = samples.get(v)
-    if (!sampleText) {
-      return
-    }
+    let sampleText = samples.get(v) || ''+v
 
     if (v == 'Repertoire') {
       repertoireControl.style.display = null
