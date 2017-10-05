@@ -1,9 +1,13 @@
 #!/usr/bin/env python
 # encoding: utf8
 from __future__ import print_function
-import os, plistlib
+import os, plistlib, sys
 from collections import OrderedDict
 from argparse import ArgumentParser
+from ConfigParser import RawConfigParser
+
+
+BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 
 def parseGlyphComposition(composite):
@@ -37,35 +41,61 @@ def main():
   argparser.add_argument('fontPaths', metavar='<ufofile>', type=str, nargs='+', help='UFO files')
   args = argparser.parse_args()
 
-  srcdir = os.path.abspath(os.path.join(__file__, '..', '..'))
+  srcDir = os.path.join(BASEDIR, 'src')
 
-  nameLists = []
+  # load fontbuild config
+  config = RawConfigParser(dict_type=OrderedDict)
+  config.read(os.path.join(srcDir, 'fontbuild.cfg'))
+  deleteNames = set(config.get('glyphs', 'delete').split())
+
   fontPaths = []
-
   for fontPath in args.fontPaths:
     if 'regular' or 'Regular' in fontPath:
       fontPaths = [fontPath] + fontPaths
     else:
       fontPaths.append(fontPath)
 
-  for fontPath in fontPaths:
+  fontPath0 = args.fontPaths[0]
+  libPlist = plistlib.readPlist(os.path.join(fontPath, 'lib.plist'))
+  glyphOrder = libPlist['public.glyphOrder']
+  glyphNameSet = set(glyphOrder)
+
+  nameLists = []
+  indexOffset = 0
+  index = -1
+
+  for fontPath in fontPaths[1:]:
     libPlist = plistlib.readPlist(os.path.join(fontPath, 'lib.plist'))
     if 'public.glyphOrder' in libPlist:
-      nameLists.append(libPlist['public.glyphOrder'])
+      names = libPlist['public.glyphOrder']
+      numInserted = 0
+      for i in range(len(names)):
+        name = names[i]
+        if name not in glyphNameSet:
+          if i > 0 and names[i-1] in glyphNameSet:
+            # find position of prev glyph
+            index = glyphOrder.index(names[i-1]) + 1
+          elif index != -1:
+            index += 1
+          else:
+            index = min(len(glyphOrder), i - indexOffset)
 
-  glyphorderUnion = OrderedDict()
+          glyphOrder.insert(index, name)
+          numInserted += 1
+          glyphNameSet.add(name)
 
-  for names in zip(*nameLists):
-    for name in names:
-      glyphorderUnion[name] = True
+      indexOffset += numInserted
 
   # add any composed glyphs to the end
-  diacriticComps = loadGlyphCompositions(os.path.join(srcdir, 'src', 'diacritics.txt'))
+  diacriticComps = loadGlyphCompositions(os.path.join(srcDir, 'diacritics.txt'))
   for name in diacriticComps.keys():
-    glyphorderUnion[name] = True
+    if name not in glyphNameSet:
+      glyphOrder.append(name)
 
-  glyphorderUnionNames = glyphorderUnion.keys()
-  print('\n'.join(glyphorderUnionNames))
+  # filter out deleted glyphs
+  glyphOrder = [n for n in glyphOrder if n not in deleteNames]
+
+  print('\n'.join(glyphOrder))
 
 
 if __name__ == '__main__':
