@@ -173,11 +173,22 @@ class FontProject:
         f.save(ufoName)
         self.generatedFonts.append(ufoName)
 
+        # filter glyphorder -- only include glyphs that exists in font
+        glyphOrder = []
+        seenGlyphNames = set()
+        missingGlyphs = []
+        for glyphName in self.glyphOrder:
+            if glyphName in f:
+                if glyphName in seenGlyphNames:
+                    raise Exception('Duplicate glyphname %r in glyphorder' % glyphName)
+                seenGlyphNames.add(glyphName)
+                glyphOrder.append(glyphName)
+
         if self.buildOTF:
             log(">> Generating OTF file")
             newFont = OpenFont(ufoName)
             otfName = self.generateOutputPath(f, "otf")
-            saveOTF(newFont, otfName, self.glyphOrder)
+            saveOTF(newFont, otfName, glyphOrder)
 
     def generateTTFs(self):
         """Build TTF for each font generated since last call to generateTTFs."""
@@ -199,7 +210,8 @@ class FontProject:
         for font in fonts:
             ttfName = self.generateOutputPath(font, "ttf")
             log(os.path.basename(ttfName))
-            saveOTF(font, ttfName, self.glyphOrder, truetype=True)
+            glyphOrder = [n for n in self.glyphOrder if n in font]
+            saveOTF(font, ttfName, glyphOrder, truetype=True)
 
 
 # def transformGlyphMembers(g, m):
