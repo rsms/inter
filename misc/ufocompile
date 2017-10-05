@@ -160,12 +160,12 @@ def main():
   if ALL or 'bold' in styles:
     proj.generateFont(
       Mix2([rg, bl], 0.65, glyphSpecializations.get('bold', {})),
-      "%s/Bold/Bold/Rg" % FAMILYNAME)
+      "%s/Bold/Bold/Bd" % FAMILYNAME)
 
   if ALL or 'bolditalic' in styles:
     proj.generateFont(
       Mix2([rg, bl], 0.65, glyphSpecializations.get('bold', {})),
-      "%s/Bold Italic/Italic/Rg" % FAMILYNAME,
+      "%s/Bold Italic/Bold Italic/Bd" % FAMILYNAME,
       italic=True, stemWidth=384, italicMeanYCenter=-825, italicNarrowAmount=1)
 
 
