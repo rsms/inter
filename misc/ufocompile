@@ -136,6 +136,9 @@ def main():
     proj.buildOTF = True
 
   # name syntax: family/longstyle/shortstyle/subfamilyAbbrev
+  # italicNarrowAmount controls scale on the x axis. 1.0 means no scaling.
+  # italicMeanYCenter controls how far on the x axis the glyph should slide
+  #   to compensate for the slant.
 
   if ALL or 'regular' in styles:
     proj.generateFont(rg.font, "%s/Regular/Regular/Rg" % FAMILYNAME)
@@ -154,7 +157,7 @@ def main():
     proj.generateFont(
       Mix2([rg, bl], 0.35, glyphSpecializations.get('medium', {})),
       "%s/Medium Italic/Italic/Me" % FAMILYNAME,
-      italic=True, stemWidth=320, italicMeanYCenter=-825, italicNarrowAmount=1)
+      italic=True, stemWidth=300, italicMeanYCenter=-825, italicNarrowAmount=1)
 
 
   if ALL or 'bold' in styles:
@@ -166,7 +169,7 @@ def main():
     proj.generateFont(
       Mix2([rg, bl], 0.65, glyphSpecializations.get('bold', {})),
       "%s/Bold Italic/Bold Italic/Bd" % FAMILYNAME,
-      italic=True, stemWidth=384, italicMeanYCenter=-825, italicNarrowAmount=1)
+      italic=True, stemWidth=350, italicMeanYCenter=-825, italicNarrowAmount=1)
 
 
   if ALL or 'black' in styles:
@@ -174,7 +177,7 @@ def main():
 
   if ALL or 'blackitalic' in styles:
     proj.generateFont(bl.font, "%s/Black Italic/Italic/Bl" % FAMILYNAME,
-                      italic=True, stemWidth=290, italicMeanYCenter=-825, italicNarrowAmount=1)
+                      italic=True, stemWidth=400, italicMeanYCenter=-825, italicNarrowAmount=1)
 
   # generate TTFs
   if args.no_ttf == False:
