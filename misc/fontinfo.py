@@ -7,6 +7,7 @@ import os
 import sys
 import argparse
 import json
+from base64 import b64encode
 
 from fontTools import ttLib
 from fontTools.misc import sstruct
@@ -14,11 +15,66 @@ from fontTools.ttLib.tables._h_e_a_d import headFormat
 from fontTools.ttLib.tables._h_h_e_a import hheaFormat
 from fontTools.ttLib.tables._m_a_x_p import maxpFormat_0_5, maxpFormat_1_0_add
 from fontTools.ttLib.tables._p_o_s_t import postFormat
-from fontTools.ttLib.tables.O_S_2f_2 import OS2_format_1, OS2_format_2, OS2_format_5
+from fontTools.ttLib.tables.O_S_2f_2 import OS2_format_1, OS2_format_2, OS2_format_5, panoseFormat
+from fontTools.ttLib.tables._m_e_t_a import table__m_e_t_a
 # from robofab.world import world, RFont, RGlyph, OpenFont, NewFont
 # from robofab.objects.objectsRF import RFont, RGlyph, OpenFont, NewFont, RContour
 
 _NAME_IDS = {}
+
+
+panoseWeights = [
+  'Any', # 0
+  'No Fit', # 1
+  'Very Light', # 2
+  'Light', # 3
+  'Thin', # 4
+  'Book', # 5
+  'Medium', # 6
+  'Demi', # 7
+  'Bold', # 8
+  'Heavy', # 9
+  'Black', # 10
+  'Extra Black', # 11
+]
+
+panoseProportion = [
+  'Any', # 0
+  'No fit', # 1
+  'Old Style/Regular', # 2
+  'Modern', # 3
+  'Even Width', # 4
+  'Extended', # 5
+  'Condensed', # 6
+  'Very Extended', # 7
+  'Very Condensed', # 8
+  'Monospaced', # 9
+]
+
+os2WidthClass = [
+  None,
+  'Ultra-condensed', # 1
+  'Extra-condensed', # 2
+  'Condensed', # 3
+  'Semi-condensed', # 4
+  'Medium (normal)', # 5
+  'Semi-expanded', # 6
+  'Expanded', # 7
+  'Extra-expanded', # 8
+  'Ultra-expanded', # 9
+]
+
+os2WeightClass = {
+  100: 'Thin',
+  200: 'Extra-light (Ultra-light)',
+  300: 'Light',
+  400: 'Normal (Regular)',
+  500: 'Medium',
+  600: 'Semi-bold (Demi-bold)',
+  700: 'Bold',
+  800: 'Extra-bold (Ultra-bold)',
+  900: 'Black (Heavy)',
+}
 
 
 def num(s):
@@ -237,7 +293,22 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
       info['names'] = nameDict
 
     if 'head' in tt:
-      info['head'] = sstructTableToDict(tt['head'], headFormat)
+      head = sstructTableToDict(tt['head'], headFormat)
+      if 'macStyle' in head:
+        s = []
+        v = head['macStyle']
+        print 'v: %r' % isinstance(v, int)
+        if isinstance(v, int):
+          if v & 0b00000001: s.append('Bold')
+          if v & 0b00000010: s.append('Italic')
+          if v & 0b00000100: s.append('Underline')
+          if v & 0b00001000: s.append('Outline')
+          if v & 0b00010000: s.append('Shadow')
+          if v & 0b00100000: s.append('Condensed')
+          if v & 0b01000000: s.append('Extended')
+          head['macStyle_raw'] = head['macStyle']
+          head['macStyle'] = s
+      info['head'] = head
 
     if 'hhea' in tt:
       info['hhea'] = sstructTableToDict(tt['hhea'], hheaFormat)
@@ -247,16 +318,51 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
 
     if 'OS/2' in tt:
       t = tt['OS/2']
+      os2 = None
       if t.version == 1:
-        info['os/2'] = sstructTableToDict(t, OS2_format_1)
+        os2 = sstructTableToDict(t, OS2_format_1)
       elif t.version in (2, 3, 4):
-        info['os/2'] = sstructTableToDict(t, OS2_format_2)
+        os2 = sstructTableToDict(t, OS2_format_2)
       elif t.version == 5:
-        info['os/2'] = sstructTableToDict(t, OS2_format_5)
-        info['os/2']['usLowerOpticalPointSize'] /= 20
-        info['os/2']['usUpperOpticalPointSize'] /= 20
-      if 'panose' in info['os/2']:
-        del info['os/2']['panose']
+        os2 = sstructTableToDict(t, OS2_format_5)
+        os2['usLowerOpticalPointSize'] /= 20
+        os2['usUpperOpticalPointSize'] /= 20
+
+      if 'panose' in os2:
+        panose = {}
+        for k,v in sstructTableToDict(os2['panose'], panoseFormat).iteritems():
+          if k[0:1] == 'b' and k[1].isupper():
+            k = k[1].lower() + k[2:]
+            # bFooBar => fooBar
+          if k == 'weight' and isinstance(v, int) and v < len(panoseWeights):
+            panose['weightName'] = panoseWeights[v]
+          elif k == 'proportion' and isinstance(v, int) and v < len(panoseProportion):
+            panose['proportionName'] = panoseProportion[v]
+          panose[k] = v
+        os2['panose'] = panose
+
+      if 'usWidthClass' in os2:
+        v = os2['usWidthClass']
+        if isinstance(v, int) and v > 0 and v < len(os2WidthClass):
+          os2['usWidthClassName'] = os2WidthClass[v]
+
+      if 'usWeightClass' in os2:
+        v = os2['usWeightClass']
+        name = os2WeightClass.get(os2['usWeightClass'])
+        if name:
+          os2['usWeightClassName'] = name
+
+      info['os/2'] = os2
+
+    if 'meta' in tt:
+      meta = {}
+      for k,v in tt['meta'].data.iteritems():
+        try:
+          v.decode('utf8')
+          meta[k] = v
+        except:
+          meta[k] = 'data:;base64,' + b64encode(v)
+      info['meta'] = meta
 
     # if 'maxp' in tt:
     #   table = tt['maxp']
