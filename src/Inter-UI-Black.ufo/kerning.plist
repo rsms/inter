@@ -329,6 +329,10 @@
 		<integer>-144</integer>
 		<key>@KERN_RIGHT_S</key>
 		<integer>-16</integer>
+		<key>@KERN_RIGHT_dotlessi</key>
+		<integer>-32</integer>
+		<key>@KERN_RIGHT_dotlessj</key>
+		<integer>-198</integer>
 		<key>@KERN_RIGHT_v</key>
 		<integer>-80</integer>
 		<key>backslash</key>
@@ -444,7 +448,9 @@
 		<key>@KERN_RIGHT_comma</key>
 		<integer>-227</integer>
 		<key>@KERN_RIGHT_dotlessi</key>
-		<integer>-128</integer>
+		<integer>-32</integer>
+		<key>@KERN_RIGHT_dotlessj</key>
+		<integer>-198</integer>
 		<key>@KERN_RIGHT_eightsub</key>
 		<integer>-137</integer>
 		<key>@KERN_RIGHT_m</key>
@@ -2705,17 +2711,17 @@
 		<key>@KERN_RIGHT_A</key>
 		<integer>-125</integer>
 		<key>@KERN_RIGHT_AE</key>
-		<integer>-138</integer>
+		<integer>-218</integer>
 		<key>@KERN_RIGHT_J</key>
-		<integer>-173</integer>
+		<integer>-200</integer>
 		<key>@KERN_RIGHT_X</key>
 		<integer>-27</integer>
 		<key>@KERN_RIGHT_Y</key>
-		<integer>20</integer>
+		<integer>64</integer>
 		<key>@KERN_RIGHT_a</key>
 		<integer>-48</integer>
 		<key>@KERN_RIGHT_c</key>
-		<integer>-52</integer>
+		<integer>-64</integer>
 		<key>@KERN_RIGHT_comma</key>
 		<integer>-150</integer>
 		<key>@KERN_RIGHT_divide</key>
@@ -2723,13 +2729,13 @@
 		<key>@KERN_RIGHT_dotlessj</key>
 		<integer>-176</integer>
 		<key>@KERN_RIGHT_eightsub</key>
-		<integer>-88</integer>
+		<integer>-232</integer>
 		<key>@KERN_RIGHT_eightsuperior</key>
-		<integer>63</integer>
+		<integer>31</integer>
 		<key>@KERN_RIGHT_f</key>
-		<integer>14</integer>
+		<integer>64</integer>
 		<key>@KERN_RIGHT_guillemotleft</key>
-		<integer>-55</integer>
+		<integer>-87</integer>
 		<key>@KERN_RIGHT_quotedblbase</key>
 		<integer>-158</integer>
 		<key>@KERN_RIGHT_quotedblright</key>
@@ -2737,17 +2743,17 @@
 		<key>@KERN_RIGHT_s</key>
 		<integer>-56</integer>
 		<key>@KERN_RIGHT_t</key>
-		<integer>14</integer>
+		<integer>64</integer>
 		<key>ampersand</key>
 		<integer>-68</integer>
 		<key>four</key>
-		<integer>-96</integer>
+		<integer>-144</integer>
 		<key>periodcentered</key>
 		<integer>-34</integer>
 		<key>slash</key>
-		<integer>-48</integer>
+		<integer>-128</integer>
 		<key>underscore</key>
-		<integer>-69</integer>
+		<integer>-228</integer>
 	</dict>
 	<key>@KERN_LEFT_g</key>
 	<dict>
@@ -6456,6 +6462,11 @@
 		<integer>14</integer>
 		<key>seven</key>
 		<integer>27</integer>
+	</dict>
+	<key>space</key>
+	<dict>
+		<key>E</key>
+		<integer>0</integer>
 	</dict>
 	<key>summation</key>
 	<dict>
