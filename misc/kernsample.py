@@ -62,7 +62,7 @@ def samplesForGlyphname(font, groups, groupmap, kerning, glyphname, args):
     left = fmtGlyphname(glyphname, leftGlyph)
     suffix_uc = ''
     suffix_lc = ''
-    if len(args.suffix) > 0:
+    if args.suffix and len(args.suffix) > 0:
       s = unicode(args.suffix)
       if s[0].isupper():
         suffix_uc = args.suffix
@@ -112,7 +112,6 @@ def main():
          'You can also provide a Unicode code point using the syntax "U+XXXX"')
 
   args = argparser.parse_args()
-  dryRun = args.dryRun
 
   font = OpenFont(args.fontPath)
 
