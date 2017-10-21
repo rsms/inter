@@ -144,7 +144,7 @@ def main():
     proj.generateFont(rg.font, "%s/Regular/Regular/Rg" % FAMILYNAME)
 
   if ALL or 'regularitalic' in styles:
-    proj.generateFont(rg.font, "%s/Regular Italic/Italic/Rg" % FAMILYNAME,
+    proj.generateFont(rg.font, "%s/Italic/Italic/Rg" % FAMILYNAME,
                       italic=True, stemWidth=232, italicMeanYCenter=-825, italicNarrowAmount=1)
 
 
