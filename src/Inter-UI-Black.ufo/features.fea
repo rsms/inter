@@ -1,13 +1,13 @@
 include(../features.fea);
 
 @TNUM_L = [
-  zero one two three five six seven
-  four.1 six.1 nine.1
+  zero one two three five six seven eight nine
+  one.1 four.1 six.1 nine.1
   period comma
 ];
 @TNUM_R = [
-  zero.tnum one.tnum two.tnum three.tnum five.tnum six.tnum seven.tnum
-  four.tnum.1 six.tnum.1 nine.tnum.1
+  zero.tnum one.tnum two.tnum three.tnum five.tnum six.tnum seven.tnum eight.tnum nine.tnum
+  one.tnum.1 four.tnum.1 six.tnum.1 nine.tnum.1
   period.tnum comma.tnum
 ];
 
