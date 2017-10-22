@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="G" format="1">
-  <advance width="1904"/>
+  <advance width="1928"/>
   <unicode hex="0047"/>
   <outline>
     <contour>
-      <point x="1784" y="1096" type="line"/>
-      <point x="976" y="1096" type="line"/>
-      <point x="976" y="756" type="line"/>
-      <point x="1340" y="756" type="line"/>
-      <point x="1340" y="460"/>
-      <point x="1232" y="352"/>
-      <point x="1020" y="352" type="curve" smooth="yes"/>
-      <point x="728" y="352"/>
-      <point x="588" y="556"/>
+      <point x="1800" y="1096" type="line"/>
+      <point x="992" y="1096" type="line"/>
+      <point x="992" y="756" type="line"/>
+      <point x="1356" y="756" type="line"/>
+      <point x="1356" y="516"/>
+      <point x="1208" y="388"/>
+      <point x="992" y="388" type="curve" smooth="yes"/>
+      <point x="756" y="388"/>
+      <point x="592" y="540"/>
       <point x="588" y="1020" type="curve"/>
-      <point x="588" y="1496"/>
-      <point x="744" y="1688"/>
-      <point x="988" y="1688" type="curve" smooth="yes"/>
-      <point x="1240" y="1688"/>
+      <point x="592" y="1484"/>
+      <point x="740" y="1660"/>
+      <point x="992" y="1660" type="curve" smooth="yes"/>
+      <point x="1244" y="1660"/>
       <point x="1312" y="1484"/>
       <point x="1340" y="1376" type="curve"/>
-      <point x="1776" y="1436" type="line"/>
-      <point x="1716" y="1728"/>
-      <point x="1488" y="2076"/>
-      <point x="984" y="2076" type="curve" smooth="yes"/>
+      <point x="1792" y="1436" type="line"/>
+      <point x="1736" y="1716"/>
+      <point x="1484" y="2076"/>
+      <point x="992" y="2076" type="curve" smooth="yes"/>
       <point x="476" y="2076"/>
-      <point x="120" y="1716"/>
+      <point x="120" y="1688"/>
       <point x="120" y="1024" type="curve"/>
-      <point x="120" y="332"/>
-      <point x="472" y="-28"/>
-      <point x="1000" y="-28" type="curve" smooth="yes"/>
-      <point x="1432" y="-28"/>
-      <point x="1784" y="220"/>
-      <point x="1784" y="720" type="curve"/>
+      <point x="120" y="376"/>
+      <point x="464" y="-28"/>
+      <point x="992" y="-28" type="curve" smooth="yes"/>
+      <point x="1428" y="-28"/>
+      <point x="1800" y="280"/>
+      <point x="1800" y="784" type="curve"/>
     </contour>
     <contour>
-      <point x="1028" y="2200" type="move" name="top"/>
+      <point x="1028.0" y="2200.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1056" y="0" type="move" name="bottom"/>
+      <point x="1056.0" y="0.0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1980" y="2200" type="move" name="top_dd"/>
+      <point x="1980.0" y="2200.0" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="1980" y="-560" type="move" name="bottom_dd"/>
+      <point x="1980.0" y="-560.0" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="1980" y="2200" type="move" name="top0315"/>
+      <point x="1980.0" y="2200.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
@@ -104,6 +104,20 @@
           <key>y</key>
           <integer>1376</integer>
         </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>992</integer>
+          <key>y</key>
+          <integer>1136</integer>
+        </dict>
       </array>
       <key>com.typemytype.robofont.layerData</key>
       <dict>
@@ -123,7 +137,7 @@
                 <integer>0</integer>
                 <integer>0</integer>
                 <integer>1</integer>
-                <integer>-32</integer>
+                <integer>0</integer>
                 <integer>0</integer>
               </array>
             </dict>
@@ -140,7 +154,7 @@
           <array>
           </array>
           <key>width</key>
-          <integer>1904</integer>
+          <integer>1928</integer>
         </dict>
       </dict>
       <key>com.typemytype.robofont.mark</key>

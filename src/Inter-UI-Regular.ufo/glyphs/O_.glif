@@ -4,24 +4,6 @@
   <unicode hex="004F"/>
   <outline>
     <contour>
-      <point x="1012" y="2304" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1024" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="176" y="2048" type="move" name="tonos"/>
-    </contour>
-    <contour>
-      <point x="1928" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1992" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="1928" y="2200" type="move" name="top0315"/>
-    </contour>
-    <contour>
       <point x="1856" y="1024" type="curve"/>
       <point x="1856" y="1672"/>
       <point x="1508" y="2076"/>
@@ -29,29 +11,176 @@
       <point x="524" y="2076"/>
       <point x="176" y="1672"/>
       <point x="176" y="1024" type="curve"/>
-      <point x="176" y="372"/>
+      <point x="176" y="376"/>
       <point x="524" y="-28"/>
       <point x="1016" y="-28" type="curve" smooth="yes"/>
       <point x="1508" y="-28"/>
-      <point x="1856" y="372"/>
+      <point x="1856" y="376"/>
     </contour>
     <contour>
       <point x="1616" y="1024" type="curve"/>
-      <point x="1616" y="504"/>
-      <point x="1348" y="204"/>
-      <point x="1024" y="204" type="curve" smooth="yes"/>
-      <point x="700" y="204"/>
-      <point x="416" y="504"/>
+      <point x="1616" y="492"/>
+      <point x="1356" y="204"/>
+      <point x="1016" y="204" type="curve" smooth="yes"/>
+      <point x="676" y="204"/>
+      <point x="416" y="492"/>
       <point x="416" y="1024" type="curve"/>
-      <point x="416" y="1568"/>
-      <point x="676" y="1856"/>
-      <point x="1008" y="1856" type="curve" smooth="yes"/>
-      <point x="1360" y="1856"/>
-      <point x="1616" y="1536"/>
+      <point x="416" y="1556"/>
+      <point x="676" y="1844"/>
+      <point x="1016" y="1844" type="curve" smooth="yes"/>
+      <point x="1356" y="1844"/>
+      <point x="1616" y="1556"/>
+    </contour>
+    <contour>
+      <point x="1012.0" y="2304.0" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1024.0" y="0.0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="176.0" y="2048.0" type="move" name="tonos"/>
+    </contour>
+    <contour>
+      <point x="1928.0" y="2200.0" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1992.0" y="-560.0" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1928.0" y="2200.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1016</integer>
+          <key>y</key>
+          <integer>988</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>524</integer>
+          <key>y</key>
+          <integer>2060</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1508</integer>
+          <key>y</key>
+          <integer>2096</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>676</integer>
+          <key>y</key>
+          <integer>1840</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1356</integer>
+          <key>y</key>
+          <integer>1828</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1652</integer>
+          <key>y</key>
+          <integer>1556</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1876</integer>
+          <key>y</key>
+          <integer>492</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>180</integer>
+          <key>y</key>
+          <integer>1672</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1860</integer>
+          <key>y</key>
+          <integer>376</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.86</real>
