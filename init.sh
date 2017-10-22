@@ -195,7 +195,7 @@ else
     Black \
   )
   derived_styles=( \
-    "RegularItalic  : Regular" \
+    "Italic         : Regular" \
     "Medium         : Regular Black" \
     "MediumItalic   : Regular Black" \
     "Bold           : Black" \
