@@ -297,7 +297,6 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
       if 'macStyle' in head:
         s = []
         v = head['macStyle']
-        print 'v: %r' % isinstance(v, int)
         if isinstance(v, int):
           if v & 0b00000001: s.append('Bold')
           if v & 0b00000010: s.append('Italic')
