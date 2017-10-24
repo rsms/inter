@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import print_function
 import os
 import sys
 import argparse
@@ -84,6 +85,7 @@ def main():
 
   args = argparser.parse_args()
   styles = [s.lower() for s in args.styles]
+  handledStyles = []
   ALL = len(styles) == 0
 
   # version control tag, if any
@@ -124,7 +126,7 @@ def main():
       if self.glyphSpecializations is not None:
         specializedGlyph = self.glyphSpecializations.get(gname)
         if specializedGlyph is not None:
-          print 'mixglyph using specialized', gname
+          print('mixglyph using specialized', gname)
           return specializedGlyph
       return Mix.mixGlyphs(self, gname)
 
@@ -141,19 +143,23 @@ def main():
   #   to compensate for the slant.
 
   if ALL or 'regular' in styles:
+    handledStyles.append('regular')
     proj.generateFont(rg.font, "%s/Regular/Regular/Rg" % FAMILYNAME)
 
-  if ALL or 'regularitalic' in styles:
+  if ALL or 'italic' in styles:
+    handledStyles.append('italic')
     proj.generateFont(rg.font, "%s/Italic/Italic/Rg" % FAMILYNAME,
                       italic=True, stemWidth=232, italicMeanYCenter=-825, italicNarrowAmount=1)
 
 
   if ALL or 'medium' in styles:
+    handledStyles.append('medium')
     proj.generateFont(
       Mix2([rg, bl], 0.35, glyphSpecializations.get('medium', {})),
       "%s/Medium/Regular/Me" % FAMILYNAME)
 
   if ALL or 'mediumitalic' in styles:
+    handledStyles.append('mediumitalic')
     proj.generateFont(
       Mix2([rg, bl], 0.35, glyphSpecializations.get('medium', {})),
       "%s/Medium Italic/Italic/Me" % FAMILYNAME,
@@ -161,11 +167,13 @@ def main():
 
 
   if ALL or 'bold' in styles:
+    handledStyles.append('bold')
     proj.generateFont(
       Mix2([rg, bl], 0.65, glyphSpecializations.get('bold', {})),
       "%s/Bold/Bold/Bd" % FAMILYNAME)
 
   if ALL or 'bolditalic' in styles:
+    handledStyles.append('bolditalic')
     proj.generateFont(
       Mix2([rg, bl], 0.65, glyphSpecializations.get('bold', {})),
       "%s/Bold Italic/Bold Italic/Bd" % FAMILYNAME,
@@ -173,15 +181,23 @@ def main():
 
 
   if ALL or 'black' in styles:
+    handledStyles.append('black')
     proj.generateFont(bl.font, "%s/Black/Regular/Bl" % FAMILYNAME)
 
   if ALL or 'blackitalic' in styles:
+    handledStyles.append('blackitalic')
     proj.generateFont(bl.font, "%s/Black Italic/Italic/Bl" % FAMILYNAME,
                       italic=True, stemWidth=400, italicMeanYCenter=-825, italicNarrowAmount=1)
 
   # generate TTFs
   if args.no_ttf == False:
     proj.generateTTFs()
+
+  if not ALL:
+    diff = set(styles).difference(set(handledStyles))
+    if len(diff) != 0:
+      print('Unknown styles %r' % diff, file=sys.stderr)
+      sys.exit(1)
 
 main()
 
