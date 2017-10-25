@@ -3,7 +3,7 @@ html { }
 body {
   background-color: #f4f4f4;
   color: #414141;
-  font: 16px/22px 'Inter UI', sans-serif;
+  font: 16px/22px 'Inter UI', system-ui, sans-serif;
   letter-spacing: -0.1px;
   font-weight: 400;
   padding-bottom: 30px;
@@ -20,6 +20,10 @@ a {
   word-break: break-word;
   word-wrap: break-word;
 }
+a.fat {
+  font-weight:500;
+  color: #333;
+}
 a:hover {
   color: rgb(48, 112, 232);
 }
@@ -28,9 +32,7 @@ a.plain, a.fat {
   background: none !important;
   text-shadow: none !important;
   text-decoration: none;
-}
-a.fat {
-  font-weight:700;
+  cursor: pointer;
 }
 
 p {
@@ -82,7 +84,7 @@ h1 {
   color: #222;
   font-size: 55px;
   letter-spacing: -2.1px;
-  line-height: 40px;
+  line-height: 50px;
   text-indent: -2.5px;
   margin-bottom: 30px;
   margin-top: 10px;
@@ -141,8 +143,12 @@ h1 > a, h2 > a, h3 > a {
   border-bottom: 1px dashed rgba(0,0,0,0.09);
 }
 
-/* small screens */
+/* small screens (up to iPhone 6) */
 @media only screen and (max-device-width: 736px) {
+  body {
+    font-size: 14px;
+    line-height: 20px;
+  }
   .row {
     padding-left: 20px;
     padding-right: 20px;
@@ -441,3 +447,102 @@ box h3 {
     min-width: 100%;
     *width: 100%;
   }
+
+
+.carousel, .carousel * {
+  user-select: none;
+  cursor: default;
+}
+
+.carousel .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 40px;
+  height: 40px;
+  /*background:#eee;*/
+}
+  .carousel .header h2 {
+    margin: 0 0 1px 0;
+  }
+  .carousel .dots {
+    display: flex;
+    align-items: stretch;
+    /*background:salmon;*/
+    height: 40px;
+  }
+    .carousel .dots > .dot {
+      width:  14px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+      .carousel .dot > .graphic {
+        box-sizing: border-box;
+        border-radius: 100%;
+        width:  10px;
+        height: 10px;
+        border: 1px solid #ccc;
+      }
+      .carousel .dots > .dot:hover > .graphic {
+        border-color:#111;
+      }
+      .carousel .dots > .dot.active > .graphic {
+        background: #222;
+        border: none;
+      }
+
+  .carousel .preload {
+    visibility: hidden;
+    pointer-events: none;
+    position: fixed;
+  }
+
+  .carousel .items {
+    margin-bottom: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    height:780px;
+    /*width: 100vw;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+    .carousel .items > * {
+      flex: 1 0 auto;
+      margin-right: 20vw;
+      width: 80vw;
+      max-width: 888px;
+      cursor: e-resize;
+      transition: all 200ms ease-out;
+    }
+    .carousel .items > .loading {
+      opacity: 0.6;
+      -webkit-filter: url('#blur');
+      filter: url('#blur');
+      -webkit-filter: blur(20px);
+      filter: blur(20px);
+    }
+
+
+@media only screen and (max-device-width: 780px) and (orientation: portrait) {
+  .carousel .items {
+    height: auto !important;
+    max-height: 90vw;
+  }
+  .carousel .items img {
+    max-height: 90vw;
+  }
+}
+@media only screen and (max-device-width: 780px) and (orientation: landscape) {
+  .carousel .items {
+    height: auto !important;
+    width: 90vh;
+    margin: 0 auto;
+  }
+  .carousel .items > * {
+    width: 90vh;
+    max-height: 90vh;
+  }
+}

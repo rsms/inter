@@ -23,14 +23,12 @@
     <meta property="og:locale" content="en_US" />
     <meta name="format-detection" content="telephone=no">
 
-    <link rel="icon" type="image/png" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
 
     <link href="inter-ui.css?v=2" rel="stylesheet">
     <link href="index.css?v=2" rel="stylesheet">
   </head>
   <body>
-    <script src="index.js"></script>
-
     <div class="row"><div>
       <h1>The Inter UI font family</h1>
       <p>
@@ -40,12 +38,29 @@
       </p>
     </div></div>
 
-    <div class="row white" style="padding-bottom:0"><div>
-      <h2><a id="sample" href="#sample">Sample</a></h2>
-      <p style="margin-bottom:0">
-        <a href="https://www.figma.com/file/WmU5NWr52bnUcqv5os0V4sWi/" class="plain"><img src="res/sample.png" width="888" style="width:100%;display:block"></a>
-      </p>
-    </div></div>
+    <div class="row white" style="padding-bottom:0">
+      <div class="carousel">
+        <div class="header">
+          <h2><a id="sample" href="#samples">Samples</a></h2>
+          <div class="dots"></div>
+        </div>
+        <p id="samples" class="samples items">
+          <img src="res/sample/01.png" srcset="res/sample/01@2x.png 2x" width="888">
+          <img src="res/sample/02.png" srcset="res/sample/02@2x.png 2x" width="888">
+          <img src="res/sample/03.png" srcset="res/sample/03@2x.png 2x" width="888">
+          <img src="res/sample/04.png" srcset="res/sample/04@2x.png 2x" width="888">
+          <img src="res/sample/05.png" srcset="res/sample/05@2x.png 2x" width="888">
+          <img src="res/sample/06.png" srcset="res/sample/06@2x.png 2x" width="888">
+          <img src="res/sample/07.png" srcset="res/sample/07@2x.png 2x" width="888">
+          <img src="res/sample/08.png" srcset="res/sample/08@2x.png 2x" width="888">
+          <img src="res/sample/09.png" srcset="res/sample/09@2x.png 2x" width="888">
+        </p>
+        <p style="text-align:center">
+          <a href="https://www.figma.com/file/WmU5NWr52bnUcqv5os0V4sWi/" class="plain">Open these samples in Figma</a>
+          <br><br>
+        </p>
+      </div>
+    </div>
 
     <div class="row dark"><div>
       <h2><a id="free" href="#free">How much does it cost?</a></h2>
@@ -284,27 +299,28 @@
 
       </ul>
 
-      <script>
-        var av = document.querySelectorAll('ul.faq > li.q'), a, i, e, id
-        for (i = 0; i < av.length; ++i) {
-          e = av[i]
-          id = e.id
-          if (id) {
-            a = document.createElement('a')
-            a.href = '#' + id
-            a.className = 'plain'
-            a.innerHTML = e.innerHTML
-            e.innerText = ''
-            e.appendChild(a)
-          }
-        }
-      </script>
-
     </div></div>
 
 
     <div class="row"><div>
       — <a href="https://twitter.com/rsms" class="plain">@rsms</a>
     </div></div>
+
+    <script src="index.js"></script>
+    <script>
+      var av = document.querySelectorAll('ul.faq > li.q'), a, i, e, id
+      for (i = 0; i < av.length; ++i) {
+        e = av[i]
+        id = e.id
+        if (id) {
+          a = document.createElement('a')
+          a.href = '#' + id
+          a.className = 'plain'
+          a.innerHTML = e.innerHTML
+          e.innerText = ''
+          e.appendChild(a)
+        }
+      }
+    </script>
   </body>
 </html>
