@@ -4,20 +4,37 @@
   <unicode hex="003D"/>
   <outline>
     <contour>
-      <point x="192" y="732" type="line"/>
-      <point x="192" y="380" type="line"/>
-      <point x="1344" y="380" type="line"/>
-      <point x="1344" y="732" type="line"/>
+      <point x="192" y="748" type="line"/>
+      <point x="192" y="396" type="line"/>
+      <point x="1344" y="396" type="line"/>
+      <point x="1344" y="748" type="line"/>
     </contour>
     <contour>
-      <point x="192" y="1376" type="line"/>
-      <point x="192" y="1024" type="line"/>
-      <point x="1344" y="1024" type="line"/>
-      <point x="1344" y="1376" type="line"/>
+      <point x="192" y="1396" type="line"/>
+      <point x="192" y="1044" type="line"/>
+      <point x="1344" y="1044" type="line"/>
+      <point x="1344" y="1396" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>532</integer>
+          <key>y</key>
+          <integer>896</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.8</real>
@@ -26,7 +43,7 @@
         <real>1.0</real>
       </array>
       <key>interface.gridadjust.original</key>
-      <string>{'width': 1638, 'leftMargin': 180, 'rightMargin': 198}</string>
+      <string>{'width': 1492, 'leftMargin': 78, 'rightMargin': 87}</string>
     </dict>
   </lib>
 </glyph>

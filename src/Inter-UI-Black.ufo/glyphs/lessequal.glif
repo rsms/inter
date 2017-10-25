@@ -3,11 +3,37 @@
   <advance width="1536"/>
   <unicode hex="2264"/>
   <outline>
-    <component base="less" yScale="0.81" xOffset="-4" yOffset="296"/>
-    <component base="minus" yScale="0.91" yOffset="-724"/>
+    <contour>
+      <point x="1344" y="716" type="line"/>
+      <point x="808" y="1016" type="line"/>
+      <point x="808" y="1032" type="line"/>
+      <point x="1344" y="1332" type="line"/>
+      <point x="1344" y="1684" type="line"/>
+      <point x="192" y="1052" type="line"/>
+      <point x="192" y="1000" type="line"/>
+      <point x="1344" y="364" type="line"/>
+    </contour>
+    <component base="minus" yScale="0.91" yOffset="-656"/>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>212</integer>
+          <key>y</key>
+          <integer>1024</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.8</real>
