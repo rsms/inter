@@ -9,29 +9,28 @@
       <point x="592" y="0" type="line"/>
       <point x="592" y="1664" type="line"/>
       <point x="900" y="1664" type="line" smooth="yes"/>
-      <point x="1092" y="1664"/>
-      <point x="1192" y="1568"/>
+      <point x="1100" y="1664"/>
+      <point x="1192" y="1564"/>
       <point x="1192" y="1396" type="curve" smooth="yes"/>
-      <point x="1192" y="1228"/>
-      <point x="1096" y="1132"/>
+      <point x="1192" y="1220"/>
+      <point x="1092" y="1132"/>
       <point x="900" y="1132" type="curve" smooth="yes"/>
       <point x="416" y="1132" type="line"/>
       <point x="420" y="752" type="line"/>
       <point x="1072" y="752" type="line"/>
       <point x="1224" y="792" type="line"/>
       <point x="1480" y="888"/>
-      <point x="1652" y="1104"/>
+      <point x="1652" y="1084"/>
       <point x="1652" y="1408" type="curve" smooth="yes"/>
-      <point x="1652" y="1792"/>
-      <point x="1376" y="2048"/>
+      <point x="1652" y="1800"/>
+      <point x="1400" y="2048"/>
       <point x="900" y="2048" type="curve" smooth="yes"/>
     </contour>
     <contour>
       <point x="1228" y="0" type="line"/>
-      <point x="1724" y="0" type="line"/>
-      <point x="1724" y="20" type="line"/>
-      <point x="1272" y="932" type="line"/>
-      <point x="784" y="932" type="line"/>
+      <point x="1736" y="0" type="line"/>
+      <point x="1208" y="932" type="line"/>
+      <point x="708" y="932" type="line"/>
     </contour>
     <contour>
       <point x="884.0" y="2200.0" type="move" name="top"/>
@@ -90,22 +89,54 @@
           </array>
           <key>components</key>
           <array>
-            <dict>
-              <key>baseGlyph</key>
-              <string>P</string>
-              <key>transformation</key>
-              <array>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-              </array>
-            </dict>
           </array>
           <key>contours</key>
           <array>
+            <dict>
+              <key>points</key>
+              <array>
+                <dict>
+                  <key>segmentType</key>
+                  <string>line</string>
+                  <key>smooth</key>
+                  <false/>
+                  <key>x</key>
+                  <integer>1268</integer>
+                  <key>y</key>
+                  <integer>0</integer>
+                </dict>
+                <dict>
+                  <key>segmentType</key>
+                  <string>line</string>
+                  <key>smooth</key>
+                  <false/>
+                  <key>x</key>
+                  <integer>1556</integer>
+                  <key>y</key>
+                  <integer>0</integer>
+                </dict>
+                <dict>
+                  <key>segmentType</key>
+                  <string>line</string>
+                  <key>smooth</key>
+                  <false/>
+                  <key>x</key>
+                  <integer>1024</integer>
+                  <key>y</key>
+                  <integer>900</integer>
+                </dict>
+                <dict>
+                  <key>segmentType</key>
+                  <string>line</string>
+                  <key>smooth</key>
+                  <false/>
+                  <key>x</key>
+                  <integer>744</integer>
+                  <key>y</key>
+                  <integer>900</integer>
+                </dict>
+              </array>
+            </dict>
           </array>
           <key>lib</key>
           <dict>
