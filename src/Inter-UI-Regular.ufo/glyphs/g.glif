@@ -25,68 +25,21 @@
       <point x="1508" y="-32" type="curve" smooth="yes"/>
       <point x="1508" y="1536" type="line"/>
     </contour>
+    <component base="leftloop.cn" yScale="0.9847159828034862" xOffset="24" yOffset="24"/>
     <contour>
-      <point x="1352" y="1088" type="line"/>
-      <point x="1320" y="1284"/>
-      <point x="1204" y="1556"/>
-      <point x="828" y="1556" type="curve" smooth="yes"/>
-      <point x="412" y="1556"/>
-      <point x="136" y="1248"/>
-      <point x="136" y="784" type="curve" smooth="yes"/>
-      <point x="136" y="300"/>
-      <point x="416" y="0"/>
-      <point x="828" y="0" type="curve" smooth="yes"/>
-      <point x="1188" y="0"/>
-      <point x="1320" y="276"/>
-      <point x="1352" y="476" type="curve"/>
-      <point x="1396" y="796" type="line"/>
-      <point x="1288" y="796" type="line"/>
-      <point x="1288" y="768"/>
-      <point x="1288" y="640"/>
-      <point x="1260" y="540" type="curve"/>
-      <point x="1212" y="344"/>
-      <point x="1020" y="216"/>
-      <point x="828" y="216" type="curve" smooth="yes"/>
-      <point x="572" y="216"/>
-      <point x="372" y="420"/>
-      <point x="372" y="784" type="curve" smooth="yes"/>
-      <point x="372" y="1128"/>
-      <point x="564" y="1344"/>
-      <point x="832" y="1344" type="curve" smooth="yes"/>
-      <point x="1036" y="1344"/>
-      <point x="1200" y="1208"/>
-      <point x="1256" y="1028" type="curve"/>
-      <point x="1288" y="916"/>
-      <point x="1288" y="808"/>
-      <point x="1288" y="780" type="curve"/>
-      <point x="1396" y="780" type="line"/>
+      <point x="896.0" y="1792.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1236" y="204" type="line"/>
-      <point x="1320" y="204" type="line"/>
-      <point x="1320" y="396" type="line"/>
-      <point x="1236" y="396" type="line"/>
+      <point x="832.0" y="-616.0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1236" y="1164" type="line"/>
-      <point x="1320" y="1164" type="line"/>
-      <point x="1320" y="1356" type="line"/>
-      <point x="1236" y="1356" type="line"/>
+      <point x="1652.0" y="2200.0" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="896" y="1792" type="move" name="top"/>
+      <point x="1652.0" y="-560.0" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="832" y="-616" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1652" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1652" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="1652" y="1776" type="move" name="top0315"/>
+      <point x="1652.0" y="1776.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
@@ -109,7 +62,7 @@
                 <integer>0</integer>
                 <integer>0</integer>
                 <integer>1</integer>
-                <integer>16</integer>
+                <integer>0</integer>
                 <integer>0</integer>
               </array>
             </dict>

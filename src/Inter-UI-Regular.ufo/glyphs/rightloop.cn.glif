@@ -3,52 +3,35 @@
   <advance width="1664"/>
   <outline>
     <contour>
-      <point x="312" y="1076" type="curve"/>
-      <point x="268" y="760" type="line"/>
-      <point x="376" y="760" type="line"/>
-      <point x="376" y="788"/>
-      <point x="376" y="912"/>
-      <point x="408" y="1024" type="curve"/>
-      <point x="464" y="1212"/>
-      <point x="640" y="1344"/>
-      <point x="840" y="1344" type="curve" smooth="yes"/>
-      <point x="1100" y="1344"/>
-      <point x="1292" y="1124"/>
-      <point x="1292" y="768" type="curve" smooth="yes"/>
-      <point x="1292" y="412"/>
-      <point x="1100" y="180"/>
-      <point x="844" y="180" type="curve" smooth="yes"/>
-      <point x="652" y="180"/>
-      <point x="452" y="312"/>
-      <point x="404" y="512" type="curve"/>
-      <point x="376" y="616"/>
-      <point x="376" y="748"/>
-      <point x="376" y="776" type="curve"/>
-      <point x="268" y="776" type="line"/>
-      <point x="312" y="448" type="line"/>
-      <point x="344" y="240"/>
-      <point x="476" y="-32"/>
-      <point x="844" y="-32" type="curve" smooth="yes"/>
-      <point x="1256" y="-32"/>
-      <point x="1528" y="284"/>
-      <point x="1528" y="768" type="curve" smooth="yes"/>
+      <point x="296" y="1328" type="line"/>
+      <point x="296" y="204" type="line"/>
+      <point x="408" y="204" type="line"/>
+      <point x="472" y="68"/>
+      <point x="644" y="-32"/>
+      <point x="860" y="-32" type="curve" smooth="yes"/>
+      <point x="1240" y="-32"/>
+      <point x="1528" y="276"/>
+      <point x="1528" y="764" type="curve" smooth="yes"/>
       <point x="1528" y="1248"/>
-      <point x="1256" y="1556"/>
-      <point x="844" y="1556" type="curve" smooth="yes"/>
-      <point x="476" y="1556"/>
-      <point x="344" y="1276"/>
+      <point x="1240" y="1556"/>
+      <point x="860" y="1556" type="curve" smooth="yes"/>
+      <point x="644" y="1556"/>
+      <point x="472" y="1456"/>
+      <point x="408" y="1328" type="curve"/>
     </contour>
     <contour>
-      <point x="428" y="188" type="line"/>
-      <point x="428" y="380" type="line"/>
-      <point x="344" y="380" type="line"/>
-      <point x="344" y="188" type="line"/>
-    </contour>
-    <contour>
-      <point x="428" y="1152" type="line"/>
-      <point x="428" y="1344" type="line"/>
-      <point x="344" y="1344" type="line"/>
-      <point x="344" y="1152" type="line"/>
+      <point x="1292" y="764" type="curve" smooth="yes"/>
+      <point x="1292" y="444"/>
+      <point x="1128" y="180"/>
+      <point x="832" y="180" type="curve" smooth="yes"/>
+      <point x="548" y="180"/>
+      <point x="368" y="420"/>
+      <point x="368" y="764" type="curve" smooth="yes"/>
+      <point x="368" y="1108"/>
+      <point x="548" y="1344"/>
+      <point x="832" y="1344" type="curve" smooth="yes"/>
+      <point x="1128" y="1344"/>
+      <point x="1292" y="1084"/>
     </contour>
   </outline>
   <lib>
@@ -65,9 +48,9 @@
           <key>name</key>
           <string></string>
           <key>x</key>
-          <integer>1256</integer>
-          <key>y</key>
           <integer>1528</integer>
+          <key>y</key>
+          <integer>652</integer>
         </dict>
         <dict>
           <key>angle</key>
@@ -79,37 +62,9 @@
           <key>name</key>
           <string></string>
           <key>x</key>
-          <integer>1100</integer>
+          <integer>1528</integer>
           <key>y</key>
-          <integer>1312</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1624</integer>
-          <key>y</key>
-          <integer>288</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1272</integer>
-          <key>y</key>
-          <integer>412</integer>
+          <integer>748</integer>
         </dict>
       </array>
       <key>com.typemytype.robofont.layerData</key>
