@@ -62,9 +62,9 @@ class FontProject:
         self.builddir = "out"
         self.decompose = self.config.get("glyphs","decompose").split()
         self.predecompose = self.config.get("glyphs","predecompose").split()
-        self.lessItalic = self.config.get("glyphs","lessitalic").split()
-        self.deleteList = self.config.get("glyphs","delete").split()
-        self.noItalic = self.config.get("glyphs","noitalic").split()
+        self.lessItalic = set(self.config.get("glyphs","lessitalic").split())
+        self.deleteList = set(self.config.get("glyphs","delete").split())
+        self.noItalic = set(self.config.get("glyphs","noitalic").split())
 
         self.buildOTF = False
         self.compatible = False
@@ -89,11 +89,13 @@ class FontProject:
 
         n = names.split("/")
         log("---------------------\n%s %s\n----------------------" %(n[0],n[1]))
+
         if isinstance( mix, Mix):
             log(">> Mixing masters")
-            f = mix.generateFont(self.basefont)
+            f = mix.generateFont(self.basefont, self.deleteList)
         else:
             f = mix.copy()
+            deleteGlyphs(f, self.deleteList)
 
         if italic == True:
             log(">> Italicizing")
@@ -166,7 +168,7 @@ class FontProject:
 
         if not self.compatible:
             cleanCurves(f)
-        deleteGlyphs(f, self.deleteList)
+        # deleteGlyphs(f, self.deleteList)
 
         log(">> Generating font files")
         ufoName = self.generateOutputPath(f, "ufo")

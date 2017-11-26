@@ -284,17 +284,18 @@ class Mix:
         ffont.kerning = self.mixKerns()
         return ffont
     
-    def generateFont(self, baseFont):
+    def generateFont(self, baseFont, ignoreGlyphs=None):
         newFont = baseFont.copy()
         #self.mixStems(newFont)  todo _ fix stems code
         for g in newFont:
-            gF = self.mixGlyphs(g.name)
-            if gF == None:
-                g.mark = True
-            elif isinstance(gF, RGlyph):
-                newFont[g.name] = gF.copy()
-            else:
-                gF.copyToGlyph(g)
+            if not ignoreGlyphs or g.name not in ignoreGlyphs:
+                gF = self.mixGlyphs(g.name)
+                if gF == None:
+                    g.mark = True
+                elif isinstance(gF, RGlyph):
+                    newFont[g.name] = gF.copy()
+                else:
+                    gF.copyToGlyph(g)
 
         newFont.kerning.clear()
         newFont.kerning.update(self.mixKerns() or {})
