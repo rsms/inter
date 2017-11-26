@@ -3,35 +3,35 @@
   <advance width="1664"/>
   <outline>
     <contour>
-      <point x="1344" y="1328" type="line"/>
-      <point x="1232" y="1328" type="line"/>
-      <point x="1168" y="1456"/>
-      <point x="996" y="1556"/>
-      <point x="780" y="1556" type="curve" smooth="yes"/>
-      <point x="400" y="1556"/>
+      <point x="1344" y="1356" type="line"/>
+      <point x="1232" y="1356" type="line"/>
+      <point x="1180" y="1436"/>
+      <point x="1052" y="1556"/>
+      <point x="800" y="1556" type="curve" smooth="yes"/>
+      <point x="396" y="1556"/>
       <point x="112" y="1248"/>
       <point x="112" y="764" type="curve" smooth="yes"/>
       <point x="112" y="276"/>
-      <point x="400" y="-32"/>
-      <point x="780" y="-32" type="curve" smooth="yes"/>
-      <point x="996" y="-32"/>
-      <point x="1168" y="68"/>
-      <point x="1232" y="204" type="curve"/>
-      <point x="1344" y="204" type="line"/>
+      <point x="396" y="-32"/>
+      <point x="796" y="-32" type="curve" smooth="yes"/>
+      <point x="1044" y="-32"/>
+      <point x="1180" y="88"/>
+      <point x="1232" y="172" type="curve"/>
+      <point x="1344" y="172" type="line"/>
     </contour>
     <contour>
-      <point x="348" y="764" type="curve" smooth="yes"/>
-      <point x="348" y="1084"/>
-      <point x="512" y="1344"/>
+      <point x="348" y="768" type="curve" smooth="yes"/>
+      <point x="348" y="1092"/>
+      <point x="504" y="1344"/>
       <point x="808" y="1344" type="curve" smooth="yes"/>
-      <point x="1092" y="1344"/>
-      <point x="1272" y="1108"/>
+      <point x="1100" y="1344"/>
+      <point x="1272" y="1104"/>
       <point x="1272" y="764" type="curve" smooth="yes"/>
       <point x="1272" y="420"/>
-      <point x="1092" y="180"/>
+      <point x="1096" y="180"/>
       <point x="808" y="180" type="curve" smooth="yes"/>
-      <point x="512" y="180"/>
-      <point x="348" y="444"/>
+      <point x="508" y="180"/>
+      <point x="348" y="440"/>
     </contour>
   </outline>
   <lib>
@@ -49,6 +49,20 @@
           <string></string>
           <key>x</key>
           <integer>76</integer>
+          <key>y</key>
+          <integer>764</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>112</integer>
           <key>y</key>
           <integer>764</integer>
         </dict>

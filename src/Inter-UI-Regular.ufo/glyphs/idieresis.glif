@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="idieresis" format="1">
+  <advance width="952"/>
+  <unicode hex="00EF"/>
+  <outline>
+    <component base="dotlessi" xOffset="148"/>
+    <component base="dieresis" xOffset="-340"/>
+    <contour>
+      <point x="560" y="900" type="move" name="rhotichook"/>
+    </contour>
+    <contour>
+      <point x="520" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="880" y="1776" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="520" y="2668" type="move" name="mkmktop_acc"/>
+    </contour>
+    <contour>
+      <point x="516" y="16" type="move" name="bottom"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>448</integer>
+          <key>y</key>
+          <integer>1440</integer>
+        </dict>
+      </array>
+      <key>interface.gridadjust.original</key>
+      <string>{'width': 935.0, 'leftMargin': 14, 'rightMargin': 14.0}</string>
+    </dict>
+  </lib>
+</glyph>
