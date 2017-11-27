@@ -60,25 +60,46 @@ def samplesForGlyphname(font, groups, groupmap, kerning, glyphname, args):
           out.append('%s\\u%04X' % (left, rightGlyph.unicode))
   else:
     left = fmtGlyphname(glyphname, leftGlyph)
+    prefix_uc = ''
+    prefix_lc = ''
     suffix_uc = ''
     suffix_lc = ''
-    if args.suffix and len(args.suffix) > 0:
-      s = unicode(args.suffix)
-      if s[0].isupper():
-        suffix_uc = args.suffix
-        suffix_lc = args.suffix.lower()
-      else:
-        suffix_uc = args.suffix.upper()
-        suffix_lc = args.suffix
+
+    if args.noPrefixAutocase:
+      prefix_uc = args.prefix
+      prefix_lc = args.prefix
+      suffix_uc = args.suffix
+      suffix_lc = args.suffix
+    else:
+      if args.prefix and len(args.prefix) > 0:
+        s = unicode(args.prefix)
+        if s[0].isupper():
+          prefix_uc = args.prefix
+          prefix_lc = args.prefix.lower()
+        else:
+          prefix_uc = args.prefix.upper()
+          prefix_lc = args.prefix
+
+      if args.suffix and len(args.suffix) > 0:
+        s = unicode(args.suffix)
+        if s[0].isupper():
+          suffix_uc = args.suffix
+          suffix_lc = args.suffix.lower()
+        else:
+          suffix_uc = args.suffix.upper()
+          suffix_lc = args.suffix
+
     for rightname in rightnames:
       if rightname in font:
         rightGlyph = None
         if len(rightname) == 1:
           rightGlyph = font[rightname]
+        prefix = prefix_lc
         suffix = suffix_lc
         if unicode(rightname[0]).isupper():
+          prefix = prefix_uc
           suffix = suffix_uc
-        out.append('%s%s%s' % (left, fmtGlyphname(rightname, rightGlyph), suffix))
+        out.append('%s%s%s%s' % (prefix, left, fmtGlyphname(rightname, rightGlyph), suffix))
 
   print(' '.join(out))
 
@@ -95,8 +116,17 @@ def main():
          'E.g. "\\u2126" instead of "\\Omega"')
 
   argparser.add_argument(
+    '-prefix', dest='prefix', metavar='<text>', type=str,
+    help='Text to append before each pair')
+
+  argparser.add_argument(
     '-suffix', dest='suffix', metavar='<text>', type=str,
     help='Text to append after each pair')
+
+  argparser.add_argument(
+    '-no-prefix-autocase', dest='noPrefixAutocase',
+    action='store_const', const=True, default=False,
+    help='Do not convert -prefix and -suffix to match case')
 
   argparser.add_argument(
     '-all-in-groups', dest='includeAllInGroup',
