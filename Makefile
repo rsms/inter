@@ -10,8 +10,11 @@
 #   install       Build all (web, ttf and otf) and install. Mac-only for now.
 #   dist          Create a new release distribution. Does everything.
 #
-all: all_web all_otf
-all_hinted: all_web_hinted
+all: all_ttf all_otf
+	$(MAKE) all_web -j
+
+all_hinted: all_ttf all_ttf_hinted all_otf
+	$(MAKE) all_web_hinted -j
 
 VERSION := $(shell misc/version.py)
 
@@ -127,18 +130,21 @@ copy_docs_fonts:
 	cp -a build/dist-unhinted/*.woff build/dist-unhinted/*.woff2 build/dist-unhinted/*.otf docs/font-files/
 
 install_ttf: all_ttf_unhinted
+	$(MAKE) all_web -j
 	@echo "Installing TTF files locally at ~/Library/Fonts/Inter UI"
 	rm -rf ~/'Library/Fonts/Inter UI'
 	mkdir -p ~/'Library/Fonts/Inter UI'
 	cp -va build/dist-unhinted/*.ttf ~/'Library/Fonts/Inter UI'
 
 install_ttf_hinted: all_ttf
+	$(MAKE) all_web -j
 	@echo "Installing autohinted TTF files locally at ~/Library/Fonts/Inter UI"
 	rm -rf ~/'Library/Fonts/Inter UI'
 	mkdir -p ~/'Library/Fonts/Inter UI'
 	cp -va build/dist-hinted/*.ttf ~/'Library/Fonts/Inter UI'
 
-install_otf: all_otf all_web
+install_otf: all_otf
+	$(MAKE) all_web -j
 	@echo "Installing OTF files locally at ~/Library/Fonts/Inter UI"
 	rm -rf ~/'Library/Fonts/Inter UI'
 	mkdir -p ~/'Library/Fonts/Inter UI'
