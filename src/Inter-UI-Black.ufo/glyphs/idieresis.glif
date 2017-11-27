@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="idieresis" format="1">
-  <advance width="1088"/>
+  <advance width="1280"/>
   <unicode hex="00EF"/>
   <outline>
-    <component base="dotlessi" xOffset="176"/>
-    <component base="dieresis" xOffset="-96"/>
+    <component base="dotlessi" xOffset="272"/>
+    <component base="dieresis"/>
     <contour>
-      <point x="660" y="900" type="move" name="rhotichook"/>
+      <point x="756" y="900" type="move" name="rhotichook"/>
     </contour>
     <contour>
-      <point x="576" y="1744" type="move" name="top"/>
+      <point x="672" y="1744" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="972" y="1744" type="move" name="top0315"/>
+      <point x="1068" y="1744" type="move" name="top0315"/>
     </contour>
     <contour>
-      <point x="576" y="2708" type="move" name="mkmktop_acc"/>
+      <point x="672" y="2708" type="move" name="mkmktop_acc"/>
     </contour>
     <contour>
-      <point x="560" y="0" type="move" name="bottom"/>
+      <point x="656" y="0" type="move" name="bottom"/>
     </contour>
   </outline>
   <lib>

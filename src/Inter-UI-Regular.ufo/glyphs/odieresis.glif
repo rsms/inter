@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="odieresis" format="1">
+  <advance width="1664"/>
+  <unicode hex="00F6"/>
+  <outline>
+    <component base="dieresis" xOffset="16"/>
+    <component base="o"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>interface.width-adjustments</key>
+      <array>
+        <integer>-16</integer>
+      </array>
+    </dict>
+  </lib>
+</glyph>
