@@ -71,7 +71,8 @@ ZIP_FILE_DIST := build/release/Inter-UI-${VERSION}.zip
 ZIP_FILE_DEV  := build/release/Inter-UI-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
 
 # zip intermediate
-build/.zip.zip: all_otf all_web all_web_hinted
+build/.zip.zip: all_otf
+	$(MAKE) all_web all_web_hinted -j
 	@rm -rf build/.zip
 	@rm -f build/.zip.zip
 	@mkdir -p \
