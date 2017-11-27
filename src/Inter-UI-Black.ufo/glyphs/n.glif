@@ -27,7 +27,7 @@
       <point x="588" y="0" type="line"/>
     </contour>
     <contour>
-      <point x="768" y="1776" type="move" name="top"/>
+      <point x="816" y="1776" type="move" name="top"/>
     </contour>
     <contour>
       <point x="816" y="0" type="move" name="bottom"/>
@@ -39,7 +39,7 @@
       <point x="1432" y="0" type="move" name="right"/>
     </contour>
     <contour>
-      <point x="768" y="1776" type="move" name="marktop"/>
+      <point x="816" y="1776" type="move" name="marktop"/>
     </contour>
     <contour>
       <point x="1560" y="2200" type="move" name="top_dd"/>
@@ -53,6 +53,23 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>816</integer>
+          <key>y</key>
+          <integer>-164</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.86</real>

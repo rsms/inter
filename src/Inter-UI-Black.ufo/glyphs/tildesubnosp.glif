@@ -3,19 +3,36 @@
   <advance width="0"/>
   <unicode hex="0330"/>
   <outline>
-    <contour>
-      <point x="-792" y="0" type="move" name="_bottom"/>
-    </contour>
-    <contour>
-      <point x="-792" y="0" type="move" name="_markbottom"/>
-    </contour>
-    <contour>
-      <point x="-792" y="-560" type="move" name="mkmkbottom_acc"/>
-    </contour>
     <component base="tilde" xOffset="-1477" yOffset="-2283"/>
+    <contour>
+      <point x="-836" y="0" type="move" name="_bottom"/>
+    </contour>
+    <contour>
+      <point x="-836" y="0" type="move" name="_markbottom"/>
+    </contour>
+    <contour>
+      <point x="-836" y="-560" type="move" name="mkmkbottom_acc"/>
+    </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>-836</integer>
+          <key>y</key>
+          <integer>-1088</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.98</real>

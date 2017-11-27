@@ -32,7 +32,7 @@
       <point x="752.0" y="1792.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="708.0" y="-216.0" type="move" name="bottom"/>
+      <point x="536" y="-576" type="move" name="bottom"/>
     </contour>
     <contour>
       <point x="752.0" y="1792.0" type="move" name="marktop"/>
@@ -41,10 +41,10 @@
       <point x="1136.0" y="2176.0" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="1060.0" y="-560.0" type="move" name="bottom_dd"/>
+      <point x="1060" y="-576" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="740.0" y="900.0" type="move" name="rhotichook"/>
+      <point x="752" y="896" type="move" name="rhotichook"/>
     </contour>
     <contour>
       <point x="1328.0" y="1792.0" type="move" name="top0315"/>
@@ -52,6 +52,23 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>752</integer>
+          <key>y</key>
+          <integer>392</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.layerData</key>
       <dict>
         <key>reference</key>

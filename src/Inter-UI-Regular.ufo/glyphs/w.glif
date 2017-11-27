@@ -4,24 +4,6 @@
   <unicode hex="0077"/>
   <outline>
     <contour>
-      <point x="1132" y="1792" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1036" y="16" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1132" y="1792" type="move" name="marktop"/>
-    </contour>
-    <contour>
-      <point x="2100" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="2100" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="2100" y="1776" type="move" name="top0315"/>
-    </contour>
-    <contour>
       <point x="2184" y="1536" type="line"/>
       <point x="1936" y="1536" type="line" smooth="yes"/>
       <point x="1604" y="364" type="line"/>
@@ -39,9 +21,44 @@
       <point x="1484" y="0" type="line"/>
       <point x="1716" y="0" type="line"/>
     </contour>
+    <contour>
+      <point x="1136" y="1792" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1136" y="0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1136" y="1792" type="move" name="marktop"/>
+    </contour>
+    <contour>
+      <point x="2100" y="2200" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="2100" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="2100" y="1776" type="move" name="top0315"/>
+    </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1136</integer>
+          <key>y</key>
+          <integer>1108</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.86</real>

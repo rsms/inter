@@ -5,10 +5,10 @@
   <outline>
     <component base="w" xScale="-1.0" yScale="-1.0" xOffset="2272" yOffset="1536"/>
     <contour>
-      <point x="1132" y="1776" type="move" name="top"/>
+      <point x="1136" y="1792" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1132" y="0" type="move" name="bottom"/>
+      <point x="1136" y="0" type="move" name="bottom"/>
     </contour>
     <contour>
       <point x="2192" y="1776" type="move" name="top0315"/>
@@ -16,6 +16,23 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1136</integer>
+          <key>y</key>
+          <integer>176</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 2109, 'leftMargin': 54, 'rightMargin': 53}</string>
       <key>interface.width-adjustments</key>

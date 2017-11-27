@@ -3,22 +3,39 @@
   <advance width="0"/>
   <unicode hex="0303"/>
   <outline>
-    <contour>
-      <point x="-800" y="1727" type="move" name="_top"/>
-    </contour>
-    <contour>
-      <point x="-800" y="1727" type="move" name="_marktop"/>
-    </contour>
-    <contour>
-      <point x="-765" y="1922" type="move" name="parent_top"/>
-    </contour>
-    <contour>
-      <point x="-800" y="2305" type="move" name="mkmktop"/>
-    </contour>
     <component base="tilde" xOffset="-1449"/>
+    <contour>
+      <point x="-808" y="1728" type="move" name="_top"/>
+    </contour>
+    <contour>
+      <point x="-808" y="1728" type="move" name="_marktop"/>
+    </contour>
+    <contour>
+      <point x="-808" y="1924" type="move" name="parent_top"/>
+    </contour>
+    <contour>
+      <point x="-808" y="2304" type="move" name="mkmktop"/>
+    </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>-808</integer>
+          <key>y</key>
+          <integer>2432</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.98</real>

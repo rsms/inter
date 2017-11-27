@@ -3,7 +3,7 @@
   <advance width="0"/>
   <unicode hex="032D"/>
   <outline>
-    <component base="circumflex" xOffset="-1500" yOffset="-2225"/>
+    <component base="circumflex" xOffset="-1560" yOffset="-2304"/>
     <contour>
       <point x="-792" y="0" type="move" name="_bottom"/>
     </contour>
@@ -11,7 +11,7 @@
       <point x="-792" y="0" type="move" name="_markbottom"/>
     </contour>
     <contour>
-      <point x="-793" y="-518" type="move" name="mkmkbottom_acc"/>
+      <point x="-792" y="-520" type="move" name="mkmkbottom_acc"/>
     </contour>
     <contour>
       <point x="-792" y="0" type="move" name="_bottomu"/>
@@ -19,6 +19,23 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>-792</integer>
+          <key>y</key>
+          <integer>-404</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.98</real>
