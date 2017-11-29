@@ -1084,7 +1084,9 @@ const fontVersion = Math.round(Date.now()).toString(36)
 let fontFamilyName = 'Inter-UI-v' + fontVersion
 const fontCSSTemplate = document.querySelector('#font-css')
 const fontCSS = fontCSSTemplate.cloneNode(true)
-fontCSS.innerHTML = fontCSS.innerHTML.replace(/Inter-UI-VERSION/g, fontFamilyName)
+fontCSS.innerHTML = fontCSS.innerHTML
+  .replace(/Inter-UI-VERSION/g, fontFamilyName)
+  .replace(/(\.woff2?)/g, '$1?r='+fontVersion)
 fontFamilyName += ", 'Inter UI'"
 fontCSS.setAttribute('id', '')
 fontCSS.setAttribute('type', 'text/css')
