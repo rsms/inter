@@ -67,7 +67,7 @@ build/%.woff: build/%.ttf
 # build/%.eot: build/%.ttf
 # 	ttf2eot "$<" > "$@"
 
-check_fonts:
+test: all_otf
 	@misc/check-font.py build/dist-unhinted/*.otf
 
 ZIP_FILE_DIST := build/release/Inter-UI-${VERSION}.zip
@@ -103,7 +103,7 @@ build/release/Inter-UI-%.zip: build/.zip.zip
 	@echo write "$@"
 
 zip: ${ZIP_FILE_DEV}
-zip_dist: pre_dist check_fonts ${ZIP_FILE_DIST}
+zip_dist: pre_dist test ${ZIP_FILE_DIST}
 
 pre_dist:
 	@echo "Creating distribution for version ${VERSION}"
@@ -179,4 +179,4 @@ _local/UnicodeData.txt:
 clean:
 	rm -rf build/tmp/* build/dist-hinted build/dist-unhinted
 
-.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist glyphinfo copy_docs_fonts all_hinted check_fonts
+.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist glyphinfo copy_docs_fonts all_hinted test
