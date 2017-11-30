@@ -1378,7 +1378,7 @@
 		<key>@KERN_RIGHT_asciicircum</key>
 		<integer>-42</integer>
 		<key>@KERN_RIGHT_c</key>
-		<integer>-82</integer>
+		<integer>-80</integer>
 		<key>@KERN_RIGHT_dagger</key>
 		<integer>-28</integer>
 		<key>@KERN_RIGHT_divide</key>
@@ -1733,7 +1733,7 @@
 		<key>@KERN_RIGHT_A</key>
 		<integer>-84</integer>
 		<key>@KERN_RIGHT_AE</key>
-		<integer>-15</integer>
+		<integer>-96</integer>
 		<key>@KERN_RIGHT_T</key>
 		<integer>-221</integer>
 		<key>@KERN_RIGHT_V</key>
@@ -1741,9 +1741,11 @@
 		<key>@KERN_RIGHT_W</key>
 		<integer>-139</integer>
 		<key>@KERN_RIGHT_X</key>
-		<integer>-83</integer>
+		<integer>-80</integer>
 		<key>@KERN_RIGHT_Y</key>
 		<integer>-240</integer>
+		<key>@KERN_RIGHT_braceright</key>
+		<integer>-32</integer>
 		<key>@KERN_RIGHT_comma</key>
 		<integer>-28</integer>
 		<key>@KERN_RIGHT_dagger</key>
@@ -1797,7 +1799,7 @@
 		<key>@KERN_RIGHT_alphagreek</key>
 		<integer>-29</integer>
 		<key>@KERN_RIGHT_c</key>
-		<integer>-29</integer>
+		<integer>-32</integer>
 		<key>@KERN_RIGHT_deltagreek</key>
 		<integer>-29</integer>
 		<key>@KERN_RIGHT_dotlessj</key>
@@ -4474,6 +4476,11 @@
 	<dict>
 		<key>tenge</key>
 		<integer>-42</integer>
+	</dict>
+	<key>eth</key>
+	<dict>
+		<key>@KERN_LEFT_T</key>
+		<integer>-112</integer>
 	</dict>
 	<key>exclamdown</key>
 	<dict>

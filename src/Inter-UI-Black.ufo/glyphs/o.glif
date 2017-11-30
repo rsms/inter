@@ -4,6 +4,20 @@
   <unicode hex="006F"/>
   <outline>
     <contour>
+      <point x="772" y="-28" type="curve" smooth="yes"/>
+      <point x="1148" y="-28"/>
+      <point x="1464" y="252"/>
+      <point x="1464" y="768" type="curve" smooth="yes"/>
+      <point x="1464" y="1296"/>
+      <point x="1132" y="1556"/>
+      <point x="772" y="1556" type="curve" smooth="yes"/>
+      <point x="412" y="1556"/>
+      <point x="80" y="1296"/>
+      <point x="80" y="768" type="curve" smooth="yes"/>
+      <point x="80" y="252"/>
+      <point x="392" y="-28"/>
+    </contour>
+    <contour>
       <point x="772" y="340" type="curve" smooth="yes"/>
       <point x="616" y="340"/>
       <point x="516" y="468"/>
@@ -18,36 +32,22 @@
       <point x="928" y="340"/>
     </contour>
     <contour>
-      <point x="776" y="-28" type="curve" smooth="yes"/>
-      <point x="1152" y="-28"/>
-      <point x="1464" y="252"/>
-      <point x="1464" y="768" type="curve" smooth="yes"/>
-      <point x="1464" y="1296"/>
-      <point x="1132" y="1556"/>
-      <point x="772" y="1556" type="curve" smooth="yes"/>
-      <point x="412" y="1556"/>
-      <point x="80" y="1296"/>
-      <point x="80" y="768" type="curve" smooth="yes"/>
-      <point x="80" y="252"/>
-      <point x="396" y="-28"/>
+      <point x="772.0" y="1776.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="772" y="1776" type="move" name="top"/>
+      <point x="776.0" y="0.0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="776" y="0" type="move" name="bottom"/>
+      <point x="1564.0" y="2200.0" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="1564" y="2200" type="move" name="top_dd"/>
+      <point x="1692.0" y="-560.0" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="1692" y="-560" type="move" name="bottom_dd"/>
+      <point x="1432.0" y="900.0" type="move" name="rhotichook"/>
     </contour>
     <contour>
-      <point x="1432" y="900" type="move" name="rhotichook"/>
-    </contour>
-    <contour>
-      <point x="1564" y="1776" type="move" name="top0315"/>
+      <point x="1564.0" y="1776.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
@@ -76,13 +76,13 @@
           <key>name</key>
           <string></string>
           <key>x</key>
-          <integer>904</integer>
+          <integer>772</integer>
           <key>y</key>
-          <integer>1064</integer>
+          <integer>768</integer>
         </dict>
         <dict>
           <key>angle</key>
-          <integer>0</integer>
+          <real>90.0</real>
           <key>isGlobal</key>
           <false/>
           <key>magnetic</key>
@@ -90,9 +90,9 @@
           <key>name</key>
           <string></string>
           <key>x</key>
-          <integer>992</integer>
+          <integer>772</integer>
           <key>y</key>
-          <integer>468</integer>
+          <integer>1204</integer>
         </dict>
       </array>
       <key>com.typemytype.robofont.layerData</key>

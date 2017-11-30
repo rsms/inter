@@ -1967,9 +1967,9 @@
 		<key>@KERN_RIGHT_W</key>
 		<integer>-166</integer>
 		<key>@KERN_RIGHT_X</key>
-		<integer>-125</integer>
+		<integer>-176</integer>
 		<key>@KERN_RIGHT_Y</key>
-		<integer>-478</integer>
+		<integer>-366</integer>
 		<key>@KERN_RIGHT_braceright</key>
 		<integer>-48</integer>
 		<key>@KERN_RIGHT_comma</key>
@@ -2049,7 +2049,7 @@
 		<key>@KERN_RIGHT_alphagreek</key>
 		<integer>-13</integer>
 		<key>@KERN_RIGHT_c</key>
-		<integer>-14</integer>
+		<integer>-48</integer>
 		<key>@KERN_RIGHT_deltagreek</key>
 		<integer>-14</integer>
 		<key>@KERN_RIGHT_dotlessj</key>
@@ -4675,6 +4675,8 @@
 		<integer>-64</integer>
 		<key>dotlessj</key>
 		<integer>-560</integer>
+		<key>eth</key>
+		<integer>-144</integer>
 	</dict>
 	<key>Tbar</key>
 	<dict>
@@ -5401,18 +5403,14 @@
 	</dict>
 	<key>eth</key>
 	<dict>
-		<key>@KERN_RIGHT_A</key>
-		<integer>-20</integer>
-		<key>@KERN_RIGHT_AE</key>
-		<integer>-56</integer>
-		<key>@KERN_RIGHT_V</key>
-		<integer>-29</integer>
-		<key>@KERN_RIGHT_Y</key>
-		<integer>-41</integer>
-		<key>@KERN_RIGHT_quotedblbase</key>
-		<integer>-35</integer>
-		<key>Psi</key>
-		<integer>-42</integer>
+		<key>@KERN_LEFT_T</key>
+		<integer>-96</integer>
+		<key>V</key>
+		<integer>-192</integer>
+		<key>Y</key>
+		<integer>-190</integer>
+		<key>Yhook</key>
+		<integer>-190</integer>
 	</dict>
 	<key>exclamdown</key>
 	<dict>
@@ -5813,6 +5811,8 @@
 	<dict>
 		<key>afii10044</key>
 		<integer>-42</integer>
+		<key>c</key>
+		<integer>0</integer>
 		<key>tenge</key>
 		<integer>-7</integer>
 	</dict>

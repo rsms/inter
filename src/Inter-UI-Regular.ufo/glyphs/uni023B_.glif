@@ -4,15 +4,32 @@
   <unicode hex="023B"/>
   <outline>
     <contour>
-      <point x="1508" y="2240" type="line"/>
-      <point x="1316" y="2240" type="line"/>
-      <point x="424" y="-192" type="line"/>
       <point x="616" y="-192" type="line"/>
+      <point x="1580" y="2164" type="line"/>
+      <point x="1408" y="2236" type="line"/>
+      <point x="444" y="-120" type="line"/>
     </contour>
     <component base="C"/>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1016</integer>
+          <key>y</key>
+          <integer>1756</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1834, 'leftMargin': 256, 'rightMargin': 2}</string>
       <key>interface.width-adjustments</key>

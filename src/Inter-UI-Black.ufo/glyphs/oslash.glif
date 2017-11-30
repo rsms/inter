@@ -4,10 +4,10 @@
   <unicode hex="00F8"/>
   <outline>
     <contour>
-      <point x="1348" y="1708" type="line"/>
-      <point x="1112" y="1708" type="line"/>
-      <point x="200" y="-168" type="line"/>
-      <point x="436" y="-168" type="line"/>
+      <point x="332" y="-100" type="line"/>
+      <point x="1404" y="1488" type="line"/>
+      <point x="1204" y="1624" type="line"/>
+      <point x="132" y="36" type="line"/>
     </contour>
     <component base="o"/>
     <contour>
@@ -22,6 +22,65 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>988</integer>
+          <key>y</key>
+          <integer>768</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>772</integer>
+          <key>y</key>
+          <integer>1444</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>56.02345596374314</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>772</integer>
+          <key>y</key>
+          <integer>768</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>-34.46081627137177</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1444</integer>
+          <key>y</key>
+          <integer>1460</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1585, 'leftMargin': 184, 'rightMargin': -27}</string>
     </dict>

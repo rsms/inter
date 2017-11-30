@@ -4,10 +4,10 @@
   <unicode hex="00D8"/>
   <outline>
     <contour>
-      <point x="1808" y="2132" type="line"/>
-      <point x="1532" y="2132" type="line"/>
-      <point x="244" y="-88" type="line"/>
-      <point x="524" y="-88" type="line"/>
+      <point x="376" y="-100" type="line"/>
+      <point x="1800" y="2008" type="line"/>
+      <point x="1600" y="2144" type="line"/>
+      <point x="176" y="36" type="line"/>
     </contour>
     <component base="O"/>
     <contour>
@@ -22,6 +22,51 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>992</integer>
+          <key>y</key>
+          <integer>1636</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1292</integer>
+          <key>y</key>
+          <integer>1024</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>55.97224023781165</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>992</integer>
+          <key>y</key>
+          <integer>1024</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1939, 'leftMargin': 170, 'rightMargin': 33}</string>
     </dict>

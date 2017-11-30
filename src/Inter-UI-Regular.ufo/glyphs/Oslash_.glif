@@ -4,24 +4,69 @@
   <unicode hex="00D8"/>
   <outline>
     <contour>
-      <point x="1812" y="2132" type="line"/>
-      <point x="1608" y="2132" type="line"/>
-      <point x="224" y="-88" type="line"/>
-      <point x="432" y="-88" type="line"/>
+      <point x="376" y="-84" type="line"/>
+      <point x="1800" y="2024" type="line"/>
+      <point x="1648" y="2128" type="line"/>
+      <point x="224" y="20" type="line"/>
     </contour>
     <component base="O"/>
     <contour>
-      <point x="1012" y="2304" type="move" name="top"/>
+      <point x="1012.0" y="2304.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1964" y="2200" type="move" name="top_dd"/>
+      <point x="1964.0" y="2200.0" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="1964" y="2304" type="move" name="top0315"/>
+      <point x="1964.0" y="2304.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>145.6539025999385</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>396</integer>
+          <key>y</key>
+          <integer>-96</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1016</integer>
+          <key>y</key>
+          <integer>1852</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>56.007742346169856</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1016</integer>
+          <key>y</key>
+          <integer>1024</integer>
+        </dict>
+      </array>
       <key>interface.width-adjustments</key>
       <array>
         <integer>-16</integer>
