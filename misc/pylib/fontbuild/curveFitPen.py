@@ -377,7 +377,7 @@ def fitBezier(pts,tangent0=None,tangent3=None):
             TT[i*2+1,j*2+1] = T[i,j+1]
     pout = pout.reshape((n*2,1),order="C")
 
-    if tangent0 != None and tangent3 != None:
+    if tangent0 is not None and tangent3 is not None:
         tangentConstraintsT = np.array([
                 [tangent0[1], -tangent0[0], 0, 0],
                 [0, 0, tangent3[1], -tangent3[0]]
