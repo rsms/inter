@@ -10,6 +10,7 @@ ext_modules = [
   Extension("mitreGlyph", ["mitreGlyph.pyx"]),
   Extension("mix", ["mix.pyx"]),
   Extension("italics", ["italics.pyx"]),
+  Extension("curveFitPen", ["curveFitPen.pyx"]),
 ]
 
 setup(

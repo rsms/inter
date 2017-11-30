@@ -99,33 +99,33 @@ class SubsegmentsToCurvesPen(BasePen):
     def setLastSmooth(self, b):
         self.lastSmooth = b
 
-    def _moveTo(self, (x, y)):
+    def _moveTo(self, a):
         self.contourIndex += 1
         self.segmentIndex = 0
-        self.startPoint = (x,y)
+        self.startPoint = a
         p = self.ssglyph.contours[self.contourIndex][0].points[0]
         self.otherPen.moveTo((p.x, p.y))
-        self.lastPoint = (x,y)
+        self.lastPoint = a
 
-    def _lineTo(self, (x, y)):
+    def _lineTo(self, a):
         self.segmentIndex += 1
         index = self.subsegments[self.contourIndex][self.segmentIndex][0]
         p = self.ssglyph.contours[self.contourIndex][index].points[0]
         self.otherPen.lineTo((p.x, p.y))
-        self.lastPoint = (x,y)
+        self.lastPoint = a
         self.lastSmooth = False
 
-    def smoothLineTo(self, (x, y)):
-        self.lineTo((x,y))
+    def smoothLineTo(self, a):
+        self.lineTo(a)
         self.lastSmooth = True
 
-    def smoothCurveTo(self, (x1, y1), (x2, y2), (x3, y3)):
+    def smoothCurveTo(self, a, b, c):
         self.nextSmooth = True
-        self.curveTo((x1, y1), (x2, y2), (x3, y3))
+        self.curveTo(a, b, c)
         self.nextSmooth = False
         self.lastSmooth = True
 
-    def _curveToOne(self, (x1, y1), (x2, y2), (x3, y3)):
+    def _curveToOne(self, a, b, c):
         self.segmentIndex += 1
         c = self.ssglyph.contours[self.contourIndex]
         n = len(c)
@@ -160,7 +160,7 @@ class SubsegmentsToCurvesPen(BasePen):
         #     print self.lastSmooth, self.nextSmooth
         #     print "%i %i : %i %i \n %i %i : %i %i \n %i %i : %i %i"%(x1,y1, cp[1,0], cp[1,1], x2,y2, cp[2,0], cp[2,1], x3,y3, cp[3,0], cp[3,1])
         self.otherPen.curveTo((cp[1,0], cp[1,1]), (cp[2,0], cp[2,1]), (cp[3,0], cp[3,1]))
-        self.lastPoint = (x3, y3)
+        self.lastPoint = c
         self.lastSmooth = False
 
     def smoothTangents(self,t1,t2,forceSmooth = False):
@@ -240,42 +240,42 @@ class SubsegmentPen(BasePen):
         self.startContour = (0,0)
         self.contourIndex = -1
 
-    def _moveTo(self, (x, y)):
+    def _moveTo(self, a):
         self.contourIndex += 1
         self.segmentIndex = 0
         self.subsegments.append([])
         self.subsegmentCount = 0
         self.subsegments[self.contourIndex].append([self.subsegmentCount, 0])
-        self.startContour = (x,y)
-        self.lastPoint = (x,y)
-        self.otherPen.moveTo((x,y))
+        self.startContour = a
+        self.lastPoint = a
+        self.otherPen.moveTo(a)
 
-    def _lineTo(self, (x, y)):
-        count = self.stepsForSegment((x,y),self.lastPoint)
+    def _lineTo(self, a):
+        count = self.stepsForSegment(a,self.lastPoint)
         if count < 1:
             count = 1
         self.subsegmentCount += count
         self.subsegments[self.contourIndex].append([self.subsegmentCount, count])
         for i in range(1,count+1):
-            x1 = self.lastPoint[0] + (x - self.lastPoint[0]) * i/float(count)
-            y1 = self.lastPoint[1] + (y - self.lastPoint[1]) * i/float(count)
+            x1 = self.lastPoint[0] + (a[0] - self.lastPoint[0]) * i/float(count)
+            y1 = self.lastPoint[1] + (a[1] - self.lastPoint[1]) * i/float(count)
             self.otherPen.lineTo((x1,y1))
-        self.lastPoint = (x,y)
+        self.lastPoint = a
 
-    def _curveToOne(self, (x1, y1), (x2, y2), (x3, y3)):
-        count = self.stepsForSegment((x3,y3),self.lastPoint)
+    def _curveToOne(self, a, b, c):
+        count = self.stepsForSegment(c, self.lastPoint)
         if count < 2:
             count = 2
         self.subsegmentCount += count
         self.subsegments[self.contourIndex].append([self.subsegmentCount,count])
-        x = self.renderCurve((self.lastPoint[0],x1,x2,x3),count)
-        y = self.renderCurve((self.lastPoint[1],y1,y2,y3),count)
+        x = self.renderCurve((self.lastPoint[0],a[0],b[0],c[0]),count)
+        y = self.renderCurve((self.lastPoint[1],a[1],b[1],c[1]),count)
         assert len(x) == count
-        if (x3 == self.startContour[0] and y3 == self.startContour[1]):
+        if (c[0] == self.startContour[0] and c[1] == self.startContour[1]):
             count -= 1
         for i in range(count):
-            self.otherPen.lineTo((x[i],y[i]))
-        self.lastPoint = (x3,y3)
+            self.otherPen.lineTo((x[i], y[i]))
+        self.lastPoint = c
 
     def _closePath(self):
         if not (self.lastPoint[0] == self.startContour[0] and self.lastPoint[1] == self.startContour[1]):
@@ -351,7 +351,7 @@ def subdivideLineSegment(pts):
     return np.array(out)
 
 
-def fitBezier(pts,tangent0=None,tangent3=None):
+def fitBezier(pts, tangent0=None, tangent3=None):
     if len(pts < 4):
         pts = subdivideLineSegment(pts)
     T = [np.linalg.norm(pts[i]-pts[i-1]) for i in range(1,len(pts))]
@@ -392,7 +392,7 @@ def fitBezier(pts,tangent0=None,tangent3=None):
     return np.array([pts[0], C[0], C[1], pts[-1]])
 
 
-def segmentGlyph(glyph,resolution=50):
+def segmentGlyph(glyph, resolution=50):
     g1 = glyph.copy()
     g1.clear()
     dp = SubsegmentPointPen(g1, resolution)
