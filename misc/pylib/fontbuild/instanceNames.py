@@ -53,7 +53,7 @@ class InstanceNames:
         else:
             self.shortfamily = self.longfamily
     
-    def setRFNames(self,f, version=1, versionMinor=0):
+    def setRFNames(self,f, version=1, versionMinor=0, panose={}):
         f.info.familyName = self.longfamily
         f.info.styleName = self.longstyle
         f.info.styleMapFamilyName = self.shortfamily
@@ -64,7 +64,7 @@ class InstanceNames:
         if len(self.copyrightHolderName) > 0:
             f.info.copyright = "Copyright %s %s" % (self.year, self.copyrightHolderName)
         f.info.trademark = "%s is a trademark of %s." %(self.longfamily, self.foundry.rstrip('.'))
-        
+
         if len(self.designer) > 0:
             f.info.openTypeNameDesigner = self.designer
         if len(self.designerURL) > 0:
@@ -84,14 +84,28 @@ class InstanceNames:
         # f.info.openTypeNameCompatibleFullName = "" 
         # f.info.openTypeNameSampleText = ""
         if (self.subfamilyAbbrev != "Rg"):
-            f.info.openTypeNamePreferredFamilyName = self.longfamily 
-            f.info.openTypeNamePreferredSubfamilyName = self.longstyle 
+            f.info.openTypeNamePreferredFamilyName = self.longfamily
+            f.info.openTypeNamePreferredSubfamilyName = self.longstyle
         
         f.info.openTypeOS2WeightClass = self._getWeightCode(self.weight)
         f.info.macintoshFONDName = re.sub(' ','',self.longfamily) + " " + re.sub(' ','',self.longstyle)
         f.info.postscriptFontName = f.info.macintoshFONDName.replace(" ", "-")
         if self.italic:
             f.info.italicAngle = self.italicAngle
+
+        if len(panose) > 0:
+            f.info.openTypeOS2Panose = [
+                panose.get('bFamilyType', panose.get('familyType', 0)),
+                panose.get('bSerifStyle', panose.get('serifStyle', 0)),
+                panose.get('bWeight', panose.get('weight', 0)),
+                panose.get('bProportion', panose.get('proportion', 0)),
+                panose.get('bContrast', panose.get('contrast', 0)),
+                panose.get('bStrokeVariation', panose.get('strokeVariation', 0)),
+                panose.get('bArmStyle', panose.get('armStyle', 0)),
+                panose.get('bLetterform', panose.get('letterform', 0)),
+                panose.get('bMidline', panose.get('midline', 0)),
+                panose.get('bXHeight', panose.get('xHeight', 0)),
+            ]
         
     
     def setFLNames(self,flFont):
@@ -220,7 +234,7 @@ def setNames(f,names,foundry="",version="1.0",build=""):
     i.setFLNames(f)
 
 
-def setInfoRF(f, names, attrs={}):
+def setInfoRF(f, names, attrs={}, panose={}):
     i = InstanceNames(names)
     version, versionMinor = (1, 0)
     for k,v in attrs.iteritems():
@@ -230,4 +244,4 @@ def setInfoRF(f, names, attrs={}):
             else:
                 version = int(v)
         setattr(i, k, v)
-    i.setRFNames(f, version=version, versionMinor=versionMinor)
+    i.setRFNames(f, version=version, versionMinor=versionMinor, panose=panose)

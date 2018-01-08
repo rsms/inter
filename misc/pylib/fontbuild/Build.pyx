@@ -85,10 +85,10 @@ class FontProject:
         return os.path.join(path, "%s-%s.%s" % (family, style, ext))
 
     def generateFont(self, mix, names, italic=False, swapSuffixes=None, stemWidth=185,
-                     italicMeanYCenter=-825, italicNarrowAmount=1):
+                     italicMeanYCenter=-825, italicNarrowAmount=1, panose=[]):
 
         n = names.split("/")
-        log("---------------------\n%s %s\n----------------------" %(n[0],n[1]))
+        log("---------------------\n%s, %s\n----------------------" %(n[0],n[1]))
 
         if isinstance( mix, Mix):
             log(">> Mixing masters")
@@ -164,7 +164,7 @@ class FontProject:
             'license':      getcfg('license'),
             'licenseURL':   getcfg('licenseURL'),
             'italicAngle':  float(getcfg('italicAngle', '-12')),
-        })
+        }, panose)
 
         if not self.compatible:
             cleanCurves(f)
@@ -187,9 +187,9 @@ class FontProject:
                 glyphOrder.append(glyphName)
 
         if self.buildOTF:
-            log(">> Generating OTF file")
             newFont = OpenFont(ufoName)
             otfName = self.generateOutputPath(f, "otf")
+            log(">> Generating OTF file %s" % otfName)
             saveOTF(newFont, otfName, glyphOrder)
 
     def generateTTFs(self):
@@ -208,9 +208,9 @@ class FontProject:
             for font in fonts:
                 fonts_to_quadratic([font], max_err_em=max_err, dump_stats=True, reverse_direction=True)
 
-        log(">> Generating TTF files")
         for font in fonts:
             ttfName = self.generateOutputPath(font, "ttf")
+            log(">> Generating TTF file %s" % ttfName)
             log(os.path.basename(ttfName))
             glyphOrder = [n for n in self.glyphOrder if n in font]
             saveOTF(font, ttfName, glyphOrder, truetype=True)
