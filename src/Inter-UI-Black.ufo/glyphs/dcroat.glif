@@ -3,8 +3,6 @@
   <advance width="1680"/>
   <unicode hex="0111"/>
   <outline>
-    <component base="d"/>
-    <component base="crossbar" xOffset="544" yOffset="724"/>
     <contour>
       <point x="1640" y="2112" type="move" name="caron"/>
     </contour>
@@ -29,6 +27,8 @@
     <contour>
       <point x="1184" y="1804" type="move" name="parenthesses.w2"/>
     </contour>
+    <component base="d"/>
+    <component base="crossbar" xOffset="544" yOffset="724"/>
   </outline>
   <lib>
     <dict>

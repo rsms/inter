@@ -2,8 +2,6 @@
 <glyph name="a_uni02DE" format="1">
   <advance width="2276"/>
   <outline>
-    <component base="a"/>
-    <component base="rhotichookmod" xOffset="1424"/>
     <contour>
       <point x="644" y="32" type="move" name="bottom"/>
     </contour>
@@ -28,6 +26,8 @@
     <contour>
       <point x="776" y="1776" type="move" name="rhalfring"/>
     </contour>
+    <component base="a"/>
+    <component base="rhotichookmod" xOffset="1424"/>
   </outline>
   <lib>
     <dict>

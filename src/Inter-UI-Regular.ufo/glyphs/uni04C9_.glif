@@ -3,8 +3,6 @@
   <advance width="2032"/>
   <unicode hex="04C9"/>
   <outline>
-    <component base="H" xOffset="-52"/>
-    <component base="comma" xOffset="1492" yOffset="-100"/>
     <contour>
       <point x="1960" y="2200" type="move" name="top_dd"/>
     </contour>
@@ -14,6 +12,8 @@
     <contour>
       <point x="1960" y="2216" type="move" name="top0315"/>
     </contour>
+    <component base="H" xOffset="-52"/>
+    <component base="comma" xOffset="1492" yOffset="-100"/>
   </outline>
   <lib>
     <dict>

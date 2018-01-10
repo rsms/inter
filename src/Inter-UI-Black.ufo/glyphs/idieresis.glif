@@ -3,8 +3,6 @@
   <advance width="1280"/>
   <unicode hex="00EF"/>
   <outline>
-    <component base="dotlessi" xOffset="272"/>
-    <component base="dieresis"/>
     <contour>
       <point x="756" y="900" type="move" name="rhotichook"/>
     </contour>
@@ -20,6 +18,8 @@
     <contour>
       <point x="656" y="0" type="move" name="bottom"/>
     </contour>
+    <component base="dotlessi" xOffset="272"/>
+    <component base="dieresis"/>
   </outline>
   <lib>
     <dict>

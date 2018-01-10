@@ -2,8 +2,6 @@
 <glyph name="uni012F.ccmp" format="1">
   <advance width="736"/>
   <outline>
-    <component base="dotlessi" xOffset="124"/>
-    <component base="ogonek" xOffset="48" yOffset="16"/>
     <contour>
       <point x="480" y="1776" type="move" name="top"/>
     </contour>
@@ -13,6 +11,8 @@
     <contour>
       <point x="472" y="-632" type="move" name="bottom"/>
     </contour>
+    <component base="dotlessi" xOffset="124"/>
+    <component base="ogonek" xOffset="48" yOffset="16"/>
   </outline>
   <lib>
     <dict>

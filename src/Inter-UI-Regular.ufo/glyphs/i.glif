@@ -4,21 +4,6 @@
   <unicode hex="0069"/>
   <outline>
     <contour>
-      <point x="324" y="1756" type="curve"/>
-      <point x="428" y="1756"/>
-      <point x="492" y="1828"/>
-      <point x="492" y="1916" type="curve"/>
-      <point x="492" y="1996"/>
-      <point x="428" y="2076"/>
-      <point x="324" y="2076" type="curve"/>
-      <point x="220" y="2076"/>
-      <point x="156" y="1996"/>
-      <point x="156" y="1916" type="curve" smooth="yes"/>
-      <point x="156" y="1828"/>
-      <point x="220" y="1756"/>
-    </contour>
-    <component base="dotlessi"/>
-    <contour>
       <point x="324" y="0" type="move" name="bottom"/>
     </contour>
     <contour>
@@ -39,6 +24,21 @@
     <contour>
       <point x="664.0" y="2200.0" type="move" name="top0315"/>
     </contour>
+    <contour>
+      <point x="324" y="1756" type="curve"/>
+      <point x="428" y="1756"/>
+      <point x="492" y="1828"/>
+      <point x="492" y="1916" type="curve"/>
+      <point x="492" y="1996"/>
+      <point x="428" y="2076"/>
+      <point x="324" y="2076" type="curve"/>
+      <point x="220" y="2076"/>
+      <point x="156" y="1996"/>
+      <point x="156" y="1916" type="curve" smooth="yes"/>
+      <point x="156" y="1828"/>
+      <point x="220" y="1756"/>
+    </contour>
+    <component base="dotlessi"/>
   </outline>
   <lib>
     <dict>

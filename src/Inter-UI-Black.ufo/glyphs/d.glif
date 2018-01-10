@@ -4,16 +4,6 @@
   <unicode hex="0064"/>
   <outline>
     <contour>
-      <point x="1492" y="0" type="line"/>
-      <point x="1492" y="2048" type="line"/>
-      <point x="1032" y="2048" type="line"/>
-      <point x="1032" y="1256" type="line"/>
-      <point x="1188" y="732" type="line"/>
-      <point x="1036" y="308" type="line"/>
-      <point x="1036" y="0" type="line"/>
-    </contour>
-    <component base="leftloop.cn"/>
-    <contour>
       <point x="1680.0" y="2112.0" type="move" name="caron"/>
     </contour>
     <contour>
@@ -34,6 +24,16 @@
     <contour>
       <point x="1656.0" y="2200.0" type="move" name="top0315"/>
     </contour>
+    <contour>
+      <point x="1492" y="0" type="line"/>
+      <point x="1492" y="2048" type="line"/>
+      <point x="1032" y="2048" type="line"/>
+      <point x="1032" y="1256" type="line"/>
+      <point x="1188" y="732" type="line"/>
+      <point x="1036" y="308" type="line"/>
+      <point x="1036" y="0" type="line"/>
+    </contour>
+    <component base="leftloop.cn"/>
   </outline>
   <lib>
     <dict>
