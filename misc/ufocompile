@@ -59,29 +59,31 @@ def readVersionControlTag(dir):
 
 
 def main():
-  # silence warnings from fontTools.misc.fixedTools that is harmless and caused by
-  # the ufo2ft module.
+  # silence warnings from fontTools.misc.fixedTools that is harmless and caused
+  # by the ufo2ft module.
   logging.getLogger('fontTools.misc.fixedTools').setLevel(logging.ERROR)
 
   default_out_dir = os.path.join(BASEDIR,'build','tmp')
   srcDir = os.path.join(BASEDIR, 'src')
 
-  argparser = argparse.ArgumentParser(description='Build TTF and OTF font files from UFO sources.')
+  argparser = argparse.ArgumentParser(
+    description='Build TTF and OTF font files from UFO sources.')
 
-  argparser.add_argument('styles', metavar='<style>', type=str, nargs='*',
-                         help='Build specific styles. Omit to build all.')
+  argparser.add_argument(
+    'styles', metavar='<style>', type=str, nargs='*',
+    help='Build specific styles. Omit to build all.')
 
-  argparser.add_argument('--otf', dest='otf', action='store_const',
-                         const=True, default=False,
-                         help='Build OTF files')
+  argparser.add_argument(
+    '--otf', dest='otf', action='store_const',
+    const=True, default=False, help='Build OTF files')
 
-  argparser.add_argument('--no-ttf', dest='no_ttf', action='store_const',
-                         const=True, default=False,
-                         help='Do not build TTF files')
+  argparser.add_argument(
+    '--no-ttf', dest='no_ttf', action='store_const',
+    const=True, default=False, help='Do not build TTF files')
 
-  argparser.add_argument('--out', dest='out', metavar='<dir>', type=str,
-                         default=default_out_dir,
-                         help='Write output to <dir> instead of the default (%r)' % default_out_dir)
+  argparser.add_argument(
+    '--out', dest='out', metavar='<dir>', type=str, default=default_out_dir,
+    help='Write output to <dir> instead of the default (%r)' % default_out_dir)
 
   args = argparser.parse_args()
   styles = [s.lower() for s in args.styles]
@@ -91,7 +93,8 @@ def main():
   # version control tag, if any
   buildTag = readVersionControlTag(BASEDIR)
 
-  # Since we reference a shared feature file, copy it to build dir so includes works
+  # Since we reference a shared feature file, copy it to build dir so includes
+  # works
   ufoTmpDir = os.path.join(args.out, 'InterUIUFO')
   try:
     os.makedirs(ufoTmpDir)
@@ -130,7 +133,8 @@ def main():
           return specializedGlyph
       return Mix.mixGlyphs(self, gname)
 
-  proj = FontProject(rg.font, BASEDIR, os.path.join(srcDir,'fontbuild.cfg'), buildTag=buildTag)
+  proj = FontProject(
+    rg.font, BASEDIR, os.path.join(srcDir,'fontbuild.cfg'), buildTag=buildTag)
   proj.builddir = args.out
 
   # panose for entire family
@@ -138,6 +142,8 @@ def main():
     'bFamilyType': 2,  # Latin Text
     'bSerifStyle': 11, # Normal Sans
     'bProportion': 2,  # Old Style
+    'bContrast': 3,    # Very Low (thickest vs thinnest stem of "O")
+    'bXHeight': 4,     # Constant/Large
     # bWeight: see http://monotype.de/services/pan2#_Toc380547249
   }
 
