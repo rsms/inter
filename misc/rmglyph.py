@@ -537,7 +537,7 @@ def main(argv=None):
           '- $EDITOR %s/features.fea\n' % '/features.fea\n- $EDITOR '.join(fontPaths))
 
   print(('You need to re-generate %s via\n'+
-         '`make src/glyphorder.txt` (or misc/misc/gen-glyphorder.py)'
+         '`make src/glyphorder.txt` (or misc/gen-glyphorder.py)'
         ) % glyphOrderFile)
 
   print('\nFinally, you should build the Medium weight and make sure it all '+
