@@ -47,14 +47,18 @@ def main():
 
   ufoPrefix = 'src/Inter-UI-'
   changes = OrderedDict()
+  deleted = []
 
   for line in out.split('\n'):
     changeType, name = line.split('\t')
     if name.startswith(ufoPrefix) and name.endswith('.glif'):
       weight = name[len(ufoPrefix):name.find('.ufo/')]
       filename = os.path.join(rootdir, name)
-      doc = xmlParseFile(filename)
-      # print(changeType, weight, name)
+      try:
+        doc = xmlParseFile(filename)
+      except:
+        deleted.append('%s/%s' % (weight, os.path.basename(name)))
+        continue
 
       g = doc.documentElement
       gname = g.attributes['name'].value
@@ -62,8 +66,6 @@ def main():
         'U+' + u.attributes['hex'].value
           for u in g.getElementsByTagName('unicode')
       ])
-      # print('gname', gname)
-      # print('unicodes:', unicodes)
 
       c = changes.get(gname)
       if c is None:
@@ -75,8 +77,6 @@ def main():
       else:
         c['unicodes'] = c['unicodes'].union(unicodes)
         c['weights'].append((weight, changeType))
-
-      # break
 
   longestName = 0
   names = sorted(changes.keys())
@@ -105,5 +105,11 @@ def main():
         unicodess = ' (%s)' % ', '.join(unicodes)
       weightss = ' & '.join(weights)
       print('%s%s %s' % (name.ljust(longestName), unicodess, weightss))
+
+  if len(deleted):
+    print('\nDeleted files')
+    for filename in deleted:
+      print('- %s' % filename)
+
 
 main()
