@@ -10,15 +10,16 @@ if __name__ == "__main__":
   print "Resizing glyph margins for %r" % font
 
   # how much to add or remove from each glyph's margin
-  A = -16
+  A = 32
 
   if font is not None:
+    errors = 0  # if >0 then changes are discarded
     for g in font:
       # skip glyphs
-      if g.name in ('c', 'e', 'o', 'r', 'j'):
-       continue
+      #if g.name in ('c', 'e', 'o', 'r', 'j'):
+      # continue
 
-      if g.width < 2:
+      if g.width < 4:
         print '"%s": ["ignore", "zero-width"],' % (g.name)
         continue
 
@@ -26,27 +27,31 @@ if __name__ == "__main__":
         print '"%s": ["ignore", "empty"],' % (g.name)
         continue
 
-      if g.width % 16 != 0:
-        print '"%s": ["ignore", "misaligned"],' % (g.name)
+      if g.width % 4 != 0:
+        print '"%s": ["error", "misaligned"],' % (g.name)
+        errors += 1
         continue
 
-      if g.leftMargin <= 0 or g.rightMargin <= 0:
-        print '"%s": ["ignore", "zero-or-negative"],' % (g.name)
-        continue
+      #if g.leftMargin <= 0 or g.rightMargin <= 0:
+      #  print '"%s": ["ignore", "zero-or-negative"],' % (g.name)
+      #  continue
 
       leftMargin = int(max(0, g.leftMargin + A))
       rightMargin = int(max(0, g.rightMargin + A))
 
       #print '"%s": ["update", %g, %g],' % (g.name, leftMargin, rightMargin)
-      if 'interface.spaceadjust' in g.lib:
-        g.lib['interface.width-adjustments'].append(A)
+      if 'interui.spaceadjust' in g.lib:
+        g.lib['interui.width-adjustments'].append(A)
       else:
-        g.lib['interface.width-adjustments'] = [A]
+        g.lib['interui.width-adjustments'] = [A]
       # order of assignment is probably important
       g.rightMargin = int(rightMargin)
       g.leftMargin  = int(leftMargin)
 
-    font.update()
+    if errors > 0:
+        print "Discarding changes because there were errors"
+    else:
+        font.update()
   else:
     print "No fonts open"
 
