@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="D" format="1">
-  <advance width="1860"/>
+  <advance width="1912"/>
   <unicode hex="0044"/>
   <outline>
+    <contour>
+      <point x="820" y="0" type="line"/>
+      <point x="1428" y="0"/>
+      <point x="1792" y="384"/>
+      <point x="1792" y="1024" type="curve"/>
+      <point x="1792" y="1664"/>
+      <point x="1428" y="2048"/>
+      <point x="820" y="2048" type="curve"/>
+      <point x="320" y="2048" type="line"/>
+      <point x="320" y="1648" type="line"/>
+      <point x="796" y="1648" type="line"/>
+      <point x="1148" y="1648"/>
+      <point x="1320" y="1472"/>
+      <point x="1320" y="1024" type="curve"/>
+      <point x="1320" y="576"/>
+      <point x="1148" y="400"/>
+      <point x="800" y="400" type="curve"/>
+      <point x="328" y="400" type="line"/>
+      <point x="328" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="592" y="2048" type="line"/>
+      <point x="128" y="2048" type="line"/>
+      <point x="128" y="0" type="line"/>
+      <point x="592" y="0" type="line"/>
+    </contour>
     <contour>
       <point x="768" y="2200" type="move" name="top"/>
     </contour>
@@ -21,32 +47,6 @@
     <contour>
       <point x="1908" y="2200" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="820" y="0" type="line"/>
-      <point x="1360" y="0"/>
-      <point x="1764" y="364"/>
-      <point x="1764" y="1044" type="curve"/>
-      <point x="1764" y="1620"/>
-      <point x="1364" y="2048"/>
-      <point x="820" y="2048" type="curve"/>
-      <point x="320" y="2048" type="line"/>
-      <point x="320" y="1648" type="line"/>
-      <point x="796" y="1648" type="line"/>
-      <point x="1084" y="1648"/>
-      <point x="1292" y="1436"/>
-      <point x="1292" y="1044" type="curve"/>
-      <point x="1292" y="548"/>
-      <point x="1084" y="400"/>
-      <point x="800" y="400" type="curve"/>
-      <point x="328" y="400" type="line"/>
-      <point x="328" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="592" y="2048" type="line"/>
-      <point x="128" y="2048" type="line"/>
-      <point x="128" y="0" type="line"/>
-      <point x="592" y="0" type="line"/>
-    </contour>
   </outline>
   <lib>
     <dict>
@@ -60,9 +60,9 @@
           <key>magnetic</key>
           <integer>5</integer>
           <key>x</key>
-          <real>0.0</real>
+          <integer>1908</integer>
           <key>y</key>
-          <real>1238.875</real>
+          <integer>1024</integer>
         </dict>
         <dict>
           <key>angle</key>
@@ -88,7 +88,101 @@
           <key>y</key>
           <real>1549.625</real>
         </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1872</integer>
+          <key>y</key>
+          <integer>1696</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1872</integer>
+          <key>y</key>
+          <integer>348</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1408</integer>
+          <key>y</key>
+          <integer>1480</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1472</integer>
+          <key>y</key>
+          <integer>560</integer>
+        </dict>
       </array>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>O</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>-64</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>D</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>1912</integer>
+        </dict>
+      </dict>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.86</real>
