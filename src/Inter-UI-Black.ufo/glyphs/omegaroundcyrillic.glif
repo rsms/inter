@@ -1,30 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="omegaroundcyrillic" format="1">
-  <advance width="1792"/>
+  <advance width="1608"/>
   <unicode hex="047B"/>
   <outline>
     <contour>
-      <point x="900" y="1656" type="line"/>
-      <point x="692" y="1656" type="line"/>
-      <point x="692" y="1000" type="line"/>
-      <point x="900" y="1000" type="line"/>
+      <point x="908" y="1664" type="line"/>
+      <point x="700" y="1664" type="line"/>
+      <point x="700" y="1008" type="line"/>
+      <point x="908" y="1008" type="line"/>
     </contour>
     <contour>
-      <point x="892" y="512" type="line"/>
-      <point x="680" y="512" type="line"/>
-      <point x="680" y="-172" type="line"/>
-      <point x="892" y="-172" type="line"/>
+      <point x="908" y="512" type="line"/>
+      <point x="700" y="512" type="line"/>
+      <point x="700" y="-172" type="line"/>
+      <point x="908" y="-172" type="line"/>
     </contour>
-    <component base="o" xOffset="-4"/>
+    <component base="o"/>
     <contour>
-      <point x="788" y="1872" type="move" name="top"/>
+      <point x="792" y="1872" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1584" y="1872" type="move" name="top0315"/>
+      <point x="1588" y="1872" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>804</integer>
+          <key>y</key>
+          <integer>1148</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1585, 'leftMargin': 184, 'rightMargin': -27}</string>
     </dict>

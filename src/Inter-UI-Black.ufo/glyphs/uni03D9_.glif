@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni03D9" format="1">
-  <advance width="1792"/>
+  <advance width="1608"/>
   <unicode hex="03D9"/>
   <outline>
     <contour>
-      <point x="1016" y="56" type="line" name="hr00"/>
-      <point x="572" y="56" type="line"/>
-      <point x="572" y="-572" type="line"/>
-      <point x="1016" y="-572" type="line"/>
+      <point x="1024" y="52" type="line" name="hr00"/>
+      <point x="584" y="52" type="line"/>
+      <point x="584" y="-576" type="line"/>
+      <point x="1024" y="-576" type="line"/>
     </contour>
-    <component base="o" xOffset="-4"/>
+    <component base="o"/>
   </outline>
   <lib>
     <dict>
@@ -26,9 +26,9 @@
           <key>magnetic</key>
           <integer>5</integer>
           <key>x</key>
-          <real>793.375</real>
+          <integer>804</integer>
           <key>y</key>
-          <real>0.0</real>
+          <integer>360</integer>
         </dict>
       </array>
       <key>interface.gridadjust.original</key>
