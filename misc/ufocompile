@@ -181,14 +181,14 @@ def main():
   if ALL or 'medium' in styles:
     handledStyles.append('medium')
     proj.generateFont(
-      Mix2([rg, bl], 0.35, glyphSpecializations.get('medium', {})),
+      Mix2([rg, bl], 0.32, glyphSpecializations.get('medium', {})),
       "%s/Medium/Regular/Me" % FAMILYNAME,
       panose=mkpanose(6))
 
   if ALL or 'mediumitalic' in styles:
     handledStyles.append('mediumitalic')
     proj.generateFont(
-      Mix2([rg, bl], 0.35, glyphSpecializations.get('medium', {})),
+      Mix2([rg, bl], 0.32, glyphSpecializations.get('medium', {})),
       "%s/Medium Italic/Italic/Me" % FAMILYNAME,
       italic=True, stemWidth=300, italicMeanYCenter=-825, italicNarrowAmount=1,
       panose=mkpanose(6))
@@ -197,14 +197,14 @@ def main():
   if ALL or 'bold' in styles:
     handledStyles.append('bold')
     proj.generateFont(
-      Mix2([rg, bl], 0.65, glyphSpecializations.get('bold', {})),
+      Mix2([rg, bl], 0.68, glyphSpecializations.get('bold', {})),
       "%s/Bold/Bold/Rg" % FAMILYNAME,
       panose=mkpanose(8))
 
   if ALL or 'bolditalic' in styles:
     handledStyles.append('bolditalic')
     proj.generateFont(
-      Mix2([rg, bl], 0.65, glyphSpecializations.get('bold', {})),
+      Mix2([rg, bl], 0.68, glyphSpecializations.get('bold', {})),
       "%s/Bold Italic/Bold Italic/Rg" % FAMILYNAME,
       italic=True, stemWidth=350, italicMeanYCenter=-825, italicNarrowAmount=1,
       panose=mkpanose(8))
