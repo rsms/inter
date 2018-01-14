@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="jdotlessbar" format="1">
-  <advance width="1092"/>
+  <advance width="1044"/>
   <unicode hex="025F"/>
   <outline>
-    <component base="dotlessj" xOffset="24"/>
-    <component base="crossbar" xOffset="-68" yOffset="-896"/>
     <contour>
-      <point x="720" y="1776" type="move" name="top"/>
+      <point x="696" y="1776" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="720" y="-616" type="move" name="bottom"/>
+      <point x="696" y="-616" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1172" y="1776" type="move" name="top0315"/>
+      <point x="1148" y="1776" type="move" name="top0315"/>
     </contour>
+    <component base="dotlessj"/>
+    <component base="crossbar" xOffset="-92" yOffset="-896"/>
   </outline>
   <lib>
     <dict>

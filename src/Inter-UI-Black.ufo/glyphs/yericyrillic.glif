@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yericyrillic" format="1">
-  <advance width="2352"/>
+  <advance width="2304"/>
   <unicode hex="044B"/>
   <outline>
-    <component base="softsigncyrillic" xOffset="-28"/>
-    <component base="dotlessi" xOffset="1560"/>
     <contour>
-      <point x="1184" y="1776" type="move" name="top"/>
+      <point x="1160" y="1776" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="2352" y="1776" type="move" name="top0315"/>
+      <point x="2328" y="1776" type="move" name="top0315"/>
     </contour>
+    <component base="softsigncyrillic" xOffset="-52"/>
+    <component base="dotlessi" xOffset="1536"/>
   </outline>
   <lib>
     <dict>

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="comma" format="1">
-  <advance width="816"/>
+  <advance width="768"/>
   <unicode hex="002C"/>
   <outline>
     <contour>
-      <point x="616" y="348" type="line"/>
-      <point x="256" y="348" type="line"/>
-      <point x="256" y="28" type="line"/>
-      <point x="256" y="-188"/>
-      <point x="172" y="-304"/>
-      <point x="112" y="-428" type="curve"/>
-      <point x="336" y="-540" type="line"/>
-      <point x="496" y="-404"/>
-      <point x="616" y="-168"/>
-      <point x="616" y="56" type="curve"/>
+      <point x="620" y="364" type="move" name="_bottom"/>
     </contour>
     <contour>
-      <point x="644" y="364" type="move" name="_bottom"/>
+      <point x="312" y="48" type="move" name="_right"/>
     </contour>
     <contour>
-      <point x="336" y="48" type="move" name="_right"/>
+      <point x="592" y="348" type="line"/>
+      <point x="232" y="348" type="line"/>
+      <point x="232" y="28" type="line"/>
+      <point x="232" y="-188"/>
+      <point x="148" y="-304"/>
+      <point x="88" y="-428" type="curve"/>
+      <point x="312" y="-540" type="line"/>
+      <point x="472" y="-404"/>
+      <point x="592" y="-168"/>
+      <point x="592" y="56" type="curve"/>
     </contour>
   </outline>
   <lib>

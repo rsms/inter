@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="cedilla" format="1">
-  <advance width="1072"/>
+  <advance width="1024"/>
   <unicode hex="00B8"/>
   <outline>
     <contour>
-      <point x="296" y="16" type="line"/>
-      <point x="252" y="-188" type="line"/>
-      <point x="384" y="-196"/>
-      <point x="440" y="-216"/>
-      <point x="440" y="-288" type="curve" smooth="yes"/>
-      <point x="440" y="-364"/>
-      <point x="384" y="-392"/>
-      <point x="308" y="-392" type="curve"/>
-      <point x="320" y="-648" type="line"/>
-      <point x="648" y="-648"/>
-      <point x="820" y="-512"/>
-      <point x="820" y="-308" type="curve" smooth="yes"/>
-      <point x="820" y="-152"/>
-      <point x="716" y="-88"/>
-      <point x="616" y="-72" type="curve"/>
-      <point x="632" y="16" type="line"/>
+      <point x="436" y="0" type="move" name="_bottom"/>
     </contour>
     <contour>
-      <point x="460" y="0" type="move" name="_bottom"/>
+      <point x="436" y="-648" type="move" name="mkmkbottom_acc"/>
     </contour>
     <contour>
-      <point x="460" y="-648" type="move" name="mkmkbottom_acc"/>
+      <point x="272" y="16" type="line"/>
+      <point x="228" y="-188" type="line"/>
+      <point x="360" y="-196"/>
+      <point x="416" y="-216"/>
+      <point x="416" y="-288" type="curve" smooth="yes"/>
+      <point x="416" y="-364"/>
+      <point x="360" y="-392"/>
+      <point x="284" y="-392" type="curve"/>
+      <point x="296" y="-648" type="line"/>
+      <point x="624" y="-648"/>
+      <point x="796" y="-512"/>
+      <point x="796" y="-308" type="curve" smooth="yes"/>
+      <point x="796" y="-152"/>
+      <point x="692" y="-88"/>
+      <point x="592" y="-72" type="curve"/>
+      <point x="608" y="16" type="line"/>
     </contour>
   </outline>
   <lib>

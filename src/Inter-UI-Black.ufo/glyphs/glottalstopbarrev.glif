@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="glottalstopbarrev" format="1">
-  <advance width="1584"/>
+  <advance width="1536"/>
   <unicode hex="02A2"/>
   <outline>
-    <component base="glottalstoprevinv" xOffset="24"/>
-    <component base="crossbar" xOffset="96" yOffset="-716"/>
     <contour>
-      <point x="792" y="2244" type="move" name="top"/>
+      <point x="768" y="2244" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1492" y="2244" type="move" name="top0315"/>
+      <point x="1468" y="2244" type="move" name="top0315"/>
     </contour>
     <contour>
-      <point x="792" y="0" type="move" name="bottom"/>
+      <point x="768" y="0" type="move" name="bottom"/>
     </contour>
+    <component base="glottalstoprevinv"/>
+    <component base="crossbar" xOffset="72" yOffset="-716"/>
   </outline>
   <lib>
     <dict>

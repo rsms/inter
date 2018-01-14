@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dcroat" format="1">
-  <advance width="1728"/>
+  <advance width="1680"/>
   <unicode hex="0111"/>
   <outline>
-    <component base="d" xOffset="24"/>
-    <component base="crossbar" xOffset="568" yOffset="724"/>
     <contour>
-      <point x="1664" y="2112" type="move" name="caron"/>
+      <point x="1640" y="2112" type="move" name="caron"/>
     </contour>
     <contour>
-      <point x="688" y="0" type="move" name="bottom"/>
+      <point x="664" y="0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="712" y="2200" type="move" name="top"/>
+      <point x="688" y="2200" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1640" y="2200" type="move" name="top_dd"/>
+      <point x="1616" y="2200" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="1640" y="-560" type="move" name="bottom_dd"/>
+      <point x="1616" y="-560" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="852" y="0" type="move" name="markbottom"/>
+      <point x="828" y="0" type="move" name="markbottom"/>
     </contour>
     <contour>
-      <point x="1860" y="2200" type="move" name="top0315"/>
+      <point x="1836" y="2200" type="move" name="top0315"/>
     </contour>
     <contour>
-      <point x="1208" y="1804" type="move" name="parenthesses.w2"/>
+      <point x="1184" y="1804" type="move" name="parenthesses.w2"/>
     </contour>
+    <component base="d"/>
+    <component base="crossbar" xOffset="544" yOffset="724"/>
   </outline>
   <lib>
     <dict>

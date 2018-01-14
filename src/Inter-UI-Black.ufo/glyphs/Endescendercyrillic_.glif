@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Endescendercyrillic" format="1">
-  <advance width="2352"/>
+  <advance width="2304"/>
   <unicode hex="04A2"/>
   <outline>
-    <component base="H" xOffset="4"/>
-    <component base="cyrillictic" xOffset="1588"/>
     <contour>
-      <point x="1988" y="2200" type="move" name="top_dd"/>
+      <point x="1964" y="2200" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="1988" y="-560" type="move" name="bottom_dd"/>
+      <point x="1964" y="-560" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="1988" y="2200" type="move" name="top0315"/>
+      <point x="1964" y="2200" type="move" name="top0315"/>
     </contour>
+    <component base="H" xOffset="-20"/>
+    <component base="cyrillictic" xOffset="1564"/>
   </outline>
   <lib>
     <dict>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kadescendercyrillic" format="1">
-  <advance width="2096"/>
+  <advance width="2048"/>
   <unicode hex="049B"/>
   <outline>
-    <component base="kacyrillic" xOffset="64"/>
-    <component base="cyrillictic" xOffset="1300"/>
     <contour>
-      <point x="1668" y="1776" type="move" name="top0315"/>
+      <point x="1644" y="1776" type="move" name="top0315"/>
     </contour>
+    <component base="kacyrillic" xOffset="40"/>
+    <component base="cyrillictic" xOffset="1276"/>
   </outline>
   <lib>
     <dict>

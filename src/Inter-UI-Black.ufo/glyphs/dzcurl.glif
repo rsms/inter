@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dzcurl" format="1">
-  <advance width="3424"/>
+  <advance width="3376"/>
   <unicode hex="02A5"/>
   <outline>
-    <component base="d" xOffset="24"/>
-    <component base="zcurl" xOffset="1452"/>
     <contour>
-      <point x="2048" y="2200" type="move" name="top"/>
+      <point x="2024" y="2200" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="2048" y="-616" type="move" name="bottom"/>
+      <point x="2024" y="-616" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="3224" y="2200" type="move" name="top0315"/>
+      <point x="3200" y="2200" type="move" name="top0315"/>
     </contour>
+    <component base="d"/>
+    <component base="zcurl" xOffset="1428"/>
   </outline>
   <lib>
     <dict>
