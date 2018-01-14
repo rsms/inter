@@ -10,11 +10,12 @@ if __name__ == "__main__":
   print "Resizing glyph margins for %r" % font
 
   # how much to add or remove from each glyph's margin
-  A = -8
+  A = 16
 
   if font is not None:
     # first, check for errors and collect glyphs we should adjust
     glyphs = []
+    glyphNamesToAdjust = set()
     ignored = []
     errors = 0
 
@@ -37,6 +38,7 @@ if __name__ == "__main__":
         continue
 
       glyphs.append(g)
+      glyphNamesToAdjust.add(g.name)
 
     if errors > 0:
       print "Stopping changes because there are errors"
@@ -47,28 +49,45 @@ if __name__ == "__main__":
       print '# name => [ (prevLeftMargin, prevRightMargin), (newLeft, newRight) ]'
       print 'resized_glyphs = ['
 
+      adjustments = dict()
+
+      onlyGlyphs = None # ['A', 'Lambda']  # DEBUG
+      count = 0
+
       for g in glyphs:
+        if onlyGlyphs is not None:
+          if not g.name in onlyGlyphs:
+            continue
+          if len(onlyGlyphs) == count:
+            break
+          count += 1
+
+        for comp in g.components:
+          # adjust offset of any components which are being adjusted
+          if comp.baseGlyph in glyphNamesToAdjust:
+            # x, y -- counter-balance x offset
+            comp.offset = (comp.offset[0] - A, comp.offset[1])
+
         newLeftMargin = int(g.leftMargin + A)
         newRightMargin = int(g.rightMargin + A)
 
         print '  "%s": [(%g, %g), (%g, %g)],' % (
           g.name, g.leftMargin, g.rightMargin, newLeftMargin, newRightMargin)
 
-        # order of assignment is probably important
-        g.rightMargin = int(newRightMargin)
         g.leftMargin  = int(newLeftMargin)
+        g.rightMargin = int(newRightMargin)
 
       print '] # resized_glyphs'
 
       font.update()
 
-      if len(ignored) > 0:
-        print ''
-        print '# name => [what, reason]'
-        print "ignored_glyphs = ["
-        for t in ignored:
-          print '  "%s": ["ignore", %r],' % t
-        print '] # ignored_glyphs'
+      # if len(ignored) > 0:
+      #   print ''
+      #   print '# name => [what, reason]'
+      #   print "ignored_glyphs = ["
+      #   for t in ignored:
+      #     print '  "%s": ["ignore", %r],' % t
+      #   print '] # ignored_glyphs'
 
   else:
     print "No fonts open"
