@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tesh" format="1">
-  <advance width="2048"/>
+  <advance width="2080"/>
   <unicode hex="02A7"/>
   <outline>
     <contour>
-      <point x="964" y="2340" type="move" name="top"/>
+      <point x="1316" y="1488" type="line"/>
+      <point x="152" y="1488" type="line"/>
+      <point x="152" y="1168" type="line"/>
+      <point x="1316" y="1168" type="line"/>
     </contour>
     <contour>
-      <point x="964" y="-616" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1940" y="2340" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="1300" y="1488" type="line"/>
-      <point x="136" y="1488" type="line"/>
-      <point x="136" y="1168" type="line"/>
-      <point x="1300" y="1168" type="line"/>
-    </contour>
-    <contour>
-      <point x="336" y="1860" type="line"/>
-      <point x="336" y="484" type="line"/>
-      <point x="336" y="176"/>
-      <point x="424" y="-28"/>
-      <point x="792" y="-28" type="curve" smooth="yes"/>
-      <point x="960" y="-28"/>
-      <point x="1132" y="16"/>
-      <point x="1208" y="40" type="curve"/>
-      <point x="1208" y="372" type="line"/>
-      <point x="1180" y="368"/>
-      <point x="1048" y="336"/>
-      <point x="928" y="336" type="curve" smooth="yes"/>
-      <point x="820" y="336"/>
-      <point x="776" y="372"/>
-      <point x="776" y="484" type="curve"/>
-      <point x="776" y="1860" type="line"/>
+      <point x="352" y="1860" type="line"/>
+      <point x="352" y="484" type="line"/>
+      <point x="352" y="176"/>
+      <point x="440" y="-28"/>
+      <point x="808" y="-28" type="curve" smooth="yes"/>
+      <point x="976" y="-28"/>
+      <point x="1148" y="16"/>
+      <point x="1224" y="40" type="curve"/>
+      <point x="1224" y="372" type="line"/>
+      <point x="1196" y="368"/>
+      <point x="1064" y="336"/>
+      <point x="944" y="336" type="curve" smooth="yes"/>
+      <point x="836" y="336"/>
+      <point x="792" y="372"/>
+      <point x="792" y="484" type="curve"/>
+      <point x="792" y="1860" type="line"/>
     </contour>
     <component base="esh" xOffset="776"/>
+    <contour>
+      <point x="980" y="2340" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="980" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1956" y="2340" type="move" name="top0315"/>
+    </contour>
   </outline>
   <lib>
     <dict>

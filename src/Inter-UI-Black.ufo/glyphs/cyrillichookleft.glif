@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="cyrillichookleft" format="1">
-  <advance width="768"/>
+  <advance width="800"/>
   <outline>
     <contour>
-      <point x="628" y="0" type="move" name="_left"/>
+      <point x="264" y="0" type="line"/>
+      <point x="324" y="-72"/>
+      <point x="384" y="-128"/>
+      <point x="384" y="-228" type="curve" smooth="yes"/>
+      <point x="384" y="-236"/>
+      <point x="384" y="-308"/>
+      <point x="272" y="-308" type="curve" smooth="yes"/>
+      <point x="212" y="-308"/>
+      <point x="172" y="-292"/>
+      <point x="144" y="-284" type="curve"/>
+      <point x="96" y="-512" type="line"/>
+      <point x="148" y="-540"/>
+      <point x="228" y="-572"/>
+      <point x="352" y="-572" type="curve" smooth="yes"/>
+      <point x="548" y="-572"/>
+      <point x="708" y="-472"/>
+      <point x="708" y="-280" type="curve" smooth="yes"/>
+      <point x="708" y="-152"/>
+      <point x="640" y="-20"/>
+      <point x="472" y="84" type="curve"/>
     </contour>
     <contour>
-      <point x="184" y="0" type="move" name="_right"/>
+      <point x="644" y="0" type="move" name="_left"/>
     </contour>
     <contour>
-      <point x="420" y="0" type="move" name="_bottom"/>
+      <point x="200" y="0" type="move" name="_right"/>
     </contour>
     <contour>
-      <point x="248" y="0" type="line"/>
-      <point x="308" y="-72"/>
-      <point x="368" y="-128"/>
-      <point x="368" y="-228" type="curve" smooth="yes"/>
-      <point x="368" y="-236"/>
-      <point x="368" y="-308"/>
-      <point x="256" y="-308" type="curve" smooth="yes"/>
-      <point x="196" y="-308"/>
-      <point x="156" y="-292"/>
-      <point x="128" y="-284" type="curve"/>
-      <point x="80" y="-512" type="line"/>
-      <point x="132" y="-540"/>
-      <point x="212" y="-572"/>
-      <point x="336" y="-572" type="curve" smooth="yes"/>
-      <point x="532" y="-572"/>
-      <point x="692" y="-472"/>
-      <point x="692" y="-280" type="curve" smooth="yes"/>
-      <point x="692" y="-152"/>
-      <point x="624" y="-20"/>
-      <point x="456" y="84" type="curve"/>
+      <point x="436" y="0" type="move" name="_bottom"/>
     </contour>
   </outline>
   <lib>

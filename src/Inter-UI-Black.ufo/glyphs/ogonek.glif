@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ogonek" format="1">
-  <advance width="768"/>
+  <advance width="800"/>
   <unicode hex="02DB"/>
   <outline>
     <contour>
-      <point x="632" y="0" type="move" name="_ogonek"/>
+      <point x="408" y="84" type="line"/>
+      <point x="184" y="-20"/>
+      <point x="124" y="-148"/>
+      <point x="124" y="-280" type="curve" smooth="yes"/>
+      <point x="124" y="-472"/>
+      <point x="268" y="-572"/>
+      <point x="452" y="-572" type="curve" smooth="yes"/>
+      <point x="560" y="-572"/>
+      <point x="632" y="-540"/>
+      <point x="680" y="-512" type="curve"/>
+      <point x="628" y="-284" type="line"/>
+      <point x="604" y="-292"/>
+      <point x="580" y="-308"/>
+      <point x="532" y="-308" type="curve" smooth="yes"/>
+      <point x="468" y="-308"/>
+      <point x="444" y="-272"/>
+      <point x="444" y="-220" type="curve" smooth="yes"/>
+      <point x="444" y="-132"/>
+      <point x="504" y="-76"/>
+      <point x="648" y="0" type="curve"/>
     </contour>
     <contour>
-      <point x="632" y="0" type="move" name="_right"/>
+      <point x="648" y="0" type="move" name="_ogonek"/>
     </contour>
     <contour>
-      <point x="496" y="0" type="move" name="_bottom"/>
+      <point x="648" y="0" type="move" name="_right"/>
     </contour>
     <contour>
-      <point x="496" y="-572" type="move" name="mkmkbottom_acc"/>
+      <point x="512" y="0" type="move" name="_bottom"/>
     </contour>
     <contour>
-      <point x="392" y="84" type="line"/>
-      <point x="168" y="-20"/>
-      <point x="108" y="-148"/>
-      <point x="108" y="-280" type="curve" smooth="yes"/>
-      <point x="108" y="-472"/>
-      <point x="252" y="-572"/>
-      <point x="436" y="-572" type="curve" smooth="yes"/>
-      <point x="544" y="-572"/>
-      <point x="616" y="-540"/>
-      <point x="664" y="-512" type="curve"/>
-      <point x="612" y="-284" type="line"/>
-      <point x="588" y="-292"/>
-      <point x="564" y="-308"/>
-      <point x="516" y="-308" type="curve" smooth="yes"/>
-      <point x="452" y="-308"/>
-      <point x="428" y="-272"/>
-      <point x="428" y="-220" type="curve" smooth="yes"/>
-      <point x="428" y="-132"/>
-      <point x="488" y="-76"/>
-      <point x="632" y="0" type="curve"/>
+      <point x="512" y="-572" type="move" name="mkmkbottom_acc"/>
     </contour>
   </outline>
   <lib>

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ringhalfright" format="1">
-  <advance width="512"/>
+  <advance width="544"/>
   <unicode hex="02BE"/>
   <outline>
     <contour>
-      <point x="172.0" y="1652.0" type="move" name="_top"/>
+      <point x="128" y="1576" type="line"/>
+      <point x="292" y="1576"/>
+      <point x="416" y="1684"/>
+      <point x="416" y="1836" type="curve" smooth="yes"/>
+      <point x="416" y="1984"/>
+      <point x="292" y="2100"/>
+      <point x="128" y="2100" type="curve"/>
+      <point x="128" y="1968" type="line"/>
+      <point x="204" y="1968"/>
+      <point x="252" y="1916"/>
+      <point x="252" y="1836" type="curve" smooth="yes"/>
+      <point x="252" y="1756"/>
+      <point x="204" y="1704"/>
+      <point x="128" y="1704" type="curve"/>
     </contour>
     <contour>
-      <point x="242" y="1624" type="move" name="_rhalfring"/>
+      <point x="188" y="1652" type="move" name="_top"/>
     </contour>
     <contour>
-      <point x="112" y="1576" type="line"/>
-      <point x="276" y="1576"/>
-      <point x="400" y="1684"/>
-      <point x="400" y="1836" type="curve" smooth="yes"/>
-      <point x="400" y="1984"/>
-      <point x="276" y="2100"/>
-      <point x="112" y="2100" type="curve"/>
-      <point x="112" y="1968" type="line"/>
-      <point x="188" y="1968"/>
-      <point x="236" y="1916"/>
-      <point x="236" y="1836" type="curve" smooth="yes"/>
-      <point x="236" y="1756"/>
-      <point x="188" y="1704"/>
-      <point x="112" y="1704" type="curve"/>
+      <point x="260" y="1624" type="move" name="_rhalfring"/>
     </contour>
   </outline>
   <lib>
