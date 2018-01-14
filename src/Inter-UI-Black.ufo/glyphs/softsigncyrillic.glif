@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="softsigncyrillic" format="1">
-  <advance width="1792"/>
+  <advance width="1840"/>
   <unicode hex="044C"/>
   <outline>
     <contour>
-      <point x="512" y="1268" type="move" name="cross"/>
+      <point x="508" y="1080" type="line"/>
+      <point x="508" y="724" type="line"/>
+      <point x="932" y="724" type="line"/>
+      <point x="1096" y="724"/>
+      <point x="1164" y="648"/>
+      <point x="1164" y="536" type="curve"/>
+      <point x="1164" y="436"/>
+      <point x="1096" y="356"/>
+      <point x="932" y="356" type="curve"/>
+      <point x="680" y="356" type="line"/>
+      <point x="680" y="1488" type="line"/>
+      <point x="236" y="1488" type="line"/>
+      <point x="236" y="0" type="line"/>
+      <point x="932" y="0" type="line"/>
+      <point x="1352" y="0"/>
+      <point x="1604" y="220"/>
+      <point x="1604" y="536" type="curve"/>
+      <point x="1604" y="860"/>
+      <point x="1352" y="1080"/>
+      <point x="932" y="1080" type="curve"/>
     </contour>
     <contour>
-      <point x="484" y="1080" type="line"/>
-      <point x="484" y="724" type="line"/>
-      <point x="908" y="724" type="line"/>
-      <point x="1072" y="724"/>
-      <point x="1140" y="648"/>
-      <point x="1140" y="536" type="curve"/>
-      <point x="1140" y="436"/>
-      <point x="1072" y="356"/>
-      <point x="908" y="356" type="curve"/>
-      <point x="656" y="356" type="line"/>
-      <point x="656" y="1488" type="line"/>
-      <point x="212" y="1488" type="line"/>
-      <point x="212" y="0" type="line"/>
-      <point x="908" y="0" type="line"/>
-      <point x="1328" y="0"/>
-      <point x="1580" y="220"/>
-      <point x="1580" y="536" type="curve"/>
-      <point x="1580" y="860"/>
-      <point x="1328" y="1080"/>
-      <point x="908" y="1080" type="curve"/>
+      <point x="536" y="1268" type="move" name="cross"/>
     </contour>
   </outline>
   <lib>

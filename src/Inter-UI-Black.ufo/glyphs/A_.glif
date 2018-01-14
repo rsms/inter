@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="A" format="1">
-  <advance width="2048"/>
+  <advance width="2096"/>
   <unicode hex="0041"/>
   <outline>
     <contour>
-      <point x="1024.0" y="2200.0" type="move" name="top"/>
+      <point x="1568" y="756" type="line"/>
+      <point x="528" y="756" type="line"/>
+      <point x="528" y="384" type="line"/>
+      <point x="1568" y="384" type="line"/>
+    </contour>
+    <component base="Lambda" xOffset="24"/>
+    <contour>
+      <point x="1048" y="2200" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1032.0" y="12.0" type="move" name="bottom"/>
+      <point x="1056" y="12" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1980.0" y="0.0" type="move" name="right"/>
+      <point x="2004" y="0" type="move" name="right"/>
     </contour>
     <contour>
-      <point x="516.0" y="2000.0" type="move" name="tonos"/>
+      <point x="540" y="2000" type="move" name="tonos"/>
     </contour>
     <contour>
-      <point x="1844.0" y="0.0" type="move" name="ogonek"/>
+      <point x="1868" y="0" type="move" name="ogonek"/>
     </contour>
     <contour>
-      <point x="1980.0" y="2200.0" type="move" name="top_dd"/>
+      <point x="2004" y="2200" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="1980.0" y="-560.0" type="move" name="bottom_dd"/>
+      <point x="2004" y="-560" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="1980.0" y="2200.0" type="move" name="top0315"/>
+      <point x="2004" y="2200" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="1544" y="756" type="line"/>
-      <point x="504" y="756" type="line"/>
-      <point x="504" y="384" type="line"/>
-      <point x="1544" y="384" type="line"/>
-    </contour>
-    <component base="Lambda"/>
   </outline>
   <lib>
     <dict>

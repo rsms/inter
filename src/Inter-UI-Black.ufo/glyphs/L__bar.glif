@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="L_bar" format="1">
-  <advance width="1792"/>
+  <advance width="1840"/>
   <unicode hex="023D"/>
   <outline>
+    <component base="crossbar" xOffset="-36"/>
+    <component base="L" xOffset="256"/>
     <contour>
-      <point x="608.0" y="2200.0" type="move" name="top"/>
+      <point x="632" y="2200" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1760.0" y="2200.0" type="move" name="top0315"/>
+      <point x="1784" y="2200" type="move" name="top0315"/>
     </contour>
     <contour>
-      <point x="924.0" y="16.0" type="move" name="bottom"/>
+      <point x="948" y="16" type="move" name="bottom"/>
     </contour>
-    <component base="crossbar" xOffset="-60"/>
-    <component base="L" xOffset="232"/>
   </outline>
   <lib>
     <dict>

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="bbar" format="1">
-  <advance width="1792"/>
+  <advance width="1840"/>
   <unicode hex="0180"/>
   <outline>
+    <component base="b" xOffset="200"/>
+    <component base="crossbar" xOffset="-84" yOffset="764"/>
     <contour>
-      <point x="996" y="-16" type="move" name="markbottom"/>
+      <point x="1020" y="-16" type="move" name="markbottom"/>
     </contour>
     <contour>
-      <point x="988" y="2200" type="move" name="top"/>
+      <point x="1012" y="2200" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="588" y="1792" type="move" name="parenthesses.w2"/>
+      <point x="612" y="1792" type="move" name="parenthesses.w2"/>
     </contour>
     <contour>
-      <point x="1760" y="2200" type="move" name="top0315"/>
+      <point x="1784" y="2200" type="move" name="top0315"/>
     </contour>
     <contour>
-      <point x="996" y="-16" type="move" name="bottom"/>
+      <point x="1020" y="-16" type="move" name="bottom"/>
     </contour>
-    <component base="b" xOffset="176"/>
-    <component base="crossbar" xOffset="-108" yOffset="764"/>
   </outline>
   <lib>
     <dict>

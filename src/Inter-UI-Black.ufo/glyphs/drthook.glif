@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="drthook" format="1">
-  <advance width="1828"/>
+  <advance width="1876"/>
   <unicode hex="0256"/>
   <outline>
     <contour>
-      <point x="660" y="2340" type="move" name="top"/>
+      <point x="1516" y="184" type="line"/>
+      <point x="1056" y="184" type="line"/>
+      <point x="1056" y="-80" type="line" smooth="yes"/>
+      <point x="1056" y="-516"/>
+      <point x="1356" y="-576"/>
+      <point x="1596" y="-576" type="curve" smooth="yes"/>
+      <point x="1696" y="-576"/>
+      <point x="1772" y="-568"/>
+      <point x="1828" y="-560" type="curve"/>
+      <point x="1828" y="-212" type="line"/>
+      <point x="1796" y="-216"/>
+      <point x="1760" y="-220"/>
+      <point x="1720" y="-220" type="curve" smooth="yes"/>
+      <point x="1616" y="-220"/>
+      <point x="1516" y="-192"/>
+      <point x="1516" y="-80" type="curve" smooth="yes"/>
+    </contour>
+    <component base="d" xOffset="24"/>
+    <contour>
+      <point x="684" y="2340" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="796" y="-616" type="move" name="bottom"/>
+      <point x="820" y="-616" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1788" y="2340" type="move" name="top0315"/>
+      <point x="1812" y="2340" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="1492" y="184" type="line"/>
-      <point x="1032" y="184" type="line"/>
-      <point x="1032" y="-80" type="line" smooth="yes"/>
-      <point x="1032" y="-516"/>
-      <point x="1332" y="-576"/>
-      <point x="1572" y="-576" type="curve" smooth="yes"/>
-      <point x="1672" y="-576"/>
-      <point x="1748" y="-568"/>
-      <point x="1804" y="-560" type="curve"/>
-      <point x="1804" y="-212" type="line"/>
-      <point x="1772" y="-216"/>
-      <point x="1736" y="-220"/>
-      <point x="1696" y="-220" type="curve" smooth="yes"/>
-      <point x="1592" y="-220"/>
-      <point x="1492" y="-192"/>
-      <point x="1492" y="-80" type="curve" smooth="yes"/>
-    </contour>
-    <component base="d"/>
   </outline>
   <lib>
     <dict>

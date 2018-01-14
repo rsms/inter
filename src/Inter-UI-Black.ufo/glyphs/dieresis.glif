@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dieresis" format="1">
-  <advance width="1280"/>
+  <advance width="1328"/>
   <unicode hex="00A8"/>
   <outline>
     <contour>
-      <point x="640" y="1772" type="move" name="_top"/>
+      <point x="380" y="1712" type="curve" smooth="yes"/>
+      <point x="492" y="1712"/>
+      <point x="572" y="1792"/>
+      <point x="572" y="1892" type="curve" smooth="yes"/>
+      <point x="572" y="1996"/>
+      <point x="492" y="2076"/>
+      <point x="380" y="2076" type="curve" smooth="yes"/>
+      <point x="264" y="2076"/>
+      <point x="184" y="1996"/>
+      <point x="184" y="1892" type="curve" smooth="yes"/>
+      <point x="184" y="1792"/>
+      <point x="264" y="1712"/>
     </contour>
     <contour>
-      <point x="644" y="2216" type="move" name="mkmktop_acc"/>
+      <point x="952" y="1712" type="curve" smooth="yes"/>
+      <point x="1064" y="1712"/>
+      <point x="1144" y="1792"/>
+      <point x="1144" y="1892" type="curve" smooth="yes"/>
+      <point x="1144" y="1996"/>
+      <point x="1064" y="2076"/>
+      <point x="952" y="2076" type="curve" smooth="yes"/>
+      <point x="836" y="2076"/>
+      <point x="756" y="1996"/>
+      <point x="756" y="1892" type="curve" smooth="yes"/>
+      <point x="756" y="1792"/>
+      <point x="836" y="1712"/>
     </contour>
     <contour>
-      <point x="356" y="1712" type="curve" smooth="yes"/>
-      <point x="468" y="1712"/>
-      <point x="548" y="1792"/>
-      <point x="548" y="1892" type="curve" smooth="yes"/>
-      <point x="548" y="1996"/>
-      <point x="468" y="2076"/>
-      <point x="356" y="2076" type="curve" smooth="yes"/>
-      <point x="240" y="2076"/>
-      <point x="160" y="1996"/>
-      <point x="160" y="1892" type="curve" smooth="yes"/>
-      <point x="160" y="1792"/>
-      <point x="240" y="1712"/>
+      <point x="664" y="1772" type="move" name="_top"/>
     </contour>
     <contour>
-      <point x="928" y="1712" type="curve" smooth="yes"/>
-      <point x="1040" y="1712"/>
-      <point x="1120" y="1792"/>
-      <point x="1120" y="1892" type="curve" smooth="yes"/>
-      <point x="1120" y="1996"/>
-      <point x="1040" y="2076"/>
-      <point x="928" y="2076" type="curve" smooth="yes"/>
-      <point x="812" y="2076"/>
-      <point x="732" y="1996"/>
-      <point x="732" y="1892" type="curve" smooth="yes"/>
-      <point x="732" y="1792"/>
-      <point x="812" y="1712"/>
+      <point x="668" y="2216" type="move" name="mkmktop_acc"/>
     </contour>
   </outline>
   <lib>

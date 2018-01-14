@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lambdabar" format="1">
-  <advance width="1792"/>
+  <advance width="1840"/>
   <unicode hex="019B"/>
   <outline>
     <contour>
-      <point x="1460" y="2200" type="move" name="top0315"/>
+      <point x="1096" y="1876" type="line"/>
+      <point x="284" y="1620" type="line"/>
+      <point x="284" y="1340" type="line"/>
+      <point x="1096" y="1600" type="line"/>
     </contour>
+    <component base="lambda" xOffset="24"/>
     <contour>
-      <point x="1072" y="1876" type="line"/>
-      <point x="260" y="1620" type="line"/>
-      <point x="260" y="1340" type="line"/>
-      <point x="1072" y="1600" type="line"/>
+      <point x="1484" y="2200" type="move" name="top0315"/>
     </contour>
-    <component base="lambda"/>
   </outline>
   <lib>
     <dict>

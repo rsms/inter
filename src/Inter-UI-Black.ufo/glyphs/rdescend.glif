@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="rdescend" format="1">
-  <advance width="1020"/>
+  <advance width="1068"/>
   <unicode hex="027C"/>
   <outline>
     <contour>
-      <point x="128" y="-576" type="line"/>
-      <point x="588" y="-576" type="line"/>
-      <point x="588" y="56" type="line"/>
-      <point x="128" y="56" type="line"/>
+      <point x="152" y="-576" type="line"/>
+      <point x="612" y="-576" type="line"/>
+      <point x="612" y="56" type="line"/>
+      <point x="152" y="56" type="line"/>
     </contour>
-    <component base="r"/>
+    <component base="r" xOffset="24"/>
     <contour>
-      <point x="796" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="796" y="-616" type="move" name="bottom"/>
+      <point x="820" y="1776" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1112" y="1776" type="move" name="top0315"/>
+      <point x="820" y="-616" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1136" y="1776" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
