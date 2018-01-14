@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="one" format="1">
-  <advance width="1364"/>
+  <advance width="1408"/>
   <unicode hex="0031"/>
   <outline>
     <contour>
-      <point x="952" y="2048" type="line"/>
-      <point x="564" y="2048" type="line"/>
-      <point x="80" y="1764" type="line"/>
-      <point x="256" y="1456" type="line"/>
-      <point x="520" y="1608" type="line"/>
-      <point x="532" y="1608" type="line"/>
-      <point x="532" y="0" type="line"/>
-      <point x="952" y="0" type="line"/>
+      <point x="996" y="2048" type="line"/>
+      <point x="580" y="2048" type="line"/>
+      <point x="580" y="2032"/>
+      <point x="540" y="1704"/>
+      <point x="160" y="1704" type="curve"/>
+      <point x="160" y="1336" type="line"/>
+      <point x="376" y="1336"/>
+      <point x="512" y="1384"/>
+      <point x="560" y="1464" type="curve"/>
+      <point x="576" y="1464" type="line"/>
+      <point x="576" y="0" type="line"/>
+      <point x="996" y="0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -43,116 +47,6 @@
           <real>763.125</real>
         </dict>
       </array>
-      <key>com.typemytype.robofont.layerData</key>
-      <dict>
-        <key>reference</key>
-        <dict>
-          <key>anchors</key>
-          <array>
-          </array>
-          <key>components</key>
-          <array>
-          </array>
-          <key>contours</key>
-          <array>
-            <dict>
-              <key>points</key>
-              <array>
-                <dict>
-                  <key>segmentType</key>
-                  <string>line</string>
-                  <key>smooth</key>
-                  <false/>
-                  <key>x</key>
-                  <real>768.0</real>
-                  <key>y</key>
-                  <integer>2048</integer>
-                </dict>
-                <dict>
-                  <key>segmentType</key>
-                  <string>line</string>
-                  <key>smooth</key>
-                  <false/>
-                  <key>x</key>
-                  <real>532.0</real>
-                  <key>y</key>
-                  <integer>2048</integer>
-                </dict>
-                <dict>
-                  <key>segmentType</key>
-                  <string>line</string>
-                  <key>smooth</key>
-                  <false/>
-                  <key>x</key>
-                  <real>20.0</real>
-                  <key>y</key>
-                  <integer>1748</integer>
-                </dict>
-                <dict>
-                  <key>segmentType</key>
-                  <string>line</string>
-                  <key>smooth</key>
-                  <false/>
-                  <key>x</key>
-                  <real>124.0</real>
-                  <key>y</key>
-                  <integer>1564</integer>
-                </dict>
-                <dict>
-                  <key>segmentType</key>
-                  <string>line</string>
-                  <key>smooth</key>
-                  <false/>
-                  <key>x</key>
-                  <real>520.0</real>
-                  <key>y</key>
-                  <integer>1796</integer>
-                </dict>
-                <dict>
-                  <key>segmentType</key>
-                  <string>line</string>
-                  <key>smooth</key>
-                  <false/>
-                  <key>x</key>
-                  <real>532.0</real>
-                  <key>y</key>
-                  <integer>1796</integer>
-                </dict>
-                <dict>
-                  <key>segmentType</key>
-                  <string>line</string>
-                  <key>smooth</key>
-                  <false/>
-                  <key>x</key>
-                  <real>532.0</real>
-                  <key>y</key>
-                  <integer>0</integer>
-                </dict>
-                <dict>
-                  <key>segmentType</key>
-                  <string>line</string>
-                  <key>smooth</key>
-                  <false/>
-                  <key>x</key>
-                  <real>768.0</real>
-                  <key>y</key>
-                  <integer>0</integer>
-                </dict>
-              </array>
-            </dict>
-          </array>
-          <key>lib</key>
-          <dict>
-          </dict>
-          <key>name</key>
-          <string>one</string>
-          <key>unicodes</key>
-          <array>
-          </array>
-          <key>width</key>
-          <integer>1364</integer>
-        </dict>
-      </dict>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.89</real>
