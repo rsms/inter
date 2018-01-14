@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="srthook" format="1">
-  <advance width="1462"/>
+  <advance width="1444"/>
   <unicode hex="0282"/>
   <outline>
+    <contour>
+      <point x="92" y="356" type="line"/>
+      <point x="92" y="-44" type="line" smooth="yes"/>
+      <point x="92" y="-308"/>
+      <point x="268" y="-452"/>
+      <point x="496" y="-452" type="curve" smooth="yes"/>
+      <point x="540" y="-452"/>
+      <point x="596" y="-448"/>
+      <point x="632" y="-436" type="curve"/>
+      <point x="632" y="-232" type="line"/>
+      <point x="612" y="-240"/>
+      <point x="576" y="-240"/>
+      <point x="556" y="-240" type="curve" smooth="yes"/>
+      <point x="428" y="-240"/>
+      <point x="328" y="-204"/>
+      <point x="328" y="-44" type="curve" smooth="yes"/>
+      <point x="328" y="356" type="line"/>
+    </contour>
+    <component base="s"/>
     <contour>
       <point x="752" y="1776" type="move" name="top"/>
     </contour>
@@ -12,25 +31,6 @@
     <contour>
       <point x="1456" y="1776" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="156" y="232" type="line"/>
-      <point x="156" y="-168" type="line" smooth="yes"/>
-      <point x="156" y="-432"/>
-      <point x="332" y="-576"/>
-      <point x="560" y="-576" type="curve" smooth="yes"/>
-      <point x="604" y="-576"/>
-      <point x="660" y="-572"/>
-      <point x="696" y="-560" type="curve"/>
-      <point x="696" y="-356" type="line"/>
-      <point x="676" y="-364"/>
-      <point x="640" y="-364"/>
-      <point x="620" y="-364" type="curve" smooth="yes"/>
-      <point x="492" y="-364"/>
-      <point x="392" y="-328"/>
-      <point x="392" y="-168" type="curve" smooth="yes"/>
-      <point x="392" y="232" type="line"/>
-    </contour>
-    <component base="s"/>
   </outline>
   <lib>
     <dict>

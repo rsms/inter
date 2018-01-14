@@ -1,58 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ccurl" format="1">
-  <advance width="1526"/>
+  <advance width="1556"/>
   <unicode hex="0255"/>
   <outline>
     <contour>
-      <point x="824" y="332" type="curve" smooth="yes"/>
-      <point x="576" y="332"/>
-      <point x="536" y="480"/>
-      <point x="536" y="728" type="curve" smooth="yes"/>
-      <point x="536" y="760" type="line" smooth="yes"/>
-      <point x="536" y="976"/>
-      <point x="568" y="1160"/>
-      <point x="772" y="1160" type="curve"/>
-      <point x="928" y="1160"/>
-      <point x="996" y="1052"/>
-      <point x="996" y="920" type="curve"/>
-      <point x="1408" y="920" type="line"/>
-      <point x="1408" y="1296"/>
-      <point x="1152" y="1516"/>
-      <point x="784" y="1516" type="curve" smooth="yes"/>
-      <point x="324" y="1516"/>
-      <point x="92" y="1188"/>
-      <point x="92" y="760" type="curve" smooth="yes"/>
-      <point x="92" y="728" type="line" smooth="yes"/>
-      <point x="92" y="296"/>
-      <point x="324" y="-28"/>
-      <point x="784" y="-28" type="curve" smooth="yes"/>
-      <point x="1208" y="-28"/>
-      <point x="1408" y="220"/>
-      <point x="1408" y="464" type="curve" smooth="yes"/>
-      <point x="1408" y="652"/>
-      <point x="1288" y="840"/>
-      <point x="980" y="840" type="curve" smooth="yes"/>
-      <point x="764" y="840"/>
-      <point x="512" y="748"/>
-      <point x="16" y="48" type="curve"/>
-      <point x="308" y="-200" type="line"/>
-      <point x="652" y="324"/>
-      <point x="800" y="504"/>
-      <point x="908" y="504" type="curve" smooth="yes"/>
-      <point x="956" y="504"/>
-      <point x="988" y="484"/>
-      <point x="988" y="436" type="curve" smooth="yes"/>
-      <point x="988" y="364"/>
-      <point x="912" y="332"/>
+      <point x="804" y="340" type="curve"/>
+      <point x="804" y="-28" type="line"/>
+      <point x="1228" y="-28"/>
+      <point x="1412" y="220"/>
+      <point x="1412" y="464" type="curve" smooth="yes"/>
+      <point x="1412" y="652"/>
+      <point x="1300" y="840"/>
+      <point x="984" y="840" type="curve" smooth="yes"/>
+      <point x="828" y="840"/>
+      <point x="516" y="808"/>
+      <point x="20" y="48" type="curve"/>
+      <point x="312" y="-184" type="line"/>
+      <point x="656" y="288"/>
+      <point x="812" y="480"/>
+      <point x="928" y="480" type="curve" smooth="yes"/>
+      <point x="968" y="480"/>
+      <point x="992" y="456"/>
+      <point x="992" y="420" type="curve" smooth="yes"/>
+      <point x="992.0" y="349.4117647058823"/>
+      <point x="884.0" y="340.0"/>
     </contour>
     <contour>
-      <point x="784" y="1776" type="move" name="top"/>
+      <point x="1484" y="1032" type="line"/>
+      <point x="1420" y="1352"/>
+      <point x="1164" y="1556"/>
+      <point x="804" y="1556" type="curve" smooth="yes"/>
+      <point x="352" y="1556"/>
+      <point x="80" y="1232"/>
+      <point x="80" y="768" type="curve" smooth="yes"/>
+      <point x="80" y="304"/>
+      <point x="352" y="-28"/>
+      <point x="804" y="-28" type="curve"/>
+      <point x="804" y="340" type="line"/>
+      <point x="596" y="340"/>
+      <point x="516" y="512"/>
+      <point x="516" y="768" type="curve" smooth="yes"/>
+      <point x="516" y="1024"/>
+      <point x="596" y="1192"/>
+      <point x="804" y="1192" type="curve" smooth="yes"/>
+      <point x="956" y="1192"/>
+      <point x="1028" y="1100"/>
+      <point x="1064" y="952" type="curve"/>
     </contour>
     <contour>
-      <point x="784" y="0" type="move" name="bottom"/>
+      <point x="784.0" y="1776.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1488" y="1776" type="move" name="top0315"/>
+      <point x="784.0" y="0.0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1488.0" y="1776.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
@@ -75,7 +77,7 @@
                 <integer>0</integer>
                 <integer>0</integer>
                 <integer>1</integer>
-                <integer>12</integer>
+                <integer>0</integer>
                 <integer>0</integer>
               </array>
             </dict>
@@ -92,7 +94,7 @@
           <array>
           </array>
           <key>width</key>
-          <integer>1526</integer>
+          <integer>1556</integer>
         </dict>
       </dict>
       <key>interface.gridadjust.original</key>
