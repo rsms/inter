@@ -73,11 +73,12 @@ class InstanceNames:
         f.info.openTypeNameManufacturerURL = self.foundryURL
         f.info.openTypeNameLicense = self.license
         f.info.openTypeNameLicenseURL = self.licenseURL
-        f.info.openTypeNameVersion = "Version %i.%i" %(version, versionMinor)
 
         if self.build is not None and len(self.build):
-            f.info.openTypeNameUniqueID = "%s:%s:%s" %(self.fullname, self.build, self.year)
+            f.info.openTypeNameVersion = "%i.%i;%s" %(version, versionMinor, self.build)
+            f.info.openTypeNameUniqueID = "%s:%s:%s" %(self.fullname, self.year, self.build)
         else:
+            f.info.openTypeNameVersion = "%i.%i" %(version, versionMinor)
             f.info.openTypeNameUniqueID = "%s:%s" %(self.fullname, self.year)
         
         # f.info.openTypeNameDescription = ""        
