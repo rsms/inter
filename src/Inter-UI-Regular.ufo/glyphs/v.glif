@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="v" format="1">
-  <advance width="1504"/>
+  <advance width="1552"/>
   <unicode hex="0076"/>
   <outline>
     <contour>
-      <point x="752" y="1792" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="752" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1352" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1352" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="1392" y="1792" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="1416" y="1536" type="line"/>
-      <point x="1176" y="1536" type="line"/>
-      <point x="760" y="364" type="line"/>
-      <point x="744" y="364" type="line"/>
-      <point x="328" y="1536" type="line"/>
+      <point x="1464" y="1536" type="line"/>
+      <point x="1212" y="1536" type="line"/>
+      <point x="784" y="292" type="line"/>
+      <point x="768" y="292" type="line"/>
+      <point x="340" y="1536" type="line"/>
       <point x="88" y="1536" type="line"/>
-      <point x="640" y="0" type="line"/>
-      <point x="864" y="0" type="line"/>
+      <point x="656" y="0" type="line"/>
+      <point x="896" y="0" type="line"/>
+    </contour>
+    <contour>
+      <point x="752.0" y="1792.0" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="752.0" y="0.0" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1352.0" y="2200.0" type="move" name="top_dd"/>
+    </contour>
+    <contour>
+      <point x="1352.0" y="-560.0" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1392.0" y="1792.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
@@ -43,11 +43,49 @@
           <key>name</key>
           <string></string>
           <key>x</key>
-          <integer>752</integer>
+          <integer>776</integer>
           <key>y</key>
-          <integer>288</integer>
+          <integer>360</integer>
         </dict>
       </array>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>y</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>v</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>1552</integer>
+        </dict>
+      </dict>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.86</real>
