@@ -1,43 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Y" format="1">
-  <advance width="1664"/>
+  <advance width="1832"/>
   <unicode hex="0059"/>
   <outline>
     <contour>
-      <point x="832" y="2304" type="move" name="top"/>
+      <point x="336" y="2048" type="line"/>
+      <point x="52" y="2048" type="line"/>
+      <point x="792" y="844" type="line"/>
+      <point x="792" y="0" type="line"/>
+      <point x="1040" y="0" type="line"/>
+      <point x="1040" y="844" type="line"/>
+      <point x="1780" y="2048" type="line"/>
+      <point x="1496" y="2048" type="line"/>
+      <point x="916" y="1072" type="line"/>
     </contour>
     <contour>
-      <point x="820" y="0" type="move" name="bottom"/>
+      <point x="892" y="1044" type="line"/>
+      <point x="940" y="1044" type="line"/>
+      <point x="940" y="1092" type="line"/>
+      <point x="892" y="1092" type="line"/>
     </contour>
     <contour>
-      <point x="812" y="816" type="move" name="cross"/>
+      <point x="916" y="2304" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="-80" y="2048" type="move" name="tonos"/>
+      <point x="916" y="0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1804" y="2200" type="move" name="top_dd"/>
+      <point x="896" y="816" type="move" name="cross"/>
     </contour>
     <contour>
-      <point x="1804" y="-560" type="move" name="bottom_dd"/>
+      <point x="4" y="2048" type="move" name="tonos"/>
     </contour>
     <contour>
-      <point x="1804" y="2200" type="move" name="top0315"/>
+      <point x="1888" y="2200" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="328" y="2048" type="line"/>
-      <point x="64" y="2048" type="line"/>
-      <point x="708" y="748" type="line"/>
-      <point x="708" y="0" type="line"/>
-      <point x="956" y="0" type="line"/>
-      <point x="956" y="748" type="line"/>
-      <point x="1600" y="2048" type="line"/>
-      <point x="1336" y="2048" type="line"/>
-      <point x="832" y="1028" type="line"/>
+      <point x="1888" y="-560" type="move" name="bottom_dd"/>
+    </contour>
+    <contour>
+      <point x="1888" y="2200" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>916</integer>
+          <key>y</key>
+          <integer>1724</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>336</integer>
+          <key>y</key>
+          <integer>2092</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1496</integer>
+          <key>y</key>
+          <integer>2100</integer>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>V</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>Y</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>1832</integer>
+        </dict>
+      </dict>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.86</real>

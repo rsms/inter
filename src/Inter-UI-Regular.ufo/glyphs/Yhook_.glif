@@ -1,34 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Yhook" format="1">
-  <advance width="1664"/>
+  <advance width="1952"/>
   <unicode hex="01B3"/>
   <outline>
     <contour>
-      <point x="328" y="2048" type="line"/>
-      <point x="64" y="2048" type="line"/>
-      <point x="708" y="748" type="line"/>
-      <point x="708" y="0" type="line"/>
-      <point x="956" y="0" type="line"/>
-      <point x="956" y="748" type="line"/>
-      <point x="1412" y="1672" type="line"/>
-      <point x="1200" y="1772" type="line"/>
-      <point x="832" y="1028" type="line"/>
+      <point x="1548" y="1672" type="line"/>
+      <point x="1588" y="1740" type="line" smooth="yes"/>
+      <point x="1660" y="1864"/>
+      <point x="1748" y="1872"/>
+      <point x="1844" y="1832" type="curve"/>
+      <point x="1908" y="2032" type="line"/>
+      <point x="1712" y="2124"/>
+      <point x="1508" y="2064"/>
+      <point x="1376" y="1844" type="curve" smooth="yes"/>
+      <point x="1332" y="1772" type="line"/>
     </contour>
     <contour>
-      <point x="1412" y="1672" type="line"/>
-      <point x="1444" y="1736" type="line" smooth="yes"/>
-      <point x="1504" y="1868"/>
-      <point x="1608" y="1872"/>
-      <point x="1704" y="1832" type="curve"/>
-      <point x="1768" y="2032" type="line"/>
-      <point x="1572" y="2124"/>
-      <point x="1352" y="2072"/>
-      <point x="1236" y="1844" type="curve" smooth="yes"/>
-      <point x="1200" y="1772" type="line"/>
+      <point x="892" y="1044" type="line"/>
+      <point x="940" y="1044" type="line"/>
+      <point x="940" y="1092" type="line"/>
+      <point x="892" y="1092" type="line"/>
+    </contour>
+    <contour>
+      <point x="336.0" y="2048.0" type="line"/>
+      <point x="52.0" y="2048.0" type="line"/>
+      <point x="792.0" y="844.0" type="line"/>
+      <point x="792.0" y="0.0" type="line"/>
+      <point x="1040.0" y="0.0" type="line"/>
+      <point x="1040.0" y="844.0" type="line"/>
+      <point x="1548" y="1672" type="line"/>
+      <point x="1332" y="1772" type="line"/>
+      <point x="916.0" y="1072.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>-121.39691224859045</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1496</integer>
+          <key>y</key>
+          <integer>1588</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>-120.67232578233511</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1304</integer>
+          <key>y</key>
+          <integer>1724</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1843, 'leftMargin': 18, 'rightMargin': -41}</string>
       <key>interface.width-adjustments</key>

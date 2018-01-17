@@ -1,42 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="A" format="1">
-  <advance width="1792"/>
+  <advance width="1888"/>
   <unicode hex="0041"/>
   <outline>
     <contour>
-      <point x="896.0" y="2304.0" type="move" name="top"/>
+      <point x="1452" y="768" type="line"/>
+      <point x="440" y="768" type="line"/>
+      <point x="440" y="548" type="line"/>
+      <point x="1452" y="548" type="line"/>
+    </contour>
+    <component base="Lambda"/>
+    <contour>
+      <point x="944.0" y="2304.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="936.0" y="0.0" type="move" name="bottom"/>
+      <point x="944" y="0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1800.0" y="0.0" type="move" name="right"/>
+      <point x="1824" y="0" type="move" name="right"/>
     </contour>
     <contour>
-      <point x="496.0" y="2048.0" type="move" name="tonos"/>
+      <point x="672" y="2048" type="move" name="tonos"/>
     </contour>
     <contour>
-      <point x="1744.0" y="0.0" type="move" name="ogonek"/>
+      <point x="1768" y="0" type="move" name="ogonek"/>
     </contour>
     <contour>
-      <point x="1840.0" y="2200.0" type="move" name="top_dd"/>
+      <point x="1888.0" y="2200.0" type="move" name="top_dd"/>
     </contour>
     <contour>
       <point x="1840.0" y="-560.0" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="1840.0" y="2200.0" type="move" name="top0315"/>
+      <point x="1888.0" y="2200.0" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="1412" y="768" type="line"/>
-      <point x="400" y="768" type="line"/>
-      <point x="400" y="548" type="line"/>
-      <point x="1412" y="548" type="line"/>
-    </contour>
-    <component base="Lambda"/>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>944</integer>
+          <key>y</key>
+          <integer>1828</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.86</real>

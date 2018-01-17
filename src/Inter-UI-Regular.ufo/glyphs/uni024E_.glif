@@ -1,27 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni024E" format="1">
-  <advance width="2016"/>
+  <advance width="1832"/>
   <unicode hex="024E"/>
   <outline>
     <contour>
-      <point x="1008" y="2200" type="move" name="top"/>
+      <point x="1832" y="1628" type="line"/>
+      <point x="0" y="1628" type="line"/>
+      <point x="0" y="1464" type="line"/>
+      <point x="1832" y="1464" type="line"/>
+    </contour>
+    <component base="Y"/>
+    <contour>
+      <point x="916" y="2200" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1008" y="0" type="move" name="bottom"/>
+      <point x="916" y="0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1964" y="2200" type="move" name="top0315"/>
+      <point x="1860" y="2200" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="1924" y="1628" type="line"/>
-      <point x="96" y="1628" type="line"/>
-      <point x="96" y="1464" type="line"/>
-      <point x="1924" y="1464" type="line"/>
-    </contour>
-    <component base="Y" xOffset="164"/>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>916</integer>
+          <key>y</key>
+          <integer>744</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1911, 'leftMargin': 41, 'rightMargin': 41}</string>
       <key>interface.width-adjustments</key>
