@@ -3,8 +3,12 @@ html { }
 body {
   background-color: #f4f4f4;
   color: #414141;
-  font: 16px/22px 'Inter UI', system-ui, sans-serif;
-  letter-spacing: -0.1px;
+  font: 15px/22px 'Inter UI', system-ui, sans-serif;
+
+  font-size: 15px;
+  line-height:1.4;
+  letter-spacing: 0.009em;
+
   font-weight: 400;
   padding-bottom: 30px;
 
@@ -83,7 +87,7 @@ h1, h2, h3 {
 h1 {
   color: #222;
   font-size: 55px;
-  letter-spacing: -2.1px;
+  letter-spacing: -0.05em;
   line-height: 50px;
   text-indent: -2.5px;
   margin-bottom: 30px;
