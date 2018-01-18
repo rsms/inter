@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Kacyr" format="1">
-  <advance width="1688"/>
+  <advance width="1804"/>
   <unicode hex="041A"/>
   <outline>
     <contour>
-      <point x="1316" y="0" type="line"/>
-      <point x="1612" y="0" type="line"/>
-      <point x="804" y="1060" type="line"/>
-      <point x="1584" y="2048" type="line"/>
-      <point x="1288" y="2048" type="line"/>
+      <point x="1444" y="0" type="line"/>
+      <point x="1740" y="0" type="line"/>
+      <point x="884" y="1148" type="line"/>
+      <point x="1712" y="2048" type="line"/>
+      <point x="1416" y="2048" type="line"/>
       <point x="596" y="1160" type="line"/>
       <point x="488" y="1160" type="line"/>
       <point x="488" y="2048" type="line"/>
@@ -16,7 +16,49 @@
       <point x="240" y="0" type="line"/>
       <point x="488" y="0" type="line"/>
       <point x="488" y="940" type="line"/>
-      <point x="596" y="940" type="line"/>
+      <point x="740" y="940" type="line"/>
     </contour>
   </outline>
+  <lib>
+    <dict>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>K</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>Kacyr</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>1804</integer>
+        </dict>
+      </dict>
+    </dict>
+  </lib>
 </glyph>
