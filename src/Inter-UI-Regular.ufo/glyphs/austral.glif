@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="austral" format="1">
-  <advance width="2016"/>
+  <advance width="1888"/>
   <unicode hex="20B3"/>
   <outline>
     <contour>
-      <point x="1916" y="1228" type="line"/>
-      <point x="100" y="1228" type="line"/>
-      <point x="100" y="1008" type="line"/>
-      <point x="1916" y="1008" type="line"/>
+      <point x="1788" y="1248" type="line"/>
+      <point x="100" y="1248" type="line"/>
+      <point x="100" y="1028" type="line"/>
+      <point x="1788" y="1028" type="line"/>
     </contour>
     <contour>
-      <point x="1916" y="748" type="line"/>
-      <point x="100" y="748" type="line"/>
-      <point x="100" y="528" type="line"/>
-      <point x="1916" y="528" type="line"/>
+      <point x="1788" y="768" type="line"/>
+      <point x="100" y="768" type="line"/>
+      <point x="100" y="548" type="line"/>
+      <point x="1788" y="548" type="line"/>
     </contour>
-    <component base="A" xOffset="112"/>
+    <component base="A"/>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>944</integer>
+          <key>y</key>
+          <integer>2196</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.8</real>
