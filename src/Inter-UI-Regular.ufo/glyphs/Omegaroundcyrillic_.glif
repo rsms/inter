@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Omegaroundcyrillic" format="1">
-  <advance width="2016"/>
+  <advance width="2128"/>
   <unicode hex="047A"/>
   <outline>
     <contour>
-      <point x="1108" y="2184" type="line"/>
-      <point x="832" y="2184" type="line"/>
-      <point x="832" y="1644" type="line"/>
-      <point x="1108" y="1644" type="line"/>
+      <point x="1180" y="440" type="line"/>
+      <point x="948" y="440" type="line"/>
+      <point x="948" y="-244" type="line"/>
+      <point x="1180" y="-244" type="line"/>
     </contour>
     <contour>
-      <point x="1108" y="360" type="line"/>
-      <point x="832" y="360" type="line"/>
-      <point x="832" y="-196" type="line"/>
-      <point x="1108" y="-196" type="line"/>
+      <point x="1180" y="2296" type="line"/>
+      <point x="948" y="2296" type="line"/>
+      <point x="948" y="1612" type="line"/>
+      <point x="1180" y="1612" type="line"/>
     </contour>
-    <component base="O" xOffset="-16"/>
+    <component base="O"/>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1064</integer>
+          <key>y</key>
+          <integer>1816</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1921, 'leftMargin': 233, 'rightMargin': 152}</string>
       <key>interface.width-adjustments</key>

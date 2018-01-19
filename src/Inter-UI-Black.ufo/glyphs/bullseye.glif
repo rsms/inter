@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="bullseye" format="1">
-  <advance width="2080"/>
+  <advance width="2040"/>
   <unicode hex="0298"/>
   <outline>
-    <contour>
-      <point x="760" y="1024" type="curve" smooth="yes"/>
-      <point x="760" y="892"/>
-      <point x="860" y="792"/>
-      <point x="1008" y="792" type="curve" smooth="yes"/>
-      <point x="1156" y="792"/>
-      <point x="1252" y="892"/>
-      <point x="1252" y="1024" type="curve" smooth="yes"/>
-      <point x="1252" y="1156"/>
-      <point x="1156" y="1256"/>
-      <point x="1008" y="1256" type="curve" smooth="yes"/>
-      <point x="860" y="1256"/>
-      <point x="760" y="1156"/>
-    </contour>
     <component base="O"/>
+    <component base="period" xOffset="620" yOffset="804"/>
     <contour>
-      <point x="984" y="2244" type="move" name="top"/>
+      <point x="1024" y="2244" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="984" y="0" type="move" name="bottom"/>
+      <point x="1024" y="0" type="move" name="bottom"/>
     </contour>
     <contour>
       <point x="1960" y="2244" type="move" name="top0315"/>
@@ -34,27 +21,15 @@
       <array>
         <dict>
           <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1006.5</real>
-        </dict>
-        <dict>
-          <key>angle</key>
           <real>90.0</real>
           <key>isGlobal</key>
           <false/>
           <key>magnetic</key>
           <integer>5</integer>
           <key>x</key>
-          <real>966.625</real>
+          <integer>1024</integer>
           <key>y</key>
-          <real>0.0</real>
+          <integer>1372</integer>
         </dict>
       </array>
       <key>interface.gridadjust.original</key>

@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Ohorn" format="1">
-  <advance width="2032"/>
+  <advance width="2164"/>
   <unicode hex="01A0"/>
   <outline>
+    <contour>
+      <point x="1896" y="2196" type="line"/>
+      <point x="1896" y="1964"/>
+      <point x="1804" y="1828"/>
+      <point x="1596" y="1828" type="curve"/>
+      <point x="1596" y="1632" type="line"/>
+      <point x="1952" y="1632"/>
+      <point x="2132" y="1836"/>
+      <point x="2132" y="2196" type="curve"/>
+    </contour>
+    <component base="O"/>
     <contour>
       <point x="1012" y="2304" type="move" name="top"/>
     </contour>
@@ -12,17 +23,6 @@
     <contour>
       <point x="1956" y="2192" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="1756" y="2196" type="line"/>
-      <point x="1756" y="1964"/>
-      <point x="1676" y="1828"/>
-      <point x="1468" y="1828" type="curve"/>
-      <point x="1468" y="1632" type="line"/>
-      <point x="1824" y="1632"/>
-      <point x="2004" y="1836"/>
-      <point x="2004" y="2196" type="curve"/>
-    </contour>
-    <component base="O"/>
   </outline>
   <lib>
     <dict>

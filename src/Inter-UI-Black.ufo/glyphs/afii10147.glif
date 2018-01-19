@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="afii10147" format="1">
-  <advance width="2008"/>
+  <advance width="2040"/>
   <unicode hex="0472"/>
   <outline>
     <contour>
-      <point x="1552" y="1176" type="line"/>
-      <point x="1040" y="1064"/>
-      <point x="1040" y="1320"/>
-      <point x="528" y="1176" type="curve"/>
-      <point x="528" y="876" type="line"/>
-      <point x="1040" y="984"/>
-      <point x="1040" y="728"/>
-      <point x="1552" y="876" type="curve"/>
+      <point x="1532" y="1176" type="line"/>
+      <point x="1020" y="1064"/>
+      <point x="1020" y="1320"/>
+      <point x="508" y="1176" type="curve"/>
+      <point x="508" y="876" type="line"/>
+      <point x="1020" y="984"/>
+      <point x="1020" y="728"/>
+      <point x="1532" y="876" type="curve"/>
     </contour>
     <component base="O"/>
     <contour>
-      <point x="996" y="2200" type="move" name="top"/>
+      <point x="1024" y="2200" type="move" name="top"/>
     </contour>
     <contour>
       <point x="1944" y="2200" type="move" name="top0315"/>
@@ -23,6 +23,23 @@
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1024</integer>
+          <key>y</key>
+          <integer>1436</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1944, 'leftMargin': 173, 'rightMargin': 35}</string>
     </dict>

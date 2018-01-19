@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Btopbar" format="1">
-  <advance width="1760"/>
+  <advance width="1840"/>
   <unicode hex="0182"/>
   <outline>
-    <component base="Gamma" xOffset="-120"/>
-    <component base="afii10046" xOffset="-16"/>
+    <component base="Gamma" xOffset="-24"/>
+    <component base="afii10046" xOffset="48"/>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>240</integer>
+          <key>y</key>
+          <integer>1684</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1777, 'leftMargin': 171, 'rightMargin': 158}</string>
       <key>interface.width-adjustments</key>
