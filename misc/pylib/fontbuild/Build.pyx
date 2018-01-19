@@ -61,7 +61,8 @@ class FontProject:
 
         self.builddir = "out"
         self.decompose = self.config.get("glyphs","decompose").split()
-        self.predecompose = self.config.get("glyphs","predecompose").split()
+        self.predecompose = set(self.config.get("glyphs","predecompose").split())
+        self.predecompose_auto = 1  # unless 0, automatically populate predecompose
         self.lessItalic = set(self.config.get("glyphs","lessitalic").split())
         self.deleteList = set(self.config.get("glyphs","delete").split())
         self.noItalic = set(self.config.get("glyphs","noitalic").split())
@@ -128,6 +129,13 @@ class FontProject:
                 for gname in swapList:
                     print gname
                     swapContours(f, gname.replace(swap,""), gname)
+        
+        if self.predecompose_auto == 1:
+            self.predecompose_auto = 2
+            for g in self.basefont:
+                if len(g.components) > 0:
+                    self.predecompose.add(g.name)
+
         for gname in self.predecompose:
             if f.has_key(gname):
                 decomposeGlyph(f, f[gname])
@@ -273,6 +281,8 @@ def generateGlyphs(f, glyphNames, glyphList={}):
 def cleanCurves(f):
     log(">> Removing overlaps")
     for g in f:
+        # if len(g.components) > 0:
+        #     decomposeGlyph(f, g)
         removeGlyphOverlap(g)
 
     # log(">> Mitring sharp corners")
@@ -293,10 +303,11 @@ def deleteGlyphs(f, deleteList):
 def removeGlyphOverlap(glyph):
     """Remove overlaps in contours from a glyph."""
     #TODO(jamesgk) verify overlaps exist first, as per library's recommendation
-    manager = BooleanOperationManager()
     contours = glyph.contours
-    glyph.clearContours()
-    manager.union(contours, glyph.getPointPen())
+    if len(contours) > 1:
+        manager = BooleanOperationManager()
+        glyph.clearContours()
+        manager.union(contours, glyph.getPointPen())
 
 
 def saveOTF(font, destFile, glyphOrder, truetype=False):
