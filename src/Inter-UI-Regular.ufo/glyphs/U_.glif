@@ -1,13 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="U" format="1">
-  <advance width="2068"/>
+  <advance width="2072"/>
   <unicode hex="0055"/>
   <outline>
     <contour>
-      <point x="1028" y="2304" type="move" name="top"/>
+      <point x="1584" y="2048" type="line"/>
+      <point x="1584" y="692" type="line" smooth="yes"/>
+      <point x="1584" y="372"/>
+      <point x="1328" y="196"/>
+      <point x="1036" y="196" type="curve" smooth="yes"/>
+      <point x="744" y="196"/>
+      <point x="488" y="372"/>
+      <point x="488" y="692" type="curve" smooth="yes"/>
+      <point x="488" y="2048" type="line"/>
+      <point x="240" y="2048" type="line"/>
+      <point x="240" y="692" type="line"/>
+      <point x="240" y="232"/>
+      <point x="604" y="-36"/>
+      <point x="1036" y="-36" type="curve" smooth="yes"/>
+      <point x="1468" y="-36"/>
+      <point x="1832" y="232"/>
+      <point x="1832" y="692" type="curve"/>
+      <point x="1832" y="2048" type="line"/>
     </contour>
     <contour>
-      <point x="1024" y="-28" type="move" name="bottom"/>
+      <point x="1036" y="2304" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1036" y="-28" type="move" name="bottom"/>
     </contour>
     <contour>
       <point x="1152.0" y="0.0" type="move" name="right"/>
@@ -24,29 +44,26 @@
     <contour>
       <point x="1820.0" y="2200.0" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="1580" y="2048" type="line"/>
-      <point x="1580" y="700" type="line" smooth="yes"/>
-      <point x="1580" y="404"/>
-      <point x="1320" y="200"/>
-      <point x="1028" y="200" type="curve" smooth="yes"/>
-      <point x="736" y="200"/>
-      <point x="488" y="404"/>
-      <point x="488" y="700" type="curve" smooth="yes"/>
-      <point x="488" y="2048" type="line"/>
-      <point x="240" y="2048" type="line"/>
-      <point x="240" y="700" type="line"/>
-      <point x="240" y="248"/>
-      <point x="592" y="-28"/>
-      <point x="1024" y="-28" type="curve" smooth="yes"/>
-      <point x="1436" y="-28"/>
-      <point x="1828" y="248"/>
-      <point x="1828" y="700" type="curve"/>
-      <point x="1828" y="2048" type="line"/>
-    </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1036</integer>
+          <key>y</key>
+          <integer>2084</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.86</real>

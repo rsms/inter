@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="L_slash" format="1">
-  <advance width="1536"/>
+  <advance width="1568"/>
   <unicode hex="0141"/>
   <outline>
+    <contour>
+      <point x="864" y="1280" type="line"/>
+      <point x="52" y="1024" type="line"/>
+      <point x="52" y="844" type="line"/>
+      <point x="864" y="1100" type="line"/>
+    </contour>
+    <component base="L"/>
     <contour>
       <point x="364" y="2304" type="move" name="top"/>
     </contour>
@@ -12,13 +19,6 @@
     <contour>
       <point x="1524" y="2200" type="move" name="top0315"/>
     </contour>
-    <contour>
-      <point x="864" y="1280" type="line"/>
-      <point x="52" y="1024" type="line"/>
-      <point x="52" y="844" type="line"/>
-      <point x="864" y="1100" type="line"/>
-    </contour>
-    <component base="L"/>
   </outline>
   <lib>
     <dict>

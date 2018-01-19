@@ -4,15 +4,6 @@
   <unicode hex="01AF"/>
   <outline>
     <contour>
-      <point x="1024" y="2304" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1024" y="-28" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1968" y="2216" type="move" name="top0315"/>
-    </contour>
-    <contour>
       <point x="2060" y="2172" type="line"/>
       <point x="2060" y="1908"/>
       <point x="1984" y="1768"/>
@@ -23,9 +14,35 @@
       <point x="2292" y="2172" type="curve"/>
     </contour>
     <component base="U"/>
+    <contour>
+      <point x="1036" y="2304" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="1036" y="-28" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1968" y="2216" type="move" name="top0315"/>
+    </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1036</integer>
+          <key>y</key>
+          <integer>244</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1968, 'leftMargin': 256, 'rightMargin': -199}</string>
     </dict>
