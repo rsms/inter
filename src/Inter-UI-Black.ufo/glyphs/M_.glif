@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="M" format="1">
-  <advance width="2464"/>
+  <advance width="2560"/>
   <unicode hex="004D"/>
   <outline>
     <contour>
       <point x="144" y="2048" type="line"/>
       <point x="144" y="0" type="line"/>
-      <point x="616" y="0" type="line"/>
-      <point x="616" y="1340" type="line"/>
+      <point x="608" y="0" type="line"/>
+      <point x="608" y="1340" type="line"/>
       <point x="624" y="1340" type="line"/>
-      <point x="1072" y="0" type="line"/>
-      <point x="1384" y="0" type="line"/>
-      <point x="1840" y="1332" type="line"/>
-      <point x="1852" y="1332" type="line"/>
-      <point x="1852" y="0" type="line"/>
-      <point x="2320" y="0" type="line"/>
-      <point x="2320" y="2048" type="line"/>
-      <point x="1708" y="2048" type="line"/>
-      <point x="1244" y="668" type="line"/>
-      <point x="1220" y="668" type="line"/>
-      <point x="756" y="2048" type="line"/>
+      <point x="1124" y="32" type="line"/>
+      <point x="1436" y="32" type="line"/>
+      <point x="1936" y="1332" type="line"/>
+      <point x="1952" y="1332" type="line"/>
+      <point x="1952" y="0" type="line"/>
+      <point x="2416" y="0" type="line"/>
+      <point x="2416" y="2048" type="line"/>
+      <point x="1816" y="2048" type="line"/>
+      <point x="1292" y="736" type="line"/>
+      <point x="1268" y="736" type="line"/>
+      <point x="744" y="2048" type="line"/>
     </contour>
     <contour>
-      <point x="1292" y="2200" type="move" name="top"/>
+      <point x="1280.0" y="2200.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="2364" y="0" type="move" name="right"/>
+      <point x="2364.0" y="0.0" type="move" name="right"/>
     </contour>
     <contour>
-      <point x="1296" y="16" type="move" name="bottom"/>
+      <point x="1280" y="4" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="2532" y="2200" type="move" name="top_dd"/>
+      <point x="2532.0" y="2200.0" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="2532" y="-560" type="move" name="bottom_dd"/>
+      <point x="2532.0" y="-560.0" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="2532" y="2200" type="move" name="top0315"/>
+      <point x="2532.0" y="2200.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
@@ -55,6 +55,48 @@
           <real>0.0</real>
           <key>y</key>
           <real>1219.625</real>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1280</integer>
+          <key>y</key>
+          <integer>1848</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>744</integer>
+          <key>y</key>
+          <integer>2164</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1816</integer>
+          <key>y</key>
+          <integer>2040</integer>
         </dict>
       </array>
       <key>com.typemytype.robofont.mark</key>

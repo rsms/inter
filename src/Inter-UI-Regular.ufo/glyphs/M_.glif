@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="M" format="1">
-  <advance width="2324"/>
+  <advance width="2448"/>
   <unicode hex="004D"/>
   <outline>
     <contour>
@@ -9,77 +9,84 @@
       <point x="472" y="0" type="line"/>
       <point x="472" y="1536" type="line"/>
       <point x="492" y="1536" type="line"/>
-      <point x="1048" y="16" type="line"/>
-      <point x="1276" y="16" type="line"/>
-      <point x="1832" y="1536" type="line"/>
-      <point x="1852" y="1536" type="line"/>
-      <point x="1852" y="0" type="line"/>
-      <point x="2084" y="0" type="line"/>
-      <point x="2084" y="2048" type="line"/>
-      <point x="1788" y="2048" type="line"/>
-      <point x="1172" y="412" type="line"/>
-      <point x="1148" y="412" type="line"/>
-      <point x="536" y="2048" type="line"/>
+      <point x="1112" y="16" type="line"/>
+      <point x="1336" y="16" type="line"/>
+      <point x="1956" y="1536" type="line"/>
+      <point x="1976" y="1536" type="line"/>
+      <point x="1976" y="0" type="line"/>
+      <point x="2208" y="0" type="line"/>
+      <point x="2208" y="2048" type="line"/>
+      <point x="1932" y="2048" type="line"/>
+      <point x="1240" y="376" type="line"/>
+      <point x="1216" y="376" type="line"/>
+      <point x="516" y="2048" type="line"/>
     </contour>
     <contour>
-      <point x="1152" y="2304" type="move" name="top"/>
+      <point x="1224.0" y="2304.0" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="2200" y="0" type="move" name="right"/>
+      <point x="2200.0" y="0.0" type="move" name="right"/>
     </contour>
     <contour>
-      <point x="1216" y="16" type="move" name="bottom"/>
+      <point x="1224.0" y="0.0" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="2448" y="2200" type="move" name="top_dd"/>
+      <point x="2448.0" y="2200.0" type="move" name="top_dd"/>
     </contour>
     <contour>
-      <point x="2448" y="-560" type="move" name="bottom_dd"/>
+      <point x="2448.0" y="-560.0" type="move" name="bottom_dd"/>
     </contour>
     <contour>
-      <point x="2448" y="2200" type="move" name="top0315"/>
+      <point x="2448.0" y="2200.0" type="move" name="top0315"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.layerData</key>
-      <dict>
-        <key>reference</key>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
         <dict>
-          <key>anchors</key>
-          <array>
-          </array>
-          <key>components</key>
-          <array>
-            <dict>
-              <key>baseGlyph</key>
-              <string>O</string>
-              <key>transformation</key>
-              <array>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-                <integer>1</integer>
-                <integer>-16</integer>
-                <integer>0</integer>
-              </array>
-            </dict>
-          </array>
-          <key>contours</key>
-          <array>
-          </array>
-          <key>lib</key>
-          <dict>
-          </dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
           <key>name</key>
-          <string>M</string>
-          <key>unicodes</key>
-          <array>
-          </array>
-          <key>width</key>
-          <integer>2324</integer>
+          <string></string>
+          <key>x</key>
+          <integer>1224</integer>
+          <key>y</key>
+          <integer>152</integer>
         </dict>
-      </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>516</integer>
+          <key>y</key>
+          <integer>2056</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1932</integer>
+          <key>y</key>
+          <integer>2060</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.86</real>
