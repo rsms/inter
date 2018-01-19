@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni2C7F" format="1">
-  <advance width="1632"/>
+  <advance width="1744"/>
   <unicode hex="2C7F"/>
   <outline>
     <contour>
@@ -20,22 +20,60 @@
       <point x="288" y="224" type="curve"/>
     </contour>
     <contour>
-      <point x="1456" y="1840" type="line"/>
-      <point x="1456" y="2048" type="line"/>
-      <point x="1312" y="2048" type="line"/>
-      <point x="176" y="212" type="line"/>
-      <point x="176" y="0" type="line"/>
+      <point x="1572" y="1868" type="line"/>
+      <point x="1572" y="2048" type="line"/>
+      <point x="1424" y="2048" type="line"/>
+      <point x="172" y="180" type="line"/>
+      <point x="172" y="0" type="line"/>
       <point x="320" y="0" type="line"/>
     </contour>
     <contour>
-      <point x="1336" y="2048" type="line"/>
+      <point x="1448" y="2048" type="line"/>
       <point x="160" y="2048" type="line"/>
       <point x="160" y="1828" type="line"/>
-      <point x="1336" y="1828" type="line"/>
+      <point x="1448" y="1828" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>Z</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>uni2C7F</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>1744</integer>
+        </dict>
+      </dict>
       <key>interface.gridadjust.original</key>
       <string>{'width': 1687, 'leftMargin': 117, 'rightMargin': 115}</string>
       <key>interface.width-adjustments</key>
