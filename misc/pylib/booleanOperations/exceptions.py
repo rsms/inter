@@ -19,3 +19,7 @@ class InvalidClippingContourError(InvalidContourError):
 
 class ExecutionError(BooleanOperationsError):
     """Raised when clipping execution fails"""
+
+
+class OpenContourError(BooleanOperationsError):
+    """Raised when any input contour is open"""

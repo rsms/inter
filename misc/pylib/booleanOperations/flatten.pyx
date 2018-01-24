@@ -3,6 +3,7 @@ import math
 from fontTools.misc import bezierTools
 from fontTools.pens.basePen import decomposeQuadraticSegment
 import pyclipper
+from .exceptions import OpenContourError
 
 """
 To Do:
@@ -343,7 +344,8 @@ class ContourPointDataPen:
         pass
 
     def addPoint(self, pt, segmentType=None, smooth=False, name=None, **kwargs):
-        assert segmentType != "move"
+        if segmentType == "move":
+            raise OpenContourError("Unhandled open contour")
         if not self._foundStartingPoint and segmentType is not None:
             kwargs['startingPoint'] = self._foundStartingPoint = True
         data = InputPoint(
@@ -373,7 +375,6 @@ def _prepPointsForSegments(points):
             point = points.pop()
             points.insert(0, point)
             continue
-        break
 
 
 def _copyPoints(points):
