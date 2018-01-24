@@ -278,11 +278,18 @@ def generateGlyphs(f, glyphNames, glyphList={}):
     for glyphName in glyphNames:
         generateGlyph(f, glyphName, glyphList)
 
+
+def deleteGlyphs(f, deleteList):
+    for name in deleteList:
+        if f.has_key(name):
+            f.removeGlyph(name)
+
+
 def cleanCurves(f):
     log(">> Removing overlaps")
     for g in f:
-        # if len(g.components) > 0:
-        #     decomposeGlyph(f, g)
+        if len(g.components) > 0:
+            decomposeGlyph(f, g)
         removeGlyphOverlap(g)
 
     # log(">> Mitring sharp corners")
@@ -294,20 +301,22 @@ def cleanCurves(f):
     #     glyphCurvesToQuadratic(g)
 
 
-def deleteGlyphs(f, deleteList):
-    for name in deleteList:
-        if f.has_key(name):
-            f.removeGlyph(name)
-
-
-def removeGlyphOverlap(glyph):
+def removeGlyphOverlap(g):
     """Remove overlaps in contours from a glyph."""
-    #TODO(jamesgk) verify overlaps exist first, as per library's recommendation
-    contours = glyph.contours
-    if len(contours) > 1:
-        manager = BooleanOperationManager()
-        glyph.clearContours()
-        manager.union(contours, glyph.getPointPen())
+    # Note: Although it theoretically would be more efficient to first check
+    # if contours has overlap before applying clipping, boolean ops and
+    # re-drawing the shapes, the booleanOperations library's getIntersections
+    # function adds more overhead in the real world, compared to bluntly
+    # computing the union for every single glyph.
+    #
+    # If we can find a really cheap/efficient way to check if there's any
+    # overlap, then we should do that before going ahead and computing the
+    # union. Keep in mind that some glyphs have just a single contour that
+    # intersects itself, for instance "e".
+
+    contours = g.contours
+    g.clearContours()
+    BooleanOperationManager.union(contours, g.getPointPen())
 
 
 def saveOTF(font, destFile, glyphOrder, truetype=False):
