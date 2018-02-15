@@ -1125,9 +1125,9 @@ document.head.appendChild(fontCSS)
       <label class="label-and-value">
       <span>Anti-alias:</span>
       <select name="antialias">
-        <option value="default" selected>Default</option>
+        <option value="greyscale" selected>Greyscale</option>
         <option value="subpixel">Subpixel</option>
-        <option value="greyscale">Greyscale</option>
+        <option value="default">Browser default</option>
       </select>
       </label>
 
@@ -1167,12 +1167,14 @@ document.head.appendChild(fontCSS)
       </select></label>
 
       <label class="label-and-value">
-      <span>text-rendering:</span>
-      <select name="text-rendering">
-        <option value="auto" selected>auto</option>
-        <option value="optimizeSpeed">optimizeSpeed</option>
-        <option value="optimizeLegibility">optimizeLegibility</option>
-        <option value="geometricPrecision">geometricPrecision</option>
+      <span>text-decoration:</span>
+      <select name="text-decoration">
+        <option value="none" selected>none</option>
+        <option value="underline">underline</option>
+        <option value="overline">overline</option>
+        <option value="underline overline">underline &amp; overline</option>
+        <option value="line-through">line-through</option>
+        <option value="wavy underline">wavy underline</option>
       </select></label>
 
       <label class="label-and-value">
@@ -1717,8 +1719,8 @@ function main() {
     spaaSelect.e.parentElement.title = 'In Chrome, visit chrome:flags#lcd-text-aa to disable'
   }
 
-  vars.bind('text-rendering', (e, v) => {
-    setVendorPrefixedCSSProp('text-rendering', e.value = v)
+  vars.bind('text-decoration', (e, v) => {
+    setVendorPrefixedCSSProp('text-decoration', e.value = v)
   })
 
   vars.bind('text-transform', (e, v) => {
