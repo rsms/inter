@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zbar" format="1">
-  <advance width="1508"/>
+  <advance width="1532"/>
   <unicode hex="01B6"/>
   <outline>
-    <contour>
-      <point x="696" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="708" y="16" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1416" y="1776" type="move" name="top0315"/>
-    </contour>
     <component base="z"/>
     <component base="crossbar" xOffset="128" yOffset="-236"/>
+    <contour>
+      <point x="708" y="1776" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="720" y="16" type="move" name="bottom"/>
+    </contour>
+    <contour>
+      <point x="1428" y="1776" type="move" name="top0315"/>
+    </contour>
   </outline>
   <lib>
     <dict>

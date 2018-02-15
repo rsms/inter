@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Pi" format="1">
-  <advance width="2016"/>
+  <advance width="2040"/>
   <unicode hex="03A0"/>
   <outline>
     <contour>
-      <point x="1768" y="0" type="move" name="right"/>
+      <point x="1784" y="2048" type="line"/>
+      <point x="256" y="2048" type="line"/>
+      <point x="256" y="0" type="line"/>
+      <point x="504" y="0" type="line"/>
+      <point x="504" y="1828" type="line"/>
+      <point x="1536" y="1828" type="line"/>
+      <point x="1536" y="0" type="line"/>
+      <point x="1784" y="0" type="line"/>
     </contour>
     <contour>
-      <point x="1772" y="2048" type="line"/>
-      <point x="244" y="2048" type="line"/>
-      <point x="244" y="0" type="line"/>
-      <point x="492" y="0" type="line"/>
-      <point x="492" y="1828" type="line"/>
-      <point x="1524" y="1828" type="line"/>
-      <point x="1524" y="0" type="line"/>
-      <point x="1772" y="0" type="line"/>
+      <point x="1780" y="0" type="move" name="right"/>
     </contour>
   </outline>
   <lib>

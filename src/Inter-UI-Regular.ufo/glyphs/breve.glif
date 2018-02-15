@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="breve" format="1">
-  <advance width="1248"/>
+  <advance width="1272"/>
   <unicode hex="02D8"/>
   <outline>
     <contour>
-      <point x="624" y="1776" type="move" name="_top"/>
+      <point x="832" y="2056" type="line"/>
+      <point x="832" y="1952"/>
+      <point x="776" y="1860"/>
+      <point x="636" y="1860" type="curve" smooth="yes"/>
+      <point x="496" y="1860"/>
+      <point x="444" y="1952"/>
+      <point x="444" y="2056" type="curve"/>
+      <point x="224" y="2056" type="line"/>
+      <point x="224" y="1840"/>
+      <point x="384" y="1688"/>
+      <point x="636" y="1688" type="curve" smooth="yes"/>
+      <point x="892" y="1688"/>
+      <point x="1052" y="1840"/>
+      <point x="1052" y="2056" type="curve"/>
     </contour>
     <contour>
-      <point x="624" y="2220" type="move" name="mkmktop_acc"/>
+      <point x="636" y="1776" type="move" name="_top"/>
     </contour>
     <contour>
-      <point x="820" y="2056" type="line"/>
-      <point x="820" y="1952"/>
-      <point x="764" y="1860"/>
-      <point x="624" y="1860" type="curve" smooth="yes"/>
-      <point x="484" y="1860"/>
-      <point x="432" y="1952"/>
-      <point x="432" y="2056" type="curve"/>
-      <point x="212" y="2056" type="line"/>
-      <point x="212" y="1840"/>
-      <point x="372" y="1688"/>
-      <point x="624" y="1688" type="curve" smooth="yes"/>
-      <point x="880" y="1688"/>
-      <point x="1040" y="1840"/>
-      <point x="1040" y="2056" type="curve"/>
+      <point x="636" y="2220" type="move" name="mkmktop_acc"/>
     </contour>
   </outline>
   <lib>

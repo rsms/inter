@@ -10,7 +10,7 @@ if __name__ == "__main__":
   print "Resizing glyph margins for %r" % font
 
   # how much to add or remove from each glyph's margin
-  A = 16
+  A = 12
 
   if font is not None:
     # first, check for errors and collect glyphs we should adjust

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ibar" format="1">
-  <advance width="880"/>
+  <advance width="904"/>
   <unicode hex="0268"/>
   <outline>
-    <contour>
-      <point x="308" y="2200" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="780" y="2200" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="308" y="0" type="move" name="bottom"/>
-    </contour>
     <component base="i" xOffset="116"/>
     <component base="crossbar" xOffset="-188" yOffset="-164"/>
+    <contour>
+      <point x="320" y="2200" type="move" name="top"/>
+    </contour>
+    <contour>
+      <point x="792" y="2200" type="move" name="top0315"/>
+    </contour>
+    <contour>
+      <point x="320" y="0" type="move" name="bottom"/>
+    </contour>
   </outline>
   <lib>
     <dict>
