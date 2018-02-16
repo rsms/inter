@@ -875,14 +875,21 @@ feature calt {
   sub @CASE_DELIM_L' @CASE_DELIM_L [ @CASE_R @UC ] by @CASE_DELIM_R;
 
   # ->, <-
-  @ARROW_DASH = [ hyphen endash emdash ];
-  @ARROW_DASH_CASE = [ hyphen.case endash.case emdash.case ];
-  sub @ARROW_DASH' greater' by arrowrightlong;
-  sub @ARROW_DASH_CASE' greater' by arrowrightlong.case;
-  ignore sub less' @ARROW_DASH' @NUM;
-  ignore sub less' @ARROW_DASH_CASE' @NUM;
-  sub less' @ARROW_DASH' by arrowleftlong;
-  sub less' @ARROW_DASH_CASE' by arrowleftlong.case;
+  @ARROW_DASH_LONG = [ endash emdash ];
+  @ARROW_DASH_LONG_CASE = [ endash.case emdash.case ];
+
+  sub hyphen' greater' by arrowright;
+  sub hyphen.case' greater' by arrowright.case;
+  sub @ARROW_DASH_LONG' greater' by arrowrightlong;
+  sub @ARROW_DASH_LONG_CASE' greater' by arrowrightlong.case;
+  # ignore <-NUM e.g. "<-3"
+  ignore sub less' [ hyphen hyphen.case ]' @NUM;
+  ignore sub less' @ARROW_DASH_LONG' @NUM;
+  ignore sub less' @ARROW_DASH_LONG_CASE' @NUM;
+  sub less' hyphen' by arrowleft;
+  sub less' hyphen.case' by arrowleft.case;
+  sub less' @ARROW_DASH_LONG' by arrowleftlong;
+  sub less' @ARROW_DASH_LONG_CASE' by arrowleftlong.case;
 } calt;
 
 # Stylistic set 1: open digits
