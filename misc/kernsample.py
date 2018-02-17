@@ -6,6 +6,9 @@ from collections import OrderedDict
 from argparse import ArgumentParser
 from robofab.objects.objectsRF import OpenFont
 
+RIGHT = 1
+LEFT = 2
+
 
 def mapGroups(groups):  # => { glyphname => set(groupname, ...), ... }
   m = OrderedDict()
@@ -13,20 +16,6 @@ def mapGroups(groups):  # => { glyphname => set(groupname, ...), ... }
     for glyphname in glyphnames:
       m.setdefault(glyphname, set()).add(groupname)
   return m
-
-
-def _addRightnames(groups, kerning, leftname, rightnames, includeAll=True):
-  if leftname in kerning:
-    for rightname in kerning[leftname]:
-      if rightname[0] == '@':
-        for rightname2 in groups[rightname]:
-          rightnames.add(rightname2)
-          if not includeAll:
-            # TODO: in this case, pick the one rightname that has the highest
-            # ranking in glyphorder
-            break
-      else:
-        rightnames.add(rightname)
 
 
 def fmtGlyphname(glyphname, glyph=None):
@@ -38,28 +27,20 @@ def fmtGlyphname(glyphname, glyph=None):
     return '/' + glyphname + ' '
 
 
-def samplesForGlyphname(font, groups, groupmap, kerning, glyphname, args):
-  leftGlyph = font[glyphname]  # verify it's present
-  rightnames = set()
-
-  _addRightnames(groups, kerning, glyphname, rightnames, includeAll=args.includeAllInGroup)
-
-  if glyphname in groupmap:
-    for groupname in groupmap[glyphname]:
-      _addRightnames(groups, kerning, groupname, rightnames, includeAll=args.includeAllInGroup)
-
-  rightnames = sorted(rightnames)
-
+def printPairs(font, baseSide, baseSideGlyph, otherSideNames, args):
   out = []
   if args.formatAsUnicode:
-    left = '\\u%04X' % leftGlyph.unicode
-    for rightname in rightnames:
-      if rightname in font:
-        rightGlyph = font[rightname]
-        if rightGlyph.unicode is not None:
-          out.append('%s\\u%04X' % (left, rightGlyph.unicode))
+    base = '\\u%04X' % baseSideGlyph.unicode
+    for otherName in otherSideNames:
+      if otherName in font:
+        otherGlyph = font[otherName]
+        if otherGlyph.unicode is not None:
+          if baseSide == LEFT:
+            out.append('%s\\u%04X' % (base, otherGlyph.unicode))
+          else:
+            out.append('\\u%04X%s' % (otherGlyph.unicode, base))
   else:
-    left = fmtGlyphname(glyphname, leftGlyph)
+    base = fmtGlyphname(baseSideGlyph.name, baseSideGlyph)
     prefix_uc = ''
     prefix_lc = ''
     suffix_uc = ''
@@ -89,21 +70,87 @@ def samplesForGlyphname(font, groups, groupmap, kerning, glyphname, args):
           suffix_uc = args.suffix.upper()
           suffix_lc = args.suffix
 
-    for rightname in rightnames:
-      if rightname in font:
-        rightGlyph = None
-        if len(rightname) == 1:
-          rightGlyph = font[rightname]
+    for otherName in otherSideNames:
+      if otherName in font:
+        otherGlyph = None
+        if len(otherName) == 1:
+          otherGlyph = font[otherName]
         prefix = prefix_lc
         suffix = suffix_lc
-        if unicode(rightname[0]).isupper():
+        if unicode(otherName[0]).isupper():
           prefix = prefix_uc
           suffix = suffix_uc
-        out.append('%s%s%s%s' % (prefix, left, fmtGlyphname(rightname, rightGlyph), suffix))
+        if baseSide == LEFT:
+          out.append('%s%s%s%s' % (
+            prefix, base, fmtGlyphname(otherName, otherGlyph), suffix
+          ))
+        else:
+          out.append('%s%s%s%s' % (
+            prefix, fmtGlyphname(otherName, otherGlyph), base, suffix
+          ))
 
   print(' '.join(out))
 
 
+def samplesForGlyphnameR(font, groups, groupmap, kerning, glyphname, args):
+  rightGlyph = font[glyphname]
+  includeAll = args.includeAllInGroup
+  leftnames = set()
+
+  _addLeftnames(groups, kerning, glyphname, leftnames, includeAll)
+
+  if glyphname in groupmap:
+    for groupname in groupmap[glyphname]:
+      if groupname.find('_RIGHT_') != -1:
+        _addLeftnames(groups, kerning, groupname, leftnames, includeAll)
+
+  leftnames = sorted(leftnames)
+  printPairs(font, RIGHT, rightGlyph, leftnames, args)
+
+
+def _addLeftnames(groups, kerning, glyphname, leftnames, includeAll=True):
+  # kerning : { leftName => {rightName => kernVal} }
+  for leftname, kern in kerning.iteritems():
+    if glyphname in kern:
+      if leftname[0] == '@':
+        for leftname2 in groups[leftname]:
+          leftnames.add(leftname2)
+          if not includeAll:
+            # TODO: in this case, pick the one leftname that has the highest
+            # ranking in glyphorder
+            break
+      else:
+        leftnames.add(leftname)
+
+
+def samplesForGlyphnameL(font, groups, groupmap, kerning, glyphname, args):
+  leftGlyph = font[glyphname]
+  includeAll = args.includeAllInGroup
+  rightnames = set()
+
+  _addRightnames(groups, kerning, glyphname, rightnames, includeAll)
+
+  if glyphname in groupmap:
+    for groupname in groupmap[glyphname]:
+      if groupname.find('_LEFT_') != -1 or groupname.find('_RIGHT_') == -1:
+        _addRightnames(groups, kerning, groupname, rightnames, includeAll)
+
+  rightnames = sorted(rightnames)
+  printPairs(font, LEFT, leftGlyph, rightnames, args)
+
+
+def _addRightnames(groups, kerning, leftname, rightnames, includeAll=True):
+  if leftname in kerning:
+    for rightname in kerning[leftname]:
+      if rightname[0] == '@':
+        for rightname2 in groups[rightname]:
+          rightnames.add(rightname2)
+          if not includeAll:
+            # TODO: in this case, pick the one rightname that has the highest
+            # ranking in glyphorder
+            break
+      else:
+        rightnames.add(rightname)
 
 
 def main():
@@ -134,6 +181,17 @@ def main():
     help='Include all glyphs for groups rather than just the first glyph listed.')
 
   argparser.add_argument(
+    '-left', dest='asLeft',
+    action='store_const', const=True, default=False,
+    help='Only include pairs where the glyphnames are on the left side.')
+
+  argparser.add_argument(
+    '-right', dest='asRight',
+    action='store_const', const=True, default=False,
+    help='Only include pairs where the glyphnames are on the right side.'+
+    ' When neither -left or -right is provided, include all pairs.')
+
+  argparser.add_argument(
     'fontPath', metavar='<ufofile>', type=str, help='UFO font source')
 
   argparser.add_argument(
@@ -150,7 +208,11 @@ def main():
 
   groups = plistlib.readPlist(groupsFilename)   # { groupName => [glyphName] }
   kerning = plistlib.readPlist(kerningFilename) # { leftName => {rightName => kernVal} }
-  groupmap = mapGroups(groups)
+  groupmap = mapGroups(groups) # { glyphname => set(groupname, ...), ... }
+
+  if not args.asLeft and not args.asRight:
+    args.asLeft = True
+    args.asRight = True
 
   # expand any unicode codepoints
   glyphnames = []
@@ -164,7 +226,10 @@ def main():
       glyphnames.append(glyphname)
 
   for glyphname in glyphnames:
-    samplesForGlyphname(font, groups, groupmap, kerning, glyphname, args)
+    if args.asLeft:
+      samplesForGlyphnameL(font, groups, groupmap, kerning, glyphname, args)
+    if args.asRight:
+      samplesForGlyphnameR(font, groups, groupmap, kerning, glyphname, args)
 
 
 main()
