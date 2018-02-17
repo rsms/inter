@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>@KERN_LEFT_A</key>
@@ -2350,6 +2350,8 @@
 		<integer>69</integer>
 		<key>@KERN_RIGHT_guillemotleft</key>
 		<integer>-111</integer>
+		<key>@KERN_RIGHT_idieresis</key>
+		<integer>288</integer>
 		<key>@KERN_RIGHT_quotedblbase</key>
 		<integer>-248</integer>
 		<key>@KERN_RIGHT_quotedblright</key>
@@ -2360,6 +2362,8 @@
 		<integer>-42</integer>
 		<key>four</key>
 		<integer>-164</integer>
+		<key>hturnhook2</key>
+		<integer>112</integer>
 		<key>periodcentered</key>
 		<integer>-28</integer>
 		<key>slash</key>
@@ -2663,14 +2667,20 @@
 		<integer>256</integer>
 		<key>@KERN_RIGHT_dotlessi</key>
 		<integer>256</integer>
+		<key>@KERN_RIGHT_f</key>
+		<integer>112</integer>
 		<key>@KERN_RIGHT_idieresis</key>
 		<integer>432</integer>
+		<key>@KERN_RIGHT_t</key>
+		<integer>144</integer>
 		<key>V</key>
 		<integer>240</integer>
 		<key>idieresisacute</key>
 		<integer>352</integer>
 		<key>jcrosstail</key>
 		<integer>-112</integer>
+		<key>seven</key>
+		<integer>256</integer>
 	</dict>
 	<key>@KERN_LEFT_iotadieresisgreek</key>
 	<dict>
@@ -4544,11 +4554,6 @@
 		<key>Tbar</key>
 		<integer>-83</integer>
 	</dict>
-	<key>f</key>
-	<dict>
-		<key>hturnhook2</key>
-		<integer>112</integer>
-	</dict>
 	<key>five</key>
 	<dict>
 		<key>@KERN_RIGHT_comma</key>
@@ -4738,6 +4743,15 @@
 		<integer>-42</integer>
 		<key>underscore</key>
 		<integer>-40</integer>
+	</dict>
+	<key>idieresis</key>
+	<dict>
+		<key>backslash</key>
+		<integer>256</integer>
+		<key>one</key>
+		<integer>128</integer>
+		<key>seven.tnum</key>
+		<integer>256</integer>
 	</dict>
 	<key>infinity</key>
 	<dict>
@@ -5242,6 +5256,8 @@
 		<integer>-29</integer>
 		<key>four</key>
 		<integer>-164</integer>
+		<key>idieresis</key>
+		<integer>256</integer>
 		<key>less</key>
 		<integer>-247</integer>
 		<key>nine</key>
@@ -5268,6 +5284,11 @@
 		<integer>-42</integer>
 		<key>zeta</key>
 		<integer>-137</integer>
+	</dict>
+	<key>seven.tnum</key>
+	<dict>
+		<key>idieresis</key>
+		<integer>256</integer>
 	</dict>
 	<key>sigma</key>
 	<dict>
