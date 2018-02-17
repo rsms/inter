@@ -7,6 +7,7 @@ from math import ceil, floor
 
 if __name__ == "__main__":
   font = CurrentFont()
+  ignoreGlyphsWithoutContours = True  # like spaces
   print "Resizing glyph margins for %r" % font
 
   # how much to add or remove from each glyph's margin
@@ -24,9 +25,10 @@ if __name__ == "__main__":
         ignored.append((g.name, 'zero-width'))
         continue
 
-      # if g.box is None:
-      #   print '"%s": ["ignore", "empty"],' % (g.name)
-      #   continue
+      if ignoreGlyphsWithoutContours and g.box is None:
+        # print '"%s": ["ignore", "empty"],' % (g.name)
+        ignored.append((g.name, 'empty'))
+        continue
 
       # skip glyphs
       #if g.name in ('c', 'e', 'o', 'r', 'j'):
