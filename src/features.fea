@@ -877,7 +877,6 @@ feature calt {
   # ->, <-
   @ARROW_DASH_LONG = [ endash emdash ];
   @ARROW_DASH_LONG_CASE = [ endash.case emdash.case ];
-
   sub hyphen' greater' by arrowright;
   sub hyphen.case' greater' by arrowright.case;
   sub @ARROW_DASH_LONG' greater' by arrowrightlong;

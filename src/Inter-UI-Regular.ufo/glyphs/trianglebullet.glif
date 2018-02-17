@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="trianglebullet" format="1">
-  <advance width="1528"/>
+  <advance width="1416"/>
   <unicode hex="2023"/>
   <outline>
     <contour>
-      <point x="232" y="1608" type="line"/>
-      <point x="232" y="188" type="line"/>
-      <point x="1440" y="896" type="line"/>
+      <point x="368" y="364" type="line"/>
+      <point x="1108" y="832" type="line"/>
+      <point x="368" y="1296" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <integer>0</integer>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>1116</integer>
+          <key>y</key>
+          <integer>832</integer>
+        </dict>
+      </array>
+      <key>com.typemytype.robofont.layerData</key>
+      <dict>
+        <key>reference</key>
+        <dict>
+          <key>anchors</key>
+          <array>
+          </array>
+          <key>components</key>
+          <array>
+            <dict>
+              <key>baseGlyph</key>
+              <string>bullet</string>
+              <key>transformation</key>
+              <array>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+              </array>
+            </dict>
+          </array>
+          <key>contours</key>
+          <array>
+          </array>
+          <key>lib</key>
+          <dict>
+          </dict>
+          <key>name</key>
+          <string>trianglebullet</string>
+          <key>unicodes</key>
+          <array>
+          </array>
+          <key>width</key>
+          <integer>1416</integer>
+        </dict>
+      </dict>
       <key>com.typemytype.robofont.mark</key>
       <array>
         <real>0.94</real>

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="idieresis" format="1">
-  <advance width="1296"/>
+  <advance width="696"/>
   <unicode hex="00EF"/>
   <outline>
-    <component base="dotlessi" xOffset="308"/>
-    <component base="dieresis" xOffset="-180"/>
+    <component base="dotlessi" xOffset="8"/>
+    <component base="dieresis" xOffset="-480"/>
     <contour>
-      <point x="732" y="900" type="move" name="rhotichook"/>
+      <point x="536" y="900" type="move" name="rhotichook"/>
     </contour>
     <contour>
-      <point x="692" y="1776" type="move" name="top"/>
+      <point x="348" y="1776" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="1052" y="1776" type="move" name="top0315"/>
+      <point x="704" y="1776" type="move" name="top0315"/>
     </contour>
     <contour>
-      <point x="692" y="2668" type="move" name="mkmktop_acc"/>
+      <point x="496" y="2668" type="move" name="mkmktop_acc"/>
     </contour>
     <contour>
-      <point x="648" y="0" type="move" name="bottom"/>
+      <point x="348" y="0" type="move" name="bottom"/>
     </contour>
   </outline>
   <lib>
@@ -38,6 +38,20 @@
           <integer>448</integer>
           <key>y</key>
           <integer>1440</integer>
+        </dict>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>348</integer>
+          <key>y</key>
+          <integer>1560</integer>
         </dict>
       </array>
       <key>interface.gridadjust.original</key>
