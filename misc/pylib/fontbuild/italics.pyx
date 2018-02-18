@@ -26,7 +26,7 @@ from fontbuild.alignpoints import alignCorners
 from fontbuild.curveFitPen import fitGlyph, segmentGlyph
 
 
-def italicizeGlyph(f, g, angle=10, stemWidth=185, meanYCenter=-825, narrowAmount=1):
+def italicizeGlyph(f, g, angle=10, stemWidth=185, meanYCenter=-825, scaleX=1):
     unic = g.unicode #save unicode
 
     glyph = f[g.name]
@@ -39,7 +39,7 @@ def italicizeGlyph(f, g, angle=10, stemWidth=185, meanYCenter=-825, narrowAmount
     #   and -825 for a 2816 unit em square. (UPM*0.29296875)
     m = Transform(1, 0, slope, 1, 0, 0)
     xoffset, junk = m.transformPoint((0, meanYCenter))
-    m = Transform(narrowAmount, 0, slope, 1, xoffset, 0)
+    m = Transform(scaleX, 0, slope, 1, xoffset, 0)
 
     if len(glyph) > 0:
         g2 = italicize(f[g.name], angle, xoffset=xoffset, stemWidth=stemWidth)

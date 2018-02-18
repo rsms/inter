@@ -16,6 +16,7 @@
 import ConfigParser
 import os
 import sys
+import math
 
 from booleanOperations import BooleanOperationManager
 
@@ -86,7 +87,7 @@ class FontProject:
         return os.path.join(path, "%s-%s.%s" % (family, style, ext))
 
     def generateFont(self, mix, names, italic=False, swapSuffixes=None, stemWidth=185,
-                     italicMeanYCenter=-825, italicNarrowAmount=1, panose=[]):
+                     italicMeanYCenter=-825, scaleX=1, panose=[]):
 
         n = names.split("/")
         log("---------------------\n%s, %s\n----------------------" %(n[0],n[1]))
@@ -109,16 +110,15 @@ class FontProject:
                 i += 1
                 if i % 10 == 0: print g.name
 
-                if g.name in self.lessItalic:
-                    italicizeGlyph(f, g, 9, stemWidth=stemWidth,
-                                   meanYCenter=italicMeanYCenter,
-                                   narrowAmount=italicNarrowAmount)
-                elif g.name not in self.noItalic:
-                    italicizeGlyph(f, g, 10, stemWidth=stemWidth,
-                                   meanYCenter=italicMeanYCenter,
-                                   narrowAmount=italicNarrowAmount)
-                if g.width != 0:
-                    g.width += 10
+                if g.name not in self.noItalic:
+                    if g.name in self.lessItalic:
+                        italicizeGlyph(f, g, 10, stemWidth=stemWidth,
+                                       meanYCenter=italicMeanYCenter,
+                                       scaleX=scaleX)
+                    else:
+                        italicizeGlyph(f, g, 12, stemWidth=stemWidth,
+                                       meanYCenter=italicMeanYCenter,
+                                       scaleX=scaleX)
 
             # set the oblique flag in fsSelection
             f.info.openTypeOS2Selection.append(9)
@@ -144,6 +144,23 @@ class FontProject:
         generateGlyphs(f, self.diacriticList, self.adobeGlyphList)
         # log(">> Reading features")
         # readFeatureFile(f, f.features.text)
+
+        # adjust width of italic glyphs
+        if italic == True:
+            widthAdjustment = -8
+            leftAdjustment = math.floor(widthAdjustment / 2)
+            rightAdjustment = math.ceil(widthAdjustment / 2)
+            for g in f:
+                if g.name not in self.noItalic:
+                    if g.width != 0:
+                        if g.box is None:
+                            g.width += widthAdjustment
+                        else:
+                            newLeftMargin = int(g.leftMargin + leftAdjustment)
+                            newRightMargin = int(g.rightMargin + rightAdjustment)
+                            g.leftMargin  = newLeftMargin
+                            g.rightMargin = newRightMargin
+
         log(">> Decomposing")
         # for g in f:
         #     if len(g.components) > 0:
@@ -151,7 +168,7 @@ class FontProject:
         for gname in self.decompose:
             if f.has_key(gname):
                 decomposeGlyph(f, f[gname])
-        
+
         copyrightHolderName = ''
         if self.config.has_option('main', 'copyrightHolderName'):
             copyrightHolderName = self.config.get('main', 'copyrightHolderName')
