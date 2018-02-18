@@ -86,8 +86,10 @@ build/.zip.zip: all_otf
 		"build/.zip/Inter UI (OTF)"
 	@cp -a build/dist-unhinted/*.woff build/dist-unhinted/*.woff2 \
 	  "build/.zip/Inter UI (web)/"
+	@cp -a docs/inter-ui.css "build/.zip/Inter UI (web)/"
 	@cp -a build/dist-hinted/*.woff build/dist-hinted/*.woff2 \
 		"build/.zip/Inter UI (web hinted)/"
+	@cp -a docs/inter-ui.css "build/.zip/Inter UI (web hinted)/"
 	@cp -a build/dist-unhinted/*.ttf   "build/.zip/Inter UI (TTF)/"
 	@cp -a build/dist-hinted/*.ttf     "build/.zip/Inter UI (TTF hinted)/"
 	@cp -a build/dist-unhinted/*.otf   "build/.zip/Inter UI (OTF)/"
@@ -113,7 +115,7 @@ pre_dist:
   fi
 
 dist: zip_dist
-	$(MAKE) glyphinfo copy_docs_fonts -j8
+	$(MAKE) geninfo copy_docs_fonts -j8
 	misc/versionize-css.py
 	@echo "——————————————————————————————————————————————————————————————————"
 	@echo ""
@@ -157,10 +159,13 @@ install_otf: all_otf
 install: install_otf
 
 
-glyphinfo: docs/lab/glyphinfo.json docs/glyphs/metrics.json
+geninfo: docs/info.json docs/lab/glyphinfo.json docs/glyphs/metrics.json
 
 src/glyphorder.txt: src/Inter-UI-Regular.ufo/lib.plist src/Inter-UI-Black.ufo/lib.plist src/diacritics.txt misc/gen-glyphorder.py
 	misc/gen-glyphorder.py src/Inter-UI-*.ufo > src/glyphorder.txt
+
+docs/info.json: misc/fontinfo.py docs/font-files/Inter-UI-*.otf
+	misc/fontinfo.py -pretty docs/font-files/Inter-UI-Regular.otf > docs/info.json
 
 docs/lab/glyphinfo.json: _local/UnicodeData.txt src/glyphorder.txt src/fontbuild.cfg misc/gen-glyphinfo.py
 	misc/gen-glyphinfo.py -ucd _local/UnicodeData.txt \
@@ -179,4 +184,4 @@ _local/UnicodeData.txt:
 clean:
 	rm -rf build/tmp/* build/dist-hinted build/dist-unhinted
 
-.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist glyphinfo copy_docs_fonts all_hinted test
+.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist geninfo copy_docs_fonts all_hinted test
