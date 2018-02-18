@@ -148,18 +148,19 @@ class FontProject:
         # adjust width of italic glyphs
         if italic == True:
             widthAdjustment = -8
-            leftAdjustment = math.floor(widthAdjustment / 2)
-            rightAdjustment = math.ceil(widthAdjustment / 2)
-            for g in f:
-                if g.name not in self.noItalic:
-                    if g.width != 0:
-                        if g.box is None:
-                            g.width += widthAdjustment
-                        else:
-                            newLeftMargin = int(g.leftMargin + leftAdjustment)
-                            newRightMargin = int(g.rightMargin + rightAdjustment)
-                            g.leftMargin  = newLeftMargin
-                            g.rightMargin = newRightMargin
+            if widthAdjustment != 0:
+                leftAdjustment = math.floor(widthAdjustment / 2)
+                rightAdjustment = math.ceil(widthAdjustment / 2)
+                for g in f:
+                    if g.name not in self.noItalic:
+                        if g.width != 0:
+                            if g.box is None:
+                                g.width += widthAdjustment
+                            else:
+                                newLeftMargin = int(g.leftMargin + leftAdjustment)
+                                newRightMargin = int(g.rightMargin + rightAdjustment)
+                                g.leftMargin  = newLeftMargin
+                                g.rightMargin = newRightMargin
 
         log(">> Decomposing")
         # for g in f:
