@@ -86,10 +86,10 @@ build/.zip.zip: all_otf
 		"build/.zip/Inter UI (OTF)"
 	@cp -a build/dist-unhinted/*.woff build/dist-unhinted/*.woff2 \
 	  "build/.zip/Inter UI (web)/"
-	@cp -a docs/inter-ui.css "build/.zip/Inter UI (web)/"
+	@cp -a misc/doc/inter-ui.css "build/.zip/Inter UI (web)/"
 	@cp -a build/dist-hinted/*.woff build/dist-hinted/*.woff2 \
 		"build/.zip/Inter UI (web hinted)/"
-	@cp -a docs/inter-ui.css "build/.zip/Inter UI (web hinted)/"
+	@cp -a misc/doc/inter-ui.css "build/.zip/Inter UI (web hinted)/"
 	@cp -a build/dist-unhinted/*.ttf   "build/.zip/Inter UI (TTF)/"
 	@cp -a build/dist-hinted/*.ttf     "build/.zip/Inter UI (TTF hinted)/"
 	@cp -a build/dist-unhinted/*.otf   "build/.zip/Inter UI (OTF)/"
