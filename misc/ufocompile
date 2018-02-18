@@ -163,7 +163,9 @@ def main():
   #
   # scaleX controls scale on the x axis, used for italics. 1.0 means no scaling.
   # italicMeanYCenter controls how far on the x axis the glyph should slide
-  #   to compensate for the slant.
+  #   to compensate for the slant. -600 is sort of a magic number arrived to by
+  #   trial and error.
+  #
 
   if ALL or 'regular' in styles:
     handledStyles.append('regular')
@@ -174,7 +176,7 @@ def main():
     handledStyles.append('italic')
     proj.generateFont(
       rg.font, "%s/Italic/Italic/Rg" % FAMILYNAME,
-      italic=True, stemWidth=232, italicMeanYCenter=-825,
+      italic=True, stemWidth=232, italicMeanYCenter=-600,
       panose=mkpanose(5))
 
 
@@ -190,7 +192,7 @@ def main():
     proj.generateFont(
       Mix2([rg, bl], 0.32, glyphSpecializations.get('medium', {})),
       "%s/Medium Italic/Italic/Me" % FAMILYNAME,
-      italic=True, stemWidth=300, italicMeanYCenter=-825,
+      italic=True, stemWidth=300, italicMeanYCenter=-600,
       panose=mkpanose(6))
 
 
@@ -206,7 +208,7 @@ def main():
     proj.generateFont(
       Mix2([rg, bl], 0.68, glyphSpecializations.get('bold', {})),
       "%s/Bold Italic/Bold Italic/Rg" % FAMILYNAME,
-      italic=True, stemWidth=350, italicMeanYCenter=-825,
+      italic=True, stemWidth=350, italicMeanYCenter=-600,
       panose=mkpanose(8))
 
 
@@ -219,7 +221,7 @@ def main():
     handledStyles.append('blackitalic')
     proj.generateFont(
       bl.font, "%s/Black Italic/Italic/Bl" % FAMILYNAME,
-      italic=True, stemWidth=400, italicMeanYCenter=-825,
+      italic=True, stemWidth=400, italicMeanYCenter=-600,
       panose=mkpanose(9))
 
   # generate TTFs
