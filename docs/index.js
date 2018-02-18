@@ -1,5 +1,30 @@
 var isMac = false
 
+// fetchjson(url string, cb (err Error, d Object)->nil)
+//
+var fetchjson = (
+  typeof window.fetch == 'function' ? (
+    function _fetchjson(url, cb) {
+      return window.fetch(url)
+        .then(function(r) { return r.json() })
+        .then(function(data) { cb(null, data) })
+        .catch(cb)
+    }
+  ) :
+  function _fetchjson(url, cb) {
+    var r = new XMLHttpRequest()
+    r.addEventListener("load", function(){
+      try {
+        cb(null, JSON.parse(r.responseText))
+      } catch (err) {
+        cb(err)
+      }
+    })
+    r.open("GET", url)
+    r.send()
+  }
+)
+
 ;(function(){
 "use strict";
 

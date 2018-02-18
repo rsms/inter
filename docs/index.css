@@ -7,20 +7,34 @@ body {
 
   font-size: 15px;
   line-height:1.4;
-  letter-spacing: 0.009em;
+  /*letter-spacing: 0.009em;*/
 
   font-weight: 400;
   padding-bottom: 30px;
 
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
   font-kerning: normal;
-  -moz-font-feature-settings: "kern" 1;
-  -webkit-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
+  -moz-font-feature-settings:"kern" 1, "liga" 1; 
+  -ms-font-feature-settings:"kern" 1, "liga" 1; 
+  -o-font-feature-settings:"kern" 1, "liga" 1; 
+  -webkit-font-feature-settings:"kern" 1, "liga" 1; 
+  font-feature-settings:"kern" 1, "liga" 1;
+}
+
+:target:before {
+  content:"";
+  display: block;
+  height: 20px; /* fixed header height*/
+  margin: -20px 0 0; /* negative fixed header height */
 }
 
 a {
-  color: inherit;
-  text-decoration: underline;
+  text-decoration: underline rgba(0, 0, 0, 0.3);
+  color: black;
   word-break: break-word;
   word-wrap: break-word;
 }
@@ -29,14 +43,17 @@ a.fat {
   color: #333;
 }
 a:hover {
-  color: rgb(48, 112, 232);
+  color: rgba(3, 102, 214, 1);
+  text-decoration: underline rgba(3, 102, 214, 0.6);
 }
 a.plain, a.fat {
-  /* !important needed for qualification over @media further down */
-  background: none !important;
-  text-shadow: none !important;
+  background: none;
+  text-shadow: none;
   text-decoration: none;
   cursor: pointer;
+}
+a[href^="#"]:hover {
+  text-decoration-style: dashed;
 }
 
 p {
@@ -83,13 +100,15 @@ num { /* number */
 
 h1, h2, h3 {
   font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 h1 {
   color: #222;
   font-size: 55px;
-  letter-spacing: -0.05em;
-  line-height: 50px;
-  text-indent: -2.5px;
+  letter-spacing: -0.03em;
+  line-height: 1.1em;
+  text-indent: -2px;
   margin-bottom: 30px;
   margin-top: 10px;
   font-weight: 700;
@@ -104,13 +123,14 @@ h2 {
 h2.back {
   color:rgba(0,0,0,0.2);
   font-size: inherit;
+  letter-spacing: inherit;
   font-weight:400;
   margin:0;
   margin-top:-1.9em;
 }
 h2.back a:hover {
   color: black;
-  margin-left:-1.6em;
+  margin-left:-1.3em;
 }
 h2.back a:hover::before {
   content: "<- ";
@@ -121,23 +141,20 @@ h3 {
 
 h1 > a, h2 > a, h3 > a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
   text-shadow: none;
   background: none !important;
 }
 
 .row {
   padding: 50px;
-  /*background: salmon;*/
   display: flex;
   justify-content: center;
-  /*background: white;*/
 }
 .row > * {
   width:100%;
   max-width: 888px;
   flex: 1 0 100%;
-  /*background: white;*/
 }
 
 .row-divider {
@@ -147,8 +164,56 @@ h1 > a, h2 > a, h3 > a {
   border-bottom: 1px dashed rgba(0,0,0,0.09);
 }
 
-/* small screens (up to iPhone 6) */
-@media only screen and (max-device-width: 736px) {
+.row.menu {
+  padding: 0;
+  border-bottom:1px solid rgba(0,0,0,0.1);
+}
+  .row.menu ul {
+    width: auto;
+    max-width: 888px;
+    flex: 1 1 auto;
+    list-style: none;
+    padding: 0;
+    margin: 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+  }
+  .row.menu ul li {
+    margin-right: 30px;
+    margin-bottom: -1px;
+  }
+    .row.menu ul li > a {
+      color: inherit;
+      opacity: 0.6;
+      text-decoration:none;
+      display: inline-block;
+      padding: 15px 0 13px 0;
+      transition: 300ms opacity cubic-bezier(0.25, 0.47, 0.44, 0.93);
+      border-bottom: 3px solid transparent;
+    }
+    .row.menu ul li > a:hover {
+      color: black;
+      border-bottom-color: black;
+      opacity: 1;
+    }
+
+/* narrow windows */
+@media only screen and (max-width: 500px) {
+  .row.menu ul {
+    justify-content: space-between;
+  }
+    .row.menu ul li {
+      margin-right: 15px;
+    }
+    .row.menu ul li:last-child {
+      margin-right: 0;
+    }
+
+}
+
+/* small devices (<= iPhone 6+) */
+@media only screen and (max-device-width: 414px) {
   body {
     font-size: 14px;
     line-height: 20px;
@@ -157,6 +222,31 @@ h1 > a, h2 > a, h3 > a {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .row.menu ul {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* small devices (<= iPhone 5) */
+@media only screen and (max-device-width: 320px) {
+  .row.menu {
+    font-size:13px;
+  }
+    .row.menu ul {
+      margin-left: 0;
+      margin-right: 0;
+    }
+      .row.menu ul li {
+        flex: 1 0 auto;
+        text-align: center;
+        border-right: 1px solid rgba(0,0,0,0.1);
+        margin-left:0;
+        margin-right:0;
+      }
+      .row.menu ul li:last-child {
+        border-right: none;
+      }
 }
 
 .row.white {
@@ -167,8 +257,13 @@ h1 > a, h2 > a, h3 > a {
   background: #2b2b2b;
   color: #99999b;
 }
+.row.dark a {
+  text-decoration-color: rgba(255, 255, 255, 0.2);
+  color: #aaa;
+}
 .row.dark a:hover {
-  color: rgb(164, 188, 255);
+  color: rgba(160, 190, 255, 1);
+  text-decoration: underline rgba(164, 188, 255, 0.6);
 }
 .row.dark h2, .row.dark h2 > a {
   color: #ccc;
@@ -178,84 +273,6 @@ h1 > a, h2 > a, h3 > a {
 .row.color1 {
   background: #C0CDE2;
   color: #3B414A;
-}
-
-/*
-  Medium.com-style link underline for high-density displays.
-  Currently only enabled on Mac as the lines don't render correctly on
-  Windows (even in Chrome) for some reason.
-*/
-@media (-webkit-min-device-pixel-ratio: 1.5) {
-  a {
-    text-decoration: none;
-    background-image:
-      linear-gradient(to bottom,
-        rgba(0,0,0,.6) 50%,
-        rgba(0,0,0,0) 50%);
-    background-repeat: repeat-x;
-    background-size: 2px .1em;
-    background-position: 0 1.15em;
-    text-shadow:
-      /* creates "openings" for descenders in the underline */
-      -1px -1px 0 #f4f4f4,
-      1px -1px 0  #f4f4f4,
-      -1px 1px 0  #f4f4f4,
-      1px 1px 0   #f4f4f4;
-  }
-  body.mac_or_ios a {
-    /* line height calculated differently on mac c/t windows */
-    background-position: 0 1.045em;
-  }
-  a:hover {
-    background-image:
-      linear-gradient(to bottom,
-        rgba(48, 112, 232, 1) 50%,
-        rgba(48, 112, 232, 0) 50%);
-  }
-  .row.white a {
-    text-shadow:
-      -1px -1px 0 white,
-      1px -1px 0  white,
-      -1px 1px 0  white,
-      1px 1px 0   white;
-  }
-  .row.dark a {
-    background-image:
-      linear-gradient(to bottom,
-        rgba(255,255,255,.3) 50%,
-        rgba(255,255,255,0) 50%);
-    text-shadow:
-      -1px -1px 0 #2b2b2b,
-      1px -1px 0  #2b2b2b,
-      -1px 1px 0  #2b2b2b,
-      1px 1px 0   #2b2b2b;
-  }
-  .row.dark a:hover {
-    background-image:
-      linear-gradient(to bottom,
-        rgba(164, 188, 255, 1) 50%,
-        rgba(164, 188, 255, 0) 50%);
-  }
-}
-
-::selection {
-  background: rgb(48, 112, 232);
-  color: white;
-  text-shadow: none;
-}
-::-moz-selection {
-  background: rgb(48, 112, 232);
-  color: white;
-  text-shadow: none;
-}
-
-.row.dark ::selection {
-  background: rgb(218, 228, 255);
-  color: black;
-}
-.row.dark ::-moz-selection {
-  background: rgb(164, 188, 255);
-  color: black;
 }
 
 ul {
@@ -291,29 +308,23 @@ ul.faq > li {
   padding-left: 1.5em;
   text-indent: -1.5em;
 }
-ul.faq > li > a {
-  display: inline;
-}
+
 ul.faq > li:target {
   background: #fafa88;
+  margin-left: -1.5em;
 }
+ul.faq > li > a.anchor {
+  visibility: hidden;
+  height:0;
+  position:relative;
+}
+
 li.q {
   font-weight: 500;
   margin-top:1.5em;
 }
 ul > li.q:first-child, ul > li.q:not([id]) {
   margin-top:0;
-}
-li.q:before {
-  content: "Q  "; /* contains NO-BREAK SPACE */
-  opacity: 0.6;
-}
-li.q:after {
-  content: "";
-}
-li.a:before {
-  content: "A  "; /* contains NO-BREAK SPACE */
-  opacity: 0.6;
 }
 
 tablex {
