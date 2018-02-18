@@ -8,10 +8,10 @@ from math import ceil, floor
 if __name__ == "__main__":
   font = CurrentFont()
   ignoreGlyphsWithoutContours = True  # like spaces
-  print "Resizing glyph margins for %r" % font
+  print "# Resizing glyph margins for %r" % font
 
   # how much to add or remove from each glyph's margin
-  A = 12
+  A = -4
 
   if font is not None:
     # first, check for errors and collect glyphs we should adjust
@@ -35,7 +35,7 @@ if __name__ == "__main__":
       # continue
 
       if g.width % 4 != 0:
-        print '"%s": ["error", "misaligned"],' % (g.name)
+        print 'error: %s is misaligned; width = %g (not an even multiple of 4)' % (g.name, g.width)
         errors += 1
         continue
 
