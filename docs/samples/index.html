@@ -453,10 +453,7 @@ bindings.configure('font-size', 18, 'int', function(fontSize, prevval) {
   updateWidth()
 
   var letterSpacing = InterUIDynamicTracking(fontSize, 400)
-  // if (letterSpacing < 0.001 && letterSpacing > -0.001) {
-  //   letterSpacing = 0
-  // }
-  // letterSpacing = parseFloat(letterSpacing.toFixed(3)) // lower precision
+  letterSpacing = parseFloat(letterSpacing.toFixed(3)) // lower precision
 
   var lineHeight = InterUIDynamicLeading(fontSize, 400)
   s2.style.lineHeight = lineHeight + 'px'
