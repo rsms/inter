@@ -94,7 +94,7 @@ var timeNow = (
 
 
 // download-link
-fetchjson('info.json', function(err, data) {
+fetchjson('/inter/info.json', function(err, data) {
   if (err) { throw err }
   var ids = Object.keys(data)
   var regularId = ids[0]
