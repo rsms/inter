@@ -23,18 +23,19 @@
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="inter-ui.css?v=2.5" rel="stylesheet">
-    <link href="index.css?v=4" rel="stylesheet">
+    <link href="index.css?v=5" rel="stylesheet">
   </head>
   <body>
 
     <div class="row menu">
       <ul class="menu">
+        <li class="home"><a href="../">Inter UI</a></li>
         <li><a class="download-link"
           href="https://github.com/rsms/inter/releases/latest/"
         >Download</a></li>
+        <li><a href="samples/">Samples</a></li>
         <li><a href="lab/">Playground</a></li>
         <li><a href="https://github.com/rsms/inter/">Source</a></li>
-        <li><a href="https://github.com/rsms/inter/releases/">Changelog</a></li>
       </ul>
     </div>
 
@@ -53,35 +54,15 @@
       </p>
     </div></div>
 
-    <div class="row white" style="padding-bottom:0">
-      <div class="carousel">
-        <div class="header">
-          <h2><a id="sample" href="#samples">Samples</a></h2>
-          <div class="dots"></div>
-        </div>
-        <p id="samples" class="samples items">
-          <img src="res/sample/01.png" srcset="res/sample/01@2x.png 2x" width="888">
-          <img src="res/sample/02.png" srcset="res/sample/02@2x.png 2x" width="888">
-          <img src="res/sample/03.png" srcset="res/sample/03@2x.png 2x" width="888">
-          <img src="res/sample/04.png" srcset="res/sample/04@2x.png 2x" width="888">
-          <img src="res/sample/05.png" srcset="res/sample/05@2x.png 2x" width="888">
-          <img src="res/sample/06.png" srcset="res/sample/06@2x.png 2x" width="888">
-          <img src="res/sample/07.png" srcset="res/sample/07@2x.png 2x" width="888">
-          <img src="res/sample/08.png" srcset="res/sample/08@2x.png 2x" width="888">
-          <img src="res/sample/09.png" srcset="res/sample/09@2x.png 2x" width="888">
-          <img src="res/sample/10.png" srcset="res/sample/10@2x.png 2x" width="888">
-          <img src="res/sample/11.png" srcset="res/sample/11@2x.png 2x" width="888">
-          <img src="res/sample/12.png" srcset="res/sample/12@2x.png 2x" width="888">
-          <img src="res/sample/13.png" srcset="res/sample/13@2x.png 2x" width="888">
-          <img src="res/sample/14.png" srcset="res/sample/14@2x.png 2x" width="888">
-          <img src="res/sample/15.png" srcset="res/sample/15@2x.png 2x" width="888">
-        </p>
-        <p style="text-align:center">
-          <a href="https://www.figma.com/file/WmU5NWr52bnUcqv5os0V4sWi/" class="plain">Open these samples in Figma</a>
-          <br><br>
-        </p>
-      </div>
-    </div>
+    <div class="row white" style="padding-bottom:0"><div>
+      <p id="samples" class="samples items">
+        <a href="samples/" class="plain"><img src="samples/img/01.png" srcset="samples/img/01@2x.png 2x" width="888"></a>
+      </p>
+      <p style="text-align:center">
+        <a href="samples/" class="plain">More samples -></a>
+        <br><br>
+      </p>
+    </div></div>
 
     <div class="row dark"><div>
 
@@ -122,7 +103,8 @@
             <h><in>Disabled</in><to></to><out>Enabled</out></h>
             <r><in>12<em>:</em>34,  FE<em>—</em>X</in><to></to><out>12:34,  FE—X</out></r>
             <r><in>4<em>.</em>2</in><to></to><out>4.2</out></r>
-            <r><in>SFO -> STO</in><to></to><out>SFO -> STO</out></r>
+            <r><in>SFO <em>-></em> STO</in><to></to><out>SFO -> STO</out></r>
+            <r><in>IIA <em>—></em> OGG</in><to></to><out>IIA —> OGG</out></r>
             <r><in>M<em>@</em>N m@n</in><to></to><out>M@N m@n</out></r>
           </t></tablex>
         </box>
@@ -134,6 +116,8 @@
             <r><in><em>1</em>23456<em>7</em>890</in><to></to><out class="tnum">1234567890</out></r>
             <r><in>1131711<em>&nbsp;</em></in><to></to><out class="tnum">1131711<em>&nbsp;</em></out></r>
             <r><in>0040900<em>&nbsp;</em></in><to></to><out class="tnum">0040900<em>&nbsp;</em></out></r>
+            <r><in>11:31,711<em>&nbsp;</em></in><to></to><out class="tnum">11:31,711<em>&nbsp;</em></out></r>
+            <r><in>00:40.900<em>&nbsp;</em></in><to></to><out class="tnum">00:40.900<em>&nbsp;</em></out></r>
           </t></tablex>
         </box>
 
@@ -157,13 +141,17 @@
         </box>
 
         <box>
-          <h3>Stylistic set #1: Open digits (<q title='OpenType feature ID'>ss01</q>)</h3>
+          <h3>Stylistic set 1: Alternate digits (<q title='OpenType feature ID'>ss01</q>)</h3>
           <tablex><t>
             <h><in>Disabled</in><to></to><out>Enabled</out></h>
             <r>
-              <in>123<em>4</em>5<em>6</em>78<em>9</em>0</in>
+              <in><em>1</em>23<em>4</em>5<em>6</em>78<em>9</em>0</in>
               <to></to><out class="ss01">1234567890</out>
             </r>
+            <r><in><em>1</em></in><to></to><out class="ss01">1</out></r>
+            <r><in><em>4</em></in><to></to><out class="ss01">4</out></r>
+            <r><in><em>6</em></in><to></to><out class="ss01">6</out></r>
+            <r><in><em>9</em></in><to></to><out class="ss01">9</out></r>
           </t></tablex>
         </box>
 
@@ -176,7 +164,7 @@
               <to></to><out class="case">(Hello) [World] {9000}</out>
             </r>
             <r><in>SCHOOL <em>@</em> RUN</in><to></to><out class="case">SCHOOL @ RUN</out></r>
-            <r><in>3 <em>+</em> 9 <em>=</em> 12*</in><to></to><out class="case">3 + 9 = 12*</out></r>
+            <r><in>3 <em>+</em> 9 <em>=</em> 12 <em>*</em> 1</in><to></to><out class="case">3 + 9 = 12 * 1</out></r>
             <r><in><em>*</em> <em>+</em> <em>÷</em> <em>±</em> <em>×</em> <em>=</em> <em>≠</em> <em>•</em></in><to></to><out class="case">* + ÷ ± × = ≠ •</out></r>
             <r><in><em>→</em> <em>←</em> <em>⟶</em> <em>⟵</em> <em>−</em> <em>-</em> <em>–</em> <em>—</em> <em>:</em></in><to></to><out class="case">→ ← ⟶ ⟵ − - – — :</out></r>
           </t></tablex>
@@ -193,16 +181,7 @@
 
       <p>&nbsp;</p>
 
-      <h2><a href="glyphs/">Glyph repertoire</a></h2>
-      <p class="glyph-repertoire">
-        <span class="fade"></span>
-        <a class="plain" href="glyphs/">
-          <iframe src="glyphs/?iframe" scrolling="no" frameborder="0"></iframe>
-        </a>
-      </p>
-      <p class="glyph-repertoire-link">
-        <a class="plain" href="glyphs/">Explore all glyphs &rarr;</a>
-      </p>
+      <h2 class="banner"><a href="glyphs/">Browse all glyphs -></a></h2>
     </div></div>
 
     <div class="row-divider"></div>
@@ -347,7 +326,7 @@
       — <a href="https://twitter.com/rsms" class="plain">@rsms</a>
     </div></div>
 
-    <script src="index.js"></script>
+    <script src="index.js?v=2"></script>
     <script>
       (function(){
 

@@ -2,6 +2,8 @@
 set -e
 cd "$(dirname "$0")"
 
+pushd res >/dev/null
+
 for f in *.svg; do
   svgo --multipass -q "$f" &
 done
@@ -11,7 +13,11 @@ for f in *.png; do
   (pngcrush -q "$f" "$TMPNAME" && mv -f "$TMPNAME" "$f") &
 done
 
-pushd sample >/dev/null
+popd >/dev/null
+
+
+pushd samples/img >/dev/null
+
 for f in *.png; do
   TMPNAME=.$f.tmp
   if (echo "$f" | grep -q 'thumb'); then
@@ -20,6 +26,18 @@ for f in *.png; do
     (pngcrush -q "$f" "$TMPNAME" && mv -f "$TMPNAME" "$f") &
   fi
 done
+
 popd >/dev/null
+
+
+
+pushd samples/icons >/dev/null
+
+for f in *.svg; do
+  svgo --multipass -q "$f" &
+done
+
+popd >/dev/null
+
 
 wait

@@ -1,5 +1,13 @@
 var isMac = false
 
+function $$(query, el) {
+  return [].slice.call((el || document).querySelectorAll(query))
+}
+
+function $(query, el) {
+  return (el || document).querySelector(query)
+}
+
 // fetchjson(url string, cb (err Error, d Object)->nil)
 //
 var fetchjson = (
