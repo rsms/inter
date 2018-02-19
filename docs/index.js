@@ -93,161 +93,38 @@ var timeNow = (
 )
 
 
-// Carousel
-var carousel = document.querySelector('.carousel')
-if (carousel) {
-  var itemsContainer = carousel.querySelector('.items')
-  var dotsContainer = carousel.querySelector('.dots')
-  var singleStepAnimDuration = 0.25
-
-  var currentCenterItem = itemsContainer.children[0]
-  var currentDot = null
-  var lastScrollResponseTimestamp = 0
-
-  itemsContainer.addEventListener('click', scrollToNext)
-
-  Array.prototype.slice.call(itemsContainer.children).forEach(function(item, index) {
-    item.dataset.index = index
-
-    if (!item.complete) {
-      var hasLoaded = false
-      var loadTimer = setTimeout(function(){
-        if (!hasLoaded) {
-          item.classList.add('loading')
-        }
-      }, 10)
-      item.addEventListener('load', function() {
-        hasLoaded = true
-        clearTimeout(loadTimer)
-        item.classList.remove('loading')
-      })
-    }
-
-    if (index+1 == itemsContainer.children.length) {
-      item.style.cursor = 'w-resize';
-    }
-
-    if (dotsContainer) {
-      var dot = document.createElement('div')
-      dot.className = 'dot'
-
-      var graphic = document.createElement('div')
-      graphic.className = 'graphic'
-      dot.appendChild(graphic)
-
-      dot.addEventListener('click', function(ev) {
-        lastScrollResponseTimestamp = ev.timeStamp
-        var stepDistance = Math.abs(currentCenterItem.dataset.index - index)
-        selectItem(item, singleStepAnimDuration * stepDistance * 0.7)
-      }, {capture:false, passive:true})
-      dotsContainer.appendChild(dot)
+// download-link
+fetchjson('info.json', function(err, data) {
+  if (err) { throw err }
+  var ids = Object.keys(data)
+  var regularId = ids[0]
+  ids.forEach(function(id){
+    if (id.indexOf('Inter UI Regular:') == 0) {
+      regularId = id
     }
   })
-
-
-  function updateDot() {
-    if (currentDot) {
-      currentDot.classList.remove('active')
+  if (ids.length == 0) {
+    console.error('failed to find Inter UI Regular in info.json', data)
+    return
+  }
+  var regular = data[regularId]
+  // console.log('info.json:', regular)
+  if (regular.names && regular.names.version) {
+    var v = regular.names.version
+    var p = v.indexOf(';')
+    if (p != -1) {
+      v = v.substr(0, p)
     }
-    if (currentCenterItem) {
-      currentDot = dotsContainer.children[currentCenterItem.dataset.index]
-      currentDot.classList.add('active')
+    var directDownloadURL =
+      'https://github.com/rsms/inter/releases/download/v' + v +
+      '/Inter-UI-' + v + '.zip'
+    var av = document.querySelectorAll('a.download-link'), i, e
+    for (i = 0; i < av.length; ++i) {
+      e = av[i]
+      e.href = directDownloadURL
     }
   }
-
-
-  updateDot()
-
-
-  function selectItem(item, animDuration) {
-    currentCenterItem = item
-    var scrollLeftTarget = currentCenterItem.offsetLeft - itemsContainer.offsetLeft
-    // updateDot()
-    anim(itemsContainer, {scrollLeft: scrollLeftTarget}, animDuration, "ease-out")
-  }
-
-
-  // TODO: cursor on left side to go in "previous" direction
-
-
-  function scrollToNext(ev) {
-    if (!currentCenterItem) {
-      return
-    }
-
-    var animDuration = singleStepAnimDuration
-    var nextItem = currentCenterItem.nextElementSibling
-    if (!nextItem) {
-      nextItem = itemsContainer.children[0]
-      animDuration *= 2
-    }
-
-    lastScrollResponseTimestamp = ev.timeStamp
-    selectItem(nextItem, animDuration)
-  }
-
-
-  var scrollUpdateCenterItemTimer = null
-
-
-  function updateCenterItem() {
-    var scrollCenterX = itemsContainer.scrollLeft + (itemsContainer.clientWidth / 2)
-    var offsX = itemsContainer.offsetLeft
-    var i, e, itemOffsX, scrollLeftTarget = 0
-
-    for (i = 0; i < itemsContainer.children.length; ++i) {
-      e = itemsContainer.children[i]
-      itemOffsX = e.offsetLeft - offsX
-      if (scrollCenterX < itemOffsX + e.clientWidth) {
-        // pick this element
-        break
-      }
-    }
-
-    if (!e) {
-      return
-    }
-
-    currentCenterItem = e
-    updateDot()
-  }
-
-
-  function updateCarouselFocus() {
-    updateCenterItem()
-    var scrollLeftTarget = currentCenterItem.offsetLeft - itemsContainer.offsetLeft
-    anim(itemsContainer, {scrollLeft: scrollLeftTarget}, 0.25, "ease")
-  }
-
-
-  var scrollUpdateTimer = null
-
-  itemsContainer.addEventListener('scroll', function(ev) {
-    clearTimeout(scrollUpdateTimer)
-
-    if (ev.timeStamp - lastScrollResponseTimestamp < 100) {
-      // ignore scroll event caused by reacting to scroll events
-      return
-    }
-
-    updateCenterItem()
-
-    var timeStamp = ev.timeStamp + 90
-    scrollUpdateTimer = setTimeout(function(){
-      lastScrollResponseTimestamp = timeStamp
-      updateCarouselFocus()
-    }, 90)
-  }, {capture:false, passive:true})
-
-  window.addEventListener('resize', function(ev) {
-    clearTimeout(scrollUpdateTimer)
-    lastScrollResponseTimestamp = ev.timeStamp
-    updateCenterItem()
-    var scrollLeftTarget = currentCenterItem.offsetLeft - itemsContainer.offsetLeft
-    itemsContainer.scrollLeft = scrollLeftTarget
-  }, {capture:false, passive:true})
-
-}
+})
 
 
 // Google Analytics
