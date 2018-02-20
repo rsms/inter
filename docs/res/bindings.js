@@ -1,11 +1,14 @@
 // requires index.js
 
+function passThrough(v) { return v }
+
 function Binding(name){
   this.name = name
   this.value = undefined
   this.inputs = []
   this.listeners = []
-  this.formatter = undefined
+  this.parser = undefined
+  this.formatter = passThrough
 }
 
 
@@ -22,7 +25,7 @@ Binding.prototype.addInput = function(el) {
   if (this.value === undefined) {
     this.value = el.value
   } else {
-    input.el.value = this.value
+    input.el.value = this.formatter(this.value)
   }
   el.addEventListener('input', _onInput, {passive:true})
 }
@@ -39,8 +42,8 @@ Binding.prototype.addListener = function(listener) {
 Binding.prototype.setValue = function(nextval, origin) {
   // console.log('Binding.setValue nextval:', nextval, {origin})
   var prevval = this.value
-  if (this.formatter) {
-    nextval = this.formatter(nextval, prevval)
+  if (this.parser) {
+    nextval = this.parser(nextval, prevval)
   }
   if (this.value === nextval) {
     return
@@ -49,7 +52,7 @@ Binding.prototype.setValue = function(nextval, origin) {
   this.value = nextval
   this.inputs.forEach(function(input) {
     if (input.el !== origin) {
-      input.el.value = nextval
+      input.el.value = binding.formatter(nextval)
     }
   })
   this.listeners.forEach(function(listener) {
@@ -106,6 +109,11 @@ Bindings.prototype.setValue = function(name, value) {
   binding.setValue(value)
 }
 
+Bindings.prototype.setFormatter = function(name, formatter) {
+  var binding = this.getBinding(name)
+  binding.formatter = formatter || passThrough
+}
+
 
 Bindings.prototype.value = function(name, defaultValue) {
   var binding = this.bindings[name]
@@ -125,11 +133,11 @@ function fmt_int(nextval, prevval) {
 
 
 // configure is convenience function for setting value, adding a
-// listener and associating a formatter with a binding.
+// listener and associating a parser with a binding.
 // If a listener and a value is provided, the value is set and the listener
 // is immediately invoked.
 //
-Bindings.prototype.configure = function(name, value, formatter, listener) {
+Bindings.prototype.configure = function(name, value, parser, listener) {
   var binding = this.getBinding(name)
   if (listener) {
     binding.addListener(listener)
@@ -137,23 +145,23 @@ Bindings.prototype.configure = function(name, value, formatter, listener) {
   if (value !== undefined && value !== null) {
     binding.setValue(value)
   }
-  if (formatter) {
-    if (typeof formatter == 'string') {
-      switch (formatter) {
+  if (parser) {
+    if (typeof parser == 'string') {
+      switch (parser) {
         case 'number':
         case 'float':
-          formatter = fmt_float; break;
+          parser = fmt_float; break;
         
         case 'int':
         case 'integer':
-          formatter = fmt_int; break;
+          parser = fmt_int; break;
 
         default:
-          throw new Error('unknown formatter "' + formatter + '"')
+          throw new Error('unknown parser "' + parser + '"')
       }
-    } else if (typeof formatter != 'function') {
-      throw new Error('formatter should be a string or function')
+    } else if (typeof parser != 'function') {
+      throw new Error('parser should be a string or function')
     }
-    binding.formatter = formatter
+    binding.parser = parser
   }
 }

@@ -1,300 +1,73 @@
-<!DOCTYPE HTML>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-  <head>
-    <meta charset="utf-8">
-    <title>Inter UI font family</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="Inter UI font family">
-    <meta property="twitter:title" content="Inter UI font family">
-    <meta property="description" content="Inter UI is a new typeface optimized for computer user interfaces">
-    <meta property="og:description" content="Inter UI is a new typeface optimized for computer user interfaces">
-    <meta property="twitter:description" content="Inter UI is a new typeface optimized for computer user interfaces">
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:site" content="@rsms">
-    <meta property="twitter:creator" content="@rsms">
-    <meta property="og:image" content="https://rsms.me/inter/res/poster.png">
-    <meta property="twitter:image" content="https://rsms.me/inter/res/poster.png">
-    <meta property="fb:app_id" content="38027689216">
-    <meta property="og:url" content="https://rsms.me/inter/">
-    <meta property="og:site_name" content="rsms.me">
-    <meta property="og:type" content="product">
-    <meta property="og:locale" content="en_US" />
-    <meta name="format-detection" content="telephone=no">
-    <link rel="icon" type="image/png" href="../favicon.png" />
-    <link href="../inter-ui.css?v=2.5" rel="stylesheet">
-    <link href="../index.css?v=5" rel="stylesheet">
-    <style type="text/css">
-body {
-  padding-bottom: 0;
-  background: white;
-}
+---
+layout: default
+title: Samples
+---
+{%
 
-.row.footer h2 {
-  margin:0;
-  text-align:center;
-}
+capture url_root
+  %}{% if site.safe == false %}/{% else %}/inter/{% endif
+%}{%
+endcapture %}{%
 
-/*.row.menu {
-  background: white;
-}*/
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/samples/index.css" %}{%
+    assign index_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/bindings.js" %}{%
+    assign bindings_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/graphplot.js" %}{%
+    assign graphplot_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor
 
-livesample {
-  display: block;
-  color: #111;
-  outline: none;
-  padding-left: 20px;
-  border-left: 2px solid transparent;
-  margin-left:-22px;
-  margin-top: 1em;
-  margin-bottom: 1.6em;
-}
-livesample:hover {
-  /*color: rgb(3, 102, 214);*/
-  border-left-color: rgb(3, 102, 214);
-}
-livesample:focus {
-  border-left-color: #eee;
-}
-livesample > p {
-  margin-top: 0;
-}
-livesample.s1 {
-  padding-left: 16px;
-  letter-spacing: -0.005em;
-  font-size: 5em;
-  font-weight: 600;
-  line-height: 1.1;
-  margin-top: 0;
-  margin-bottom: 0.3em;
-}
-livesample.s2 {
-  max-width: 400px;
-  font-size: 1em;
-}
-livesample.s3 {
-  font-size: 13px;
-  line-height: 18px;
-}
-  livesample.s3 b, livesample.s3 strong {
-    font-weight:500;
-    color: black;
-  }
+%}
+<link rel="stylesheet" href="index.css?v={{ index_css_v }}">
+<script src="{{url_root}}res/bindings.js?v={{ bindings_js_v }}"></script>
+<script src="{{url_root}}res/graphplot.js?v={{ graphplot_js_v }}"></script>
 
-livesample.col3 {
-  -moz-column-width: 20em;
-  -moz-columns:      20em;
-  -webkit-columns:   20em;
-  columns:           20em;
+<div class="row"><div>
+  <div class="live">
 
-  -moz-column-gap:    2em;
-  -webkit-column-gap: 2em;
-  column-gap:         2em;
-}
-livesample.col2 {
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
-}
-
-.font-style-regular       { font-weight:400 !important; font-style:normal !important; }
-.font-style-italic        { font-weight:400 !important; font-style:italic !important; }
-.font-style-medium        { font-weight:500 !important; font-style:normal !important; }
-.font-style-medium-italic { font-weight:500 !important; font-style:italic !important; }
-.font-style-bold          { font-weight:700 !important; font-style:normal !important; }
-.font-style-bold-italic   { font-weight:700 !important; font-style:italic !important; }
-.font-style-black         { font-weight:900 !important; font-style:normal !important; }
-.font-style-black-italic  { font-weight:900 !important; font-style:italic !important; }
-
-div.live {
-  margin-top:1em;
-  margin-bottom:100px;
-  padding-bottom:100px;
-  border-bottom: 1px solid #ddd;
-}
-  div.controls {
-    position: absolute;
-    right: 0;
-    top: 150px;
-    width: 220px;
-    padding: 10px 16px;
-    /*background:#eee;*/
-    opacity:0.3;
-    border:1px solid #bbb;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-right:none;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
-  div.controls:hover {
-    opacity:1;
-    background:#f5f5f5;
-    border-color: transparent;
-  }
-  div.controls .control {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    height:30px;
-  }
-  div.controls .control > * {
-    /*max-width: 50%;*/
-    flex: 1 1 auto;
-    margin:0;
-    margin-right: 16px;
-    box-sizing: border-box;
-  }
-  div.controls .control > :last-child {
-    margin-right: 0;
-  }
-  div.controls .control > select {
-    min-width: 6em;
-    align-items: center;
-    justify-content: center;
-  }
-  div.controls .control > input,
-  div.controls .control > select {
-    width: 0;
-    outline: none;
-  }
-  div.controls .control > input[type="number"],
-  div.controls .control > input[type="text"] {
-    background: none;
-    border: none;
-    padding: 4px 0;
-    font-size: 13px;
-    /*border-radius: 2px;*/
-  }
-  div.controls .control > input[type="number"] {
-    max-width: 60px;
-    text-align: right;
-    -moz-font-feature-settings:    'calt' 1, 'zero' 1, 'tnum' 1;
-    -ms-font-feature-settings:     'calt' 1, 'zero' 1, 'tnum' 1;
-    -o-font-feature-settings:      'calt' 1, 'zero' 1, 'tnum' 1;
-    -webkit-font-feature-settings: 'calt' 1, 'zero' 1, 'tnum' 1;
-    font-feature-settings:         'calt' 1, 'zero' 1, 'tnum' 1;
-  }
-  div.controls .control > input[type="range"] {
-    /*max-width: 80%;*/
-    flex: 1 1 auto;
-    display: block;
-  }
-  div.controls .control > img.icon {
-    width: 16px;
-    height: 16px;
-    flex: 0 0 auto;
-    margin-right: 16px;
-    opacity: 0.8;
-  }
-
-  /*div.controls .control > input.foo {
-    background-color: hotpink;
-    border:none;
-    border-radius: 90px;
-  }*/
-
-
-/* narrow windows */
-@media only screen and (max-width: 1200px) {
-  div.live div.controls {
-    width: 200px;
-  }
-}
-@media only screen and (max-width: 1024px) {
-  div.live div.controls {
-    width: 100px;
-  }
-  div.controls .control > input[type="range"] {
-    width: 0;
-    flex: 0 1 0%;
-    display: none;
-  }
-  div.controls .control > input[type="number"] {
-    max-width: 100%;
-    flex: 1 1 auto;
-  }
-}
-@media only screen and (max-width: 740px) {
-  livesample.s1 {
-    font-size:4.5em;
-  }
-  div.live div.controls {
-    display: none;
-  }
-}
-@media only screen and (max-width: 565px) {
-  livesample.s1 {
-    font-size:4em;
-  }
-}
-@media only screen and (max-width: 414px) {
-  livesample.s1 {
-    font-size:3.4em;
-  }
-}
-    </style>
-  </head>
-  <body>
-
-    <div class="row menu">
-      <ul class="menu">
-        <li class="home"><a href="../">Inter UI</a></li>
-        <li><a class="download-link"
-          href="https://github.com/rsms/inter/releases/latest/"
-        >Download</a></li>
-        <li><a href="/inter/samples/" class="active">Samples</a></li>
-        <li><a href="../lab/">Playground</a></li>
-        <li><a href="https://github.com/rsms/inter/">Source</a></li>
-      </ul>
+    <div class="controls">
+      <div class="control">
+        <img title="Style" class="icon" src="icons/style.svg">
+        <select data-binding="style">
+          <option value="regular" default>Regular</option>
+          <option value="italic">Italic</option>
+          <option value="medium" default>Medium</option>
+          <option value="medium-italic">Medium Italic</option>
+          <option value="bold" default>Bold</option>
+          <option value="bold-italic">Bold Italic</option>
+          <option value="black" default>Black</option>
+          <option value="black-italic">Black Italic</option>
+        </select>
+      </div>
+      <div class="control">
+        <img title="Size" class="icon" src="icons/font-size.svg">
+        <input type="range" min="8" max="100" step="1" data-binding="font-size">
+        <input type="number" min="4" max="400" step="1" data-binding="font-size">
+      </div>
+      <div class="control">
+        <img title="Letter spacing in EM" class="icon" src="icons/letter-spacing.svg">
+        <input type="range" min="-0.05" max="0.06" step="0.001" data-binding="letter-spacing">
+        <input type="number" min="-0.15" max="1" step="0.001" data-binding="letter-spacing">
+      </div>
+      <canvas class="graphplot">Canvas not Supported</canvas>
+      <div class="control info">
+        <a href="{{url_root}}dynmetrics/">Learn about Dynamic Metrics</a>
+      </div>
     </div>
 
-    <div class="row white"><div>
-      <div class="live">
+    <livesample contenteditable class="s1">
+      Fabulous typography encountering spring
+    </livesample>
 
-        <div class="controls">
-          <div class="control">
-            <img title="Style" class="icon" src="icons/style.svg">
-            <select data-binding="style">
-              <option value="regular" default>Regular</option>
-              <option value="italic">Italic</option>
-              <option value="medium" default>Medium</option>
-              <option value="medium-italic">Medium Italic</option>
-              <option value="bold" default>Bold</option>
-              <option value="bold-italic">Bold Italic</option>
-              <option value="black" default>Black</option>
-              <option value="black-italic">Black Italic</option>
-            </select>
-          </div>
-          <div class="control">
-            <img title="Size" class="icon" src="icons/font-size.svg">
-            <input type="range" min="8" max="100" step="1" data-binding="font-size">
-            <input type="number" min="4" max="400" step="1" data-binding="font-size">
-          </div>
-          <div class="control">
-            <img title="Letter spacing in EM" class="icon" src="icons/letter-spacing.svg">
-            <input type="range" min="-0.05" max="0.06" step="0.001" data-binding="letter-spacing">
-            <input type="number" min="-0.15" max="1" step="0.001" data-binding="letter-spacing">
-          </div>
-          <!-- <div class="control">
-            <img class="icon" src="icons/font-size.svg">
-            <input type="text" class="foo" data-binding="foo">
-            <input type="text" class="foo" data-binding="foo">
-          </div> -->
-        </div>
+    <livesample contenteditable class="s2">
+      The user interface (UI), in the industrial design field of human-computer
+      interaction, is the space where interactions between humans and machines occur.
+    </livesample>
 
-        <livesample contenteditable class="s1">
-          Fabulous typography encountering spring
-        </livesample>
-
-        <livesample contenteditable class="s2">
-          The user interface (UI), in the industrial design field of human-computer
-          interaction, is the space where interactions between humans and machines occur.
-        </livesample>
-
-        <livesample contenteditable class="s3 col3">
+    <livesample contenteditable class="s3 col3">
 <p><b>Fire Island Beach</b> is a barrier of sand, stretching for twenty miles
 along the south coast of Long Island, and separating the Great South Bay
 from the Atlantic ocean.
@@ -350,89 +123,67 @@ When the tide is on the right moon and the wind has blown a gale from
 the southeast, the strand is entirely submerged, and people upon the
 main shore three miles away can see the surf breaking over the Beach
 hills.
-</p><p>
-Such a riot of sea and wind strews the whole extent of beach with
-whatever has been lost or thrown overboard, or torn out of sunken ships.
-Many a man has made a good week’s work in a single day by what he has
-found while walking along the Beach when the surf was down.
-</p><p>
-“The Captain” knew all this and had patrolled that Beach scores of
-times.
-</p><p>
-Ten years had passed since the first time which laid the habit of
-wandering along the surf-shore apparently in search of whatever the sea
-had cast up. Sometimes a spar, sometimes sheets of copper torn from a
-wreck and carried by a high surf far along the strand, sometimes a
-vessel’s gilded name, at other times only scattered drift-wood were the
-rewards of these lonely walks.
 </p>
-        </livesample>
-      </div>
+    </livesample>
+    <p class="learn-more">
+      &nbsp;
+      <!-- <a href="{{url_root}}dynmetrics/">Learn about Dynamic Metrics</a> -->
+    </p>
+  </div>
 
-      <p class="sample-images">
-        <img src="img/01.png" srcset="img/01@2x.png 2x" width="888">
-        <img src="img/02.png" srcset="img/02@2x.png 2x" width="888">
-        <!-- <img src="img/02.svg" width="888"> -->
-        <img src="img/03.png" srcset="img/03@2x.png 2x" width="888">
-        <img src="img/04.png" srcset="img/04@2x.png 2x" width="888">
-        <img src="img/05.png" srcset="img/05@2x.png 2x" width="888">
-        <img src="img/dark-phone.jpg" srcset="img/dark-phone@2x.jpg 2x" width="888">
-        <img src="img/06.png" srcset="img/06@2x.png 2x" width="888">
-        <img src="img/07.png" srcset="img/07@2x.png 2x" width="888">
-        <img src="img/08.png" srcset="img/08@2x.png 2x" width="888">
-        <img src="img/09.png" srcset="img/09@2x.png 2x" width="888">
-        <img src="img/10.png" srcset="img/10@2x.png 2x" width="888">
-        <img src="img/11.png" srcset="img/11@2x.png 2x" width="888">
-        <img src="img/12.png" srcset="img/12@2x.png 2x" width="888">
-        <img src="img/13.png" srcset="img/13@2x.png 2x" width="888">
-        <img src="img/14.png" srcset="img/14@2x.png 2x" width="888">
-        <img src="img/15.png" srcset="img/15@2x.png 2x" width="888">
-      </p>
-      <p style="text-align:center">
-        <a href="https://www.figma.com/file/WmU5NWr52bnUcqv5os0V4sWi/" class="plain">Open these samples in Figma</a>
-      </p>
-    </div></div>
+  <p class="sample-images">
+    <img src="img/01.png" srcset="img/01@2x.png 2x" width="888">
+    <img src="img/02.png" srcset="img/02@2x.png 2x" width="888">
+    <!-- <img src="img/02.svg" width="888"> -->
+    <img src="img/03.png" srcset="img/03@2x.png 2x" width="888">
+    <img src="img/04.png" srcset="img/04@2x.png 2x" width="888">
+    <img src="img/05.png" srcset="img/05@2x.png 2x" width="888">
+    <img src="img/dark-phone.jpg" srcset="img/dark-phone@2x.jpg 2x" width="888">
+    <img src="img/06.png" srcset="img/06@2x.png 2x" width="888">
+    <img src="img/07.png" srcset="img/07@2x.png 2x" width="888">
+    <img src="img/08.png" srcset="img/08@2x.png 2x" width="888">
+    <img src="img/09.png" srcset="img/09@2x.png 2x" width="888">
+    <img src="img/10.png" srcset="img/10@2x.png 2x" width="888">
+    <img src="img/11.png" srcset="img/11@2x.png 2x" width="888">
+    <img src="img/12.png" srcset="img/12@2x.png 2x" width="888">
+    <img src="img/13.png" srcset="img/13@2x.png 2x" width="888">
+    <img src="img/14.png" srcset="img/14@2x.png 2x" width="888">
+    <img src="img/15.png" srcset="img/15@2x.png 2x" width="888">
+  </p>
+  <p style="text-align:center">
+    <a
+      href="https://www.figma.com/file/WmU5NWr52bnUcqv5os0V4sWi/"
+      class="plain">Open these samples in Figma</a>
+  </p>
+</div></div>
 
-    <script src="../index.js?v=2"></script>
-    <script src="bindings.js"></script>
-    <script type="text/javascript">(function(){
+<script type="text/javascript">(function(){
 
 
 
-// InterUIDynamicTracking takes the font size in points or pixels and returns
-// the compensating tracking in EM.
+// InterUIDynamicTracking produces tracking in EM for the given font size
 //
 function InterUIDynamicTracking(fontSize, weightClass) {
   // if (!weightClass) { -- currently unused
   //   weightClass = 400
   // }
   //
-  // y = -0.01021241 + 0.3720623 * e ^ (-0.2808687 * x)
-  // [6-35]  0.05877 .. -0.0101309  (13==0; stops growing around 30-35)
-  // See https://gist.github.com/rsms/8efdbca5f8145a584ed08a7c3d6e5788
-  //
-  return -0.01021241 + 0.3720623 * Math.pow(Math.E, (-0.2808687 * fontSize))
-
-  // y = 0.025 - (ln(x) * 0.01)
-  // return 0.025 - Math.log(fontSize) * 0.01
+  var a = -0.0149, b = 0.298, c = -0.23;
+  return a + b * Math.pow(Math.E, (c * fontSize))
 }
 
-
-function InterUIDynamicLeading(fontSize, weightClass) {
-  var lineHeight = Math.round(fontSize * 1.4)
-  //
-  // TODO
-  //
-  // console.log(
-  //   'lineHeight:', lineHeight,
-  //   `(${Math.round(fontSize * 1.45)})`,
-  // )
-
-  return lineHeight
+// InterUIDynamicLineHeight produces the line height for the given font size
+//
+function InterUIDynamicLineHeight(fontSize, weightClass) {
+  var l = 1.4
+  return Math.round(fontSize * l)
 }
 
 
 var bindings = new Bindings()
+var graph = new GraphPlot($('canvas.graphplot'))
+graph.setOrigin(-0.2, 0.8)
+graph.setScale(0.049, 5)
 
 var s2 = $('livesample.s2')
 
@@ -443,22 +194,39 @@ function updateWidth() {
   s2.style.maxWidth = Math.round(w) + 'px'
 }
 
+function updateTracking() {
+  var fontSize = bindings.value('font-size', 0)
+  var letterSpacing = InterUIDynamicTracking(fontSize, 400)
+  bindings.setValue('letter-spacing', letterSpacing)
+}
+
+function updateGraph() {
+  graph.clear()
+  var fontSize = bindings.value('font-size', 0)
+  var letterSpacing = bindings.value('letter-spacing')
+  graph.plotf(function(x) {
+    return InterUIDynamicTracking(x, 400)
+  })
+  var graphedFontSize = Math.min(24, fontSize) // clamp to [-inf,24]
+  graph.plotPoints([[graphedFontSize, letterSpacing]], '#000')
+}
+
 bindings.configure('letter-spacing', 0, 'float', function (letterSpacing) {
   s2.style.letterSpacing = letterSpacing + 'em'
   updateWidth()
+  updateGraph()
+})
+bindings.setFormatter('letter-spacing', function(v) {
+  return v.toFixed(3)
 })
 
-bindings.configure('font-size', 18, 'int', function(fontSize, prevval) {
+bindings.configure('font-size', 16, 'float', function(fontSize, prevval) {
   s2.style.fontSize = fontSize + 'px'
   updateWidth()
+  updateTracking()
 
-  var letterSpacing = InterUIDynamicTracking(fontSize, 400)
-  letterSpacing = parseFloat(letterSpacing.toFixed(3)) // lower precision
-
-  var lineHeight = InterUIDynamicLeading(fontSize, 400)
+  var lineHeight = InterUIDynamicLineHeight(fontSize, 400)
   s2.style.lineHeight = lineHeight + 'px'
-
-  bindings.setValue('letter-spacing', letterSpacing)
 })
 
 bindings.configure('style', null, null, function (style) {
@@ -478,8 +246,14 @@ bindings.configure('style', null, null, function (style) {
 bindings.bindAllInputs('div.live .control input')
 bindings.bindAllInputs('div.live .control select')
 
+// resize canvas when window resizes
+var resizeDebounceTimer = null
+window.addEventListener('resize', function(){
+  clearTimeout(resizeDebounceTimer)
+  resizeDebounceTimer = setTimeout(function(){
+    graph.autosize()
+    updateGraph()
+  }, 500)
+}, {passive:true, capture:false})
 
-
-    })();</script>
-  </body>
-</html>
+})();</script>

@@ -1,360 +1,326 @@
-<!DOCTYPE HTML>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-  <head>
-    <meta charset="utf-8">
-    <title>Inter UI font family</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="Inter UI font family">
-    <meta property="twitter:title" content="Inter UI font family">
-    <meta property="description" content="Inter UI is a new typeface optimized for computer user interfaces">
-    <meta property="og:description" content="Inter UI is a new typeface optimized for computer user interfaces">
-    <meta property="twitter:description" content="Inter UI is a new typeface optimized for computer user interfaces">
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:site" content="@rsms">
-    <meta property="twitter:creator" content="@rsms">
-    <meta property="og:image" content="https://rsms.me/inter/res/poster.png">
-    <meta property="twitter:image" content="https://rsms.me/inter/res/poster.png">
-    <meta property="fb:app_id" content="38027689216">
-    <meta property="og:url" content="https://rsms.me/inter/">
-    <meta property="og:site_name" content="rsms.me">
-    <meta property="og:type" content="product">
-    <meta property="og:locale" content="en_US" />
-    <meta name="format-detection" content="telephone=no">
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="inter-ui.css?v=2.5" rel="stylesheet">
-    <link href="index.css?v=5" rel="stylesheet">
-  </head>
-  <body>
+---
+layout: default
+---
 
-    <div class="row menu">
-      <ul class="menu">
-        <li class="home"><a href="../">Inter UI</a></li>
-        <li><a class="download-link"
-          href="https://github.com/rsms/inter/releases/latest/"
-        >Download</a></li>
-        <li><a href="samples/">Samples</a></li>
-        <li><a href="lab/">Playground</a></li>
-        <li><a href="https://github.com/rsms/inter/">Source</a></li>
-      </ul>
-    </div>
+<div class="row"><div>
+  <h1>The Inter UI font family</h1>
+  <p>
+  Inter UI is a typeface specially designed for user interfaces
+  with focus on high legibility of small-to-medium sized text on computer screens.
+  </p>
+  <p>
+  The family features a tall x-height to aid in readability of mixed-case and
+  lower-case text. Several OpenType features are provided as well,
+  like contextual alternates that adjusts punctuation depending on the shape of
+  surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o",
+  tabular numbers, etc.
+  </p>
+</div></div>
 
-    <div class="row"><div>
-      <h1>The Inter UI font family</h1>
-      <p>
-      Inter UI is a typeface specially designed for user interfaces
-      with focus on high legibility of small-to-medium sized text on computer screens.
-      </p>
-      <p>
-      The family features a tall x-height to aid in readability of mixed-case and
-      lower-case text. Several OpenType features are provided as well,
-      like contextual alternates that adjusts punctuation depending on the shape of
-      surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o",
-      tabular numbers, etc.
-      </p>
-    </div></div>
+<div class="row white" style="padding-bottom:0"><div>
+  <p id="samples" class="samples items sample-images">
+    <a href="samples/" class="plain"><img src="samples/img/01.png" srcset="samples/img/01@2x.png 2x" width="888"></a>
+  </p>
+  <p style="text-align:center">
+    <a href="samples/" class="plain">More samples -></a>
+    <br><br>
+  </p>
+</div></div>
 
-    <div class="row white" style="padding-bottom:0"><div>
-      <p id="samples" class="samples items">
-        <a href="samples/" class="plain"><img src="samples/img/01.png" srcset="samples/img/01@2x.png 2x" width="888"></a>
-      </p>
-      <p style="text-align:center">
-        <a href="samples/" class="plain">More samples -></a>
-        <br><br>
-      </p>
-    </div></div>
+<div class="row dark"><div>
 
-    <div class="row dark"><div>
+  <h2><a id="usage" href="#usage">How do I use it?</a></h2>
+  <p>
+    Using the font is as easy as
+    <a class="download-link" href="https://github.com/rsms/inter/releases/latest/">download &amp; installing</a> locally on your computer.
+  </p>
+  <p>
+    You're free to bundle copies of Inter UI with your software, even if it's
+    commercial and you charge money for your software. Inter UI can also be used
+    on the web by either hosting the font files yourself or by including this CSS:
+  </p>
+  <code>@import url('https://rsms.me/inter/inter-ui.css');</code>
+  <p>Use the following CSS rules to specify the Inter UI family:</p>
+  <code>font-family: 'Inter UI', sans-serif;</code>
 
-      <h2><a id="usage" href="#usage">How do I use it?</a></h2>
-      <p>
-        Using the font is as easy as
-        <a class="download-link" href="https://github.com/rsms/inter/releases/latest/">download &amp; installing</a> locally on your computer.
-      </p>
-      <p>
-        You're free to bundle copies of Inter UI with your software, even if it's
-        commercial and you charge money for your software. Inter UI can also be used
-        on the web by either hosting the font files yourself or by including this CSS:
-      </p>
-      <code>@import url('https://rsms.me/inter/inter-ui.css');</code>
-      <p>Use the following CSS rules to specify the Inter UI family:</p>
-      <code>font-family: 'Inter UI', sans-serif;</code>
+  <p>&nbsp;</p>
 
-      <p>&nbsp;</p>
+  <h2><a href="{{url_root}}dynmetrics/">Dynamic Metrics</a></h2>
+  <p>
+    There's of course no absolute right or wrong when it comes to expressing yourself with typography, but Inter UI <em>Dynamic Metrics</em> provides guidelines for good typography. You simply provide the optical font size, and the tracking and leading is calculated for you to produce the best results.
+    <a href="{{url_root}}dynmetrics/">Learn about Dynamic Metrics —></a>
+  </p>
 
-      <h2><a id="free" href="#free">How much does it cost?</a></h2>
-      <p>
-        Inter UI is a <a href="https://github.com/rsms/inter">free and open source</a> font family. You are free to use this font in almost any way imaginable.
-        Refer to the <a href="https://choosealicense.com/licenses/ofl-1.1/">SIL Open Font License 1.1</a> for exact details on what the conditions and restrictions are.
-      </p>
+  <p>&nbsp;</p>
 
-    </div></div>
+  <h2><a id="free" href="#free">How much does it cost?</a></h2>
+  <p>
+    Inter UI is a <a href="https://github.com/rsms/inter">free and open source</a> font family. You are free to use this font in almost any way imaginable.
+    Refer to the <a href="https://choosealicense.com/licenses/ofl-1.1/">SIL Open Font License 1.1</a> for exact details on what the conditions and restrictions are.
+  </p>
 
-    <div class="row"><div>
-      <p>
-      There are currently four <a id="weights" href="#weights">weights</a>
-      </p>
-      <img src="res/weights-and-styles.svg" style="opacity:0.76;width:100%;display:block;margin:2em 0 3em 0">
-      <h2><a id="features" href="#features">Features</a></h2>
-      <boxes>
-        <box>
-          <h3>Contextual alternates (<q title='OpenType feature ID'>calt</q>)</h3>
-          <tablex><t>
-            <h><in>Disabled</in><to></to><out>Enabled</out></h>
-            <r><in>12<em>:</em>34,  FE<em>—</em>X</in><to></to><out>12:34,  FE—X</out></r>
-            <r><in>4<em>.</em>2</in><to></to><out>4.2</out></r>
-            <r><in>SFO <em>-></em> STO</in><to></to><out>SFO -> STO</out></r>
-            <r><in>IIA <em>—></em> OGG</in><to></to><out>IIA —> OGG</out></r>
-            <r><in>M<em>@</em>N m@n</in><to></to><out>M@N m@n</out></r>
-          </t></tablex>
-        </box>
+</div></div>
 
-        <box>
-          <h3>Tabular numbers (<q title='OpenType feature ID'>tnum</q>)</h3>
-          <tablex><t>
-            <h><in>Disabled</in><to></to><out>Enabled</out></h>
-            <r><in><em>1</em>23456<em>7</em>890</in><to></to><out class="tnum">1234567890</out></r>
-            <r><in>1131711<em>&nbsp;</em></in><to></to><out class="tnum">1131711<em>&nbsp;</em></out></r>
-            <r><in>0040900<em>&nbsp;</em></in><to></to><out class="tnum">0040900<em>&nbsp;</em></out></r>
-            <r><in>11:31,711<em>&nbsp;</em></in><to></to><out class="tnum">11:31,711<em>&nbsp;</em></out></r>
-            <r><in>00:40.900<em>&nbsp;</em></in><to></to><out class="tnum">00:40.900<em>&nbsp;</em></out></r>
-          </t></tablex>
-        </box>
+<div class="row"><div>
+  <p>
+  There are currently four <a id="weights" href="#weights">weights</a>
+  </p>
+  <img src="res/weights-and-styles.svg" style="opacity:0.76;width:100%;display:block;margin:2em 0 3em 0">
+  <h2><a id="features" href="#features">Features</a></h2>
+  <boxes>
+    <box>
+      <h3>Contextual alternates (<q title='OpenType feature ID'>calt</q>)</h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r><in>12<em>:</em>34,  FE<em>—</em>X</in><to></to><out>12:34,  FE—X</out></r>
+        <r><in>4<em>.</em>2</in><to></to><out>4.2</out></r>
+        <r><in>SFO <em>-></em> STO</in><to></to><out>SFO -> STO</out></r>
+        <r><in>IIA <em>—></em> OGG</in><to></to><out>IIA —> OGG</out></r>
+        <r><in>M<em>@</em>N m@n</in><to></to><out>M@N m@n</out></r>
+      </t></tablex>
+    </box>
 
-        <box>
-          <h3>Slashed zero (<q title='OpenType feature ID'>zero</q>)</h3>
-          <tablex><t>
-            <h><in>Disabled</in><to></to><out>Enabled</out></h>
-            <r><in><em>0</em>123</in><to></to><out class="zero">0123</out></r>
-          </t></tablex>
-        </box>
+    <box>
+      <h3>Tabular numbers (<q title='OpenType feature ID'>tnum</q>)</h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r><in><em>1</em>23456<em>7</em>890</in><to></to><out class="tnum">1234567890</out></r>
+        <r><in>1131711<em>&nbsp;</em></in><to></to><out class="tnum">1131711<em>&nbsp;</em></out></r>
+        <r><in>0040900<em>&nbsp;</em></in><to></to><out class="tnum">0040900<em>&nbsp;</em></out></r>
+        <r><in>11:31,711<em>&nbsp;</em></in><to></to><out class="tnum">11:31,711<em>&nbsp;</em></out></r>
+        <r><in>00:40.900<em>&nbsp;</em></in><to></to><out class="tnum">00:40.900<em>&nbsp;</em></out></r>
+      </t></tablex>
+    </box>
 
-        <box>
-          <h3>Fractions (<q title='OpenType feature ID'>frac</q>)</h3>
-          <tablex><t>
-            <h><in>Disabled</in><to></to><out>Enabled</out></h>
-            <r>
-              <in><em>1/3</em>  <em>22/9</em>  <em>3/4/5</em></in>
-              <to></to><out class="frac">1/3  22/9  3/4/5</out>
-            </r>
-          </t></tablex>
-        </box>
+    <box>
+      <h3>Slashed zero (<q title='OpenType feature ID'>zero</q>)</h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r><in><em>0</em>123</in><to></to><out class="zero">0123</out></r>
+      </t></tablex>
+    </box>
 
-        <box>
-          <h3>Stylistic set 1: Alternate digits (<q title='OpenType feature ID'>ss01</q>)</h3>
-          <tablex><t>
-            <h><in>Disabled</in><to></to><out>Enabled</out></h>
-            <r>
-              <in><em>1</em>23<em>4</em>5<em>6</em>78<em>9</em>0</in>
-              <to></to><out class="ss01">1234567890</out>
-            </r>
-            <r><in><em>1</em></in><to></to><out class="ss01">1</out></r>
-            <r><in><em>4</em></in><to></to><out class="ss01">4</out></r>
-            <r><in><em>6</em></in><to></to><out class="ss01">6</out></r>
-            <r><in><em>9</em></in><to></to><out class="ss01">9</out></r>
-          </t></tablex>
-        </box>
+    <box>
+      <h3>Fractions (<q title='OpenType feature ID'>frac</q>)</h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r>
+          <in><em>1/3</em>  <em>22/9</em>  <em>3/4/5</em></in>
+          <to></to><out class="frac">1/3  22/9  3/4/5</out>
+        </r>
+      </t></tablex>
+    </box>
 
-        <box>
-          <h3>Case alternates (<q title='OpenType feature ID'>case</q>)</h3>
-          <tablex><t>
-            <h><in>Disabled</in><to></to><out>Enabled</out></h>
-            <r>
-              <in><em>(</em>Hello<em>)</em> <em>[</em>World<em>]</em> <em>{</em>9000<em>}</em></in>
-              <to></to><out class="case">(Hello) [World] {9000}</out>
-            </r>
-            <r><in>SCHOOL <em>@</em> RUN</in><to></to><out class="case">SCHOOL @ RUN</out></r>
-            <r><in>3 <em>+</em> 9 <em>=</em> 12 <em>*</em> 1</in><to></to><out class="case">3 + 9 = 12 * 1</out></r>
-            <r><in><em>*</em> <em>+</em> <em>÷</em> <em>±</em> <em>×</em> <em>=</em> <em>≠</em> <em>•</em></in><to></to><out class="case">* + ÷ ± × = ≠ •</out></r>
-            <r><in><em>→</em> <em>←</em> <em>⟶</em> <em>⟵</em> <em>−</em> <em>-</em> <em>–</em> <em>—</em> <em>:</em></in><to></to><out class="case">→ ← ⟶ ⟵ − - – — :</out></r>
-          </t></tablex>
-        </box>
+    <box>
+      <h3>Stylistic set 1: Alternate digits (<q title='OpenType feature ID'>ss01</q>)</h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r>
+          <in><em>1</em>23<em>4</em>5<em>6</em>78<em>9</em>0</in>
+          <to></to><out class="ss01">1234567890</out>
+        </r>
+        <r><in><em>1</em></in><to></to><out class="ss01">1</out></r>
+        <r><in><em>4</em></in><to></to><out class="ss01">4</out></r>
+        <r><in><em>6</em></in><to></to><out class="ss01">6</out></r>
+        <r><in><em>9</em></in><to></to><out class="ss01">9</out></r>
+      </t></tablex>
+    </box>
 
-      </boxes>
+    <box>
+      <h3>Case alternates (<q title='OpenType feature ID'>case</q>)</h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r>
+          <in><em>(</em>Hello<em>)</em> <em>[</em>World<em>]</em> <em>{</em>9000<em>}</em></in>
+          <to></to><out class="case">(Hello) [World] {9000}</out>
+        </r>
+        <r><in>SCHOOL <em>@</em> RUN</in><to></to><out class="case">SCHOOL @ RUN</out></r>
+        <r><in>3 <em>+</em> 9 <em>=</em> 12 <em>*</em> 1</in><to></to><out class="case">3 + 9 = 12 * 1</out></r>
+        <r><in><em>*</em> <em>+</em> <em>÷</em> <em>±</em> <em>×</em> <em>=</em> <em>≠</em> <em>•</em></in><to></to><out class="case">* + ÷ ± × = ≠ •</out></r>
+        <r><in><em>→</em> <em>←</em> <em>⟶</em> <em>⟵</em> <em>−</em> <em>-</em> <em>–</em> <em>—</em> <em>:</em></in><to></to><out class="case">→ ← ⟶ ⟵ − - – — :</out></r>
+      </t></tablex>
+    </box>
 
-      <p>
-        Also includes some
-        Localized Forms (<q title='OpenType feature ID'>locl</q>),
-        Numerators (<q title='OpenType feature ID'>numr</q>) and
-        Denominators (<q title='OpenType feature ID'>dnom</q>).
-      </p>
+  </boxes>
 
-      <p>&nbsp;</p>
+  <p>
+    Also includes some
+    Localized Forms (<q title='OpenType feature ID'>locl</q>),
+    Numerators (<q title='OpenType feature ID'>numr</q>) and
+    Denominators (<q title='OpenType feature ID'>dnom</q>).
+  </p>
 
-      <h2 class="banner"><a href="glyphs/">Browse all glyphs -></a></h2>
-    </div></div>
+  <p>&nbsp;</p>
 
-    <div class="row-divider"></div>
+  <h2 class="banner"><a href="glyphs/">Browse all glyphs -></a></h2>
+</div></div>
 
-    <div class="row"><div>
-      <h2><a id="story" href="#story">The story behind Inter UI</a></h2>
-      <p>
-      Inter UI started out in late 2016 as an experiment to build a perfectly
-      pixel-fitting font at a specific small size (11px.) The idea was that
-      by crafting a font in a particular way, with a particular coordinate system
-      (Units Per EM), and for a particular target rasterization size (11), it would
-      be possible to get the best of both sharpness and readability.
-      </p>
-      <p>
-      However after a few months of using an early version of Inter UI, it dawned
-      on everyone exposed to the test that this approach had some serious real-world
-      problems. Most notably that it was really hard to read longer text. Because of
-      the pixel-aligning nature of that approach, the font took an almost
-      <a href="https://www.figma.com/file/HPqDViSCB8fAWuxaV2ousFMv">mono-spaced appearance</a>,
-      making it really easy to read numbers, punctuation and very short
-      words, but eye-straining to read anything longer.
-      </p>
-      <p>
-      The project was rebooted with a different approach, sticking with the
-      specific UPM, but crafting glyphs and kerning in a way that made for
-      more variation in the rhythm and smoother vertical and horizontal stems.
-      As Inter UI was being developed, it was tested on an internal version of
-      <a href="https://www.figma.com/">Figma</a>—where the author of Inter UI works as a designer—and slowly improved upon based on experience and feedback.
-      </p>
+<div class="row-divider"></div>
 
-      <p>&nbsp;</p>
+<div class="row"><div>
+  <h2><a id="story" href="#story">The story behind Inter UI</a></h2>
+  <p>
+  Inter UI started out in late 2016 as an experiment to build a perfectly
+  pixel-fitting font at a specific small size (11px.) The idea was that
+  by crafting a font in a particular way, with a particular coordinate system
+  (Units Per EM), and for a particular target rasterization size (11), it would
+  be possible to get the best of both sharpness and readability.
+  </p>
+  <p>
+  However after a few months of using an early version of Inter UI, it dawned
+  on everyone exposed to the test that this approach had some serious real-world
+  problems. Most notably that it was really hard to read longer text. Because of
+  the pixel-aligning nature of that approach, the font took an almost
+  <a href="https://www.figma.com/file/HPqDViSCB8fAWuxaV2ousFMv">mono-spaced appearance</a>,
+  making it really easy to read numbers, punctuation and very short
+  words, but eye-straining to read anything longer.
+  </p>
+  <p>
+  The project was rebooted with a different approach, sticking with the
+  specific UPM, but crafting glyphs and kerning in a way that made for
+  more variation in the rhythm and smoother vertical and horizontal stems.
+  As Inter UI was being developed, it was tested on an internal version of
+  <a href="https://www.figma.com/">Figma</a>—where the author of Inter UI works as a designer—and slowly improved upon based on experience and feedback.
+  </p>
 
-      <h2><a id="status" href="#status">Current status &amp; usability</a></h2>
-      <p>
-      Inter UI works great for English-language text, and pretty well for other
-      Latin and Cyrillic languages. There's still a lot of work to be done, and
-      <a href="https://github.com/rsms/inter/blob/master/CONTRIBUTING.md">contributions are warmly welcomed</a>. The playground contains <a href="lab/?sample=Body%20text%201&size=16">a lot of samples</a>, including some common <a href="lab/?sample=Kerning%20body%20multi-lang&size=16">non English-language words in the playground.</a>
-      </p>
+  <p>&nbsp;</p>
 
-      <p>
-      Please refer to the <a href="glyphs/">glyph repertoire</a>
-      for an overview of currently-available glyphs and their quality.
-      </p>
+  <h2><a id="status" href="#status">Current status &amp; usability</a></h2>
+  <p>
+  Inter UI works great for English-language text, and pretty well for other
+  Latin and Cyrillic languages. There's still a lot of work to be done, and
+  <a href="https://github.com/rsms/inter/blob/master/CONTRIBUTING.md">contributions are warmly welcomed</a>. The playground contains <a href="lab/?sample=Body%20text%201&size=16">a lot of samples</a>, including some common <a href="lab/?sample=Kerning%20body%20multi-lang&size=16">non English-language words in the playground.</a>
+  </p>
 
-      <p>&nbsp;</p>
+  <p>
+  Please refer to the <a href="glyphs/">glyph repertoire</a>
+  for an overview of currently-available glyphs and their quality.
+  </p>
 
-      <h2><a id="faq" href="#faq">FAQ</a></h2>
-      <ul class="faq">
+  <p>&nbsp;</p>
 
-        <li class="q" id="faq-using-features">
-          How do I enable and disable font features?
-        </li>
-        <li class="a">
-          In web browsers you'll want to use
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings"><q>font-feature-settings</q></a>.
-          In Figma you can access features via the
-          <a href="https://help.figma.com/text/opentype-features">Advanced Typography panel.</a>
-          In Illustrator, Photoshop and friends, you can access features via the
-          <a href="https://helpx.adobe.com/illustrator/using/special-characters.html#opentype_panel_overview">Characters and OpenType panels.</a>
-          Sketch doesn't provide a UI for configuring font features, but there's
-          <a href="https://sketchtalk.io/discussion/comment/1478/#Comment_1478">a workaround using macOS's native font UI.</a>
-        </li>
+  <h2><a id="faq" href="#faq">FAQ</a></h2>
+  <ul class="faq">
 
-        <li class="q" id="faq-unhinted-vs-hinted">
-          What is the difference between "unhinted" and "hinted" font files?
-        </li>
-        <li class="a">
-          The font files in the "hinted" folders have additional data in them
-          for assisting
-          <a href="https://en.wikipedia.org/wiki/ClearType">ClearType</a>,
-          the text rasterizer used by Microsoft Windows (and some Linux distributions.)
-          You want to use the "hinted" fonts only if you are targeting Windows users
-          <em>and</em> prefer the different look of these "hinted" fonts.
-          Additionally, hinting data makes the font files larger, so if you are
-          using Inter UI on websites, the extra size of these files is another
-          consideration to make.
-          <a href="https://www.typotheque.com/articles/hinting">
-          This article explains hinting at a greater length.</a>
-        </li>
+    <li class="q" id="faq-using-features">
+      How do I enable and disable font features?
+    </li>
+    <li class="a">
+      In web browsers you'll want to use
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings"><q>font-feature-settings</q></a>.
+      In Figma you can access features via the
+      <a href="https://help.figma.com/text/opentype-features">Advanced Typography panel.</a>
+      In Illustrator, Photoshop and friends, you can access features via the
+      <a href="https://helpx.adobe.com/illustrator/using/special-characters.html#opentype_panel_overview">Characters and OpenType panels.</a>
+      Sketch doesn't provide a UI for configuring font features, but there's
+      <a href="https://sketchtalk.io/discussion/comment/1478/#Comment_1478">a workaround using macOS's native font UI.</a>
+    </li>
+
+    <li class="q" id="faq-unhinted-vs-hinted">
+      What is the difference between "unhinted" and "hinted" font files?
+    </li>
+    <li class="a">
+      The font files in the "hinted" folders have additional data in them
+      for assisting
+      <a href="https://en.wikipedia.org/wiki/ClearType">ClearType</a>,
+      the text rasterizer used by Microsoft Windows (and some Linux distributions.)
+      You want to use the "hinted" fonts only if you are targeting Windows users
+      <em>and</em> prefer the different look of these "hinted" fonts.
+      Additionally, hinting data makes the font files larger, so if you are
+      using Inter UI on websites, the extra size of these files is another
+      consideration to make.
+      <a href="https://www.typotheque.com/articles/hinting">
+      This article explains hinting at a greater length.</a>
+    </li>
 
 
-        <li class="q" id="faq-cdn">
-          How reliable are the fonts served from rsms.me/inter? Is it on a CDN?
-        </li>
-        <li class="a">
-          rsms.me/inter is backed by GitHub's server network and distributed
-          globally on the CloudFlare CDN, making usage of
-          <q>https://rsms.me/inter/inter-ui.css</q> and associated font
-          files very reliable and fast throughout the world. 
-        </li>
+    <li class="q" id="faq-cdn">
+      How reliable are the fonts served from rsms.me/inter? Is it on a CDN?
+    </li>
+    <li class="a">
+      rsms.me/inter is backed by GitHub's server network and distributed
+      globally on the CloudFlare CDN, making usage of
+      <q>https://rsms.me/inter/inter-ui.css</q> and associated font
+      files very reliable and fast throughout the world. 
+    </li>
 
-        <li class="q" id="faq-contribute">
-          Can I help with improving Inter UI?
-        </li>
-        <li class="a">
-          Yes you can! Inter UI is an open-source project, meaning the source
-          code—or "source design" if you will—that is used to build the font files
-          <a href="https://github.com/rsms/inter">are freely available</a> to improve upon.
-          Font making requires a fair bit of technical work and
-          depending on what you'd like to do, some things might be more fun
-          depending on your technical skills.
-          The <a href="https://github.com/rsms/inter/blob/master/CONTRIBUTING.md">"Contributing" document</a> is a great place to start. The document outlines where
-          you can have the biggest impact, how things are setup and how to get
-          started.
-        </li>
+    <li class="q" id="faq-contribute">
+      Can I help with improving Inter UI?
+    </li>
+    <li class="a">
+      Yes you can! Inter UI is an open-source project, meaning the source
+      code—or "source design" if you will—that is used to build the font files
+      <a href="https://github.com/rsms/inter">are freely available</a> to improve upon.
+      Font making requires a fair bit of technical work and
+      depending on what you'd like to do, some things might be more fun
+      depending on your technical skills.
+      The <a href="https://github.com/rsms/inter/blob/master/CONTRIBUTING.md">"Contributing" document</a> is a great place to start. The document outlines where
+      you can have the biggest impact, how things are setup and how to get
+      started.
+    </li>
 
-        <li class="q" id="faq-start-date">
-          This website claims work started in 2016, but the git repository's log says it started later?
-        </li>
-        <li class="a">
-          Inter UI was developed in an a private, internal git repository
-          starting in November 2016, prior to being published on August 22, 2017.
-          Between November 2016 and August 2017, there were
-          <num>2&#x2006;990&#x2006;150</num> line edits made across 247 versions.
-          The reason the public GitHub repository does not reflect this is the
-          fact that the project was initially only internal at the company where
-          the author works and had some sensitive information "checked in",
-          like AWS server details and internal author identity in
-          all commit messages. Maybe one day we can write an elaborate git
-          filter-branch program and convert the filter the old repository to make
-          it public, but what would be the point of that?&nbsp; :—)
-        </li>
+    <li class="q" id="faq-start-date">
+      This website claims work started in 2016, but the git repository's log says it started later?
+    </li>
+    <li class="a">
+      Inter UI was developed in an a private, internal git repository
+      starting in November 2016, prior to being published on August 22, 2017.
+      Between November 2016 and August 2017, there were
+      <num>2&#x2006;990&#x2006;150</num> line edits made across 247 versions.
+      The reason the public GitHub repository does not reflect this is the
+      fact that the project was initially only internal at the company where
+      the author works and had some sensitive information "checked in",
+      like AWS server details and internal author identity in
+      all commit messages. Maybe one day we can write an elaborate git
+      filter-branch program and convert the filter the old repository to make
+      it public, but what would be the point of that?&nbsp; :—)
+    </li>
 
-        <li class="q" id="faq-contact">
-          I've made a cool thing that uses Inter UI, can I share it with you?
-          &nbsp;<dem>or</dem>
-        </li>
-        <li class="q">
-          I have a different question
-        </li>
-        <li class="a">
-          Reach out on <a href="https://twitter.com/rsms">Twitter (@rsms)</a> or over <a href="mailto:rasmus@notion.se">email</a>
-        </li>
-
-
-      </ul>
-
-    </div></div>
+    <li class="q" id="faq-contact">
+      I've made a cool thing that uses Inter UI, can I share it with you?
+      &nbsp;<dem>or</dem>
+    </li>
+    <li class="q">
+      I have a different question
+    </li>
+    <li class="a">
+      Reach out on <a href="https://twitter.com/rsms">Twitter (@rsms)</a> or over <a href="mailto:rasmus@notion.se">email</a>
+    </li>
 
 
-    <div class="row"><div>
-      — <a href="https://twitter.com/rsms" class="plain">@rsms</a>
-    </div></div>
+  </ul>
 
-    <script src="index.js?v=2"></script>
-    <script>
-      (function(){
+</div></div>
 
-      // FAQ anchors
-      var av = document.querySelectorAll('ul.faq > li.q'), a, i, e, id, tn
-      for (i = 0; i < av.length; ++i) {
-        e = av[i]
-        tn = document.createTextNode('Q  ')
-        e.insertBefore(tn, e.firstChild)
-        id = e.id
-        if (id) {
-          a = document.createElement('a')
-          // a.id = id
-          a.href = '#' + id
-          a.className = 'plain'
-          a.innerHTML = e.innerHTML
-          e.innerText = ''
-          e.appendChild(a)
-        }
-      }
-      av = document.querySelectorAll('ul.faq > li.a')
-      for (i = 0; i < av.length; ++i) {
-        e = av[i]
-        tn = document.createTextNode('A  ')
-        e.insertBefore(tn, e.firstChild)
-      }
 
-    })();
-    </script>
-  </body>
-</html>
+<div class="row"><div>
+  — <a href="https://twitter.com/rsms" class="plain">@rsms</a>
+</div></div>
+
+<script>(function(){
+
+  // FAQ anchors
+  var av = document.querySelectorAll('ul.faq > li.q'), a, i, e, id, tn
+  for (i = 0; i < av.length; ++i) {
+    e = av[i]
+    tn = document.createTextNode('Q  ')
+    e.insertBefore(tn, e.firstChild)
+    id = e.id
+    if (id) {
+      a = document.createElement('a')
+      // a.id = id
+      a.href = '#' + id
+      a.className = 'plain'
+      a.innerHTML = e.innerHTML
+      e.innerText = ''
+      e.appendChild(a)
+    }
+  }
+  av = document.querySelectorAll('ul.faq > li.a')
+  for (i = 0; i < av.length; ++i) {
+    e = av[i]
+    tn = document.createTextNode('A  ')
+    e.insertBefore(tn, e.firstChild)
+  }
+
+})();</script>

@@ -159,13 +159,13 @@ install_otf: all_otf
 install: install_otf
 
 
-geninfo: docs/info.json docs/lab/glyphinfo.json docs/glyphs/metrics.json
+geninfo: docs/_data/fontinfo.json docs/lab/glyphinfo.json docs/glyphs/metrics.json
 
 src/glyphorder.txt: src/Inter-UI-Regular.ufo/lib.plist src/Inter-UI-Black.ufo/lib.plist src/diacritics.txt misc/gen-glyphorder.py
 	misc/gen-glyphorder.py src/Inter-UI-*.ufo > src/glyphorder.txt
 
-docs/info.json: misc/fontinfo.py docs/font-files/Inter-UI-*.otf
-	misc/fontinfo.py -pretty docs/font-files/Inter-UI-Regular.otf > docs/info.json
+docs/_data/fontinfo.json: misc/fontinfo.py docs/font-files/Inter-UI-*.otf
+	misc/fontinfo.py -pretty docs/font-files/Inter-UI-Regular.otf > docs/_data/fontinfo.json
 
 docs/lab/glyphinfo.json: _local/UnicodeData.txt src/glyphorder.txt src/fontbuild.cfg misc/gen-glyphinfo.py
 	misc/gen-glyphinfo.py -ucd _local/UnicodeData.txt \

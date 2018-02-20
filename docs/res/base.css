@@ -6,8 +6,8 @@ body {
   font: 15px/22px 'Inter UI', system-ui, sans-serif;
 
   font-size: 15px;
-  line-height:1.4;
-  /*letter-spacing: 0.009em;*/
+  line-height: 1.5;
+  letter-spacing: -0.002em;
 
   font-weight: 400;
   padding-bottom: 30px;
@@ -83,11 +83,11 @@ q:after {
   content: "";
 }
 kbd {
-  -moz-font-feature-settings: 'kern' 1, 'case' 1;
-  -ms-font-feature-settings: 'kern' 1, 'case' 1;
-  -o-font-feature-settings: 'kern' 1, 'case' 1;
+  -moz-font-feature-settings:    'kern' 1, 'case' 1;
+  -ms-font-feature-settings:     'kern' 1, 'case' 1;
+  -o-font-feature-settings:      'kern' 1, 'case' 1;
   -webkit-font-feature-settings: 'kern' 1, 'case' 1;
-  font-feature-settings: 'kern' 1, 'case' 1;
+  font-feature-settings:         'kern' 1, 'case' 1;
   border: 1px solid rgba(0,0,0,0.18);
   border-radius: 3px;
   padding:0.1em 0.2em;
@@ -98,12 +98,18 @@ dem { /* de-emphasize */
   opacity: 0.7;
 }
 num { /* number */
-  -moz-font-feature-settings: 'calt' 1, 'ss01' 1;
-  -ms-font-feature-settings: 'calt' 1, 'ss01' 1;
-  -o-font-feature-settings: 'calt' 1, 'ss01' 1;
+  /*-moz-font-feature-settings:    'calt' 1, 'ss01' 1;
+  -ms-font-feature-settings:     'calt' 1, 'ss01' 1;
+  -o-font-feature-settings:      'calt' 1, 'ss01' 1;
   -webkit-font-feature-settings: 'calt' 1, 'ss01' 1;
-  font-feature-settings: 'calt' 1, 'ss01' 1;
+  font-feature-settings:         'calt' 1, 'ss01' 1;*/
+  letter-spacing:0.02em;
   white-space: pre;
+}
+
+small {
+  font-size: 11px;
+  letter-spacing: 0.013em;
 }
 
 h1, h2, h3 {
@@ -176,11 +182,32 @@ h1 > a, h2 > a, h3 > a {
   display: flex;
   justify-content: center;
 }
-.row > * {
-  width:100%;
-  max-width: 888px;
-  flex: 1 0 100%;
+  .row > * {
+    width:100%;
+    max-width: 888px;
+    flex: 1 0 100%;
+  }
+  .row .learn-more {
+    margin-top: 2em;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.007em;
+  }
+  .row .learn-more a {
+    color: rgba(0,0,0,0.4);
+    text-decoration-color: rgba(0, 0, 0, 0);
+  }
+  .row .learn-more a:hover {
+    color: inherit;
+  }
+
+.row.full-width {
+  padding: 50px 0;
+  justify-content: flex-start;
 }
+  .row.full-width > * {
+    max-width: initial;
+  }
 
 .row-divider {
   margin:0 auto;
@@ -228,77 +255,6 @@ h1 > a, h2 > a, h3 > a {
     opacity: 1;
   }
 
-/* narrow windows */
-@media only screen and (max-width: 565px) {
-  .row.menu ul {
-    justify-content: space-between;
-  }
-    .row.menu ul li {
-      margin-right: 15px;
-    }
-    .row.menu ul li:last-child {
-      margin-right: 0;
-    }
-  .row.menu ul li.home {
-    /*color: red;
-    clear: both;*/
-    /*display: block;*/
-    text-align:center;
-    margin:0 0 -12px 0;
-    width: 100%;
-  }
-  .row.menu ul li.home > a {
-    border-bottom: none;
-    padding: 0 1em;
-    margin: 0.5em 0;
-    line-height:34px;
-    border-radius: 90px;
-
-    /*color: white;
-    background-color: rgba(3, 102, 214, 1);*/
-  }
-  .row.menu ul li.home > a:hover {
-    color: white;
-    background-color: #222;
-  }
-}
-
-/* small devices (<= iPhone 6+) */
-@media only screen and (max-device-width: 414px) {
-  body {
-    font-size: 14px;
-    line-height: 20px;
-  }
-  .row {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .row.menu ul {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
-/* small devices (<= iPhone 5) */
-@media only screen and (max-device-width: 320px) {
-  .row.menu {
-    font-size:13px;
-  }
-    .row.menu ul {
-      margin-left: 0;
-      margin-right: 0;
-    }
-      .row.menu ul li {
-        flex: 1 0 auto;
-        text-align: center;
-        border-right: 1px solid rgba(0,0,0,0.1);
-        margin-left:0;
-        margin-right:0;
-      }
-      .row.menu ul li:last-child {
-        border-right: none;
-      }
-}
 
 .row.white {
   background: white;
@@ -346,13 +302,9 @@ a > img {
 }
 
 .sample-images {}
-  .sample-images > img, .sample-images > svg {
+  .sample-images img, .sample-images svg {
     display: block;
-    margin:100px 0;
-    width:100%;
-  }
-  .sample-images > img:first-child, .sample-images > svg:first-child {
-    margin-top:50px;
+    width: 100%;
   }
 
 
@@ -493,16 +445,16 @@ boxes {
 }
 box {
   overflow: auto;
-  max-width:100%;
+  flex: 1 1 0;
+  min-width: 280px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   background: white;
-  padding:2em;
+  padding: 2em;
   border-radius: 3px;
   margin-right:1em;
   margin-bottom:1em;
-  flex: 1 1 10%;
-  /*width:220px;*/
 }
 body.safari box {
   /* Fix for broken flex wrap in safari */
@@ -514,3 +466,85 @@ box:first-child {
 box h3 {
   margin-bottom:0.8em;
 }
+
+
+/* ------------------------------------------------------ */
+
+/* narrow windows */
+@media only screen and (max-width: 565px) {
+  .row.menu ul {
+    justify-content: space-between;
+  }
+    .row.menu ul li {
+      margin-right: 15px;
+    }
+    .row.menu ul li:last-child {
+      margin-right: 0;
+    }
+  .row.menu ul li.home {
+    /*color: red;
+    clear: both;*/
+    /*display: block;*/
+    text-align:center;
+    margin:0 0 -12px 0;
+    width: 100%;
+  }
+  .row.menu ul li.home > a {
+    border-bottom: none;
+    padding: 0 1em;
+    margin: 0.5em 0;
+    line-height:34px;
+    border-radius: 90px;
+
+    /*color: white;
+    background-color: rgba(3, 102, 214, 1);*/
+  }
+  .row.menu ul li.home > a:hover {
+    color: white;
+    background-color: #222;
+  }
+}
+
+/* small devices (<= iPhone 6+) */
+@media only screen and (max-device-width: 414px) {
+  box { padding: 1em; }
+  box tablex r { font-size: 0.9em; }
+  body {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .row {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .row.menu ul {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* small devices (<= iPhone 5) */
+@media only screen and (max-device-width: 320px) {
+  box {
+    font-size: 0.8em;
+    min-width: 240px;
+  }
+  /*.row.menu {
+    font-size:13px;
+  }
+    .row.menu ul {
+      margin-left: 0;
+      margin-right: 0;
+    }
+      .row.menu ul li {
+        flex: 1 0 auto;
+        text-align: center;
+        border-right: 1px solid rgba(0,0,0,0.1);
+        margin-left:0;
+        margin-right:0;
+      }
+      .row.menu ul li:last-child {
+        border-right: none;
+      }*/
+}
+

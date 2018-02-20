@@ -1,0 +1,522 @@
+---
+layout: default
+title: Dynamic Metrics
+---
+{%
+
+capture url_root
+  %}{% if site.safe == false %}/{% else %}/inter/{% endif
+%}{%
+endcapture %}{%
+
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/dynmetrics/index.css" %}{%
+    assign index_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/bindings.js" %}{%
+    assign bindings_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/graphplot.js" %}{%
+    assign graphplot_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor
+
+%}
+<link rel="stylesheet" href="index.css?v={{ index_css_v }}">
+<script src="{{url_root}}res/bindings.js?v={{ bindings_js_v }}"></script>
+<script src="{{url_root}}res/graphplot.js?v={{ graphplot_js_v }}"></script>
+
+<div class="row first"><div>
+  <h1>Dynamic Metrics</h1>
+  <p>
+    There's of course no absolute right or wrong when it comes to expressing
+    yourself with typography, but Inter UI Dynamic Metrics provides guidelines
+    for <em>good</em> typography.
+    You simply provide the optical font size, and the tracking and leading
+    (letter spacing and line height) will be calculated using the following
+    formula:
+  </p>
+  <p>
+    <formula>
+      tracking =
+      <const>a</const> + <const>b</const> ×
+      <const>e</const><sup>(<const>c</const> × fontSize)</sup>
+    </formula>
+    <formula>
+      leading = <const>l</const> × fontSize
+    </formula>
+    <formula>
+      <const>e</const> ≈ <num>2.718</num>
+    </formula>
+  </p>
+  <p class="small-window">
+    <small>View this on a larger screen to enable interactive control.</small>
+  </p>
+</div></div>
+
+<!-- <div class="row small-window"><div>
+  Hello
+</div></div> -->
+
+<div class="white full-width row with-sidebar">
+
+  <div class="samples">
+    <p contenteditable class="sample">
+      <span class="di"><span></span></span>
+      <span class="info"
+        title="size, tracking, (ideal tracking) — progress bar shows distance from ideal"
+      >15 &nbsp; 0.0 &nbsp; ( 0.0 )</span>
+      Such a riot of sea and wind strews the whole extent of beach with whatever has been lost or thrown overboard, or torn out of sunken ships. Many a man has made a good week’s work in a single day by what he has found while walking along the Beach when the surf was down.
+    </p>
+  </div>
+
+  <div class="sidebar controls">
+    <div class="control">
+      <label title="Number of ideal matches">ni</label>
+      <input title="Number of ideal matches" type="number" readonly data-binding="ideal-count">
+      <label title="Distance from ideal">di</label>
+      <input title="Distance from ideal" type="number" class="wide" readonly data-binding="ideal-distance">
+    </div>
+    <div class="control">
+      <img title="Style" class="icon" src="../samples/icons/style.svg">
+      <select data-binding="style">
+        <option value="regular" default>Regular</option>
+        <option value="italic">Italic</option>
+        <option value="medium" default>Medium</option>
+        <option value="medium-italic">Medium Italic</option>
+        <option value="bold" default>Bold</option>
+        <option value="bold-italic">Bold Italic</option>
+        <option value="black" default>Black</option>
+        <option value="black-italic">Black Italic</option>
+      </select>
+    </div>
+    <div class="control">
+      <img title="Base tracking" class="icon" src="../samples/icons/letter-spacing.svg">
+      <input type="range" min="-0.05" max="0.06" step="0.001" data-binding="base-tracking">
+      <input type="number" min="-0.15" max="1" step="0.001" data-binding="base-tracking">
+    </div>
+    <hr>
+    <div class="control">
+      <label title="Constant a">a</label>
+      <input type="range" min="-0.05" max="0" step="0.001" data-binding="var-a">
+      <input type="number" min="-0.05" max="0" step="0.0001" data-binding="var-a">
+    </div>
+    <div class="control">
+      <label title="Constant b">b</label>
+      <input type="range" min="0" max="1" step="0.01" data-binding="var-b">
+      <input type="number" min="0" max="1" step="0.001" data-binding="var-b">
+    </div>
+    <div class="control">
+      <label title="Constant c">c</label>
+      <input type="range" min="-1" max="0" step="0.01" data-binding="var-c">
+      <input type="number" min="-1" max="0" step="0.001" data-binding="var-c">
+    </div>
+    <hr>
+    <div class="control">
+      <label title="Constant l controls line height">l</label>
+      <input type="range" min="1" max="2" step="0.1" data-binding="var-l">
+      <input type="number" min="1" max="2" step="0.1" data-binding="var-l">
+    </div>
+    <hr class="without-bottom-margin">
+    <canvas class="graphplot">Canvas not Supported</canvas>
+    <hr class="without-top-margin">
+    <h3>Ideal values</h3>
+    <textarea id="ideal-values"></textarea>
+    <hr class="without-top-margin">
+  </div>
+
+</div>
+
+
+<script type="text/javascript">(function(){
+
+// internal variables that are user-controllable, but are not part of
+// Dynamic Metrics
+var baseTracking = 0
+var weightClass = 400
+
+// Ideal values designed one by one, by hand.
+// font size => tracking
+var idealValues = {}
+var idealValuesList = []
+var idealValuesTextArea = $('textarea#ideal-values')
+
+function setIdealValues(valueMap) {
+  idealValues = valueMap
+  idealValuesList = []
+  Object.keys(idealValues).forEach(function(fontSize) {
+    idealValuesList.push([fontSize, idealValues[fontSize]])
+  })
+  if (idealValuesTextArea.value == '') {
+    idealValuesTextArea.value = idealValuesList.map(function(t){
+      return t[0] + '\t' + t[1]
+    }).join('\n')
+  }
+}
+
+function parseValues(s) {
+  var values = {}
+  s = s.replace(/^[\s\r\t\n]+|[\s\r\t\n]+$/g, '') // trim whitespace
+  s.split(/\s*\r?\n\s*/).map(function(line) {
+    var t = line.split(/\s+/)
+    if (t.length == 2) {
+      t[0] = parseInt(t[0])
+      t[1] = parseFloat(t[1])
+      values[t[0]] = t[1]
+    }
+  })
+  return values
+}
+
+setIdealValues({
+  // set-2018-02-20
+  6:    0.055,
+  7:    0.044,
+  8:    0.034,
+  9:    0.024,
+  10:   0.018,
+  11:   0.012,
+  12:   0.007,
+  13:   0.003,
+  14:   0.001,
+  15:  -0.002,
+  16:  -0.004,
+  17:  -0.006,
+  18:  -0.008,
+  20:  -0.01,
+  24:  -0.013,
+})
+
+// setIdealValues({
+//   // set-2018-02-19
+//   6:    0.059,
+//   7:    0.043,
+//   8:    0.032,
+//   9:    0.022,
+//   10:   0.014,
+//   11:   0.009,
+//   12:   0.004,
+//   13:   0,
+//   14:  -0.003,
+//   15:  -0.005,
+//   16:  -0.0075,
+//   17:  -0.0084,
+//   18:  -0.0095,
+//   20:  -0.012,
+//   24:  -0.014,
+// })
+
+// setIdealValues({
+// // set-2018-02-18
+//   6:   0.06,
+//   7:   0.04,
+//   8:   0.03,
+//   9:   0.02,
+//   10:  0.01,
+//   11:  0.005,
+//   12:  0.002,
+//   13:  0.001,
+//   14:  0,
+//   15: -0.002,
+//   16: -0.005,
+//   17: -0.007,
+//   18: -0.009,
+//   20: -0.011,
+//   24: -0.011,
+// })
+
+
+// Variables for constants involved in Dynamic Metrics
+var a = -0.013
+// -0.0119
+// -0.0101
+// -0.0092
+// -0.012
+// -0.013
+
+var b = 0.23
+// 0.455
+// 0.421
+// 0.26
+// 0.23
+// 0.251
+
+var c = -0.21
+// -0.29
+// -0.23
+// -0.21
+// -0.222
+
+// a = -0.012; b = 0.23; c = -0.21;  // di=0.002514 on set-2018-02-18
+// a = -0.013; b = 0.251; c = -0.222 // di=0.001742 on set-2018-02-18
+// a = -0.015; b = 0.283; c = -0.23; // di=0.00221 on set-2018-02-18
+// a = -0.0149; b = 0.298; c = -0.23; // di=0.000484 on set-2018-02-19
+a = -0.016; b = 0.21; c = -0.18; // di=0.000532 on set-2018-02-20
+
+
+// these have a short di, but stray far away from larger font sizes
+// a = -0.0077
+// b = 0.377
+
+var l = 1.4
+
+
+// InterUIDynamicTracking takes the font size in points or pixels and returns
+// the compensating tracking in EM.
+//
+function InterUIDynamicTracking(fontSize, weightClass) {
+  // if (!weightClass) { -- currently unused
+  //   weightClass = 400
+  // }
+  //
+  // y = -0.01021241 + 0.3720623 * e ^ (-0.2808687 * x)
+  // [6-35]  0.05877 .. -0.0101309  (13==0; stops growing around 30-35)
+  // See https://gist.github.com/rsms/8efdbca5f8145a584ed08a7c3d6e5788
+  //
+  return a + b * Math.pow(Math.E, c * fontSize)
+  // [6 - 38]  0.05798 .. -0.01099  (midpoint = 12.533)
+
+  // y = 0.025 - (ln(x) * 0.01)
+  // return 0.025 - Math.log(fontSize) * 0.01
+}
+
+
+function InterUIDynamicLineHeight(fontSize, weightClass) {
+  return Math.round(fontSize * l)
+}
+
+
+var NPOS = Number.MAX_SAFE_INTEGER
+
+function Sample(fontSize) {
+  this.rootEl = sampleTemplate.cloneNode(true)
+  this.infoEl = $('.info', this.rootEl)
+  this.diEl = $('.di', this.rootEl)
+  this.diEl.classList.add('unavailable')
+  this.style = this.rootEl.style
+  this.maxBoxWidth = 0
+  this.fontSize = 0
+  this.tracking = 0
+  this.lineHeight = 0
+  this.idealTracking = NPOS
+  this.matchesIdeal = false
+  this.setFontSize(fontSize)
+  this.render()
+}
+
+Sample.prototype.idealDistance = function(fontSize) {
+  // returns the distance from the ideal (or NPOS if no "ideal" data available)
+  if (this.idealTracking == NPOS) {
+    return NPOS
+  }
+  return (
+    Math.max(this.tracking, this.idealTracking) -
+    Math.min(this.tracking, this.idealTracking)
+  )
+}
+
+Sample.prototype.setFontSize = function(fontSize) {
+  this.fontSize = fontSize
+  this.tracking = baseTracking + InterUIDynamicTracking(fontSize, weightClass)
+  this.lineHeight = InterUIDynamicLineHeight(fontSize, weightClass)
+  this.maxBoxWidth = Math.round(fontSize * (this.tracking + 1) * 25)
+
+  var idealTracking = idealValues[this.fontSize]
+  if (idealTracking === undefined) {
+    if (this.idealTracking != NPOS) {
+      this.diEl.classList.add('unavailable')
+    }
+    this.idealTracking = NPOS
+    this.matchesIdeal = false
+  } else {
+    if (this.idealTracking == NPOS) {
+      this.diEl.classList.remove('unavailable')
+    }
+    this.idealTracking = idealTracking
+    // match to a precision of 3
+    this.matchesIdeal = this.tracking.toFixed(3) == idealTracking.toFixed(3)
+    var di = 1
+    if (this.matchesIdeal) {
+      this.diEl.classList.add('match')
+    } else {
+      this.diEl.classList.remove('match')
+      di = 1 - Math.min(1, this.idealDistance() * 50)
+    }
+    this.diEl.firstChild.style.width = (di * this.maxBoxWidth) + 'px'
+  }
+}
+
+Sample.prototype.render = function() {
+  this.style.fontSize = this.fontSize + 'px'
+  this.style.letterSpacing = this.tracking + 'em'
+  this.style.lineHeight = this.lineHeight + 'px'
+
+  var SP = '\u00A0\u00A0\u00A0'
+  this.infoEl.innerText = (
+    this.fontSize +
+    SP + this.tracking.toFixed(3) +
+    // SP + this.lineHeight.toFixed(3) +
+    (
+      this.idealTracking != NPOS ? (
+        SP + '( ' + this.idealTracking +
+        (this.matchesIdeal ? ' \u2713' : '') +
+        ' )'
+      ) : ''
+    )
+  )
+
+  this.style.maxWidth = this.maxBoxWidth + 'px'
+}
+
+
+var bindings = new Bindings()
+var sampleTemplate
+var samples = [] // Sample[]
+var graph = new GraphPlot($('canvas.graphplot'))
+graph.setOrigin(-0.2, 0.8)
+graph.setScale(0.049, 5)
+
+function addChildren(targetNode, children) {
+  targetNode.style.visibility = 'hidden'
+  var i = 0;
+  for (; i < children.length; i++) {
+    targetNode.appendChild(children[i])
+  }
+  targetNode.style.visibility = null
+}
+
+function initSamples() {
+  var samplesEl = $('.samples')
+  sampleTemplate = $('.sample', samplesEl)
+  samplesEl.removeChild(sampleTemplate)
+
+  // small and medium sizes
+  var i, fontSize = 6, endFontSize = 16
+  for (; fontSize <= endFontSize; fontSize++) {
+    samples.push(new Sample(fontSize))
+  }
+
+  // a few select large samples
+  samples.push(new Sample(17))
+  samples.push(new Sample(18))
+  samples.push(new Sample(20))
+  samples.push(new Sample(24))
+  samples.push(new Sample(30))
+  samples.push(new Sample(40))
+
+  // add to dom in one go
+  addChildren(samplesEl, samples.map(function(s) { return s.rootEl }))
+}
+
+
+function updateSample(sample) {
+  sample.setFontSize(sample.fontSize) // updates derived values
+  sample.render()
+}
+
+function updateSamples() {
+  samples.forEach(updateSample)
+  updateIdealMatches()
+  updateGraphPlot()
+}
+
+function updateIdealMatches() {
+  // ideal-distance
+  var idealCount = 0
+  var distance = 0
+  var ndistances = 0
+  samples.forEach(function(sample) {
+    if (sample.matchesIdeal) {
+      idealCount++
+    }
+    var di = sample.idealDistance()
+    if (di != NPOS) {
+      distance += di
+      ndistances++
+    }
+  })
+
+  distance = distance / ndistances
+  
+  bindings.setValue('ideal-distance', distance.toFixed(6))
+  bindings.setValue('ideal-count', idealCount)
+}
+
+function updateGraphPlot() {
+  graph.clear()
+  graph.plotLine(idealValuesList, '#0d3')
+  graph.plotf(function(x) {
+    return InterUIDynamicTracking(x, weightClass)
+  })
+}
+
+
+bindings.configure('base-tracking', 0, 'float', function (tracking) {
+  baseTracking = tracking
+  updateSamples()
+})
+
+bindings.configure('var-a', a, 'float', function (v) {
+  a = v
+  updateSamples()
+})
+
+bindings.configure('var-b', b, 'float', function (v) {
+  b = v
+  updateSamples()
+})
+
+bindings.configure('var-c', c, 'float', function (v) {
+  c = v
+  updateSamples()
+})
+
+bindings.configure('var-l', l, 'float', function (v) {
+  l = v
+  updateSamples()
+})
+
+bindings.configure('ideal-count', 0, 'int', function (v) {})
+bindings.configure('ideal-distance', 0, 'float', function (v) {})
+
+bindings.configure('style', null, null, function (style) {
+  var cl = $('.samples').classList
+  cl.remove('font-style-regular')
+  cl.remove('font-style-italic')
+  cl.remove('font-style-medium')
+  cl.remove('font-style-medium-italic')
+  cl.remove('font-style-bold')
+  cl.remove('font-style-bold-italic')
+  cl.remove('font-style-black')
+  cl.remove('font-style-black-italic')
+  cl.add('font-style-' + style)
+  weightClass = (
+    style.indexOf('black')  != -1 ? 900 :
+    style.indexOf('bold')   != -1 ? 700 :
+    style.indexOf('medium') != -1 ? 500 :
+    400
+  )
+  updateSamples()
+})
+
+
+bindings.bindAllInputs('.control input')
+bindings.bindAllInputs('.control select')
+
+// double-click base tracking to reset
+$('input[type="range"][data-binding="base-tracking"]').addEventListener(
+  'dblclick',
+  function(ev) { bindings.setValue('base-tracking', 0) }
+)
+
+// allow editing of ideal values
+idealValuesTextArea.addEventListener('input', function(ev) {
+  setIdealValues(parseValues(idealValuesTextArea.value))
+  updateSamples()
+})
+
+
+// start
+initSamples()
+updateSamples()
+
+})();</script>

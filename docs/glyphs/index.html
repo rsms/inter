@@ -1,39 +1,27 @@
-<!DOCTYPE HTML>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-  <head>
-    <meta charset="utf-8">
-    <title>Repertoire – Inter UI font family</title>
+---
+layout: default
+title: Glyphs
+---
+{%
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+capture url_root
+  %}{% if site.safe == false %}/{% else %}/inter/{% endif
+%}{%
+endcapture %}{%
 
-    <meta property="og:title" content="Inter UI font family">
-    <meta property="twitter:title" content="Inter UI font family">
-    <meta property="description" content="Inter UI is a new typeface optimized for computer user interfaces">
-    <meta property="og:description" content="Inter UI is a new typeface optimized for computer user interfaces">
-    <meta property="twitter:description" content="Inter UI is a new typeface optimized for computer user interfaces">
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:site" content="@rsms">
-    <meta property="twitter:creator" content="@rsms">
-    <meta property="og:image" content="https://rsms.me/inter/res/poster.png">
-    <meta property="twitter:image" content="https://rsms.me/inter/res/poster.png">
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/glyphs/glyphs.css" %}{%
+    assign glyphs_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/glyphs/glyphs.js" %}{%
+    assign glyphs_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor
 
-    <meta property="fb:app_id" content="38027689216">
-    <meta property="fb:admins" content="728642302">
-    <meta property="og:url" content="https://rsms.me/inter/">
-    <meta property="og:site_name" content="rsms.me">
-    <meta property="og:type" content="product">
-    <meta property="og:locale" content="en_US" />
+%}
 
-    <link rel="icon" type="image/png" href="../favicon.png" />
-
-    <link href="../inter-ui.css" rel="stylesheet">
-    <link href="../index.css" rel="stylesheet">
-    <link href="glyphs.css" rel="stylesheet">
-  </head>
-  <body>
-    <script src="../index.js"></script>
-    <div id="svgs">
+<link rel="stylesheet" href="glyphs.css?v={{ glyphs_css_v }}">
+<div id="svgs">
 <svg id="svg-A" xmlns="http://www.w3.org/2000/svg" width="176" height="348"><path d="M146 -76.8 L44.8 -76.8 L44.8 -54.8 L146 -54.8z  M33.2 0 L94 -172.4 L96.4 -172.4 L157.2 0 L183.2 0 L108 -204.8 L82.4 -204.8 L7.2 0z" transform="translate(-7.2 281.6)"/></svg>
 <svg id="svg-AE" xmlns="http://www.w3.org/2000/svg" width="264" height="348"><path d="M142.4 -186 L144.8 -204.8 L127.2 -204.8 L6 0 L35.6 0z  M164 -76.8 L60.4 -76.8 L60.4 -55.2 L164 -55.2z  M269.2 -22 L168.4 -22 L168.4 0 L269.2 0z  M164.8 -204.8 L140.4 -204.8 L148.8 0 L173.2 0z  M249.6 -115.2 L162.8 -115.2 L162.8 -93.2 L249.6 -93.2z  M260.8 -204.8 L160 -204.8 L160 -182.8 L260.8 -182.8z" transform="translate(-6 281.6)"/></svg>
 <svg id="svg-AEacute" xmlns="http://www.w3.org/2000/svg" width="264" height="348"><path d="M142.4 -186 L144.8 -204.8 L127.2 -204.8 L6 0 L35.6 0z  M164 -76.8 L60.4 -76.8 L60.4 -55.2 L164 -55.2z  M269.2 -22 L168.4 -22 L168.4 0 L269.2 0z  M164.8 -204.8 L140.4 -204.8 L148.8 0 L173.2 0z  M249.6 -115.2 L162.8 -115.2 L162.8 -93.2 L249.6 -93.2z  M260.8 -204.8 L160 -204.8 L160 -182.8 L260.8 -182.8z  M135.2 -223.2 L152.8 -223.2 L183.6 -264 L159.2 -264z" transform="translate(-6 281.6)"/></svg>
@@ -2222,37 +2210,34 @@
 <svg id="svg-zrthook" xmlns="http://www.w3.org/2000/svg" width="151" height="348"><path d="M112.8 -16.8 L112.8 19.2 C112.8 45.6 130.4 60 153.2 60 C157.6 60 163.2 59.6 166.8 58.4 L166.8 38 C164.8 38.8 161.2 38.8 159.2 38.8 C146.4 38.8 136.4 35.2 136.4 19.2 L136.4 -16.8z  M136.4 -22 L28 -22 L28 0 L136.4 0z  M134.4 -134.8 L134.4 -153.6 L120.8 -153.6 L17.6 -20 L17.6 0 L31.6 0z  M122.4 -153.6 L16 -153.6 L16 -131.6 L122.4 -131.6z" transform="translate(-16 281.6)"/></svg>
 </div><!--END-SVGS don't remove this comment-->
 
-    <div class="row intro"><div>
-      <h2 class="back"><a href="../">The Inter UI font family</a></h2>
-      <h1><a href="./">Inter UI glyphs</a></h1>
-      <p>
-        This shows the complete set of glyphs in Inter UI Regular.
-        You can zoom in and out by pressing
-        <kbd>⌘</kbd><kbd>+</kbd> and
-        <kbd>⌘</kbd><kbd>−</kbd> on your keyboard.
-        Click on a glyph to see more details about it.
-      </p>
-    </div></div>
+<div class="row intro"><div>
+  <h1><a href="./">Glyphs</a></h1>
+  <p>
+    This shows the complete set of glyphs in Inter UI Regular.
+    You can zoom in and out by pressing
+    <kbd>⌘</kbd><kbd>+</kbd> and
+    <kbd>⌘</kbd><kbd>−</kbd> on your keyboard.
+    Click on a glyph to see more details about it.
+  </p>
+</div></div>
 
-    <div id="glyphs">
-      <div id="single-info" style="display:none">
-        <ul>
-          <li>Glyph name: <span class="name"></span></li>
-          <li class="unicode">Unicode: <a><span class="unicodeCodePoint num"></span> <span class="unicodeName"></span></a></li>
-          <li>Advance width: <span class="advanceWidth num"></span></li>
-          <li>Left margin: <span class="marginLeft num"></span></li>
-          <li>Right margin: <span class="marginRight num"></span></li>
-          <li>Color mark: <span class="colorMark">&nbsp;</span></li>
-          <li><a class="svgFile">&darr; Download SVG file</a></li>
-        </ul>
-      </div>
-    </div>
+<div id="glyphs">
+  <div id="single-info" style="display:none">
+    <ul>
+      <li>Glyph name: <span class="name"></span></li>
+      <li class="unicode">Unicode: <a><span class="unicodeCodePoint num"></span> <span class="unicodeName"></span></a></li>
+      <li>Advance width: <span class="advanceWidth num"></span></li>
+      <li>Left margin: <span class="marginLeft num"></span></li>
+      <li>Right margin: <span class="marginRight num"></span></li>
+      <li>Color mark: <span class="colorMark">&nbsp;</span></li>
+      <li><a class="svgFile">&darr; Download SVG file</a></li>
+    </ul>
+  </div>
+</div>
 
-    <div class="row kerning"><div>
-      <h2 id="kerning"><a href="#kerning">Kerning</a></h2>
-      <div id="kerning-list"></div>
-    </div></div>
+<div class="row kerning"><div>
+  <h2 id="kerning"><a href="#kerning">Kerning</a></h2>
+  <div id="kerning-list"></div>
+</div></div>
 
-    <script src="glyphs.js"></script>
-  </body>
-</html>
+<script src="glyphs.js?v={{ glyphs_js_v }}"></script>

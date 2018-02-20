@@ -7,6 +7,7 @@ import os
 import sys
 import argparse
 import json
+import re
 from base64 import b64encode
 
 from fontTools import ttLib
@@ -288,6 +289,13 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
     if 'subfamilyName' in nameDict:
       info['name'] += '-' + nameDict['subfamilyName'].replace(' ', '')
 
+  if 'version' in nameDict:
+    version = nameDict['version']
+    v = re.split(r'[\s;]+', version)
+    if v and len(v) > 0:
+      version = v[0]
+    info['version'] = version
+
   if outputType is not OUTPUT_TYPE_GLYPHLIST:
     if len(nameDict):
       info['names'] = nameDict
@@ -425,7 +433,7 @@ def main():
 
   args = argparser.parse_args()
 
-  fonts = {}
+  fonts = []
   outputType = OUTPUT_TYPE_COMPLETE
   if args.asGlyphList:
     outputType = OUTPUT_TYPE_GLYPHLIST
@@ -437,7 +445,7 @@ def main():
       # internal cache that mixes up values for different fonts.
       reload(sstruct)
     font = genFontInfo(fontpath, outputType=outputType, withGlyphs=args.withGlyphs)
-    fonts[font['id']] = font
+    fonts.append(font)
     n += 1
 
   ostream = sys.stdout
@@ -447,6 +455,7 @@ def main():
 
   if args.prettyJson:
     json.dump(fonts, ostream, sort_keys=True, indent=2, separators=(',', ': '))
+    sys.stdout.write('\n')
   else:
     json.dump(fonts, ostream, separators=(',', ':'))
 
