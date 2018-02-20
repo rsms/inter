@@ -42,10 +42,13 @@ endfor
       <const>e</const><sup>(<const>c</const> × fontSize)</sup>
     </formula>
     <formula>
-      leading = <const>l</const> × fontSize
+      leading = <num>1.4</num> × fontSize
     </formula>
-    <formula title="Base of natural logarithm">
-      <const>e</const> ≈ <num>2.718</num>
+    <formula>
+      <const title="Constant a">a</const> = <num data-binding="var-a">-0.016</num> &nbsp;&nbsp;
+      <const title="Constant b">b</const> = <num data-binding="var-b">0.21</num> &nbsp;&nbsp;
+      <const title="Constant c">c</const> = <num data-binding="var-c">-0.18</num> &nbsp;&nbsp;
+      <const title="Base of natural logarithm">e</const> ≈ <num>2.718</num>
     </formula>
   </p>
   <p class="small-window">
@@ -473,8 +476,7 @@ bindings.configure('style', null, null, function (style) {
 })
 
 
-bindings.bindAllInputs('.control input')
-bindings.bindAllInputs('.control select')
+bindings.bindAllInputs('[data-binding]')
 
 // double-click base tracking to reset
 $('input[type="range"][data-binding="base-tracking"]').addEventListener(

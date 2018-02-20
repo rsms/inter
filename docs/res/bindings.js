@@ -6,6 +6,7 @@ function Binding(name){
   this.name = name
   this.value = undefined
   this.inputs = []
+  this.outputs = []
   this.listeners = []
   this.parser = undefined
   this.formatter = passThrough
@@ -30,6 +31,13 @@ Binding.prototype.addInput = function(el) {
   el.addEventListener('input', _onInput, {passive:true})
 }
 
+Binding.prototype.addOutput = function(el) {
+  this.outputs.push(el)
+  if (this.value !== undefined) {
+    el.innerText = this.formatter(this.value)
+  }
+}
+
 
 // listener signature:
 //   function(nextval string, prevval string, b Binding)void
@@ -40,7 +48,6 @@ Binding.prototype.addListener = function(listener) {
 
 
 Binding.prototype.setValue = function(nextval, origin) {
-  // console.log('Binding.setValue nextval:', nextval, {origin})
   var prevval = this.value
   if (this.parser) {
     nextval = this.parser(nextval, prevval)
@@ -50,10 +57,14 @@ Binding.prototype.setValue = function(nextval, origin) {
   }
   var binding = this
   this.value = nextval
+  var value = binding.formatter(nextval)
   this.inputs.forEach(function(input) {
     if (input.el !== origin) {
-      input.el.value = binding.formatter(nextval)
+      input.el.value = value
     }
+  })
+  this.outputs.forEach(function(el) {
+    el.innerText = value
   })
   this.listeners.forEach(function(listener) {
     listener(nextval, prevval, this)
@@ -75,23 +86,35 @@ Bindings.prototype.getBinding = function(name, input) {
 }
 
 Bindings.prototype.bindInput = function(name, input) {
-  // console.log('bindInput', name, input)
   var binding = this.getBinding(name)
   binding.addInput(input)
+}
+
+Bindings.prototype.bindOutput = function(name, el) {
+  var binding = this.getBinding(name)
+  binding.addOutput(el)
 }
 
 Bindings.prototype.bindAllInputs = function(queryOrInputElementList) {
   var bindings = this
 
-  var inputs = (
+  var elements = (
     typeof queryOrInputElementList == 'string' ? $$(queryOrInputElementList) :
     queryOrInputElementList
   )
 
-  inputs.forEach(function(input) {
-    var bindingName = input.dataset.binding
+  elements.forEach(function(el) {
+    var bindingName = el.dataset.binding
     if (bindingName) {
-      bindings.bindInput(bindingName, input)
+      if (
+        el.tagName == 'INPUT' ||
+        el.tagName == 'TEXTAREA' ||
+        el.tagName == 'SELECT'
+      ) {
+        bindings.bindInput(bindingName, el)
+      } else {
+        bindings.bindOutput(bindingName, el)
+      }
     }
   })
 }
