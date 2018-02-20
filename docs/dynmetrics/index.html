@@ -226,36 +226,12 @@ setIdealValues({
 
 
 // Variables for constants involved in Dynamic Metrics
-var a = -0.013
-// -0.0119
-// -0.0101
-// -0.0092
-// -0.012
-// -0.013
 
-var b = 0.23
-// 0.455
-// 0.421
-// 0.26
-// 0.23
-// 0.251
-
-var c = -0.21
-// -0.29
-// -0.23
-// -0.21
-// -0.222
-
-// a = -0.012; b = 0.23; c = -0.21;  // di=0.002514 on set-2018-02-18
-// a = -0.013; b = 0.251; c = -0.222 // di=0.001742 on set-2018-02-18
-// a = -0.015; b = 0.283; c = -0.23; // di=0.00221 on set-2018-02-18
-// a = -0.0149; b = 0.298; c = -0.23; // di=0.000484 on set-2018-02-19
-a = -0.016; b = 0.21; c = -0.18; // di=0.000532 on set-2018-02-20
-
-
-// these have a short di, but stray far away from larger font sizes
-// a = -0.0077
-// b = 0.377
+// var a = -0.012, b = 0.23, c = -0.21;  // di=0.002514 on set-2018-02-18
+// var a = -0.013, b = 0.251, c = -0.222 // di=0.001742 on set-2018-02-18
+// var a = -0.015, b = 0.283, c = -0.23; // di=0.00221 on set-2018-02-18
+// var a = -0.0149, b = 0.298, c = -0.23; // di=0.000484 on set-2018-02-19
+var a = -0.016, b = 0.21, c = -0.18; // di=0.000532 on set-2018-02-20
 
 var l = 1.4
 
@@ -264,9 +240,7 @@ var l = 1.4
 // the compensating tracking in EM.
 //
 function InterUIDynamicTracking(fontSize, weightClass) {
-  // if (!weightClass) { -- currently unused
-  //   weightClass = 400
-  // }
+  // Note: weightClass is currently unused
   //
   // y = -0.01021241 + 0.3720623 * e ^ (-0.2808687 * x)
   // [6-35]  0.05877 .. -0.0101309  (13==0; stops growing around 30-35)

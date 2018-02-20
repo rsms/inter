@@ -164,11 +164,9 @@ hills.
 // InterUIDynamicTracking produces tracking in EM for the given font size
 //
 function InterUIDynamicTracking(fontSize, weightClass) {
-  // if (!weightClass) { -- currently unused
-  //   weightClass = 400
-  // }
+  // Note: weightClass is currently unused
   //
-  var a = -0.0149, b = 0.298, c = -0.23;
+  var a = -0.016, b = 0.21, c = -0.18;
   return a + b * Math.pow(Math.E, (c * fontSize))
 }
 
