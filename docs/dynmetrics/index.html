@@ -30,9 +30,9 @@ endfor
   <p>
     There's of course no absolute right or wrong when it comes to expressing
     yourself with typography, but Inter UI Dynamic Metrics provides guidelines
-    for <em>good</em> typography.
-    You simply provide the optical font size, and the tracking and leading
-    (letter spacing and line height) will be calculated using the following
+    for how to best use Inter UI.
+    You simply provide the optical font size,
+    and the tracking and leading is calculated for you through the following
     formula:
   </p>
   <p>
@@ -44,31 +44,34 @@ endfor
     <formula>
       leading = <num>1.4</num> × fontSize
     </formula>
-    <formula>
-      <const title="Constant a">a</const> = <num data-binding="var-a">-0.016</num> &nbsp;&nbsp;
-      <const title="Constant b">b</const> = <num data-binding="var-b">0.21</num> &nbsp;&nbsp;
-      <const title="Constant c">c</const> = <num data-binding="var-c">-0.18</num> &nbsp;&nbsp;
-      <const title="Base of natural logarithm">e</const> ≈ <num>2.718</num>
+    <formula title="Values for Inter UI">
+      <g><const title="Constant a">a</const> = <num data-binding="var-a">-0.016</num></g> &nbsp;&nbsp;
+      <g><const title="Constant b">b</const> = <num data-binding="var-b">0.21</num></g> &nbsp;&nbsp;
+      <g><const title="Constant c">c</const> = <num data-binding="var-c">-0.18</num></g> &nbsp;&nbsp;
+      <g class="wide-window"><const title="Base of natural logarithm">e</const> ≈ <num>2.718</num></g>
     </formula>
   </p>
-  <p class="small-window">
+  <p class="wide-window">
+    The controls below can be used to play around with the
+    <const>a</const>, <const>b</const> and <const>c</const> constants to discover
+    how they affect tracking.
+  </p>
+  <p class="narrow-window">
     <small>View this on a larger screen to enable interactive control.</small>
   </p>
 </div></div>
 
-<!-- <div class="row small-window"><div>
-  Hello
-</div></div> -->
-
 <div class="white full-width row with-sidebar">
 
   <div class="samples">
-    <p contenteditable class="sample">
+    <p class="sample">
       <span class="di"><span></span></span>
       <span class="info"
         title="size, tracking, (ideal tracking) — progress bar shows distance from ideal"
       >15 &nbsp; 0.0 &nbsp; ( 0.0 )</span>
+      <span contenteditable class="content">
       Such a riot of sea and wind strews the whole extent of beach with whatever has been lost or thrown overboard, or torn out of sunken ships. Many a man has made a good week’s work in a single day by what he has found while walking along the Beach when the surf was down.
+      </span>
     </p>
   </div>
 
@@ -121,6 +124,11 @@ endfor
     </div>
     <hr class="without-bottom-margin">
     <canvas class="graphplot">Canvas not Supported</canvas>
+    
+    <hr class="when-selection without-top-margin">
+    <h3 class="when-selection">CSS</h3>
+    <textarea class="when-selection" readonly id="code-output"></textarea>
+
     <hr class="without-top-margin">
     <h3>Ideal values</h3>
     <textarea id="ideal-values"></textarea>
@@ -136,6 +144,10 @@ endfor
 // Dynamic Metrics
 var baseTracking = 0
 var weightClass = 400
+
+function round(num, prec) {
+  return parseFloat(num.toFixed(prec))
+}
 
 // Ideal values designed one by one, by hand.
 // font size => tracking
@@ -267,6 +279,7 @@ var NPOS = Number.MAX_SAFE_INTEGER
 function Sample(fontSize) {
   this.rootEl = sampleTemplate.cloneNode(true)
   this.infoEl = $('.info', this.rootEl)
+  this.contentEl = $('.content', this.rootEl)
   this.diEl = $('.di', this.rootEl)
   this.diEl.classList.add('unavailable')
   this.style = this.rootEl.style
@@ -278,7 +291,23 @@ function Sample(fontSize) {
   this.matchesIdeal = false
   this.setFontSize(fontSize)
   this.render()
+
+  // listen for focus events on the editable content
+  var s = this
+  this.contentEl.addEventListener(
+    'focus',
+    function(){ s.onReceivedFocus() },
+    {passive:true, capture:false}
+  )
+  this.contentEl.addEventListener(
+    'blur',
+    function(){ s.onLostFocus() },
+    {passive:true, capture:false}
+  )
 }
+
+Sample.prototype.onReceivedFocus = function() {}
+Sample.prototype.onLostFocus = function() {}
 
 Sample.prototype.idealDistance = function(fontSize) {
   // returns the distance from the ideal (or NPOS if no "ideal" data available)
@@ -322,6 +351,14 @@ Sample.prototype.setFontSize = function(fontSize) {
   }
 }
 
+Sample.prototype.cssProperties = function() {
+  return {
+    fontSize:      round(this.fontSize, 3) + 'px',
+    letterSpacing: round(this.tracking, 3) + 'em',
+    lineHeight:    round(this.lineHeight, 3) + 'px',
+  }
+}
+
 Sample.prototype.render = function() {
   this.style.fontSize = this.fontSize + 'px'
   this.style.letterSpacing = this.tracking + 'em'
@@ -346,8 +383,10 @@ Sample.prototype.render = function() {
 
 
 var bindings = new Bindings()
+var samplesEl = $('.samples')
 var sampleTemplate
 var samples = [] // Sample[]
+var focusedSample = null // Sample | null
 var graph = new GraphPlot($('canvas.graphplot'))
 graph.setOrigin(-0.2, 0.8)
 graph.setScale(0.049, 5)
@@ -362,7 +401,6 @@ function addChildren(targetNode, children) {
 }
 
 function initSamples() {
-  var samplesEl = $('.samples')
   sampleTemplate = $('.sample', samplesEl)
   samplesEl.removeChild(sampleTemplate)
 
@@ -380,10 +418,28 @@ function initSamples() {
   samples.push(new Sample(30))
   samples.push(new Sample(40))
 
+  // connect focus events
+  var onSampleReceivedFocus = function() { setSelectedSample(this) }
+  samples.forEach(function(s) {
+    s.onReceivedFocus = onSampleReceivedFocus
+  })
+
   // add to dom in one go
   addChildren(samplesEl, samples.map(function(s) { return s.rootEl }))
 }
 
+function setSelectedSample(sample) {
+  if (focusedSample !== sample) {
+    if (focusedSample) {
+      focusedSample.rootEl.classList.remove('selected')
+    }
+    if (sample) {
+      sample.rootEl.classList.add('selected')
+    }
+    focusedSample = sample
+    updateSelection()
+  }
+}
 
 function updateSample(sample) {
   sample.setFontSize(sample.fontSize) // updates derived values
@@ -394,6 +450,7 @@ function updateSamples() {
   samples.forEach(updateSample)
   updateIdealMatches()
   updateGraphPlot()
+  updateCodeView()
 }
 
 function updateIdealMatches() {
@@ -424,6 +481,46 @@ function updateGraphPlot() {
   graph.plotf(function(x) {
     return InterUIDynamicTracking(x, weightClass)
   })
+  if (focusedSample) {
+    var graphedFontSize = Math.min(24, focusedSample.fontSize) // clamp to [-inf,24]
+    graph.plotPoints([
+      [graphedFontSize, focusedSample.tracking]
+    ], 'rgb(45, 143, 255)')
+  }
+}
+
+var codeOutput = $('#code-output')
+codeOutput.addEventListener('focus', function(ev) {
+  ev.preventDefault()
+  ev.stopPropagation()
+  codeOutput.select()
+}, {passive:false,capture:true})
+
+function updateCodeView() {
+  var s = ''
+  if (focusedSample) {
+    var cssprops = focusedSample.cssProperties()
+    var props = Object.keys(cssprops)
+    props.forEach(function(prop, i) {
+      s += prop + ': ' + cssprops[prop] + ';'
+      if (i != props.length-1) {
+        s += '\n'
+      }
+    })
+  }
+  codeOutput.value = s
+}
+
+function updateSelection() {
+  var controlsEl = $('.controls')
+  if (focusedSample) {
+    controlsEl.classList.add('has-selected-sample')
+  } else {
+    controlsEl.classList.remove('has-selected-sample')
+  }
+
+  updateGraphPlot()
+  updateCodeView()
 }
 
 
@@ -456,7 +553,7 @@ bindings.configure('ideal-count', 0, 'int', function (v) {})
 bindings.configure('ideal-distance', 0, 'float', function (v) {})
 
 bindings.configure('style', null, null, function (style) {
-  var cl = $('.samples').classList
+  var cl = samplesEl.classList
   cl.remove('font-style-regular')
   cl.remove('font-style-italic')
   cl.remove('font-style-medium')
@@ -488,6 +585,17 @@ $('input[type="range"][data-binding="base-tracking"]').addEventListener(
 idealValuesTextArea.addEventListener('input', function(ev) {
   setIdealValues(parseValues(idealValuesTextArea.value))
   updateSamples()
+})
+
+// listen for clicks onto "background", to deselect any selected sample
+document.body.addEventListener('pointerdown', function(ev){
+  if (
+    ev.target === document.body ||
+    ev.target === samplesEl ||
+    ev.target.classList && ev.target.classList.contains('row')
+  ) {
+    setSelectedSample(null)
+  }
 })
 
 

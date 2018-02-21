@@ -470,8 +470,14 @@ box h3 {
 
 /* ------------------------------------------------------ */
 
+/* wide windows */
+@media only screen and (min-width: 566px) {
+  .narrow-window { display: none; }
+}
+
 /* narrow windows */
 @media only screen and (max-width: 565px) {
+  .wide-window { display: none; }
   .row.menu ul {
     justify-content: space-between;
   }

@@ -34,6 +34,7 @@ formula {
   overflow: hidden;
   margin-right: 1em;
   margin-bottom: 1em;
+  white-space: nowrap;
 }
 .row.white formula {
   background: #f5f5f5;
@@ -49,6 +50,9 @@ formula.code {
   formula > * {
     margin: 0 0.2em 0 0.2em;
   }
+  formula > g {
+    display: inline-block;
+  }
   formula > const {
     margin-bottom: 0.11em;
   }
@@ -63,17 +67,28 @@ formula.code {
   overflow: auto;
   overflow-wrap: break-word;
   word-break: break-word;
+  padding: 50px 0 0 50px; /* note: samples have 50px right margin */
 }
   .samples .sample {
-    /*background: lightpink;*/
     color: #111;
     flex: 0 1 auto;
     outline: none;
     margin-right: 50px;
     margin-bottom: 50px;
   }
-  .samples .sample .di {
+  .samples .sample > * {
     display: block;
+    outline: none;
+  }
+  .samples .sample .content {
+    padding-left: 10px;
+    border-left: 2px solid transparent;
+    margin-left: -12px;
+  }
+  .samples .sample.selected .content {
+    border-left-color: rgb(45, 143, 255);
+  }
+  .samples .sample .di {
     background-color: #ccc;
     height: 1px;
     width: 100%;
@@ -118,7 +133,6 @@ formula.code {
 }
   .row.with-sidebar > *:first-child {
     flex: 1 1 auto;
-    padding: 50px 0 0 50px; /* note: samples have 50px right margin */
   }
   .row.with-sidebar > .sidebar {
     flex: 0 0 auto;
@@ -159,9 +173,17 @@ div.controls > h3 {
 div.controls > textarea {
   border: none;
   padding:16px;
-  height: 400px;
+  height: 220px;
   font-family: "SFMono-Regular", Menlo, Consolas, Inconsolata, monospace;
   outline: none;
+  resize: vertical;
+  color: #999;
+}
+div.controls > textarea:focus {
+  color: inherit;
+}
+div.controls textarea#code-output {
+  height: 50px;
 }
 div.controls .control > * {
   /*max-width: 50%;*/
@@ -229,20 +251,19 @@ div.controls .control > label {
 div.controls canvas {
   height: 200px;
 }
+div.controls .when-selection {
+  display: none;
+}
+div.controls.has-selected-sample .when-selection {
+  display: block;
+}
 
-.row.small-window {
+.row.narrow-window {
   margin-top:0;
   padding-top:0;
 }
 
-@media only screen and (min-width: 541px) {
-  .small-window {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 540px) {
-  
+@media only screen and (max-width: 565px) {
   .row.with-sidebar {
     overflow: auto;
   }
@@ -250,15 +271,16 @@ div.controls canvas {
   div.controls {
     display: none;
   }
-    div.controls .graphplot,
-    div.controls hr.without-top-margin,
-    div.controls h3,
-    div.controls #ideal-values
-    {
-      display: none;
-    }
 
   .row.with-sidebar {
     flex-direction: column;
+  }
+}
+
+/* small devices (<= iPhone 6+) */
+@media only screen and (max-device-width: 414px) {
+  .samples {
+    padding-left: 20px;
+    padding-right: 50px;
   }
 }
