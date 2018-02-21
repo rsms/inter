@@ -39,16 +39,16 @@ endfor
     <formula>
       tracking =
       <const>a</const> + <const>b</const> ×
-      <const>e</const><sup>(<const>c</const> × fontSize)</sup>
+      <const title="Base of natural logarithm; ≈2.718">e</const><sup>(<const>c</const> × <const>z</const>)</sup>
     </formula>
     <formula>
-      leading = <num>1.4</num> × fontSize
+      leading = round(<num data-binding="var-l">1.4</num> × <const>z</const>)
     </formula>
     <formula title="Values for Inter UI">
       <g><const title="Constant a">a</const> = <num data-binding="var-a">-0.016</num></g> &nbsp;&nbsp;
       <g><const title="Constant b">b</const> = <num data-binding="var-b">0.21</num></g> &nbsp;&nbsp;
       <g><const title="Constant c">c</const> = <num data-binding="var-c">-0.18</num></g> &nbsp;&nbsp;
-      <g class="wide-window"><const title="Base of natural logarithm">e</const> ≈ <num>2.718</num></g>
+      <g><const>z</const> = font size</g>
     </formula>
   </p>
   <p class="wide-window">
@@ -251,10 +251,10 @@ var a = -0.016, b = 0.21, c = -0.18; // di=0.000532 on set-2018-02-20
 var l = 1.4
 
 
-// InterUIDynamicTracking takes the font size in points or pixels and returns
-// the compensating tracking in EM.
+// _InterUIDynamicTracking is a version of InterUIDynamicTracking that
+// uses some global variables that are adjustable.
 //
-function InterUIDynamicTracking(fontSize, weightClass) {
+function _InterUIDynamicTracking(fontSize, weightClass) {
   // Note: weightClass is currently unused
   //
   // y = -0.01021241 + 0.3720623 * e ^ (-0.2808687 * x)
@@ -263,7 +263,7 @@ function InterUIDynamicTracking(fontSize, weightClass) {
   //
   return a + b * Math.pow(Math.E, c * fontSize)
   // [6 - 38]  0.05798 .. -0.01099  (midpoint = 12.533)
-
+  //
   // y = 0.025 - (ln(x) * 0.01)
   // return 0.025 - Math.log(fontSize) * 0.01
 }
@@ -322,7 +322,7 @@ Sample.prototype.idealDistance = function(fontSize) {
 
 Sample.prototype.setFontSize = function(fontSize) {
   this.fontSize = fontSize
-  this.tracking = baseTracking + InterUIDynamicTracking(fontSize, weightClass)
+  this.tracking = baseTracking + _InterUIDynamicTracking(fontSize, weightClass)
   this.lineHeight = InterUIDynamicLineHeight(fontSize, weightClass)
   this.maxBoxWidth = Math.round(fontSize * (this.tracking + 1) * 25)
 
@@ -352,11 +352,11 @@ Sample.prototype.setFontSize = function(fontSize) {
 }
 
 Sample.prototype.cssProperties = function() {
-  return {
-    fontSize:      round(this.fontSize, 3) + 'px',
-    letterSpacing: round(this.tracking, 3) + 'em',
-    lineHeight:    round(this.lineHeight, 3) + 'px',
-  }
+  return [
+    ['font-size',      round(this.fontSize, 3) + 'px'],
+    ['letter-spacing', round(this.tracking, 3) + 'em'],
+    ['line-height',    round(this.lineHeight, 3) + 'px'],
+  ]
 }
 
 Sample.prototype.render = function() {
@@ -479,7 +479,7 @@ function updateGraphPlot() {
   graph.clear()
   graph.plotLine(idealValuesList, '#0d3')
   graph.plotf(function(x) {
-    return InterUIDynamicTracking(x, weightClass)
+    return _InterUIDynamicTracking(x, weightClass)
   })
   if (focusedSample) {
     var graphedFontSize = Math.min(24, focusedSample.fontSize) // clamp to [-inf,24]
@@ -496,13 +496,22 @@ codeOutput.addEventListener('focus', function(ev) {
   codeOutput.select()
 }, {passive:false,capture:true})
 
+codeOutput.addEventListener('pointerdown', function(ev) {
+  // TODO: don't do this if codeOutput is focused
+  ev.preventDefault()
+  ev.stopPropagation()
+  codeOutput.select()
+  document.execCommand("copy")
+  HUDNotification.show('Copied to clipboard')
+}, {passive:false,capture:true})
+
 function updateCodeView() {
   var s = ''
   if (focusedSample) {
-    var cssprops = focusedSample.cssProperties()
-    var props = Object.keys(cssprops)
+    var props = focusedSample.cssProperties()
     props.forEach(function(prop, i) {
-      s += prop + ': ' + cssprops[prop] + ';'
+      var name = prop[0], value = prop[1]
+      s += name + ': ' + value + ';'
       if (i != props.length-1) {
         s += '\n'
       }

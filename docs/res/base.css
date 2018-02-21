@@ -269,8 +269,8 @@ h1 > a, h2 > a, h3 > a {
   color: #aaa;
 }
 .row.dark a:hover {
-  color: rgba(160, 190, 255, 1);
-  text-decoration: underline rgba(164, 188, 255, 0.6);
+  color: rgb(95, 170, 255);
+  text-decoration: underline rgb(95, 170, 255);
 }
 .row.dark h2, .row.dark h2 > a {
   color: #ccc;
@@ -466,6 +466,35 @@ box:first-child {
 box h3 {
   margin-bottom:0.8em;
 }
+
+#hud-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 9;
+  pointer-events: none;
+}
+  #hud-notification .msg {
+    background: #000;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    letter-spacing: -0.012em;
+    padding: 0 0.7em;
+    border-radius: 4px;
+    opacity: 0.1;
+    transition: 250ms all ease-in;
+    transform: translate3d(0, 71px, 0); /* height + bottom offset + 1 */
+  }
+  #hud-notification.visible .msg {
+    transform: translate3d(0, 0, 0);
+    transition: 120ms all cubic-bezier(0.25, 0.47, 0.44, 0.93);
+    opacity: 1;
+  }
 
 
 /* ------------------------------------------------------ */

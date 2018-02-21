@@ -1,6 +1,23 @@
 ---
 layout: default
 ---
+{%
+
+capture url_root
+  %}{% if site.safe == false %}/{% else %}/inter/{% endif
+%}{%
+endcapture %}{%
+
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/index.css" %}{%
+    assign index_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor
+
+%}
+<link rel="stylesheet" href="index.css?v={{ index_css_v }}">
+<input type="text" id="hidden-text-input">
 
 <div class="row"><div>
   <h1>The Inter UI font family</h1>
@@ -46,8 +63,17 @@ layout: default
   <p>&nbsp;</p>
 
   <h2><a href="{{url_root}}dynmetrics/">Dynamic Metrics</a></h2>
+  <p class="dynmet-calc">
+    Font size
+    <input id="dynmet-font-size" type="number" value="12"
+    ><span title='Display points — "px" in CSS, "pt" on iOS, "sp" on Android, and "pt" (1/72 of an inch) in print'>dp</span>
+    <span class="arrow">—></span>
+    letter spacing
+    <input id="dynmet-tracking" type="number" value="0.008">
+    <span id="dynmet-unit">em</span>
+  </p>
   <p>
-    There's of course no absolute right or wrong when it comes to expressing yourself with typography, but Inter UI <em>Dynamic Metrics</em> provides guidelines for good typography. You simply provide the optical font size, and the tracking and leading is calculated for you to produce the best results.
+    There's of course no absolute right or wrong when it comes to expressing yourself with typography, but Inter UI <em>Dynamic Metrics</em> provides guidelines for good typography. You simply provide the optical font size, and the tracking and leading is calculated for you to produce the best results.<br>
     <a href="{{url_root}}dynmetrics/">Learn about Dynamic Metrics —></a>
   </p>
 
@@ -297,30 +323,124 @@ layout: default
   — <a href="https://twitter.com/rsms" class="plain">@rsms</a>
 </div></div>
 
-<script>(function(){
+<script>
 
-  // FAQ anchors
-  var av = document.querySelectorAll('ul.faq > li.q'), a, i, e, id, tn
-  for (i = 0; i < av.length; ++i) {
-    e = av[i]
-    tn = document.createTextNode('Q  ')
-    e.insertBefore(tn, e.firstChild)
-    id = e.id
-    if (id) {
-      a = document.createElement('a')
-      // a.id = id
-      a.href = '#' + id
-      a.className = 'plain'
-      a.innerHTML = e.innerHTML
-      e.innerText = ''
-      e.appendChild(a)
+// FAQ anchors
+(function(){
+
+var av = document.querySelectorAll('ul.faq > li.q'), a, i, e, id, tn
+for (i = 0; i < av.length; ++i) {
+  e = av[i]
+  tn = document.createTextNode('Q  ')
+  e.insertBefore(tn, e.firstChild)
+  id = e.id
+  if (id) {
+    a = document.createElement('a')
+    // a.id = id
+    a.href = '#' + id
+    a.className = 'plain'
+    a.innerHTML = e.innerHTML
+    e.innerText = ''
+    e.appendChild(a)
+  }
+}
+av = document.querySelectorAll('ul.faq > li.a')
+for (i = 0; i < av.length; ++i) {
+  e = av[i]
+  tn = document.createTextNode('A  ')
+  e.insertBefore(tn, e.firstChild)
+}
+
+})();
+
+
+// dynamic metrics calculator
+(function(){
+
+var hiddenTextInput = $('#hidden-text-input')
+var fontSizeEl = $('#dynmet-font-size')
+var trackingEl = $('#dynmet-tracking')
+var unitEl = $('#dynmet-unit')
+
+var unitFormatters = [
+  ['em', 'em', function(fontSize, tracking) {
+    return tracking.toFixed(3)
+  }],
+  ['px', 'px', function(fontSize, tracking) {
+    return (fontSize * tracking).toFixed(3)
+  }],
+  ['%', 'percent', function(fontSize, tracking) {
+    return (tracking * 100).toFixed(1)
+  }],
+]
+var unitFormatter = unitFormatters[0][2]
+
+function updateTracking() {
+  var fontSize = parseFloat(fontSizeEl.value)
+  if (isNaN(fontSize) || fontSize < 1) {
+    fontSizeEl.value = fontSize = 1
+  } else if (fontSize > 999) {
+    fontSizeEl.value = fontSize = 999
+  }
+  var tracking = InterUIDynamicTracking(fontSize)
+  trackingEl.value = unitFormatter(fontSize, tracking)
+}
+
+function toggleUnit() {
+  var unit = unitEl.innerText
+  var u, x = -1
+  for (var i = 0; i < unitFormatters.length; i++) {
+    if (x == -1) {
+      u = unitFormatters[i]
+      if (u[0] == unit) {
+        x = i + 1
+        if (x == unitFormatters.length) {
+          x = 0
+        }
+        u = unitFormatters[x]
+      }
     }
+    trackingEl.classList.remove(unitFormatters[i][1]) // class name
   }
-  av = document.querySelectorAll('ul.faq > li.a')
-  for (i = 0; i < av.length; ++i) {
-    e = av[i]
-    tn = document.createTextNode('A  ')
-    e.insertBefore(tn, e.firstChild)
+  unit = u[0]
+  trackingEl.classList.add(u[1])
+  unitFormatter = u[2]
+  unitEl.innerText = unit
+  updateTracking()
+}
+
+function onPointerdownUnit(ev) {
+  toggleUnit()
+  if (ev) {
+    ev.preventDefault()
+    ev.stopPropagation()
   }
+}
+
+function onPointerdownTracking(ev) {
+  if (ev) {
+    ev.preventDefault()
+    ev.stopPropagation()
+  }
+  hiddenTextInput.value = trackingEl.value + unitEl.innerText
+  hiddenTextInput.select()
+  document.execCommand("copy")
+  trackingEl.select()
+  HUDNotification.show('Copied to clipboard')
+}
+
+var passiveListener = { passive: true, capture: false }
+var activeListener = { capture: true }
+
+fontSizeEl.addEventListener('input', updateTracking, passiveListener)
+fontSizeEl.addEventListener('change', updateTracking, passiveListener)
+
+unitEl.addEventListener('pointerdown', onPointerdownUnit, activeListener)
+unitEl.addEventListener('mousedown', onPointerdownUnit, activeListener)
+
+trackingEl.addEventListener('pointerdown', onPointerdownTracking, activeListener)
+trackingEl.addEventListener('mousedown', onPointerdownTracking, activeListener)
+
+updateTracking()
 
 })();</script>

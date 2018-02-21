@@ -48,6 +48,44 @@ var timeNow = (
 )
 
 
+var HUDNotification = {
+  el: $('#hud-notification'),
+  timer: null,
+  visible: false,
+
+  show: function(message, duration) {
+    var n = this
+    n.el.firstChild.innerText = message
+    n.el.classList.add('visible')
+    if (n.visible) {
+      n.hide()
+      setTimeout(function(){ n.show(message, duration) }, 120)
+      return
+    }
+    n.visible = true
+    clearTimeout(n.timer)
+    n.timer = setTimeout(function(){ n.hide() }, duration || 1200)
+  },
+
+  hide: function() {
+    var n = this
+    if (n.visible) {
+      n.el.classList.remove('visible')
+      n.visible = false
+    }
+  }
+}
+
+
+// InterUIDynamicTracking takes the font size in points or pixels and returns
+// the compensating tracking in EM.
+//
+function InterUIDynamicTracking(fontSize) {
+  // tracking = a + b * e ^ (c * fontSize)
+  return -0.016 + 0.21 * Math.pow(Math.E, -0.18 * fontSize)
+}
+
+
 // Mac or not? Maybe even a buggy Safari?
 var isMac = false
 if (!window.MSStream &&
