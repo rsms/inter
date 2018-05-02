@@ -13,12 +13,15 @@ tabular numbers, etc.
 
 ### [⬇︎ Download the latest release](https://github.com/rsms/inter/releases)
 
+### Windows and Mac Users
 After downloading the zip from above:
 
 1. Double-click the downloaded zip file to unpack or open it.
 2. Follow the instructions in "install-mac.txt" or "install-win.txt", depending
    on what operating system you're using.
 
+### Linux Users
+For Arch Linux users, [a package is available in the AUR](https://aur.archlinux.org/packages/ttf-inter-ui/).
 
 ## Design
 
