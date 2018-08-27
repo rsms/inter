@@ -9,7 +9,7 @@ like contextual alternates that adjusts punctuation depending on the shape of
 surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o",
 tabular numbers, etc.
 
-![Sample](docs/res/sample.png)
+[![Sample](docs/res/sample.png)](https://rsms.me/inter/samples/)
 
 ### [⬇︎ Download the latest release](https://github.com/rsms/inter/releases)
 
