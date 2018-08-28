@@ -31,8 +31,13 @@ else
   if [[ "$1" == "-h" ]] || [[ "$1" == "-help" ]] || [[ "$1" == "--help" ]]; then
     echo "usage: $0 [options]" >&2
     echo "options:" >&2
-    echo "  -f  Force generation of build/etc/generated.make" >&2
+    echo "  -clean  Start from scratch" >&2
     exit 1
+  fi
+
+  clean=false
+  if [[ "$1" == "-clean" ]]; then
+    clean=true
   fi
 
   # ————————————————————————————————————————————————————————————————————————————————————————————————
@@ -50,19 +55,41 @@ else
     VENV_ACTIVE=true
   fi
 
-  if ! (which virtualenv >/dev/null); then
-    echo "$0: Can't find virtualenv in PATH -- install through 'pip install --user virtualenv'" >&2
-    exit 1
-  fi
+  require_virtualenv() {
+    # find pip
+    export pip=$(which pip2)
+    if [ "$pip" = "" ]; then
+      export pip=$(which pip)
+    fi
+    echo "using pip: $pip $(pip --version)"
+    if [ "$pip" = "" ]; then
+      echo "Pip for Python 2 not found (tried pip and pip2 in PATH)" >&2
+      exit 1
+    elif ! ($pip --version 2>&1 | grep -q 'ython 2'); then
+      echo "Pip for Python 2 not found (found pip for different python version)" >&2
+      exit 1
+    fi
+    # find virtualenv
+    if ! ($pip show virtualenv >/dev/null); then
+      echo "$0: Can't find virtualenv -- install through '$pip install --user virtualenv'" >&2
+      exit 1
+    fi
+    virtualenv_pkgdir=$($pip show virtualenv | grep Location | cut -d ' ' -f 2)
+    export virtualenv="$(dirname "$(dirname "$(dirname "$virtualenv_pkgdir")")")/bin/virtualenv"
+    echo "using virtualenv: $virtualenv"
+  }
+
+  # TODO: allow setting a flag to recreate venv
+  # rm -rf "$VENV_DIR"
 
   if [[ ! -d "$VENV_DIR/bin" ]]; then
     echo "Setting up virtualenv in '$VENV_DIR'"
-    virtualenv "$VENV_DIR"
-  else
-    if [[ ! -z $VIRTUAL_ENV ]] && [[ "$VIRTUAL_ENV" != "$VENV_DIR_ABS" ]]; then
-      echo "Looks like the repository has moved location -- updating virtualenv"
-      virtualenv "$VENV_DIR"
-    fi
+    require_virtualenv
+    $virtualenv "$VENV_DIR"
+  elif [[ ! -z $VIRTUAL_ENV ]] && [[ "$VIRTUAL_ENV" != "$VENV_DIR_ABS" ]]; then
+    echo "Looks like the repository has moved location -- updating virtualenv"
+    require_virtualenv
+    $virtualenv "$VENV_DIR"
   fi
 
   source "$VENV_DIR/bin/activate"
@@ -162,8 +189,17 @@ else
     DIR=$1
     REF_FILE=$DIR/$2
     set -e
-    if [ ! -f "$REF_FILE" ] || has_newer "$DIR" "$REF_FILE"; then
+    if $clean || [ ! -f "$REF_FILE" ] || has_newer "$DIR" "$REF_FILE"; then
       pushd "$DIR" >/dev/null
+      if $clean; then
+        find . \
+          -type f \
+          -name '*.c' -or \
+          -name '*.o' -or \
+          -name '*.pyc' -or \
+          -name '*.pyo' \
+          | xargs rm
+      fi
       if [ -f requirements.txt ]; then
         pip install -r requirements.txt
       fi
@@ -184,6 +220,10 @@ else
   # create and mount spare disk image needed on macOS to support case-sensitive filenames
   if [[ "$(uname)" = *Darwin* ]]; then
     bash misc/mac-tmp-disk-mount.sh
+    if $clean; then
+      echo "[clean] rm -rf '$BUILD_TMP_DIR'/*"
+      rm -rf "$BUILD_TMP_DIR"/*
+    fi
   else
     mkdir -p "$BUILD_TMP_DIR"
   fi
@@ -209,9 +249,7 @@ else
 
   # Only generate if there are changes to the font sources
   NEED_GENERATE=false
-  if [[ "$1" == "-f" ]]; then
-    NEED_GENERATE=true
-  elif [[ ! -f "$GEN_MAKE_FILE" ]] || [[ "$0" -nt "$GEN_MAKE_FILE" ]]; then
+  if $clean || [[ ! -f "$GEN_MAKE_FILE" ]] || [[ "$0" -nt "$GEN_MAKE_FILE" ]]; then
     NEED_GENERATE=true
   else
     for style in "${master_styles[@]}"; do
