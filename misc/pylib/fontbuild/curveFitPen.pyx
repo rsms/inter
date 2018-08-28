@@ -339,7 +339,7 @@ def fitBezierSimple(pts):
     T = T.dot(M)
     T = np.concatenate((T, np.array([[100,0,0,0], [0,0,0,100]])))
     # pts = np.vstack((pts, pts[0] * 100, pts[-1] * 100))
-    C = np.linalg.lstsq(T, pts)
+    C = np.linalg.lstsq(T, pts, rcond=-1)
     return C[0]
 
 
@@ -388,7 +388,7 @@ def fitBezier(pts, tangent0=None, tangent3=None):
                             ])
         TT = np.concatenate((TT, tangentConstraintsT * 1000))
         pout = np.concatenate((pout, tangentConstraintsP * 1000))
-    C = np.linalg.lstsq(TT,pout)[0].reshape((2,2))
+    C = np.linalg.lstsq(TT,pout)[0].reshape((2,2), rcond=-1)
     return np.array([pts[0], C[0], C[1], pts[-1]])
 
 
