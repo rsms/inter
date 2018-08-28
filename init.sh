@@ -80,7 +80,9 @@ else
   }
 
   # TODO: allow setting a flag to recreate venv
-  # rm -rf "$VENV_DIR"
+  if $clean; then
+    rm -rf "$VENV_DIR"
+  fi
 
   if [[ ! -d "$VENV_DIR/bin" ]]; then
     echo "Setting up virtualenv in '$VENV_DIR'"
@@ -96,11 +98,13 @@ else
 
   UPDATE_TIMESTAMP_FILE="$VENV_DIR/last-pip-run.mark"
   REQUIREMENTS_FILE=$SRCDIR/requirements.txt
+  PY_REQUIREMENTS_CHANGED=false
 
   if [ "$REQUIREMENTS_FILE" -nt "$UPDATE_TIMESTAMP_FILE" ]; then
     echo "pip install -r $REQUIREMENTS_FILE"
     pip install -r "$REQUIREMENTS_FILE"
     date '+%s' > "$UPDATE_TIMESTAMP_FILE"
+    PY_REQUIREMENTS_CHANGED=true
   fi
 
   # ————————————————————————————————————————————————————————————————————————————————————————————————
@@ -189,7 +193,7 @@ else
     DIR=$1
     REF_FILE=$DIR/$2
     set -e
-    if $clean || [ ! -f "$REF_FILE" ] || has_newer "$DIR" "$REF_FILE"; then
+    if $clean || $PY_REQUIREMENTS_CHANGED || [ ! -f "$REF_FILE" ] || has_newer "$DIR" "$REF_FILE"; then
       pushd "$DIR" >/dev/null
       if $clean; then
         find . \
@@ -206,6 +210,7 @@ else
       python setup.py build_ext --inplace
       popd >/dev/null
       touch "$REF_FILE"
+      PY_REQUIREMENTS_CHANGED=true
     fi
   }
 

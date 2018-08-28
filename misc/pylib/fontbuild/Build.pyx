@@ -17,6 +17,7 @@ import ConfigParser
 import os
 import sys
 import math
+import warnings
 
 from booleanOperations import BooleanOperationManager
 
@@ -339,14 +340,19 @@ def removeGlyphOverlap(g):
 
 def saveOTF(font, destFile, glyphOrder, truetype=False):
     """Save a RoboFab font as an OTF binary using ufo2fdk."""
-
-    if truetype:
-        otf = compileTTF(font, featureCompilerClass=RobotoFeatureCompiler,
-                   kernWriter=RobotoKernWriter, glyphOrder=glyphOrder,
-                   convertCubics=False,
-                   useProductionNames=False)
-    else:
-        otf = compileOTF(font, featureCompilerClass=RobotoFeatureCompiler,
-                   kernWriter=RobotoKernWriter, glyphOrder=glyphOrder,
-                   useProductionNames=False)
-    otf.save(destFile)
+    with warnings.catch_warnings():
+        # Note: ignore warnings produced by compreffor, used by ufo2ft:
+        #   'Compreffor' class is deprecated; use 'compress' function instead
+        # which is triggered by ufo2ft which we can't update because newer
+        # versions completely break the API of ufo2ft.
+        warnings.simplefilter("ignore")
+        if truetype:
+            otf = compileTTF(font, featureCompilerClass=RobotoFeatureCompiler,
+                       kernWriter=RobotoKernWriter, glyphOrder=glyphOrder,
+                       convertCubics=False,
+                       useProductionNames=False)
+        else:
+            otf = compileOTF(font, featureCompilerClass=RobotoFeatureCompiler,
+                       kernWriter=RobotoKernWriter, glyphOrder=glyphOrder,
+                       useProductionNames=False)
+        otf.save(destFile)

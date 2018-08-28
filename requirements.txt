@@ -1,13 +1,13 @@
-Cython==0.26.1
-compreffor==0.3.0
-cu2qu==1.2.0
-git+https://github.com/typesupply/feaTools.git@8fc73f8ad5523cb6d9e0c8ac966eeb5dab5f7f49
-fonttools==3.15.1
-freetype-py==1.0.2
-git+https://github.com/googlei18n/nototools@8db437b21de59b2d7aba30429c60a78f3e853caa
-numpy==1.11.2rc1
-pyclipper==1.0.6
-scipy==0.18.1
+compreffor==0.4.6.post1
+cu2qu==1.5.0
+Cython==0.27.3
+defcon==0.5.2
+fonttools==3.29.0
+freetype-py==2.0.0.post6
+git+https://github.com/googlei18n/nototools@40aa4936022295cf851bb62f09a070f63fc8f5ae
 git+https://github.com/googlei18n/ufo2ft.git@6184b1493bc4afc6969bd2516d02f3f616cb5484
-ufoLib==2.0.0
-defcon==0.3.5
+git+https://github.com/typesupply/feaTools.git@8fc73f8ad5523cb6d9e0c8ac966eeb5dab5f7f49
+numpy==1.15.1
+pyclipper==1.0.6  # note: 1.1.0 is problematic
+scipy==1.1.0
+ufoLib==2.3.1

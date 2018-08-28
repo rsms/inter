@@ -16,9 +16,15 @@
 from numpy import array, append
 import copy
 import json
-from robofab.objects.objectsRF import RPoint, RGlyph
+from robofab.objects.objectsRF import RGlyph
 from robofab.world import OpenFont
 from decomposeGlyph import decomposeGlyph
+
+
+class Vec2:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
 
 class FFont:
@@ -230,7 +236,7 @@ class Master:
             self.font = font
             self.ffont = FFont(font)
         if isinstance(v,float) or isinstance(v,int):
-            self.v = RPoint(v, v)
+            self.v = Vec2(v, v)
         else:
             self.v = v
         if kernlist != None:
@@ -263,7 +269,7 @@ class Mix:
     def __init__(self,masters,v):
         self.masters = masters
         if isinstance(v,float) or isinstance(v,int):
-            self.v = RPoint(v,v)
+            self.v = Vec2(v,v)
         else:
             self.v = v
     
