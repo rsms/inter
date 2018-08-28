@@ -388,7 +388,7 @@ def fitBezier(pts, tangent0=None, tangent3=None):
                             ])
         TT = np.concatenate((TT, tangentConstraintsT * 1000))
         pout = np.concatenate((pout, tangentConstraintsP * 1000))
-    C = np.linalg.lstsq(TT,pout)[0].reshape((2,2), rcond=-1)
+    C = np.linalg.lstsq(TT, pout, rcond=-1)[0].reshape((2,2))
     return np.array([pts[0], C[0], C[1], pts[-1]])
 
 
