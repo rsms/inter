@@ -243,8 +243,8 @@ else
     "Italic         : Regular" \
     "Medium         : Regular Black" \
     "MediumItalic   : Regular Black" \
-    "Bold           : Black" \
-    "BoldItalic     : Black" \
+    "Bold           : Regular Black" \
+    "BoldItalic     : Regular Black" \
     "BlackItalic    : Regular Black" \
   )
   web_formats=( woff woff2 )  # Disabled/unused: eot
@@ -252,7 +252,7 @@ else
   mkdir -p "$BUILD_DIR/etc"
   GEN_MAKE_FILE=$BUILD_DIR/etc/generated.make
 
-  # Only generate if there are changes to the font sources
+  # Only generate if there are changes to the font sources or init.sh
   NEED_GENERATE=false
   if $clean || [[ ! -f "$GEN_MAKE_FILE" ]] || [[ "$0" -nt "$GEN_MAKE_FILE" ]]; then
     NEED_GENERATE=true
