@@ -153,11 +153,16 @@ A*Y V*V W*W N*N X*X
 Λ*Λ Σ*Σ Δ*Δ Y*Y &*
 
 calt case should cascade:
-U() U[] U{}  — rightx should be rightx.case
-()U []U {}U  — special-cased as "delim' delim -> delim.case"
-U---  — all hyphens should be hyphen.case
----U  — only the hyphen next to U should be hyphen.case
-U-→(){}[]*
+U() U[] U{}   rightx should be rightx.case
+()U []U {}U   special-cased as "delim' delim -> delim.case"
+---U---  all hyphens should be hyphen.case
+U-→(){}[]*  all should be .case
+
+left side cascades up to 5 characters:
+******ABBA******
+------M------
+@@@@@@M@@@@@@
+++++++M++++++
 `)
 
 // From http://justanotherfoundry.com/generator

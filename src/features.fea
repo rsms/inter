@@ -715,9 +715,18 @@ feature calt {
   @UC = [ @UC_ROMAN @UC_SET1 exclam question ];
   @LC = [ @LC_ROMAN @LC_SET1 ];
 
+  # rules to support left-hand repetition of CASE{L}->{R} [issue #57]
+  # y' y y y Z -> x y y y Z
+  sub @CASE_L' @CASE_L @CASE_L @CASE_L @CASE_L @UC by @CASE_R;
+  # y' y y y Z -> x y y y Z
+  sub @CASE_L' @CASE_L @CASE_L @CASE_L @UC by @CASE_R;
+  # y' y y Z -> x y y Z
+  sub @CASE_L' @CASE_L @CASE_L @UC by @CASE_R;
+  # y' y Z -> x y Z
+  sub @CASE_L' @CASE_L @UC by @CASE_R;
+
   sub [ @UC @CASE_R ] @CASE_L' by @CASE_R;
   ignore sub @LC @CASE_NONDELIM_L' @UC;
-  sub @CASE_L' [ @CASE_R @UC ] by @CASE_R;
 
   sub @CASE_DELIM_L' @CASE_DELIM_L [ @CASE_R @UC ] by @CASE_DELIM_R;
 
