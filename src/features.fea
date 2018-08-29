@@ -626,30 +626,6 @@ feature locl {
 } locl;
 
 
-@TNUM_L = [
-  zero one two three four five
-  six seven eight nine
-  one.1 four.1 six.1 nine.1
-  period comma
-];
-@TNUM_R = [
-  zero.tnum one.tnum two.tnum three.tnum four.tnum five.tnum
-  six.tnum seven.tnum eight.tnum nine.tnum
-  one.tnum.1 four.tnum.1 six.tnum.1 nine.tnum.1
-  period.tnum comma.tnum
-];
-
-feature tnum {
-  sub @TNUM_L by @TNUM_R;
-} tnum;
-
-
-feature zero {
-  sub zero by zero.slash;
-  sub zero.tnum by zero.tnum.slash;
-} zero;
-
-
 feature frac { # Fractions
   # Latin
   lookup frac_1 {
@@ -764,8 +740,32 @@ feature calt {
 
 # Stylistic set 1: open digits
 feature ss01 {
-  sub one by one.1;
+  sub one  by one.1;
   sub four by four.1;
   sub six  by six.1;
   sub nine by nine.1;
 } ss01;
+
+
+@TNUM_L = [
+  zero one two three four five
+  six seven eight nine
+  one.1 four.1 six.1 nine.1
+  period comma
+];
+@TNUM_R = [
+  zero.tnum one.tnum two.tnum three.tnum four.tnum five.tnum
+  six.tnum seven.tnum eight.tnum nine.tnum
+  one.tnum.1 four.tnum.1 six.tnum.1 nine.tnum.1
+  period.tnum comma.tnum
+];
+
+feature tnum {
+  sub @TNUM_L by @TNUM_R;
+} tnum;
+
+
+feature zero {
+  sub zero by zero.slash;
+  sub zero.tnum by zero.tnum.slash;
+} zero;
