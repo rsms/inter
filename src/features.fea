@@ -724,9 +724,10 @@ feature calt {
   sub @CASE_L' @CASE_L @CASE_L @UC by @CASE_R;
   # y' y Z -> x y Z
   sub @CASE_L' @CASE_L @UC by @CASE_R;
-
-  sub [ @UC @CASE_R ] @CASE_L' by @CASE_R;
-  ignore sub @LC @CASE_NONDELIM_L' @UC;
+  
+  sub [ @UC @CASE_R ] @CASE_L' by @CASE_R; # Z y' -> Z x -> Z x 'y -> Z x x ...
+  ignore sub @LC @CASE_NONDELIM_L' @UC;    # e.g. m multiply M
+  sub @CASE_L' @UC by @CASE_R;             # y' Z -> x Z
 
   sub @CASE_DELIM_L' @CASE_DELIM_L [ @CASE_R @UC ] by @CASE_DELIM_R;
 
