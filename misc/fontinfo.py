@@ -215,7 +215,6 @@ def genGlyphsInfo(tt, outputType, glyphsType=GLYPHS_TYPE_UNKNOWN, glyphsTable=No
         unicodeMap[glyphname] = [cp]
 
   glyphValues = []
-  glyphset = tt.getGlyphSet(preferCFF=glyphsType is GLYPHS_TYPE_CFF)
 
   glyphnames = tt.getGlyphOrder() if glyphnameFilter is None else glyphnameFilter
 
@@ -227,6 +226,8 @@ def genGlyphsInfo(tt, outputType, glyphsType=GLYPHS_TYPE_UNKNOWN, glyphsTable=No
         v += unicodeMap[glyphname]
       glyphValues.append(v)
     return glyphValues
+  
+  glyphset = tt.getGlyphSet(preferCFF=glyphsType is GLYPHS_TYPE_CFF)
   
   for glyphname in glyphnames:
     unicodes = unicodeMap[glyphname] if glyphname in unicodeMap else []
