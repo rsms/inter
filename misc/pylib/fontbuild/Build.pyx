@@ -72,6 +72,7 @@ class FontProject:
         self.buildOTF = False
         self.compatible = False
         self.generatedFonts = []
+        self.justCompileUFO = False
 
     def openResource(self, name):
         with open(os.path.join(
@@ -98,7 +99,8 @@ class FontProject:
             f = mix.generateFont(self.basefont, self.deleteList)
         else:
             f = mix.copy()
-            deleteGlyphs(f, self.deleteList)
+            if not self.justCompileUFO:
+                deleteGlyphs(f, self.deleteList)
 
         if italic == True:
             log(">> Italicizing")
@@ -137,12 +139,13 @@ class FontProject:
                 if len(g.components) > 0:
                     self.predecompose.add(g.name)
 
-        for gname in self.predecompose:
-            if f.has_key(gname):
-                decomposeGlyph(f, f[gname])
+        if not self.justCompileUFO:
+            for gname in self.predecompose:
+                if f.has_key(gname):
+                    decomposeGlyph(f, f[gname])
 
         log(">> Generating glyphs")
-        generateGlyphs(f, self.diacriticList, self.adobeGlyphList)
+        self.generateGlyphs(f, self.diacriticList, self.adobeGlyphList)
         # log(">> Reading features")
         # readFeatureFile(f, f.features.text)
 
@@ -163,13 +166,14 @@ class FontProject:
                                 g.leftMargin  = newLeftMargin
                                 g.rightMargin = newRightMargin
 
-        log(">> Decomposing")
-        # for g in f:
-        #     if len(g.components) > 0:
-        #         decomposeGlyph(f, g)
-        for gname in self.decompose:
-            if f.has_key(gname):
-                decomposeGlyph(f, f[gname])
+        if not self.justCompileUFO:
+            log(">> Decomposing")
+            # for g in f:
+            #     if len(g.components) > 0:
+            #         decomposeGlyph(f, g)
+            for gname in self.decompose:
+                if f.has_key(gname):
+                    decomposeGlyph(f, f[gname])
 
         copyrightHolderName = ''
         if self.config.has_option('main', 'copyrightHolderName'):
@@ -193,7 +197,8 @@ class FontProject:
             'italicAngle':  float(getcfg('italicAngle', '-12')),
         }, panose)
 
-        if not self.compatible:
+        if not self.compatible and not self.justCompileUFO:
+            # Remove overlaps etc
             cleanCurves(f)
         # deleteGlyphs(f, self.deleteList)
 
@@ -201,6 +206,10 @@ class FontProject:
         ufoName = self.generateOutputPath(f, "ufo")
         f.save(ufoName)
         self.generatedFonts.append(ufoName)
+
+        if self.justCompileUFO:
+            print("wrote %s" % ufoName)
+            return
 
         # filter glyphorder -- only include glyphs that exists in font
         glyphOrder = []
@@ -241,6 +250,12 @@ class FontProject:
             log(os.path.basename(ttfName))
             glyphOrder = [n for n in self.glyphOrder if n in font]
             saveOTF(font, ttfName, glyphOrder, truetype=True)
+
+    def generateGlyphs(self, f, glyphNames, glyphList={}):
+        log(">> Generating diacritics")
+        glyphnames = [gname for gname in glyphNames if not gname.startswith("#") and gname != ""]
+        for glyphName in glyphNames:
+            generateGlyph(f, glyphName, glyphList)
 
 
 # def transformGlyphMembers(g, m):
@@ -288,14 +303,6 @@ def swapContours(f,gName1,gName2):
 
 def log(msg):
     print msg
-
-
-def generateGlyphs(f, glyphNames, glyphList={}):
-    log(">> Generating diacritics")
-    glyphnames = [gname for gname in glyphNames if not gname.startswith("#") and gname != ""]
-
-    for glyphName in glyphNames:
-        generateGlyph(f, glyphName, glyphList)
 
 
 def deleteGlyphs(f, deleteList):

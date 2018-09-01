@@ -82,6 +82,10 @@ def main():
     const=True, default=False, help='Do not build TTF files')
 
   argparser.add_argument(
+    '--cufo', dest='cufo', action='store_const',
+    const=True, default=False, help='Only compile composite UFO')
+
+  argparser.add_argument(
     '--out', dest='out', metavar='<dir>', type=str, default=default_out_dir,
     help='Write output to <dir> instead of the default (%r)' % default_out_dir)
 
@@ -136,6 +140,9 @@ def main():
   proj = FontProject(
     rg.font, BASEDIR, os.path.join(srcDir,'fontbuild.cfg'), buildTag=buildTag)
   proj.builddir = args.out
+
+  if args.cufo:
+    proj.justCompileUFO = True
 
   # panose for entire family
   panose = {
@@ -225,7 +232,7 @@ def main():
       panose=mkpanose(9))
 
   # generate TTFs
-  if args.no_ttf == False:
+  if args.no_ttf == False and args.cufo == False:
     proj.generateTTFs()
 
   if not ALL:
