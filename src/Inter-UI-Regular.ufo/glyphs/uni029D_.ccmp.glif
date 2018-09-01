@@ -1,51 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni029D.ccmp" format="1">
-  <advance width="1264"/>
+  <advance width="976"/>
   <outline>
     <contour>
-      <point x="1188" y="132" type="line"/>
-      <point x="472" y="132" type="line" smooth="yes"/>
-      <point x="252" y="132"/>
-      <point x="80" y="0"/>
-      <point x="80" y="-236" type="curve" smooth="yes"/>
-      <point x="80" y="-448"/>
-      <point x="248" y="-600"/>
-      <point x="496" y="-600" type="curve" smooth="yes"/>
-      <point x="820" y="-600"/>
-      <point x="928" y="-388"/>
-      <point x="928" y="-168" type="curve" smooth="yes"/>
-      <point x="928" y="312" type="line"/>
-      <point x="656" y="312" type="line"/>
-      <point x="656" y="-228" type="line" smooth="yes"/>
-      <point x="656" y="-316"/>
-      <point x="604" y="-380"/>
-      <point x="492" y="-380" type="curve" smooth="yes"/>
-      <point x="408" y="-380"/>
-      <point x="352" y="-320"/>
-      <point x="352" y="-236" type="curve" smooth="yes"/>
-      <point x="352" y="-156"/>
-      <point x="412" y="-88"/>
-      <point x="508" y="-88" type="curve" smooth="yes"/>
-      <point x="1188" y="-88" type="line"/>
+      <point x="1056" y="156" type="line"/>
+      <point x="372" y="156" type="line" smooth="yes"/>
+      <point x="152" y="156"/>
+      <point x="-36" y="16"/>
+      <point x="-36" y="-212" type="curve" smooth="yes"/>
+      <point x="-36" y="-416"/>
+      <point x="116" y="-576"/>
+      <point x="364" y="-576" type="curve" smooth="yes"/>
+      <point x="616" y="-576"/>
+      <point x="760" y="-412"/>
+      <point x="760" y="-180" type="curve" smooth="yes"/>
+      <point x="760" y="336" type="line"/>
+      <point x="524" y="336" type="line"/>
+      <point x="524" y="-204" type="line" smooth="yes"/>
+      <point x="524" y="-292"/>
+      <point x="472" y="-368"/>
+      <point x="360" y="-368" type="curve" smooth="yes"/>
+      <point x="276" y="-368"/>
+      <point x="212" y="-296"/>
+      <point x="212" y="-212" type="curve" smooth="yes"/>
+      <point x="212" y="-132"/>
+      <point x="280" y="-64"/>
+      <point x="376" y="-64" type="curve" smooth="yes"/>
+      <point x="1056" y="-64" type="line"/>
     </contour>
-    <component base="dotlessi" xOffset="436"/>
+    <component base="dotlessi" xOffset="308"/>
     <contour>
-      <point x="796" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="792" y="-632" type="move" name="bottom"/>
+      <point x="512" y="-632" type="move" name="bottom"/>
     </contour>
     <contour>
-      <point x="1216" y="1776" type="move" name="top0315"/>
+      <point x="640" y="2200" type="move" name="top"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>640</integer>
+          <key>y</key>
+          <integer>2160</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>0.87</real>
+        <real>0.8953856825828552</real>
+        <real>0.2715440397434941</real>
+        <real>0.8436879515474552</real>
         <real>1.0</real>
       </array>
       <key>interface.gridadjust.original</key>

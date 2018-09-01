@@ -6,17 +6,34 @@
     <component base="i" xOffset="88"/>
     <component base="crossbar" xOffset="-216" yOffset="-164"/>
     <contour>
-      <point x="288" y="2200" type="move" name="top"/>
+      <point x="420" y="2200" type="move" name="top"/>
     </contour>
     <contour>
-      <point x="760" y="2200" type="move" name="top0315"/>
+      <point x="892" y="2200" type="move" name="top0315"/>
     </contour>
     <contour>
-      <point x="288" y="0" type="move" name="bottom"/>
+      <point x="420" y="0" type="move" name="bottom"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>420</integer>
+          <key>y</key>
+          <integer>2148</integer>
+        </dict>
+      </array>
       <key>interface.gridadjust.original</key>
       <string>{'width': 938, 'leftMargin': 27, 'rightMargin': 28}</string>
       <key>interface.width-adjustments</key>

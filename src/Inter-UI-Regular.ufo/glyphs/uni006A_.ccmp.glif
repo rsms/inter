@@ -1,25 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni006A.ccmp" format="1">
-  <advance width="712"/>
+  <advance width="668"/>
   <outline>
-    <component base="dotlessj" xOffset="44"/>
+    <component base="dotlessj"/>
     <contour>
-      <point x="424" y="1716" type="move" name="top"/>
+      <point x="332" y="1716" type="move" name="top"/>
     </contour>
     <contour>
       <point x="776" y="1716" type="move" name="top0315"/>
     </contour>
     <contour>
-      <point x="312" y="-632" type="move" name="bottom"/>
+      <point x="256" y="-632" type="move" name="bottom"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.typemytype.robofont.guides</key>
+      <array>
+        <dict>
+          <key>angle</key>
+          <real>90.0</real>
+          <key>isGlobal</key>
+          <false/>
+          <key>magnetic</key>
+          <integer>5</integer>
+          <key>name</key>
+          <string></string>
+          <key>x</key>
+          <integer>332</integer>
+          <key>y</key>
+          <integer>1648</integer>
+        </dict>
+      </array>
       <key>com.typemytype.robofont.mark</key>
       <array>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>0.87</real>
+        <real>0.8953856825828552</real>
+        <real>0.25325059269374833</real>
+        <real>0.846124574218061</real>
         <real>1.0</real>
       </array>
       <key>interface.gridadjust.original</key>
