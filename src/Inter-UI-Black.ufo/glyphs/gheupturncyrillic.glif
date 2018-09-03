@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="gheupturncyrillic" format="1">
-  <advance width="1568"/>
+<glyph name="gheupturncyrillic" format="2">
+  <advance width="1568.0"/>
   <unicode hex="0491"/>
   <outline>
     <contour>
-      <point x="1348" y="1924" type="line"/>
-      <point x="904" y="1924" type="line"/>
-      <point x="904" y="1132" type="line"/>
-      <point x="1348" y="1132" type="line"/>
+      <point x="1348.0" y="1924.0" type="line"/>
+      <point x="904.0" y="1924.0" type="line"/>
+      <point x="904.0" y="1132.0" type="line"/>
+      <point x="1348.0" y="1132.0" type="line"/>
     </contour>
-    <component base="gecyrillic" xOffset="88"/>
+    <contour>
+      <point x="1264.0" y="1488.0" type="line"/>
+      <point x="224.0" y="1488.0" type="line"/>
+      <point x="224.0" y="0.0" type="line"/>
+      <point x="668.0" y="0.0" type="line"/>
+      <point x="668.0" y="1132.0" type="line"/>
+      <point x="1264.0" y="1132.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1315, 'leftMargin': 120, 'rightMargin': 72}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

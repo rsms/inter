@@ -1,109 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="F" format="1">
-  <advance width="1656"/>
+<glyph name="F" format="2">
+  <advance width="1656.0"/>
   <unicode hex="0046"/>
+  <guideline y="1320.0"/>
+  <anchor x="816.0" y="16.0" name="bottom"/>
+  <anchor x="1628.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="540.0" y="400.0" name="cross"/>
+  <anchor x="968.0" y="2216.0" name="top"/>
+  <anchor x="1628.0" y="2216.0" name="top0315"/>
+  <anchor x="1628.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="608" y="2048" type="line"/>
-      <point x="144" y="2048" type="line"/>
-      <point x="144" y="0" type="line"/>
-      <point x="608" y="0" type="line"/>
+      <point x="608.0" y="2048.0" type="line"/>
+      <point x="144.0" y="2048.0" type="line"/>
+      <point x="144.0" y="0.0" type="line"/>
+      <point x="608.0" y="0.0" type="line"/>
     </contour>
     <contour>
-      <point x="1372" y="1216" type="line"/>
-      <point x="460" y="1216" type="line"/>
-      <point x="460" y="832" type="line"/>
-      <point x="1372" y="832" type="line"/>
+      <point x="1372.0" y="1216.0" type="line"/>
+      <point x="460.0" y="1216.0" type="line"/>
+      <point x="460.0" y="832.0" type="line"/>
+      <point x="1372.0" y="832.0" type="line"/>
     </contour>
     <contour>
-      <point x="1512" y="2048" type="line"/>
-      <point x="476" y="2048" type="line"/>
-      <point x="476" y="1664" type="line"/>
-      <point x="1512" y="1664" type="line"/>
-    </contour>
-    <contour>
-      <point x="540" y="400" type="move" name="cross"/>
-    </contour>
-    <contour>
-      <point x="968" y="2216" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="816" y="16" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1628" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1628" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="1628" y="2216" type="move" name="top0315"/>
+      <point x="1512.0" y="2048.0" type="line"/>
+      <point x="476.0" y="2048.0" type="line"/>
+      <point x="476.0" y="1664.0" type="line"/>
+      <point x="1512.0" y="1664.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1320.0</real>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.layerData</key>
-      <dict>
-        <key>reference</key>
-        <dict>
-          <key>anchors</key>
-          <array>
-          </array>
-          <key>components</key>
-          <array>
-            <dict>
-              <key>baseGlyph</key>
-              <string>E</string>
-              <key>transformation</key>
-              <array>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-                <integer>1</integer>
-                <integer>16</integer>
-                <integer>0</integer>
-              </array>
-            </dict>
-          </array>
-          <key>contours</key>
-          <array>
-          </array>
-          <key>lib</key>
-          <dict>
-          </dict>
-          <key>name</key>
-          <string>F</string>
-          <key>unicodes</key>
-          <array>
-          </array>
-          <key>width</key>
-          <integer>1656</integer>
-        </dict>
-      </dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1541, 'leftMargin': 161, 'rightMargin': 52}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

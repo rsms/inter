@@ -1,84 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="asterisk.case" format="1">
-  <advance width="1568"/>
+<glyph name="asterisk.case" format="2">
+  <advance width="1568.0"/>
   <note>
-    Recipe:
-    1. make horizontal rect
-    2. copy rect and paste
-    3. rotate by 60 deg
-    4. enter transform mode and center it
-    5. copy the rotated piece and paste
-    6. flip on vertical axis
-    7. enter transform mode and center it
-  </note>
+Recipe:
+1. make horizontal rect
+2. copy rect and paste
+3. rotate by 60 deg
+4. enter transform mode and center it
+5. copy the rotated piece and paste
+6. flip on vertical axis
+7. enter transform mode and center it
+</note>
+  <guideline x="768.0" y="636.0" angle="90.0"/>
+  <guideline x="1516.0" y="1024.0" angle="0.0"/>
   <outline>
     <contour>
-      <point x="568" y="408" type="line"/>
-      <point x="776" y="788" type="line"/>
-      <point x="792" y="788" type="line"/>
-      <point x="1000" y="408" type="line"/>
-      <point x="1208" y="528" type="line"/>
-      <point x="984" y="900" type="line"/>
-      <point x="992" y="916" type="line"/>
-      <point x="1424" y="904" type="line"/>
-      <point x="1424" y="1144" type="line"/>
-      <point x="992" y="1132" type="line"/>
-      <point x="984" y="1148" type="line"/>
-      <point x="1208" y="1520" type="line"/>
-      <point x="1000" y="1640" type="line"/>
-      <point x="792" y="1256" type="line"/>
-      <point x="776" y="1256" type="line"/>
-      <point x="568" y="1640" type="line"/>
-      <point x="360" y="1520" type="line"/>
-      <point x="588" y="1148" type="line"/>
-      <point x="580" y="1132" type="line"/>
-      <point x="144" y="1144" type="line"/>
-      <point x="144" y="904" type="line"/>
-      <point x="580" y="916" type="line"/>
-      <point x="588" y="900" type="line"/>
-      <point x="360" y="528" type="line"/>
+      <point x="568.0" y="408.0" type="line"/>
+      <point x="776.0" y="788.0" type="line"/>
+      <point x="792.0" y="788.0" type="line"/>
+      <point x="1000.0" y="408.0" type="line"/>
+      <point x="1208.0" y="528.0" type="line"/>
+      <point x="984.0" y="900.0" type="line"/>
+      <point x="992.0" y="916.0" type="line"/>
+      <point x="1424.0" y="904.0" type="line"/>
+      <point x="1424.0" y="1144.0" type="line"/>
+      <point x="992.0" y="1132.0" type="line"/>
+      <point x="984.0" y="1148.0" type="line"/>
+      <point x="1208.0" y="1520.0" type="line"/>
+      <point x="1000.0" y="1640.0" type="line"/>
+      <point x="792.0" y="1256.0" type="line"/>
+      <point x="776.0" y="1256.0" type="line"/>
+      <point x="568.0" y="1640.0" type="line"/>
+      <point x="360.0" y="1520.0" type="line"/>
+      <point x="588.0" y="1148.0" type="line"/>
+      <point x="580.0" y="1132.0" type="line"/>
+      <point x="144.0" y="1144.0" type="line"/>
+      <point x="144.0" y="904.0" type="line"/>
+      <point x="580.0" y="916.0" type="line"/>
+      <point x="588.0" y="900.0" type="line"/>
+      <point x="360.0" y="528.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>768</integer>
-          <key>y</key>
-          <integer>636</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1516</integer>
-          <key>y</key>
-          <integer>1024</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

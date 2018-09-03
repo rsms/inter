@@ -1,63 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="Q" format="1">
-  <advance width="2040"/>
+<glyph name="Q" format="2">
+  <advance width="2040.0"/>
   <unicode hex="0051"/>
+  <guideline x="1024.0" y="1432.0" angle="90.0"/>
+  <anchor x="1024.0" y="-16.0" name="bottom"/>
+  <anchor x="2012.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="1024.0" y="2200.0" name="top"/>
+  <anchor x="2012.0" y="2200.0" name="top0315"/>
+  <anchor x="2012.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="840" y="704" type="line"/>
-      <point x="1112" y="316" type="line"/>
-      <point x="1228" y="124" type="line"/>
-      <point x="1448" y="-192" type="line"/>
-      <point x="1876" y="-192" type="line"/>
-      <point x="1556" y="264" type="line"/>
-      <point x="1364" y="500" type="line"/>
-      <point x="1220" y="704" type="line"/>
-    </contour>
-    <component base="O"/>
-    <contour>
-      <point x="1024" y="2200" type="move" name="top"/>
+      <point x="840.0" y="704.0" type="line"/>
+      <point x="1112.0" y="316.0" type="line"/>
+      <point x="1228.0" y="124.0" type="line"/>
+      <point x="1448.0" y="-192.0" type="line"/>
+      <point x="1876.0" y="-192.0" type="line"/>
+      <point x="1556.0" y="264.0" type="line"/>
+      <point x="1364.0" y="500.0" type="line"/>
+      <point x="1220.0" y="704.0" type="line"/>
     </contour>
     <contour>
-      <point x="1024" y="-16" type="move" name="bottom"/>
+      <point x="1920.0" y="1020.0" type="curve"/>
+      <point x="1920.0" y="1696.0"/>
+      <point x="1532.0" y="2076.0"/>
+      <point x="1024.0" y="2076.0" type="curve" smooth="yes"/>
+      <point x="512.0" y="2076.0"/>
+      <point x="120.0" y="1696.0"/>
+      <point x="120.0" y="1020.0" type="curve"/>
+      <point x="120.0" y="348.0"/>
+      <point x="512.0" y="-28.0"/>
+      <point x="1024.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1532.0" y="-28.0"/>
+      <point x="1920.0" y="348.0"/>
     </contour>
     <contour>
-      <point x="2012" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="2012" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="2012" y="2200" type="move" name="top0315"/>
+      <point x="1452.0" y="1020.0" type="curve"/>
+      <point x="1452.0" y="560.0"/>
+      <point x="1276.0" y="388.0"/>
+      <point x="1024.0" y="388.0" type="curve" smooth="yes"/>
+      <point x="772.0" y="388.0"/>
+      <point x="588.0" y="560.0"/>
+      <point x="588.0" y="1020.0" type="curve"/>
+      <point x="588.0" y="1480.0"/>
+      <point x="772.0" y="1660.0"/>
+      <point x="1024.0" y="1660.0" type="curve" smooth="yes"/>
+      <point x="1276.0" y="1660.0"/>
+      <point x="1452.0" y="1480.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1024</integer>
-          <key>y</key>
-          <integer>1432</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1944, 'leftMargin': 105, 'rightMargin': 103}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

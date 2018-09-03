@@ -1,43 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dotmacroncomb.lc" format="1">
-  <advance width="0"/>
+<glyph name="dotmacroncomb.lc" format="2">
+  <anchor x="-792.0" y="1742.0" name="_top"/>
+  <anchor x="-792.0" y="2694.0" name="mkmktop_acc"/>
   <outline>
     <contour>
-      <point x="-792" y="1742" type="move" name="_top"/>
+      <point x="-1013.0" y="1895.0" type="curve" smooth="yes"/>
+      <point x="-1013.0" y="1778.0"/>
+      <point x="-925.0" y="1694.0"/>
+      <point x="-793.0" y="1694.0" type="curve" smooth="yes"/>
+      <point x="-661.0" y="1694.0"/>
+      <point x="-573.0" y="1778.0"/>
+      <point x="-573.0" y="1895.0" type="curve" smooth="yes"/>
+      <point x="-573.0" y="2013.0"/>
+      <point x="-661.0" y="2097.0"/>
+      <point x="-793.0" y="2097.0" type="curve" smooth="yes"/>
+      <point x="-925.0" y="2097.0"/>
+      <point x="-1013.0" y="2013.0"/>
     </contour>
     <contour>
-      <point x="-792" y="2694" type="move" name="mkmktop_acc"/>
-    </contour>
-    <contour>
-      <point x="-1013" y="1895" type="curve" smooth="yes"/>
-      <point x="-1013" y="1778"/>
-      <point x="-925" y="1694"/>
-      <point x="-793" y="1694" type="curve" smooth="yes"/>
-      <point x="-661" y="1694"/>
-      <point x="-573" y="1778"/>
-      <point x="-573" y="1895" type="curve" smooth="yes"/>
-      <point x="-573" y="2013"/>
-      <point x="-661" y="2097"/>
-      <point x="-793" y="2097" type="curve" smooth="yes"/>
-      <point x="-925" y="2097"/>
-      <point x="-1013" y="2013"/>
-    </contour>
-    <contour>
-      <point x="-315" y="2485" type="line"/>
-      <point x="-1268" y="2485" type="line"/>
-      <point x="-1268" y="2247" type="line"/>
-      <point x="-315" y="2247" type="line"/>
+      <point x="-315.0" y="2485.0" type="line"/>
+      <point x="-1268.0" y="2485.0" type="line"/>
+      <point x="-1268.0" y="2247.0" type="line"/>
+      <point x="-315.0" y="2247.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.871,0.871,0.871,0.004</string>
     </dict>
   </lib>
 </glyph>

@@ -1,52 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="l" format="1">
-  <advance width="668"/>
+<glyph name="l" format="2">
+  <advance width="668.0"/>
   <unicode hex="006C"/>
+  <anchor x="300.0" y="16.0" name="bottom"/>
+  <anchor x="648.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="616.0" y="2112.0" name="caron"/>
+  <anchor x="608.0" y="1064.0" name="dot"/>
+  <anchor x="740.0" y="2124.0" name="marktop"/>
+  <anchor x="332.0" y="2304.0" name="top"/>
+  <anchor x="648.0" y="2336.0" name="top0315"/>
+  <anchor x="648.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="452" y="2048" type="line"/>
-      <point x="216" y="2048" type="line"/>
-      <point x="216" y="0" type="line"/>
-      <point x="452" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="332" y="2304" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="300" y="16" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="616" y="2112" type="move" name="caron"/>
-    </contour>
-    <contour>
-      <point x="608" y="1064" type="move" name="dot"/>
-    </contour>
-    <contour>
-      <point x="740" y="2124" type="move" name="marktop"/>
-    </contour>
-    <contour>
-      <point x="648" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="648" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="648" y="2336" type="move" name="top0315"/>
+      <point x="452.0" y="2048.0" type="line"/>
+      <point x="216.0" y="2048.0" type="line"/>
+      <point x="216.0" y="0.0" type="line"/>
+      <point x="452.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

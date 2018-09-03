@@ -1,39 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dcroat" format="1">
-  <advance width="1712"/>
+<glyph name="dcroat" format="2">
+  <advance width="1712.0"/>
   <unicode hex="0111"/>
+  <anchor x="680.0" y="0.0" name="bottom"/>
+  <anchor x="1632.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="1656.0" y="2112.0" name="caron"/>
+  <anchor x="844.0" y="0.0" name="markbottom"/>
+  <anchor x="1200.0" y="1804.0" name="parenthesses.w2"/>
+  <anchor x="704.0" y="2200.0" name="top"/>
+  <anchor x="1852.0" y="2200.0" name="top0315"/>
+  <anchor x="1632.0" y="2200.0" name="top_dd"/>
   <outline>
     <component base="d"/>
-    <component base="crossbar" xOffset="544" yOffset="724"/>
-    <contour>
-      <point x="1656" y="2112" type="move" name="caron"/>
-    </contour>
-    <contour>
-      <point x="680" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="704" y="2200" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1632" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1632" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="844" y="0" type="move" name="markbottom"/>
-    </contour>
-    <contour>
-      <point x="1852" y="2200" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="1200" y="1804" type="move" name="parenthesses.w2"/>
-    </contour>
+    <component base="crossbar" xOffset="544.0" yOffset="724.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1804.0, 'leftMargin': 78, 'rightMargin': 158.0}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
     </dict>
   </lib>
 </glyph>

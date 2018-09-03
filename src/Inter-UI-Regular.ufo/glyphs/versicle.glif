@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="versicle" format="1">
-  <advance width="1880"/>
+<glyph name="versicle" format="2">
+  <advance width="1880.0"/>
   <unicode hex="2123"/>
   <outline>
     <contour>
-      <point x="1372" y="2224" type="line"/>
-      <point x="932" y="2464" type="line"/>
-      <point x="816" y="2240" type="line"/>
-      <point x="1084" y="2104" type="line"/>
-      <point x="104" y="-496" type="line"/>
-      <point x="336" y="-496" type="line"/>
+      <point x="1372.0" y="2224.0" type="line"/>
+      <point x="932.0" y="2464.0" type="line"/>
+      <point x="816.0" y="2240.0" type="line"/>
+      <point x="1084.0" y="2104.0" type="line"/>
+      <point x="104.0" y="-496.0" type="line"/>
+      <point x="336.0" y="-496.0" type="line"/>
     </contour>
-    <component base="V"/>
+    <contour>
+      <point x="332.0" y="2048.0" type="line"/>
+      <point x="72.0" y="2048.0" type="line"/>
+      <point x="824.0" y="0.0" type="line"/>
+      <point x="1080.0" y="0.0" type="line"/>
+      <point x="1832.0" y="2048.0" type="line"/>
+      <point x="1572.0" y="2048.0" type="line"/>
+      <point x="964.0" y="324.0" type="line"/>
+      <point x="940.0" y="324.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8</real>
-        <real>0.94</real>
-        <real>0.95</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1805, 'leftMargin': 94, 'rightMargin': 141}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
     </dict>
   </lib>
 </glyph>

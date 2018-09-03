@@ -1,69 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="glottalstopinv" format="1">
-  <advance width="1568"/>
+<glyph name="glottalstopinv" format="2">
+  <advance width="1568.0"/>
   <unicode hex="0296"/>
+  <guideline y="-27.5"/>
+  <anchor x="764.0" y="0.0" name="bottom"/>
+  <anchor x="764.0" y="2244.0" name="top"/>
+  <anchor x="1524.0" y="2244.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="760" y="1336" type="line"/>
-      <point x="968" y="1336"/>
-      <point x="1000" y="1156"/>
-      <point x="1000" y="936" type="curve" smooth="yes"/>
-      <point x="1000" y="728" type="line" smooth="yes"/>
-      <point x="1000" y="516"/>
-      <point x="964" y="332"/>
-      <point x="760" y="332" type="curve" smooth="yes"/>
-      <point x="612" y="332"/>
-      <point x="540" y="436"/>
-      <point x="540" y="568" type="curve"/>
-      <point x="124" y="568" type="line"/>
-      <point x="124" y="192"/>
-      <point x="384" y="-28"/>
-      <point x="752" y="-28" type="curve" smooth="yes"/>
-      <point x="1212" y="-28"/>
-      <point x="1444" y="300"/>
-      <point x="1444" y="728" type="curve" smooth="yes"/>
-      <point x="1444" y="936" type="line" smooth="yes"/>
-      <point x="1444" y="1368"/>
-      <point x="1212" y="1692"/>
-      <point x="748" y="1692" type="curve" smooth="yes"/>
-      <point x="596" y="1692" type="line"/>
-      <point x="596" y="1336" type="line"/>
+      <point x="760.0" y="1336.0" type="line"/>
+      <point x="968.0" y="1336.0"/>
+      <point x="1000.0" y="1156.0"/>
+      <point x="1000.0" y="936.0" type="curve" smooth="yes"/>
+      <point x="1000.0" y="728.0" type="line" smooth="yes"/>
+      <point x="1000.0" y="516.0"/>
+      <point x="964.0" y="332.0"/>
+      <point x="760.0" y="332.0" type="curve" smooth="yes"/>
+      <point x="612.0" y="332.0"/>
+      <point x="540.0" y="436.0"/>
+      <point x="540.0" y="568.0" type="curve"/>
+      <point x="124.0" y="568.0" type="line"/>
+      <point x="124.0" y="192.0"/>
+      <point x="384.0" y="-28.0"/>
+      <point x="752.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1212.0" y="-28.0"/>
+      <point x="1444.0" y="300.0"/>
+      <point x="1444.0" y="728.0" type="curve" smooth="yes"/>
+      <point x="1444.0" y="936.0" type="line" smooth="yes"/>
+      <point x="1444.0" y="1368.0"/>
+      <point x="1212.0" y="1692.0"/>
+      <point x="748.0" y="1692.0" type="curve" smooth="yes"/>
+      <point x="596.0" y="1692.0" type="line"/>
+      <point x="596.0" y="1336.0" type="line"/>
     </contour>
     <contour>
-      <point x="988" y="2112" type="line"/>
-      <point x="544" y="2112" type="line"/>
-      <point x="544" y="1336" type="line"/>
-      <point x="988" y="1336" type="line"/>
-    </contour>
-    <contour>
-      <point x="764" y="2244" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="764" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1524" y="2244" type="move" name="top0315"/>
+      <point x="988.0" y="2112.0" type="line"/>
+      <point x="544.0" y="2112.0" type="line"/>
+      <point x="544.0" y="1336.0" type="line"/>
+      <point x="988.0" y="1336.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>-27.5</real>
-        </dict>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1466, 'leftMargin': 69, 'rightMargin': 79}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

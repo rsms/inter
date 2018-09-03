@@ -1,83 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="O" format="1">
-  <advance width="2040"/>
+<glyph name="O" format="2">
+  <advance width="2040.0"/>
   <unicode hex="004F"/>
+  <guideline x="1024.0" y="2104.0" angle="90.0"/>
+  <anchor x="1024.0" y="0.0" name="bottom"/>
+  <anchor x="1992.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="188.0" y="2000.0" name="tonos"/>
+  <anchor x="1024.0" y="2200.0" name="top"/>
+  <anchor x="1992.0" y="2200.0" name="top0315"/>
+  <anchor x="1992.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="1920" y="1020" type="curve"/>
-      <point x="1920" y="1696"/>
-      <point x="1532" y="2076"/>
-      <point x="1024" y="2076" type="curve" smooth="yes"/>
-      <point x="512" y="2076"/>
-      <point x="120" y="1696"/>
-      <point x="120" y="1020" type="curve"/>
-      <point x="120" y="348"/>
-      <point x="512" y="-28"/>
-      <point x="1024" y="-28" type="curve" smooth="yes"/>
-      <point x="1532" y="-28"/>
-      <point x="1920" y="348"/>
+      <point x="1920.0" y="1020.0" type="curve"/>
+      <point x="1920.0" y="1696.0"/>
+      <point x="1532.0" y="2076.0"/>
+      <point x="1024.0" y="2076.0" type="curve" smooth="yes"/>
+      <point x="512.0" y="2076.0"/>
+      <point x="120.0" y="1696.0"/>
+      <point x="120.0" y="1020.0" type="curve"/>
+      <point x="120.0" y="348.0"/>
+      <point x="512.0" y="-28.0"/>
+      <point x="1024.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1532.0" y="-28.0"/>
+      <point x="1920.0" y="348.0"/>
     </contour>
     <contour>
-      <point x="1452" y="1020" type="curve"/>
-      <point x="1452" y="560"/>
-      <point x="1276" y="388"/>
-      <point x="1024" y="388" type="curve" smooth="yes"/>
-      <point x="772" y="388"/>
-      <point x="588" y="560"/>
-      <point x="588" y="1020" type="curve"/>
-      <point x="588" y="1480"/>
-      <point x="772" y="1660"/>
-      <point x="1024" y="1660" type="curve" smooth="yes"/>
-      <point x="1276" y="1660"/>
-      <point x="1452" y="1480"/>
-    </contour>
-    <contour>
-      <point x="1024" y="2200" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1024" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="188" y="2000" type="move" name="tonos"/>
-    </contour>
-    <contour>
-      <point x="1992" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1992" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="1992" y="2200" type="move" name="top0315"/>
+      <point x="1452.0" y="1020.0" type="curve"/>
+      <point x="1452.0" y="560.0"/>
+      <point x="1276.0" y="388.0"/>
+      <point x="1024.0" y="388.0" type="curve" smooth="yes"/>
+      <point x="772.0" y="388.0"/>
+      <point x="588.0" y="560.0"/>
+      <point x="588.0" y="1020.0" type="curve"/>
+      <point x="588.0" y="1480.0"/>
+      <point x="772.0" y="1660.0"/>
+      <point x="1024.0" y="1660.0" type="curve" smooth="yes"/>
+      <point x="1276.0" y="1660.0"/>
+      <point x="1452.0" y="1480.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1024</integer>
-          <key>y</key>
-          <integer>2104</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1944, 'leftMargin': 103, 'rightMargin': 104}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

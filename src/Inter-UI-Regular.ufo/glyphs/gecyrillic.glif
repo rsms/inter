@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="gecyrillic" format="1">
-  <advance width="1268"/>
+<glyph name="gecyrillic" format="2">
+  <advance width="1268.0"/>
   <unicode hex="0433"/>
+  <anchor x="436.0" y="760.0" name="cross"/>
+  <anchor x="488.0" y="0.0" name="right"/>
+  <anchor x="600.0" y="1744.0" name="top"/>
+  <anchor x="1184.0" y="1744.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="1164" y="1488" type="line"/>
-      <point x="216" y="1488" type="line"/>
-      <point x="216" y="0" type="line"/>
-      <point x="452" y="0" type="line"/>
-      <point x="452" y="1268" type="line"/>
-      <point x="1164" y="1268" type="line"/>
-    </contour>
-    <contour>
-      <point x="600" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="436" y="760" type="move" name="cross"/>
-    </contour>
-    <contour>
-      <point x="488" y="0" type="move" name="right"/>
-    </contour>
-    <contour>
-      <point x="1184" y="1744" type="move" name="top0315"/>
+      <point x="1164.0" y="1488.0" type="line"/>
+      <point x="216.0" y="1488.0" type="line"/>
+      <point x="216.0" y="0.0" type="line"/>
+      <point x="452.0" y="0.0" type="line"/>
+      <point x="452.0" y="1268.0" type="line"/>
+      <point x="1164.0" y="1268.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1181, 'leftMargin': 210, 'rightMargin': 23}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

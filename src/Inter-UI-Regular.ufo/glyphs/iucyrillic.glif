@@ -1,31 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="iucyrillic" format="1">
-  <advance width="2288"/>
+<glyph name="iucyrillic" format="2">
+  <advance width="2288.0"/>
   <unicode hex="044E"/>
+  <anchor x="1028.0" y="1744.0" name="top"/>
+  <anchor x="2192.0" y="1744.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="952" y="864" type="line"/>
-      <point x="140" y="864" type="line"/>
-      <point x="140" y="644" type="line"/>
-      <point x="952" y="644" type="line"/>
-    </contour>
-    <component base="dotlessi" xOffset="-112"/>
-    <component base="o" xOffset="584"/>
-    <contour>
-      <point x="1028" y="1744" type="move" name="top"/>
+      <point x="952.0" y="864.0" type="line"/>
+      <point x="140.0" y="864.0" type="line"/>
+      <point x="140.0" y="644.0" type="line"/>
+      <point x="952.0" y="644.0" type="line"/>
     </contour>
     <contour>
-      <point x="2192" y="1744" type="move" name="top0315"/>
+      <point x="340.0" y="1536.0" type="line"/>
+      <point x="104.0" y="1536.0" type="line"/>
+      <point x="104.0" y="0.0" type="line"/>
+      <point x="340.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1424.0" y="-32.0" type="curve" smooth="yes"/>
+      <point x="1840.0" y="-32.0"/>
+      <point x="2120.0" y="284.0"/>
+      <point x="2120.0" y="760.0" type="curve" smooth="yes"/>
+      <point x="2120.0" y="1240.0"/>
+      <point x="1840.0" y="1556.0"/>
+      <point x="1424.0" y="1556.0" type="curve" smooth="yes"/>
+      <point x="1008.0" y="1556.0"/>
+      <point x="728.0" y="1240.0"/>
+      <point x="728.0" y="760.0" type="curve" smooth="yes"/>
+      <point x="728.0" y="284.0"/>
+      <point x="1008.0" y="-32.0"/>
+    </contour>
+    <contour>
+      <point x="1424.0" y="180.0" type="curve" smooth="yes"/>
+      <point x="1108.0" y="180.0"/>
+      <point x="964.0" y="452.0"/>
+      <point x="964.0" y="760.0" type="curve" smooth="yes"/>
+      <point x="964.0" y="1068.0"/>
+      <point x="1108.0" y="1344.0"/>
+      <point x="1424.0" y="1344.0" type="curve" smooth="yes"/>
+      <point x="1740.0" y="1344.0"/>
+      <point x="1884.0" y="1068.0"/>
+      <point x="1884.0" y="760.0" type="curve" smooth="yes"/>
+      <point x="1884.0" y="452.0"/>
+      <point x="1740.0" y="180.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2300, 'leftMargin': 249, 'rightMargin': 45}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="tugrik" format="1">
-  <advance width="1808"/>
+<glyph name="tugrik" format="2">
+  <advance width="1808.0"/>
   <unicode hex="20AE"/>
   <outline>
     <contour>
-      <point x="1396" y="1552" type="line"/>
-      <point x="416" y="1104" type="line"/>
-      <point x="416" y="856" type="line"/>
-      <point x="1396" y="1304" type="line"/>
+      <point x="1396.0" y="1552.0" type="line"/>
+      <point x="416.0" y="1104.0" type="line"/>
+      <point x="416.0" y="856.0" type="line"/>
+      <point x="1396.0" y="1304.0" type="line"/>
     </contour>
     <contour>
-      <point x="1396" y="1084" type="line"/>
-      <point x="416" y="636" type="line"/>
-      <point x="416" y="388" type="line"/>
-      <point x="1396" y="836" type="line"/>
+      <point x="1396.0" y="1084.0" type="line"/>
+      <point x="416.0" y="636.0" type="line"/>
+      <point x="416.0" y="388.0" type="line"/>
+      <point x="1396.0" y="836.0" type="line"/>
     </contour>
-    <component base="T"/>
+    <contour>
+      <point x="1028.0" y="2048.0" type="line"/>
+      <point x="780.0" y="2048.0" type="line"/>
+      <point x="780.0" y="0.0" type="line"/>
+      <point x="1028.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1672.0" y="2048.0" type="line"/>
+      <point x="136.0" y="2048.0" type="line"/>
+      <point x="136.0" y="1828.0" type="line"/>
+      <point x="1672.0" y="1828.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8</real>
-        <real>0.94</real>
-        <real>0.95</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1680, 'leftMargin': 128, 'rightMargin': 16}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
     </dict>
   </lib>
 </glyph>

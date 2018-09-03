@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni023E" format="1">
-  <advance width="1808"/>
+<glyph name="uni023E" format="2">
+  <advance width="1808.0"/>
   <unicode hex="023E"/>
   <outline>
     <contour>
-      <point x="540" y="-192" type="line"/>
-      <point x="1504" y="2164" type="line"/>
-      <point x="1332" y="2236" type="line"/>
-      <point x="368" y="-120" type="line"/>
+      <point x="540.0" y="-192.0" type="line"/>
+      <point x="1504.0" y="2164.0" type="line"/>
+      <point x="1332.0" y="2236.0" type="line"/>
+      <point x="368.0" y="-120.0" type="line"/>
     </contour>
-    <component base="T"/>
+    <contour>
+      <point x="1028.0" y="2048.0" type="line"/>
+      <point x="780.0" y="2048.0" type="line"/>
+      <point x="780.0" y="0.0" type="line"/>
+      <point x="1028.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1672.0" y="2048.0" type="line"/>
+      <point x="136.0" y="2048.0" type="line"/>
+      <point x="136.0" y="1828.0" type="line"/>
+      <point x="1672.0" y="1828.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1680, 'leftMargin': 128, 'rightMargin': 16}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

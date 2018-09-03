@@ -1,30 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="caron" format="1">
-  <advance width="1568"/>
+<glyph name="caron" format="2">
+  <advance width="1568.0"/>
   <unicode hex="02C7"/>
+  <anchor x="788.0" y="1712.0" name="_top"/>
+  <anchor x="788.0" y="2204.0" name="mkmktop_acc"/>
   <outline>
     <contour>
-      <point x="584" y="2048" type="line"/>
-      <point x="204" y="2048" type="line"/>
-      <point x="204" y="2036" type="line"/>
-      <point x="644" y="1644" type="line"/>
-      <point x="928" y="1644" type="line"/>
-      <point x="1364" y="2036" type="line"/>
-      <point x="1364" y="2048" type="line"/>
-      <point x="988" y="2048" type="line"/>
-      <point x="788" y="1864" type="line"/>
-    </contour>
-    <contour>
-      <point x="788" y="1712" type="move" name="_top"/>
-    </contour>
-    <contour>
-      <point x="788" y="2204" type="move" name="mkmktop_acc"/>
+      <point x="584.0" y="2048.0" type="line"/>
+      <point x="204.0" y="2048.0" type="line"/>
+      <point x="204.0" y="2036.0" type="line"/>
+      <point x="644.0" y="1644.0" type="line"/>
+      <point x="928.0" y="1644.0" type="line"/>
+      <point x="1364.0" y="2036.0" type="line"/>
+      <point x="1364.0" y="2048.0" type="line"/>
+      <point x="988.0" y="2048.0" type="line"/>
+      <point x="788.0" y="1864.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1346, 'leftMargin': 89, 'rightMargin': 96}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

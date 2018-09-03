@@ -1,59 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="itildebelow" format="1">
-  <advance width="888"/>
+<glyph name="itildebelow" format="2">
+  <advance width="888.0"/>
   <unicode hex="1E2D"/>
+  <guideline x="436.0" y="1508.0" angle="90.0"/>
+  <anchor x="480.0" y="16.0" name="bottom"/>
+  <anchor x="828.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="480.0" y="-580.0" name="mkmkbottom_acc"/>
+  <anchor x="596.0" y="0.0" name="ogonek"/>
+  <anchor x="524.0" y="900.0" name="rhotichook"/>
+  <anchor x="484.0" y="2304.0" name="top"/>
+  <anchor x="828.0" y="2200.0" name="top0315"/>
+  <anchor x="828.0" y="2200.0" name="top_dd"/>
   <outline>
-    <component base="i" xOffset="112"/>
-    <component base="tilde" xOffset="-188" yOffset="-2216"/>
-    <contour>
-      <point x="480" y="16" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="524" y="900" type="move" name="rhotichook"/>
-    </contour>
-    <contour>
-      <point x="480" y="-580" type="move" name="mkmkbottom_acc"/>
-    </contour>
-    <contour>
-      <point x="484" y="2304" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="828" y="2200" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="828" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="596" y="0" type="move" name="ogonek"/>
-    </contour>
-    <contour>
-      <point x="828" y="-560" type="move" name="bottom_dd"/>
-    </contour>
+    <component base="i" xOffset="112.0"/>
+    <component base="tilde" xOffset="-188.0" yOffset="-2216.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>436</integer>
-          <key>y</key>
-          <integer>1508</integer>
-        </dict>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 997, 'leftMargin': -20, 'rightMargin': 33}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
     </dict>
   </lib>

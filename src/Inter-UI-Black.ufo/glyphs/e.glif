@@ -1,156 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="e" format="1">
-  <advance width="1636"/>
+<glyph name="e" format="2">
+  <advance width="1636.0"/>
   <unicode hex="0065"/>
+  <guideline x="1054.625"/>
+  <guideline x="196.0" y="724.0" angle="0.0"/>
+  <guideline x="788.0" y="1004.0" angle="90.0"/>
+  <anchor x="812.0" y="0.0" name="bottom"/>
+  <anchor x="1536.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="1204.0" y="48.0" name="ogonek"/>
+  <anchor x="1272.0" y="900.0" name="rhotichook"/>
+  <anchor x="804.0" y="1776.0" name="top"/>
+  <anchor x="1536.0" y="1776.0" name="top0315"/>
+  <anchor x="1536.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="852" y="-28" type="curve"/>
-      <point x="1292" y="-28"/>
-      <point x="1480" y="232"/>
-      <point x="1528" y="432" type="curve"/>
-      <point x="1124" y="540" type="line"/>
-      <point x="1092" y="448"/>
-      <point x="1032" y="340"/>
-      <point x="848" y="340" type="curve" smooth="yes"/>
-      <point x="620" y="340"/>
-      <point x="528" y="504"/>
-      <point x="528" y="744" type="curve"/>
-      <point x="528" y="1020"/>
-      <point x="632" y="1192"/>
-      <point x="836" y="1192" type="curve" smooth="yes"/>
-      <point x="1016" y="1192"/>
-      <point x="1112" y="1080"/>
-      <point x="1112" y="936" type="curve"/>
-      <point x="268" y="936" type="line"/>
-      <point x="268" y="640" type="line"/>
-      <point x="1540" y="640" type="line"/>
-      <point x="1540" y="832" type="line" smooth="yes"/>
-      <point x="1540" y="1288"/>
-      <point x="1264" y="1556"/>
-      <point x="840" y="1556" type="curve" smooth="yes"/>
-      <point x="360" y="1556"/>
-      <point x="96" y="1212"/>
-      <point x="96" y="744" type="curve"/>
-      <point x="96" y="260"/>
-      <point x="384" y="-28"/>
-    </contour>
-    <contour>
-      <point x="804" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="812" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1204" y="48" type="move" name="ogonek"/>
-    </contour>
-    <contour>
-      <point x="1536" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1536" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="1272" y="900" type="move" name="rhotichook"/>
-    </contour>
-    <contour>
-      <point x="1536" y="1776" type="move" name="top0315"/>
+      <point x="852.0" y="-28.0" type="curve"/>
+      <point x="1292.0" y="-28.0"/>
+      <point x="1480.0" y="232.0"/>
+      <point x="1528.0" y="432.0" type="curve"/>
+      <point x="1124.0" y="540.0" type="line"/>
+      <point x="1092.0" y="448.0"/>
+      <point x="1032.0" y="340.0"/>
+      <point x="848.0" y="340.0" type="curve" smooth="yes"/>
+      <point x="620.0" y="340.0"/>
+      <point x="528.0" y="504.0"/>
+      <point x="528.0" y="744.0" type="curve"/>
+      <point x="528.0" y="1020.0"/>
+      <point x="632.0" y="1192.0"/>
+      <point x="836.0" y="1192.0" type="curve" smooth="yes"/>
+      <point x="1016.0" y="1192.0"/>
+      <point x="1112.0" y="1080.0"/>
+      <point x="1112.0" y="936.0" type="curve"/>
+      <point x="268.0" y="936.0" type="line"/>
+      <point x="268.0" y="640.0" type="line"/>
+      <point x="1540.0" y="640.0" type="line"/>
+      <point x="1540.0" y="832.0" type="line" smooth="yes"/>
+      <point x="1540.0" y="1288.0"/>
+      <point x="1264.0" y="1556.0"/>
+      <point x="840.0" y="1556.0" type="curve" smooth="yes"/>
+      <point x="360.0" y="1556.0"/>
+      <point x="96.0" y="1212.0"/>
+      <point x="96.0" y="744.0" type="curve"/>
+      <point x="96.0" y="260.0"/>
+      <point x="384.0" y="-28.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-      </data>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>1054.625</real>
-          <key>y</key>
-          <real>0.0</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>196</integer>
-          <key>y</key>
-          <integer>724</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>788</integer>
-          <key>y</key>
-          <integer>1004</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.layerData</key>
-      <dict>
-        <key>reference</key>
-        <dict>
-          <key>anchors</key>
-          <array>
-          </array>
-          <key>components</key>
-          <array>
-            <dict>
-              <key>baseGlyph</key>
-              <string>c</string>
-              <key>transformation</key>
-              <array>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-                <integer>1</integer>
-                <integer>16</integer>
-                <integer>0</integer>
-              </array>
-            </dict>
-          </array>
-          <key>contours</key>
-          <array>
-          </array>
-          <key>lib</key>
-          <dict>
-          </dict>
-          <key>name</key>
-          <string>e</string>
-          <key>unicodes</key>
-          <array>
-          </array>
-          <key>width</key>
-          <integer>1636</integer>
-        </dict>
-      </dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1530, 'leftMargin': 89, 'rightMargin': 61}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

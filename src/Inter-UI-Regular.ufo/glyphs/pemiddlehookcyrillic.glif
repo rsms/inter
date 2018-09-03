@@ -1,36 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="pemiddlehookcyrillic" format="1">
-  <advance width="2544"/>
+<glyph name="pemiddlehookcyrillic" format="2">
+  <advance width="2544.0"/>
   <unicode hex="04A7"/>
   <outline>
     <contour>
-      <point x="1268" y="656" type="line"/>
-      <point x="1652" y="656" type="line" smooth="yes"/>
-      <point x="1920" y="656"/>
-      <point x="2104" y="504"/>
-      <point x="2108" y="236" type="curve" smooth="yes"/>
-      <point x="2108" y="40"/>
-      <point x="2028" y="-116"/>
-      <point x="1780" y="-180" type="curve"/>
-      <point x="1852" y="-392" type="line"/>
-      <point x="2240" y="-324"/>
-      <point x="2380" y="32"/>
-      <point x="2384" y="236" type="curve"/>
-      <point x="2384" y="644"/>
-      <point x="2076" y="892"/>
-      <point x="1652" y="892" type="curve" smooth="yes"/>
-      <point x="1268" y="892" type="line"/>
+      <point x="1268.0" y="656.0" type="line"/>
+      <point x="1652.0" y="656.0" type="line" smooth="yes"/>
+      <point x="1920.0" y="656.0"/>
+      <point x="2104.0" y="504.0"/>
+      <point x="2108.0" y="236.0" type="curve" smooth="yes"/>
+      <point x="2108.0" y="40.0"/>
+      <point x="2028.0" y="-116.0"/>
+      <point x="1780.0" y="-180.0" type="curve"/>
+      <point x="1852.0" y="-392.0" type="line"/>
+      <point x="2240.0" y="-324.0"/>
+      <point x="2380.0" y="32.0"/>
+      <point x="2384.0" y="236.0" type="curve"/>
+      <point x="2384.0" y="644.0"/>
+      <point x="2076.0" y="892.0"/>
+      <point x="1652.0" y="892.0" type="curve" smooth="yes"/>
+      <point x="1268.0" y="892.0" type="line"/>
     </contour>
-    <component base="pecyrillic" xOffset="-8"/>
+    <contour>
+      <point x="1112.0" y="1488.0" type="line"/>
+      <point x="388.0" y="1488.0" type="line"/>
+      <point x="388.0" y="1268.0" type="line"/>
+      <point x="1112.0" y="1268.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="424.0" y="1488.0" type="line"/>
+      <point x="148.0" y="1488.0" type="line"/>
+      <point x="148.0" y="0.0" type="line"/>
+      <point x="424.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1356.0" y="1488.0" type="line"/>
+      <point x="1084.0" y="1488.0" type="line"/>
+      <point x="1084.0" y="0.0" type="line"/>
+      <point x="1356.0" y="0.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2459, 'leftMargin': 147, 'rightMargin': 93}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

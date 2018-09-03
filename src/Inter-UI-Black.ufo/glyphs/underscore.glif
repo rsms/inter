@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="underscore" format="1">
-  <advance width="1312"/>
+<glyph name="underscore" format="2">
+  <advance width="1312.0"/>
   <unicode hex="005F"/>
+  <anchor x="632.0" y="184.0" name="_bottom"/>
   <outline>
     <contour>
-      <point x="1280" y="0" type="line"/>
-      <point x="32" y="0" type="line"/>
-      <point x="32" y="-344" type="line"/>
-      <point x="1280" y="-344" type="line"/>
-    </contour>
-    <contour>
-      <point x="632" y="184" type="move" name="_bottom"/>
+      <point x="1280.0" y="0.0" type="line"/>
+      <point x="32.0" y="0.0" type="line"/>
+      <point x="32.0" y="-344.0" type="line"/>
+      <point x="1280.0" y="-344.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1249, 'leftMargin': 0, 'rightMargin': 3}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

@@ -1,29 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="response" format="1">
-  <advance width="1796"/>
+<glyph name="response" format="2">
+  <advance width="1796.0"/>
   <unicode hex="211F"/>
   <outline>
     <contour>
-      <point x="1352" y="2260" type="line"/>
-      <point x="852" y="2420" type="line"/>
-      <point x="776" y="2176" type="line"/>
-      <point x="1052" y="2104" type="line"/>
-      <point x="352" y="-496" type="line"/>
-      <point x="584" y="-496" type="line"/>
+      <point x="1352.0" y="2260.0" type="line"/>
+      <point x="852.0" y="2420.0" type="line"/>
+      <point x="776.0" y="2176.0" type="line"/>
+      <point x="1052.0" y="2104.0" type="line"/>
+      <point x="352.0" y="-496.0" type="line"/>
+      <point x="584.0" y="-496.0" type="line"/>
     </contour>
-    <component base="R"/>
+    <contour>
+      <point x="144.0" y="2048.0" type="line"/>
+      <point x="144.0" y="0.0" type="line"/>
+      <point x="608.0" y="0.0" type="line"/>
+      <point x="608.0" y="1664.0" type="line"/>
+      <point x="932.0" y="1664.0" type="line" smooth="yes"/>
+      <point x="1100.0" y="1664.0"/>
+      <point x="1208.0" y="1572.0"/>
+      <point x="1208.0" y="1396.0" type="curve" smooth="yes"/>
+      <point x="1208.0" y="1216.0"/>
+      <point x="1096.0" y="1132.0"/>
+      <point x="932.0" y="1132.0" type="curve" smooth="yes"/>
+      <point x="432.0" y="1132.0" type="line"/>
+      <point x="436.0" y="752.0" type="line"/>
+      <point x="1088.0" y="752.0" type="line"/>
+      <point x="1240.0" y="792.0" type="line"/>
+      <point x="1480.0" y="888.0"/>
+      <point x="1668.0" y="1076.0"/>
+      <point x="1668.0" y="1408.0" type="curve" smooth="yes"/>
+      <point x="1668.0" y="1808.0"/>
+      <point x="1416.0" y="2048.0"/>
+      <point x="932.0" y="2048.0" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="1244.0" y="0.0" type="line"/>
+      <point x="1752.0" y="0.0" type="line"/>
+      <point x="1288.0" y="932.0" type="line"/>
+      <point x="788.0" y="932.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8</real>
-        <real>0.94</real>
-        <real>0.95</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1816, 'leftMargin': 161, 'rightMargin': 59}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.1.20</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
     </dict>
   </lib>
 </glyph>

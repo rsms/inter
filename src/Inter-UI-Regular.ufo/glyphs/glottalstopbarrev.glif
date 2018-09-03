@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="glottalstopbarrev" format="1">
-  <advance width="1520"/>
+<glyph name="glottalstopbarrev" format="2">
+  <advance width="1520.0"/>
   <unicode hex="02A2"/>
+  <anchor x="780.0" y="0.0" name="bottom"/>
+  <anchor x="780.0" y="2244.0" name="top"/>
+  <anchor x="1472.0" y="2244.0" name="top0315"/>
   <outline>
-    <component base="glottalstoprevinv" xOffset="-16"/>
-    <component base="crossbar" xOffset="124" yOffset="-688"/>
-    <contour>
-      <point x="780" y="2244" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1472" y="2244" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="780" y="0" type="move" name="bottom"/>
-    </contour>
+    <component base="glottalstoprevinv" xOffset="-16.0"/>
+    <component base="crossbar" xOffset="124.0" yOffset="-688.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1480, 'leftMargin': 136, 'rightMargin': 80}</string>
-      <key>interface.width-adjustments</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <integer>-16</integer>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
     </dict>
   </lib>

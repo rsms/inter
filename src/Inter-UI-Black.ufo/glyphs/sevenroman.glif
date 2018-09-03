@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="sevenroman" format="1">
-  <advance width="3104"/>
+<glyph name="sevenroman" format="2">
+  <advance width="3104.0"/>
   <unicode hex="2176"/>
   <outline>
-    <component base="v" xOffset="88"/>
-    <component base="i" xOffset="1536"/>
-    <component base="i" xOffset="2300"/>
+    <component base="v" xOffset="88.0"/>
+    <component base="i" xOffset="1536.0"/>
+    <component base="i" xOffset="2300.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <real>0.89</real>
-        <real>0.96</real>
-        <real>0.92</real>
-        <real>1.0</real>
+        <integer>-1</integer>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2978, 'leftMargin': 59, 'rightMargin': 137}</string>
+      <key>public.markColor</key>
+      <string>0.89,0.961,0.922,0.004</string>
     </dict>
   </lib>
 </glyph>

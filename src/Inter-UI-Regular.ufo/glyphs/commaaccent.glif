@@ -1,41 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="commaaccent" format="1">
-  <advance width="752"/>
+<glyph name="commaaccent" format="2">
+  <advance width="752.0"/>
   <unicode hex="F6C3"/>
+  <anchor x="392.0" y="512.0" name="_bottom"/>
+  <anchor x="252.0" y="340.0" name="_caron"/>
+  <anchor x="372.0" y="108.0" name="_right"/>
+  <anchor x="428.0" y="-216.0" name="mkmkbottom_acc"/>
   <outline>
     <contour>
-      <point x="512" y="384" type="line"/>
-      <point x="272" y="384" type="line"/>
-      <point x="272" y="256" type="line"/>
-      <point x="272" y="104"/>
-      <point x="220" y="-100"/>
-      <point x="152" y="-260" type="curve"/>
-      <point x="352" y="-300" type="line"/>
-      <point x="456" y="-144"/>
-      <point x="508" y="84"/>
-      <point x="512" y="260" type="curve"/>
-    </contour>
-    <contour>
-      <point x="392" y="512" type="move" name="_bottom"/>
-    </contour>
-    <contour>
-      <point x="252" y="340" type="move" name="_caron"/>
-    </contour>
-    <contour>
-      <point x="372" y="108" type="move" name="_right"/>
-    </contour>
-    <contour>
-      <point x="428" y="-216" type="move" name="mkmkbottom_acc"/>
+      <point x="512.0" y="384.0" type="line"/>
+      <point x="272.0" y="384.0" type="line"/>
+      <point x="272.0" y="256.0" type="line"/>
+      <point x="272.0" y="104.0"/>
+      <point x="220.0" y="-100.0"/>
+      <point x="152.0" y="-260.0" type="curve"/>
+      <point x="352.0" y="-300.0" type="line"/>
+      <point x="456.0" y="-144.0"/>
+      <point x="508.0" y="84.0"/>
+      <point x="512.0" y="260.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 718, 'leftMargin': 118, 'rightMargin': 235}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

@@ -1,113 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="M" format="1">
-  <advance width="2560"/>
+<glyph name="M" format="2">
+  <advance width="2560.0"/>
   <unicode hex="004D"/>
+  <guideline y="1219.625"/>
+  <guideline x="1280.0" y="1848.0" angle="90.0"/>
+  <guideline x="744.0" y="2164.0" angle="90.0"/>
+  <guideline x="1816.0" y="2040.0" angle="90.0"/>
+  <anchor x="1280.0" y="4.0" name="bottom"/>
+  <anchor x="2532.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="2364.0" y="0.0" name="right"/>
+  <anchor x="1280.0" y="2200.0" name="top"/>
+  <anchor x="2532.0" y="2200.0" name="top0315"/>
+  <anchor x="2532.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="144" y="2048" type="line"/>
-      <point x="144" y="0" type="line"/>
-      <point x="608" y="0" type="line"/>
-      <point x="608" y="1340" type="line"/>
-      <point x="624" y="1340" type="line"/>
-      <point x="1124" y="32" type="line"/>
-      <point x="1436" y="32" type="line"/>
-      <point x="1936" y="1332" type="line"/>
-      <point x="1952" y="1332" type="line"/>
-      <point x="1952" y="0" type="line"/>
-      <point x="2416" y="0" type="line"/>
-      <point x="2416" y="2048" type="line"/>
-      <point x="1816" y="2048" type="line"/>
-      <point x="1292" y="736" type="line"/>
-      <point x="1268" y="736" type="line"/>
-      <point x="744" y="2048" type="line"/>
-    </contour>
-    <contour>
-      <point x="1280.0" y="2200.0" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="2364.0" y="0.0" type="move" name="right"/>
-    </contour>
-    <contour>
-      <point x="1280" y="4" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="2532.0" y="2200.0" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="2532.0" y="-560.0" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="2532.0" y="2200.0" type="move" name="top0315"/>
+      <point x="144.0" y="2048.0" type="line"/>
+      <point x="144.0" y="0.0" type="line"/>
+      <point x="608.0" y="0.0" type="line"/>
+      <point x="608.0" y="1340.0" type="line"/>
+      <point x="624.0" y="1340.0" type="line"/>
+      <point x="1124.0" y="32.0" type="line"/>
+      <point x="1436.0" y="32.0" type="line"/>
+      <point x="1936.0" y="1332.0" type="line"/>
+      <point x="1952.0" y="1332.0" type="line"/>
+      <point x="1952.0" y="0.0" type="line"/>
+      <point x="2416.0" y="0.0" type="line"/>
+      <point x="2416.0" y="2048.0" type="line"/>
+      <point x="1816.0" y="2048.0" type="line"/>
+      <point x="1292.0" y="736.0" type="line"/>
+      <point x="1268.0" y="736.0" type="line"/>
+      <point x="744.0" y="2048.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1219.625</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1280</integer>
-          <key>y</key>
-          <integer>1848</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>744</integer>
-          <key>y</key>
-          <integer>2164</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1816</integer>
-          <key>y</key>
-          <integer>2040</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2468, 'leftMargin': 161, 'rightMargin': 163}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

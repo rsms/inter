@@ -1,60 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="zhecyrillic" format="1">
-  <advance width="2288"/>
+<glyph name="zhecyrillic" format="2">
+  <advance width="2288.0"/>
   <unicode hex="0436"/>
+  <anchor x="2040.0" y="0.0" name="right"/>
+  <anchor x="1144.0" y="1744.0" name="top"/>
+  <anchor x="2228.0" y="1744.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="700" y="640" type="line"/>
-      <point x="1100" y="640" type="line"/>
-      <point x="1140" y="880" type="line"/>
-      <point x="840" y="880" type="line"/>
-      <point x="476" y="1488" type="line"/>
-      <point x="148" y="1488" type="line"/>
+      <point x="700.0" y="640.0" type="line"/>
+      <point x="1100.0" y="640.0" type="line"/>
+      <point x="1140.0" y="880.0" type="line"/>
+      <point x="840.0" y="880.0" type="line"/>
+      <point x="476.0" y="1488.0" type="line"/>
+      <point x="148.0" y="1488.0" type="line"/>
     </contour>
     <contour>
-      <point x="852" y="668" type="line"/>
-      <point x="676" y="864" type="line"/>
-      <point x="100" y="0" type="line"/>
-      <point x="444" y="0" type="line"/>
+      <point x="852.0" y="668.0" type="line"/>
+      <point x="676.0" y="864.0" type="line"/>
+      <point x="100.0" y="0.0" type="line"/>
+      <point x="444.0" y="0.0" type="line"/>
     </contour>
     <contour>
-      <point x="1280" y="1488" type="line"/>
-      <point x="1008" y="1488" type="line"/>
-      <point x="1008" y="0" type="line"/>
-      <point x="1280" y="0" type="line"/>
+      <point x="1280.0" y="1488.0" type="line"/>
+      <point x="1008.0" y="1488.0" type="line"/>
+      <point x="1008.0" y="0.0" type="line"/>
+      <point x="1280.0" y="0.0" type="line"/>
     </contour>
     <contour>
-      <point x="2144" y="1488" type="line"/>
-      <point x="1812" y="1488" type="line"/>
-      <point x="1448" y="880" type="line"/>
-      <point x="1148" y="880" type="line"/>
-      <point x="1192" y="640" type="line"/>
-      <point x="1588" y="640" type="line"/>
+      <point x="2144.0" y="1488.0" type="line"/>
+      <point x="1812.0" y="1488.0" type="line"/>
+      <point x="1448.0" y="880.0" type="line"/>
+      <point x="1148.0" y="880.0" type="line"/>
+      <point x="1192.0" y="640.0" type="line"/>
+      <point x="1588.0" y="640.0" type="line"/>
     </contour>
     <contour>
-      <point x="1844" y="0" type="line"/>
-      <point x="2188" y="0" type="line"/>
-      <point x="1616" y="864" type="line"/>
-      <point x="1440" y="668" type="line"/>
-    </contour>
-    <contour>
-      <point x="1144" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="2040" y="0" type="move" name="right"/>
-    </contour>
-    <contour>
-      <point x="2228" y="1744" type="move" name="top0315"/>
+      <point x="1844.0" y="0.0" type="line"/>
+      <point x="2188.0" y="0.0" type="line"/>
+      <point x="1616.0" y="864.0" type="line"/>
+      <point x="1440.0" y="668.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2156.0, 'leftMargin': 29, 'rightMargin': 37.0}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

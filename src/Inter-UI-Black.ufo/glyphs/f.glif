@@ -1,89 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="f" format="1">
-  <advance width="1104"/>
+<glyph name="f" format="2">
+  <advance width="1104.0"/>
   <unicode hex="0066"/>
+  <guideline y="1229.25"/>
+  <guideline y="257.125"/>
+  <anchor x="492.0" y="0.0" name="bottom"/>
+  <anchor x="1048.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="644.0" y="2284.0" name="top"/>
+  <anchor x="1048.0" y="2284.0" name="top0315"/>
+  <anchor x="1048.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="1008" y="1536" type="line"/>
-      <point x="76" y="1536" type="line"/>
-      <point x="76" y="1216" type="line"/>
-      <point x="1008" y="1216" type="line"/>
+      <point x="1008.0" y="1536.0" type="line"/>
+      <point x="76.0" y="1536.0" type="line"/>
+      <point x="76.0" y="1216.0" type="line"/>
+      <point x="1008.0" y="1216.0" type="line"/>
     </contour>
     <contour>
-      <point x="264" y="0" type="line"/>
-      <point x="724" y="0" type="line" name="hr00"/>
-      <point x="724" y="1560" type="line" smooth="yes"/>
-      <point x="724" y="1664"/>
-      <point x="768" y="1712"/>
-      <point x="872" y="1712" type="curve" smooth="yes"/>
-      <point x="916" y="1712"/>
-      <point x="964" y="1704"/>
-      <point x="1004" y="1692" type="curve"/>
-      <point x="1080" y="2032" type="line"/>
-      <point x="1024" y="2048"/>
-      <point x="908" y="2076"/>
-      <point x="768" y="2076" type="curve" smooth="yes"/>
-      <point x="472" y="2076"/>
-      <point x="264" y="1908"/>
-      <point x="264" y="1560" type="curve" smooth="yes"/>
-    </contour>
-    <contour>
-      <point x="644" y="2284" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="492" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1048" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1048" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="1048" y="2284" type="move" name="top0315"/>
+      <point x="264.0" y="0.0" type="line"/>
+      <point x="724.0" y="0.0" type="line"/>
+      <point x="724.0" y="1560.0" type="line" smooth="yes"/>
+      <point x="724.0" y="1664.0"/>
+      <point x="768.0" y="1712.0"/>
+      <point x="872.0" y="1712.0" type="curve" smooth="yes"/>
+      <point x="916.0" y="1712.0"/>
+      <point x="964.0" y="1704.0"/>
+      <point x="1004.0" y="1692.0" type="curve"/>
+      <point x="1080.0" y="2032.0" type="line"/>
+      <point x="1024.0" y="2048.0"/>
+      <point x="908.0" y="2076.0"/>
+      <point x="768.0" y="2076.0" type="curve" smooth="yes"/>
+      <point x="472.0" y="2076.0"/>
+      <point x="264.0" y="1908.0"/>
+      <point x="264.0" y="1560.0" type="curve" smooth="yes"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-      </data>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1229.25</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>257.125</real>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1018, 'leftMargin': 25, 'rightMargin': 0}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.1.0</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

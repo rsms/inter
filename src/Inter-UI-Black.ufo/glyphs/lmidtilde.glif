@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="lmidtilde" format="1">
-  <advance width="1312"/>
+<glyph name="lmidtilde" format="2">
+  <advance width="1312.0"/>
   <unicode hex="026B"/>
+  <anchor x="652.0" y="0.0" name="bottom"/>
+  <anchor x="660.0" y="1160.0" name="parenthesses.w2"/>
+  <anchor x="652.0" y="2200.0" name="top"/>
+  <anchor x="1240.0" y="2200.0" name="top0315"/>
   <outline>
-    <component base="l" xOffset="256"/>
-    <component base="tilde" xOffset="-44" yOffset="-756"/>
-    <contour>
-      <point x="652" y="2200" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="660" y="1160" type="move" name="parenthesses.w2"/>
-    </contour>
-    <contour>
-      <point x="1240" y="2200" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="652" y="0" type="move" name="bottom"/>
-    </contour>
+    <component base="l" xOffset="256.0"/>
+    <component base="tilde" xOffset="-44.0" yOffset="-756.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1165, 'leftMargin': 55, 'rightMargin': 56}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
     </dict>
   </lib>
 </glyph>

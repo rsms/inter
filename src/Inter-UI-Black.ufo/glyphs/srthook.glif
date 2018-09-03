@@ -1,41 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="srthook" format="1">
-  <advance width="1568"/>
+<glyph name="srthook" format="2">
+  <advance width="1568.0"/>
   <unicode hex="0282"/>
+  <anchor x="756.0" y="-616.0" name="bottom"/>
+  <anchor x="756.0" y="1776.0" name="top"/>
+  <anchor x="1492.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="112" y="532" type="line"/>
-      <point x="112" y="-84" type="line" smooth="yes"/>
-      <point x="112" y="-400"/>
-      <point x="296" y="-576"/>
-      <point x="588" y="-576" type="curve" smooth="yes"/>
-      <point x="652" y="-576"/>
-      <point x="704" y="-572"/>
-      <point x="772" y="-556" type="curve"/>
-      <point x="772" y="-260" type="line"/>
-      <point x="732" y="-264"/>
-      <point x="700" y="-268"/>
-      <point x="660" y="-268" type="curve" smooth="yes"/>
-      <point x="556" y="-268"/>
-      <point x="512" y="-236"/>
-      <point x="512" y="-84" type="curve" smooth="yes"/>
-      <point x="512" y="532" type="line"/>
-    </contour>
-    <component base="s" xOffset="32"/>
-    <contour>
-      <point x="756" y="1776" type="move" name="top"/>
+      <point x="112.0" y="532.0" type="line"/>
+      <point x="112.0" y="-84.0" type="line" smooth="yes"/>
+      <point x="112.0" y="-400.0"/>
+      <point x="296.0" y="-576.0"/>
+      <point x="588.0" y="-576.0" type="curve" smooth="yes"/>
+      <point x="652.0" y="-576.0"/>
+      <point x="704.0" y="-572.0"/>
+      <point x="772.0" y="-556.0" type="curve"/>
+      <point x="772.0" y="-260.0" type="line"/>
+      <point x="732.0" y="-264.0"/>
+      <point x="700.0" y="-268.0"/>
+      <point x="660.0" y="-268.0" type="curve" smooth="yes"/>
+      <point x="556.0" y="-268.0"/>
+      <point x="512.0" y="-236.0"/>
+      <point x="512.0" y="-84.0" type="curve" smooth="yes"/>
+      <point x="512.0" y="532.0" type="line"/>
     </contour>
     <contour>
-      <point x="756" y="-616" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1492" y="1776" type="move" name="top0315"/>
+      <point x="1476.0" y="1084.0" type="line"/>
+      <point x="1440.0" y="1388.0"/>
+      <point x="1240.0" y="1556.0"/>
+      <point x="844.0" y="1556.0" type="curve" smooth="yes"/>
+      <point x="428.0" y="1556.0"/>
+      <point x="156.0" y="1376.0"/>
+      <point x="156.0" y="1060.0" type="curve" smooth="yes"/>
+      <point x="156.0" y="788.0"/>
+      <point x="360.0" y="672.0"/>
+      <point x="592.0" y="620.0" type="curve" smooth="yes"/>
+      <point x="868.0" y="560.0" type="line" smooth="yes"/>
+      <point x="940.0" y="544.0"/>
+      <point x="1040.0" y="532.0"/>
+      <point x="1040.0" y="424.0" type="curve" smooth="yes"/>
+      <point x="1040.0" y="352.0"/>
+      <point x="936.0" y="300.0"/>
+      <point x="820.0" y="300.0" type="curve" smooth="yes"/>
+      <point x="704.0" y="300.0"/>
+      <point x="584.0" y="356.0"/>
+      <point x="556.0" y="496.0" type="curve"/>
+      <point x="112.0" y="472.0" type="line"/>
+      <point x="164.0" y="136.0"/>
+      <point x="400.0" y="-28.0"/>
+      <point x="792.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1176.0" y="-28.0"/>
+      <point x="1512.0" y="128.0"/>
+      <point x="1512.0" y="484.0" type="curve" smooth="yes"/>
+      <point x="1512.0" y="764.0"/>
+      <point x="1308.0" y="860.0"/>
+      <point x="1092.0" y="904.0" type="curve" smooth="yes"/>
+      <point x="780.0" y="968.0" type="line" smooth="yes"/>
+      <point x="696.0" y="984.0"/>
+      <point x="612.0" y="1012.0"/>
+      <point x="612.0" y="1092.0" type="curve" smooth="yes"/>
+      <point x="612.0" y="1176.0"/>
+      <point x="716.0" y="1224.0"/>
+      <point x="820.0" y="1224.0" type="curve" smooth="yes"/>
+      <point x="928.0" y="1224.0"/>
+      <point x="1040.0" y="1176.0"/>
+      <point x="1056.0" y="1060.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1445, 'leftMargin': 58, 'rightMargin': 29}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

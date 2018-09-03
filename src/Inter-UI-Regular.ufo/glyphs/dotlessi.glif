@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dotlessi" format="1">
-  <advance width="668"/>
+<glyph name="dotlessi" format="2">
+  <advance width="668.0"/>
   <unicode hex="0131"/>
+  <anchor x="332.0" y="0.0" name="bottom"/>
+  <anchor x="352.0" y="900.0" name="rhotichook"/>
+  <anchor x="344.0" y="1796.0" name="top"/>
+  <anchor x="672.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="452" y="1536" type="line"/>
-      <point x="216" y="1536" type="line"/>
-      <point x="216" y="0" type="line"/>
-      <point x="452" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="344" y="1796" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="332" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="352" y="900" type="move" name="rhotichook"/>
-    </contour>
-    <contour>
-      <point x="672" y="1776" type="move" name="top0315"/>
+      <point x="452.0" y="1536.0" type="line"/>
+      <point x="216.0" y="1536.0" type="line"/>
+      <point x="216.0" y="0.0" type="line"/>
+      <point x="452.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

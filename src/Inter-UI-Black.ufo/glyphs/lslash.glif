@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="lslash" format="1">
-  <advance width="748"/>
+<glyph name="lslash" format="2">
+  <advance width="748.0"/>
   <unicode hex="0142"/>
+  <anchor x="376.0" y="0.0" name="bottom"/>
+  <anchor x="400.0" y="2308.0" name="top"/>
+  <anchor x="852.0" y="2308.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="776" y="1344" type="line"/>
-      <point x="-36" y="1084" type="line"/>
-      <point x="-36" y="836" type="line"/>
-      <point x="776" y="1096" type="line"/>
-    </contour>
-    <component base="l"/>
-    <contour>
-      <point x="400" y="2308" type="move" name="top"/>
+      <point x="776.0" y="1344.0" type="line"/>
+      <point x="-36.0" y="1084.0" type="line"/>
+      <point x="-36.0" y="836.0" type="line"/>
+      <point x="776.0" y="1096.0" type="line"/>
     </contour>
     <contour>
-      <point x="376" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="852" y="2308" type="move" name="top0315"/>
+      <point x="604.0" y="2048.0" type="line"/>
+      <point x="144.0" y="2048.0" type="line"/>
+      <point x="144.0" y="0.0" type="line"/>
+      <point x="604.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 895, 'leftMargin': 39, 'rightMargin': 45}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

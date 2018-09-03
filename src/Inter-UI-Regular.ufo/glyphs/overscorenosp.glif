@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="overscorenosp" format="1">
-  <advance width="0"/>
+<glyph name="overscorenosp" format="2">
   <unicode hex="0305"/>
+  <anchor x="-807.0" y="2160.0" name="_marktop"/>
+  <anchor x="-807.0" y="2520.0" name="mkmktop"/>
+  <anchor x="-809.0" y="2291.0" name="parent_top"/>
   <outline>
-    <component base="underscore" xOffset="-1451" yOffset="2401"/>
-    <contour>
-      <point x="-807" y="2160" type="move" name="_marktop"/>
-    </contour>
-    <contour>
-      <point x="-809" y="2291" type="move" name="parent_top"/>
-    </contour>
-    <contour>
-      <point x="-807" y="2520" type="move" name="mkmktop"/>
-    </contour>
+    <component base="underscore" xOffset="-1451.0" yOffset="2401.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

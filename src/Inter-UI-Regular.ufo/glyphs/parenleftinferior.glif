@@ -1,42 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="parenleftinferior" format="1">
-  <advance width="752"/>
+<glyph name="parenleftinferior" format="2">
+  <advance width="752.0"/>
   <unicode hex="208D"/>
   <outline>
     <contour>
-      <point x="144" y="36" type="line"/>
-      <point x="144" y="-404"/>
-      <point x="392" y="-660"/>
-      <point x="536" y="-736" type="curve"/>
-      <point x="608" y="-576" type="line"/>
-      <point x="504" y="-472"/>
-      <point x="384" y="-328"/>
-      <point x="384" y="36" type="curve" smooth="yes"/>
-      <point x="384" y="64" type="line" smooth="yes"/>
-      <point x="384" y="400"/>
-      <point x="508" y="572"/>
-      <point x="608" y="668" type="curve"/>
-      <point x="536" y="836" type="line"/>
-      <point x="392" y="760"/>
-      <point x="144" y="500"/>
-      <point x="144" y="60" type="curve" smooth="yes"/>
+      <point x="144.0" y="36.0" type="line"/>
+      <point x="144.0" y="-404.0"/>
+      <point x="392.0" y="-660.0"/>
+      <point x="536.0" y="-736.0" type="curve"/>
+      <point x="608.0" y="-576.0" type="line"/>
+      <point x="504.0" y="-472.0"/>
+      <point x="384.0" y="-328.0"/>
+      <point x="384.0" y="36.0" type="curve" smooth="yes"/>
+      <point x="384.0" y="64.0" type="line" smooth="yes"/>
+      <point x="384.0" y="400.0"/>
+      <point x="508.0" y="572.0"/>
+      <point x="608.0" y="668.0" type="curve"/>
+      <point x="536.0" y="836.0" type="line"/>
+      <point x="392.0" y="760.0"/>
+      <point x="144.0" y="500.0"/>
+      <point x="144.0" y="60.0" type="curve" smooth="yes"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 683, 'leftMargin': 110, 'rightMargin': 110}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

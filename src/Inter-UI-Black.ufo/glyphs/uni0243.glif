@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni0243" format="1">
-  <advance width="1992"/>
+<glyph name="uni0243" format="2">
+  <advance width="1992.0"/>
   <unicode hex="0243"/>
+  <anchor x="1016.0" y="16.0" name="bottom"/>
+  <anchor x="1016.0" y="2216.0" name="top"/>
+  <anchor x="2036.0" y="2216.0" name="top0315"/>
   <outline>
-    <component base="B" xOffset="208"/>
-    <component base="crossbar" xOffset="-92" yOffset="-400"/>
-    <contour>
-      <point x="1016" y="2216" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="2036" y="2216" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="1016" y="16" type="move" name="bottom"/>
-    </contour>
+    <component base="B" xOffset="208.0"/>
+    <component base="crossbar" xOffset="-92.0" yOffset="-400.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1948, 'leftMargin': -20, 'rightMargin': 22}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
     </dict>
   </lib>
 </glyph>

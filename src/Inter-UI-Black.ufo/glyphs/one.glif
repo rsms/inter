@@ -1,61 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="one" format="1">
-  <advance width="1408"/>
+<glyph name="one" format="2">
+  <advance width="1408.0"/>
   <unicode hex="0031"/>
+  <guideline y="1238.875"/>
+  <guideline y="763.125"/>
   <outline>
     <contour>
-      <point x="996" y="2048" type="line"/>
-      <point x="580" y="2048" type="line"/>
-      <point x="580" y="2032"/>
-      <point x="540" y="1704"/>
-      <point x="160" y="1704" type="curve"/>
-      <point x="160" y="1336" type="line"/>
-      <point x="376" y="1336"/>
-      <point x="512" y="1384"/>
-      <point x="560" y="1464" type="curve"/>
-      <point x="576" y="1464" type="line"/>
-      <point x="576" y="0" type="line"/>
-      <point x="996" y="0" type="line"/>
+      <point x="996.0" y="2048.0" type="line"/>
+      <point x="580.0" y="2048.0" type="line"/>
+      <point x="580.0" y="2032.0"/>
+      <point x="540.0" y="1704.0"/>
+      <point x="160.0" y="1704.0" type="curve"/>
+      <point x="160.0" y="1336.0" type="line"/>
+      <point x="376.0" y="1336.0"/>
+      <point x="512.0" y="1384.0"/>
+      <point x="560.0" y="1464.0" type="curve"/>
+      <point x="576.0" y="1464.0" type="line"/>
+      <point x="576.0" y="0.0" type="line"/>
+      <point x="996.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1238.875</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>763.125</real>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.89</real>
-        <real>0.96</real>
-        <real>0.92</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1627, 'leftMargin': 230, 'rightMargin': 493}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.89,0.961,0.922,0.004</string>
     </dict>
   </lib>
 </glyph>

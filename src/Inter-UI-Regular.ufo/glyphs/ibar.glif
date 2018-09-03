@@ -1,44 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ibar" format="1">
-  <advance width="840"/>
+<glyph name="ibar" format="2">
+  <advance width="840.0"/>
   <unicode hex="0268"/>
+  <guideline x="420.0" y="2148.0" angle="90.0"/>
+  <anchor x="420.0" y="0.0" name="bottom"/>
+  <anchor x="420.0" y="2200.0" name="top"/>
+  <anchor x="892.0" y="2200.0" name="top0315"/>
   <outline>
-    <component base="i" xOffset="88"/>
-    <component base="crossbar" xOffset="-216" yOffset="-164"/>
-    <contour>
-      <point x="420" y="2200" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="892" y="2200" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="420" y="0" type="move" name="bottom"/>
-    </contour>
+    <component base="i" xOffset="88.0"/>
+    <component base="crossbar" xOffset="-216.0" yOffset="-164.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>420</integer>
-          <key>y</key>
-          <integer>2148</integer>
-        </dict>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 938, 'leftMargin': 27, 'rightMargin': 28}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
     </dict>
   </lib>

@@ -1,13 +1,24 @@
-compreffor==0.4.6.post1
-cu2qu==1.5.0
-Cython==0.27.3
-defcon==0.5.2
-fonttools==3.29.0
-freetype-py==2.0.0.post6
-git+https://github.com/googlei18n/nototools@40aa4936022295cf851bb62f09a070f63fc8f5ae
-git+https://github.com/googlei18n/ufo2ft.git@5507abd8a765d44587502cbdc16d441e3cd28bef
-git+https://github.com/typesupply/feaTools.git@8fc73f8ad5523cb6d9e0c8ac966eeb5dab5f7f49
+# git+https://github.com/fonttools/fonttools.git@c895f4f4a23235688ef95ca83ae60f7d175e673a
+
+# for fontTools/varLib/interpolatable.py
 numpy==1.15.1
-pyclipper==1.0.6  # note: 1.1.0 is problematic
 scipy==1.1.0
-ufoLib==2.3.1
+munkres==1.0.12
+
+# git+https://github.com/LettError/MutatorMath.git@f21f184d787bfab469a064d84c84298a3f199509
+
+git+https://github.com/googlei18n/fontmake.git@db2f52a728493751a3d0446a3e281260ec9d96ff
+
+# compreffor==0.4.6.post1
+# cu2qu==1.5.0
+# Cython==0.27.3
+# defcon==0.5.2
+# fonttools==3.29.0
+# freetype-py==2.0.0.post6
+# git+https://github.com/googlei18n/nototools@40aa4936022295cf851bb62f09a070f63fc8f5ae
+# git+https://github.com/googlei18n/ufo2ft.git@5507abd8a765d44587502cbdc16d441e3cd28bef
+# git+https://github.com/typesupply/feaTools.git@8fc73f8ad5523cb6d9e0c8ac966eeb5dab5f7f49
+# numpy==1.15.1
+# pyclipper==1.0.6  # note: 1.1.0 is problematic
+# scipy==1.1.0
+# ufoLib==2.3.1

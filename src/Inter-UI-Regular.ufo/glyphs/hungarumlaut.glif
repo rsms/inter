@@ -1,36 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="hungarumlaut" format="1">
-  <advance width="1040"/>
+<glyph name="hungarumlaut" format="2">
+  <advance width="1040.0"/>
   <unicode hex="02DD"/>
+  <anchor x="484.0" y="1776.0" name="_top"/>
+  <anchor x="484.0" y="2228.0" name="mkmktop_acc"/>
   <outline>
     <contour>
-      <point x="544" y="1688" type="line"/>
-      <point x="752" y="1688" type="line"/>
-      <point x="1116" y="2112" type="line"/>
-      <point x="852" y="2112" type="line"/>
+      <point x="544.0" y="1688.0" type="line"/>
+      <point x="752.0" y="1688.0" type="line"/>
+      <point x="1116.0" y="2112.0" type="line"/>
+      <point x="852.0" y="2112.0" type="line"/>
     </contour>
     <contour>
-      <point x="132" y="1688" type="line"/>
-      <point x="320" y="1688" type="line"/>
-      <point x="616" y="2112" type="line"/>
-      <point x="356" y="2112" type="line"/>
-    </contour>
-    <contour>
-      <point x="484" y="1776" type="move" name="_top"/>
-    </contour>
-    <contour>
-      <point x="484" y="2228" type="move" name="mkmktop_acc"/>
+      <point x="132.0" y="1688.0" type="line"/>
+      <point x="320.0" y="1688.0" type="line"/>
+      <point x="616.0" y="2112.0" type="line"/>
+      <point x="356.0" y="2112.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8</real>
-        <real>0.94</real>
-        <real>0.95</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
     </dict>
   </lib>
 </glyph>

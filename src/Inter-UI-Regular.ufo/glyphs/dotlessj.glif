@@ -1,57 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dotlessj" format="1">
-  <advance width="668"/>
+<glyph name="dotlessj" format="2">
+  <advance width="668.0"/>
   <unicode hex="0237"/>
+  <guideline x="332.0" y="1748.0" angle="90.0"/>
+  <anchor x="652.0" y="0.0" name="_right"/>
+  <anchor x="332.0" y="1716.0" name="top"/>
+  <anchor x="688.0" y="1716.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="216" y="1536" type="line"/>
-      <point x="216" y="-112" type="line"/>
-      <point x="216" y="-268"/>
-      <point x="152" y="-360"/>
-      <point x="8" y="-360" type="curve"/>
-      <point x="-36" y="-360" type="line"/>
-      <point x="-36" y="-580" type="line"/>
-      <point x="12" y="-580" type="line"/>
-      <point x="308" y="-580"/>
-      <point x="452" y="-396"/>
-      <point x="452" y="-112" type="curve"/>
-      <point x="452" y="1536" type="line"/>
-    </contour>
-    <contour>
-      <point x="332" y="1716" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="652" y="0" type="move" name="_right"/>
-    </contour>
-    <contour>
-      <point x="688" y="1716" type="move" name="top0315"/>
+      <point x="216.0" y="1536.0" type="line"/>
+      <point x="216.0" y="-112.0" type="line"/>
+      <point x="216.0" y="-268.0"/>
+      <point x="152.0" y="-360.0"/>
+      <point x="8.0" y="-360.0" type="curve"/>
+      <point x="-36.0" y="-360.0" type="line"/>
+      <point x="-36.0" y="-580.0" type="line"/>
+      <point x="12.0" y="-580.0" type="line"/>
+      <point x="308.0" y="-580.0"/>
+      <point x="452.0" y="-396.0"/>
+      <point x="452.0" y="-112.0" type="curve"/>
+      <point x="452.0" y="1536.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>332</integer>
-          <key>y</key>
-          <integer>1748</integer>
-        </dict>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 723, 'leftMargin': -92, 'rightMargin': 213}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

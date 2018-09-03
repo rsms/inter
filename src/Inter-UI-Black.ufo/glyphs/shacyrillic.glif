@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="shacyrillic" format="1">
-  <advance width="2336"/>
+<glyph name="shacyrillic" format="2">
+  <advance width="2336.0"/>
   <unicode hex="0448"/>
+  <anchor x="1140.0" y="1744.0" name="top"/>
+  <anchor x="2352.0" y="1744.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="136" y="1488" type="line"/>
-      <point x="136" y="0" type="line"/>
-      <point x="2200" y="0" type="line"/>
-      <point x="2200" y="1488" type="line"/>
-      <point x="1756" y="1488" type="line"/>
-      <point x="1756" y="360" type="line"/>
-      <point x="1392" y="360" type="line"/>
-      <point x="1392" y="1488" type="line"/>
-      <point x="948" y="1488" type="line"/>
-      <point x="948" y="360" type="line"/>
-      <point x="580" y="360" type="line"/>
-      <point x="580" y="1488" type="line"/>
-    </contour>
-    <contour>
-      <point x="1140" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="2352" y="1744" type="move" name="top0315"/>
+      <point x="136.0" y="1488.0" type="line"/>
+      <point x="136.0" y="0.0" type="line"/>
+      <point x="2200.0" y="0.0" type="line"/>
+      <point x="2200.0" y="1488.0" type="line"/>
+      <point x="1756.0" y="1488.0" type="line"/>
+      <point x="1756.0" y="360.0" type="line"/>
+      <point x="1392.0" y="360.0" type="line"/>
+      <point x="1392.0" y="1488.0" type="line"/>
+      <point x="948.0" y="1488.0" type="line"/>
+      <point x="948.0" y="360.0" type="line"/>
+      <point x="580.0" y="360.0" type="line"/>
+      <point x="580.0" y="1488.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2346, 'leftMargin': 132, 'rightMargin': 150}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

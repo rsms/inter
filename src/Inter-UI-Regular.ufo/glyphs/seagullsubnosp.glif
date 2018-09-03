@@ -1,56 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="seagullsubnosp" format="1">
-  <advance width="0"/>
+<glyph name="seagullsubnosp" format="2">
   <unicode hex="033C"/>
+  <anchor x="-807.0" y="0.0" name="_markbottom"/>
+  <anchor x="-807.0" y="-457.0" name="mkmkbottom_acc"/>
   <outline>
     <contour>
-      <point x="-807" y="0" type="move" name="_markbottom"/>
+      <point x="-1354.0" y="-485.0" type="line"/>
+      <point x="-1354.0" y="-292.0"/>
+      <point x="-1228.0" y="-154.0"/>
+      <point x="-1052.0" y="-154.0" type="curve" smooth="yes"/>
+      <point x="-850.0" y="-154.0"/>
+      <point x="-741.0" y="-292.0"/>
+      <point x="-741.0" y="-484.0" type="curve"/>
+      <point x="-873.0" y="-484.0" type="line"/>
+      <point x="-873.0" y="-380.0"/>
+      <point x="-930.0" y="-312.0"/>
+      <point x="-1052.0" y="-312.0" type="curve" smooth="yes"/>
+      <point x="-1147.0" y="-312.0"/>
+      <point x="-1221.0" y="-380.0"/>
+      <point x="-1221.0" y="-485.0" type="curve"/>
     </contour>
     <contour>
-      <point x="-807" y="-457" type="move" name="mkmkbottom_acc"/>
-    </contour>
-    <contour>
-      <point x="-1354" y="-485" type="line"/>
-      <point x="-1354" y="-292"/>
-      <point x="-1228" y="-154"/>
-      <point x="-1052" y="-154" type="curve" smooth="yes"/>
-      <point x="-850" y="-154"/>
-      <point x="-741" y="-292"/>
-      <point x="-741" y="-484" type="curve"/>
-      <point x="-873" y="-484" type="line"/>
-      <point x="-873" y="-380"/>
-      <point x="-930" y="-312"/>
-      <point x="-1052" y="-312" type="curve" smooth="yes"/>
-      <point x="-1147" y="-312"/>
-      <point x="-1221" y="-380"/>
-      <point x="-1221" y="-485" type="curve"/>
-    </contour>
-    <contour>
-      <point x="-873" y="-484" type="line"/>
-      <point x="-873" y="-292"/>
-      <point x="-765" y="-154"/>
-      <point x="-562" y="-154" type="curve" smooth="yes"/>
-      <point x="-386" y="-154"/>
-      <point x="-260" y="-292"/>
-      <point x="-260" y="-485" type="curve"/>
-      <point x="-393" y="-485" type="line"/>
-      <point x="-393" y="-380"/>
-      <point x="-468" y="-312"/>
-      <point x="-562" y="-312" type="curve" smooth="yes"/>
-      <point x="-685" y="-312"/>
-      <point x="-741" y="-380"/>
-      <point x="-741" y="-484" type="curve"/>
+      <point x="-873.0" y="-484.0" type="line"/>
+      <point x="-873.0" y="-292.0"/>
+      <point x="-765.0" y="-154.0"/>
+      <point x="-562.0" y="-154.0" type="curve" smooth="yes"/>
+      <point x="-386.0" y="-154.0"/>
+      <point x="-260.0" y="-292.0"/>
+      <point x="-260.0" y="-485.0" type="curve"/>
+      <point x="-393.0" y="-485.0" type="line"/>
+      <point x="-393.0" y="-380.0"/>
+      <point x="-468.0" y="-312.0"/>
+      <point x="-562.0" y="-312.0" type="curve" smooth="yes"/>
+      <point x="-685.0" y="-312.0"/>
+      <point x="-741.0" y="-380.0"/>
+      <point x="-741.0" y="-484.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

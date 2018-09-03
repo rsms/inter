@@ -1,78 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="j" format="1">
-  <advance width="948"/>
+<glyph name="j" format="2">
+  <advance width="948.0"/>
   <unicode hex="006A"/>
+  <guideline y="906.125"/>
+  <guideline y="1381.875"/>
+  <guideline x="548.0" y="1564.0" angle="90.0"/>
+  <anchor x="488.0" y="-572.0" name="bottom"/>
+  <anchor x="916.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="564.0" y="2200.0" name="top"/>
+  <anchor x="916.0" y="2200.0" name="top0315"/>
+  <anchor x="916.0" y="2200.0" name="top_dd"/>
   <outline>
     <component base="dotlessj"/>
-    <component base="dotaccent" xOffset="164"/>
-    <contour>
-      <point x="564" y="2200" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="488" y="-572" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="916" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="916" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="916" y="2200" type="move" name="top0315"/>
-    </contour>
+    <component base="dotaccent" xOffset="164.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>906.125</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1381.875</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>548</integer>
-          <key>y</key>
-          <integer>1564</integer>
-        </dict>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 752, 'leftMargin': -151, 'rightMargin': 125}</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

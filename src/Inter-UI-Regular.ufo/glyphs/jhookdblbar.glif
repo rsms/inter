@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="jhookdblbar" format="1">
-  <advance width="1264"/>
+<glyph name="jhookdblbar" format="2">
+  <advance width="1264.0"/>
   <unicode hex="0284"/>
+  <anchor x="352.0" y="-616.0" name="bottom"/>
+  <anchor x="844.0" y="2340.0" name="top"/>
+  <anchor x="1212.0" y="2340.0" name="top0315"/>
   <outline>
-    <component base="esh" xOffset="44"/>
-    <component base="crossbar" xOffset="-20" yOffset="-888"/>
-    <contour>
-      <point x="844" y="2340" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1212" y="2340" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="352" y="-616" type="move" name="bottom"/>
-    </contour>
+    <component base="esh" xOffset="44.0"/>
+    <component base="crossbar" xOffset="-20.0" yOffset="-888.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1158, 'leftMargin': 41, 'rightMargin': 41}</string>
-      <key>interface.width-adjustments</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <integer>-16</integer>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
     </dict>
   </lib>

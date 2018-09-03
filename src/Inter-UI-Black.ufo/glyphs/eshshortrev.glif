@@ -1,88 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="eshshortrev" format="1">
-  <advance width="1312"/>
+<glyph name="eshshortrev" format="2">
+  <advance width="1312.0"/>
   <unicode hex="0285"/>
+  <guideline y="1515.25"/>
+  <guideline y="-600.875"/>
+  <anchor x="940.0" y="-616.0" name="bottom"/>
+  <anchor x="364.0" y="1776.0" name="top"/>
+  <anchor x="1240.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="880" y="0" type="line" name="hr00"/>
-      <point x="880" y="984" type="line" smooth="yes"/>
-      <point x="880" y="1328"/>
-      <point x="664" y="1516"/>
-      <point x="316" y="1516" type="curve" smooth="yes"/>
-      <point x="240" y="1516"/>
-      <point x="168" y="1504"/>
-      <point x="104" y="1488" type="curve"/>
-      <point x="104" y="1144" type="line"/>
-      <point x="136" y="1156"/>
-      <point x="172" y="1160"/>
-      <point x="220" y="1160" type="curve" smooth="yes"/>
-      <point x="360" y="1160"/>
-      <point x="436" y="1096"/>
-      <point x="436" y="984" type="curve" smooth="yes"/>
-      <point x="436" y="0" type="line"/>
+      <point x="880.0" y="0.0" type="line"/>
+      <point x="880.0" y="984.0" type="line" smooth="yes"/>
+      <point x="880.0" y="1328.0"/>
+      <point x="664.0" y="1516.0"/>
+      <point x="316.0" y="1516.0" type="curve" smooth="yes"/>
+      <point x="240.0" y="1516.0"/>
+      <point x="168.0" y="1504.0"/>
+      <point x="104.0" y="1488.0" type="curve"/>
+      <point x="104.0" y="1144.0" type="line"/>
+      <point x="136.0" y="1156.0"/>
+      <point x="172.0" y="1160.0"/>
+      <point x="220.0" y="1160.0" type="curve" smooth="yes"/>
+      <point x="360.0" y="1160.0"/>
+      <point x="436.0" y="1096.0"/>
+      <point x="436.0" y="984.0" type="curve" smooth="yes"/>
+      <point x="436.0" y="0.0" type="line"/>
     </contour>
     <contour>
-      <point x="436" y="916" type="line"/>
-      <point x="436" y="-68" type="line" smooth="yes"/>
-      <point x="436" y="-416"/>
-      <point x="652" y="-600"/>
-      <point x="996" y="-600" type="curve" smooth="yes"/>
-      <point x="1076" y="-600"/>
-      <point x="1144" y="-588"/>
-      <point x="1212" y="-572" type="curve"/>
-      <point x="1212" y="-232" type="line"/>
-      <point x="1176" y="-240"/>
-      <point x="1144" y="-244"/>
-      <point x="1092" y="-244" type="curve" smooth="yes"/>
-      <point x="956" y="-244"/>
-      <point x="880" y="-184"/>
-      <point x="880" y="-68" type="curve" smooth="yes"/>
-      <point x="880" y="916" type="line"/>
-    </contour>
-    <contour>
-      <point x="364" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="940" y="-616" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1240" y="1776" type="move" name="top0315"/>
+      <point x="436.0" y="916.0" type="line"/>
+      <point x="436.0" y="-68.0" type="line" smooth="yes"/>
+      <point x="436.0" y="-416.0"/>
+      <point x="652.0" y="-600.0"/>
+      <point x="996.0" y="-600.0" type="curve" smooth="yes"/>
+      <point x="1076.0" y="-600.0"/>
+      <point x="1144.0" y="-588.0"/>
+      <point x="1212.0" y="-572.0" type="curve"/>
+      <point x="1212.0" y="-232.0" type="line"/>
+      <point x="1176.0" y="-240.0"/>
+      <point x="1144.0" y="-244.0"/>
+      <point x="1092.0" y="-244.0" type="curve" smooth="yes"/>
+      <point x="956.0" y="-244.0"/>
+      <point x="880.0" y="-184.0"/>
+      <point x="880.0" y="-68.0" type="curve" smooth="yes"/>
+      <point x="880.0" y="916.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-      </data>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1515.25</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>-600.875</real>
-        </dict>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1167, 'leftMargin': 30, 'rightMargin': 30}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.15</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
     </dict>
   </lib>
 </glyph>

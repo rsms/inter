@@ -1,47 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="cyrillichook" format="1">
-  <advance width="752"/>
+<glyph name="cyrillichook" format="2">
+  <advance width="752.0"/>
+  <anchor x="524.0" y="164.0" name="_bottom"/>
+  <anchor x="404.0" y="0.0" name="_right"/>
   <outline>
     <contour>
-      <point x="420" y="216" type="line"/>
-      <point x="420" y="-124" type="line"/>
-      <point x="420" y="-284"/>
-      <point x="336" y="-376"/>
-      <point x="228" y="-376" type="curve" smooth="yes"/>
-      <point x="204" y="-376"/>
-      <point x="120" y="-368"/>
-      <point x="96" y="-356" type="curve"/>
-      <point x="76" y="-580" type="line"/>
-      <point x="128" y="-596"/>
-      <point x="172" y="-600"/>
-      <point x="228" y="-600" type="curve" smooth="yes"/>
-      <point x="508" y="-600"/>
-      <point x="656" y="-404"/>
-      <point x="656" y="-124" type="curve"/>
-      <point x="656" y="216" type="line"/>
-    </contour>
-    <contour>
-      <point x="404" y="0" type="move" name="_right"/>
-    </contour>
-    <contour>
-      <point x="524" y="164" type="move" name="_bottom"/>
+      <point x="420.0" y="216.0" type="line"/>
+      <point x="420.0" y="-124.0" type="line"/>
+      <point x="420.0" y="-284.0"/>
+      <point x="336.0" y="-376.0"/>
+      <point x="228.0" y="-376.0" type="curve" smooth="yes"/>
+      <point x="204.0" y="-376.0"/>
+      <point x="120.0" y="-368.0"/>
+      <point x="96.0" y="-356.0" type="curve"/>
+      <point x="76.0" y="-580.0" type="line"/>
+      <point x="128.0" y="-596.0"/>
+      <point x="172.0" y="-600.0"/>
+      <point x="228.0" y="-600.0" type="curve" smooth="yes"/>
+      <point x="508.0" y="-600.0"/>
+      <point x="656.0" y="-404.0"/>
+      <point x="656.0" y="-124.0" type="curve"/>
+      <point x="656.0" y="216.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 712, 'leftMargin': -89, 'rightMargin': 199}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.871,0.871,0.871,0.004</string>
     </dict>
   </lib>
 </glyph>

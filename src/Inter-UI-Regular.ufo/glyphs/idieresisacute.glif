@@ -1,47 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="idieresisacute" format="1">
-  <advance width="708"/>
+<glyph name="idieresisacute" format="2">
+  <advance width="708.0"/>
   <unicode hex="1E2F"/>
+  <guideline x="360.0" y="1968.0" angle="90.0"/>
+  <anchor x="360.0" y="0.0" name="bottom"/>
+  <anchor x="404.0" y="2668.0" name="mkmktop_acc"/>
+  <anchor x="444.0" y="900.0" name="rhotichook"/>
+  <anchor x="360.0" y="1776.0" name="top"/>
+  <anchor x="716.0" y="1776.0" name="top0315"/>
   <outline>
-    <component base="dotlessi" xOffset="24"/>
-    <component base="dieresisacutecomb.lc" xOffset="1160"/>
-    <contour>
-      <point x="444" y="900" type="move" name="rhotichook"/>
-    </contour>
-    <contour>
-      <point x="360" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="716" y="1776" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="404" y="2668" type="move" name="mkmktop_acc"/>
-    </contour>
-    <contour>
-      <point x="360" y="0" type="move" name="bottom"/>
-    </contour>
+    <component base="dotlessi" xOffset="24.0"/>
+    <component base="dieresisacutecomb.lc" xOffset="1160.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>360</integer>
-          <key>y</key>
-          <integer>1968</integer>
-        </dict>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 935.0, 'leftMargin': 14, 'rightMargin': 14.0}</string>
     </dict>
   </lib>
 </glyph>

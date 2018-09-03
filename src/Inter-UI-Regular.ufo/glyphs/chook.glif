@@ -1,39 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="chook" format="1">
-  <advance width="1720"/>
+<glyph name="chook" format="2">
+  <advance width="1720.0"/>
   <unicode hex="0188"/>
   <outline>
     <contour>
-      <point x="1444" y="1076" type="line"/>
-      <point x="1444" y="1276" type="line" smooth="yes"/>
-      <point x="1444" y="1436"/>
-      <point x="1540" y="1484"/>
-      <point x="1668" y="1484" type="curve" smooth="yes"/>
-      <point x="1696" y="1484"/>
-      <point x="1724" y="1480"/>
-      <point x="1744" y="1476" type="curve"/>
-      <point x="1744" y="1676" type="line"/>
-      <point x="1708" y="1688"/>
-      <point x="1656" y="1688"/>
-      <point x="1608" y="1688" type="curve" smooth="yes"/>
-      <point x="1384" y="1688"/>
-      <point x="1208" y="1540"/>
-      <point x="1208" y="1276" type="curve" smooth="yes"/>
-      <point x="1208" y="1076" type="line"/>
+      <point x="1444.0" y="1076.0" type="line"/>
+      <point x="1444.0" y="1276.0" type="line" smooth="yes"/>
+      <point x="1444.0" y="1436.0"/>
+      <point x="1540.0" y="1484.0"/>
+      <point x="1668.0" y="1484.0" type="curve" smooth="yes"/>
+      <point x="1696.0" y="1484.0"/>
+      <point x="1724.0" y="1480.0"/>
+      <point x="1744.0" y="1476.0" type="curve"/>
+      <point x="1744.0" y="1676.0" type="line"/>
+      <point x="1708.0" y="1688.0"/>
+      <point x="1656.0" y="1688.0"/>
+      <point x="1608.0" y="1688.0" type="curve" smooth="yes"/>
+      <point x="1384.0" y="1688.0"/>
+      <point x="1208.0" y="1540.0"/>
+      <point x="1208.0" y="1276.0" type="curve" smooth="yes"/>
+      <point x="1208.0" y="1076.0" type="line"/>
     </contour>
-    <component base="c"/>
+    <contour>
+      <point x="1444.0" y="1076.0" type="line"/>
+      <point x="1404.0" y="1364.0"/>
+      <point x="1160.0" y="1556.0"/>
+      <point x="836.0" y="1556.0" type="curve" smooth="yes"/>
+      <point x="420.0" y="1556.0"/>
+      <point x="144.0" y="1228.0"/>
+      <point x="144.0" y="768.0" type="curve" smooth="yes"/>
+      <point x="144.0" y="296.0"/>
+      <point x="412.0" y="-32.0"/>
+      <point x="840.0" y="-32.0" type="curve" smooth="yes"/>
+      <point x="1180.0" y="-32.0"/>
+      <point x="1404.0" y="176.0"/>
+      <point x="1444.0" y="448.0" type="curve"/>
+      <point x="1208.0" y="448.0" type="line"/>
+      <point x="1164.0" y="280.0"/>
+      <point x="1024.0" y="180.0"/>
+      <point x="840.0" y="180.0" type="curve" smooth="yes"/>
+      <point x="560.0" y="180.0"/>
+      <point x="380.0" y="412.0"/>
+      <point x="380.0" y="768.0" type="curve" smooth="yes"/>
+      <point x="380.0" y="1116.0"/>
+      <point x="564.0" y="1344.0"/>
+      <point x="840.0" y="1344.0" type="curve" smooth="yes"/>
+      <point x="1048.0" y="1344.0"/>
+      <point x="1172.0" y="1216.0"/>
+      <point x="1208.0" y="1076.0" type="curve"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-      </data>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1701, 'leftMargin': 256, 'rightMargin': 28}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

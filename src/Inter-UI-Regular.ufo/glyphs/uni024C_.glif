@@ -1,93 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni024C" format="1">
-  <advance width="1792"/>
+<glyph name="uni024C" format="2">
+  <advance width="1792.0"/>
   <unicode hex="024C"/>
+  <anchor x="944.0" y="16.0" name="bottom"/>
+  <anchor x="944.0" y="2200.0" name="top"/>
+  <anchor x="1920.0" y="2200.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="256" y="2048" type="line"/>
-      <point x="256" y="0" type="line"/>
-      <point x="504" y="0" type="line"/>
-      <point x="504" y="1828" type="line"/>
-      <point x="940" y="1828" type="line" smooth="yes"/>
-      <point x="1304" y="1828"/>
-      <point x="1384" y="1612"/>
-      <point x="1384" y="1420" type="curve" smooth="yes"/>
-      <point x="1384" y="1192"/>
-      <point x="1272" y="1024"/>
-      <point x="912" y="1024" type="curve" smooth="yes"/>
-      <point x="8" y="1024" type="line"/>
-      <point x="8" y="796" type="line"/>
-      <point x="1076" y="796" type="line"/>
-      <point x="1152" y="816" type="line"/>
-      <point x="1456" y="896"/>
-      <point x="1628" y="1100"/>
-      <point x="1628" y="1420" type="curve" smooth="yes"/>
-      <point x="1628" y="1760"/>
-      <point x="1428" y="2048"/>
-      <point x="940" y="2048" type="curve"/>
+      <point x="256.0" y="2048.0" type="line"/>
+      <point x="256.0" y="0.0" type="line"/>
+      <point x="504.0" y="0.0" type="line"/>
+      <point x="504.0" y="1828.0" type="line"/>
+      <point x="940.0" y="1828.0" type="line" smooth="yes"/>
+      <point x="1304.0" y="1828.0"/>
+      <point x="1384.0" y="1612.0"/>
+      <point x="1384.0" y="1420.0" type="curve" smooth="yes"/>
+      <point x="1384.0" y="1192.0"/>
+      <point x="1272.0" y="1024.0"/>
+      <point x="912.0" y="1024.0" type="curve" smooth="yes"/>
+      <point x="8.0" y="1024.0" type="line"/>
+      <point x="8.0" y="796.0" type="line"/>
+      <point x="1076.0" y="796.0" type="line"/>
+      <point x="1152.0" y="816.0" type="line"/>
+      <point x="1456.0" y="896.0"/>
+      <point x="1628.0" y="1100.0"/>
+      <point x="1628.0" y="1420.0" type="curve" smooth="yes"/>
+      <point x="1628.0" y="1760.0"/>
+      <point x="1428.0" y="2048.0"/>
+      <point x="940.0" y="2048.0" type="curve"/>
     </contour>
     <contour>
-      <point x="1412" y="0" type="line"/>
-      <point x="1700" y="0" type="line"/>
-      <point x="1232" y="900" type="line"/>
-      <point x="952" y="900" type="line"/>
-    </contour>
-    <contour>
-      <point x="944" y="2200" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="944" y="16" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1920" y="2200" type="move" name="top0315"/>
+      <point x="1412.0" y="0.0" type="line"/>
+      <point x="1700.0" y="0.0" type="line"/>
+      <point x="1232.0" y="900.0" type="line"/>
+      <point x="952.0" y="900.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.layerData</key>
-      <dict>
-        <key>reference</key>
-        <dict>
-          <key>anchors</key>
-          <array>
-          </array>
-          <key>components</key>
-          <array>
-            <dict>
-              <key>baseGlyph</key>
-              <string>R</string>
-              <key>transformation</key>
-              <array>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-                <integer>1</integer>
-                <integer>16</integer>
-                <integer>0</integer>
-              </array>
-            </dict>
-          </array>
-          <key>contours</key>
-          <array>
-          </array>
-          <key>lib</key>
-          <dict>
-          </dict>
-          <key>name</key>
-          <string>uni024C</string>
-          <key>unicodes</key>
-          <array>
-          </array>
-          <key>width</key>
-          <integer>1792</integer>
-        </dict>
-      </dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1816, 'leftMargin': 55, 'rightMargin': 33}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

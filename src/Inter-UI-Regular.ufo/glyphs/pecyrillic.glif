@@ -1,44 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="pecyrillic" format="1">
-  <advance width="1520"/>
+<glyph name="pecyrillic" format="2">
+  <advance width="1520.0"/>
   <unicode hex="043F"/>
+  <anchor x="1364.0" y="0.0" name="right"/>
+  <anchor x="776.0" y="1744.0" name="top"/>
+  <anchor x="1580.0" y="1744.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="1120" y="1488" type="line"/>
-      <point x="396" y="1488" type="line"/>
-      <point x="396" y="1268" type="line"/>
-      <point x="1120" y="1268" type="line"/>
+      <point x="1120.0" y="1488.0" type="line"/>
+      <point x="396.0" y="1488.0" type="line"/>
+      <point x="396.0" y="1268.0" type="line"/>
+      <point x="1120.0" y="1268.0" type="line"/>
     </contour>
     <contour>
-      <point x="432" y="1488" type="line"/>
-      <point x="156" y="1488" type="line"/>
-      <point x="156" y="0" type="line"/>
-      <point x="432" y="0" type="line"/>
+      <point x="432.0" y="1488.0" type="line"/>
+      <point x="156.0" y="1488.0" type="line"/>
+      <point x="156.0" y="0.0" type="line"/>
+      <point x="432.0" y="0.0" type="line"/>
     </contour>
     <contour>
-      <point x="1364" y="1488" type="line"/>
-      <point x="1092" y="1488" type="line"/>
-      <point x="1092" y="0" type="line"/>
-      <point x="1364" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1364" y="0" type="move" name="right"/>
-    </contour>
-    <contour>
-      <point x="776" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1580" y="1744" type="move" name="top0315"/>
+      <point x="1364.0" y="1488.0" type="line"/>
+      <point x="1092.0" y="1488.0" type="line"/>
+      <point x="1092.0" y="0.0" type="line"/>
+      <point x="1364.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1635, 'leftMargin': 213, 'rightMargin': 213}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

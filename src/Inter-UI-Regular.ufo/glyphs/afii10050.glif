@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="afii10050" format="1">
-  <advance width="1776"/>
+<glyph name="afii10050" format="2">
+  <advance width="1776.0"/>
   <unicode hex="0490"/>
   <outline>
     <contour>
-      <point x="1488" y="2504" type="line"/>
-      <point x="1212" y="2504" type="line"/>
-      <point x="1212" y="1828" type="line"/>
-      <point x="1488" y="1828" type="line"/>
+      <point x="1488.0" y="2504.0" type="line"/>
+      <point x="1212.0" y="2504.0" type="line"/>
+      <point x="1212.0" y="1828.0" type="line"/>
+      <point x="1488.0" y="1828.0" type="line"/>
     </contour>
-    <component base="Gamma" xOffset="-20"/>
+    <contour>
+      <point x="1488.0" y="2048.0" type="line"/>
+      <point x="252.0" y="2048.0" type="line"/>
+      <point x="252.0" y="0.0" type="line"/>
+      <point x="500.0" y="0.0" type="line"/>
+      <point x="500.0" y="1828.0" type="line"/>
+      <point x="1488.0" y="1828.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1546, 'leftMargin': 257, 'rightMargin': 53}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

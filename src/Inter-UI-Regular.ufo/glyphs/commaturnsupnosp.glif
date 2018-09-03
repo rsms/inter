@@ -1,39 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="commaturnsupnosp" format="1">
-  <advance width="0"/>
+<glyph name="commaturnsupnosp" format="2">
   <unicode hex="0312"/>
+  <anchor x="-811.0" y="1464.0" name="_marktop"/>
+  <anchor x="-811.0" y="2316.0" name="mkmktop"/>
+  <anchor x="-745.0" y="1749.0" name="parent_top"/>
   <outline>
     <contour>
-      <point x="-811" y="1464" type="move" name="_marktop"/>
-    </contour>
-    <contour>
-      <point x="-811" y="2316" type="move" name="mkmktop"/>
-    </contour>
-    <contour>
-      <point x="-745" y="1749" type="move" name="parent_top"/>
-    </contour>
-    <contour>
-      <point x="-949" y="1356" type="line"/>
-      <point x="-677" y="1356" type="line"/>
-      <point x="-677" y="1613" type="line" smooth="yes"/>
-      <point x="-677" y="1772"/>
-      <point x="-630" y="1909"/>
-      <point x="-543" y="2039" type="curve"/>
-      <point x="-699" y="2144" type="line"/>
-      <point x="-858" y="2009"/>
-      <point x="-949" y="1785"/>
-      <point x="-949" y="1609" type="curve" smooth="yes"/>
+      <point x="-949.0" y="1356.0" type="line"/>
+      <point x="-677.0" y="1356.0" type="line"/>
+      <point x="-677.0" y="1613.0" type="line" smooth="yes"/>
+      <point x="-677.0" y="1772.0"/>
+      <point x="-630.0" y="1909.0"/>
+      <point x="-543.0" y="2039.0" type="curve"/>
+      <point x="-699.0" y="2144.0" type="line"/>
+      <point x="-858.0" y="2009.0"/>
+      <point x="-949.0" y="1785.0"/>
+      <point x="-949.0" y="1609.0" type="curve" smooth="yes"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

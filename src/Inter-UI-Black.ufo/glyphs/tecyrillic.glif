@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="tecyrillic" format="1">
-  <advance width="1568"/>
+<glyph name="tecyrillic" format="2">
+  <advance width="1568.0"/>
   <unicode hex="0442"/>
+  <anchor x="1004.0" y="0.0" name="right"/>
+  <anchor x="800.0" y="1744.0" name="top"/>
+  <anchor x="1520.0" y="1744.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="1004" y="1488" type="line"/>
-      <point x="560" y="1488" type="line"/>
-      <point x="560" y="0" type="line"/>
-      <point x="1004" y="0" type="line"/>
+      <point x="1004.0" y="1488.0" type="line"/>
+      <point x="560.0" y="1488.0" type="line"/>
+      <point x="560.0" y="0.0" type="line"/>
+      <point x="1004.0" y="0.0" type="line"/>
     </contour>
     <contour>
-      <point x="1476" y="1488" type="line"/>
-      <point x="96" y="1488" type="line"/>
-      <point x="96" y="1132" type="line"/>
-      <point x="1476" y="1132" type="line"/>
-    </contour>
-    <contour>
-      <point x="1004" y="0" type="move" name="right"/>
-    </contour>
-    <contour>
-      <point x="800" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1520" y="1744" type="move" name="top0315"/>
+      <point x="1476.0" y="1488.0" type="line"/>
+      <point x="96.0" y="1488.0" type="line"/>
+      <point x="96.0" y="1132.0" type="line"/>
+      <point x="1476.0" y="1132.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1463.0, 'leftMargin': 39, 'rightMargin': 44.0}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

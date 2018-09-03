@@ -1,48 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="yatcyrillic" format="1">
-  <advance width="1520"/>
+<glyph name="yatcyrillic" format="2">
+  <advance width="1520.0"/>
   <unicode hex="0463"/>
+  <anchor x="420.0" y="1204.0" name="cross"/>
   <outline>
     <contour>
-      <point x="496" y="1036" type="line"/>
-      <point x="496" y="816" type="line"/>
-      <point x="936" y="816" type="line"/>
-      <point x="1144" y="816"/>
-      <point x="1216" y="652"/>
-      <point x="1216" y="512" type="curve"/>
-      <point x="1216" y="368"/>
-      <point x="1144" y="220"/>
-      <point x="936" y="220" type="curve"/>
-      <point x="568" y="220" type="line"/>
-      <point x="568" y="2144" type="line"/>
-      <point x="292" y="2144" type="line"/>
-      <point x="292" y="0" type="line"/>
-      <point x="936" y="0" type="line"/>
-      <point x="1296" y="0"/>
-      <point x="1492" y="232"/>
-      <point x="1492" y="524" type="curve"/>
-      <point x="1492" y="820"/>
-      <point x="1296" y="1036"/>
-      <point x="936" y="1036" type="curve"/>
+      <point x="496.0" y="1036.0" type="line"/>
+      <point x="496.0" y="816.0" type="line"/>
+      <point x="936.0" y="816.0" type="line"/>
+      <point x="1144.0" y="816.0"/>
+      <point x="1216.0" y="652.0"/>
+      <point x="1216.0" y="512.0" type="curve"/>
+      <point x="1216.0" y="368.0"/>
+      <point x="1144.0" y="220.0"/>
+      <point x="936.0" y="220.0" type="curve"/>
+      <point x="568.0" y="220.0" type="line"/>
+      <point x="568.0" y="2144.0" type="line"/>
+      <point x="292.0" y="2144.0" type="line"/>
+      <point x="292.0" y="0.0" type="line"/>
+      <point x="936.0" y="0.0" type="line"/>
+      <point x="1296.0" y="0.0"/>
+      <point x="1492.0" y="232.0"/>
+      <point x="1492.0" y="524.0" type="curve"/>
+      <point x="1492.0" y="820.0"/>
+      <point x="1296.0" y="1036.0"/>
+      <point x="936.0" y="1036.0" type="curve"/>
     </contour>
     <contour>
-      <point x="1008" y="1708" type="line"/>
-      <point x="28" y="1708" type="line"/>
-      <point x="28" y="1488" type="line"/>
-      <point x="1008" y="1488" type="line"/>
-    </contour>
-    <contour>
-      <point x="420" y="1204" type="move" name="cross"/>
+      <point x="1008.0" y="1708.0" type="line"/>
+      <point x="28.0" y="1708.0" type="line"/>
+      <point x="28.0" y="1488.0" type="line"/>
+      <point x="1008.0" y="1488.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1532, 'leftMargin': -52, 'rightMargin': 121}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

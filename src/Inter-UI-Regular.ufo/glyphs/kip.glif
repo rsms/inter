@@ -1,31 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="kip" format="1">
-  <advance width="1992"/>
+<glyph name="kip" format="2">
+  <advance width="1992.0"/>
   <unicode hex="20AD"/>
   <outline>
     <contour>
-      <point x="1920" y="1196" type="line"/>
-      <point x="72" y="1196" type="line"/>
-      <point x="72" y="976" type="line"/>
-      <point x="1920" y="976" type="line"/>
+      <point x="1920.0" y="1196.0" type="line"/>
+      <point x="72.0" y="1196.0" type="line"/>
+      <point x="72.0" y="976.0" type="line"/>
+      <point x="1920.0" y="976.0" type="line"/>
     </contour>
-    <component base="K" xOffset="140"/>
+    <contour>
+      <point x="636.0" y="2048.0" type="line"/>
+      <point x="388.0" y="2048.0" type="line"/>
+      <point x="388.0" y="0.0" type="line"/>
+      <point x="636.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1904.0" y="2048.0" type="line"/>
+      <point x="1580.0" y="2048.0" type="line"/>
+      <point x="660.0" y="1032.0" type="line"/>
+      <point x="588.0" y="1032.0" type="line"/>
+      <point x="588.0" y="612.0" type="line"/>
+      <point x="900.0" y="960.0" type="line"/>
+      <point x="912.0" y="980.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1604.0" y="0.0" type="line"/>
+      <point x="1904.0" y="0.0" type="line"/>
+      <point x="1012.0" y="1168.0" type="line"/>
+      <point x="876.0" y="976.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8</real>
-        <real>0.94</real>
-        <real>0.95</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1940, 'leftMargin': 41, 'rightMargin': 12}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
     </dict>
   </lib>
 </glyph>

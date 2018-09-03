@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="hcedilla" format="1">
-  <advance width="1612"/>
+<glyph name="hcedilla" format="2">
+  <advance width="1612.0"/>
   <unicode hex="1E29"/>
   <outline>
     <component base="h"/>
-    <component base="cedilla" xOffset="-20" yOffset="-16"/>
+    <component base="cedilla" xOffset="-20.0" yOffset="-16.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1585, 'leftMargin': 108, 'rightMargin': 153}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
     </dict>
   </lib>
 </glyph>

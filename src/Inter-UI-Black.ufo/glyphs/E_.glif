@@ -1,80 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="E" format="1">
-  <advance width="1656"/>
+<glyph name="E" format="2">
+  <advance width="1656.0"/>
   <unicode hex="0045"/>
+  <guideline y="1358.5"/>
+  <anchor x="900.0" y="16.0" name="bottom"/>
+  <anchor x="1648.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="1292.0" y="0.0" name="ogonek"/>
+  <anchor x="-72.0" y="2004.0" name="tonos"/>
+  <anchor x="848.0" y="2200.0" name="top"/>
+  <anchor x="1584.0" y="2200.0" name="top0315"/>
+  <anchor x="1584.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="1512" y="384" type="line"/>
-      <point x="448" y="384" type="line"/>
-      <point x="448" y="0" type="line"/>
-      <point x="1512" y="0" type="line"/>
+      <point x="1512.0" y="384.0" type="line"/>
+      <point x="448.0" y="384.0" type="line"/>
+      <point x="448.0" y="0.0" type="line"/>
+      <point x="1512.0" y="0.0" type="line"/>
     </contour>
     <contour>
-      <point x="608" y="2048" type="line"/>
-      <point x="144" y="2048" type="line"/>
-      <point x="144" y="0" type="line"/>
-      <point x="608" y="0" type="line"/>
+      <point x="608.0" y="2048.0" type="line"/>
+      <point x="144.0" y="2048.0" type="line"/>
+      <point x="144.0" y="0.0" type="line"/>
+      <point x="608.0" y="0.0" type="line"/>
     </contour>
     <contour>
-      <point x="1372" y="1216" type="line"/>
-      <point x="448" y="1216" type="line"/>
-      <point x="448" y="832" type="line"/>
-      <point x="1372" y="832" type="line"/>
+      <point x="1372.0" y="1216.0" type="line"/>
+      <point x="448.0" y="1216.0" type="line"/>
+      <point x="448.0" y="832.0" type="line"/>
+      <point x="1372.0" y="832.0" type="line"/>
     </contour>
     <contour>
-      <point x="1512" y="2048" type="line"/>
-      <point x="448" y="2048" type="line"/>
-      <point x="448" y="1664" type="line"/>
-      <point x="1512" y="1664" type="line"/>
-    </contour>
-    <contour>
-      <point x="848" y="2200" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="900" y="16" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="-72" y="2004" type="move" name="tonos"/>
-    </contour>
-    <contour>
-      <point x="1292" y="0" type="move" name="ogonek"/>
-    </contour>
-    <contour>
-      <point x="1584" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1648" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="1584" y="2200" type="move" name="top0315"/>
+      <point x="1512.0" y="2048.0" type="line"/>
+      <point x="448.0" y="2048.0" type="line"/>
+      <point x="448.0" y="1664.0" type="line"/>
+      <point x="1512.0" y="1664.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1358.5</real>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1579, 'leftMargin': 161, 'rightMargin': 50}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

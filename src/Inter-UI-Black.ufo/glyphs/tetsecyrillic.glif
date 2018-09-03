@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="tetsecyrillic" format="1">
-  <advance width="2080"/>
+<glyph name="tetsecyrillic" format="2">
+  <advance width="2080.0"/>
   <unicode hex="04B5"/>
   <outline>
     <contour>
-      <point x="1092" y="1488" type="line"/>
-      <point x="120" y="1488" type="line"/>
-      <point x="120" y="1128" type="line"/>
-      <point x="1092" y="1128" type="line"/>
+      <point x="1092.0" y="1488.0" type="line"/>
+      <point x="120.0" y="1488.0" type="line"/>
+      <point x="120.0" y="1128.0" type="line"/>
+      <point x="1092.0" y="1128.0" type="line"/>
     </contour>
-    <component base="tsecyrillic" xOffset="252"/>
+    <contour>
+      <point x="384.0" y="0.0" type="line"/>
+      <point x="1708.0" y="0.0" type="line"/>
+      <point x="1708.0" y="1488.0" type="line"/>
+      <point x="1264.0" y="1488.0" type="line"/>
+      <point x="1264.0" y="360.0" type="line"/>
+      <point x="828.0" y="360.0" type="line"/>
+      <point x="828.0" y="1488.0" type="line"/>
+      <point x="384.0" y="1488.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1944.0" y="356.0" type="line"/>
+      <point x="1344.0" y="356.0" type="line"/>
+      <point x="1344.0" y="0.0" type="line"/>
+      <point x="1504.0" y="0.0" type="line"/>
+      <point x="1504.0" y="-440.0" type="line"/>
+      <point x="1920.0" y="-440.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1948, 'leftMargin': 69, 'rightMargin': 38}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

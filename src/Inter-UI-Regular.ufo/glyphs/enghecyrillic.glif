@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="enghecyrillic" format="1">
-  <advance width="2032"/>
+<glyph name="enghecyrillic" format="2">
+  <advance width="2032.0"/>
   <unicode hex="04A5"/>
   <outline>
     <contour>
-      <point x="1892" y="1488" type="line"/>
-      <point x="1260" y="1488" type="line"/>
-      <point x="1260" y="1268" type="line"/>
-      <point x="1892" y="1268" type="line"/>
+      <point x="1892.0" y="1488.0" type="line"/>
+      <point x="1260.0" y="1488.0" type="line"/>
+      <point x="1260.0" y="1268.0" type="line"/>
+      <point x="1892.0" y="1268.0" type="line"/>
     </contour>
-    <component base="encyrillic" xOffset="-32"/>
+    <contour>
+      <point x="1112.0" y="848.0" type="line"/>
+      <point x="344.0" y="848.0" type="line"/>
+      <point x="344.0" y="628.0" type="line"/>
+      <point x="1112.0" y="628.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="400.0" y="1488.0" type="line"/>
+      <point x="124.0" y="1488.0" type="line"/>
+      <point x="124.0" y="0.0" type="line"/>
+      <point x="400.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1332.0" y="1488.0" type="line"/>
+      <point x="1056.0" y="1488.0" type="line"/>
+      <point x="1056.0" y="0.0" type="line"/>
+      <point x="1332.0" y="0.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2001, 'leftMargin': 147, 'rightMargin': 103}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="hornnosp" format="1">
-  <advance width="0"/>
+<glyph name="hornnosp" format="2">
   <unicode hex="031B"/>
   <outline>
     <contour>
-      <point x="-162" y="2200" type="line"/>
-      <point x="-521" y="2200" type="line"/>
-      <point x="-521" y="1786"/>
-      <point x="-549" y="1683"/>
-      <point x="-626" y="1493" type="curve"/>
-      <point x="-414" y="1383" type="line"/>
-      <point x="-283" y="1504"/>
-      <point x="-162" y="1728"/>
-      <point x="-162" y="1922" type="curve" smooth="yes"/>
+      <point x="-162.0" y="2200.0" type="curve"/>
+      <point x="-521.0" y="2200.0" type="line"/>
+      <point x="-521.0" y="1786.0"/>
+      <point x="-549.0" y="1683.0"/>
+      <point x="-626.0" y="1493.0" type="curve"/>
+      <point x="-414.0" y="1383.0" type="line"/>
+      <point x="-195.0" y="1586.0"/>
+      <point x="-162.0" y="1749.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/02 00:46:42</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

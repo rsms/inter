@@ -1,45 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="bullseye" format="1">
-  <advance width="2144"/>
+<glyph name="bullseye" format="2">
+  <advance width="2144.0"/>
   <unicode hex="0298"/>
+  <guideline x="1064.0" y="1836.0" angle="90.0"/>
+  <anchor x="1072.0" y="0.0" name="bottom"/>
+  <anchor x="1072.0" y="2304.0" name="top"/>
+  <anchor x="1952.0" y="2244.0" name="top0315"/>
   <outline>
     <component base="O"/>
-    <component base="period" xOffset="684" yOffset="876"/>
-    <contour>
-      <point x="1072" y="2304" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1072" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1952" y="2244" type="move" name="top0315"/>
-    </contour>
+    <component base="period" xOffset="684.0" yOffset="876.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1064</integer>
-          <key>y</key>
-          <integer>1836</integer>
-        </dict>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1944, 'leftMargin': 256, 'rightMargin': 152}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

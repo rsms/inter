@@ -1,34 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="quoteleft" format="1">
-  <advance width="560"/>
+<glyph name="quoteleft" format="2">
+  <advance width="560.0"/>
   <unicode hex="2018"/>
   <outline>
     <contour>
-      <point x="136" y="1408" type="line"/>
-      <point x="360" y="1408" type="line"/>
-      <point x="360" y="1592" type="line" smooth="yes"/>
-      <point x="360" y="1740"/>
-      <point x="432" y="1868"/>
-      <point x="516" y="1988" type="curve"/>
-      <point x="388" y="2092" type="line"/>
-      <point x="228" y="1964"/>
-      <point x="136" y="1752"/>
-      <point x="136" y="1588" type="curve" smooth="yes"/>
+      <point x="136.0" y="1408.0" type="line"/>
+      <point x="360.0" y="1408.0" type="line"/>
+      <point x="360.0" y="1592.0" type="line" smooth="yes"/>
+      <point x="360.0" y="1740.0"/>
+      <point x="432.0" y="1868.0"/>
+      <point x="516.0" y="1988.0" type="curve"/>
+      <point x="388.0" y="2092.0" type="line"/>
+      <point x="228.0" y="1964.0"/>
+      <point x="136.0" y="1752.0"/>
+      <point x="136.0" y="1588.0" type="curve" smooth="yes"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

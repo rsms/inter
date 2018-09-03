@@ -1,41 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="caroncmb" format="1">
-  <advance width="0"/>
+<glyph name="caroncmb" format="2">
   <unicode hex="030C"/>
+  <anchor x="-803.0" y="1774.0" name="_marktop"/>
+  <anchor x="-803.0" y="1774.0" name="_top"/>
+  <anchor x="-803.0" y="2269.0" name="mkmktop"/>
+  <anchor x="-792.0" y="1910.0" name="parent_top"/>
   <outline>
     <contour>
-      <point x="-803" y="1774" type="move" name="_top"/>
-    </contour>
-    <contour>
-      <point x="-803" y="1774" type="move" name="_marktop"/>
-    </contour>
-    <contour>
-      <point x="-803" y="2269" type="move" name="mkmktop"/>
-    </contour>
-    <contour>
-      <point x="-792" y="1910" type="move" name="parent_top"/>
-    </contour>
-    <contour>
-      <point x="-668" y="1708" type="line"/>
-      <point x="-923" y="1708" type="line"/>
-      <point x="-1354" y="2089" type="line"/>
-      <point x="-1354" y="2112" type="line"/>
-      <point x="-1012" y="2112" type="line"/>
-      <point x="-796" y="1925" type="line"/>
-      <point x="-579" y="2112" type="line"/>
-      <point x="-230" y="2112" type="line"/>
-      <point x="-230" y="2094" type="line"/>
+      <point x="-668.0" y="1708.0" type="line"/>
+      <point x="-923.0" y="1708.0" type="line"/>
+      <point x="-1354.0" y="2089.0" type="line"/>
+      <point x="-1354.0" y="2112.0" type="line"/>
+      <point x="-1012.0" y="2112.0" type="line"/>
+      <point x="-796.0" y="1925.0" type="line"/>
+      <point x="-579.0" y="2112.0" type="line"/>
+      <point x="-230.0" y="2112.0" type="line"/>
+      <point x="-230.0" y="2094.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

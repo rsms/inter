@@ -1,40 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="comma" format="1">
-  <advance width="776"/>
+<glyph name="comma" format="2">
+  <advance width="776.0"/>
   <unicode hex="002C"/>
+  <anchor x="428.0" y="308.0" name="_bottom"/>
+  <anchor x="160.0" y="100.0" name="_right"/>
   <outline>
     <contour>
-      <point x="548" y="256" type="line"/>
-      <point x="292" y="256" type="line"/>
-      <point x="292" y="64" type="line"/>
-      <point x="292" y="-88"/>
-      <point x="240" y="-228"/>
-      <point x="172" y="-388" type="curve"/>
-      <point x="372" y="-428" type="line"/>
-      <point x="476" y="-272"/>
-      <point x="544" y="-108"/>
-      <point x="548" y="68" type="curve"/>
-    </contour>
-    <contour>
-      <point x="428" y="308" type="move" name="_bottom"/>
-    </contour>
-    <contour>
-      <point x="160" y="100" type="move" name="_right"/>
+      <point x="548.0" y="256.0" type="line"/>
+      <point x="292.0" y="256.0" type="line"/>
+      <point x="292.0" y="64.0" type="line"/>
+      <point x="292.0" y="-88.0"/>
+      <point x="240.0" y="-228.0"/>
+      <point x="172.0" y="-388.0" type="curve"/>
+      <point x="372.0" y="-428.0" type="line"/>
+      <point x="476.0" y="-272.0"/>
+      <point x="544.0" y="-108.0"/>
+      <point x="548.0" y="68.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

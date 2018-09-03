@@ -1,20 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="hardsigncyrillic" format="1">
-  <advance width="2080"/>
+<glyph name="hardsigncyrillic" format="2">
+  <advance width="2080.0"/>
   <unicode hex="044A"/>
   <outline>
     <contour>
-      <point x="956" y="1488" type="line"/>
-      <point x="148" y="1488" type="line"/>
-      <point x="148" y="1128" type="line"/>
-      <point x="956" y="1128" type="line"/>
+      <point x="956.0" y="1488.0" type="line"/>
+      <point x="148.0" y="1488.0" type="line"/>
+      <point x="148.0" y="1128.0" type="line"/>
+      <point x="956.0" y="1128.0" type="line"/>
     </contour>
-    <component base="softsigncyrillic" xOffset="384"/>
+    <contour>
+      <point x="884.0" y="1080.0" type="line"/>
+      <point x="884.0" y="724.0" type="line"/>
+      <point x="1308.0" y="724.0" type="line"/>
+      <point x="1472.0" y="724.0"/>
+      <point x="1540.0" y="648.0"/>
+      <point x="1540.0" y="536.0" type="curve"/>
+      <point x="1540.0" y="436.0"/>
+      <point x="1472.0" y="356.0"/>
+      <point x="1308.0" y="356.0" type="curve"/>
+      <point x="1056.0" y="356.0" type="line"/>
+      <point x="1056.0" y="1488.0" type="line"/>
+      <point x="612.0" y="1488.0" type="line"/>
+      <point x="612.0" y="0.0" type="line"/>
+      <point x="1308.0" y="0.0" type="line"/>
+      <point x="1728.0" y="0.0"/>
+      <point x="1980.0" y="220.0"/>
+      <point x="1980.0" y="536.0" type="curve"/>
+      <point x="1980.0" y="860.0"/>
+      <point x="1728.0" y="1080.0"/>
+      <point x="1308.0" y="1080.0" type="curve"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1887, 'leftMargin': 48, 'rightMargin': 51}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="kturn" format="1">
-  <advance width="1500"/>
+<glyph name="kturn" format="2">
+  <advance width="1500.0"/>
   <unicode hex="029E"/>
+  <anchor x="640.0" y="-616.0" name="bottom"/>
+  <anchor x="640.0" y="1776.0" name="top"/>
+  <anchor x="1396.0" y="1776.0" name="top0315"/>
   <outline>
-    <component base="k" xScale="-1.0" yScale="-1.0" xOffset="1484" yOffset="1536"/>
-    <contour>
-      <point x="640" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="640" y="-616" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1396" y="1776" type="move" name="top0315"/>
-    </contour>
+    <component base="k" xScale="-1.0" yScale="-1.0" xOffset="1484.0" yOffset="1536.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1438, 'leftMargin': 0, 'rightMargin': 189}</string>
-      <key>interface.width-adjustments</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <integer>-16</integer>
+        <integer>-1</integer>
       </array>
     </dict>
   </lib>

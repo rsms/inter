@@ -1,93 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="P" format="1">
-  <advance width="1784"/>
+<glyph name="P" format="2">
+  <advance width="1784.0"/>
   <unicode hex="0050"/>
+  <guideline x="1396.0" y="1760.0" angle="90.0"/>
+  <guideline x="1248.0" y="1804.0" angle="90.0"/>
+  <anchor x="736.0" y="0.0" name="bottom"/>
+  <anchor x="1796.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="44.0" y="2000.0" name="tonos"/>
+  <anchor x="904.0" y="2304.0" name="top"/>
+  <anchor x="1796.0" y="2216.0" name="top0315"/>
+  <anchor x="1796.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="936" y="740" type="line"/>
-      <point x="1412" y="740"/>
-      <point x="1620" y="1032"/>
-      <point x="1620" y="1400" type="curve"/>
-      <point x="1620" y="1768"/>
-      <point x="1412" y="2048"/>
-      <point x="932" y="2048" type="curve"/>
-      <point x="248" y="2048" type="line"/>
-      <point x="248" y="0" type="line"/>
-      <point x="496" y="0" type="line"/>
-      <point x="496" y="1828" type="line"/>
-      <point x="932" y="1828" type="line"/>
-      <point x="1264" y="1828"/>
-      <point x="1376" y="1652"/>
-      <point x="1376" y="1400" type="curve"/>
-      <point x="1376" y="1148"/>
-      <point x="1264" y="960"/>
-      <point x="936" y="960" type="curve"/>
-      <point x="448" y="960" type="line"/>
-      <point x="448" y="740" type="line"/>
-    </contour>
-    <contour>
-      <point x="44" y="2000" type="move" name="tonos"/>
-    </contour>
-    <contour>
-      <point x="904" y="2304" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="736" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1796" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1796" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="1796" y="2216" type="move" name="top0315"/>
+      <point x="936.0" y="740.0" type="line"/>
+      <point x="1412.0" y="740.0"/>
+      <point x="1620.0" y="1032.0"/>
+      <point x="1620.0" y="1400.0" type="curve"/>
+      <point x="1620.0" y="1768.0"/>
+      <point x="1412.0" y="2048.0"/>
+      <point x="932.0" y="2048.0" type="curve"/>
+      <point x="248.0" y="2048.0" type="line"/>
+      <point x="248.0" y="0.0" type="line"/>
+      <point x="496.0" y="0.0" type="line"/>
+      <point x="496.0" y="1828.0" type="line"/>
+      <point x="932.0" y="1828.0" type="line"/>
+      <point x="1264.0" y="1828.0"/>
+      <point x="1376.0" y="1652.0"/>
+      <point x="1376.0" y="1400.0" type="curve"/>
+      <point x="1376.0" y="1148.0"/>
+      <point x="1264.0" y="960.0"/>
+      <point x="936.0" y="960.0" type="curve"/>
+      <point x="448.0" y="960.0" type="line"/>
+      <point x="448.0" y="740.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1396</integer>
-          <key>y</key>
-          <integer>1760</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1248</integer>
-          <key>y</key>
-          <integer>1804</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

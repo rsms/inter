@@ -1,25 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="yuslittleiotifiedcyrillic" format="1">
-  <advance width="2288"/>
+<glyph name="yuslittleiotifiedcyrillic" format="2">
+  <advance width="2288.0"/>
   <unicode hex="0469"/>
   <outline>
     <contour>
-      <point x="968" y="616" type="line"/>
-      <point x="324" y="616" type="line"/>
-      <point x="324" y="396" type="line"/>
-      <point x="968" y="396" type="line"/>
+      <point x="968.0" y="616.0" type="line"/>
+      <point x="324.0" y="616.0" type="line"/>
+      <point x="324.0" y="396.0" type="line"/>
+      <point x="968.0" y="396.0" type="line"/>
     </contour>
-    <component base="yuslittlecyrillic" xOffset="548"/>
-    <component base="dotlessi" xOffset="-24"/>
+    <contour>
+      <point x="1276.0" y="1040.0" type="line"/>
+      <point x="1396.0" y="1488.0" type="line"/>
+      <point x="1188.0" y="1488.0" type="line"/>
+      <point x="584.0" y="0.0" type="line"/>
+      <point x="864.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1752.0" y="0.0" type="line"/>
+      <point x="2032.0" y="0.0" type="line"/>
+      <point x="1424.0" y="1488.0" type="line"/>
+      <point x="1216.0" y="1488.0" type="line"/>
+      <point x="1332.0" y="1040.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1728.0" y="616.0" type="line"/>
+      <point x="904.0" y="616.0" type="line"/>
+      <point x="904.0" y="396.0" type="line"/>
+      <point x="1728.0" y="396.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1448.0" y="564.0" type="line"/>
+      <point x="1176.0" y="564.0" type="line"/>
+      <point x="1176.0" y="0.0" type="line"/>
+      <point x="1448.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="428.0" y="1536.0" type="line"/>
+      <point x="192.0" y="1536.0" type="line"/>
+      <point x="192.0" y="0.0" type="line"/>
+      <point x="428.0" y="0.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2130, 'leftMargin': 301, 'rightMargin': 23}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

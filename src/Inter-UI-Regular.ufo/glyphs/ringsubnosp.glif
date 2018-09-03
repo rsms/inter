@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ringsubnosp" format="1">
-  <advance width="0"/>
+<glyph name="ringsubnosp" format="2">
   <unicode hex="0325"/>
+  <anchor x="-803.0" y="0.0" name="_markbottom"/>
+  <anchor x="-803.0" y="-633.0" name="mkmkbottom_acc"/>
   <outline>
-    <contour>
-      <point x="-803" y="-633" type="move" name="mkmkbottom_acc"/>
-    </contour>
-    <contour>
-      <point x="-803" y="0" type="move" name="_markbottom"/>
-    </contour>
-    <component base="ring" xOffset="-1275" yOffset="-2296"/>
+    <component base="ring" xOffset="-1275.0" yOffset="-2296.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

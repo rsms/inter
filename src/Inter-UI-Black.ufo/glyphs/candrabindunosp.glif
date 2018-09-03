@@ -1,60 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="candrabindunosp" format="1">
-  <advance width="0"/>
+<glyph name="candrabindunosp" format="2">
   <unicode hex="0310"/>
+  <anchor x="-792.0" y="1595.0" name="_marktop"/>
+  <anchor x="-792.0" y="1595.0" name="_top"/>
+  <anchor x="-792.0" y="2626.0" name="mkmktop"/>
+  <anchor x="-792.0" y="2097.0" name="parent_top"/>
   <outline>
     <contour>
-      <point x="-792" y="1595" type="move" name="_top"/>
+      <point x="-601.0" y="2115.0" type="line"/>
+      <point x="-601.0" y="2024.0"/>
+      <point x="-652.0" y="1940.0"/>
+      <point x="-792.0" y="1940.0" type="curve" smooth="yes"/>
+      <point x="-934.0" y="1940.0"/>
+      <point x="-986.0" y="2024.0"/>
+      <point x="-986.0" y="2115.0" type="curve"/>
+      <point x="-1291.0" y="2115.0" type="line"/>
+      <point x="-1291.0" y="1866.0"/>
+      <point x="-1099.0" y="1693.0"/>
+      <point x="-792.0" y="1693.0" type="curve" smooth="yes"/>
+      <point x="-487.0" y="1693.0"/>
+      <point x="-294.0" y="1866.0"/>
+      <point x="-294.0" y="2115.0" type="curve"/>
     </contour>
     <contour>
-      <point x="-792" y="1595" type="move" name="_marktop"/>
-    </contour>
-    <contour>
-      <point x="-792" y="2626" type="move" name="mkmktop"/>
-    </contour>
-    <contour>
-      <point x="-792" y="2097" type="move" name="parent_top"/>
-    </contour>
-    <contour>
-      <point x="-601" y="2115" type="line"/>
-      <point x="-601" y="2024"/>
-      <point x="-652" y="1940"/>
-      <point x="-792" y="1940" type="curve" smooth="yes"/>
-      <point x="-934" y="1940"/>
-      <point x="-986" y="2024"/>
-      <point x="-986" y="2115" type="curve"/>
-      <point x="-1291" y="2115" type="line"/>
-      <point x="-1291" y="1866"/>
-      <point x="-1099" y="1693"/>
-      <point x="-792" y="1693" type="curve" smooth="yes"/>
-      <point x="-487" y="1693"/>
-      <point x="-294" y="1866"/>
-      <point x="-294" y="2115" type="curve"/>
-    </contour>
-    <contour>
-      <point x="-1038" y="2296" type="curve" smooth="yes"/>
-      <point x="-1038" y="2179"/>
-      <point x="-939" y="2091"/>
-      <point x="-792" y="2091" type="curve" smooth="yes"/>
-      <point x="-645" y="2091"/>
-      <point x="-546" y="2179"/>
-      <point x="-546" y="2296" type="curve" smooth="yes"/>
-      <point x="-546" y="2413"/>
-      <point x="-645" y="2501"/>
-      <point x="-792" y="2501" type="curve" smooth="yes"/>
-      <point x="-939" y="2501"/>
-      <point x="-1038" y="2413"/>
+      <point x="-1038.0" y="2296.0" type="curve" smooth="yes"/>
+      <point x="-1038.0" y="2179.0"/>
+      <point x="-939.0" y="2091.0"/>
+      <point x="-792.0" y="2091.0" type="curve" smooth="yes"/>
+      <point x="-645.0" y="2091.0"/>
+      <point x="-546.0" y="2179.0"/>
+      <point x="-546.0" y="2296.0" type="curve" smooth="yes"/>
+      <point x="-546.0" y="2413.0"/>
+      <point x="-645.0" y="2501.0"/>
+      <point x="-792.0" y="2501.0" type="curve" smooth="yes"/>
+      <point x="-939.0" y="2501.0"/>
+      <point x="-1038.0" y="2413.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

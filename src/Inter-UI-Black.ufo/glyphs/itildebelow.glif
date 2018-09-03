@@ -1,39 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="itildebelow" format="1">
-  <advance width="832"/>
+<glyph name="itildebelow" format="2">
+  <advance width="832.0"/>
   <unicode hex="1E2D"/>
+  <anchor x="400.0" y="0.0" name="bottom"/>
+  <anchor x="848.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="464.0" y="-548.0" name="mkmkbottom_acc"/>
+  <anchor x="616.0" y="0.0" name="ogonek"/>
+  <anchor x="568.0" y="900.0" name="rhotichook"/>
+  <anchor x="464.0" y="2200.0" name="top"/>
+  <anchor x="848.0" y="2200.0" name="top0315"/>
+  <anchor x="848.0" y="2200.0" name="top_dd"/>
   <outline>
-    <component base="i" xOffset="20"/>
-    <component base="tilde" xOffset="-240" yOffset="-2268"/>
-    <contour>
-      <point x="400" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="568" y="900" type="move" name="rhotichook"/>
-    </contour>
-    <contour>
-      <point x="464" y="-548" type="move" name="mkmkbottom_acc"/>
-    </contour>
-    <contour>
-      <point x="464" y="2200" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="848" y="2200" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="848" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="616" y="0" type="move" name="ogonek"/>
-    </contour>
-    <contour>
-      <point x="848" y="-560" type="move" name="bottom_dd"/>
-    </contour>
+    <component base="i" xOffset="20.0"/>
+    <component base="tilde" xOffset="-240.0" yOffset="-2268.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1082, 'leftMargin': -31, 'rightMargin': 57}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
     </dict>
   </lib>
 </glyph>

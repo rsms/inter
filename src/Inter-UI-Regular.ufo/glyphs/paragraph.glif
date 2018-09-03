@@ -1,37 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="paragraph" format="1">
-  <advance width="1264"/>
+<glyph name="paragraph" format="2">
+  <advance width="1264.0"/>
   <unicode hex="00B6"/>
   <outline>
     <contour>
-      <point x="1168" y="0" type="line"/>
-      <point x="1168" y="2004" type="line"/>
-      <point x="776" y="2004" type="line" smooth="yes"/>
-      <point x="340" y="2004"/>
-      <point x="100" y="1728"/>
-      <point x="100" y="1360" type="curve" smooth="yes"/>
-      <point x="100" y="988"/>
-      <point x="340" y="716"/>
-      <point x="776" y="716" type="curve" smooth="yes"/>
-      <point x="892" y="716" type="line"/>
-      <point x="892" y="0" type="line"/>
+      <point x="1168.0" y="0.0" type="line"/>
+      <point x="1168.0" y="2004.0" type="line"/>
+      <point x="776.0" y="2004.0" type="line" smooth="yes"/>
+      <point x="340.0" y="2004.0"/>
+      <point x="100.0" y="1728.0"/>
+      <point x="100.0" y="1360.0" type="curve" smooth="yes"/>
+      <point x="100.0" y="988.0"/>
+      <point x="340.0" y="716.0"/>
+      <point x="776.0" y="716.0" type="curve" smooth="yes"/>
+      <point x="892.0" y="716.0" type="line"/>
+      <point x="892.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1386.0, 'leftMargin': 88, 'rightMargin': 231.0}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

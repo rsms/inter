@@ -1,54 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="diamondwhite" format="1">
-  <advance width="2976"/>
+<glyph name="diamondwhite" format="2">
+  <advance width="2976.0"/>
   <unicode hex="25C7"/>
+  <guideline x="520.0" y="768.0" angle="0.0"/>
+  <guideline x="1480.0" y="2072.0" angle="90.0"/>
   <outline>
     <contour>
-      <point x="2832" y="768" type="line"/>
-      <point x="1496" y="2112" type="line"/>
-      <point x="144" y="768" type="line"/>
-      <point x="1496" y="-576" type="line"/>
+      <point x="2832.0" y="768.0" type="line"/>
+      <point x="1496.0" y="2112.0" type="line"/>
+      <point x="144.0" y="768.0" type="line"/>
+      <point x="1496.0" y="-576.0" type="line"/>
     </contour>
     <contour>
-      <point x="2232" y="768" type="line"/>
-      <point x="1496" y="28" type="line"/>
-      <point x="752" y="768" type="line"/>
-      <point x="1496" y="1508" type="line"/>
+      <point x="2232.0" y="768.0" type="line"/>
+      <point x="1496.0" y="28.0" type="line"/>
+      <point x="752.0" y="768.0" type="line"/>
+      <point x="1496.0" y="1508.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>520</integer>
-          <key>y</key>
-          <integer>768</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1480</integer>
-          <key>y</key>
-          <integer>2072</integer>
-        </dict>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

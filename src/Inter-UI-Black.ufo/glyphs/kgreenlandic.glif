@@ -1,42 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="kgreenlandic" format="1">
-  <advance width="1824"/>
+<glyph name="kgreenlandic" format="2">
+  <advance width="1824.0"/>
   <unicode hex="0138"/>
+  <anchor x="832.0" y="16.0" name="bottom"/>
+  <anchor x="832.0" y="1776.0" name="top"/>
+  <anchor x="1700.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="616" y="1488" type="line"/>
-      <point x="172" y="1488" type="line"/>
-      <point x="172" y="0" type="line"/>
-      <point x="616" y="0" type="line"/>
+      <point x="616.0" y="1488.0" type="line"/>
+      <point x="172.0" y="1488.0" type="line"/>
+      <point x="172.0" y="0.0" type="line"/>
+      <point x="616.0" y="0.0" type="line"/>
     </contour>
     <contour>
-      <point x="1636" y="1488" type="line"/>
-      <point x="1072" y="1488" type="line"/>
-      <point x="740" y="952" type="line"/>
-      <point x="500" y="952" type="line"/>
-      <point x="552" y="520" type="line"/>
-      <point x="972" y="520" type="line"/>
+      <point x="1636.0" y="1488.0" type="line"/>
+      <point x="1072.0" y="1488.0" type="line"/>
+      <point x="740.0" y="952.0" type="line"/>
+      <point x="500.0" y="952.0" type="line"/>
+      <point x="552.0" y="520.0" type="line"/>
+      <point x="972.0" y="520.0" type="line"/>
     </contour>
     <contour>
-      <point x="1084" y="0" type="line"/>
-      <point x="1652" y="0" type="line"/>
-      <point x="1136" y="800" type="line"/>
-      <point x="736" y="608" type="line"/>
-    </contour>
-    <contour>
-      <point x="832" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="832" y="16" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1700" y="1776" type="move" name="top0315"/>
+      <point x="1084.0" y="0.0" type="line"/>
+      <point x="1652.0" y="0.0" type="line"/>
+      <point x="1136.0" y="800.0" type="line"/>
+      <point x="736.0" y="608.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1694.0, 'leftMargin': 168, 'rightMargin': 47.0}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

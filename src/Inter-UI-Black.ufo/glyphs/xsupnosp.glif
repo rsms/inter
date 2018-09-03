@@ -1,36 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="xsupnosp" format="1">
-  <advance width="0"/>
+<glyph name="xsupnosp" format="2">
   <unicode hex="033D"/>
+  <anchor x="-792.0" y="1609.0" name="_marktop"/>
+  <anchor x="-792.0" y="2500.0" name="mkmktop"/>
   <outline>
     <contour>
-      <point x="-792" y="1609" type="move" name="_marktop"/>
+      <point x="-961.0" y="1738.0" type="line"/>
+      <point x="-474.0" y="2229.0" type="line"/>
+      <point x="-620.0" y="2376.0" type="line"/>
+      <point x="-1107.0" y="1887.0" type="line"/>
     </contour>
     <contour>
-      <point x="-792" y="2500" type="move" name="mkmktop"/>
-    </contour>
-    <contour>
-      <point x="-961" y="1738" type="line"/>
-      <point x="-474" y="2229" type="line"/>
-      <point x="-620" y="2376" type="line"/>
-      <point x="-1107" y="1887" type="line"/>
-    </contour>
-    <contour>
-      <point x="-623" y="1735" type="line"/>
-      <point x="-476" y="1884" type="line"/>
-      <point x="-958" y="2379" type="line"/>
-      <point x="-1106" y="2230" type="line"/>
+      <point x="-623.0" y="1735.0" type="line"/>
+      <point x="-476.0" y="1884.0" type="line"/>
+      <point x="-958.0" y="2379.0" type="line"/>
+      <point x="-1106.0" y="2230.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

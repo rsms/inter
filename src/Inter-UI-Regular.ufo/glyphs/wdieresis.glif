@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="wdieresis" format="1">
-  <advance width="2288"/>
+<glyph name="wdieresis" format="2">
+  <advance width="2288.0"/>
   <unicode hex="1E85"/>
   <outline>
-    <component base="dieresis" xOffset="320"/>
+    <component base="dieresis" xOffset="320.0"/>
     <component base="w"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

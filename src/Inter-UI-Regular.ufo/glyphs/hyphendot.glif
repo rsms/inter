@@ -1,38 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="hyphendot" format="1">
-  <advance width="752"/>
+<glyph name="hyphendot" format="2">
+  <advance width="752.0"/>
   <unicode hex="2027"/>
   <outline>
     <contour>
-      <point x="216" y="848" type="curve" smooth="yes"/>
-      <point x="216" y="764"/>
-      <point x="272" y="696"/>
-      <point x="376" y="696" type="curve" smooth="yes"/>
-      <point x="480" y="696"/>
-      <point x="536" y="764"/>
-      <point x="536" y="848" type="curve" smooth="yes"/>
-      <point x="536" y="932"/>
-      <point x="480" y="1000"/>
-      <point x="376" y="1000" type="curve" smooth="yes"/>
-      <point x="272" y="1000"/>
-      <point x="216" y="932"/>
+      <point x="216.0" y="848.0" type="curve" smooth="yes"/>
+      <point x="216.0" y="764.0"/>
+      <point x="272.0" y="696.0"/>
+      <point x="376.0" y="696.0" type="curve" smooth="yes"/>
+      <point x="480.0" y="696.0"/>
+      <point x="536.0" y="764.0"/>
+      <point x="536.0" y="848.0" type="curve" smooth="yes"/>
+      <point x="536.0" y="932.0"/>
+      <point x="480.0" y="1000.0"/>
+      <point x="376.0" y="1000.0" type="curve" smooth="yes"/>
+      <point x="272.0" y="1000.0"/>
+      <point x="216.0" y="932.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 538, 'leftMargin': 110, 'rightMargin': 110}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

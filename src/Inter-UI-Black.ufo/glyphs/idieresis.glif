@@ -1,30 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="idieresis" format="1">
-  <advance width="896"/>
+<glyph name="idieresis" format="2">
+  <advance width="896.0"/>
   <unicode hex="00EF"/>
+  <anchor x="464.0" y="0.0" name="bottom"/>
+  <anchor x="480.0" y="2708.0" name="mkmktop_acc"/>
+  <anchor x="564.0" y="900.0" name="rhotichook"/>
+  <anchor x="480.0" y="1744.0" name="top"/>
+  <anchor x="876.0" y="1744.0" name="top0315"/>
   <outline>
-    <component base="dotlessi" xOffset="64"/>
-    <component base="dieresis" xOffset="-208"/>
-    <contour>
-      <point x="564" y="900" type="move" name="rhotichook"/>
-    </contour>
-    <contour>
-      <point x="480" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="876" y="1744" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="480" y="2708" type="move" name="mkmktop_acc"/>
-    </contour>
-    <contour>
-      <point x="464" y="0" type="move" name="bottom"/>
-    </contour>
+    <component base="dotlessi" xOffset="64.0"/>
+    <component base="dieresis" xOffset="-208.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1159, 'leftMargin': 28, 'rightMargin': 27}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
     </dict>
   </lib>
 </glyph>

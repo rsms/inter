@@ -1,36 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="plusmod" format="1">
-  <advance width="1008"/>
+<glyph name="plusmod" format="2">
+  <advance width="1008.0"/>
   <unicode hex="02D6"/>
   <outline>
     <contour>
-      <point x="608" y="760" type="line"/>
-      <point x="400" y="760" type="line"/>
-      <point x="400" y="208" type="line"/>
-      <point x="608" y="208" type="line"/>
+      <point x="608.0" y="760.0" type="line"/>
+      <point x="400.0" y="760.0" type="line"/>
+      <point x="400.0" y="208.0" type="line"/>
+      <point x="608.0" y="208.0" type="line"/>
     </contour>
     <contour>
-      <point x="224" y="580" type="line"/>
-      <point x="224" y="388" type="line"/>
-      <point x="784" y="388" type="line"/>
-      <point x="784" y="580" type="line"/>
+      <point x="224.0" y="580.0" type="line"/>
+      <point x="224.0" y="388.0" type="line"/>
+      <point x="784.0" y="388.0" type="line"/>
+      <point x="784.0" y="580.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8</real>
-        <real>0.94</real>
-        <real>0.95</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 781.0, 'leftMargin': 110, 'rightMargin': 110.0}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
     </dict>
   </lib>
 </glyph>

@@ -1,73 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="w" format="1">
-  <advance width="2204"/>
+<glyph name="w" format="2">
+  <advance width="2204.0"/>
   <unicode hex="0077"/>
+  <guideline x="1084.0" y="776.0" angle="90.0"/>
+  <anchor x="1100.0" y="0.0" name="bottom"/>
+  <anchor x="2196.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="1100.0" y="1776.0" name="marktop"/>
+  <anchor x="1100.0" y="1776.0" name="top"/>
+  <anchor x="2196.0" y="1776.0" name="top0315"/>
+  <anchor x="2196.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="2108" y="1536" type="line"/>
-      <point x="1668" y="1536" type="line"/>
-      <point x="1512" y="624" type="line"/>
-      <point x="1492" y="624" type="line"/>
-      <point x="1256" y="1536" type="line"/>
-      <point x="944" y="1536" type="line"/>
-      <point x="708" y="616" type="line"/>
-      <point x="688" y="616" type="line"/>
-      <point x="536" y="1536" type="line"/>
-      <point x="96" y="1536" type="line"/>
-      <point x="472" y="0" type="line"/>
-      <point x="844" y="0" type="line"/>
-      <point x="1088" y="852" type="line"/>
-      <point x="1112" y="852" type="line"/>
-      <point x="1360" y="0" type="line"/>
-      <point x="1732" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1100" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1100" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1100" y="1776" type="move" name="marktop"/>
-    </contour>
-    <contour>
-      <point x="2196" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="2196" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="2196" y="1776" type="move" name="top0315"/>
+      <point x="2108.0" y="1536.0" type="line"/>
+      <point x="1668.0" y="1536.0" type="line"/>
+      <point x="1512.0" y="624.0" type="line"/>
+      <point x="1492.0" y="624.0" type="line"/>
+      <point x="1256.0" y="1536.0" type="line"/>
+      <point x="944.0" y="1536.0" type="line"/>
+      <point x="708.0" y="616.0" type="line"/>
+      <point x="688.0" y="616.0" type="line"/>
+      <point x="536.0" y="1536.0" type="line"/>
+      <point x="96.0" y="1536.0" type="line"/>
+      <point x="472.0" y="0.0" type="line"/>
+      <point x="844.0" y="0.0" type="line"/>
+      <point x="1088.0" y="852.0" type="line"/>
+      <point x="1112.0" y="852.0" type="line"/>
+      <point x="1360.0" y="0.0" type="line"/>
+      <point x="1732.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1084</integer>
-          <key>y</key>
-          <integer>776</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2053, 'leftMargin': 33, 'rightMargin': 39}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

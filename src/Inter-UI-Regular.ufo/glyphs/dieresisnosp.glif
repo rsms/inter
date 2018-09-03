@@ -1,45 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dieresisnosp" format="1">
-  <advance width="0"/>
+<glyph name="dieresisnosp" format="2">
   <unicode hex="0308"/>
+  <guideline x="-836.0" y="1740.0" angle="90.0"/>
+  <anchor x="-836.0" y="1776.0" name="_marktop"/>
+  <anchor x="-836.0" y="2176.0" name="mkmktop"/>
+  <anchor x="-836.0" y="1880.0" name="parent_top"/>
   <outline>
-    <component base="dieresis" xOffset="-1652"/>
-    <contour>
-      <point x="-836" y="1776" type="move" name="_marktop"/>
-    </contour>
-    <contour>
-      <point x="-836" y="2176" type="move" name="mkmktop"/>
-    </contour>
-    <contour>
-      <point x="-836" y="1880" type="move" name="parent_top"/>
-    </contour>
+    <component base="dieresis" xOffset="-1652.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>-836</integer>
-          <key>y</key>
-          <integer>1740</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

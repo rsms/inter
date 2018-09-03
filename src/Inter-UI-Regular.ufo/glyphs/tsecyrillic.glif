@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="tsecyrillic" format="1">
-  <advance width="1776"/>
+<glyph name="tsecyrillic" format="2">
+  <advance width="1776.0"/>
   <unicode hex="0446"/>
+  <anchor x="848.0" y="1744.0" name="top"/>
+  <anchor x="1664.0" y="1744.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="192" y="0" type="line"/>
-      <point x="1400" y="0" type="line"/>
-      <point x="1400" y="1488" type="line"/>
-      <point x="1128" y="1488" type="line"/>
-      <point x="1128" y="220" type="line"/>
-      <point x="468" y="220" type="line"/>
-      <point x="468" y="1488" type="line"/>
-      <point x="192" y="1488" type="line"/>
+      <point x="192.0" y="0.0" type="line"/>
+      <point x="1400.0" y="0.0" type="line"/>
+      <point x="1400.0" y="1488.0" type="line"/>
+      <point x="1128.0" y="1488.0" type="line"/>
+      <point x="1128.0" y="220.0" type="line"/>
+      <point x="468.0" y="220.0" type="line"/>
+      <point x="468.0" y="1488.0" type="line"/>
+      <point x="192.0" y="1488.0" type="line"/>
     </contour>
     <contour>
-      <point x="1584" y="220" type="line"/>
-      <point x="1112" y="220" type="line"/>
-      <point x="1112" y="0" type="line"/>
-      <point x="1312" y="0" type="line"/>
-      <point x="1312" y="-440" type="line"/>
-      <point x="1556" y="-440" type="line"/>
-    </contour>
-    <contour>
-      <point x="848" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1664" y="1744" type="move" name="top0315"/>
+      <point x="1584.0" y="220.0" type="line"/>
+      <point x="1112.0" y="220.0" type="line"/>
+      <point x="1112.0" y="0.0" type="line"/>
+      <point x="1312.0" y="0.0" type="line"/>
+      <point x="1312.0" y="-440.0" type="line"/>
+      <point x="1556.0" y="-440.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1683.0, 'leftMargin': 213, 'rightMargin': 78.0}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="macronacutecomb.lc" format="1">
-  <advance width="0"/>
+<glyph name="macronacutecomb.lc" format="2">
+  <anchor x="-792.0" y="1782.0" name="_top"/>
+  <anchor x="-792.0" y="2736.0" name="mkmktop_acc"/>
   <outline>
     <contour>
-      <point x="-792" y="1782" type="move" name="_top"/>
+      <point x="-315.0" y="2005.0" type="line"/>
+      <point x="-1268.0" y="2005.0" type="line"/>
+      <point x="-1268.0" y="1767.0" type="line"/>
+      <point x="-315.0" y="1767.0" type="line"/>
     </contour>
     <contour>
-      <point x="-792" y="2736" type="move" name="mkmktop_acc"/>
-    </contour>
-    <contour>
-      <point x="-315" y="2005" type="line"/>
-      <point x="-1268" y="2005" type="line"/>
-      <point x="-1268" y="1767" type="line"/>
-      <point x="-315" y="1767" type="line"/>
-    </contour>
-    <contour>
-      <point x="-997" y="2120" type="line"/>
-      <point x="-637" y="2120" type="line"/>
-      <point x="-254" y="2552" type="line"/>
-      <point x="-726" y="2552" type="line"/>
+      <point x="-997.0" y="2120.0" type="line"/>
+      <point x="-637.0" y="2120.0" type="line"/>
+      <point x="-254.0" y="2552.0" type="line"/>
+      <point x="-726.0" y="2552.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.871,0.871,0.871,0.004</string>
     </dict>
   </lib>
 </glyph>

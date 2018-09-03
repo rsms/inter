@@ -1,78 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="A" format="1">
-  <advance width="2168"/>
+<glyph name="A" format="2">
+  <advance width="2168.0"/>
   <unicode hex="0041"/>
+  <guideline y="1894.75"/>
+  <guideline x="1084.0" y="964.0" angle="90.0"/>
+  <anchor x="1084.0" y="12.0" name="bottom"/>
+  <anchor x="1968.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="1952.0" y="0.0" name="ogonek"/>
+  <anchor x="2088.0" y="0.0" name="right"/>
+  <anchor x="568.0" y="2000.0" name="tonos"/>
+  <anchor x="1084.0" y="2200.0" name="top"/>
+  <anchor x="2096.0" y="2200.0" name="top0315"/>
+  <anchor x="2096.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="1676" y="756" type="line"/>
-      <point x="492" y="756" type="line"/>
-      <point x="492" y="384" type="line"/>
-      <point x="1676" y="384" type="line"/>
-    </contour>
-    <component base="Lambda"/>
-    <contour>
-      <point x="1084" y="2200" type="move" name="top"/>
+      <point x="1676.0" y="756.0" type="line"/>
+      <point x="492.0" y="756.0" type="line"/>
+      <point x="492.0" y="384.0" type="line"/>
+      <point x="1676.0" y="384.0" type="line"/>
     </contour>
     <contour>
-      <point x="1084" y="12" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="2088" y="0" type="move" name="right"/>
-    </contour>
-    <contour>
-      <point x="568" y="2000" type="move" name="tonos"/>
-    </contour>
-    <contour>
-      <point x="1952" y="0" type="move" name="ogonek"/>
-    </contour>
-    <contour>
-      <point x="2096" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="1968" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="2096" y="2200" type="move" name="top0315"/>
+      <point x="580.0" y="0.0" type="line"/>
+      <point x="1072.0" y="1468.0" type="line"/>
+      <point x="1096.0" y="1468.0" type="line"/>
+      <point x="1588.0" y="0.0" type="line"/>
+      <point x="2088.0" y="0.0" type="line"/>
+      <point x="1332.0" y="2048.0" type="line"/>
+      <point x="836.0" y="2048.0" type="line"/>
+      <point x="80.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1894.75</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <integer>1084</integer>
-          <key>y</key>
-          <integer>964</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1911, 'leftMargin': 0, 'rightMargin': -2}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/02 07:38:52</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

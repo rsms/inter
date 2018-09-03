@@ -1,52 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="casetilde.cn" format="1">
-  <advance width="1312"/>
+<glyph name="casetilde.cn" format="2">
+  <advance width="1312.0"/>
+  <guideline x="1028.0" y="2200.0" angle="0.0"/>
+  <guideline x="640.0" y="2032.0" angle="90.0"/>
+  <anchor x="656.0" y="2200.0" name="_top"/>
   <outline>
-    <component base="tilde" yOffset="420"/>
-    <contour>
-      <point x="656" y="2200" type="move" name="_top"/>
-    </contour>
+    <component base="tilde" yOffset="420.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1028</integer>
-          <key>y</key>
-          <integer>2200</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>640</integer>
-          <key>y</key>
-          <integer>2032</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8029983485</real>
-        <real>0.9647658846</real>
-        <real>0.7954395628</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.Export</key>
+      <false/>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/02 05:51:15</string>
+      <key>public.markColor</key>
+      <string>0.804,0.965,0.796,0.004</string>
     </dict>
   </lib>
 </glyph>

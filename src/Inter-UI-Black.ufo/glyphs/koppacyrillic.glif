@@ -1,82 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="koppacyrillic" format="1">
-  <advance width="1568"/>
+<glyph name="koppacyrillic" format="2">
+  <advance width="1568.0"/>
   <unicode hex="0481"/>
+  <guideline x="1109.625"/>
+  <guideline x="1392.875"/>
+  <anchor x="836.0" y="-16.0" name="bottom"/>
+  <anchor x="1308.0" y="100.0" name="right"/>
+  <anchor x="836.0" y="1776.0" name="top"/>
+  <anchor x="1516.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="828" y="328" type="line"/>
-      <point x="620" y="328"/>
-      <point x="568" y="508"/>
-      <point x="568" y="728" type="curve" smooth="yes"/>
-      <point x="568" y="760" type="line" smooth="yes"/>
-      <point x="568" y="976"/>
-      <point x="620" y="1160"/>
-      <point x="824" y="1160" type="curve"/>
-      <point x="964" y="1160"/>
-      <point x="1028" y="1052"/>
-      <point x="1028" y="920" type="curve"/>
-      <point x="1444" y="920" type="line"/>
-      <point x="1444" y="1296"/>
-      <point x="1196" y="1516"/>
-      <point x="824" y="1516" type="curve" smooth="yes"/>
-      <point x="364" y="1516"/>
-      <point x="128" y="1188"/>
-      <point x="128" y="760" type="curve" smooth="yes"/>
-      <point x="128" y="728" type="line" smooth="yes"/>
-      <point x="128" y="296"/>
-      <point x="364" y="-28"/>
-      <point x="828" y="-28" type="curve"/>
+      <point x="828.0" y="328.0" type="line"/>
+      <point x="620.0" y="328.0"/>
+      <point x="568.0" y="508.0"/>
+      <point x="568.0" y="728.0" type="curve" smooth="yes"/>
+      <point x="568.0" y="760.0" type="line" smooth="yes"/>
+      <point x="568.0" y="976.0"/>
+      <point x="620.0" y="1160.0"/>
+      <point x="824.0" y="1160.0" type="curve"/>
+      <point x="964.0" y="1160.0"/>
+      <point x="1028.0" y="1052.0"/>
+      <point x="1028.0" y="920.0" type="curve"/>
+      <point x="1444.0" y="920.0" type="line"/>
+      <point x="1444.0" y="1296.0"/>
+      <point x="1196.0" y="1516.0"/>
+      <point x="824.0" y="1516.0" type="curve" smooth="yes"/>
+      <point x="364.0" y="1516.0"/>
+      <point x="128.0" y="1188.0"/>
+      <point x="128.0" y="760.0" type="curve" smooth="yes"/>
+      <point x="128.0" y="728.0" type="line" smooth="yes"/>
+      <point x="128.0" y="296.0"/>
+      <point x="364.0" y="-28.0"/>
+      <point x="828.0" y="-28.0" type="curve"/>
     </contour>
     <contour>
-      <point x="1124" y="328" type="line"/>
-      <point x="680" y="328" type="line"/>
-      <point x="680" y="-492" type="line"/>
-      <point x="1124" y="-492" type="line"/>
-    </contour>
-    <contour>
-      <point x="836" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="836" y="-16" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1308" y="100" type="move" name="right"/>
-    </contour>
-    <contour>
-      <point x="1516" y="1776" type="move" name="top0315"/>
+      <point x="1124.0" y="328.0" type="line"/>
+      <point x="680.0" y="328.0" type="line"/>
+      <point x="680.0" y="-492.0" type="line"/>
+      <point x="1124.0" y="-492.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>1109.625</real>
-          <key>y</key>
-          <real>0.0</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>1392.875</real>
-          <key>y</key>
-          <real>0.0</real>
-        </dict>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1503, 'leftMargin': 113, 'rightMargin': 73}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

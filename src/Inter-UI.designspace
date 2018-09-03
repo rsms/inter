@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='utf-8'?>
+<designspace format="4.0">
+    <axes>
+        <axis default="400" maximum="900" minimum="100" name="Weight" tag="wght" />
+    </axes>
+    <sources>
+        <source familyname="Inter UI" filename="Inter-UI-Regular.ufo" name="regular" stylename="Regular">
+            <lib copy="1" />
+            <groups copy="1" />
+            <features copy="1" />
+            <info copy="1" />
+            <location>
+                <dimension name="Weight" xvalue="400" />
+            </location>
+        </source>
+        <source familyname="Inter UI" filename="Inter-UI-Black.ufo" name="black" stylename="Black">
+            <location>
+                <dimension name="Weight" xvalue="900" />
+            </location>
+        </source>
+    </sources>
+    <instances>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Italic.ufo" name="italic" stylemapfamilyname="Inter UI" stylemapstylename="italic" stylename="Italic">
+            <location>
+                <dimension name="Weight" xvalue="400" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>italicAngle</string>
+                            <string>9.4</string>
+                        </array>
+                        <array>
+                            <string>Filter</string>
+                            <string>Transformations;Slant:9.4;Origin:4;</string>
+                        </array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>5</integer>
+                                <integer>2</integer>
+                                <integer>3</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Medium.ufo" name="medium" postscriptfontname="InterUI-Medium" stylemapfamilyname="Inter UI Medium" stylemapstylename="regular" stylename="Medium">
+            <location>
+                <dimension name="Weight" xvalue="500" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>6</integer>
+                                <integer>2</integer>
+                                <integer>3</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-MediumItalic.ufo" name="mediumitalic" stylemapfamilyname="Inter UI Medium" stylemapstylename="italic" stylename="Medium Italic">
+            <location>
+                <dimension name="Weight" xvalue="500" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>italicAngle</string>
+                            <string>9.4</string>
+                        </array>
+                        <array>
+                            <string>Filter</string>
+                            <string>Transformations;Slant:9.4;Origin:4;</string>
+                        </array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>6</integer>
+                                <integer>2</integer>
+                                <integer>3</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Bold.ufo" name="bold" postscriptfontname="InterUI-Bold" stylemapfamilyname="Inter UI" stylemapstylename="bold" stylename="Bold">
+            <location>
+                <dimension name="Weight" xvalue="700" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>8</integer>
+                                <integer>2</integer>
+                                <integer>3</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-BoldItalic.ufo" name="bolditalic" stylemapfamilyname="Inter UI Bold" stylemapstylename="italic" stylename="Bold Italic">
+            <location>
+                <dimension name="Weight" xvalue="700" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>Filter</string>
+                            <string>Transformations;Slant:9.4;Origin:4;</string>
+                        </array>
+                        <array>
+                            <string>italicAngle</string>
+                            <string>9.4</string>
+                        </array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>8</integer>
+                                <integer>2</integer>
+                                <integer>3</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-BlackItalic.ufo" name="blackitalic" stylemapfamilyname="Inter UI Black" stylemapstylename="italic" stylename="Black Italic">
+            <location>
+                <dimension name="Weight" xvalue="900" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>Filter</string>
+                            <string>Transformations;Slant:9.4;Origin:4;</string>
+                        </array>
+                        <array>
+                            <string>italicAngle</string>
+                            <string>9.4</string>
+                        </array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>10</integer>
+                                <integer>2</integer>
+                                <integer>3</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
+    </instances>
+</designspace>

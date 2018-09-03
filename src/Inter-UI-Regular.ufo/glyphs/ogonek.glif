@@ -1,58 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ogonek" format="1">
-  <advance width="752"/>
+<glyph name="ogonek" format="2">
+  <advance width="752.0"/>
   <unicode hex="02DB"/>
+  <anchor x="488.0" y="0.0" name="_bottom"/>
+  <anchor x="600.0" y="0.0" name="_ogonek"/>
+  <anchor x="600.0" y="0.0" name="_right"/>
+  <anchor x="488.0" y="-600.0" name="mkmkbottom_acc"/>
   <outline>
     <contour>
-      <point x="492" y="84" type="line"/>
-      <point x="228" y="-36"/>
-      <point x="128" y="-188"/>
-      <point x="128" y="-336" type="curve" smooth="yes"/>
-      <point x="128" y="-508"/>
-      <point x="248" y="-600"/>
-      <point x="400" y="-600" type="curve" smooth="yes"/>
-      <point x="512" y="-600"/>
-      <point x="580" y="-568"/>
-      <point x="624" y="-540" type="curve"/>
-      <point x="608" y="-364" type="line"/>
-      <point x="580" y="-380"/>
-      <point x="532" y="-400"/>
-      <point x="472" y="-400" type="curve" smooth="yes"/>
-      <point x="392" y="-400"/>
-      <point x="368" y="-364"/>
-      <point x="368" y="-304" type="curve" smooth="yes"/>
-      <point x="368" y="-184"/>
-      <point x="480" y="-88"/>
-      <point x="600" y="0" type="curve"/>
-    </contour>
-    <contour>
-      <point x="600.0" y="0.0" type="move" name="_ogonek"/>
-    </contour>
-    <contour>
-      <point x="600.0" y="0.0" type="move" name="_right"/>
-    </contour>
-    <contour>
-      <point x="488.0" y="0.0" type="move" name="_bottom"/>
-    </contour>
-    <contour>
-      <point x="488.0" y="-600.0" type="move" name="mkmkbottom_acc"/>
+      <point x="492.0" y="84.0" type="line"/>
+      <point x="228.0" y="-36.0"/>
+      <point x="128.0" y="-188.0"/>
+      <point x="128.0" y="-336.0" type="curve" smooth="yes"/>
+      <point x="128.0" y="-508.0"/>
+      <point x="248.0" y="-600.0"/>
+      <point x="400.0" y="-600.0" type="curve" smooth="yes"/>
+      <point x="512.0" y="-600.0"/>
+      <point x="580.0" y="-568.0"/>
+      <point x="624.0" y="-540.0" type="curve"/>
+      <point x="608.0" y="-364.0" type="line"/>
+      <point x="580.0" y="-380.0"/>
+      <point x="532.0" y="-400.0"/>
+      <point x="472.0" y="-400.0" type="curve" smooth="yes"/>
+      <point x="392.0" y="-400.0"/>
+      <point x="368.0" y="-364.0"/>
+      <point x="368.0" y="-304.0" type="curve" smooth="yes"/>
+      <point x="368.0" y="-184.0"/>
+      <point x="480.0" y="-88.0"/>
+      <point x="600.0" y="0.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8</real>
-        <real>0.94</real>
-        <real>0.95</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 776, 'leftMargin': 66, 'rightMargin': 214}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/02 06:20:04</string>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
     </dict>
   </lib>
 </glyph>

@@ -1,98 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dotaccent" format="1">
-  <advance width="668"/>
+<glyph name="dotaccent" format="2">
+  <advance width="668.0"/>
   <unicode hex="02D9"/>
+  <anchor x="196.0" y="1872.0" name="_dot"/>
+  <anchor x="332.0" y="1792.0" name="_top"/>
+  <anchor x="332.0" y="2188.0" name="mkmktop_acc"/>
   <outline>
     <contour>
-      <point x="332" y="1780" type="curve"/>
-      <point x="436" y="1780"/>
-      <point x="500" y="1852"/>
-      <point x="500" y="1940" type="curve"/>
-      <point x="500" y="2020"/>
-      <point x="436" y="2100"/>
-      <point x="332" y="2100" type="curve"/>
-      <point x="228" y="2100"/>
-      <point x="164" y="2020"/>
-      <point x="164" y="1940" type="curve" smooth="yes"/>
-      <point x="164" y="1852"/>
-      <point x="228" y="1780"/>
-    </contour>
-    <contour>
-      <point x="332" y="1792" type="move" name="_top"/>
-    </contour>
-    <contour>
-      <point x="196" y="1872" type="move" name="_dot"/>
-    </contour>
-    <contour>
-      <point x="332" y="2188" type="move" name="mkmktop_acc"/>
+      <point x="332.0" y="1780.0" type="curve"/>
+      <point x="436.0" y="1780.0"/>
+      <point x="500.0" y="1852.0"/>
+      <point x="500.0" y="1940.0" type="curve"/>
+      <point x="500.0" y="2020.0"/>
+      <point x="436.0" y="2100.0"/>
+      <point x="332.0" y="2100.0" type="curve"/>
+      <point x="228.0" y="2100.0"/>
+      <point x="164.0" y="2020.0"/>
+      <point x="164.0" y="1940.0" type="curve" smooth="yes"/>
+      <point x="164.0" y="1852.0"/>
+      <point x="228.0" y="1780.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.layerData</key>
-      <dict>
-        <key>reference</key>
-        <dict>
-          <key>anchors</key>
-          <array>
-          </array>
-          <key>components</key>
-          <array>
-            <dict>
-              <key>baseGlyph</key>
-              <string>dotlessi</string>
-              <key>transformation</key>
-              <array>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-              </array>
-            </dict>
-            <dict>
-              <key>baseGlyph</key>
-              <string>e</string>
-              <key>transformation</key>
-              <array>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-              </array>
-            </dict>
-          </array>
-          <key>contours</key>
-          <array>
-          </array>
-          <key>lib</key>
-          <dict>
-          </dict>
-          <key>name</key>
-          <string>dotaccent</string>
-          <key>unicodes</key>
-          <array>
-          </array>
-          <key>width</key>
-          <integer>668</integer>
-        </dict>
-      </dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8</real>
-        <real>0.94</real>
-        <real>0.95</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 696, 'leftMargin': 193, 'rightMargin': 186}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
     </dict>
   </lib>
 </glyph>

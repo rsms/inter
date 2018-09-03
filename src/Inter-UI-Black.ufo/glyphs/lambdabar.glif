@@ -1,23 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="lambdabar" format="1">
-  <advance width="1824"/>
+<glyph name="lambdabar" format="2">
+  <advance width="1824.0"/>
   <unicode hex="019B"/>
+  <anchor x="1476.0" y="2200.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="1088" y="1876" type="line"/>
-      <point x="276" y="1620" type="line"/>
-      <point x="276" y="1340" type="line"/>
-      <point x="1088" y="1600" type="line"/>
+      <point x="1088.0" y="1876.0" type="line"/>
+      <point x="276.0" y="1620.0" type="line"/>
+      <point x="276.0" y="1340.0" type="line"/>
+      <point x="1088.0" y="1600.0" type="line"/>
     </contour>
-    <component base="lambda"/>
     <contour>
-      <point x="1476" y="2200" type="move" name="top0315"/>
+      <point x="900.0" y="904.0" type="line"/>
+      <point x="984.0" y="1532.0" type="line"/>
+      <point x="680.0" y="1532.0" type="line"/>
+      <point x="136.0" y="0.0" type="line"/>
+      <point x="612.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="544.0" y="2140.0" type="curve"/>
+      <point x="468.0" y="2140.0"/>
+      <point x="360.0" y="2128.0"/>
+      <point x="292.0" y="2108.0" type="curve"/>
+      <point x="304.0" y="1776.0" type="line"/>
+      <point x="340.0" y="1780.0"/>
+      <point x="364.0" y="1780.0"/>
+      <point x="388.0" y="1780.0" type="curve" smooth="yes"/>
+      <point x="480.0" y="1780.0"/>
+      <point x="540.0" y="1748.0"/>
+      <point x="576.0" y="1660.0" type="curve" smooth="yes"/>
+      <point x="728.0" y="1312.0" type="line"/>
+      <point x="1088.0" y="292.0" type="line" smooth="yes"/>
+      <point x="1152.0" y="112.0"/>
+      <point x="1276.0" y="-28.0"/>
+      <point x="1524.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1592.0" y="-28.0"/>
+      <point x="1644.0" y="-28.0"/>
+      <point x="1688.0" y="-20.0" type="curve"/>
+      <point x="1688.0" y="332.0" type="line"/>
+      <point x="1676.0" y="332.0"/>
+      <point x="1660.0" y="332.0"/>
+      <point x="1644.0" y="332.0" type="curve" smooth="yes"/>
+      <point x="1564.0" y="332.0"/>
+      <point x="1524.0" y="420.0"/>
+      <point x="1492.0" y="492.0" type="curve" smooth="yes"/>
+      <point x="928.0" y="1900.0" type="line" smooth="yes"/>
+      <point x="868.0" y="2052.0"/>
+      <point x="744.0" y="2140.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1539, 'leftMargin': 120, 'rightMargin': -133}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.1.4</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
     </dict>
   </lib>
 </glyph>

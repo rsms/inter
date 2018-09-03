@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="eightroman" format="1">
-  <advance width="3568"/>
+<glyph name="eightroman" format="2">
+  <advance width="3568.0"/>
   <unicode hex="2177"/>
   <outline>
-    <component base="v" xOffset="56"/>
-    <component base="i" xOffset="1424"/>
-    <component base="i" xOffset="2120"/>
-    <component base="i" xOffset="2816"/>
+    <component base="v" xOffset="56.0"/>
+    <component base="i" xOffset="1424.0"/>
+    <component base="i" xOffset="2120.0"/>
+    <component base="i" xOffset="2816.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <real>0.89</real>
-        <real>0.96</real>
-        <real>0.92</real>
-        <real>1.0</real>
+        <integer>-1</integer>
+        <integer>-1</integer>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 3465.0, 'leftMargin': 132, 'rightMargin': 151.0}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>public.markColor</key>
+      <string>0.89,0.961,0.922,0.004</string>
     </dict>
   </lib>
 </glyph>

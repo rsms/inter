@@ -1,50 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni024E" format="1">
-  <advance width="1856"/>
+<glyph name="uni024E" format="2">
+  <advance width="1856.0"/>
   <unicode hex="024E"/>
+  <guideline x="932.0" y="1188.0" angle="90.0"/>
+  <anchor x="928.0" y="0.0" name="bottom"/>
+  <anchor x="928.0" y="2304.0" name="top"/>
+  <anchor x="1856.0" y="2200.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="1860" y="1628" type="line"/>
-      <point x="-4" y="1628" type="line"/>
-      <point x="-4" y="1464" type="line"/>
-      <point x="1860" y="1464" type="line"/>
-    </contour>
-    <component base="Y" xOffset="-12"/>
-    <contour>
-      <point x="928" y="2304" type="move" name="top"/>
+      <point x="1860.0" y="1628.0" type="line"/>
+      <point x="-4.0" y="1628.0" type="line"/>
+      <point x="-4.0" y="1464.0" type="line"/>
+      <point x="1860.0" y="1464.0" type="line"/>
     </contour>
     <contour>
-      <point x="928" y="0" type="move" name="bottom"/>
+      <point x="348.0" y="2048.0" type="line"/>
+      <point x="64.0" y="2048.0" type="line"/>
+      <point x="804.0" y="844.0" type="line"/>
+      <point x="804.0" y="0.0" type="line"/>
+      <point x="1052.0" y="0.0" type="line"/>
+      <point x="1052.0" y="844.0" type="line"/>
+      <point x="1792.0" y="2048.0" type="line"/>
+      <point x="1508.0" y="2048.0" type="line"/>
+      <point x="928.0" y="1072.0" type="line"/>
     </contour>
     <contour>
-      <point x="1856" y="2200" type="move" name="top0315"/>
+      <point x="904.0" y="1044.0" type="line"/>
+      <point x="952.0" y="1044.0" type="line"/>
+      <point x="952.0" y="1092.0" type="line"/>
+      <point x="904.0" y="1092.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>932</integer>
-          <key>y</key>
-          <integer>1188</integer>
-        </dict>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1911, 'leftMargin': 41, 'rightMargin': 41}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

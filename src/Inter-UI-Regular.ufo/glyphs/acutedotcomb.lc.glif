@@ -1,43 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="acutedotcomb.lc" format="1">
-  <advance width="0"/>
+<glyph name="acutedotcomb.lc" format="2">
+  <anchor x="-809.0" y="1774.0" name="_top"/>
+  <anchor x="-810.0" y="2663.0" name="mkmktop_acc"/>
   <outline>
     <contour>
-      <point x="-809" y="1774" type="move" name="_top"/>
+      <point x="-958.0" y="1705.0" type="line"/>
+      <point x="-740.0" y="1705.0" type="line"/>
+      <point x="-360.0" y="2112.0" type="line"/>
+      <point x="-692.0" y="2112.0" type="line"/>
     </contour>
     <contour>
-      <point x="-810" y="2663" type="move" name="mkmktop_acc"/>
-    </contour>
-    <contour>
-      <point x="-958" y="1705" type="line"/>
-      <point x="-740" y="1705" type="line"/>
-      <point x="-360" y="2112" type="line"/>
-      <point x="-692" y="2112" type="line"/>
-    </contour>
-    <contour>
-      <point x="-967" y="2372" type="curve" smooth="yes"/>
-      <point x="-967" y="2288"/>
-      <point x="-913" y="2222"/>
-      <point x="-809" y="2222" type="curve" smooth="yes"/>
-      <point x="-704" y="2222"/>
-      <point x="-649" y="2288"/>
-      <point x="-649" y="2372" type="curve" smooth="yes"/>
-      <point x="-649" y="2457"/>
-      <point x="-704" y="2525"/>
-      <point x="-809" y="2525" type="curve" smooth="yes"/>
-      <point x="-913" y="2525"/>
-      <point x="-967" y="2457"/>
+      <point x="-967.0" y="2372.0" type="curve" smooth="yes"/>
+      <point x="-967.0" y="2288.0"/>
+      <point x="-913.0" y="2222.0"/>
+      <point x="-809.0" y="2222.0" type="curve" smooth="yes"/>
+      <point x="-704.0" y="2222.0"/>
+      <point x="-649.0" y="2288.0"/>
+      <point x="-649.0" y="2372.0" type="curve" smooth="yes"/>
+      <point x="-649.0" y="2457.0"/>
+      <point x="-704.0" y="2525.0"/>
+      <point x="-809.0" y="2525.0" type="curve" smooth="yes"/>
+      <point x="-913.0" y="2525.0"/>
+      <point x="-967.0" y="2457.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.871,0.871,0.871,0.004</string>
     </dict>
   </lib>
 </glyph>

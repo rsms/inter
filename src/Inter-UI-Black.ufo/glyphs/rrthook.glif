@@ -1,47 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="rrthook" format="1">
-  <advance width="1312"/>
+<glyph name="rrthook" format="2">
+  <advance width="1312.0"/>
   <unicode hex="027D"/>
+  <anchor x="812.0" y="-616.0" name="bottom"/>
+  <anchor x="608.0" y="-424.0" name="parenthesses.w1"/>
+  <anchor x="812.0" y="1776.0" name="top"/>
+  <anchor x="1128.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="664" y="184" type="line"/>
-      <point x="204" y="184" type="line"/>
-      <point x="204" y="-80" type="line" smooth="yes"/>
-      <point x="204" y="-516"/>
-      <point x="504" y="-576"/>
-      <point x="744" y="-576" type="curve" smooth="yes"/>
-      <point x="844" y="-576"/>
-      <point x="920" y="-568"/>
-      <point x="976" y="-560" type="curve"/>
-      <point x="976" y="-212" type="line"/>
-      <point x="944" y="-216"/>
-      <point x="908" y="-220"/>
-      <point x="868" y="-220" type="curve" smooth="yes"/>
-      <point x="764" y="-220"/>
-      <point x="664" y="-192"/>
-      <point x="664" y="-80" type="curve" smooth="yes"/>
-    </contour>
-    <component base="r" xOffset="60"/>
-    <contour>
-      <point x="608" y="-424" type="move" name="parenthesses.w1"/>
+      <point x="664.0" y="184.0" type="line"/>
+      <point x="204.0" y="184.0" type="line"/>
+      <point x="204.0" y="-80.0" type="line" smooth="yes"/>
+      <point x="204.0" y="-516.0"/>
+      <point x="504.0" y="-576.0"/>
+      <point x="744.0" y="-576.0" type="curve" smooth="yes"/>
+      <point x="844.0" y="-576.0"/>
+      <point x="920.0" y="-568.0"/>
+      <point x="976.0" y="-560.0" type="curve"/>
+      <point x="976.0" y="-212.0" type="line"/>
+      <point x="944.0" y="-216.0"/>
+      <point x="908.0" y="-220.0"/>
+      <point x="868.0" y="-220.0" type="curve" smooth="yes"/>
+      <point x="764.0" y="-220.0"/>
+      <point x="664.0" y="-192.0"/>
+      <point x="664.0" y="-80.0" type="curve" smooth="yes"/>
     </contour>
     <contour>
-      <point x="812" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="812" y="-616" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1128" y="1776" type="move" name="top0315"/>
+      <point x="1224.0" y="1508.0" type="line"/>
+      <point x="1176.0" y="1536.0"/>
+      <point x="1088.0" y="1556.0"/>
+      <point x="1008.0" y="1556.0" type="curve"/>
+      <point x="872.0" y="1556.0"/>
+      <point x="720.0" y="1500.0"/>
+      <point x="676.0" y="1340.0" type="curve"/>
+      <point x="652.0" y="1340.0" type="line"/>
+      <point x="652.0" y="1536.0" type="line"/>
+      <point x="204.0" y="1536.0" type="line"/>
+      <point x="204.0" y="0.0" type="line"/>
+      <point x="664.0" y="0.0" type="line"/>
+      <point x="664.0" y="872.0" type="line"/>
+      <point x="664.0" y="1024.0"/>
+      <point x="784.0" y="1148.0"/>
+      <point x="936.0" y="1148.0" type="curve"/>
+      <point x="996.0" y="1148.0"/>
+      <point x="1064.0" y="1128.0"/>
+      <point x="1084.0" y="1116.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-      </data>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1055, 'leftMargin': 140, 'rightMargin': 31}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

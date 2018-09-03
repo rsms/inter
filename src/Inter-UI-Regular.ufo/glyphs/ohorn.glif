@@ -1,37 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ohorn" format="1">
-  <advance width="1700"/>
+<glyph name="ohorn" format="2">
+  <advance width="1700.0"/>
   <unicode hex="01A1"/>
+  <anchor x="812.0" y="-16.0" name="bottom"/>
+  <anchor x="912.0" y="1792.0" name="top"/>
+  <anchor x="1628.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="1464" y="1652" type="line"/>
-      <point x="1464" y="1456"/>
-      <point x="1436" y="1324"/>
-      <point x="1236" y="1324" type="curve"/>
-      <point x="1236" y="1156" type="line"/>
-      <point x="1568" y="1156"/>
-      <point x="1684" y="1348"/>
-      <point x="1684" y="1652" type="curve"/>
-    </contour>
-    <component base="o"/>
-    <contour>
-      <point x="912" y="1792" type="move" name="top"/>
+      <point x="1464.0" y="1652.0" type="line"/>
+      <point x="1464.0" y="1456.0"/>
+      <point x="1436.0" y="1324.0"/>
+      <point x="1236.0" y="1324.0" type="curve"/>
+      <point x="1236.0" y="1156.0" type="line"/>
+      <point x="1568.0" y="1156.0"/>
+      <point x="1684.0" y="1348.0"/>
+      <point x="1684.0" y="1652.0" type="curve"/>
     </contour>
     <contour>
-      <point x="812" y="-16" type="move" name="bottom"/>
+      <point x="840.0" y="-32.0" type="curve" smooth="yes"/>
+      <point x="1256.0" y="-32.0"/>
+      <point x="1536.0" y="284.0"/>
+      <point x="1536.0" y="760.0" type="curve" smooth="yes"/>
+      <point x="1536.0" y="1240.0"/>
+      <point x="1256.0" y="1556.0"/>
+      <point x="840.0" y="1556.0" type="curve" smooth="yes"/>
+      <point x="424.0" y="1556.0"/>
+      <point x="144.0" y="1240.0"/>
+      <point x="144.0" y="760.0" type="curve" smooth="yes"/>
+      <point x="144.0" y="284.0"/>
+      <point x="424.0" y="-32.0"/>
     </contour>
     <contour>
-      <point x="1628" y="1776" type="move" name="top0315"/>
+      <point x="840.0" y="180.0" type="curve" smooth="yes"/>
+      <point x="524.0" y="180.0"/>
+      <point x="380.0" y="452.0"/>
+      <point x="380.0" y="760.0" type="curve" smooth="yes"/>
+      <point x="380.0" y="1068.0"/>
+      <point x="524.0" y="1344.0"/>
+      <point x="840.0" y="1344.0" type="curve" smooth="yes"/>
+      <point x="1156.0" y="1344.0"/>
+      <point x="1300.0" y="1068.0"/>
+      <point x="1300.0" y="760.0" type="curve" smooth="yes"/>
+      <point x="1300.0" y="452.0"/>
+      <point x="1156.0" y="180.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1617.0, 'leftMargin': 236, 'rightMargin': -55.0}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

@@ -1,77 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="epsilon1revclosed" format="1">
-  <advance width="1520"/>
+<glyph name="epsilon1revclosed" format="2">
+  <advance width="1520.0"/>
   <unicode hex="025E"/>
+  <anchor x="780.0" y="0.0" name="bottom"/>
+  <anchor x="1068.0" y="876.0" name="rhotichook"/>
+  <anchor x="780.0" y="1776.0" name="top"/>
+  <anchor x="1500.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="820" y="712" type="line"/>
-      <point x="1140" y="712"/>
-      <point x="1336" y="876"/>
-      <point x="1336" y="1080" type="curve"/>
-      <point x="1336" y="1364"/>
-      <point x="1128" y="1516"/>
-      <point x="780" y="1516" type="curve" smooth="yes"/>
-      <point x="468" y="1516"/>
-      <point x="156" y="1352"/>
-      <point x="156" y="764" type="curve"/>
-      <point x="428" y="764" type="line"/>
-      <point x="428" y="1164"/>
-      <point x="588" y="1296"/>
-      <point x="780" y="1296" type="curve" smooth="yes"/>
-      <point x="984" y="1296"/>
-      <point x="1064" y="1188"/>
-      <point x="1064" y="1080" type="curve"/>
-      <point x="1064" y="956"/>
-      <point x="996" y="872"/>
-      <point x="800" y="872" type="curve" smooth="yes"/>
-      <point x="648" y="872" type="line"/>
-      <point x="648" y="712" type="line"/>
+      <point x="820.0" y="712.0" type="line"/>
+      <point x="1140.0" y="712.0"/>
+      <point x="1336.0" y="876.0"/>
+      <point x="1336.0" y="1080.0" type="curve"/>
+      <point x="1336.0" y="1364.0"/>
+      <point x="1128.0" y="1516.0"/>
+      <point x="780.0" y="1516.0" type="curve" smooth="yes"/>
+      <point x="468.0" y="1516.0"/>
+      <point x="156.0" y="1352.0"/>
+      <point x="156.0" y="764.0" type="curve"/>
+      <point x="428.0" y="764.0" type="line"/>
+      <point x="428.0" y="1164.0"/>
+      <point x="588.0" y="1296.0"/>
+      <point x="780.0" y="1296.0" type="curve" smooth="yes"/>
+      <point x="984.0" y="1296.0"/>
+      <point x="1064.0" y="1188.0"/>
+      <point x="1064.0" y="1080.0" type="curve"/>
+      <point x="1064.0" y="956.0"/>
+      <point x="996.0" y="872.0"/>
+      <point x="800.0" y="872.0" type="curve" smooth="yes"/>
+      <point x="648.0" y="872.0" type="line"/>
+      <point x="648.0" y="712.0" type="line"/>
     </contour>
     <contour>
-      <point x="648" y="808" type="line"/>
-      <point x="648" y="648" type="line"/>
-      <point x="800" y="648" type="line" smooth="yes"/>
-      <point x="996" y="648"/>
-      <point x="1088" y="580"/>
-      <point x="1088" y="420" type="curve" smooth="yes"/>
-      <point x="1088" y="300"/>
-      <point x="984" y="188"/>
-      <point x="780" y="188" type="curve" smooth="yes"/>
-      <point x="560" y="188"/>
-      <point x="428" y="360"/>
-      <point x="428" y="768" type="curve"/>
-      <point x="156" y="768" type="line"/>
-      <point x="156" y="124"/>
-      <point x="488" y="-28"/>
-      <point x="780" y="-28" type="curve" smooth="yes"/>
-      <point x="1128" y="-28"/>
-      <point x="1364" y="140"/>
-      <point x="1364" y="420" type="curve" smooth="yes"/>
-      <point x="1364" y="672"/>
-      <point x="1172" y="808"/>
-      <point x="820" y="808" type="curve" smooth="yes"/>
-    </contour>
-    <contour>
-      <point x="780" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="780" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1500" y="1776" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="1068" y="876" type="move" name="rhotichook"/>
+      <point x="648.0" y="808.0" type="line"/>
+      <point x="648.0" y="648.0" type="line"/>
+      <point x="800.0" y="648.0" type="line" smooth="yes"/>
+      <point x="996.0" y="648.0"/>
+      <point x="1088.0" y="580.0"/>
+      <point x="1088.0" y="420.0" type="curve" smooth="yes"/>
+      <point x="1088.0" y="300.0"/>
+      <point x="984.0" y="188.0"/>
+      <point x="780.0" y="188.0" type="curve" smooth="yes"/>
+      <point x="560.0" y="188.0"/>
+      <point x="428.0" y="360.0"/>
+      <point x="428.0" y="768.0" type="curve"/>
+      <point x="156.0" y="768.0" type="line"/>
+      <point x="156.0" y="124.0"/>
+      <point x="488.0" y="-28.0"/>
+      <point x="780.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1128.0" y="-28.0"/>
+      <point x="1364.0" y="140.0"/>
+      <point x="1364.0" y="420.0" type="curve" smooth="yes"/>
+      <point x="1364.0" y="672.0"/>
+      <point x="1172.0" y="808.0"/>
+      <point x="820.0" y="808.0" type="curve" smooth="yes"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1478, 'leftMargin': 135, 'rightMargin': 135}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

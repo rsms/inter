@@ -1,54 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ring" format="1">
-  <advance width="1056"/>
+<glyph name="ring" format="2">
+  <advance width="1056.0"/>
   <unicode hex="02DA"/>
+  <anchor x="524.0" y="1604.0" name="_top"/>
+  <anchor x="524.0" y="2160.0" name="mkmktop_acc"/>
   <outline>
     <contour>
-      <point x="220" y="1780" type="curve"/>
-      <point x="220" y="1628"/>
-      <point x="348" y="1508"/>
-      <point x="528" y="1508" type="curve" smooth="yes"/>
-      <point x="708" y="1508"/>
-      <point x="836" y="1628"/>
-      <point x="836" y="1780" type="curve" smooth="yes"/>
-      <point x="836" y="1932"/>
-      <point x="708" y="2060"/>
-      <point x="528" y="2060" type="curve" smooth="yes"/>
-      <point x="348" y="2060"/>
-      <point x="220" y="1932"/>
+      <point x="220.0" y="1780.0" type="curve"/>
+      <point x="220.0" y="1628.0"/>
+      <point x="348.0" y="1508.0"/>
+      <point x="528.0" y="1508.0" type="curve" smooth="yes"/>
+      <point x="708.0" y="1508.0"/>
+      <point x="836.0" y="1628.0"/>
+      <point x="836.0" y="1780.0" type="curve" smooth="yes"/>
+      <point x="836.0" y="1932.0"/>
+      <point x="708.0" y="2060.0"/>
+      <point x="528.0" y="2060.0" type="curve" smooth="yes"/>
+      <point x="348.0" y="2060.0"/>
+      <point x="220.0" y="1932.0"/>
     </contour>
     <contour>
-      <point x="384" y="1780" type="curve"/>
-      <point x="384" y="1860"/>
-      <point x="440" y="1924"/>
-      <point x="528" y="1924" type="curve" smooth="yes"/>
-      <point x="616" y="1924"/>
-      <point x="672" y="1860"/>
-      <point x="672" y="1780" type="curve" smooth="yes"/>
-      <point x="672" y="1700"/>
-      <point x="616" y="1636"/>
-      <point x="528" y="1636" type="curve" smooth="yes"/>
-      <point x="440" y="1636"/>
-      <point x="384" y="1700"/>
-    </contour>
-    <contour>
-      <point x="524" y="1604" type="move" name="_top"/>
-    </contour>
-    <contour>
-      <point x="524" y="2160" type="move" name="mkmktop_acc"/>
+      <point x="384.0" y="1780.0" type="curve"/>
+      <point x="384.0" y="1860.0"/>
+      <point x="440.0" y="1924.0"/>
+      <point x="528.0" y="1924.0" type="curve" smooth="yes"/>
+      <point x="616.0" y="1924.0"/>
+      <point x="672.0" y="1860.0"/>
+      <point x="672.0" y="1780.0" type="curve" smooth="yes"/>
+      <point x="672.0" y="1700.0"/>
+      <point x="616.0" y="1636.0"/>
+      <point x="528.0" y="1636.0" type="curve" smooth="yes"/>
+      <point x="440.0" y="1636.0"/>
+      <point x="384.0" y="1700.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8</real>
-        <real>0.94</real>
-        <real>0.95</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 931, 'leftMargin': 164, 'rightMargin': 151}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
     </dict>
   </lib>
 </glyph>

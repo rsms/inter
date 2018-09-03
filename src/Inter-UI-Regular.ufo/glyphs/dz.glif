@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="dz" format="1">
-  <advance width="2980"/>
+<glyph name="dz" format="2">
+  <advance width="2980.0"/>
   <unicode hex="02A3"/>
+  <anchor x="1940.0" y="0.0" name="bottom"/>
+  <anchor x="1940.0" y="2200.0" name="top"/>
+  <anchor x="2684.0" y="2200.0" name="top0315"/>
   <outline>
     <component base="d"/>
-    <component base="z" xOffset="1456"/>
-    <contour>
-      <point x="1940" y="2200" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1940" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="2684" y="2200" type="move" name="top0315"/>
-    </contour>
+    <component base="z" xOffset="1456.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2676, 'leftMargin': 256, 'rightMargin': 98}</string>
-      <key>interface.width-adjustments</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <integer>-16</integer>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
     </dict>
   </lib>

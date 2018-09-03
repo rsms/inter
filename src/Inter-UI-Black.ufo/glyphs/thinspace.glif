@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="thinspace" format="1">
-  <advance width="768"/>
+<glyph name="thinspace" format="2">
+  <advance width="768.0"/>
   <unicode hex="2009"/>
+  <note>
+One-fifth (sometimes one-sixth) of an em wide. Recommended for use as a thousands separator for measures made with SI units. Unlike U+2002 to U+2008, its width may get adjusted in typesetting.
+</note>
   <outline>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.93</real>
-        <real>0.9</real>
-        <real>0.98</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 575, 'leftMargin': 0, 'rightMargin': 0}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.929,0.898,0.98,0.004</string>
     </dict>
   </lib>
 </glyph>

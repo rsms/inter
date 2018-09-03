@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="gheupturncyrillic" format="1">
-  <advance width="1252"/>
+<glyph name="gheupturncyrillic" format="2">
+  <advance width="1252.0"/>
   <unicode hex="0491"/>
   <outline>
     <contour>
-      <point x="1148" y="1916" type="line"/>
-      <point x="912" y="1916" type="line"/>
-      <point x="912" y="1268" type="line"/>
-      <point x="1148" y="1268" type="line"/>
+      <point x="1148.0" y="1916.0" type="line"/>
+      <point x="912.0" y="1916.0" type="line"/>
+      <point x="912.0" y="1268.0" type="line"/>
+      <point x="1148.0" y="1268.0" type="line"/>
     </contour>
-    <component base="gecyrillic"/>
+    <contour>
+      <point x="1164.0" y="1488.0" type="line"/>
+      <point x="216.0" y="1488.0" type="line"/>
+      <point x="216.0" y="0.0" type="line"/>
+      <point x="452.0" y="0.0" type="line"/>
+      <point x="452.0" y="1268.0" type="line"/>
+      <point x="1164.0" y="1268.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1260, 'leftMargin': 154, 'rightMargin': 110}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

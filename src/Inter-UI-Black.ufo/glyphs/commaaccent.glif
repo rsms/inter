@@ -1,37 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="commaaccent" format="1">
-  <advance width="544"/>
+<glyph name="commaaccent" format="2">
+  <advance width="544.0"/>
   <unicode hex="F6C3"/>
+  <anchor x="320.0" y="508.0" name="_bottom"/>
+  <anchor x="116.0" y="392.0" name="_caron"/>
+  <anchor x="284.0" y="76.0" name="_right"/>
+  <anchor x="320.0" y="-200.0" name="mkmkbottom_acc"/>
   <outline>
     <contour>
-      <point x="484" y="392" type="line"/>
-      <point x="164" y="392" type="line"/>
-      <point x="164" y="136" type="line"/>
-      <point x="164" y="-80"/>
-      <point x="120" y="-160"/>
-      <point x="64" y="-284" type="curve"/>
-      <point x="288" y="-396" type="line"/>
-      <point x="428" y="-256"/>
-      <point x="484" y="-60"/>
-      <point x="484" y="164" type="curve"/>
-    </contour>
-    <contour>
-      <point x="320" y="508" type="move" name="_bottom"/>
-    </contour>
-    <contour>
-      <point x="116" y="392" type="move" name="_caron"/>
-    </contour>
-    <contour>
-      <point x="284" y="76" type="move" name="_right"/>
-    </contour>
-    <contour>
-      <point x="320" y="-200" type="move" name="mkmkbottom_acc"/>
+      <point x="484.0" y="392.0" type="line"/>
+      <point x="164.0" y="392.0" type="line"/>
+      <point x="164.0" y="136.0" type="line"/>
+      <point x="164.0" y="-80.0"/>
+      <point x="120.0" y="-160.0"/>
+      <point x="64.0" y="-284.0" type="curve"/>
+      <point x="288.0" y="-396.0" type="line"/>
+      <point x="428.0" y="-256.0"/>
+      <point x="484.0" y="-60.0"/>
+      <point x="484.0" y="164.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 620, 'leftMargin': 55, 'rightMargin': 157}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="romanthree" format="1">
-  <advance width="2300"/>
+<glyph name="romanthree" format="2">
+  <advance width="2300.0"/>
   <unicode hex="2162"/>
   <outline>
     <component base="I"/>
-    <component base="I" xOffset="776"/>
-    <component base="I" xOffset="1548"/>
+    <component base="I" xOffset="776.0"/>
+    <component base="I" xOffset="1548.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <real>0.89</real>
-        <real>0.96</real>
-        <real>0.92</real>
-        <real>1.0</real>
+        <integer>-1</integer>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2388, 'leftMargin': 156, 'rightMargin': 225}</string>
+      <key>public.markColor</key>
+      <string>0.89,0.961,0.922,0.004</string>
     </dict>
   </lib>
 </glyph>

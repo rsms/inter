@@ -1,95 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="parenleft" format="1">
-  <advance width="1072"/>
+<glyph name="parenleft" format="2">
+  <advance width="1072.0"/>
   <unicode hex="0028"/>
+  <guideline x="1096.0" y="1640.0" angle="0.0"/>
+  <guideline x="804.0" y="1752.0" angle="0.0"/>
+  <guideline x="364.0" y="1692.0" angle="90.0"/>
+  <guideline x="656.0" y="1584.0" angle="90.0"/>
   <outline>
     <contour>
-      <point x="992" y="-384" type="line"/>
-      <point x="756" y="24"/>
-      <point x="656" y="404"/>
-      <point x="656" y="832" type="curve" smooth="yes"/>
-      <point x="656" y="1276"/>
-      <point x="756" y="1640"/>
-      <point x="996" y="2048" type="curve"/>
-      <point x="632" y="2048" type="line"/>
-      <point x="400" y="1752"/>
-      <point x="236" y="1304"/>
-      <point x="236" y="832" type="curve" smooth="yes"/>
-      <point x="236" y="360"/>
-      <point x="400" y="-88"/>
-      <point x="628" y="-384" type="curve"/>
+      <point x="992.0" y="-384.0" type="line"/>
+      <point x="756.0" y="24.0"/>
+      <point x="656.0" y="404.0"/>
+      <point x="656.0" y="832.0" type="curve" smooth="yes"/>
+      <point x="656.0" y="1276.0"/>
+      <point x="756.0" y="1640.0"/>
+      <point x="996.0" y="2048.0" type="curve"/>
+      <point x="632.0" y="2048.0" type="line"/>
+      <point x="400.0" y="1752.0"/>
+      <point x="236.0" y="1304.0"/>
+      <point x="236.0" y="832.0" type="curve" smooth="yes"/>
+      <point x="236.0" y="360.0"/>
+      <point x="400.0" y="-88.0"/>
+      <point x="628.0" y="-384.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1096</integer>
-          <key>y</key>
-          <integer>1640</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>804</integer>
-          <key>y</key>
-          <integer>1752</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>364</integer>
-          <key>y</key>
-          <integer>1692</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>656</integer>
-          <key>y</key>
-          <integer>1584</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 993, 'leftMargin': 168, 'rightMargin': 55}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

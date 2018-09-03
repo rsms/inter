@@ -1,54 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="N" format="1">
-  <advance width="2080"/>
+<glyph name="N" format="2">
+  <advance width="2080.0"/>
   <unicode hex="004E"/>
+  <anchor x="996.0" y="16.0" name="bottom"/>
+  <anchor x="2020.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="1784.0" y="0.0" name="right"/>
+  <anchor x="1032.0" y="2304.0" name="top"/>
+  <anchor x="2020.0" y="2200.0" name="top0315"/>
+  <anchor x="2020.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="1832" y="2048" type="line"/>
-      <point x="1588" y="2048" type="line"/>
-      <point x="1588" y="436" type="line"/>
-      <point x="1568" y="436" type="line"/>
-      <point x="488" y="2048" type="line"/>
-      <point x="248" y="2048" type="line"/>
-      <point x="248" y="0" type="line"/>
-      <point x="496" y="0" type="line"/>
-      <point x="496" y="1604" type="line"/>
-      <point x="516" y="1604" type="line"/>
-      <point x="1592" y="0" type="line"/>
-      <point x="1832" y="0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1032" y="2304" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="996" y="16" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1784" y="0" type="move" name="right"/>
-    </contour>
-    <contour>
-      <point x="2020" y="2200" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="2020" y="-560" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="2020" y="2200" type="move" name="top0315"/>
+      <point x="1832.0" y="2048.0" type="line"/>
+      <point x="1588.0" y="2048.0" type="line"/>
+      <point x="1588.0" y="436.0" type="line"/>
+      <point x="1568.0" y="436.0" type="line"/>
+      <point x="488.0" y="2048.0" type="line"/>
+      <point x="248.0" y="2048.0" type="line"/>
+      <point x="248.0" y="0.0" type="line"/>
+      <point x="496.0" y="0.0" type="line"/>
+      <point x="496.0" y="1604.0" type="line"/>
+      <point x="516.0" y="1604.0" type="line"/>
+      <point x="1592.0" y="0.0" type="line"/>
+      <point x="1832.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

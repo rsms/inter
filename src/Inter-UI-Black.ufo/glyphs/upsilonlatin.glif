@@ -1,62 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="upsilonlatin" format="1">
-  <advance width="1824"/>
+<glyph name="upsilonlatin" format="2">
+  <advance width="1824.0"/>
   <unicode hex="028A"/>
+  <anchor x="912.0" y="0.0" name="bottom"/>
+  <anchor x="912.0" y="1776.0" name="top"/>
+  <anchor x="1784.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="912" y="328" type="curve" smooth="yes"/>
-      <point x="664" y="328"/>
-      <point x="592" y="472"/>
-      <point x="592" y="608" type="curve" smooth="yes"/>
-      <point x="592" y="820"/>
-      <point x="732" y="996"/>
-      <point x="732" y="1204" type="curve" smooth="yes"/>
-      <point x="732" y="1408"/>
-      <point x="592" y="1516"/>
-      <point x="188" y="1516" type="curve"/>
-      <point x="188" y="1180" type="line"/>
-      <point x="244" y="1180"/>
-      <point x="276" y="1148"/>
-      <point x="276" y="1096" type="curve" smooth="yes"/>
-      <point x="276" y="964"/>
-      <point x="152" y="804"/>
-      <point x="152" y="488" type="curve" smooth="yes"/>
-      <point x="152" y="280"/>
-      <point x="296" y="-28"/>
-      <point x="912" y="-28" type="curve" smooth="yes"/>
-      <point x="1528" y="-28"/>
-      <point x="1676" y="280"/>
-      <point x="1676" y="488" type="curve" smooth="yes"/>
-      <point x="1676" y="804"/>
-      <point x="1548" y="964"/>
-      <point x="1548" y="1096" type="curve" smooth="yes"/>
-      <point x="1548" y="1148"/>
-      <point x="1580" y="1180"/>
-      <point x="1636" y="1180" type="curve"/>
-      <point x="1636" y="1516" type="line"/>
-      <point x="1240" y="1516"/>
-      <point x="1096" y="1408"/>
-      <point x="1096" y="1204" type="curve" smooth="yes"/>
-      <point x="1096" y="996"/>
-      <point x="1232" y="820"/>
-      <point x="1232" y="608" type="curve" smooth="yes"/>
-      <point x="1232" y="472"/>
-      <point x="1164" y="328"/>
-    </contour>
-    <contour>
-      <point x="912" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="912" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1784" y="1776" type="move" name="top0315"/>
+      <point x="912.0" y="328.0" type="curve" smooth="yes"/>
+      <point x="664.0" y="328.0"/>
+      <point x="592.0" y="472.0"/>
+      <point x="592.0" y="608.0" type="curve" smooth="yes"/>
+      <point x="592.0" y="820.0"/>
+      <point x="732.0" y="996.0"/>
+      <point x="732.0" y="1204.0" type="curve" smooth="yes"/>
+      <point x="732.0" y="1408.0"/>
+      <point x="592.0" y="1516.0"/>
+      <point x="188.0" y="1516.0" type="curve"/>
+      <point x="188.0" y="1180.0" type="line"/>
+      <point x="244.0" y="1180.0"/>
+      <point x="276.0" y="1148.0"/>
+      <point x="276.0" y="1096.0" type="curve" smooth="yes"/>
+      <point x="276.0" y="964.0"/>
+      <point x="152.0" y="804.0"/>
+      <point x="152.0" y="488.0" type="curve" smooth="yes"/>
+      <point x="152.0" y="280.0"/>
+      <point x="296.0" y="-28.0"/>
+      <point x="912.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1528.0" y="-28.0"/>
+      <point x="1676.0" y="280.0"/>
+      <point x="1676.0" y="488.0" type="curve" smooth="yes"/>
+      <point x="1676.0" y="804.0"/>
+      <point x="1548.0" y="964.0"/>
+      <point x="1548.0" y="1096.0" type="curve" smooth="yes"/>
+      <point x="1548.0" y="1148.0"/>
+      <point x="1580.0" y="1180.0"/>
+      <point x="1636.0" y="1180.0" type="curve"/>
+      <point x="1636.0" y="1516.0" type="line"/>
+      <point x="1240.0" y="1516.0"/>
+      <point x="1096.0" y="1408.0"/>
+      <point x="1096.0" y="1204.0" type="curve" smooth="yes"/>
+      <point x="1096.0" y="996.0"/>
+      <point x="1232.0" y="820.0"/>
+      <point x="1232.0" y="608.0" type="curve" smooth="yes"/>
+      <point x="1232.0" y="472.0"/>
+      <point x="1164.0" y="328.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1745, 'leftMargin': 110, 'rightMargin': 110}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

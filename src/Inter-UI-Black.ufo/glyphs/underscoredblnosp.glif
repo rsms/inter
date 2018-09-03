@@ -1,36 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="underscoredblnosp" format="1">
-  <advance width="0"/>
+<glyph name="underscoredblnosp" format="2">
   <unicode hex="0333"/>
+  <anchor x="-793.0" y="0.0" name="_markbottom"/>
+  <anchor x="-793.0" y="-759.0" name="mkmkbottom_acc"/>
   <outline>
     <contour>
-      <point x="-793" y="0" type="move" name="_markbottom"/>
+      <point x="-169.0" y="-113.0" type="line"/>
+      <point x="-1415.0" y="-113.0" type="line"/>
+      <point x="-1415.0" y="-378.0" type="line"/>
+      <point x="-169.0" y="-378.0" type="line"/>
     </contour>
     <contour>
-      <point x="-793" y="-759" type="move" name="mkmkbottom_acc"/>
-    </contour>
-    <contour>
-      <point x="-169" y="-113" type="line"/>
-      <point x="-1415" y="-113" type="line"/>
-      <point x="-1415" y="-378" type="line"/>
-      <point x="-169" y="-378" type="line"/>
-    </contour>
-    <contour>
-      <point x="-169" y="-494" type="line"/>
-      <point x="-1415" y="-494" type="line"/>
-      <point x="-1415" y="-759" type="line"/>
-      <point x="-169" y="-759" type="line"/>
+      <point x="-169.0" y="-494.0" type="line"/>
+      <point x="-1415.0" y="-494.0" type="line"/>
+      <point x="-1415.0" y="-759.0" type="line"/>
+      <point x="-169.0" y="-759.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

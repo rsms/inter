@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="afii10045" format="1">
-  <advance width="2328"/>
+<glyph name="afii10045" format="2">
+  <advance width="2328.0"/>
   <unicode hex="042B"/>
+  <anchor x="1212.0" y="2216.0" name="top"/>
+  <anchor x="2436.0" y="2216.0" name="top0315"/>
   <outline>
     <component base="afii10046"/>
-    <component base="I" xOffset="1648"/>
-    <contour>
-      <point x="1212" y="2216" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="2436" y="2216" type="move" name="top0315"/>
-    </contour>
+    <component base="I" xOffset="1648.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2454, 'leftMargin': 195, 'rightMargin': 271}</string>
-      <key>interface.width-adjustments</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <integer>-16</integer>
+        <integer>-1</integer>
+        <integer>-1</integer>
       </array>
     </dict>
   </lib>

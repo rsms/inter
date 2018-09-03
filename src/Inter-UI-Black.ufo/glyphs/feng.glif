@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="feng" format="1">
-  <advance width="2496"/>
+<glyph name="feng" format="2">
+  <advance width="2496.0"/>
   <unicode hex="02A9"/>
+  <anchor x="1812.0" y="-616.0" name="bottom"/>
+  <anchor x="1812.0" y="2340.0" name="top"/>
+  <anchor x="2596.0" y="2340.0" name="top0315"/>
   <outline>
     <component base="f"/>
-    <component base="eng" xOffset="840"/>
-    <contour>
-      <point x="1812" y="2340" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1812" y="-616" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="2596" y="2340" type="move" name="top0315"/>
-    </contour>
+    <component base="eng" xOffset="840.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-      </data>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2493, 'leftMargin': 25, 'rightMargin': 133}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
     </dict>
   </lib>
 </glyph>

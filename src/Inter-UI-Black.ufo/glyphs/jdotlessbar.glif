@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="jdotlessbar" format="1">
-  <advance width="1076"/>
+<glyph name="jdotlessbar" format="2">
+  <advance width="1076.0"/>
   <unicode hex="025F"/>
+  <anchor x="712.0" y="-616.0" name="bottom"/>
+  <anchor x="712.0" y="1776.0" name="top"/>
+  <anchor x="1164.0" y="1776.0" name="top0315"/>
   <outline>
     <component base="dotlessj"/>
-    <component base="crossbar" xOffset="-92" yOffset="-896"/>
-    <contour>
-      <point x="712" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="712" y="-616" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1164" y="1776" type="move" name="top0315"/>
-    </contour>
+    <component base="crossbar" xOffset="-92.0" yOffset="-896.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1034.0, 'leftMargin': 39, 'rightMargin': 16.0}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
     </dict>
   </lib>
 </glyph>

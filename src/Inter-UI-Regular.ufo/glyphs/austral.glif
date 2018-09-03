@@ -1,54 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="austral" format="1">
-  <advance width="1904"/>
+<glyph name="austral" format="2">
+  <advance width="1904.0"/>
   <unicode hex="20B3"/>
+  <guideline x="944.0" y="2196.0" angle="90.0"/>
   <outline>
     <contour>
-      <point x="1796" y="1248" type="line"/>
-      <point x="108" y="1248" type="line"/>
-      <point x="108" y="1028" type="line"/>
-      <point x="1796" y="1028" type="line"/>
+      <point x="1796.0" y="1248.0" type="line"/>
+      <point x="108.0" y="1248.0" type="line"/>
+      <point x="108.0" y="1028.0" type="line"/>
+      <point x="1796.0" y="1028.0" type="line"/>
     </contour>
     <contour>
-      <point x="1796" y="768" type="line"/>
-      <point x="108" y="768" type="line"/>
-      <point x="108" y="548" type="line"/>
-      <point x="1796" y="548" type="line"/>
+      <point x="1796.0" y="768.0" type="line"/>
+      <point x="108.0" y="768.0" type="line"/>
+      <point x="108.0" y="548.0" type="line"/>
+      <point x="1796.0" y="548.0" type="line"/>
     </contour>
-    <component base="A"/>
+    <contour>
+      <point x="1460.0" y="768.0" type="line"/>
+      <point x="448.0" y="768.0" type="line"/>
+      <point x="448.0" y="548.0" type="line"/>
+      <point x="1460.0" y="548.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="332.0" y="0.0" type="line"/>
+      <point x="940.0" y="1724.0" type="line"/>
+      <point x="964.0" y="1724.0" type="line"/>
+      <point x="1572.0" y="0.0" type="line"/>
+      <point x="1832.0" y="0.0" type="line"/>
+      <point x="1080.0" y="2048.0" type="line"/>
+      <point x="824.0" y="2048.0" type="line"/>
+      <point x="72.0" y="0.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>944</integer>
-          <key>y</key>
-          <integer>2196</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.8</real>
-        <real>0.94</real>
-        <real>0.95</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1896, 'leftMargin': 41, 'rightMargin': 41}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
     </dict>
   </lib>
 </glyph>

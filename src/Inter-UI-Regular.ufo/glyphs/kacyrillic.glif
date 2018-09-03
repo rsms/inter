@@ -1,44 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="kacyrillic" format="1">
-  <advance width="1520"/>
+<glyph name="kacyrillic" format="2">
+  <advance width="1520.0"/>
   <unicode hex="043A"/>
+  <anchor x="1364.0" y="0.0" name="right"/>
+  <anchor x="736.0" y="1744.0" name="top"/>
+  <anchor x="1528.0" y="1744.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="480" y="1488" type="line"/>
-      <point x="204" y="1488" type="line"/>
-      <point x="204" y="0" type="line"/>
-      <point x="480" y="0" type="line"/>
+      <point x="480.0" y="1488.0" type="line"/>
+      <point x="204.0" y="1488.0" type="line"/>
+      <point x="204.0" y="0.0" type="line"/>
+      <point x="480.0" y="0.0" type="line"/>
     </contour>
     <contour>
-      <point x="1456" y="1488" type="line"/>
-      <point x="1124" y="1488" type="line"/>
-      <point x="636" y="864" type="line"/>
-      <point x="344" y="864" type="line"/>
-      <point x="388" y="628" type="line"/>
-      <point x="748" y="628" type="line"/>
+      <point x="1456.0" y="1488.0" type="line"/>
+      <point x="1124.0" y="1488.0" type="line"/>
+      <point x="636.0" y="864.0" type="line"/>
+      <point x="344.0" y="864.0" type="line"/>
+      <point x="388.0" y="628.0" type="line"/>
+      <point x="748.0" y="628.0" type="line"/>
     </contour>
     <contour>
-      <point x="1156" y="0" type="line"/>
-      <point x="1500" y="0" type="line"/>
-      <point x="800" y="864" type="line"/>
-      <point x="624" y="668" type="line"/>
-    </contour>
-    <contour>
-      <point x="736" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1364" y="0" type="move" name="right"/>
-    </contour>
-    <contour>
-      <point x="1528" y="1744" type="move" name="top0315"/>
+      <point x="1156.0" y="0.0" type="line"/>
+      <point x="1500.0" y="0.0" type="line"/>
+      <point x="800.0" y="864.0" type="line"/>
+      <point x="624.0" y="668.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

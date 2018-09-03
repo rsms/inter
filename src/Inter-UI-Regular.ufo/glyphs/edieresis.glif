@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="edieresis" format="1">
-  <advance width="1640"/>
+<glyph name="edieresis" format="2">
+  <advance width="1640.0"/>
   <unicode hex="00EB"/>
+  <guideline x="812.0" y="1180.0" angle="90.0"/>
   <outline>
-    <component base="dieresis" xOffset="-4"/>
+    <component base="dieresis" xOffset="-4.0"/>
     <component base="e"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>812</integer>
-          <key>y</key>
-          <integer>1180</integer>
-        </dict>
-      </array>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

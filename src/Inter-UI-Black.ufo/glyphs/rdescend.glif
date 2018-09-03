@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="rdescend" format="1">
-  <advance width="1052"/>
+<glyph name="rdescend" format="2">
+  <advance width="1052.0"/>
   <unicode hex="027C"/>
+  <anchor x="812.0" y="-616.0" name="bottom"/>
+  <anchor x="812.0" y="1776.0" name="top"/>
+  <anchor x="1128.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="144" y="-576" type="line"/>
-      <point x="604" y="-576" type="line"/>
-      <point x="604" y="56" type="line"/>
-      <point x="144" y="56" type="line"/>
-    </contour>
-    <component base="r"/>
-    <contour>
-      <point x="812" y="1776" type="move" name="top"/>
+      <point x="144.0" y="-576.0" type="line"/>
+      <point x="604.0" y="-576.0" type="line"/>
+      <point x="604.0" y="56.0" type="line"/>
+      <point x="144.0" y="56.0" type="line"/>
     </contour>
     <contour>
-      <point x="812" y="-616" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1128" y="1776" type="move" name="top0315"/>
+      <point x="1164.0" y="1508.0" type="line"/>
+      <point x="1116.0" y="1536.0"/>
+      <point x="1028.0" y="1556.0"/>
+      <point x="948.0" y="1556.0" type="curve"/>
+      <point x="812.0" y="1556.0"/>
+      <point x="660.0" y="1500.0"/>
+      <point x="616.0" y="1340.0" type="curve"/>
+      <point x="592.0" y="1340.0" type="line"/>
+      <point x="592.0" y="1536.0" type="line"/>
+      <point x="144.0" y="1536.0" type="line"/>
+      <point x="144.0" y="0.0" type="line"/>
+      <point x="604.0" y="0.0" type="line"/>
+      <point x="604.0" y="872.0" type="line"/>
+      <point x="604.0" y="1024.0"/>
+      <point x="724.0" y="1148.0"/>
+      <point x="876.0" y="1148.0" type="curve"/>
+      <point x="936.0" y="1148.0"/>
+      <point x="1004.0" y="1128.0"/>
+      <point x="1024.0" y="1116.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1055, 'leftMargin': 140, 'rightMargin': 31}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

@@ -1,45 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="mhook" format="1">
-  <advance width="2404"/>
+<glyph name="mhook" format="2">
+  <advance width="2404.0"/>
   <unicode hex="0271"/>
+  <anchor x="1256.0" y="-616.0" name="bottom"/>
+  <anchor x="1256.0" y="1776.0" name="top"/>
+  <anchor x="2472.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="1952" y="36" type="line"/>
-      <point x="1952" y="-164" type="line" smooth="yes"/>
-      <point x="1952" y="-324"/>
-      <point x="1856" y="-372"/>
-      <point x="1728" y="-372" type="curve" smooth="yes"/>
-      <point x="1700" y="-372"/>
-      <point x="1672" y="-368"/>
-      <point x="1652" y="-364" type="curve"/>
-      <point x="1652" y="-564" type="line"/>
-      <point x="1688" y="-576"/>
-      <point x="1740" y="-576"/>
-      <point x="1788" y="-576" type="curve" smooth="yes"/>
-      <point x="2012" y="-576"/>
-      <point x="2188" y="-428"/>
-      <point x="2188" y="-164" type="curve" smooth="yes"/>
-      <point x="2188" y="36" type="line"/>
-    </contour>
-    <component base="m"/>
-    <contour>
-      <point x="1256" y="1776" type="move" name="top"/>
+      <point x="1952.0" y="36.0" type="line"/>
+      <point x="1952.0" y="-164.0" type="line" smooth="yes"/>
+      <point x="1952.0" y="-324.0"/>
+      <point x="1856.0" y="-372.0"/>
+      <point x="1728.0" y="-372.0" type="curve" smooth="yes"/>
+      <point x="1700.0" y="-372.0"/>
+      <point x="1672.0" y="-368.0"/>
+      <point x="1652.0" y="-364.0" type="curve"/>
+      <point x="1652.0" y="-564.0" type="line"/>
+      <point x="1688.0" y="-576.0"/>
+      <point x="1740.0" y="-576.0"/>
+      <point x="1788.0" y="-576.0" type="curve" smooth="yes"/>
+      <point x="2012.0" y="-576.0"/>
+      <point x="2188.0" y="-428.0"/>
+      <point x="2188.0" y="-164.0" type="curve" smooth="yes"/>
+      <point x="2188.0" y="36.0" type="line"/>
     </contour>
     <contour>
-      <point x="1256" y="-616" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="2472" y="1776" type="move" name="top0315"/>
+      <point x="1324.0" y="964.0" type="line" smooth="yes"/>
+      <point x="1324.0" y="1180.0"/>
+      <point x="1444.0" y="1328.0"/>
+      <point x="1652.0" y="1328.0" type="curve" smooth="yes"/>
+      <point x="1780.0" y="1328.0"/>
+      <point x="1952.0" y="1252.0"/>
+      <point x="1952.0" y="1012.0" type="curve" smooth="yes"/>
+      <point x="1952.0" y="0.0" type="line"/>
+      <point x="2188.0" y="0.0" type="line"/>
+      <point x="2188.0" y="1004.0" type="line" smooth="yes"/>
+      <point x="2188.0" y="1380.0"/>
+      <point x="1980.0" y="1556.0"/>
+      <point x="1724.0" y="1556.0" type="curve" smooth="yes"/>
+      <point x="1500.0" y="1556.0"/>
+      <point x="1324.0" y="1408.0"/>
+      <point x="1280.0" y="1280.0" type="curve"/>
+      <point x="1264.0" y="1280.0" type="line"/>
+      <point x="1196.0" y="1432.0"/>
+      <point x="1060.0" y="1556.0"/>
+      <point x="868.0" y="1556.0" type="curve" smooth="yes"/>
+      <point x="672.0" y="1556.0"/>
+      <point x="512.0" y="1408.0"/>
+      <point x="468.0" y="1276.0" type="curve"/>
+      <point x="452.0" y="1276.0" type="line"/>
+      <point x="452.0" y="1536.0" type="line"/>
+      <point x="216.0" y="1536.0" type="line"/>
+      <point x="216.0" y="0.0" type="line"/>
+      <point x="452.0" y="0.0" type="line"/>
+      <point x="452.0" y="916.0" type="line" smooth="yes"/>
+      <point x="452.0" y="1168.0"/>
+      <point x="624.0" y="1328.0"/>
+      <point x="804.0" y="1328.0" type="curve" smooth="yes"/>
+      <point x="976.0" y="1328.0"/>
+      <point x="1084.0" y="1236.0"/>
+      <point x="1084.0" y="1004.0" type="curve" smooth="yes"/>
+      <point x="1084.0" y="0.0" type="line"/>
+      <point x="1324.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 2463, 'leftMargin': 256, 'rightMargin': 159}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

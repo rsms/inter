@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ecyrillic" format="1">
-  <advance width="1588"/>
+<glyph name="ecyrillic" format="2">
+  <advance width="1588.0"/>
   <unicode hex="0454"/>
+  <anchor x="792.0" y="1776.0" name="top"/>
+  <anchor x="1468.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="920" y="896" type="line"/>
-      <point x="432" y="896" type="line"/>
-      <point x="432" y="640" type="line"/>
-      <point x="920" y="640" type="line"/>
-    </contour>
-    <component base="c"/>
-    <contour>
-      <point x="792" y="1776" type="move" name="top"/>
+      <point x="920.0" y="896.0" type="line"/>
+      <point x="432.0" y="896.0" type="line"/>
+      <point x="432.0" y="640.0" type="line"/>
+      <point x="920.0" y="640.0" type="line"/>
     </contour>
     <contour>
-      <point x="1468" y="1776" type="move" name="top0315"/>
+      <point x="1500.0" y="1032.0" type="line"/>
+      <point x="1436.0" y="1352.0"/>
+      <point x="1180.0" y="1556.0"/>
+      <point x="820.0" y="1556.0" type="curve" smooth="yes"/>
+      <point x="368.0" y="1556.0"/>
+      <point x="96.0" y="1232.0"/>
+      <point x="96.0" y="768.0" type="curve" smooth="yes"/>
+      <point x="96.0" y="304.0"/>
+      <point x="368.0" y="-28.0"/>
+      <point x="820.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1168.0" y="-28.0"/>
+      <point x="1424.0" y="168.0"/>
+      <point x="1496.0" y="472.0" type="curve"/>
+      <point x="1072.0" y="548.0" type="line"/>
+      <point x="1036.0" y="424.0"/>
+      <point x="960.0" y="340.0"/>
+      <point x="820.0" y="340.0" type="curve" smooth="yes"/>
+      <point x="612.0" y="340.0"/>
+      <point x="532.0" y="512.0"/>
+      <point x="532.0" y="768.0" type="curve" smooth="yes"/>
+      <point x="532.0" y="1024.0"/>
+      <point x="612.0" y="1192.0"/>
+      <point x="820.0" y="1192.0" type="curve" smooth="yes"/>
+      <point x="972.0" y="1192.0"/>
+      <point x="1044.0" y="1100.0"/>
+      <point x="1080.0" y="952.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1445, 'leftMargin': 100, 'rightMargin': 25}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

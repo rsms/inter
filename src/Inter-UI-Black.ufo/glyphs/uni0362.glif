@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni0362" format="1">
-  <advance width="0"/>
+<glyph name="uni0362" format="2">
   <unicode hex="0362"/>
+  <anchor x="0.0" y="-151.0" name="_markbottom_dd"/>
   <outline>
     <contour>
-      <point x="0" y="-151" type="move" name="_markbottom_dd"/>
+      <point x="1108.0" y="-380.0" type="line"/>
+      <point x="-1108.0" y="-380.0" type="line"/>
+      <point x="-1108.0" y="-569.0" type="line"/>
+      <point x="1108.0" y="-569.0" type="line"/>
     </contour>
     <contour>
-      <point x="1108" y="-380" type="line"/>
-      <point x="-1108" y="-380" type="line"/>
-      <point x="-1108" y="-569" type="line"/>
-      <point x="1108" y="-569" type="line"/>
+      <point x="894.0" y="-758.0" type="line"/>
+      <point x="1308.0" y="-474.0" type="line"/>
+      <point x="1093.0" y="-402.0" type="line"/>
+      <point x="572.0" y="-758.0" type="line"/>
     </contour>
     <contour>
-      <point x="894" y="-758" type="line"/>
-      <point x="1308" y="-474" type="line"/>
-      <point x="1093" y="-402" type="line"/>
-      <point x="572" y="-758" type="line"/>
-    </contour>
-    <contour>
-      <point x="572" y="-193" type="line"/>
-      <point x="1086" y="-543" type="line"/>
-      <point x="1308" y="-474" type="line"/>
-      <point x="894" y="-193" type="line"/>
+      <point x="572.0" y="-193.0" type="line"/>
+      <point x="1086.0" y="-543.0" type="line"/>
+      <point x="1308.0" y="-474.0" type="line"/>
+      <point x="894.0" y="-193.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

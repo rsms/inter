@@ -1,0 +1,462 @@
+#!/usr/bin/env python
+from __future__ import print_function
+
+import sys, os
+# patch PYTHONPATH to include $BASEDIR/build/venv/python/site-packages
+BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+VENVDIR = os.path.join(BASEDIR, 'build', 'venv')
+sys.path.append(os.path.join(VENVDIR, 'lib', 'python', 'site-packages'))
+
+import argparse
+import datetime
+import glyphsLib
+import logging
+import re
+import signal
+import subprocess
+from fontmake.font_project import FontProject
+from fontTools import designspaceLib
+from glyphsLib.interpolation import apply_instance_data
+from mutatorMath.ufo.document import DesignSpaceDocumentReader
+
+
+BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+
+
+_gitHash = None
+def getGitHash():
+  global _gitHash
+  if _gitHash is None:
+    _gitHash = ''
+    try:
+      _gitHash = subprocess.check_output(
+        ['git', '-C', BASEDIR, 'rev-parse', '--short', 'HEAD'],
+        shell=False
+      ).strip()
+    except:
+      pass
+  return _gitHash
+
+
+_version = None
+def getVersion():
+  global _version
+  if _version is None:
+    _version = open(os.path.join(BASEDIR, 'version.txt'), 'r').read().strip()
+  return _version
+
+
+subfamily_re = re.compile(r'^\s*([^\s]+)(?:\s*italic|)\s*$', re.I | re.U)
+
+
+def sighandler(signum, frame):
+  sys.stdout.write('\n')
+  sys.stdout.flush()
+  sys.exit(1)
+
+
+def mkdirs(path):
+  if not os.access(path, os.F_OK):
+    os.makedirs(path)
+
+
+# setFontInfo patches font.info
+# 
+def setFontInfo(font, weight):
+  #
+  # For UFO3 names, see
+  # https://github.com/unified-font-object/ufo-spec/blob/gh-pages/versions/
+  #   ufo3/fontinfo.plist.md
+  # For OpenType NAME table IDs, see
+  # https://docs.microsoft.com/en-us/typography/opentype/spec/name#name-ids
+  #
+  version = getVersion()
+  buildtag = getGitHash()
+  versionMajor, versionMinor = [int(num) for num in version.split(".")]
+  now = datetime.datetime.utcnow()
+  family = font.info.familyName  # i.e. "Inter UI"
+  style = font.info.styleName    # e.g. "Medium Italic"
+  isitalic = font.info.italicAngle != 0
+
+  # weight
+  font.info.openTypeOS2WeightClass = weight
+
+  # creation date & time (YYYY/MM/DD HH:MM:SS)
+  font.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
+
+  # version
+  font.info.version = version
+  font.info.versionMajor = versionMajor
+  font.info.versionMinor = versionMinor
+  font.info.year = now.year
+  font.info.openTypeNameVersion = "%s;%s" % (version, buildtag)
+  font.info.openTypeNameUniqueID = "%s %s:%d:%s" % (family, style, now.year, buildtag)
+
+  # Names
+  family_nosp = re.sub(r'\s', '', family)
+  style_nosp = re.sub(r'\s', '', style)
+  font.info.macintoshFONDName = "%s %s" % (family_nosp, style_nosp)
+  font.info.postscriptFontName = "%s-%s" % (family_nosp, style_nosp)
+
+  # name ID 16 "Typographic Family name"
+  font.info.openTypeNamePreferredFamilyName = family
+  
+  # name ID 17 "Typographic Subfamily name"
+  subfamily = subfamily_re.sub('\\1', style) # "A Italic" => "A", "A" => "A"
+  if len(subfamily) == 0:
+    subfamily = "Regular"
+  font.info.openTypeNamePreferredSubfamilyName = subfamily
+
+  # Legacy family name (full name except "italic")
+  subfamily_lc = subfamily.lower()
+  if subfamily_lc != "regular" and subfamily_lc != "bold":
+    font.info.styleMapFamilyName = "%s %s" % (family, subfamily)
+  else:
+    font.info.styleMapFamilyName = family
+
+  # Legacy style name. Must be one of these case-sensitive strings:
+  # "regular", "italic", "bold", "bold italic"
+  font.info.styleMapStyleName = "regular"
+  if style.strip().lower().find('bold') != -1:
+    if isitalic:
+      font.info.styleMapStyleName = "bold italic"
+    else:
+      font.info.styleMapStyleName = "bold"
+  elif isitalic:
+    font.info.styleMapStyleName = "italic"
+
+
+class Main(object):
+
+  def __init__(self):
+    self.tmpdir = os.path.join(BASEDIR,'build','tmp')
+
+
+  def main(self, argv):
+    # make ^C instantly exit program
+    signal.signal(signal.SIGINT, sighandler)
+
+    # update environment
+    os.environ['PATH'] = '%s:%s' % (
+      os.path.join(VENVDIR, 'bin'), os.environ['PATH'])
+
+    argparser = argparse.ArgumentParser(
+      description='',
+      usage='''
+      %(prog)s [options] <command> [<args>]
+
+      Commands:
+        compile      Build font files
+        glyphsync    Generate designspace and UFOs from Glyphs file
+        instancegen  Generate instance UFOs for designspace
+      '''.strip().replace('\n      ', '\n'))
+
+    argparser.add_argument('-v', '--verbose', action='store_true',
+      help='Print more details')
+
+    argparser.add_argument('command', metavar='<command>')
+
+    args = argparser.parse_args(argv[1:2])
+    if args.verbose:
+      logging.basicConfig(level=logging.DEBUG)
+    else:
+      logging.basicConfig(level=logging.ERROR)
+    cmd = 'cmd_' + args.command.replace('-', '_')
+    if not hasattr(self, cmd):
+      print('Unrecognized command %s. Try --help' % args.command,
+        file=sys.stderr)
+      exit(1)
+    getattr(self, cmd)(argv[2:])
+
+
+
+  def cmd_compile(self, argv):
+    argparser = argparse.ArgumentParser(
+      usage='%(prog)s compile [-h] [-o <file>] <ufo>',
+      description='Compile font files')
+    
+    argparser.add_argument('ufo', metavar='<ufo>',
+      help='UFO source file')
+
+    argparser.add_argument('-o', '--output', metavar='<fontfile>',
+      help='Output font file (.otf, .ttf, .ufo or .gx)')
+
+    argparser.add_argument('--validate', action='store_true',
+      help='Enable ufoLib validation on reading/writing UFO files')
+
+    # argparser.add_argument('-f', '--formats', nargs='+', metavar='<format>',
+    #   help='Output formats. Any of %(choices)s. Defaults to "otf".',
+    #   choices=tuple(all_formats),
+    #   default=('otf'))
+    
+    args = argparser.parse_args(argv)
+
+    ext_to_format = {
+      '.ufo': 'ufo',
+      '.otf': 'otf',
+      '.ttf': 'ttf',
+      # 'ttf-interpolatable',
+      '.gx': 'variable',
+    }
+
+    formats = []
+    filename = args.output
+    if filename is None or filename == '':
+      ufoname = os.path.basename(args.ufo)
+      name, ext = os.path.splitext(ufoname)
+      filename = name + '.otf'
+      logging.info('setting --output %r' % filename)
+    # for filename in args.output:
+    ext = os.path.splitext(filename)[1]
+    ext_lc = ext.lower()
+    if ext_lc in ext_to_format:
+      formats.append(ext_to_format[ext_lc])
+    else:
+      print('Unsupported output format %s' % ext, file=sys.stderr)
+      exit(1)
+
+    mkdirs(self.tmpdir)
+
+    project = FontProject(
+      timing=None,
+      verbose='WARNING',
+      validate_ufo=args.validate
+    )
+
+    project.run_from_ufos(
+      [args.ufo],
+      output_dir=self.tmpdir,
+      output=formats
+    )
+
+    # run through ots-sanitize
+    # for filename in args.output:
+    tmpfile = os.path.join(self.tmpdir, os.path.basename(filename))
+    mkdirs(os.path.dirname(filename))
+    success = True
+    try:
+      otssan_res = subprocess.check_output(
+        ['ots-sanitize', tmpfile, filename],
+        shell=False
+      ).strip()
+      # Note: ots-sanitize does not exit with an error in many cases where
+      # it fails to sanitize the font.
+      success = otssan_res.find('Failed') == -1
+    except:
+      success = False
+      otssan_res = 'error'
+    
+    if success:
+      os.unlink(tmpfile)
+    else:
+      print('ots-sanitize failed for %s: %s' % (
+        tmpfile, otssan_res), file=sys.stderr)
+      exit(1)
+
+
+
+  def cmd_glyphsync(self, argv):
+    argparser = argparse.ArgumentParser(
+      usage='%(prog)s glyphsync <glyphsfile> [options]',
+      description='Generates designspace and UFOs from Glyphs file')
+
+    argparser.add_argument('glyphsfile', metavar='<glyphsfile>',
+      help='Glyphs source file')
+
+    argparser.add_argument('-o', '--outdir', metavar='<dir>',
+      help='''Write output to <dir>. If omitted, designspace and UFOs are
+              written to the directory of the glyphs file.
+              '''.strip().replace('\n              ', ''))
+
+    args = argparser.parse_args(argv)
+
+    outdir = args.outdir
+    if outdir is None:
+      outdir = os.path.dirname(args.glyphsfile)
+
+    # files
+    master_dir = outdir
+    glyphsfile = args.glyphsfile
+    designspace_file = os.path.join(outdir, 'Inter-UI.designspace')
+    instance_dir = os.path.join(BASEDIR, 'build', 'ufo')
+
+    # load glyphs project file
+    print("generating %s from %s" % (
+      os.path.relpath(designspace_file, os.getcwd()),
+      os.path.relpath(glyphsfile, os.getcwd())
+    ))
+    font = glyphsLib.GSFont(glyphsfile)
+
+    # generate designspace from glyphs project
+    designspace = glyphsLib.to_designspace(
+      font,
+      propagate_anchors=False,
+      instance_dir=os.path.relpath(instance_dir, master_dir)
+    )
+
+    # strip lib data
+    designspace.lib.clear()
+
+    # fixup axes
+    for axis in designspace.axes:
+      if axis.tag == "wght":
+        axis.map = []
+        axis.minimum = 100
+        axis.maximum = 900
+        axis.default = 400
+
+    # patch and write UFO files
+    # TODO: Only write out-of-date UFOs
+    for source in designspace.sources:
+      # source : fontTools.designspaceLib.SourceDescriptor
+      # source.font : defcon.objects.font.Font
+      ufo_path = os.path.join(master_dir, source.filename.replace('InterUI', 'Inter-UI'))
+      # no need to also set the relative 'filename' attribute as that
+      # will be auto-updated on writing the designspace document
+
+      # name "Inter UI Black" => "black"
+      source.name = source.styleName.lower().replace(' ', '')
+
+      # fixup font info
+      weight = int(source.location['Weight'])
+      setFontInfo(source.font, weight)
+
+      # cleanup lib
+      lib = dict()
+      for key, value in source.font.lib.iteritems():
+        if key.startswith('com.schriftgestaltung'):
+          continue
+        if key == 'public.postscriptNames':
+          continue
+        lib[key] = value
+      source.font.lib.clear()
+      source.font.lib.update(lib)
+
+      # write UFO file
+      source.path = ufo_path
+      print("write %s" % os.path.relpath(ufo_path, os.getcwd()))
+      source.font.save(ufo_path)
+
+    # patch instance names
+    for instance in designspace.instances:
+      # name "Inter UI Black Italic" => "blackitalic"
+      instance.name = instance.styleName.lower().replace(' ', '')
+      instance.filename = instance.filename.replace('InterUI', 'Inter-UI')
+
+    print("write %s" % os.path.relpath(designspace_file, os.getcwd()))
+    designspace.write(designspace_file)
+
+
+
+  def cmd_instancegen(self, argv):
+    argparser = argparse.ArgumentParser(
+      description='Generate UFO instances from designspace')
+
+    argparser.add_argument('designspacefile', metavar='<designspace>',
+      help='Designspace file')
+
+    argparser.add_argument('instances', metavar='<instance-name>', nargs='*',
+      help='Style instances to generate. Omit to generate all.')
+
+    args = argparser.parse_args(argv)
+
+    instances = set([s.lower() for s in args.instances])
+    all_instances = len(instances) == 0
+
+    # files
+    designspace_file = args.designspacefile
+    instance_dir = os.path.join(BASEDIR, 'build', 'ufo')
+
+    # DesignSpaceDocumentReader generates UFOs
+    gen = DesignSpaceDocumentReader(
+      designspace_file,
+      ufoVersion=3,
+      roundGeometry=True,
+      verbose=True
+    )
+
+    designspace = designspaceLib.DesignSpaceDocument()
+    designspace.read(designspace_file)
+
+    # Generate UFOs for instances
+    instance_weight = dict()
+    instance_files = set()
+    for instance in designspace.instances:
+      if all_instances or instance.name in instances:
+        filebase = os.path.basename(instance.filename)
+        relname = os.path.relpath(
+          os.path.join(os.path.dirname(designspace_file), instance.filename),
+          os.getcwd()
+        )
+        print('generating %s' % relname)
+        gen.readInstance(("name", instance.name))
+        instance_files.add(instance.filename)
+        instance_weight[filebase] = int(instance.location['Weight'])
+        if not all_instances:
+          instances.remove(instance.name)
+
+    if len(instances) > 0:
+      print('unknown style(s): %s' % ', '.join(list(instances)), file=sys.stderr)
+      sys.exit(1)
+
+    ufos = apply_instance_data(designspace_file, instance_files)
+
+    # patch ufos (list of defcon.Font instances)
+    italicAngleKey = 'com.schriftgestaltung.customParameter.' +\
+                     'InstanceDescriptorAsGSInstance.italicAngle'
+    for font in ufos:
+      # move italicAngle from lib to info
+      italicAngle = font.lib.get(italicAngleKey)
+      if italicAngle != None:
+        italicAngle = float(italicAngle)
+        del font.lib[italicAngleKey]
+        font.info.italicAngle = italicAngle
+      
+      # update font info
+      weight = instance_weight[os.path.basename(font.path)]
+      setFontInfo(font, weight)
+      
+      font.save()
+
+
+
+  def checkfont(self, fontfile):
+    try:
+      res = subprocess.check_output(
+        ['ots-idempotent', fontfile],
+        shell=False
+      ).strip()
+      # Note: ots-idempotent does not exit with an error in many cases where
+      # it fails to sanitize the font.
+      if res.find('Failed') != -1:
+        logging.error('[checkfont] ots-idempotent failed for %r: %s' % (
+          fontfile, res))
+        return False
+    except:
+      logging.error('[checkfont] ots-idempotent failed for %r' % fontfile)
+      return False
+    return True
+
+
+  def cmd_checkfont(self, argv):
+    argparser = argparse.ArgumentParser(
+      usage='%(prog)s checkfont <file> ...',
+      description='Verify integrity of font files')
+
+    argparser.add_argument('files', metavar='<file>', nargs='+',
+      help='Font files')
+    
+    args = argparser.parse_args(argv)
+
+    for fontfile in args.files:
+      if not self.checkfont(fontfile):
+        sys.exit(1)
+
+    # could use from multiprocessing import Pool
+    # p = Pool(8)
+    # p.map(self.checkfont, args.files)
+    # p.terminate()
+
+
+if __name__ == '__main__':
+  Main().main(sys.argv)

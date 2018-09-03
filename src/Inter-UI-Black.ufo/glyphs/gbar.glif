@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="gbar" format="1">
-  <advance width="1732"/>
+<glyph name="gbar" format="2">
+  <advance width="1732.0"/>
   <unicode hex="01E5"/>
+  <anchor x="836.0" y="-672.0" name="bottom"/>
+  <anchor x="836.0" y="-672.0" name="markbottom"/>
+  <anchor x="896.0" y="-176.0" name="parenthesses.w3"/>
+  <anchor x="836.0" y="1776.0" name="top"/>
+  <anchor x="1692.0" y="1776.0" name="top0315"/>
   <outline>
     <component base="g"/>
-    <component base="crossbar" xOffset="564" yOffset="-244"/>
-    <contour>
-      <point x="836" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="836" y="-672" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="896" y="-176" type="move" name="parenthesses.w3"/>
-    </contour>
-    <contour>
-      <point x="836" y="-672" type="move" name="markbottom"/>
-    </contour>
-    <contour>
-      <point x="1692" y="1776" type="move" name="top0315"/>
-    </contour>
+    <component base="crossbar" xOffset="564.0" yOffset="-244.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.adobe.type.autohint</key>
-      <data>
-      </data>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1617.0, 'leftMargin': 67, 'rightMargin': 8.0}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
     </dict>
   </lib>
 </glyph>

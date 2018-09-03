@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni012F.ccmp" format="1">
-  <advance width="800"/>
+<glyph name="uni012F.ccmp" format="2">
+  <advance width="800.0"/>
+  <anchor x="476.0" y="-632.0" name="bottom"/>
+  <anchor x="492.0" y="1744.0" name="top"/>
+  <anchor x="888.0" y="1744.0" name="top0315"/>
   <outline>
-    <component base="dotlessi" xOffset="76"/>
-    <component base="ogonek" xOffset="32" yOffset="16"/>
-    <contour>
-      <point x="492" y="1744" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="888" y="1744" type="move" name="top0315"/>
-    </contour>
-    <contour>
-      <point x="476" y="-632" type="move" name="bottom"/>
-    </contour>
+    <component base="ogonek" xOffset="-24.0"/>
+    <component base="i"/>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/02 06:20:22</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>1.0</real>
+        <integer>-1</integer>
+        <integer>0</integer>
       </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 793, 'leftMargin': -5, 'rightMargin': 174}</string>
+      <key>public.markColor</key>
+      <string>0.894,0.227,0.871,0.004</string>
     </dict>
   </lib>
 </glyph>

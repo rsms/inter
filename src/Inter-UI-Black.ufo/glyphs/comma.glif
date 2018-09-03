@@ -1,65 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="comma" format="1">
-  <advance width="800"/>
+<glyph name="comma" format="2">
+  <advance width="800.0"/>
   <unicode hex="002C"/>
+  <guideline y="1238.875"/>
+  <guideline y="763.125"/>
+  <anchor x="636.0" y="364.0" name="_bottom"/>
+  <anchor x="328.0" y="48.0" name="_right"/>
   <outline>
     <contour>
-      <point x="608" y="348" type="line"/>
-      <point x="248" y="348" type="line"/>
-      <point x="248" y="28" type="line"/>
-      <point x="248" y="-188"/>
-      <point x="164" y="-304"/>
-      <point x="104" y="-428" type="curve"/>
-      <point x="328" y="-540" type="line"/>
-      <point x="488" y="-404"/>
-      <point x="608" y="-168"/>
-      <point x="608" y="56" type="curve"/>
-    </contour>
-    <contour>
-      <point x="636" y="364" type="move" name="_bottom"/>
-    </contour>
-    <contour>
-      <point x="328" y="48" type="move" name="_right"/>
+      <point x="608.0" y="348.0" type="line"/>
+      <point x="248.0" y="348.0" type="line"/>
+      <point x="248.0" y="28.0" type="line"/>
+      <point x="248.0" y="-188.0"/>
+      <point x="164.0" y="-304.0"/>
+      <point x="104.0" y="-428.0" type="curve"/>
+      <point x="328.0" y="-540.0" type="line"/>
+      <point x="488.0" y="-404.0"/>
+      <point x="608.0" y="-168.0"/>
+      <point x="608.0" y="56.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>1238.875</real>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>0.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>x</key>
-          <real>0.0</real>
-          <key>y</key>
-          <real>763.125</real>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 737.0, 'leftMargin': 56, 'rightMargin': 175.0}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

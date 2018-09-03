@@ -1,54 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni034D" format="1">
-  <advance width="0"/>
+<glyph name="uni034D" format="2">
   <unicode hex="034D"/>
+  <anchor x="-793.0" y="0.0" name="_markbottom"/>
+  <anchor x="-793.0" y="-758.0" name="mkmkbottom_acc"/>
   <outline>
     <contour>
-      <point x="-793" y="0" type="move" name="_markbottom"/>
+      <point x="-282.0" y="-380.0" type="line"/>
+      <point x="-1324.0" y="-380.0" type="line"/>
+      <point x="-1324.0" y="-569.0" type="line"/>
+      <point x="-282.0" y="-569.0" type="line"/>
     </contour>
     <contour>
-      <point x="-793" y="-758" type="move" name="mkmkbottom_acc"/>
+      <point x="-928.0" y="-758.0" type="line"/>
+      <point x="-1293.0" y="-402.0" type="line"/>
+      <point x="-1442.0" y="-474.0" type="line"/>
+      <point x="-1154.0" y="-758.0" type="line"/>
     </contour>
     <contour>
-      <point x="-282" y="-380" type="line"/>
-      <point x="-1324" y="-380" type="line"/>
-      <point x="-1324" y="-569" type="line"/>
-      <point x="-282" y="-569" type="line"/>
+      <point x="-1154.0" y="-193.0" type="line"/>
+      <point x="-1442.0" y="-474.0" type="line"/>
+      <point x="-1288.0" y="-543.0" type="line"/>
+      <point x="-928.0" y="-193.0" type="line"/>
     </contour>
     <contour>
-      <point x="-928" y="-758" type="line"/>
-      <point x="-1293" y="-402" type="line"/>
-      <point x="-1442" y="-474" type="line"/>
-      <point x="-1154" y="-758" type="line"/>
+      <point x="-432.0" y="-758.0" type="line"/>
+      <point x="-143.0" y="-474.0" type="line"/>
+      <point x="-293.0" y="-402.0" type="line"/>
+      <point x="-657.0" y="-758.0" type="line"/>
     </contour>
     <contour>
-      <point x="-1154" y="-193" type="line"/>
-      <point x="-1442" y="-474" type="line"/>
-      <point x="-1288" y="-543" type="line"/>
-      <point x="-928" y="-193" type="line"/>
-    </contour>
-    <contour>
-      <point x="-432" y="-758" type="line"/>
-      <point x="-143" y="-474" type="line"/>
-      <point x="-293" y="-402" type="line"/>
-      <point x="-657" y="-758" type="line"/>
-    </contour>
-    <contour>
-      <point x="-657" y="-193" type="line"/>
-      <point x="-297" y="-543" type="line"/>
-      <point x="-143" y="-474" type="line"/>
-      <point x="-432" y="-193" type="line"/>
+      <point x="-657.0" y="-193.0" type="line"/>
+      <point x="-297.0" y="-543.0" type="line"/>
+      <point x="-143.0" y="-474.0" type="line"/>
+      <point x="-432.0" y="-193.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

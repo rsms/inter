@@ -1,40 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ringlefthalfsubnosp" format="1">
-  <advance width="0"/>
+<glyph name="ringlefthalfsubnosp" format="2">
   <unicode hex="031C"/>
+  <anchor x="-806.0" y="0.0" name="_markbottom"/>
+  <anchor x="-806.0" y="-616.0" name="mkmkbottom_acc"/>
   <outline>
     <contour>
-      <point x="-806" y="0" type="move" name="_markbottom"/>
-    </contour>
-    <contour>
-      <point x="-806" y="-616" type="move" name="mkmkbottom_acc"/>
-    </contour>
-    <contour>
-      <point x="-681" y="-616" type="line"/>
-      <point x="-844" y="-616"/>
-      <point x="-971" y="-507"/>
-      <point x="-971" y="-356" type="curve" smooth="yes"/>
-      <point x="-971" y="-206"/>
-      <point x="-844" y="-91"/>
-      <point x="-681" y="-91" type="curve"/>
-      <point x="-681" y="-224" type="line"/>
-      <point x="-756" y="-224"/>
-      <point x="-806" y="-276"/>
-      <point x="-806" y="-356" type="curve" smooth="yes"/>
-      <point x="-806" y="-433"/>
-      <point x="-756" y="-485"/>
-      <point x="-681" y="-485" type="curve"/>
+      <point x="-681.0" y="-616.0" type="line"/>
+      <point x="-844.0" y="-616.0"/>
+      <point x="-971.0" y="-507.0"/>
+      <point x="-971.0" y="-356.0" type="curve" smooth="yes"/>
+      <point x="-971.0" y="-206.0"/>
+      <point x="-844.0" y="-91.0"/>
+      <point x="-681.0" y="-91.0" type="curve"/>
+      <point x="-681.0" y="-224.0" type="line"/>
+      <point x="-756.0" y="-224.0"/>
+      <point x="-806.0" y="-276.0"/>
+      <point x="-806.0" y="-356.0" type="curve" smooth="yes"/>
+      <point x="-806.0" y="-433.0"/>
+      <point x="-756.0" y="-485.0"/>
+      <point x="-681.0" y="-485.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

@@ -1,43 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="brevenosp" format="1">
-  <advance width="0"/>
+<glyph name="brevenosp" format="2">
   <unicode hex="0306"/>
+  <anchor x="-781.0" y="1642.0" name="_marktop"/>
+  <anchor x="-781.0" y="2247.0" name="mkmktop"/>
+  <anchor x="-792.0" y="1903.0" name="parent_top"/>
   <outline>
     <contour>
-      <point x="-781" y="1642" type="move" name="_marktop"/>
-    </contour>
-    <contour>
-      <point x="-781" y="2247" type="move" name="mkmktop"/>
-    </contour>
-    <contour>
-      <point x="-792" y="1903" type="move" name="parent_top"/>
-    </contour>
-    <contour>
-      <point x="-601" y="2115" type="line"/>
-      <point x="-601" y="2024"/>
-      <point x="-652" y="1940"/>
-      <point x="-792" y="1940" type="curve" smooth="yes"/>
-      <point x="-934" y="1940"/>
-      <point x="-986" y="2024"/>
-      <point x="-986" y="2115" type="curve"/>
-      <point x="-1291" y="2115" type="line"/>
-      <point x="-1291" y="1866"/>
-      <point x="-1099" y="1693"/>
-      <point x="-792" y="1693" type="curve" smooth="yes"/>
-      <point x="-487" y="1693"/>
-      <point x="-294" y="1866"/>
-      <point x="-294" y="2115" type="curve"/>
+      <point x="-601.0" y="2115.0" type="line"/>
+      <point x="-601.0" y="2024.0"/>
+      <point x="-652.0" y="1940.0"/>
+      <point x="-792.0" y="1940.0" type="curve" smooth="yes"/>
+      <point x="-934.0" y="1940.0"/>
+      <point x="-986.0" y="2024.0"/>
+      <point x="-986.0" y="2115.0" type="curve"/>
+      <point x="-1291.0" y="2115.0" type="line"/>
+      <point x="-1291.0" y="1866.0"/>
+      <point x="-1099.0" y="1693.0"/>
+      <point x="-792.0" y="1693.0" type="curve" smooth="yes"/>
+      <point x="-487.0" y="1693.0"/>
+      <point x="-294.0" y="1866.0"/>
+      <point x="-294.0" y="2115.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

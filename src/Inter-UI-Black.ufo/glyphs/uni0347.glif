@@ -1,36 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni0347" format="1">
-  <advance width="0"/>
+<glyph name="uni0347" format="2">
   <unicode hex="0347"/>
+  <anchor x="-793.0" y="0.0" name="_markbottom"/>
+  <anchor x="-793.0" y="-760.0" name="mkmkbottom_acc"/>
   <outline>
     <contour>
-      <point x="-793" y="0" type="move" name="_markbottom"/>
+      <point x="-1192.0" y="-109.0" type="line"/>
+      <point x="-1192.0" y="-360.0" type="line"/>
+      <point x="-396.0" y="-360.0" type="line"/>
+      <point x="-396.0" y="-109.0" type="line"/>
     </contour>
     <contour>
-      <point x="-793" y="-760" type="move" name="mkmkbottom_acc"/>
-    </contour>
-    <contour>
-      <point x="-1192" y="-109" type="line"/>
-      <point x="-1192" y="-360" type="line"/>
-      <point x="-396" y="-360" type="line"/>
-      <point x="-396" y="-109" type="line"/>
-    </contour>
-    <contour>
-      <point x="-1192" y="-509" type="line"/>
-      <point x="-1192" y="-760" type="line"/>
-      <point x="-396" y="-760" type="line"/>
-      <point x="-396" y="-509" type="line"/>
+      <point x="-1192.0" y="-509.0" type="line"/>
+      <point x="-1192.0" y="-760.0" type="line"/>
+      <point x="-396.0" y="-760.0" type="line"/>
+      <point x="-396.0" y="-509.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

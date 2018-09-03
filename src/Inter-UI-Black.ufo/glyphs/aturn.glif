@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="aturn" format="1">
-  <advance width="1568"/>
+<glyph name="aturn" format="2">
+  <advance width="1568.0"/>
   <unicode hex="0250"/>
+  <anchor x="816.0" y="0.0" name="bottom"/>
+  <anchor x="1180.0" y="848.0" name="rhotichook"/>
+  <anchor x="816.0" y="1776.0" name="top"/>
+  <anchor x="1568.0" y="1776.0" name="top0315"/>
   <outline>
-    <component base="a" xScale="-1.0" yScale="-1.0" xOffset="1536" yOffset="1536"/>
-    <contour>
-      <point x="816" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="816" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1180" y="848" type="move" name="rhotichook"/>
-    </contour>
-    <contour>
-      <point x="1568" y="1776" type="move" name="top0315"/>
-    </contour>
+    <component base="a" xScale="-1.0" yScale="-1.0" xOffset="1536.0" yOffset="1536.0"/>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1500, 'leftMargin': 73, 'rightMargin': 73}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
     </dict>
   </lib>
 </glyph>

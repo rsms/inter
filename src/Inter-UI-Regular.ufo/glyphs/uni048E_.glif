@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="uni048E" format="1">
-  <advance width="1784"/>
+<glyph name="uni048E" format="2">
+  <advance width="1784.0"/>
   <unicode hex="048E"/>
   <outline>
     <contour>
-      <point x="1128" y="1340" type="line"/>
-      <point x="968" y="1192" type="line"/>
-      <point x="1484" y="632" type="line"/>
-      <point x="1644" y="780" type="line"/>
+      <point x="1128.0" y="1340.0" type="line"/>
+      <point x="968.0" y="1192.0" type="line"/>
+      <point x="1484.0" y="632.0" type="line"/>
+      <point x="1644.0" y="780.0" type="line"/>
     </contour>
-    <component base="P"/>
+    <contour>
+      <point x="936.0" y="740.0" type="line"/>
+      <point x="1412.0" y="740.0"/>
+      <point x="1620.0" y="1032.0"/>
+      <point x="1620.0" y="1400.0" type="curve"/>
+      <point x="1620.0" y="1768.0"/>
+      <point x="1412.0" y="2048.0"/>
+      <point x="932.0" y="2048.0" type="curve"/>
+      <point x="248.0" y="2048.0" type="line"/>
+      <point x="248.0" y="0.0" type="line"/>
+      <point x="496.0" y="0.0" type="line"/>
+      <point x="496.0" y="1828.0" type="line"/>
+      <point x="932.0" y="1828.0" type="line"/>
+      <point x="1264.0" y="1828.0"/>
+      <point x="1376.0" y="1652.0"/>
+      <point x="1376.0" y="1400.0" type="curve"/>
+      <point x="1376.0" y="1148.0"/>
+      <point x="1264.0" y="960.0"/>
+      <point x="936.0" y="960.0" type="curve"/>
+      <point x="448.0" y="960.0" type="line"/>
+      <point x="448.0" y="740.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1801, 'leftMargin': 256, 'rightMargin': 73}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

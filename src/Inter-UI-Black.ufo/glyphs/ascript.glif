@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="ascript" format="1">
-  <advance width="1652"/>
+<glyph name="ascript" format="2">
+  <advance width="1652.0"/>
   <unicode hex="0251"/>
+  <anchor x="764.0" y="0.0" name="bottom"/>
+  <anchor x="1280.0" y="900.0" name="rhotichook"/>
+  <anchor x="764.0" y="1776.0" name="top"/>
+  <anchor x="1728.0" y="1776.0" name="top0315"/>
   <outline>
     <component base="alpha"/>
-    <contour>
-      <point x="1280" y="900" type="move" name="rhotichook"/>
-    </contour>
-    <contour>
-      <point x="764" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="764" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1728" y="1776" type="move" name="top0315"/>
-    </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1651, 'leftMargin': 89, 'rightMargin': 68}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>

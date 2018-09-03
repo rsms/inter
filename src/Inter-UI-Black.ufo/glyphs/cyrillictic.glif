@@ -1,34 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="cyrillictic" format="1">
-  <advance width="800"/>
+<glyph name="cyrillictic" format="2">
+  <advance width="800.0"/>
+  <anchor x="400.0" y="184.0" name="_bottom"/>
+  <anchor x="520.0" y="0.0" name="_left"/>
+  <anchor x="296.0" y="0.0" name="_right"/>
   <outline>
     <contour>
-      <point x="624" y="308" type="line"/>
-      <point x="180" y="308" type="line"/>
-      <point x="180" y="-492" type="line"/>
-      <point x="624" y="-492" type="line"/>
-    </contour>
-    <contour>
-      <point x="296" y="0" type="move" name="_right"/>
-    </contour>
-    <contour>
-      <point x="520" y="0" type="move" name="_left"/>
-    </contour>
-    <contour>
-      <point x="400" y="184" type="move" name="_bottom"/>
+      <point x="624.0" y="308.0" type="line"/>
+      <point x="180.0" y="308.0" type="line"/>
+      <point x="180.0" y="-492.0" type="line"/>
+      <point x="624.0" y="-492.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>0.87</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 688, 'leftMargin': 122, 'rightMargin': 123}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.871,0.871,0.871,0.004</string>
     </dict>
   </lib>
 </glyph>

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="bracketright_quill" format="1">
-  <advance width="928"/>
+<glyph name="bracketright_quill" format="2">
+  <advance width="928.0"/>
   <unicode hex="2046"/>
   <outline>
     <contour>
-      <point x="556" y="1008" type="line"/>
-      <point x="152" y="1008" type="line"/>
-      <point x="152" y="788" type="line"/>
-      <point x="556" y="788" type="line"/>
+      <point x="556.0" y="1008.0" type="line"/>
+      <point x="152.0" y="1008.0" type="line"/>
+      <point x="152.0" y="788.0" type="line"/>
+      <point x="556.0" y="788.0" type="line"/>
     </contour>
-    <component base="bracketright"/>
+    <contour>
+      <point x="152.0" y="2240.0" type="line"/>
+      <point x="152.0" y="2020.0" type="line"/>
+      <point x="432.0" y="2020.0" type="line"/>
+      <point x="432.0" y="-228.0" type="line"/>
+      <point x="152.0" y="-228.0" type="line"/>
+      <point x="152.0" y="-448.0" type="line"/>
+      <point x="664.0" y="-448.0" type="line"/>
+      <point x="664.0" y="2240.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>0.94</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 891.0, 'leftMargin': 107, 'rightMargin': 272.0}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

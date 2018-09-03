@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="odieresis" format="1">
-  <advance width="1640"/>
+<glyph name="odieresis" format="2">
+  <advance width="1640.0"/>
   <unicode hex="00F6"/>
   <outline>
-    <component base="dieresis" xOffset="164"/>
+    <component base="dieresis" xOffset="164.0"/>
     <component base="o"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+    </dict>
+  </lib>
 </glyph>

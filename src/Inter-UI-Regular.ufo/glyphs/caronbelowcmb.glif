@@ -1,38 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="caronbelowcmb" format="1">
-  <advance width="0"/>
+<glyph name="caronbelowcmb" format="2">
   <unicode hex="032C"/>
+  <anchor x="-803.0" y="0.0" name="_bottom"/>
+  <anchor x="-803.0" y="0.0" name="_markbottom"/>
+  <anchor x="-803.0" y="-572.0" name="mkmkbottom_acc"/>
   <outline>
     <contour>
-      <point x="-803" y="0" type="move" name="_markbottom"/>
-    </contour>
-    <contour>
-      <point x="-803" y="0" type="move" name="_bottom"/>
-    </contour>
-    <contour>
-      <point x="-803" y="-572" type="move" name="mkmkbottom_acc"/>
-    </contour>
-    <contour>
-      <point x="-727" y="-571" type="line"/>
-      <point x="-892" y="-571" type="line"/>
-      <point x="-1232" y="-193" type="line"/>
-      <point x="-1232" y="-177" type="line"/>
-      <point x="-1009" y="-177" type="line"/>
-      <point x="-810" y="-407" type="line"/>
-      <point x="-609" y="-177" type="line"/>
-      <point x="-385" y="-177" type="line"/>
-      <point x="-385" y="-191" type="line"/>
+      <point x="-727.0" y="-571.0" type="line"/>
+      <point x="-892.0" y="-571.0" type="line"/>
+      <point x="-1232.0" y="-193.0" type="line"/>
+      <point x="-1232.0" y="-177.0" type="line"/>
+      <point x="-1009.0" y="-177.0" type="line"/>
+      <point x="-810.0" y="-407.0" type="line"/>
+      <point x="-609.0" y="-177.0" type="line"/>
+      <point x="-385.0" y="-177.0" type="line"/>
+      <point x="-385.0" y="-191.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.98</real>
-        <real>0.89</real>
-        <real>0.89</real>
-        <real>1.0</real>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
     </dict>
   </lib>
 </glyph>

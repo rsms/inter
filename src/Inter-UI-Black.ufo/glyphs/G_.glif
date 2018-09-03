@@ -1,152 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="G" format="1">
-  <advance width="2000"/>
+<glyph name="G" format="2">
+  <advance width="2000.0"/>
   <unicode hex="0047"/>
+  <guideline x="1024.0" y="1320.0" angle="7.9575"/>
+  <guideline x="1024.0" y="528.0" angle="90.0"/>
+  <guideline x="1360.0" y="756.0" angle="0.0"/>
+  <anchor x="1024.0" y="0.0" name="bottom"/>
+  <anchor x="2012.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="1024.0" y="2200.0" name="top"/>
+  <anchor x="2012.0" y="2200.0" name="top0315"/>
+  <anchor x="2012.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="1872" y="1096" type="line"/>
-      <point x="1024" y="1096" type="line"/>
-      <point x="1024" y="756" type="line"/>
-      <point x="1872" y="756" type="line"/>
+      <point x="1872.0" y="1096.0" type="line"/>
+      <point x="1024.0" y="1096.0" type="line"/>
+      <point x="1024.0" y="756.0" type="line"/>
+      <point x="1872.0" y="756.0" type="line"/>
     </contour>
     <contour>
-      <point x="1864" y="1436" type="line"/>
-      <point x="1736" y="1852"/>
-      <point x="1408" y="2076"/>
-      <point x="1016" y="2076" type="curve" smooth="yes"/>
-      <point x="504" y="2076"/>
+      <point x="1864.0" y="1436.0" type="line"/>
+      <point x="1736.0" y="1852.0"/>
+      <point x="1408.0" y="2076.0"/>
+      <point x="1016.0" y="2076.0" type="curve" smooth="yes"/>
+      <point x="504.0" y="2076.0"/>
       <point x="120.0" y="1696.0"/>
       <point x="120.0" y="1020.0" type="curve"/>
       <point x="120.0" y="348.0"/>
-      <point x="508" y="-28"/>
-      <point x="1024" y="-28" type="curve" smooth="yes"/>
-      <point x="1492" y="-28"/>
-      <point x="1872" y="284"/>
-      <point x="1872" y="756" type="curve"/>
-      <point x="1420" y="756" type="line"/>
-      <point x="1420" y="524"/>
-      <point x="1244" y="388"/>
-      <point x="1024" y="388" type="curve" smooth="yes"/>
-      <point x="776" y="388"/>
+      <point x="508.0" y="-28.0"/>
+      <point x="1024.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1492.0" y="-28.0"/>
+      <point x="1872.0" y="284.0"/>
+      <point x="1872.0" y="756.0" type="curve"/>
+      <point x="1420.0" y="756.0" type="line"/>
+      <point x="1420.0" y="524.0"/>
+      <point x="1244.0" y="388.0"/>
+      <point x="1024.0" y="388.0" type="curve" smooth="yes"/>
+      <point x="776.0" y="388.0"/>
       <point x="588.0" y="560.0"/>
       <point x="588.0" y="1020.0" type="curve"/>
       <point x="588.0" y="1480.0"/>
-      <point x="772" y="1660"/>
-      <point x="1016" y="1660" type="curve" smooth="yes"/>
-      <point x="1184" y="1660"/>
-      <point x="1336" y="1576"/>
-      <point x="1396" y="1372" type="curve"/>
-    </contour>
-    <contour>
-      <point x="1024.0" y="2200.0" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="1024.0" y="0.0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="2012.0" y="2200.0" type="move" name="top_dd"/>
-    </contour>
-    <contour>
-      <point x="2012.0" y="-560.0" type="move" name="bottom_dd"/>
-    </contour>
-    <contour>
-      <point x="2012.0" y="2200.0" type="move" name="top0315"/>
+      <point x="772.0" y="1660.0"/>
+      <point x="1016.0" y="1660.0" type="curve" smooth="yes"/>
+      <point x="1184.0" y="1660.0"/>
+      <point x="1336.0" y="1576.0"/>
+      <point x="1396.0" y="1372.0" type="curve"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.typemytype.robofont.guides</key>
-      <array>
-        <dict>
-          <key>angle</key>
-          <real>7.957525226917142</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1024</integer>
-          <key>y</key>
-          <integer>1320</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <real>90.0</real>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1024</integer>
-          <key>y</key>
-          <integer>528</integer>
-        </dict>
-        <dict>
-          <key>angle</key>
-          <integer>0</integer>
-          <key>isGlobal</key>
-          <false/>
-          <key>magnetic</key>
-          <integer>5</integer>
-          <key>name</key>
-          <string></string>
-          <key>x</key>
-          <integer>1360</integer>
-          <key>y</key>
-          <integer>756</integer>
-        </dict>
-      </array>
-      <key>com.typemytype.robofont.layerData</key>
-      <dict>
-        <key>reference</key>
-        <dict>
-          <key>anchors</key>
-          <array>
-          </array>
-          <key>components</key>
-          <array>
-            <dict>
-              <key>baseGlyph</key>
-              <string>O</string>
-              <key>transformation</key>
-              <array>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-                <integer>1</integer>
-                <integer>0</integer>
-                <integer>0</integer>
-              </array>
-            </dict>
-          </array>
-          <key>contours</key>
-          <array>
-          </array>
-          <key>lib</key>
-          <dict>
-          </dict>
-          <key>name</key>
-          <string>G</string>
-          <key>unicodes</key>
-          <array>
-          </array>
-          <key>width</key>
-          <integer>2000</integer>
-        </dict>
-      </dict>
-      <key>com.typemytype.robofont.mark</key>
-      <array>
-        <real>0.86</real>
-        <real>0.92</real>
-        <real>0.97</real>
-        <real>1.0</real>
-      </array>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1920, 'leftMargin': 118, 'rightMargin': 138}</string>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
+      <key>public.markColor</key>
+      <string>0.859,0.922,0.969,0.004</string>
     </dict>
   </lib>
 </glyph>

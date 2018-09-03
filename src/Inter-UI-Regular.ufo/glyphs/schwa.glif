@@ -1,66 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="schwa" format="1">
-  <advance width="1520"/>
+<glyph name="schwa" format="2">
+  <advance width="1520.0"/>
   <unicode hex="0259"/>
+  <anchor x="788.0" y="0.0" name="bottom"/>
+  <anchor x="1216.0" y="900.0" name="rhotichook"/>
+  <anchor x="1244.0" y="88.0" name="right"/>
+  <anchor x="768.0" y="1776.0" name="top"/>
+  <anchor x="1492.0" y="1776.0" name="top0315"/>
   <outline>
     <contour>
-      <point x="704" y="1520" type="curve"/>
-      <point x="432" y="1520"/>
-      <point x="268" y="1420"/>
-      <point x="180" y="1336" type="curve"/>
-      <point x="284" y="1152" type="line"/>
-      <point x="376" y="1232"/>
-      <point x="508" y="1300"/>
-      <point x="704" y="1300" type="curve" smooth="yes"/>
-      <point x="976" y="1300"/>
-      <point x="1108" y="1064"/>
-      <point x="1108" y="772" type="curve" smooth="yes"/>
-      <point x="1108" y="716" type="line" smooth="yes"/>
-      <point x="1108" y="428"/>
-      <point x="956" y="196"/>
-      <point x="748" y="196" type="curve"/>
-      <point x="512" y="196"/>
-      <point x="412" y="368"/>
-      <point x="412" y="560" type="curve"/>
-      <point x="412" y="596" type="line"/>
-      <point x="1220" y="596" type="line"/>
-      <point x="1220" y="816" type="line"/>
-      <point x="136" y="816" type="line"/>
-      <point x="136" y="644" type="line" smooth="yes"/>
-      <point x="136" y="252"/>
-      <point x="328" y="-28"/>
-      <point x="748" y="-28" type="curve" smooth="yes"/>
-      <point x="1080" y="-28"/>
-      <point x="1384" y="280"/>
-      <point x="1384" y="716" type="curve" smooth="yes"/>
-      <point x="1384" y="772" type="line" smooth="yes"/>
-      <point x="1384" y="1208"/>
-      <point x="1124" y="1520"/>
-    </contour>
-    <contour>
-      <point x="768" y="1776" type="move" name="top"/>
-    </contour>
-    <contour>
-      <point x="788" y="0" type="move" name="bottom"/>
-    </contour>
-    <contour>
-      <point x="1244" y="88" type="move" name="right"/>
-    </contour>
-    <contour>
-      <point x="1216" y="900" type="move" name="rhotichook"/>
-    </contour>
-    <contour>
-      <point x="1492" y="1776" type="move" name="top0315"/>
+      <point x="704.0" y="1520.0" type="curve"/>
+      <point x="432.0" y="1520.0"/>
+      <point x="268.0" y="1420.0"/>
+      <point x="180.0" y="1336.0" type="curve"/>
+      <point x="284.0" y="1152.0" type="line"/>
+      <point x="376.0" y="1232.0"/>
+      <point x="508.0" y="1300.0"/>
+      <point x="704.0" y="1300.0" type="curve" smooth="yes"/>
+      <point x="976.0" y="1300.0"/>
+      <point x="1108.0" y="1064.0"/>
+      <point x="1108.0" y="772.0" type="curve" smooth="yes"/>
+      <point x="1108.0" y="716.0" type="line" smooth="yes"/>
+      <point x="1108.0" y="428.0"/>
+      <point x="956.0" y="196.0"/>
+      <point x="748.0" y="196.0" type="curve"/>
+      <point x="512.0" y="196.0"/>
+      <point x="412.0" y="368.0"/>
+      <point x="412.0" y="560.0" type="curve"/>
+      <point x="412.0" y="596.0" type="line"/>
+      <point x="1220.0" y="596.0" type="line"/>
+      <point x="1220.0" y="816.0" type="line"/>
+      <point x="136.0" y="816.0" type="line"/>
+      <point x="136.0" y="644.0" type="line" smooth="yes"/>
+      <point x="136.0" y="252.0"/>
+      <point x="328.0" y="-28.0"/>
+      <point x="748.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1080.0" y="-28.0"/>
+      <point x="1384.0" y="280.0"/>
+      <point x="1384.0" y="716.0" type="curve" smooth="yes"/>
+      <point x="1384.0" y="772.0" type="line" smooth="yes"/>
+      <point x="1384.0" y="1208.0"/>
+      <point x="1124.0" y="1520.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>interface.gridadjust.original</key>
-      <string>{'width': 1492, 'leftMargin': 138, 'rightMargin': 107}</string>
-      <key>interface.width-adjustments</key>
-      <array>
-        <integer>-16</integer>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2018/09/01 23:10:14</string>
     </dict>
   </lib>
 </glyph>
