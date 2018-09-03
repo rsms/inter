@@ -4,22 +4,20 @@
 # Updates the "?v=x" in docs/inter-ui.css
 #
 from __future__ import print_function
-import os, sys, re
-from collections import OrderedDict
-from ConfigParser import RawConfigParser
+
+import os, sys
+from os.path import dirname, basename, abspath, relpath, join as pjoin
+sys.path.append(abspath(pjoin(dirname(__file__), 'tools')))
+from common import BASEDIR, getVersion
+
+import re
 
 
 def main():
-  rootDir = os.path.dirname(os.path.dirname(__file__))
-
-  config = RawConfigParser(dict_type=OrderedDict)
-  config.read(os.path.join(rootDir, 'src', 'fontbuild.cfg'))
-  version = config.get('main', 'version')
-
+  version = getVersion()
   regex = re.compile(r'(url\("[^"]+?v=)([^"]+)("\))')
+  cssFileName = pjoin(BASEDIR, 'docs', 'inter-ui.css')
 
-  cssFileName = os.path.join(rootDir, 'docs', 'inter-ui.css')
-  
   s = ''
   with open(cssFileName, 'r') as f:
     s = f.read()

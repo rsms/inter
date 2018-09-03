@@ -1,11 +1,10 @@
 #!/usr/bin/env python
-from __future__ import print_function
+from __future__ import print_function, absolute_import
 
 import sys, os
-# patch PYTHONPATH to include $BASEDIR/build/venv/python/site-packages
-BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-VENVDIR = os.path.join(BASEDIR, 'build', 'venv')
-sys.path.append(os.path.join(VENVDIR, 'lib', 'python', 'site-packages'))
+from os.path import dirname, basename, abspath, relpath, join as pjoin
+sys.path.append(abspath(pjoin(dirname(__file__), 'tools')))
+from common import BASEDIR, VENVDIR, getGitHash, getVersion
 
 import argparse
 import datetime
@@ -18,32 +17,6 @@ from fontmake.font_project import FontProject
 from fontTools import designspaceLib
 from glyphsLib.interpolation import apply_instance_data
 from mutatorMath.ufo.document import DesignSpaceDocumentReader
-
-
-BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-
-
-_gitHash = None
-def getGitHash():
-  global _gitHash
-  if _gitHash is None:
-    _gitHash = ''
-    try:
-      _gitHash = subprocess.check_output(
-        ['git', '-C', BASEDIR, 'rev-parse', '--short', 'HEAD'],
-        shell=False
-      ).strip()
-    except:
-      pass
-  return _gitHash
-
-
-_version = None
-def getVersion():
-  global _version
-  if _version is None:
-    _version = open(os.path.join(BASEDIR, 'version.txt'), 'r').read().strip()
-  return _version
 
 
 subfamily_re = re.compile(r'^\s*([^\s]+)(?:\s*italic|)\s*$', re.I | re.U)
@@ -62,7 +35,7 @@ def mkdirs(path):
 
 # setFontInfo patches font.info
 # 
-def setFontInfo(font, weight):
+def setFontInfo(font, weight, updateCreated=True):
   #
   # For UFO3 names, see
   # https://github.com/unified-font-object/ufo-spec/blob/gh-pages/versions/
@@ -82,7 +55,8 @@ def setFontInfo(font, weight):
   font.info.openTypeOS2WeightClass = weight
 
   # creation date & time (YYYY/MM/DD HH:MM:SS)
-  font.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
+  if updateCreated:
+    font.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
 
   # version
   font.info.version = version
@@ -129,16 +103,12 @@ def setFontInfo(font, weight):
 class Main(object):
 
   def __init__(self):
-    self.tmpdir = os.path.join(BASEDIR,'build','tmp')
+    self.tmpdir = pjoin(BASEDIR,'build','tmp')
 
 
   def main(self, argv):
     # make ^C instantly exit program
     signal.signal(signal.SIGINT, sighandler)
-
-    # update environment
-    os.environ['PATH'] = '%s:%s' % (
-      os.path.join(VENVDIR, 'bin'), os.environ['PATH'])
 
     argparser = argparse.ArgumentParser(
       description='',
@@ -202,7 +172,7 @@ class Main(object):
     formats = []
     filename = args.output
     if filename is None or filename == '':
-      ufoname = os.path.basename(args.ufo)
+      ufoname = basename(args.ufo)
       name, ext = os.path.splitext(ufoname)
       filename = name + '.otf'
       logging.info('setting --output %r' % filename)
@@ -231,8 +201,8 @@ class Main(object):
 
     # run through ots-sanitize
     # for filename in args.output:
-    tmpfile = os.path.join(self.tmpdir, os.path.basename(filename))
-    mkdirs(os.path.dirname(filename))
+    tmpfile = pjoin(self.tmpdir, basename(filename))
+    mkdirs(dirname(filename))
     success = True
     try:
       otssan_res = subprocess.check_output(
@@ -272,18 +242,18 @@ class Main(object):
 
     outdir = args.outdir
     if outdir is None:
-      outdir = os.path.dirname(args.glyphsfile)
+      outdir = dirname(args.glyphsfile)
 
     # files
     master_dir = outdir
     glyphsfile = args.glyphsfile
-    designspace_file = os.path.join(outdir, 'Inter-UI.designspace')
-    instance_dir = os.path.join(BASEDIR, 'build', 'ufo')
+    designspace_file = pjoin(outdir, 'Inter-UI.designspace')
+    instance_dir = pjoin(BASEDIR, 'build', 'ufo')
 
     # load glyphs project file
     print("generating %s from %s" % (
-      os.path.relpath(designspace_file, os.getcwd()),
-      os.path.relpath(glyphsfile, os.getcwd())
+      relpath(designspace_file, os.getcwd()),
+      relpath(glyphsfile, os.getcwd())
     ))
     font = glyphsLib.GSFont(glyphsfile)
 
@@ -291,7 +261,7 @@ class Main(object):
     designspace = glyphsLib.to_designspace(
       font,
       propagate_anchors=False,
-      instance_dir=os.path.relpath(instance_dir, master_dir)
+      instance_dir=relpath(instance_dir, master_dir)
     )
 
     # strip lib data
@@ -310,7 +280,7 @@ class Main(object):
     for source in designspace.sources:
       # source : fontTools.designspaceLib.SourceDescriptor
       # source.font : defcon.objects.font.Font
-      ufo_path = os.path.join(master_dir, source.filename.replace('InterUI', 'Inter-UI'))
+      ufo_path = pjoin(master_dir, source.filename.replace('InterUI', 'Inter-UI'))
       # no need to also set the relative 'filename' attribute as that
       # will be auto-updated on writing the designspace document
 
@@ -319,7 +289,7 @@ class Main(object):
 
       # fixup font info
       weight = int(source.location['Weight'])
-      setFontInfo(source.font, weight)
+      setFontInfo(source.font, weight, updateCreated=False)
 
       # cleanup lib
       lib = dict()
@@ -334,7 +304,7 @@ class Main(object):
 
       # write UFO file
       source.path = ufo_path
-      print("write %s" % os.path.relpath(ufo_path, os.getcwd()))
+      print("write %s" % relpath(ufo_path, os.getcwd()))
       source.font.save(ufo_path)
 
     # patch instance names
@@ -343,7 +313,7 @@ class Main(object):
       instance.name = instance.styleName.lower().replace(' ', '')
       instance.filename = instance.filename.replace('InterUI', 'Inter-UI')
 
-    print("write %s" % os.path.relpath(designspace_file, os.getcwd()))
+    print("write %s" % relpath(designspace_file, os.getcwd()))
     designspace.write(designspace_file)
 
 
@@ -365,7 +335,7 @@ class Main(object):
 
     # files
     designspace_file = args.designspacefile
-    instance_dir = os.path.join(BASEDIR, 'build', 'ufo')
+    instance_dir = pjoin(BASEDIR, 'build', 'ufo')
 
     # DesignSpaceDocumentReader generates UFOs
     gen = DesignSpaceDocumentReader(
@@ -383,9 +353,9 @@ class Main(object):
     instance_files = set()
     for instance in designspace.instances:
       if all_instances or instance.name in instances:
-        filebase = os.path.basename(instance.filename)
-        relname = os.path.relpath(
-          os.path.join(os.path.dirname(designspace_file), instance.filename),
+        filebase = basename(instance.filename)
+        relname = relpath(
+          pjoin(dirname(designspace_file), instance.filename),
           os.getcwd()
         )
         print('generating %s' % relname)
@@ -413,7 +383,7 @@ class Main(object):
         font.info.italicAngle = italicAngle
       
       # update font info
-      weight = instance_weight[os.path.basename(font.path)]
+      weight = instance_weight[basename(font.path)]
       setFontInfo(font, weight)
       
       font.save()
