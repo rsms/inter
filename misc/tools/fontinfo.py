@@ -3,8 +3,13 @@
 #
 # Generates JSON-encoded information about fonts
 #
-import os
-import sys
+from __future__ import print_function
+
+import os, sys
+from os.path import dirname, basename, abspath, relpath, join as pjoin
+sys.path.append(abspath(pjoin(dirname(__file__), 'tools')))
+import common  # for the side effeects
+
 import argparse
 import json
 import re
@@ -272,7 +277,7 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
   }
 
   # for tableName in tt.keys():
-  #   print 'table', tableName
+  #   print('table', tableName)
 
   nameDict = {}
   if 'name' in tt:
@@ -394,7 +399,7 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
       addCFFFontInfo(tt, info, cffTable)
   elif glyphsType is GLYPHS_TYPE_TT:
     glyphsTable = tt["glyf"]
-  # print 'glyphs type:', glyphsType, 'flavor:', tt.flavor, 'sfntVersion:', tt.sfntVersion
+  # print('glyphs type:', glyphsType, 'flavor:', tt.flavor, 'sfntVersion:', tt.sfntVersion)
 
   if (withGlyphs is not False or outputType is OUTPUT_TYPE_GLYPHLIST) and withGlyphs is not '':
     info['glyphs'] = genGlyphsInfo(tt, outputType, glyphsType, glyphsTable, withGlyphs)
