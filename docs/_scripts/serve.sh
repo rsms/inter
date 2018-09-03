@@ -2,12 +2,13 @@
 set -e
 cd "$(dirname "$0")/.."
 
-if [ ! -s lab/fonts ]; then
-  ln -s ../../build/dist-unhinted lab/fonts
+if [ ! -d lab/fonts ]; then
+  ln -fs ../../build/unhinted lab/fonts
 fi
 
 # jekyll is a little dumb and resolves the lab/fonts symlink and copies
-# all font files to _site when started. Fix that. Bad jekyll!
+# all font files to _site when started. Bad jekyll.
+# Let's work around that.
 #
 # Step 1/2: remove any previous symlink, or jekyll crashes
 rm -rf _site/lab/fonts
@@ -18,7 +19,7 @@ N=3
 while [ \$N -gt 0 ]; do
   sleep 1
   rm -rf _site/lab/fonts
-  ln -s ../../../build/dist-unhinted _site/lab/fonts
+  ln -fs ../../../build/unhinted _site/lab/fonts
   let N=N-1
 done
 _EOF_
