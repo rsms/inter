@@ -1,20 +1,29 @@
 # Targets:
-#   all           Build all styles in all formats (default)
-#   all_ttf       Build all styles as TrueType
-#   all_otf       Build all styles as OpenType
-#   all_hinted    Build all styles as autohinted TrueType
-#   STYLE         Build STYLE in all formats (e.g. MediumItalic)
-#   STYLE_hinted  Build STYLE in TTF and web formats with autohints
-#   STYLE_ttf     Build STYLE as TrueType (e.g. MediumItalic_ttf)
-#   zip           Build all styles as TrueType and package into a zip archive
-#   install       Build all (web, ttf and otf) and install. Mac-only for now.
-#   dist          Create a new release distribution. Does everything.
+#   all             Build everything (default; implies all_fonts)
+#   test            Build and test (check) everyything (implies all_check)
+#   install         Build and install all OTF files. (currently Mac-only)
+#   zip             Build a complete release-grade ZIP archive of all fonts.
+#   dist            Create a new release distribution. Does everything.
+#
+#   all_fonts				Build all styles in all formats
+#   all_otf					Build all OTF files into build/unhinted
+#   all_ttf					Build all TTF files into build/unhinted
+#   all_ttf_hinted	Build all TTF files with hints into build/hinted
+#   all_web					Build all WOFF files into build/unhinted
+#   all_web_hinted	Build all WOFF files with hints into build/hinted
+#   all_check				Build & check all OTF and TTF files
+#
+# Style-specific targets:
+#   STYLE_otf         Build OTF file for STYLE into build/unhinted
+#   STYLE_ttf         Build TTF file for STYLE into build/unhinted
+#   STYLE_ttf_hinted  Build TTF file for STYLE with hints into build/hinted
+#   STYLE_web         Build WOFF files for STYLE into build/unhinted
+#   STYLE_web_hinted  Build WOFF files for STYLE with hints into build/hinted
+#   STYLE_check       Build & check OTF and TTF files for STYLE
 #
 all: all_fonts
 all_unhinted:  all_ttf  all_otf  all_web
 all_hinted:  all_ttf_hinted  all_web_hinted
-
-VERSION := $(shell cat version.txt)
 
 export PATH := $(PWD)/build/venv/bin:$(PATH)
 
@@ -37,16 +46,17 @@ build/%.woff: build/%.ttf
 
 
 # UFO -> OTF, TTF
-build/unhinted/Inter-UI-Regular.%: master_ufo_regular
+
+build/unhinted/Inter-UI-Regular.%: src/Inter-UI.designspace $(Regular_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Regular.ufo
 
-build/unhinted/Inter-UI-Black.%: master_ufo_black
+build/unhinted/Inter-UI-Black.%: src/Inter-UI.designspace $(Black_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Black.ufo
 
-build/unhinted/Inter-UI-%.otf: build/ufo/Inter-UI-%.ufo
+build/unhinted/Inter-UI-%.otf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
 	misc/fontbuild compile -o $@ $<
 
-build/unhinted/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo
+build/unhinted/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
 	misc/fontbuild compile -o $@ $<
 
 
@@ -54,18 +64,21 @@ build/unhinted/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo
 src/Inter-UI.designspace: src/Inter-UI.glyphs
 	misc/fontbuild glyphsync $<
 
-# instance UFOs <- master UFOs
-build/ufo/Inter-UI-%.ufo: master_ufo_regular master_ufo_black
-	misc/fontbuild instancegen src/Inter-UI.designspace $*
+src/Inter-UI.glyphs:
+	@true
 
-# master UFOs <- designspace
-master_ufo_regular: src/Inter-UI.designspace $(Regular_ufo_d)
-master_ufo_black: src/Inter-UI.designspace $(Black_ufo_d)
+$(Regular_ufo_d):
+	@true
+
+$(Black_ufo_d):
+	@true
+
+# instance UFOs <- master UFOs
+build/ufo/Inter-UI-%.ufo: src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
+	misc/fontbuild instancegen src/Inter-UI.designspace $*
 
 # Note: The seemingly convoluted dependency graph above is required to
 # make sure that glyphsync and instancegen are not run in parallel.
-
-.PHONY: master_ufo_regular master_ufo_black
 
 
 # hinted TTF files via autohint
@@ -86,43 +99,46 @@ build/hinted/%.ttf: build/unhinted/%.ttf
 # on all otf and ttf files.
 test: all_check
 
+# load version, used by zip and dist
+VERSION := $(shell cat version.txt)
 
+# distribution zip files
 ZIP_FILE_DIST := build/release/Inter-UI-${VERSION}.zip
 ZIP_FILE_DEV  := build/release/Inter-UI-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
 
-# zip intermediate
-build/.zip.zip: all_otf all_ttf
-	$(MAKE) all_web all_web_hinted -j
-	@rm -rf build/.zip
-	@rm -f build/.zip.zip
+# intermediate zip target that creates a zip file at build/tmp/a.zip
+build/tmp/a.zip: all_fonts
+	@rm -rf build/tmp/zip
+	@rm -f  build/tmp/a.zip
 	@mkdir -p \
-		"build/.zip/Inter UI (web)" \
-		"build/.zip/Inter UI (web hinted)" \
-		"build/.zip/Inter UI (TTF)" \
-		"build/.zip/Inter UI (TTF hinted)" \
-		"build/.zip/Inter UI (OTF)"
-	@cp -a build/unhinted/*.woff build/unhinted/*.woff2 \
-	  "build/.zip/Inter UI (web)/"
-	@cp -a misc/doc/inter-ui.css "build/.zip/Inter UI (web)/"
-	@cp -a build/hinted/*.woff build/hinted/*.woff2 \
-		"build/.zip/Inter UI (web hinted)/"
-	@cp -a misc/doc/inter-ui.css "build/.zip/Inter UI (web hinted)/"
-	@cp -a build/unhinted/*.ttf   "build/.zip/Inter UI (TTF)/"
-	@cp -a build/hinted/*.ttf     "build/.zip/Inter UI (TTF hinted)/"
-	@cp -a build/unhinted/*.otf   "build/.zip/Inter UI (OTF)/"
-	@cp -a misc/doc/*.txt              "build/.zip/"
-	@cp -a LICENSE.txt                 "build/.zip/"
-	cd build/.zip && zip -v -X -r "../../build/.zip.zip" * >/dev/null && cd ../..
-	@rm -rf build/.zip
+		"build/tmp/zip/Inter UI (web)" \
+		"build/tmp/zip/Inter UI (web hinted)" \
+		"build/tmp/zip/Inter UI (TTF)" \
+		"build/tmp/zip/Inter UI (TTF hinted)" \
+		"build/tmp/zip/Inter UI (OTF)"
+	cp -a build/unhinted/*.woff build/unhinted/*.woff2 \
+	                              "build/tmp/zip/Inter UI (web)/"
+	cp -a build/hinted/*.woff   build/hinted/*.woff2 \
+	                              "build/tmp/zip/Inter UI (web hinted)/"
+	cp -a build/unhinted/*.ttf   "build/tmp/zip/Inter UI (TTF)/"
+	cp -a build/hinted/*.ttf     "build/tmp/zip/Inter UI (TTF hinted)/"
+	cp -a build/unhinted/*.otf   "build/tmp/zip/Inter UI (OTF)/"
+	cp -a misc/dist/inter-ui.css "build/tmp/zip/Inter UI (web)/"
+	cp -a misc/dist/inter-ui.css "build/tmp/zip/Inter UI (web hinted)/"
+	cp -a misc/dist/*.txt        "build/tmp/zip/"
+	cp -a LICENSE.txt            "build/tmp/zip/"
+	cd build/tmp/zip && zip -q -X -r "../../../$@" * && cd ../..
+	@rm -rf build/tmp/zip
 
 # zip
-build/release/Inter-UI-%.zip: build/.zip.zip
+build/release/Inter-UI-%.zip: build/tmp/a.zip
 	@mkdir -p "$(shell dirname "$@")"
 	@mv -f "$<" "$@"
 	@echo write "$@"
 
 zip: ${ZIP_FILE_DEV}
 zip_dist: pre_dist test ${ZIP_FILE_DIST}
+.PHONY: zip zip_dist
 
 pre_dist:
 	@echo "Creating distribution for version ${VERSION}"
@@ -131,9 +147,25 @@ pre_dist:
 		exit 1; \
   fi
 
-dist: zip_dist
-	$(MAKE) geninfo copy_docs_fonts -j8
-	misc/versionize-css.py
+# foo_dist: | foo_zip_dist foo_docs_info  foo_docs_fonts
+# 	@echo dist
+
+# foo_zip_dist:
+# 	@echo zip_dist start
+# 	@sleep 1
+# 	@echo zip_dist done
+
+# foo_docs_info:
+# 	@echo docs_info
+
+# foo_docs_fonts:
+# 	@echo docs_fonts
+
+# .PHONY: foo_dist foo_zip_dist foo_docs_info foo_docs_fonts
+
+dist: zip_dist  docs_info  docs_fonts
+	# $(MAKE)  docs_info  docs_fonts  -j
+	misc/tools/versionize-css.py
 	@echo "——————————————————————————————————————————————————————————————————"
 	@echo ""
 	@echo "Next steps:"
@@ -147,11 +179,34 @@ dist: zip_dist
 	@echo ""
 	@echo "——————————————————————————————————————————————————————————————————"
 
-copy_docs_fonts:
+docs_info: docs/_data/fontinfo.json docs/lab/glyphinfo.json docs/glyphs/metrics.json
+
+docs_fonts:
 	rm -rf docs/font-files
 	mkdir docs/font-files
 	cp -a build/unhinted/*.woff build/unhinted/*.woff2 build/unhinted/*.otf docs/font-files/
 
+
+# src/glyphorder.txt: src/Inter-UI-Regular.ufo/lib.plist src/Inter-UI-Black.ufo/lib.plist src/diacritics.txt misc/gen-glyphorder.py
+# 	misc/gen-glyphorder.py src/Inter-UI-*.ufo > src/glyphorder.txt
+
+docs/_data/fontinfo.json: misc/fontinfo.py docs/font-files/Inter-UI-*.otf
+	misc/fontinfo.py -pretty docs/font-files/Inter-UI-Regular.otf > docs/_data/fontinfo.json
+
+docs/lab/glyphinfo.json: build/tmp/UnicodeData.txt misc/tools/gen-glyphinfo.py
+	misc/tools/gen-glyphinfo.py -ucd $< src/Inter-UI-*.ufo > $@
+
+docs/glyphs/metrics.json: src/fontbuild.cfg misc/gen-metrics-and-svgs.py $(Regular_ufo_d)
+	misc/gen-metrics-and-svgs.py -f src/Inter-UI-Regular.ufo
+
+# Download latest Unicode data
+build/tmp/UnicodeData.txt:
+	@mkdir -p build/tmp
+	@echo fetch http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
+	@curl '-#' -o "$@" http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
+
+
+# install targets
 install_ttf: all_ttf_unhinted
 	$(MAKE) all_web -j
 	@echo "Installing TTF files locally at ~/Library/Fonts/Inter UI"
@@ -175,30 +230,8 @@ install_otf: all_otf
 
 install: install_otf
 
-
-geninfo: docs/_data/fontinfo.json docs/lab/glyphinfo.json docs/glyphs/metrics.json
-
-src/glyphorder.txt: src/Inter-UI-Regular.ufo/lib.plist src/Inter-UI-Black.ufo/lib.plist src/diacritics.txt misc/gen-glyphorder.py
-	misc/gen-glyphorder.py src/Inter-UI-*.ufo > src/glyphorder.txt
-
-docs/_data/fontinfo.json: misc/fontinfo.py docs/font-files/Inter-UI-*.otf
-	misc/fontinfo.py -pretty docs/font-files/Inter-UI-Regular.otf > docs/_data/fontinfo.json
-
-docs/lab/glyphinfo.json: _local/UnicodeData.txt src/glyphorder.txt src/fontbuild.cfg misc/gen-glyphinfo.py
-	misc/gen-glyphinfo.py -ucd _local/UnicodeData.txt \
-	  src/Inter-UI-*.ufo > docs/lab/glyphinfo.json
-
-docs/glyphs/metrics.json: src/glyphorder.txt src/fontbuild.cfg misc/gen-metrics-and-svgs.py $(Regular_ufo_d)
-	misc/gen-metrics-and-svgs.py -f src/Inter-UI-Regular.ufo
-
-
-# Download latest Unicode data
-_local/UnicodeData.txt:
-	@mkdir -p _local
-	curl -s '-#' -o "$@" \
-	  http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
-
+# clean removes generated and built fonts in the build directory
 clean:
-	rm -rvf build/tmp build/hinted build/unhinted
+	rm -rvf build/tmp build/hinted build/unhinted build/otf
 
-.PHONY: all web clean install install_otf install_ttf deploy zip zip_dist pre_dist dist geninfo copy_docs_fonts all_hinted test glyphsync
+.PHONY: all web clean install install_otf install_ttf deploy pre_dist dist geninfo copy_docs_fonts all_hinted test glyphsync
