@@ -77,7 +77,7 @@ def setFontInfo(font, weight, updateCreated=True):
   
   # name ID 17 "Typographic Subfamily name"
   subfamily = subfamily_re.sub('\\1', style) # "A Italic" => "A", "A" => "A"
-  if len(subfamily) == 0:
+  if len(subfamily) == 0 or subfamily.strip().lower() == 'italic':
     subfamily = "Regular"
   font.info.openTypeNamePreferredSubfamilyName = subfamily
 
