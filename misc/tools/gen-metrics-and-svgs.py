@@ -4,66 +4,31 @@
 # Sync glyph shapes between SVG and UFO, creating a bridge between UFO and Figma.
 #
 from __future__ import print_function
-import os, sys, argparse, re, json, plistlib
-from math import ceil, floor
-from robofab.objects.objectsRF import OpenFont
+
+import os, sys
+from os.path import dirname, basename, abspath, relpath, join as pjoin
+sys.path.append(abspath(pjoin(dirname(__file__), 'tools')))
+from common import BASEDIR
+
+import argparse
+import json
+import plistlib
+import re
 from collections import OrderedDict
-from fontbuild.generateGlyph import generateGlyph
-from ConfigParser import RawConfigParser
+from math import ceil, floor
+from defcon import Font
+from svg import SVGPathPen
 
-
-BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 font = None  # RFont
 ufopath = ''
 effectiveAscender = 0
 scale = 0.1
-agl = None
 
 
 def num(s):
   return int(s) if s.find('.') == -1 else float(s)
 
-
-def parseGlyphComposition(composite):
-  c = composite.split("=")
-  d = c[1].split("/")
-  glyphName = d[0]
-  if len(d) == 1:
-    offset = [0, 0]
-  else:
-    offset = [int(i) for i in d[1].split(",")]
-  accentString = c[0]
-  accents = accentString.split("+")
-  baseName = accents.pop(0)
-  accentNames = [i.split(":") for i in accents]
-  return (glyphName, baseName, accentNames, offset)
-
-
-def loadGlyphCompositions(filename):  # { glyphName => (baseName, accentNames, offset, rawline) }
-  compositions = OrderedDict()
-  with open(filename, 'r') as f:
-    for line in f:
-      line = line.strip()
-      if len(line) > 0 and line[0] != '#':
-        glyphName, baseName, accentNames, offset = parseGlyphComposition(line)
-        compositions[glyphName] = (baseName, accentNames, offset, line)
-  return compositions
-
-
-def loadAGL(filename):  # -> { 2126: 'Omega', ... }
-  m = {}
-  with open(filename, 'r') as f:
-    for line in f:
-      # Omega;2126
-      # dalethatafpatah;05D3 05B2   # higher-level combinations; ignored
-      line = line.strip()
-      if len(line) > 0 and line[0] != '#':
-        name, uc = tuple([c.strip() for c in line.split(';')])
-        if uc.find(' ') == -1:
-          # it's a 1:1 mapping
-          m[int(uc, 16)] = name
-  return m
 
 def decomposeGlyph(font, glyph):
   """Moves the components of a glyph to its outline."""
@@ -92,55 +57,19 @@ def deepCopyContours(font, parent, component, offset, scale):
 
 
 def glyphToSVGPath(g, yMul):
-  commands = {'move':'M','line':'L','curve':'Y','offcurve':'X','offCurve':'X'}
-  svg = ''
-  contours = []
-
-  if len(g.components):
-    decomposeGlyph(g.getParent(), g)  # mutates g
-
-  if len(g):
-    for c in range(len(g)):
-      contours.append(g[c])
-
-  for i in range(len(contours)):
-    c = contours[i]
-    contour = end = ''
-    curve = False
-    points = c.points
-    if points[0].type == 'offCurve':
-      points.append(points.pop(0))
-    if points[0].type == 'offCurve':
-      points.append(points.pop(0))
-    for x in range(len(points)):
-      p = points[x]
-      command = commands[str(p.type)]
-      if command == 'X':
-        if curve == True:
-          command = ''
-        else:
-          command = 'C'
-          curve = True
-      if command == 'Y':
-        command = ''
-        curve = False
-      if x == 0:
-        command = 'M'
-        if p.type == 'curve':
-          end = ' %g %g' % (p.x * scale, (p.y * yMul) * scale)
-      contour += ' %s%g %g' % (command, p.x * scale, (p.y * yMul) * scale)
-    svg += ' ' + contour + end + 'z'
-
-  if font.has_key('__svgsync'):
-    font.removeGlyph('__svgsync')
-  return svg.strip()
+  pen = SVGPathPen(g.getParent(), yMul)
+  g.draw(pen)
+  return pen.getCommands()
 
 
 def svgWidth(g):
-  box = g.box
-  xoffs = box[0]
-  width = box[2] - box[0]
-  return width, xoffs
+  bounds = g.bounds  # (xMin, yMin, xMax, yMax)
+  if bounds is None:
+    return 0, 0
+  xMin = bounds[0]
+  xMax = bounds[2]
+  width = xMax - xMin
+  return width, xMin
 
 
 def glyphToSVG(g):
@@ -148,7 +77,7 @@ def glyphToSVG(g):
 
   svg  = '''
 <svg id="svg-%(name)s" xmlns="http://www.w3.org/2000/svg" width="%(width)d" height="%(height)d">
-<path d="%(glyphSVGPath)s" transform="translate(%(xoffs)g %(yoffs)g)"/>
+<path d="%(glyphSVGPath)s" transform="translate(%(xoffs)g %(yoffs)g) scale(%(scale)g)"/>
 </svg>
   ''' % {
     'name': g.name,
@@ -163,6 +92,7 @@ def glyphToSVG(g):
     # 'descender': font.info.descender * scale,
     # 'baselineOffset': (font.info.unitsPerEm + font.info.descender) * scale,
     # 'unitsPerEm': font.info.unitsPerEm,
+    'scale': scale,
 
     # 'margin': [g.leftMargin * scale, g.rightMargin * scale],
   }
@@ -242,13 +172,8 @@ def findGlifFile(glyphname):
 
 usedSVGNames = set()
 
-def genGlyph(glyphName, generateFrom, force):
-  # generateFrom = (baseName, accentNames, offset, rawline)
-  if generateFrom is not None:
-    generateGlyph(font, generateFrom[3], agl)
-
-  g = font.getGlyph(glyphName)
-
+def genGlyph(glyphName):
+  g = font[glyphName]
   return glyphToSVG(g)
 
 
@@ -328,10 +253,6 @@ argparser.add_argument('-scale', dest='scale', metavar='<scale>', type=str,
   default='',
   help='Scale glyph. Should be a number in the range (0-1]. Defaults to %g' % scale)
 
-argparser.add_argument(
-  '-f', '-force', dest='force', action='store_const', const=True, default=False,
-  help='Generate glyphs even though they appear to be up-to date.')
-
 argparser.add_argument('ufopath', metavar='<ufopath>', type=str,
                        help='Path to UFO packages')
 
@@ -340,44 +261,25 @@ argparser.add_argument('glyphs', metavar='<glyphname>', type=str, nargs='*',
 
 
 args = argparser.parse_args()
-
 srcDir = os.path.join(BASEDIR, 'src')
-
-# load fontbuild config
-config = RawConfigParser(dict_type=OrderedDict)
-configFilename = os.path.join(srcDir, 'fontbuild.cfg')
-config.read(configFilename)
-deleteNames = set()
-for sectionName, value in config.items('glyphs'):
-  if sectionName == 'delete':
-    deleteNames = set(value.split())
+deleteNames = set(['.notdef', '.null'])
 
 if len(args.scale):
   scale = float(args.scale)
 
 ufopath = args.ufopath.rstrip('/')
 
-font = OpenFont(ufopath)
+font = Font(ufopath)
 effectiveAscender = max(font.info.ascender, font.info.unitsPerEm)
 
 # print('\n'.join(font.keys()))
 # sys.exit(0)
-
-agl = loadAGL(os.path.join(srcDir, 'glyphlist.txt')) # { 2126: 'Omega', ... }
 
 deleteNames.add('.notdef')
 deleteNames.add('.null')
 
 glyphnames = args.glyphs if len(args.glyphs) else font.keys()
 glyphnameSet = set(glyphnames)
-generatedGlyphNames = set()
-
-diacriticComps = loadGlyphCompositions(os.path.join(srcDir, 'diacritics.txt'))
-for glyphName, comp in diacriticComps.iteritems():
-  if glyphName not in glyphnameSet:
-    generatedGlyphNames.add(glyphName)
-    glyphnames.append(glyphName)
-    glyphnameSet.add(glyphName)
 
 glyphnames = [gn for gn in glyphnames if gn not in deleteNames]
 glyphnames.sort()
@@ -390,9 +292,7 @@ glyphMetrics = {}
 svgLines = []
 for glyphname in glyphnames:
   generateFrom = None
-  if glyphname in generatedGlyphNames:
-    generateFrom = diacriticComps[glyphname]
-  svg, metrics = genGlyph(glyphname, generateFrom, force=args.force)
+  svg, metrics = genGlyph(glyphname)
   # metrics: (width, advance, left, right)
   glyphMetrics[nameToIdMap[glyphname]] = metrics
   svgLines.append(svg.replace('\n', ''))
@@ -404,14 +304,14 @@ svgtext = '\n'.join(svgLines)
 
 glyphsHtmlFilename = os.path.join(BASEDIR, 'docs', 'glyphs', 'index.html')
 
-html = ''
+html = u''
 with open(glyphsHtmlFilename, 'r') as f:
-  html = f.read()
+  html = f.read().decode('utf8')
 
-startMarker = '<div id="svgs">'
+startMarker = u'<div id="svgs">'
 startPos = html.find(startMarker)
 
-endMarker = '</div><!--END-SVGS'
+endMarker = u'</div><!--END-SVGS'
 endPos = html.find(endMarker, startPos + len(startMarker))
 
 relfilename = os.path.relpath(glyphsHtmlFilename, os.getcwd())
@@ -421,10 +321,6 @@ if startPos == -1 or endPos == -1:
   print(msg % relfilename, file=sys.stderr)
   sys.exit(1)
 
-for name in glyphnames:
-  if name == 'zero.tnum.slash':
-    print('FOUND zero.tnum.slash')
-
 kerning = genKerningInfo(font, glyphnames, nameToIdMap)
 metaJson = '{\n'
 metaJson += '"nameids":' + fmtJsonDict(idToNameMap) + ',\n'
@@ -433,11 +329,11 @@ metaJson += '"kerning":' + fmtJsonList(kerning) + '\n'
 metaJson += '}'
 # metaHtml = '<script>var fontMetaData = ' + metaJson + ';</script>'
 
-html = html[:startPos + len(startMarker)] + '\n' + svgtext + '\n' + html[endPos:]
+html = html[:startPos + len(startMarker)] + '\n' + svgtext.decode('utf8') + '\n' + html[endPos:]
 
 print('write', relfilename)
 with open(glyphsHtmlFilename, 'w') as f:
-  f.write(html)
+  f.write(html.encode('utf8'))
 
 # JSON
 jsonFilename = os.path.join(BASEDIR, 'docs', 'glyphs', 'metrics.json')
