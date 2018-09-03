@@ -326,7 +326,7 @@ function render() {
 
   // glyphInfo: {
   //   "glyphs": [
-  //     [name :string, unicode? :int|null, unicodeName? :string, color? :string|null],
+  //     [name :string, unicode? :int|null, unicodeName? :string, mtime? :string, color? :string|null],
   //     ["A", 65, "LATIN CAPITAL LETTER A", "#dbeaf7"],
   //     ...
   //   ],
@@ -405,7 +405,8 @@ function renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph) {
     name: name,
     unicode: g[1],
     unicodeName: g[2],
-    color: g[3],
+    // mtime: g[3],
+    color: g[4],
 
     // These are all in 1:1 UPM (not scaled)
     advance: metrics.advance,

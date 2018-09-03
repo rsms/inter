@@ -55,6 +55,12 @@ body.single #glyphs {
     color: white;
     text-align: center;
     font-size:1em;
+    white-space: pre;
+    overflow:hidden;
+    cursor: default;
+  }
+  body.single .glyph .names {
+    display: none;
   }
   .glyph:hover .name {
     color: rgba(0,0,0,0.8);
