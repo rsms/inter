@@ -19,7 +19,11 @@ from glyphsLib.interpolation import apply_instance_data
 from mutatorMath.ufo.document import DesignSpaceDocumentReader
 
 
-subfamily_re = re.compile(r'^\s*([^\s]+)(?:\s*italic|)\s*$', re.I | re.U)
+stripItalic_re = re.compile(r'(?:^|\b)italic(?:\b|$)', re.I | re.U)
+
+
+def stripItalic(name):
+  return stripItalic_re.sub('', name.strip())
 
 
 def sighandler(signum, frame):
@@ -62,6 +66,8 @@ def setFontInfo(font, weight, updateCreated=True):
   font.info.version = version
   font.info.versionMajor = versionMajor
   font.info.versionMinor = versionMinor
+  font.info.woffMajorVersion = versionMajor
+  font.info.woffMinorVersion = versionMinor
   font.info.year = now.year
   font.info.openTypeNameVersion = "%s;%s" % (version, buildtag)
   font.info.openTypeNameUniqueID = "%s %s:%d:%s" % (family, style, now.year, buildtag)
@@ -74,30 +80,43 @@ def setFontInfo(font, weight, updateCreated=True):
 
   # name ID 16 "Typographic Family name"
   font.info.openTypeNamePreferredFamilyName = family
-  
+
   # name ID 17 "Typographic Subfamily name"
-  subfamily = subfamily_re.sub('\\1', style) # "A Italic" => "A", "A" => "A"
-  if len(subfamily) == 0 or subfamily.strip().lower() == 'italic':
+  font.info.openTypeNamePreferredSubfamilyName = style
+
+  # name ID 1 "Family name" (legacy, but required)
+  # Restriction:
+  #   "shared among at most four fonts that differ only in weight or style"
+  # So we map as follows:
+  # - Regular => "Family", ("regular" | "italic" | "bold" | "bold italic")
+  # - Medium  => "Family Medium", ("regular" | "italic")
+  # - Black   => "Family Black", ("regular" | "italic")
+  # and so on.
+  subfamily = stripItalic(style) # "A Italic" => "A", "A" => "A"
+  if len(subfamily) == 0:
     subfamily = "Regular"
-  font.info.openTypeNamePreferredSubfamilyName = subfamily
-
-  # Legacy family name (full name except "italic")
   subfamily_lc = subfamily.lower()
-  if subfamily_lc != "regular" and subfamily_lc != "bold":
-    font.info.styleMapFamilyName = "%s %s" % (family, subfamily)
-  else:
+  if subfamily_lc == "regular" or subfamily_lc == "bold":
     font.info.styleMapFamilyName = family
-
-  # Legacy style name. Must be one of these case-sensitive strings:
-  # "regular", "italic", "bold", "bold italic"
-  font.info.styleMapStyleName = "regular"
-  if style.strip().lower().find('bold') != -1:
+    # name ID 2 "Subfamily name" (legacy, but required)
+    # Value must be one of: "regular", "italic", "bold", "bold italic"
+    if subfamily_lc == "regular":
+      if isitalic:
+        font.info.styleMapStyleName = "italic"
+      else:
+        font.info.styleMapStyleName = "regular"
+    else: # bold
+      if isitalic:
+        font.info.styleMapStyleName = "bold italic"
+      else:
+        font.info.styleMapStyleName = "bold"
+  else:
+    font.info.styleMapFamilyName = family + ' ' + subfamily
+    # name ID 2 "Subfamily name" (legacy, but required)
     if isitalic:
-      font.info.styleMapStyleName = "bold italic"
+      font.info.styleMapStyleName = "italic"
     else:
-      font.info.styleMapStyleName = "bold"
-  elif isitalic:
-    font.info.styleMapStyleName = "italic"
+      font.info.styleMapStyleName = "regular"
 
 
 class Main(object):
@@ -196,7 +215,8 @@ class Main(object):
     project.run_from_ufos(
       [args.ufo],
       output_dir=self.tmpdir,
-      output=formats
+      output=formats,
+      subroutinize=True
     )
 
     # run through ots-sanitize
@@ -207,6 +227,7 @@ class Main(object):
     try:
       otssan_res = subprocess.check_output(
         ['ots-sanitize', tmpfile, filename],
+        # ['cp', tmpfile, filename],
         shell=False
       ).strip()
       # Note: ots-sanitize does not exit with an error in many cases where
