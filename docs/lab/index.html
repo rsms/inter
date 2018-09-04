@@ -477,7 +477,8 @@ samples.set('Repertoire', {
       }
 
       for (const g of glyphs) {
-        let [name, uc, ucName, color] = g
+        // let [name, uc, ucName, mtime, color] = g
+        let name = g[0], uc = g[1], ucName = g[2], mtime = g[3] color = g[4]
         const ucHex = hexstr(uc, 4)
         
         const style = color && color != '<derived>' ?
@@ -487,10 +488,10 @@ samples.set('Repertoire', {
           ucName = '[unknown]'
         }
 
-        const title = 'U+' + ucHex + ' ' + ucName + ' ("' + g[0] + '")'
+        const title = 'U+' + ucHex + ' ' + ucName + ' ("' + name + '")'
         html += `<g ${style} title=\'${title}\'>
           <span class="glyph">&#x${ucHex};</span>
-          <span class="name">${g[0]}</span>
+          <span class="name">${name}</span>
         </g>`
       }
 
