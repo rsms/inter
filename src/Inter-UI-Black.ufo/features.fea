@@ -74,7 +74,7 @@ languagesystem grek dflt;
 
 @UC_SET1 = [ 
   zero one two three four five six seven eight nine
-  Euro Idotaccent Mu dollar
+  euro Idotaccent Mu dollar
   lira sterling afii10023 afii10051 afii10052 afii10053 afii10054 afii10055
   afii10056 afii10057 afii10058 afii10059 afii10060 afii10061 afii10062
   afii10145 afii10017 afii10018 afii10019 afii10020 afii10021 afii10022
@@ -118,20 +118,20 @@ languagesystem grek dflt;
 @TNUM_L = [ 
   zero one two three four five
   six seven eight nine
-  one.1 four.1 six.1 nine.1
+  one.ss01 four.ss01 six.ss01 nine.ss01
   period comma
  ];
 
 @TNUM_R = [ 
   zero.tnum one.tnum two.tnum three.tnum four.tnum five.tnum
   six.tnum seven.tnum eight.tnum nine.tnum
-  one.tnum.1 four.tnum.1 six.tnum.1 nine.tnum.1
+  one.tnum.ss01 four.tnum.ss01 six.tnum.ss01 nine.tnum.ss01
   period.tnum comma.tnum
  ];
 
 @SS01_L = [  one four six nine  ];
 
-@SS01_R = [  one.1 four.1 six.1 nine.1  ];
+@SS01_R = [  one.ss01 four.ss01 six.ss01 nine.ss01  ];
 
 @NUM = [  zero one two three four five six seven eight nine @TNUM @SS01_R  ];
 
@@ -1017,6 +1017,8 @@ feature calt {
 } calt;
 
 feature ss01 {
+# notes:
+# Name: Alternate digits
   sub @SS01_L by @SS01_R;
 } ss01;
 
