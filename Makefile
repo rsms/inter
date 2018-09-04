@@ -186,18 +186,14 @@ docs_fonts:
 	mkdir docs/font-files
 	cp -a build/unhinted/*.woff build/unhinted/*.woff2 build/unhinted/*.otf docs/font-files/
 
-
-# src/glyphorder.txt: src/Inter-UI-Regular.ufo/lib.plist src/Inter-UI-Black.ufo/lib.plist src/diacritics.txt misc/gen-glyphorder.py
-# 	misc/gen-glyphorder.py src/Inter-UI-*.ufo > src/glyphorder.txt
-
-docs/_data/fontinfo.json: misc/fontinfo.py docs/font-files/Inter-UI-*.otf
-	misc/fontinfo.py -pretty docs/font-files/Inter-UI-Regular.otf > docs/_data/fontinfo.json
+docs/_data/fontinfo.json: docs/font-files/Inter-UI-Regular.otf misc/tools/fontinfo.py
+	misc/tools/fontinfo.py -pretty $< > docs/_data/fontinfo.json
 
 docs/lab/glyphinfo.json: build/tmp/UnicodeData.txt misc/tools/gen-glyphinfo.py
 	misc/tools/gen-glyphinfo.py -ucd $< src/Inter-UI-*.ufo > $@
 
-docs/glyphs/metrics.json: src/fontbuild.cfg misc/gen-metrics-and-svgs.py $(Regular_ufo_d)
-	misc/gen-metrics-and-svgs.py -f src/Inter-UI-Regular.ufo
+docs/glyphs/metrics.json: $(Regular_ufo_d) misc/tools/gen-metrics-and-svgs.py
+	misc/tools/gen-metrics-and-svgs.py src/Inter-UI-Regular.ufo
 
 # Download latest Unicode data
 build/tmp/UnicodeData.txt:
