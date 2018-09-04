@@ -140,28 +140,13 @@ zip: ${ZIP_FILE_DEV}
 zip_dist: pre_dist test ${ZIP_FILE_DIST}
 .PHONY: zip zip_dist
 
+# distribution
 pre_dist:
 	@echo "Creating distribution for version ${VERSION}"
 	@if [ -f "${ZIP_FILE_DIST}" ]; \
 		then echo "${ZIP_FILE_DIST} already exists. Bump version or remove the zip file to continue." >&2; \
 		exit 1; \
   fi
-
-# foo_dist: | foo_zip_dist foo_docs_info  foo_docs_fonts
-# 	@echo dist
-
-# foo_zip_dist:
-# 	@echo zip_dist start
-# 	@sleep 1
-# 	@echo zip_dist done
-
-# foo_docs_info:
-# 	@echo docs_info
-
-# foo_docs_fonts:
-# 	@echo docs_fonts
-
-# .PHONY: foo_dist foo_zip_dist foo_docs_info foo_docs_fonts
 
 dist: zip_dist  docs_info  docs_fonts
 	# $(MAKE)  docs_info  docs_fonts  -j
@@ -175,7 +160,7 @@ dist: zip_dist  docs_info  docs_fonts
 	@echo "2) Create new release with ${ZIP_FILE_DIST} at"
 	@echo "   https://github.com/rsms/inter/releases/new?tag=v${VERSION}"
 	@echo ""
-	@echo "3) Bump version in src/fontbuild.cfg and commit"
+	@echo "3) Bump version in version.txt (to the next future version)"
 	@echo ""
 	@echo "——————————————————————————————————————————————————————————————————"
 
