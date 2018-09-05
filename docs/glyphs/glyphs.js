@@ -326,6 +326,9 @@ function render() {
 
   // glyphInfo: {
   //   "glyphs": [
+  //     // <=v2.5:
+  //     [name :string, unicode? :int|null, unicodeName? :string, color? :string|null],
+  //     // >=v2.6: (has mtime)
   //     [name :string, unicode? :int|null, unicodeName? :string, mtime? :string, color? :string|null],
   //     ["A", 65, "LATIN CAPITAL LETTER A", "#dbeaf7"],
   //     ...
@@ -387,9 +390,17 @@ function renderGlyphGraphic(glyphName) {
 
 
 function renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph) {
-  var name = g[0]
+  let name = g[0], uc = g[1], ucName = g[2], mtime = g[3], color = g[4]
   var names, glyph
   var svg = svgRepository[name]
+
+    // XXX compatibility with v2.5 (remove when moving to v2.6)
+    // glyphinfo for 2.5 doesn't contain mtime.
+    if (mtime && typeof mtime == 'string' &&
+        (mtime.indexOf('rgba') != -1 || mtime.indexOf('#') != -1)) {
+      color = mtime
+      mtime = null
+    }
 
   if (!svg) {
     // ignore
@@ -403,10 +414,10 @@ function renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph) {
 
   var info = {
     name: name,
-    unicode: g[1],
-    unicodeName: g[2],
-    // mtime: g[3],
-    color: g[4],
+    unicode: uc,
+    unicodeName: ucName,
+    // mtime: mtime,
+    color: color,
 
     // These are all in 1:1 UPM (not scaled)
     advance: metrics.advance,

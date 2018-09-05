@@ -478,9 +478,17 @@ samples.set('Repertoire', {
 
       for (const g of glyphs) {
         // let [name, uc, ucName, mtime, color] = g
-        let name = g[0], uc = g[1], ucName = g[2], mtime = g[3] color = g[4]
+        let name = g[0], uc = g[1], ucName = g[2], mtime = g[3], color = g[4]
         const ucHex = hexstr(uc, 4)
-        
+
+        // XXX compatibility with v2.5 (remove when moving to v2.6)
+        // glyphinfo for 2.5 doesn't contain mtime.
+        if (mtime && typeof mtime == 'string' &&
+            (mtime.indexOf('rgba') != -1 || mtime.indexOf('#') != -1)) {
+          color = mtime
+          mtime = null
+        }
+
         const style = color && color != '<derived>' ?
           'style="background-color:' + color + '"' : ''
 
