@@ -461,23 +461,6 @@
       <string>minus</string>
       <string>divide</string>
     </array>
-    <key>public.kern1.dotlessi</key>
-    <array>
-      <string>dotlessi</string>
-      <string>i</string>
-      <string>itildebelow</string>
-      <string>dotlessj</string>
-      <string>j</string>
-      <string>jcrosstail</string>
-      <string>igrave</string>
-      <string>iacute</string>
-      <string>icircumflex</string>
-      <string>imacron</string>
-      <string>ibreve</string>
-      <string>iogonek</string>
-      <string>icaron</string>
-      <string>jcircumflex</string>
-    </array>
     <key>public.kern1.ecyrillic</key>
     <array>
       <string>ecyrillic</string>
@@ -581,6 +564,23 @@
       <string>idieresis</string>
       <string>idieresisacute</string>
       <string>itilde</string>
+    </array>
+    <key>public.kern1.idotless</key>
+    <array>
+      <string>idotless</string>
+      <string>i</string>
+      <string>itildebelow</string>
+      <string>igrave</string>
+      <string>iacute</string>
+      <string>icircumflex</string>
+      <string>imacron</string>
+      <string>ibreve</string>
+      <string>iogonek</string>
+      <string>icaron</string>
+      <string>jdotless</string>
+      <string>j</string>
+      <string>jcrosstail</string>
+      <string>jcircumflex</string>
     </array>
     <key>public.kern1.iotadieresisgreek</key>
     <array>
@@ -1119,26 +1119,6 @@
       <string>minus</string>
       <string>divide</string>
     </array>
-    <key>public.kern2.dotlessi</key>
-    <array>
-      <string>dotlessi</string>
-      <string>i</string>
-      <string>itildebelow</string>
-      <string>igrave</string>
-      <string>iacute</string>
-      <string>icircumflex</string>
-      <string>imacron</string>
-      <string>ibreve</string>
-      <string>iogonek</string>
-      <string>icaron</string>
-    </array>
-    <key>public.kern2.dotlessj</key>
-    <array>
-      <string>dotlessj</string>
-      <string>j</string>
-      <string>jcrosstail</string>
-      <string>jcircumflex</string>
-    </array>
     <key>public.kern2.dzhecyrillic</key>
     <array>
       <string>vecyrillic</string>
@@ -1238,9 +1218,29 @@
       <string>idieresisacute</string>
       <string>itilde</string>
     </array>
+    <key>public.kern2.idotless</key>
+    <array>
+      <string>idotless</string>
+      <string>i</string>
+      <string>itildebelow</string>
+      <string>igrave</string>
+      <string>iacute</string>
+      <string>icircumflex</string>
+      <string>imacron</string>
+      <string>ibreve</string>
+      <string>iogonek</string>
+      <string>icaron</string>
+    </array>
     <key>public.kern2.iotadieresisgreek</key>
     <array>
       <string>iota</string>
+    </array>
+    <key>public.kern2.jdotless</key>
+    <array>
+      <string>jdotless</string>
+      <string>j</string>
+      <string>jcrosstail</string>
+      <string>jcircumflex</string>
     </array>
     <key>public.kern2.m</key>
     <array>

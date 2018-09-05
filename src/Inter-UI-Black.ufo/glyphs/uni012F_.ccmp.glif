@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni012F.ccmp" format="2">
-  <advance width="800.0"/>
+  <advance width="844.0"/>
   <anchor x="476.0" y="-632.0" name="bottom"/>
-  <anchor x="492.0" y="1744.0" name="top"/>
-  <anchor x="888.0" y="1744.0" name="top0315"/>
+  <anchor x="648.0" y="0.0" name="ogonek"/>
+  <anchor x="388.0" y="1744.0" name="top"/>
+  <anchor x="776.0" y="1744.0" name="top0315"/>
   <outline>
-    <component base="ogonek" xOffset="-24.0"/>
-    <component base="i"/>
+    <component base="ogonek"/>
+    <component base="idotless" xOffset="28.0"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/02 06:20:22</string>
+      <string>2018/09/04 17:07:09</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
+        <integer>1</integer>
         <integer>-1</integer>
-        <integer>0</integer>
       </array>
       <key>public.markColor</key>
       <string>0.894,0.227,0.871,0.004</string>
