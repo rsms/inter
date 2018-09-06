@@ -22,7 +22,7 @@ By contributing work to the Inter UI font project you agree to have all work con
 This project uses "master styles" (or "key styles") which are combined using some clever math to generate other styles that are "mixed" from two masters. Because of this, there are some **very important rules** you must stick to:
 
 - When adding or removing a glyph, you _must_ add or remove the same glyph in all master fonts. If you're using Glyphs.app, this is automatically taken care of, but not with RoboFont or some other font tools.
-- When modifying a glyph's contours, we must make sure:
+- When editing glyphs we must make sure:
     - all masters have the same amount of paths, nodes and handles, as well as components.
     - all components, paths, nodes and handles are in the same order across all masters.
     - all masters have the same set of anchors.
