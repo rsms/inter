@@ -17,7 +17,7 @@ By contributing work to the Inter UI font project you agree to have all work con
 **Thin "master" style** for lighter weights. This is a very large project and should probably be done in a branch over a longer period of time, rather than as one huge contribution/pull request.
 
 
-### Master fonts and interpolated derivatives
+## Master fonts and interpolated derivatives
 
 This project uses "master styles" (or "key styles") which are combined using some clever math to generate other styles that are "mixed" from two masters. Because of this, there are some **very important rules** you must stick to:
 
