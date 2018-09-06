@@ -169,7 +169,11 @@ The script `misc/tools/kernsample.py` is helpful in generating samples for all e
 
 ```txt
 $ misc/kernsample.py src/Inter-UI-Black.ufo P -suffix MOR
-PAMOR P/AE MOR PJMOR PXMOR PYMOR PZMOR P/ae mor P/ampersand mor P/backslash mor P/dzcaron mor P/eightsub mor P/ellipsis mor Pfmor P/four mor P/guilsinglleft mor P/idieresisacute mor P/periodcentered mor P/quotedblbase mor Psmor P/seven mor P/slash mor Ptmor P/two mor P/underscore mor Pymor
+PAMOR P/AE MOR PJMOR PXMOR PYMOR PZMOR P/ae mor P/ampersand mor
+P/backslash mor P/dzcaron mor P/eightsub mor P/ellipsis mor Pfmor
+P/four mor P/guilsinglleft mor P/idieresisacute mor P/periodcentered
+mor P/quotedblbase mor Psmor P/seven mor P/slash mor Ptmor P/two
+mor P/underscore mor Pymor
 ```
 
 Type `misc/tools/kernsample.py -h` for help on how to use the program.
