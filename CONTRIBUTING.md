@@ -145,6 +145,8 @@ python docs/lab/serve.py
 
 You can now visit the URL printed on the screen to use the lab. Simply `make -j STYLE_web` (or `make -j all_web` for all styles) and reload the web page to try a new build.
 
+An online version of the lab is available at <https://rsms.me/inter/lab/> with the most recent official release of the Inter UI font files.
+
 
 ### Kerning
 
