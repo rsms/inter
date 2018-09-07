@@ -2,20 +2,19 @@
 <glyph name="iogonek" format="2">
   <advance width="672.0"/>
   <unicode hex="012F"/>
-  <anchor x="332.0" y="0.0" name="bottom"/>
   <anchor x="672.0" y="-560.0" name="bottom_dd"/>
   <anchor x="332.0" y="2304.0" name="parent_top"/>
   <anchor x="332.0" y="2304.0" name="top"/>
   <anchor x="672.0" y="2200.0" name="top0315"/>
   <anchor x="672.0" y="2200.0" name="top_dd"/>
   <outline>
-    <component base="i"/>
-    <component base="ogonek" xOffset="-144.0"/>
+    <component base="uni012F.ccmp"/>
+    <component base="dotaccent" yOffset="4.0"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/04 16:56:22</string>
+      <string>2018/09/07 16:26:09</string>
     </dict>
   </lib>
 </glyph>

@@ -3,7 +3,6 @@
   <advance width="976.0"/>
   <guideline x="640.0" y="2160.0" angle="90.0"/>
   <anchor x="512.0" y="-632.0" name="bottom"/>
-  <anchor x="640.0" y="2200.0" name="top"/>
   <outline>
     <contour>
       <point x="364.0" y="-576.0" type="curve" smooth="yes"/>
@@ -11,9 +10,9 @@
       <point x="760.0" y="-364.0"/>
       <point x="760.0" y="-136.0" type="curve" smooth="yes"/>
       <point x="760.0" y="336.0" type="line"/>
-      <point x="520.0" y="336.0" type="line"/>
-      <point x="520.0" y="-160.0" type="line" smooth="yes"/>
-      <point x="520.0" y="-244.0"/>
+      <point x="524.0" y="336.0" type="line"/>
+      <point x="524.0" y="-160.0" type="line" smooth="yes"/>
+      <point x="524.0" y="-244.0"/>
       <point x="477.0" y="-360.0"/>
       <point x="360.0" y="-360.0" type="curve" smooth="yes"/>
       <point x="276.0" y="-360.0"/>
@@ -31,17 +30,12 @@
       <point x="-36.0" y="-416.0"/>
       <point x="116.0" y="-576.0"/>
     </contour>
-    <contour>
-      <point x="520.0" y="0.0" type="line"/>
-      <point x="760.0" y="0.0" type="line"/>
-      <point x="760.0" y="1536.0" type="line"/>
-      <point x="520.0" y="1536.0" type="line"/>
-    </contour>
+    <component base="idotless" xOffset="308.0"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/04 16:05:28</string>
+      <string>2018/09/07 16:28:28</string>
       <key>public.markColor</key>
       <string>0.894,0.271,0.843,0.004</string>
     </dict>
