@@ -216,7 +216,8 @@ class Main(object):
       [args.ufo],
       output_dir=self.tmpdir,
       output=formats,
-      subroutinize=True
+      subroutinize=True,
+      overlaps_backend='pathops', # use Skia's pathops
     )
 
     # run through ots-sanitize
