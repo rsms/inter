@@ -7,7 +7,8 @@ if [[ "${BUILD_DIR:0:2}" == "./" ]]; then
   BUILD_DIR=${BUILD_DIR:2}
 fi
 
-DIST_DIR=$BUILD_DIR/ # hinted | unhinted
+# DIST_DIR=$BUILD_DIR/fonts/
+DIST_DIR_TOK='$(FONTDIR)/'
 BUILD_TMP_DIR=$BUILD_DIR/tmp
 VENV_DIR=$BUILD_DIR/venv
 
@@ -369,24 +370,24 @@ else
     for style in "${all_styles[@]}"; do
       echo "${style}: ${style}_otf ${style}_ttf ${style}_ttf_hinted ${style}_web ${style}_web_hinted" >> "$GEN_MAKE_FILE"
 
-      echo "${style}_ttf_hinted: ${DIST_DIR}hinted/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
-      echo "${style}_ttf: ${DIST_DIR}unhinted/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
-      echo "${style}_otf: ${DIST_DIR}unhinted/Inter-UI-${style}.otf" >> "$GEN_MAKE_FILE"
+      echo "${style}_ttf_hinted: ${DIST_DIR_TOK}const-hinted/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
+      echo "${style}_ttf: ${DIST_DIR_TOK}const/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
+      echo "${style}_otf: ${DIST_DIR_TOK}const/Inter-UI-${style}.otf" >> "$GEN_MAKE_FILE"
 
       echo -n "${style}_web:" >> "$GEN_MAKE_FILE"
       for format in "${web_formats[@]}"; do
-        echo -n " ${DIST_DIR}unhinted/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
+        echo -n " ${DIST_DIR_TOK}const/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
       done
       echo "" >> "$GEN_MAKE_FILE"
 
       echo -n "${style}_web_hinted:" >> "$GEN_MAKE_FILE"
       for format in "${web_formats[@]}"; do
-        echo -n " ${DIST_DIR}hinted/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
+        echo -n " ${DIST_DIR_TOK}const-hinted/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
       done
       echo "" >> "$GEN_MAKE_FILE"
 
-      echo "${style}_check: ${DIST_DIR}unhinted/Inter-UI-${style}.otf ${DIST_DIR}unhinted/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
-      echo -e "\t misc/fontbuild checkfont $^" >> "$GEN_MAKE_FILE"
+      echo "${style}_check: ${DIST_DIR_TOK}const/Inter-UI-${style}.otf ${DIST_DIR_TOK}const/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
+      echo -e "\tmisc/fontbuild checkfont $^" >> "$GEN_MAKE_FILE"
 
       echo "" >> "$GEN_MAKE_FILE"
     done
@@ -426,22 +427,22 @@ else
     done
     echo "" >> "$GEN_MAKE_FILE"
 
-    # all_check target
-    echo -n "all_check:" >> "$GEN_MAKE_FILE"
+    # all_check_const target
+    echo -n "all_check_const:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " ${style}_check" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
 
-    # all_fonts target
-    echo -n "all_fonts:" >> "$GEN_MAKE_FILE"
-    for style in "${all_styles[@]}"; do
-      echo -n " ${style}" >> "$GEN_MAKE_FILE"
-    done
-    echo "" >> "$GEN_MAKE_FILE"
+    # all_const_fonts target
+    # echo -n "all_const_fonts:" >> "$GEN_MAKE_FILE"
+    # for style in "${all_styles[@]}"; do
+    #   echo -n " ${style}" >> "$GEN_MAKE_FILE"
+    # done
+    # echo "" >> "$GEN_MAKE_FILE"
     
 
-    echo -n ".PHONY: all_otf all_ttf_hinted all_ttf all_web all_web_hinted all_ufo all_check" >> "$GEN_MAKE_FILE"
+    echo -n ".PHONY: all_otf all_ttf_hinted all_ttf all_web all_web_hinted all_ufo all_check_const" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " ${style} ${style}_ttf ${style}_ttf_hinted ${style}_otf ${style}_check" >> "$GEN_MAKE_FILE"
     done

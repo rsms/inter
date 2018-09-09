@@ -1,29 +1,49 @@
 # Targets:
-#   all             Build everything (default; implies all_fonts)
-#   test            Build and test (check) everyything (implies all_check)
-#   install         Build and install all OTF files. (currently Mac-only)
-#   zip             Build a complete release-grade ZIP archive of all fonts.
-#   dist            Create a new release distribution. Does everything.
+#   all               Build everything
+#   test              Build and test everyything (implies all_check)
+#   install           Build and install all OTF files. (currently Mac-only)
+#   zip               Build a complete release-grade ZIP archive of all fonts.
+#   dist              Create a new release distribution. Does everything.
 #
-#   all_fonts				Build all styles in all formats
-#   all_otf					Build all OTF files into build/unhinted
-#   all_ttf					Build all TTF files into build/unhinted
-#   all_ttf_hinted	Build all TTF files with hints into build/hinted
-#   all_web					Build all WOFF files into build/unhinted
-#   all_web_hinted	Build all WOFF files with hints into build/hinted
-#   all_check				Build & check all OTF and TTF files
+#   all_const         Build all non-variable files
+#   all_const_hinted  Build all non-variable files with hints
+#   all_var           Build all variable files
+#   all_var_hinted    Build all variable files with hints
+#
+#   all_otf					  Build all OTF files into FONTDIR/const
+#   all_ttf					  Build all TTF files into FONTDIR/const
+#   all_ttf_hinted	  Build all TTF files with hints into FONTDIR/const-hinted
+#   all_web					  Build all WOFF files into FONTDIR/const
+#   all_web_hinted	  Build all WOFF files with hints into FONTDIR/const-hinted
+#   all_var           Build all variable font files into FONTDIR/var
+#   all_var_hinted    Build all variable font files with hints into
+#                     FONTDIR/var-hinted
 #
 # Style-specific targets:
-#   STYLE_otf         Build OTF file for STYLE into build/unhinted
-#   STYLE_ttf         Build TTF file for STYLE into build/unhinted
-#   STYLE_ttf_hinted  Build TTF file for STYLE with hints into build/hinted
-#   STYLE_web         Build WOFF files for STYLE into build/unhinted
-#   STYLE_web_hinted  Build WOFF files for STYLE with hints into build/hinted
+#   STYLE_otf         Build OTF file for STYLE into FONTDIR/const
+#   STYLE_ttf         Build TTF file for STYLE into FONTDIR/const
+#   STYLE_ttf_hinted  Build TTF file for STYLE with hints into
+#                     FONTDIR/const-hinted
+#   STYLE_web         Build WOFF files for STYLE into FONTDIR/const
+#   STYLE_web_hinted  Build WOFF files for STYLE with hints into
+#                     FONTDIR/const-hinted
 #   STYLE_check       Build & check OTF and TTF files for STYLE
 #
-all: all_fonts
-all_unhinted:  all_ttf  all_otf  all_web
-all_hinted:  all_ttf_hinted  all_web_hinted
+# "build" directory output structure:
+# 	fonts
+# 		const
+# 		const-hinted
+# 		var
+# 		var-hinted
+#
+FONTDIR = build/fonts
+
+all: all_const  all_const_hinted  all_var  all_var_hinted
+
+all_const: all_otf  all_ttf  all_web
+all_const_hinted: all_ttf_hinted  all_web_hinted
+all_var: $(FONTDIR)/var/Inter-UI.var.woff2
+all_var_hinted: $(FONTDIR)/var-hinted/Inter-UI.var.ttf $(FONTDIR)/var-hinted/Inter-UI.var.woff2
 
 export PATH := $(PWD)/build/venv/bin:$(PATH)
 
@@ -47,16 +67,19 @@ build/%.woff: build/%.ttf
 
 # UFO -> OTF, TTF
 
-build/unhinted/Inter-UI-Regular.%: src/Inter-UI.designspace $(Regular_ufo_d)
+$(FONTDIR)/var/%.ttf: src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
+	misc/fontbuild compile-var -o $@ src/Inter-UI.designspace
+
+$(FONTDIR)/const/Inter-UI-Regular.%: src/Inter-UI.designspace $(Regular_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Regular.ufo
 
-build/unhinted/Inter-UI-Black.%: src/Inter-UI.designspace $(Black_ufo_d)
+$(FONTDIR)/const/Inter-UI-Black.%: src/Inter-UI.designspace $(Black_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Black.ufo
 
-build/unhinted/Inter-UI-%.otf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
+$(FONTDIR)/const/Inter-UI-%.otf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
 	misc/fontbuild compile -o $@ $<
 
-build/unhinted/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
+$(FONTDIR)/const/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
 	misc/fontbuild compile -o $@ $<
 
 
@@ -64,6 +87,7 @@ build/unhinted/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspace
 src/Inter-UI.designspace: src/Inter-UI.glyphs
 	misc/fontbuild glyphsync $<
 
+# These rules simply short-circuit Make for performance
 src/Inter-UI.glyphs:
 	@true
 
@@ -82,22 +106,22 @@ build/ufo/Inter-UI-%.ufo: src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_
 
 
 # hinted TTF files via autohint
-build/hinted/%.ttf: build/unhinted/%.ttf
-	@mkdir -p build/hinted
-	@echo ttfautohint "$<" "$@"
-	@ttfautohint \
-	  --hinting-limit=256 \
-	  --hinting-range-min=8 \
-	  --hinting-range-max=64 \
-	  --fallback-stem-width=256 \
-	  --no-info \
-	  --verbose \
-	  "$<" "$@"
+$(FONTDIR)/const-hinted/%.ttf: $(FONTDIR)/const/%.ttf
+	mkdir -p "$(dir $@)"
+	ttfautohint --fallback-stem-width=256 --no-info --composites "$<" "$@"
+
+$(FONTDIR)/var-hinted/%.ttf: $(FONTDIR)/var/%.ttf
+	mkdir -p "$(dir $@)"
+	ttfautohint --fallback-stem-width=256 --no-info --composites "$<" "$@"
+
+# check var
+all_check_var: $(FONTDIR)/var/Inter-UI.var.ttf
+	misc/fontbuild checkfont $^
 
 # test runs all tests
-# Note: all_check is generated by init.sh and runs "fontbuild checkfont"
+# Note: all_check_const is generated by init.sh and runs "fontbuild checkfont"
 # on all otf and ttf files.
-test: all_check
+test: all_check_const  all_check_var
 
 # load version, used by zip and dist
 VERSION := $(shell cat version.txt)
@@ -106,29 +130,39 @@ VERSION := $(shell cat version.txt)
 ZIP_FILE_DIST := build/release/Inter-UI-${VERSION}.zip
 ZIP_FILE_DEV  := build/release/Inter-UI-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
 
+ZD = build/tmp/zip
 # intermediate zip target that creates a zip file at build/tmp/a.zip
-build/tmp/a.zip: all_fonts
-	@rm -rf build/tmp/zip
+build/tmp/a.zip: all
+	@rm -rf "$(ZD)"
 	@rm -f  build/tmp/a.zip
 	@mkdir -p \
-		"build/tmp/zip/Inter UI (web)" \
-		"build/tmp/zip/Inter UI (web hinted)" \
-		"build/tmp/zip/Inter UI (TTF)" \
-		"build/tmp/zip/Inter UI (TTF hinted)" \
-		"build/tmp/zip/Inter UI (OTF)"
-	cp -a build/unhinted/*.woff build/unhinted/*.woff2 \
-	                              "build/tmp/zip/Inter UI (web)/"
-	cp -a build/hinted/*.woff   build/hinted/*.woff2 \
-	                              "build/tmp/zip/Inter UI (web hinted)/"
-	cp -a build/unhinted/*.ttf   "build/tmp/zip/Inter UI (TTF)/"
-	cp -a build/hinted/*.ttf     "build/tmp/zip/Inter UI (TTF hinted)/"
-	cp -a build/unhinted/*.otf   "build/tmp/zip/Inter UI (OTF)/"
-	cp -a misc/dist/inter-ui.css "build/tmp/zip/Inter UI (web)/"
-	cp -a misc/dist/inter-ui.css "build/tmp/zip/Inter UI (web hinted)/"
-	cp -a misc/dist/*.txt        "build/tmp/zip/"
-	cp -a LICENSE.txt            "build/tmp/zip/"
-	cd build/tmp/zip && zip -q -X -r "../../../$@" * && cd ../..
-	@rm -rf build/tmp/zip
+	  "$(ZD)/Inter UI (web)" \
+	  "$(ZD)/Inter UI (web hinted)" \
+	  "$(ZD)/Inter UI (TTF)" \
+	  "$(ZD)/Inter UI (TTF hinted)" \
+	  "$(ZD)/Inter UI (TTF variable)" \
+	  "$(ZD)/Inter UI (TTF variable hinted)" \
+	  "$(ZD)/Inter UI (OTF)"
+	# copy font files
+	cp -a $(FONTDIR)/const/*.woff \
+	      $(FONTDIR)/const/*.woff2 \
+	      $(FONTDIR)/var/*.woff2        "$(ZD)/Inter UI (web)/"
+	cp -a $(FONTDIR)/const-hinted/*.woff \
+	      $(FONTDIR)/const-hinted/*.woff2 \
+	      $(FONTDIR)/var-hinted/*.woff2 "$(ZD)/Inter UI (web hinted)/"
+	cp -a $(FONTDIR)/const/*.ttf        "$(ZD)/Inter UI (TTF)/"
+	cp -a $(FONTDIR)/const-hinted/*.ttf "$(ZD)/Inter UI (TTF hinted)/"
+	cp -a $(FONTDIR)/var/*.ttf          "$(ZD)/Inter UI (TTF variable)/"
+	cp -a $(FONTDIR)/var-hinted/*.ttf   "$(ZD)/Inter UI (TTF variable hinted)/"
+	cp -a $(FONTDIR)/const/*.otf        "$(ZD)/Inter UI (OTF)/"
+	# copy misc stuff
+	cp -a misc/dist/inter-ui.css        "$(ZD)/Inter UI (web)/"
+	cp -a misc/dist/inter-ui.css        "$(ZD)/Inter UI (web hinted)/"
+	cp -a misc/dist/*.txt               "$(ZD)/"
+	cp -a LICENSE.txt                   "$(ZD)/"
+	# zip
+	cd $(ZD) && zip -q -X -r "../../../$@" * && cd ../..
+	@rm -rf $(ZD)
 
 # zip
 build/release/Inter-UI-%.zip: build/tmp/a.zip
@@ -169,50 +203,53 @@ docs_info: docs/_data/fontinfo.json docs/lab/glyphinfo.json docs/glyphs/metrics.
 docs_fonts:
 	rm -rf docs/font-files
 	mkdir docs/font-files
-	cp -a build/unhinted/*.woff build/unhinted/*.woff2 build/unhinted/*.otf docs/font-files/
+	cp -a $(FONTDIR)/const/*.woff \
+	      $(FONTDIR)/const/*.woff2 \
+	      $(FONTDIR)/const/*.otf \
+	      $(FONTDIR)/var/*.woff2 \
+	      docs/font-files/
 
 docs/_data/fontinfo.json: docs/font-files/Inter-UI-Regular.otf misc/tools/fontinfo.py
 	misc/tools/fontinfo.py -pretty $< > docs/_data/fontinfo.json
 
-docs/lab/glyphinfo.json: build/tmp/UnicodeData.txt misc/tools/gen-glyphinfo.py
+docs/lab/glyphinfo.json: build/UnicodeData.txt misc/tools/gen-glyphinfo.py
 	misc/tools/gen-glyphinfo.py -ucd $< src/Inter-UI-*.ufo > $@
 
 docs/glyphs/metrics.json: $(Regular_ufo_d) misc/tools/gen-metrics-and-svgs.py
 	misc/tools/gen-metrics-and-svgs.py src/Inter-UI-Regular.ufo
 
 # Download latest Unicode data
-build/tmp/UnicodeData.txt:
-	@mkdir -p build/tmp
+build/UnicodeData.txt:
 	@echo fetch http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 	@curl '-#' -o "$@" http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 
 
 # install targets
-install_ttf: all_ttf_unhinted
+install_ttf: all_ttf_const
 	$(MAKE) all_web -j
 	@echo "Installing TTF files locally at ~/Library/Fonts/Inter UI"
 	rm -rf ~/'Library/Fonts/Inter UI'
 	mkdir -p ~/'Library/Fonts/Inter UI'
-	cp -va build/unhinted/*.ttf ~/'Library/Fonts/Inter UI'
+	cp -va $(FONTDIR)/const/*.ttf ~/'Library/Fonts/Inter UI'
 
 install_ttf_hinted: all_ttf
 	$(MAKE) all_web -j
 	@echo "Installing autohinted TTF files locally at ~/Library/Fonts/Inter UI"
 	rm -rf ~/'Library/Fonts/Inter UI'
 	mkdir -p ~/'Library/Fonts/Inter UI'
-	cp -va build/hinted/*.ttf ~/'Library/Fonts/Inter UI'
+	cp -va $(FONTDIR)/const-hinted/*.ttf ~/'Library/Fonts/Inter UI'
 
 install_otf: all_otf
 	$(MAKE) all_web -j
 	@echo "Installing OTF files locally at ~/Library/Fonts/Inter UI"
 	rm -rf ~/'Library/Fonts/Inter UI'
 	mkdir -p ~/'Library/Fonts/Inter UI'
-	cp -va build/unhinted/*.otf ~/'Library/Fonts/Inter UI'
+	cp -va $(FONTDIR)/const/*.otf ~/'Library/Fonts/Inter UI'
 
 install: install_otf
 
 # clean removes generated and built fonts in the build directory
 clean:
-	rm -rvf build/tmp build/hinted build/unhinted build/otf
+	rm -rvf build/tmp build/fonts
 
-.PHONY: all web clean install install_otf install_ttf deploy pre_dist dist geninfo copy_docs_fonts all_hinted test glyphsync
+.PHONY: all web clean install install_otf install_ttf deploy pre_dist dist geninfo copy_docs_fonts all_const_hinted test glyphsync
