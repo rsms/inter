@@ -2,9 +2,6 @@
 <glyph name="Ohorn" format="2">
   <advance width="2180.0"/>
   <unicode hex="01A0"/>
-  <anchor x="988.0" y="0.0" name="bottom"/>
-  <anchor x="1020.0" y="2304.0" name="top"/>
-  <anchor x="1964.0" y="2192.0" name="top0315"/>
   <outline>
     <contour>
       <point x="1904.0" y="2196.0" type="line"/>
@@ -16,39 +13,12 @@
       <point x="2140.0" y="1836.0"/>
       <point x="2140.0" y="2196.0" type="curve"/>
     </contour>
-    <contour>
-      <point x="1976.0" y="1024.0" type="curve"/>
-      <point x="1976.0" y="1672.0"/>
-      <point x="1596.0" y="2076.0"/>
-      <point x="1072.0" y="2076.0" type="curve" smooth="yes"/>
-      <point x="548.0" y="2076.0"/>
-      <point x="168.0" y="1672.0"/>
-      <point x="168.0" y="1024.0" type="curve"/>
-      <point x="168.0" y="376.0"/>
-      <point x="548.0" y="-28.0"/>
-      <point x="1072.0" y="-28.0" type="curve" smooth="yes"/>
-      <point x="1596.0" y="-28.0"/>
-      <point x="1976.0" y="376.0"/>
-    </contour>
-    <contour>
-      <point x="1736.0" y="1024.0" type="curve"/>
-      <point x="1736.0" y="492.0"/>
-      <point x="1444.0" y="204.0"/>
-      <point x="1072.0" y="204.0" type="curve" smooth="yes"/>
-      <point x="700.0" y="204.0"/>
-      <point x="408.0" y="492.0"/>
-      <point x="408.0" y="1024.0" type="curve"/>
-      <point x="408.0" y="1556.0"/>
-      <point x="700.0" y="1844.0"/>
-      <point x="1072.0" y="1844.0" type="curve" smooth="yes"/>
-      <point x="1444.0" y="1844.0"/>
-      <point x="1736.0" y="1556.0"/>
-    </contour>
+    <component base="O"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/01 23:10:14</string>
+      <string>2018/09/08 18:20:09</string>
     </dict>
   </lib>
 </glyph>

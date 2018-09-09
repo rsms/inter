@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
+    <key>GSOffsetHorizontal</key>
+    <integer>-150</integer>
+    <key>GSOffsetProportional</key>
+    <integer>1</integer>
+    <key>GSOffsetVertical</key>
+    <integer>10</integer>
     <key>public.glyphOrder</key>
     <array>
       <string>.null</string>
@@ -510,8 +516,6 @@
       <string>aemacron</string>
       <string>aeacute</string>
       <string>aiecyrillic</string>
-      <string>leftloop.cn</string>
-      <string>rightloop.cn</string>
       <string>b</string>
       <string>bbar</string>
       <string>btopbar</string>
@@ -636,7 +640,6 @@
       <string>idotbelow</string>
       <string>uni1ECB.ccmp</string>
       <string>jdotless</string>
-      <string>uni006A.ccmp</string>
       <string>jdotlessbar</string>
       <string>uni0249</string>
       <string>uni0249.ccmp</string>
@@ -1189,36 +1192,36 @@
       <string>franc</string>
       <string>zero</string>
       <string>zero.slash</string>
-      <string>zero.tnum</string>
-      <string>zero.tnum.slash</string>
+      <string>zero.tf</string>
+      <string>zero.tf.slash</string>
       <string>one</string>
       <string>one.ss01</string>
-      <string>one.tnum</string>
-      <string>one.tnum.ss01</string>
+      <string>one.tf</string>
+      <string>one.tf.ss01</string>
       <string>two</string>
-      <string>two.tnum</string>
+      <string>two.tf</string>
       <string>twostroke</string>
       <string>three</string>
-      <string>three.tnum</string>
+      <string>three.tf</string>
       <string>four</string>
       <string>four.ss01</string>
-      <string>four.tnum</string>
-      <string>four.tnum.ss01</string>
+      <string>four.tf</string>
+      <string>four.tf.ss01</string>
       <string>five</string>
-      <string>five.tnum</string>
+      <string>five.tf</string>
       <string>Tonefive</string>
       <string>six</string>
       <string>six.ss01</string>
-      <string>six.tnum</string>
-      <string>six.tnum.ss01</string>
+      <string>six.tf</string>
+      <string>six.tf.ss01</string>
       <string>seven</string>
-      <string>seven.tnum</string>
+      <string>seven.tf</string>
       <string>eight</string>
-      <string>eight.tnum</string>
+      <string>eight.tf</string>
       <string>nine</string>
       <string>nine.ss01</string>
-      <string>nine.tnum</string>
-      <string>nine.tnum.ss01</string>
+      <string>nine.tf</string>
+      <string>nine.tf.ss01</string>
       <string>ampersand</string>
       <string>exclam</string>
       <string>exclamdbl</string>
@@ -1276,9 +1279,9 @@
       <string>quotedblbase</string>
       <string>quotesinglbase</string>
       <string>comma</string>
-      <string>comma.tnum</string>
+      <string>comma.tf</string>
       <string>period</string>
-      <string>period.tnum</string>
+      <string>period.tf</string>
       <string>ellipsis</string>
       <string>twodotleader</string>
       <string>colon</string>
@@ -2049,7 +2052,7 @@
       <string>uni209B</string>
       <string>uni209C</string>
       <string>esh</string>
-      <string>cyrillictic</string>
+      <string>cyrillictic.cn</string>
       <string>uni1DEE</string>
       <string>uni1DED</string>
       <string>uni1DEF</string>
@@ -2180,6 +2183,15 @@
       <string>tonebarmidmod.cn</string>
       <string>macronacutecomb.cn</string>
       <string>macrongravecomb.cn</string>
+      <string>uni1FFE.tonos</string>
+      <string>uni1FCD.tonos</string>
+      <string>uni1FDD.tonos</string>
+      <string>uni1FCE.tonos</string>
+      <string>uni1FDE.tonos</string>
+      <string>uni1FCF.tonos</string>
+      <string>uni1FDF.tonos</string>
+      <string>uni1FEF.tonos</string>
+      <string>uni1FFD.tonos</string>
       <string>ringacute.cn</string>
       <string>circumflexgravecomb.cn</string>
       <string>dieresiscaroncomb.cn</string>
@@ -2201,6 +2213,7 @@
       <string>brevehookcomb.cn</string>
       <string>commaaccentrotate.cn</string>
       <string>tildeacutecomb.cn</string>
+      <string>tonostop</string>
     </array>
   </dict>
 </plist>

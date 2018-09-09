@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="idieresisacute" format="2">
-  <advance width="708.0"/>
+  <advance width="668.0"/>
   <unicode hex="1E2F"/>
   <guideline x="360.0" y="1968.0" angle="90.0"/>
-  <anchor x="360.0" y="0.0" name="bottom"/>
-  <anchor x="404.0" y="2668.0" name="mkmktop_acc"/>
-  <anchor x="444.0" y="900.0" name="rhotichook"/>
-  <anchor x="360.0" y="1776.0" name="top"/>
-  <anchor x="716.0" y="1776.0" name="top0315"/>
   <outline>
-    <component base="idotless" xOffset="24.0"/>
-    <component base="dieresisacutecomb.lc" xOffset="1160.0"/>
+    <component base="idotless"/>
+    <component base="dieresisacutecomb.lc" xOffset="1136.0" yOffset="20.0"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/01 23:10:14</string>
-      <key>com.schriftgestaltung.componentsAlignment</key>
-      <array>
-        <integer>-1</integer>
-        <integer>-1</integer>
-      </array>
+      <string>2018/09/08 22:26:07</string>
     </dict>
   </lib>
 </glyph>

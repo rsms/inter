@@ -12,25 +12,6 @@ languagesystem cyrl dflt;
 languagesystem grek dflt;
 
 
-# Prefix: Prefix
-# Common features shared by all weights
-
-# classes
-
-# gdef classes
-#table GDEF {
-#  GlyphClassDef @GDEF_BASE, @GDEF_LIGATURE, @GDEF_MARK, @GDEF_COMPONENT;
-#} GDEF;
-# Glyph Composition/Decomposition
-# Access All Alternates
-# Localized Forms
-# Fractions
-# Case alternates
-# Contextual Alternates
-# Stylistic set 1: open digits
-# Tabular numbers
-# Slashed zero
-
 @UC_ROMAN = [ 
   A - Z
   AE AEacute Aacute Abreve Acircumflex Adieresis Agrave Alpha Alphatonos
@@ -110,24 +91,50 @@ languagesystem grek dflt;
   dzeabkhasiancyrillic imacroncyrillic obarredcyrillic umacroncyrillic zhook
  ];
 
-@TNUM = [ 
-  zero.tnum one.tnum two.tnum three.tnum four.tnum five.tnum
-  six.tnum seven.tnum eight.tnum nine.tnum
- ];
+@TNUM = [ zero.tf
+one.tf
+two.tf
+three.tf
+four.tf
+five.tf
+six.tf
+seven.tf
+eight.tf
+nine.tf ];
 
-@TNUM_L = [ 
-  zero one two three four five
-  six seven eight nine
-  one.ss01 four.ss01 six.ss01 nine.ss01
-  period comma
- ];
+@TNUM_L = [ zero
+one
+two
+three
+four
+five
+six
+seven
+eight
+nine
+one.ss01
+four.ss01
+six.ss01
+nine.ss01
+period
+comma ];
 
-@TNUM_R = [ 
-  zero.tnum one.tnum two.tnum three.tnum four.tnum five.tnum
-  six.tnum seven.tnum eight.tnum nine.tnum
-  one.tnum.ss01 four.tnum.ss01 six.tnum.ss01 nine.tnum.ss01
-  period.tnum comma.tnum
- ];
+@TNUM_R = [ zero.tf
+one.tf
+two.tf
+three.tf
+four.tf
+five.tf
+six.tf
+seven.tf
+eight.tf
+nine.tf
+one.tf.ss01
+four.tf.ss01
+six.tf.ss01
+nine.tf.ss01
+period.tf
+comma.tf ];
 
 @SS01_L = [  one four six nine  ];
 
@@ -148,174 +155,7 @@ languagesystem grek dflt;
 
 @frac4 = [  zero.sup one.sup two.sup three.sup four.sup five.sup six.sup seven.sup eight.sup nine.sup  ];
 
-@GDEF_BASE = [ 
-  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-  a b c d e f g h i j k l m n o p q r s t u v w x y z
-  AE AEacute AEmacron Aacute Abreve
-  Acaron Acircumflex Adieresis Agrave Alpha Alphatonos Amacron Aogonek
-  Aogonek.NAV Aring Aringacute Atilde Beta Cacute Ccaron Ccedilla Ccircumflex
-  Dcaron Dcroat Eacute Ebreve Ecaron Ecircumflex Edieresis Edotaccent Egrave
-  Emacron Eng Eogonek Eogonek.NAV Epsilon Epsilon1 Epsilontonos Esh Eta Etatonos
-  Eth Gacute Gamma Gbar Gbreve Gcaron Gcircumflex Gcommaaccent Gsmallcap
-  Gsmallcaphook Hbar Hcircumflex Iacute Istroke Ibreve Icaron Icircumflex
-  Idieresis Idotaccent Igrave Imacron Iogonek Iota Iota1 Iotadieresis Iotatonos
-  Ismallcap Itilde Jcircumflex Kappa Kcaron Kcommaaccent Lacute Lcaron
-  Lcommaaccent Ldot L_slash L_bar Lsmallcap Mu Nacute Ncaron Ncommaaccent
-  Nsmallcap Ntilde Nu OE OEsmallcap Oacute Obar Obreve Ocaron Ocircumflex
-  Odieresis Ograve Ohorn Ohungarumlaut Omacron Omega Omicron Omicrontonos
-  Oogonek Oogonek.NAV Oslash Oslashacute Otilde Racute Rcaron Rcommaaccent Rho
-  Rsmallcap Rsmallcapinv Sacute Scaron Scedilla Schwa Scircumflex Tau Tbar
-  Tcaron Uacute Ubreve Ucaron Ucircumflex Udieresis Ugrave Uhorn Uhungarumlaut
-  Umacron Uogonek Upsilon Upsilondieresis Upsilontonos Uring Utilde Wacute
-  Wcircumflex Wdieresis Wgrave Yacute Ycircumflex Ydieresis Ygrave Ysmallcap
-  Zacute Zbar Zcaron Zdotaccent Zeta a_uni02DE aacute abreve acaron acircumflex
-  adieresis ae aeacute aemacron agrave alpha alphatonos amacron aogonek
-  aogonek.NAV aring aringacute ascript ascriptturn atilde aturn babygamma bbar
-  bhook bullseye cacute ccaron ccedilla ccircumflex ccurl cedilla cstretch
-  dcaron dcroat dhook idotless drthook dyogh dz dzcurl eacute ebreve ecaron
-  ecircumflex edieresis edotaccent egrave emacron eng eogonek eogonek.NAV
-  epsilon epsilon1 epsilon1rev epsilon1revclosed epsilon1revhook epsilonclosed
-  epsilontonos erev esh eshcurl eshshortrev eta etatonos eturn finalkaf finalmem
-  hturnhook2 franc gacute gamma1 gbar gbreve gcaron gcircumflex gcommaaccent
-  gcursive ghook glottalstop glottalstopbar glottalstopbarrev glottalstopinv
-  glottalstoprevinv hbar hcircumflex henghook hhook hturn iacute ibar ibreve
-  icaron icircumflex idieresis igrave imacron iogonek iota iota1 iotadieresis
-  iotadieresistonos iotatonos itilde jcircumflex jcrosstail jdotlessbar
-  jhookdblbar kappa kcaron kcommaaccent kgreenlandic kturn lacute lbar lbelt
-  lcaron lcommaaccent ldot lmidtilde longs lrthook lslash lyogh mhook mturn
-  mturndescend nacute napostrophe ncaron ncommaaccent nlfthook nrthook ntilde nu
-  o_uni02DE oacute obar obreve ocaron ocircumflex odieresis oe ogonek ograve
-  ohorn ohungarumlaut omacron omega omegaclosed omegatonos omicron omicrontonos
-  oogonek oogonek.NAV oopen oslash oslashacute otilde philatin psi qhook racute
-  rcaron rcommaaccent rdescend rfishhook rfishhookrev rho rrthook rturn
-  rturnascend rturnrthook sacute scaron scedilla schwa schwahook scircumflex
-  srthook tbar tcaron tccurl tesh trthook ts tturn uacute ubar ubreve ucaron
-  ucircumflex udieresis ugrave uhorn uhungarumlaut umacron
-  uni006A.ccmp Cdotaccent cdotaccent Gdotaccent gdotaccent uni012F.ccmp
-  Tcommaaccent tcommaaccent nlegrightlong Udieresismacron udieresismacron
-  Udieresisacute udieresisacute Udieresiscaron udieresiscaron Udieresisgrave
-  udieresisgrave Adieresismacron adieresismacron Adotmacron adotmacron
-  Oogonekmacron oogonekmacron jcaron uni01F8 uni01F9 Adblgrave adblgrave
-  Ainvertedbreve ainvertedbreve Edblgrave edblgrave Einvertedbreve
-  einvertedbreve Idblgrave idblgrave Iinvertedbreve iinvertedbreve Odblgrave
-  odblgrave Oinvertedbreve oinvertedbreve Rdblgrave rdblgrave Rinvertedbreve
-  rinvertedbreve Udblgrave udblgrave Uinvertedbreve uinvertedbreve Scommaaccent
-  scommaaccent uni021A uni021B uni021E uni021F uni0226 uni0227 uni0228 uni0229
-  uni022A uni022B uni022C uni022D uni022E uni022F uni0230 uni0231 uni0232
-  uni0233 jdotless uni0243 uni0244 uni0248 uni0249 uni0249.ccmp uni024C uni024D
-  uni024E uni024F uni0268.ccmp ezh ezhcurl uni0299 uni029C jcrosstail.ccmp feng
-  uni02AB uni02AC hturnlthook rhotichookmod uni037F Upsilonhooksymbol
-  Upsilonacutehooksymbolgreek Upsilondieresishooksymbolgreek pisymbolgreek
-  sigmalunatesymbolgreek yotgreek uni03F3.ccmp uni03F4 uni03F9 uni03FA uni0400
-  afii10023 afii10052 afii10053 afii10054 afii10055 afii10056 afii10057
-  afii10061 uni040D afii10062 afii10017 afii10019 afii10020 afii10022 afii10024
-  afii10025 afii10026 afii10027 afii10029 afii10030 afii10031 afii10032
-  afii10034 afii10035 afii10036 afii10037 afii10039 afii10041 afii10045
-  afii10047 afii10048 afii10049 afii10065 vecyrillic gecyrillic decyrillic
-  iecyrillic zhecyrillic zecyrillic iicyrillic iishortcyrillic kacyrillic
-  elcyrillic emcyrillic encyrillic ocyrillic pecyrillic ercyrillic escyrillic
-  tecyrillic ucyrillic efcyrillic khacyrillic tsecyrillic checyrillic
-  shacyrillic shchacyrillic yericyrillic ereversedcyrillic iucyrillic iacyrillic
-  uni0450 iocyrillic gjecyrillic ecyrillic dzecyrillic icyrillic uni0456.ccmp
-  yicyrillic jecyrillic uni0458.ccmp kjecyrillic uni045D ushortcyrillic
-  Omegacyrillic omegacyrillic ksicyrillic psicyrillic afii10147 fitacyrillic
-  afii10148 izhitsacyrillic Izhitsadblgravecyrillic izhitsadblgravecyrillic
-  omegaroundcyrillic otcyrillic Koppacyrillic koppacyrillic uni048A uni048B
-  Ghestrokecyrillic ghestrokecyrillic Zhedescendercyrillic zhedescendercyrillic
-  Zedescendercyrillic zedescendercyrillic kadescendercyrillic
-  Endescendercyrillic endescendercyrillic Haabkhasiancyrillic
-  haabkhasiancyrillic Esdescendercyrillic esdescendercyrillic
-  Tedescendercyrillic tedescendercyrillic Ustraightcyrillic
-  Ustraightstrokecyrillic Hadescendercyrillic hadescendercyrillic
-  Chedescendercyrillic chedescendercyrillic Shhacyrillic shhacyrillic
-  Cheabkhasiancyrillic cheabkhasiancyrillic palochkacyrillic Zhebrevecyrillic
-  zhebrevecyrillic uni04C6 uni04C9 uni04CA Chekhakassiancyrillic
-  chekhakassiancyrillic uni04CD uni04CE uni04CF Abrevecyrillic abrevecyrillic
-  Adieresiscyrillic adieresiscyrillic Aiecyrillic aiecyrillic Iebrevecyrillic
-  iebrevecyrillic Schwacyrillic schwacyrillic Schwadieresiscyrillic
-  schwadieresiscyrillic Zhedieresiscyrillic zhedieresiscyrillic
-  Zedieresiscyrillic zedieresiscyrillic Imacroncyrillic imacroncyrillic
-  Idieresiscyrillic idieresiscyrillic Odieresiscyrillic odieresiscyrillic
-  Obarredcyrillic obarredcyrillic Obarreddieresiscyrillic
-  obarreddieresiscyrillic uni04EC uni04ED Umacroncyrillic umacroncyrillic
-  Udieresiscyrillic udieresiscyrillic Uhungarumlautcyrillic
-  uhungarumlautcyrillic Chedieresiscyrillic chedieresiscyrillic uni04F6 uni04F7
-  Yerudieresiscyrillic yerudieresiscyrillic uni04FC uni04FD uni04FE uni04FF
-  uni052F Aringbelow aringbelow Bdotaccent bdotaccent Bdotbelow bdotbelow
-  Blinebelow blinebelow Ccedillaacute ccedillaacute Ddotaccent ddotaccent
-  Ddotbelow ddotbelow Dlinebelow dlinebelow Dcedilla dcedilla Dcircumflexbelow
-  dcircumflexbelow Emacrongrave emacrongrave Emacronacute emacronacute
-  Ecircumflexbelow ecircumflexbelow Etildebelow etildebelow Ecedillabreve
-  ecedillabreve Fdotaccent fdotaccent Gmacron gmacron Hdotaccent hdotaccent
-  Hdotbelow hdotbelow Hdieresis hdieresis Hbrevebelow hbrevebelow Itildebelow
-  itildebelow uni1E2D.ccmp Idieresisacute idieresisacute Kacute kacute Kdotbelow
-  kdotbelow Klinebelow klinebelow Ldotbelow ldotbelow Ldotbelowmacron
-  ldotbelowmacron Llinebelow llinebelow Lcircumflexbelow lcircumflexbelow Macute
-  macute Mdotaccent mdotaccent Mdotbelow mdotbelow Ndotaccent ndotaccent
-  Ndotbelow ndotbelow Nlinebelow nlinebelow Ncircumflexbelow ncircumflexbelow
-  Otildeacute otildeacute Otildedieresis otildedieresis Omacrongrave
-  omacrongrave Omacronacute omacronacute Pacute pacute Pdotaccent pdotaccent
-  Rdotaccent rdotaccent Rdotbelow rdotbelow Rdotbelowmacron rdotbelowmacron
-  Rlinebelow rlinebelow Sdotaccent sdotaccent Sdotbelow sdotbelow
-  Sacutedotaccent sacutedotaccent Scarondotaccent scarondotaccent
-  Sdotbelowdotaccent sdotbelowdotaccent Tdotaccent tdotaccent Tdotbelow
-  tdotbelow Tlinebelow tlinebelow Tcircumflexbelow tcircumflexbelow
-  Udieresisbelow udieresisbelow Utildebelow utildebelow Ucircumflexbelow
-  ucircumflexbelow Utildeacute utildeacute Umacrondieresis umacrondieresis
-  Vtilde vtilde Vdotbelow vdotbelow Wdotaccent wdotaccent Wdotbelow wdotbelow
-  Xdotaccent xdotaccent Xdieresis xdieresis Ydotaccent ydotaccent Zcircumflex
-  zcircumflex Zdotbelow zdotbelow Zlinebelow zlinebelow hlinebelow tdieresis
-  wring yring arighthalfring Adotbelow adotbelow Ahookabove ahookabove
-  Acircumflexacute acircumflexacute Acircumflexgrave acircumflexgrave
-  Acircumflexhookabove acircumflexhookabove Acircumflextilde acircumflextilde
-  Acircumflexdotbelow acircumflexdotbelow Abreveacute abreveacute Abrevegrave
-  abrevegrave Abrevehookabove abrevehookabove Abrevetilde abrevetilde
-  Abrevedotbelow abrevedotbelow Edotbelow edotbelow Ehookabove ehookabove Etilde
-  etilde Ecircumflexacute ecircumflexacute Ecircumflexgrave ecircumflexgrave
-  Ecircumflexhookabove ecircumflexhookabove Ecircumflextilde ecircumflextilde
-  Ecircumflexdotbelow ecircumflexdotbelow Ihookabove ihookabove Idotbelow
-  idotbelow uni1ECB.ccmp Odotbelow odotbelow Ohookabove ohookabove
-  Ocircumflexacute ocircumflexacute Ocircumflexgrave ocircumflexgrave
-  Ocircumflexhookabove ocircumflexhookabove Ocircumflextilde ocircumflextilde
-  Ocircumflexdotbelow ocircumflexdotbelow Ohornacute ohornacute Ohorngrave
-  ohorngrave Ohornhookabove ohornhookabove Ohorntilde ohorntilde Ohorndotbelow
-  ohorndotbelow Udotbelow udotbelow Uhookabove uhookabove Uhornacute uhornacute
-  Uhorngrave uhorngrave Uhornhookabove uhornhookabove Uhorntilde uhorntilde
-  Uhorndotbelow uhorndotbelow Ydotbelow ydotbelow Yhookabove yhookabove Ytilde
-  ytilde uni1F00 uni1F01 uni1F02 uni1F03 uni1F04 uni1F05 uni1F06 uni1F07 uni1F08
-  uni1F09 uni1F0A uni1F0B uni1F0C uni1F0D uni1F0E uni1F0F uni1F10 uni1F11
-  uni1F12 uni1F13 uni1F14 uni1F15 uni1F18 uni1F19 uni1F1A uni1F1B uni1F1C
-  uni1F1D uni1F20 uni1F21 uni1F22 uni1F23 uni1F24 uni1F25 uni1F26 uni1F27
-  uni1F28 uni1F29 uni1F2A uni1F2B uni1F2C uni1F2D uni1F2E uni1F2F uni1F30
-  uni1F31 uni1F32 uni1F33 uni1F34 uni1F35 uni1F36 uni1F37 uni1F38 uni1F39
-  uni1F3A uni1F3B uni1F3C uni1F3D uni1F3E uni1F3F uni1F40 uni1F41 uni1F42
-  uni1F43 uni1F44 uni1F45 uni1F48 uni1F49 uni1F4A uni1F4B uni1F4C uni1F4D
-  uni1F50 uni1F51 uni1F52 uni1F53 uni1F54 uni1F55 uni1F56 uni1F57 uni1F59
-  uni1F5B uni1F5D uni1F5F uni1F60 uni1F61 uni1F62 uni1F63 uni1F64 uni1F65
-  uni1F66 uni1F67 uni1F70 uni1F71 uni1F72 uni1F73 uni1F74 uni1F75 uni1F76
-  uni1F77 uni1F78 uni1F79 uni1F7A uni1F7B uni1F7C uni1F7D uni1F80 uni1F81
-  uni1F82 uni1F83 uni1F84 uni1F85 uni1F86 uni1F87 uni1F88 uni1F89 uni1F8A
-  uni1F8B uni1F8C uni1F8D uni1F8E uni1F8F uni1F90 uni1F91 uni1F92 uni1F93
-  uni1F94 uni1F95 uni1F96 uni1F97 uni1F98 uni1F99 uni1F9A uni1F9B uni1F9C
-  uni1F9D uni1F9E uni1F9F uni1FA0 uni1FA1 uni1FA2 uni1FA3 uni1FA4 uni1FA5
-  uni1FA6 uni1FA7 uni1FB0 uni1FB1 uni1FB2 uni1FB3 uni1FB4 uni1FB6 uni1FB7
-  uni1FB8 uni1FB9 uni1FBA uni1FBB uni1FBC uni1FC2 uni1FC3 uni1FC4 uni1FC6
-  uni1FC7 uni1FC8 uni1FC9 uni1FCA uni1FCB uni1FCC uni1FD0 uni1FD1 uni1FD2
-  uni1FD3 uni1FD6 uni1FD7 uni1FD8 uni1FD9 uni1FDA uni1FDB uni1FE0 uni1FE1
-  uni1FE2 uni1FE3 uni1FE4 uni1FE5 uni1FE6 uni1FE7 uni1FE8 uni1FE9 uni1FEA
-  uni1FEB uni1FEC uni1FF2 uni1FF3 uni1FF4 uni1FF6 uni1FF7 uni1FF8 uni1FF9 dong
-  uogonek upsilon upsilondieresis upsilondieresistonos upsilonlatin upsilontonos
-  uring utilde vscript vturn wacute wcircumflex wdieresis wgrave wturn yacute
-  ycircumflex ydieresis ygrave yturn zacute zbar zcaron zcurl zdotaccent zrthook
- ];
-
-@GDEF_LIGATURE = [  slongdotaccent  ];
-
-@GDEF_MARK = [  acutecomb acutedblnosp acuterightnosp acutesubnosp anglesupnosp archdblsubnosp breveinvnosp breveinvsubnosp brevenosp brevesubnosp bridgeinvsubnosp bridgesubnosp candrabindunosp cedillanosp circumflexnosp circumflexsubnosp commaaccent commasuprevnosp commaturnsupnosp diaeresistonosnosp dieresisnosp dotbelow dotdblsubnosp dotnosp gravecomb graveleftnosp gravesubnosp hook iotasubnosp linevertdblnosp linevertnosp linevertsubnosp macroncomb macronsubnosp minussubnosp ogoneknosp overscoredblnosp overscorenosp plussubnosp ringlefthalfsubnosp ringnosp ringrighthalfsubnosp ringsubnosp seagullsubnosp squaresubnosp tackdownsubnosp tackleftsubnosp tackrightsubnosp tackupsubnosp tildecomb tildesubnosp tildevertsupnosp underscoredblnosp underscorenosp caroncmb dblgravecmb commaabovecmb commaaboverightcmb commabelowcmb caronbelowcmb perispomenigreekcmb koroniscmb uni0346 uni0347 uni0348 uni0349 uni034A uni034B uni034C uni034D uni034E uni0350 uni0351 uni0352 uni0353 uni0354 uni0355 uni0356 uni0357 uni0359 uni035A uni035B uni035C uni035D uni035E uni035F tildedoublecmb breveinverteddoublecmb uni0362 uni0363 uni0364 uni0365 uni0366 uni0367 uni0368 uni0369 uni036A uni036B uni036C uni036D uni036E uni036F titlocyrilliccmb palatalizationcyrilliccmb uni1DC0 uni1DC1 uni1DC2 uni1DC3 uni1DC4 uni1DC5 uni1DC6 uni1DC7 uni1DC8 uni1DC9 uni1DCA uni1DCB uni1DCC uni1DCD uni1DCE uni1DCF uni1DD0 uni1DD1 uni1DD2 uni1DD3 uni1DD4 uni1DD5 uni1DD6 uni1DD7 uni1DD8 uni1DD9 uni1DDA uni1DDB uni1DDC uni1DDD uni1DDE uni1DDF uni1DE0 uni1DE1 uni1DE2 uni1DE3 uni1DE4 uni1DE5 uni1DE6 uni1DE7 uni1DE8 uni1DE9 uni1DEA uni1DEB uni1DEC uni1DED uni1DEE uni1DEF uni1DF0 uni1DF1 uni1DF2 uni1DF3 uni1DF4 uni1DF5 uni1DFD uni1DFE uni1DFF xsupnosp  ];
-
-@GDEF_COMPONENT = [  acutedotcomb.cn breveacutecomb.cn brevegravecomb.cn brevehookcomb.cn brevetildecomb.cn carondotcomb.cn circumflexacutecomb.cn circumflexgravecomb.cn circumflexhookcomb.cn circumflextildecomb.cn commaaccentrotate.cn dieresisacutecomb.cn dieresiscaroncomb.cn dieresisgravecomb.cn dieresismacroncomb.cn dotmacroncomb.cn macronacutecomb.cn macrondieresiscomb.cn macrongravecomb.cn ringacute.cn tildeacutecomb.cn tildedieresiscomb.cn tildemacroncomb.cn tonebarextrahighmod.cn tonebarhighmod.cn tonebarmidmod.cn tonebarlowmod.cn tonebarextralowmod.cn  ];
-
-@ccmp_acc = [ gravecomb acutecomb tildecomb brevetildecomb.cn brevehookcomb.cn breveacutecomb.cn
+@CCMP_ACC = [ gravecomb acutecomb tildecomb brevetildecomb.cn brevehookcomb.cn breveacutecomb.cn
 circumflextildecomb.cn circumflexhookcomb.cn circumflexgravecomb.cn circumflexacutecomb.cn
 brevegravecomb.cn macroncomb dieresismacroncomb.cn
 dieresisacutecomb.cn dieresiscaroncomb.cn dieresisgravecomb.cn dotmacroncomb.cn
@@ -400,590 +240,619 @@ uniFE21 uniFE22 uniFE23 uniFE24 uniFE25 uniFE26 ];
 
 @CASE_R = [  @CASE_DELIM_R @CASE_NONDELIM_R  ];
 
-feature mark {
-  ;#insert from script mark
-} mark;
-
-feature mkmk {
-  ;#insert from script mkmk
-} mkmk;
-
 feature ccmp {
-  # Transpose sequences like /i /gravecomb -> /idotless /gravecomb
-  lookup ccmp02 {
-    sub i' @ccmp_acc by idotless;
-    sub j' @ccmp_acc by jdotless;
-    sub ibar' @ccmp_acc by uni0268.ccmp;
-    sub iogonek' @ccmp_acc by uni012F.ccmp; # iogonek is generated
-    sub uni0249' @ccmp_acc by uni0249.ccmp;
-    sub jcrosstail' @ccmp_acc by jcrosstail.ccmp;
-    sub jsuper' @ccmp_acc by uni02B2.ccmp;
-    sub yotgreek' @ccmp_acc by jdotless;
-    sub icyrillic' @ccmp_acc by idotless;
-    sub jecyrillic' @ccmp_acc by jdotless;
-    sub itildebelow' @ccmp_acc by uni1E2D.ccmp; # uni1E2D.ccmp is generated
-    sub idotbelow' @ccmp_acc by uni1ECB.ccmp; # both are generated
-    sub isuperior' @ccmp_acc by uni2071.ccmp;
-  } ccmp02;
+# Transpose sequences like /i /gravecomb -> /idotless /gravecomb
+lookup ccmp02 {
+  sub i' @CCMP_ACC by idotless;
+  sub j' @CCMP_ACC by jdotless;
+  sub ibar' @CCMP_ACC by uni0268.ccmp;
+  sub iogonek' @CCMP_ACC by uni012F.ccmp; # iogonek is generated
+  sub uni0249' @CCMP_ACC by uni0249.ccmp;
+  sub jcrosstail' @CCMP_ACC by jcrosstail.ccmp;
+  sub jsuper' @CCMP_ACC by uni02B2.ccmp;
+  sub yotgreek' @CCMP_ACC by jdotless;
+  sub icyrillic' @CCMP_ACC by idotless;
+  sub jecyrillic' @CCMP_ACC by jdotless;
+  sub itildebelow' @CCMP_ACC by uni1E2D.ccmp; # uni1E2D.ccmp is generated
+  sub idotbelow' @CCMP_ACC by uni1ECB.ccmp; # both are generated
+  sub isuperior' @CCMP_ACC by uni2071.ccmp;
+} ccmp02;
 
-  lookup ccmp03 {
+lookup ccmp03 {
 
-  sub d caroncmb by dcaron;
-  sub l caroncmb by lcaron;
-  sub t caroncmb by tcaron;
+sub d caroncmb by dcaron;
+sub l caroncmb by lcaron;
+sub t caroncmb by tcaron;
 
-  sub A gravecomb by Agrave;
-  sub A acutecomb by Aacute;
-  sub A circumflexnosp by Acircumflex;
-  sub A tildecomb by Atilde;
-  sub A dieresisnosp by Adieresis;
-  sub A ringnosp by Aring;
-  sub A ringacute.cn by Aringacute;
-  sub C cedillanosp by Ccedilla;
-  sub E gravecomb by Egrave;
-  sub E acutecomb by Eacute;
-  sub E circumflexnosp by Ecircumflex;
-  sub E dieresisnosp by Edieresis;
-  sub I gravecomb by Igrave;
-  sub I acutecomb by Iacute;
-  sub I circumflexnosp by Icircumflex;
-  sub I dieresisnosp by Idieresis;
-  sub N tildecomb by Ntilde;
-  sub O gravecomb by Ograve;
-  sub O acutecomb by Oacute;
-  sub O circumflexnosp by Ocircumflex;
-  sub O tildecomb by Otilde;
-  sub O dieresisnosp by Odieresis;
-  sub U gravecomb by Ugrave;
-  sub U acutecomb by Uacute;
-  sub U circumflexnosp by Ucircumflex;
-  sub U dieresisnosp by Udieresis;
-  sub Y acutecomb by Yacute;
-  sub a gravecomb by agrave;
-  sub a acutecomb by aacute;
-  sub a circumflexnosp by acircumflex;
-  sub a tildecomb by atilde;
-  sub a dieresisnosp by adieresis;
-  sub a ringnosp by aring;
-  sub a ringacute.cn by aringacute;
-  sub c cedillanosp by ccedilla;
-  sub e gravecomb by egrave;
-  sub e acutecomb by eacute;
-  sub e circumflexnosp by ecircumflex;
-  sub e dieresisnosp by edieresis;
-  sub idotless gravecomb by igrave;
-  sub idotless acutecomb by iacute;
-  sub idotless circumflexnosp by icircumflex;
-  sub idotless dieresisnosp by idieresis;
-  sub n tildecomb by ntilde;
-  sub o gravecomb by ograve;
-  sub o acutecomb by oacute;
-  sub o circumflexnosp by ocircumflex;
-  sub o tildecomb by otilde;
-  sub o dieresisnosp by odieresis;
-  sub u gravecomb by ugrave;
-  sub u acutecomb by uacute;
-  sub u circumflexnosp by ucircumflex;
-  sub u dieresisnosp by udieresis;
-  sub y acutecomb by yacute;
-  sub y dieresisnosp by ydieresis;
-  sub A macroncomb by Amacron;
-  sub a macroncomb by amacron;
-  sub A brevenosp by Abreve;
-  sub a brevenosp by abreve;
-  sub A ogoneknosp by Aogonek;
-  sub a ogoneknosp by aogonek;
-  sub C acutecomb by Cacute;
-  sub c acutecomb by cacute;
-  sub C circumflexnosp by Ccircumflex;
-  sub c circumflexnosp by ccircumflex;
-  sub C dotnosp by Cdotaccent;
-  sub c dotnosp by cdotaccent;
-  sub C caroncmb by Ccaron;
-  sub c caroncmb by ccaron;
-  sub D caroncmb by Dcaron;
-  sub E macroncomb by Emacron;
-  sub e macroncomb by emacron;
-  sub E brevenosp by Ebreve;
-  sub e brevenosp by ebreve;
-  sub E dotnosp by Edotaccent;
-  sub e dotnosp by edotaccent;
-  sub E ogoneknosp by Eogonek;
-  sub e ogoneknosp by eogonek;
-  sub E caroncmb by Ecaron;
-  sub e caroncmb by ecaron;
-  sub G circumflexnosp by Gcircumflex;
-  sub g circumflexnosp by gcircumflex;
-  sub G brevenosp by Gbreve;
-  sub g brevenosp by gbreve;
-  sub G dotnosp by Gdotaccent;
-  sub g dotnosp by gdotaccent;
-  sub G commaaccent by Gcommaaccent;
-  sub g commaaccentrotate.cn by gcommaaccent;
-  sub H circumflexnosp by Hcircumflex;
-  sub h circumflexnosp by hcircumflex;
-  sub I tildecomb by Itilde;
-  sub idotless tildecomb by itilde;
-  sub I macroncomb by Imacron;
-  sub idotless macroncomb by imacron;
-  sub I brevenosp by Ibreve;
-  sub idotless brevenosp by ibreve;
-  sub I ogoneknosp by Iogonek;
-  sub i ogoneknosp by iogonek;
-  sub I dotnosp by Idotaccent;
-  sub J circumflexnosp by Jcircumflex;
-  sub jdotless circumflexnosp by jcircumflex;
-  sub K commaaccent by Kcommaaccent;
-  sub k commaaccent by kcommaaccent;
-  sub L acutecomb by Lacute;
-  sub l acutecomb by lacute;
-  sub L commaaccent by Lcommaaccent;
-  sub l commaaccent by lcommaaccent;
-  sub L dotnosp by Ldot;
-  sub l dotnosp by ldot;
-  sub N acutecomb by Nacute;
-  sub n acutecomb by nacute;
-  sub N commaaccent by Ncommaaccent;
-  sub n commaaccent by ncommaaccent;
-  sub N caroncmb by Ncaron;
-  sub n caroncmb by ncaron;
-  sub O macroncomb by Omacron;
-  sub o macroncomb by omacron;
-  sub O brevenosp by Obreve;
-  sub o brevenosp by obreve;
-  sub O acutedblnosp by Ohungarumlaut;
-  sub o acutedblnosp by ohungarumlaut;
-  sub R acutecomb by Racute;
-  sub r acutecomb by racute;
-  sub R commaaccent by Rcommaaccent;
-  sub r commaaccent by rcommaaccent;
-  sub R caroncmb by Rcaron;
-  sub r caroncmb by rcaron;
-  sub S acutecomb by Sacute;
-  sub s acutecomb by sacute;
-  sub S circumflexnosp by Scircumflex;
-  sub s circumflexnosp by scircumflex;
-  sub S cedillanosp by Scedilla;
-  sub s cedillanosp by scedilla;
-  sub S commaaccent by Scommaaccent;
-  sub s commaaccent by scommaaccent;
-  sub S caroncmb by Scaron;
-  sub s caroncmb by scaron;
-  sub T commaaccent by uni021A;
-  sub t commaaccent by uni021B;
-  sub T cedillanosp by Tcommaaccent;
-  sub t cedillanosp by tcommaaccent;
-  sub T caroncmb by Tcaron;
-  sub U tildecomb by Utilde;
-  sub u tildecomb by utilde;
-  sub U macroncomb by Umacron;
-  sub u macroncomb by umacron;
-  sub U brevenosp by Ubreve;
-  sub u brevenosp by ubreve;
-  sub U ringnosp by Uring;
-  sub u ringnosp by uring;
-  sub U acutedblnosp by Uhungarumlaut;
-  sub u acutedblnosp by uhungarumlaut;
-  sub U ogoneknosp by Uogonek;
-  sub u ogoneknosp by uogonek;
-  sub W circumflexnosp by Wcircumflex;
-  sub w circumflexnosp by wcircumflex;
-  sub Y circumflexnosp by Ycircumflex;
-  sub y circumflexnosp by ycircumflex;
-  sub Y dieresisnosp by Ydieresis;
-  sub Z acutecomb by Zacute;
-  sub z acutecomb by zacute;
-  sub Z dotnosp by Zdotaccent;
-  sub z dotnosp by zdotaccent;
-  sub Z caroncmb by Zcaron;
-  sub z caroncmb by zcaron;
-  sub AE acutecomb by AEacute;
-  sub ae acutecomb by aeacute;
-  sub Oslash acutecomb by Oslashacute;
-  sub oslash acutecomb by oslashacute;
-  #sub z caroncmb by zcaron;
-  sub W gravecomb by Wgrave;
-  sub w gravecomb by wgrave;
-  sub W acutecomb by Wacute;
-  sub w acutecomb by wacute;
-  sub W dieresisnosp by Wdieresis;
-  sub w dieresisnosp by wdieresis;
-  sub Y gravecomb by Ygrave;
-  sub y gravecomb by ygrave;
-  sub jdotless caroncmb by jcaron;
-  sub A dotbelow by Adotbelow;
-  sub a dotbelow by adotbelow;
-  sub A hook by Ahookabove;
-  sub a hook by ahookabove;
-  #sub A circumflexacutecomb.cn by uni1EA4;
-  sub A circumflexnosp acutecomb by Acircumflexacute;
-  sub a circumflexacutecomb.cn by acircumflexacute;
-  #sub A circumflexgravecomb.cn by uni1EA6;
-  sub A circumflexnosp gravecomb by Acircumflexgrave;
-  sub a circumflexgravecomb.cn by acircumflexgrave;
-  #sub A circumflexhookcomb.cn by uni1EA8;
-  sub A circumflexnosp hook by Acircumflexhookabove;
-  sub a circumflexhookcomb.cn by acircumflexhookabove;
-  #sub A circumflextildecomb.cn by uni1EAA;
-  sub A circumflexnosp tildecomb by Acircumflextilde;
-  sub a circumflextildecomb.cn by acircumflextilde;
-  #sub A breveacutecomb.cn by uni1EAE;
-  sub A brevenosp acutecomb by Abreveacute;
-  sub a breveacutecomb.cn by abreveacute;
-  #sub A brevegravecomb.cn by uni1EB0;
-  sub A brevenosp gravecomb by Abrevegrave;
-  sub a brevegravecomb.cn by abrevegrave;
-  #sub A brevehookcomb.cn by uni1EB2;
-  sub A brevenosp hook by Abrevehookabove;
-  sub a brevehookcomb.cn by abrevehookabove;
-  sub A brevetildecomb.cn by Abrevetilde;
-  sub a brevetildecomb.cn by abrevetilde;
-  sub E dotbelow by Edotbelow;
-  sub e dotbelow by edotbelow;
-  sub E hook by Ehookabove;
-  sub e hook by ehookabove;
-  sub E tildecomb by Etilde;
-  sub e tildecomb by etilde;
-  #sub E circumflexacutecomb.cn by uni1EBE;
-  sub E circumflexnosp acutecomb by Ecircumflexacute;
-  sub e circumflexacutecomb.cn by ecircumflexacute;
-  #sub E circumflexgravecomb.cn by uni1EC0;
-  sub E circumflexnosp gravecomb by Ecircumflexgrave;
-  sub e circumflexgravecomb.cn by ecircumflexgrave;
-  #sub E circumflexhookcomb.cn by uni1EC2;
-  sub E circumflexnosp hook by Ecircumflexhookabove;
-  sub e circumflexhookcomb.cn by ecircumflexhookabove;
-  #sub E circumflextildecomb.cn by uni1EC4;
-  sub E circumflexnosp tildecomb by Ecircumflextilde;
-  sub e circumflextildecomb.cn by ecircumflextilde;
-  sub I hook by Ihookabove;
-  sub idotless hook by ihookabove;
-  sub I dotbelow by Idotbelow;
-  sub i dotbelow by idotbelow;
-  sub O dotbelow by Odotbelow;
-  sub o dotbelow by odotbelow;
-  sub O hook by Ohookabove;
-  sub o hook by ohookabove;
-  #sub O circumflexacutecomb.cn by uni1ED0;
-  sub O circumflexnosp acutecomb by Ocircumflexacute;
-  sub o circumflexacutecomb.cn by ocircumflexacute;
-  #sub O circumflexgravecomb.cn by uni1ED2;
-  sub O circumflexnosp gravecomb by Ocircumflexgrave;
-  sub o circumflexgravecomb.cn by ocircumflexgrave;
-  #sub O circumflexhookcomb.cn by uni1ED4;
-  sub O circumflexnosp hook by Ocircumflexhookabove;
-  sub o circumflexhookcomb.cn by ocircumflexhookabove;
-  #sub O circumflextildecomb.cn by uni1ED6;
-  sub O circumflexnosp tildecomb by Ocircumflextilde;
-  sub o circumflextildecomb.cn by ocircumflextilde;
-  sub Ohorn acutecomb by Ohornacute;
-  sub ohorn acutecomb by ohornacute;
-  sub Ohorn gravecomb by Ohorngrave;
-  sub ohorn gravecomb by ohorngrave;
-  sub Ohorn hook by Ohornhookabove;
-  sub ohorn hook by ohornhookabove;
-  sub Ohorn tildecomb by Ohorntilde;
-  sub ohorn tildecomb by ohorntilde;
-  sub Ohorn dotbelow by Ohorndotbelow;
-  sub ohorn dotbelow by ohorndotbelow;
-  sub U dotbelow by Udotbelow;
-  sub u dotbelow by udotbelow;
-  sub U hook by Uhookabove;
-  sub u hook by uhookabove;
-  sub Uhorn acutecomb by Uhornacute;
-  sub uhorn acutecomb by uhornacute;
-  sub Uhorn gravecomb by Uhorngrave;
-  sub uhorn gravecomb by uhorngrave;
-  sub Uhorn hook by Uhornhookabove;
-  sub uhorn hook by uhornhookabove;
-  sub Uhorn tildecomb by Uhorntilde;
-  sub uhorn tildecomb by uhorntilde;
-  sub Uhorn dotbelow by Uhorndotbelow;
-  sub uhorn dotbelow by uhorndotbelow;
-  sub Y dotbelow by Ydotbelow;
-  sub y dotbelow by ydotbelow;
-  sub Y hook by Yhookabove;
-  sub y hook by yhookabove;
-  sub Y tildecomb by Ytilde;
-  sub y tildecomb by ytilde;
-  sub A caroncmb by Acaron;
-  sub a caroncmb by acaron;
-  sub I caroncmb by Icaron;
-  sub idotless caroncmb by icaron;
-  sub O caroncmb by Ocaron;
-  sub o caroncmb by ocaron;
-  sub U caroncmb by Ucaron;
-  sub u caroncmb by ucaron;
-  #sub U dieresismacroncomb.cn by uni01D5;
-  sub U dieresisnosp macroncomb by Udieresismacron;
-  sub u dieresismacroncomb.cn by udieresismacron;
-  #sub U dieresisacutecomb.cn by uni01D7;
-  sub U dieresisnosp acutecomb by Udieresisacute;
-  sub u dieresisacutecomb.cn by udieresisacute;
-  #sub U dieresiscaroncomb.cn by uni01D9;
-  sub U dieresisnosp caroncmb by Udieresiscaron;
-  sub u dieresiscaroncomb.cn by udieresiscaron;
-  #sub U dieresisgravecomb.cn by uni01DB;
-  sub U dieresisnosp gravecomb by Udieresisgrave;
-  sub u dieresisgravecomb.cn by udieresisgrave;
-  #sub A dieresismacroncomb.cn by uni01DE;
-  sub A dieresisnosp macroncomb by Adieresismacron;
-  sub a dieresismacroncomb.cn by adieresismacron;
-  #sub A dotmacroncomb.cn by uni01E0;
-  sub A dotnosp macroncomb by Adotmacron;
-  sub a dotmacroncomb.cn by adotmacron;
-  sub AE macroncomb by AEmacron;
-  sub ae macroncomb by aemacron;
-  sub G caroncmb by Gcaron;
-  sub g caroncmb by gcaron;
-  sub K caroncmb by Kcaron;
-  sub k caroncmb by kcaron;
-  sub O ogoneknosp by Oogonek;
-  sub o ogoneknosp by oogonek;
-  sub G acutecomb by Gacute;
-  sub g acutecomb by gacute;
-  sub N gravecomb by uni01F8;
-  sub n gravecomb by uni01F9;
-  sub A dblgravecmb by Adblgrave;
-  sub a dblgravecmb by adblgrave;
-  sub A breveinvnosp by Ainvertedbreve;
-  sub a breveinvnosp by ainvertedbreve;
-  sub E dblgravecmb by Edblgrave;
-  sub e dblgravecmb by edblgrave;
-  sub E breveinvnosp by Einvertedbreve;
-  sub e breveinvnosp by einvertedbreve;
-  sub I dblgravecmb by Idblgrave;
-  sub idotless dblgravecmb by idblgrave;
-  sub I breveinvnosp by Iinvertedbreve;
-  sub idotless breveinvnosp by iinvertedbreve;
-  sub O dblgravecmb by Odblgrave;
-  sub o dblgravecmb by odblgrave;
-  sub O breveinvnosp by Oinvertedbreve;
-  sub o breveinvnosp by oinvertedbreve;
-  sub R dblgravecmb by Rdblgrave;
-  sub r dblgravecmb by rdblgrave;
-  sub R breveinvnosp by Rinvertedbreve;
-  sub r breveinvnosp by rinvertedbreve;
-  sub U dblgravecmb by Udblgrave;
-  sub u dblgravecmb by udblgrave;
-  sub U breveinvnosp by Uinvertedbreve;
-  sub u breveinvnosp by uinvertedbreve;
-  sub H caroncmb by uni021E;
-  sub h caroncmb by uni021F;
-  sub A dotnosp by uni0226;
-  sub a dotnosp by uni0227;
-  sub E cedillanosp by uni0228;
-  sub e cedillanosp by uni0229;
-  #sub O dieresismacroncomb.cn by uni022A;
-  sub O dieresisnosp macroncomb by uni022A;
-  sub o dieresismacroncomb.cn by uni022B;
-  #sub O tildemacroncomb.cn by uni022C;
-  sub O tildecomb macroncomb by uni022C;
-  sub o tildemacroncomb.cn by uni022D;
-  sub O dotnosp by uni022E;
-  sub o dotnosp by uni022F;
-  #sub O dotmacroncomb.cn by uni0230;
-  sub O dotnosp macroncomb by uni0230;
-  sub o dotmacroncomb.cn by uni0231;
-  sub Y macroncomb by uni0232;
-  sub y macroncomb by uni0233;
-  sub Upsilonhooksymbol acutecomb by Upsilonacutehooksymbolgreek;
-  sub Upsilonhooksymbol dieresisnosp by Upsilondieresishooksymbolgreek;
-  sub B dotnosp by Bdotaccent;
-  sub b dotnosp by bdotaccent;
-  sub B dotbelow by Bdotbelow;
-  sub b dotbelow by bdotbelow;
-  sub B macronsubnosp by Blinebelow;
-  sub b macronsubnosp by blinebelow;
-  sub D dotnosp by Ddotaccent;
-  sub d dotnosp by ddotaccent;
-  sub D dotbelow by Ddotbelow;
-  sub d dotbelow by ddotbelow;
-  sub D macronsubnosp by Dlinebelow;
-  sub d macronsubnosp by dlinebelow;
-  sub D commaaccent by Dcedilla;
-  sub d commaaccent by dcedilla;
-  sub D circumflexsubnosp by Dcircumflexbelow;
-  sub d circumflexsubnosp by dcircumflexbelow;
-  #sub E macrongravecomb.cn by uni1E14;
-  sub E macroncomb gravecomb by Emacrongrave;
-  sub e macrongravecomb.cn by emacrongrave;
-  #sub E macronacutecomb.cn by uni1E16;
-  sub E macroncomb acutecomb by Emacronacute;
-  sub e macronacutecomb.cn by emacronacute;
-  sub E circumflexsubnosp by Ecircumflexbelow;
-  sub e circumflexsubnosp by ecircumflexbelow;
-  sub E tildesubnosp by Etildebelow;
-  sub e tildesubnosp by etildebelow;
-  sub F dotnosp by Fdotaccent;
-  sub f dotnosp by fdotaccent;
-  sub G macroncomb by Gmacron;
-  sub g macroncomb by gmacron;
-  sub H dotnosp by Hdotaccent;
-  sub h dotnosp by hdotaccent;
-  sub H dotbelow by Hdotbelow;
-  sub h dotbelow by hdotbelow;
-  sub H dieresisnosp by Hdieresis;
-  sub h dieresisnosp by hdieresis;
-  sub H brevesubnosp by Hbrevebelow;
-  sub h brevesubnosp by hbrevebelow;
-  sub I tildesubnosp by Itildebelow;
-  sub i tildesubnosp by itildebelow;
-  #sub I dieresisacutecomb.cn by Idieresisacute;
-  sub I dieresisnosp acutecomb by Idieresisacute;
-  sub idotless dieresisacutecomb.cn by idieresisacute;
-  sub K acutecomb by Kacute;
-  sub k acutecomb by kacute;
-  sub K dotbelow by Kdotbelow;
-  sub k dotbelow by kdotbelow;
-  sub K macronsubnosp by Klinebelow;
-  sub k macronsubnosp by klinebelow;
-  sub L dotbelow by Ldotbelow;
-  sub l dotbelow by ldotbelow;
-  sub L macronsubnosp by Llinebelow;
-  sub l macronsubnosp by llinebelow;
-  sub L circumflexsubnosp by Lcircumflexbelow;
-  sub l circumflexsubnosp by lcircumflexbelow;
-  sub M acutecomb by Macute;
-  sub m acutecomb by macute;
-  sub M dotnosp by Mdotaccent;
-  sub m dotnosp by mdotaccent;
-  sub M dotbelow by Mdotbelow;
-  sub m dotbelow by mdotbelow;
-  sub N dotnosp by Ndotaccent;
-  sub n dotnosp by ndotaccent;
-  sub N dotbelow by Ndotbelow;
-  sub n dotbelow by ndotbelow;
-  sub N macronsubnosp by Nlinebelow;
-  sub n macronsubnosp by nlinebelow;
-  sub N circumflexsubnosp by Ncircumflexbelow;
-  sub n circumflexsubnosp by ncircumflexbelow;
-  #sub O tildeacutecomb.cn by uni1E4C;
-  sub O tildecomb acutecomb by Otildeacute;
-  sub o tildeacutecomb.cn by otildeacute;
-  #sub O tildedieresiscomb.cn by uni1E4E;
-  sub O tildecomb dieresisnosp by Otildedieresis;
-  sub o tildedieresiscomb.cn by otildedieresis;
-  #sub O macrongravecomb.cn by uni1E50;
-  sub O macroncomb gravecomb by Omacrongrave;
-  sub o macrongravecomb.cn by omacrongrave;
-  #sub O macronacutecomb.cn by uni1E52;
-  sub O macroncomb acutecomb by Omacronacute;
-  sub o macronacutecomb.cn by omacronacute;
-  sub P acutecomb by Pacute;
-  sub p acutecomb by pacute;
-  sub P dotnosp by Pdotaccent;
-  sub p dotnosp by pdotaccent;
-  sub R dotnosp by Rdotaccent;
-  sub r dotnosp by rdotaccent;
-  sub R dotbelow by Rdotbelow;
-  sub r dotbelow by rdotbelow;
-  sub R macronsubnosp by Rlinebelow;
-  sub r macronsubnosp by rlinebelow;
-  sub S dotnosp by Sdotaccent;
-  sub s dotnosp by sdotaccent;
-  sub S dotbelow by Sdotbelow;
-  sub s dotbelow by sdotbelow;
-  #sub S acutedotcomb.cn by uni1E64;
-  sub S acutecomb dotnosp by Sacutedotaccent;
-  sub s acutedotcomb.cn by sacutedotaccent;
-  #sub S carondotcomb.cn by uni1E66;
-  sub S caroncmb dotnosp by Scarondotaccent;
-  sub s carondotcomb.cn by scarondotaccent;
-  sub T dotnosp by Tdotaccent;
-  sub t dotnosp by tdotaccent;
-  sub T dotbelow by Tdotbelow;
-  sub t dotbelow by tdotbelow;
-  sub T macronsubnosp by Tlinebelow;
-  sub t macronsubnosp by tlinebelow;
-  sub T circumflexsubnosp by Tcircumflexbelow;
-  sub t circumflexsubnosp by tcircumflexbelow;
-  sub U dotdblsubnosp by Udieresisbelow;
-  sub u dotdblsubnosp by udieresisbelow;
-  sub U tildesubnosp by Utildebelow;
-  sub u tildesubnosp by utildebelow;
-  sub U circumflexsubnosp by Ucircumflexbelow;
-  sub u circumflexsubnosp by ucircumflexbelow;
-  #sub U tildeacutecomb.cn by uni1E78;
-  sub U tildecomb acutecomb by Utildeacute;
-  sub u tildeacutecomb.cn by utildeacute;
-  #sub U macrondieresiscomb.cn by uni1E7A;
-  sub U macroncomb dieresisnosp by Umacrondieresis;
-  sub u macrondieresiscomb.cn by umacrondieresis;
-  sub V tildecomb by Vtilde;
-  sub v tildecomb by vtilde;
-  sub V dotbelow by Vdotbelow;
-  sub v dotbelow by vdotbelow;
-  sub W dotnosp by Wdotaccent;
-  sub w dotnosp by wdotaccent;
-  sub W dotbelow by Wdotbelow;
-  sub w dotbelow by wdotbelow;
-  sub X dotnosp by Xdotaccent;
-  sub x dotnosp by xdotaccent;
-  sub X dieresisnosp by Xdieresis;
-  sub x dieresisnosp by xdieresis;
-  sub Y dotnosp by Ydotaccent;
-  sub y dotnosp by ydotaccent;
-  sub Z circumflexnosp by Zcircumflex;
-  sub z circumflexnosp by zcircumflex;
-  sub Z dotbelow by Zdotbelow;
-  sub z dotbelow by zdotbelow;
-  sub Z macronsubnosp by Zlinebelow;
-  sub z macronsubnosp by zlinebelow;
-  sub h macronsubnosp by hlinebelow;
-  sub t dieresisnosp by tdieresis;
-  sub w ringnosp by wring;
-  sub y ringnosp by yring;
-  sub longs dotnosp by slongdotaccent;
-  sub A ringsubnosp by Aringbelow;
-  sub a ringsubnosp by aringbelow;
-  } ccmp03;
+sub A gravecomb by Agrave;
+sub A acutecomb by Aacute;
+sub A circumflexnosp by Acircumflex;
+sub A tildecomb by Atilde;
+sub A dieresisnosp by Adieresis;
+sub A ringnosp by Aring;
+sub A ringacute.cn by Aringacute;
+sub C cedillanosp by Ccedilla;
+sub E gravecomb by Egrave;
+sub E acutecomb by Eacute;
+sub E circumflexnosp by Ecircumflex;
+sub E dieresisnosp by Edieresis;
+sub I gravecomb by Igrave;
+sub I acutecomb by Iacute;
+sub I circumflexnosp by Icircumflex;
+sub I dieresisnosp by Idieresis;
+sub N tildecomb by Ntilde;
+sub O gravecomb by Ograve;
+sub O acutecomb by Oacute;
+sub O circumflexnosp by Ocircumflex;
+sub O tildecomb by Otilde;
+sub O dieresisnosp by Odieresis;
+sub U gravecomb by Ugrave;
+sub U acutecomb by Uacute;
+sub U circumflexnosp by Ucircumflex;
+sub U dieresisnosp by Udieresis;
+sub Y acutecomb by Yacute;
+sub a gravecomb by agrave;
+sub a acutecomb by aacute;
+sub a circumflexnosp by acircumflex;
+sub a tildecomb by atilde;
+sub a dieresisnosp by adieresis;
+sub a ringnosp by aring;
+sub a ringacute.cn by aringacute;
+sub c cedillanosp by ccedilla;
+sub e gravecomb by egrave;
+sub e acutecomb by eacute;
+sub e circumflexnosp by ecircumflex;
+sub e dieresisnosp by edieresis;
+sub idotless gravecomb by igrave;
+sub idotless acutecomb by iacute;
+sub idotless circumflexnosp by icircumflex;
+sub idotless dieresisnosp by idieresis;
+sub n tildecomb by ntilde;
+sub o gravecomb by ograve;
+sub o acutecomb by oacute;
+sub o circumflexnosp by ocircumflex;
+sub o tildecomb by otilde;
+sub o dieresisnosp by odieresis;
+sub u gravecomb by ugrave;
+sub u acutecomb by uacute;
+sub u circumflexnosp by ucircumflex;
+sub u dieresisnosp by udieresis;
+sub y acutecomb by yacute;
+sub y dieresisnosp by ydieresis;
+sub A macroncomb by Amacron;
+sub a macroncomb by amacron;
+sub A brevenosp by Abreve;
+sub a brevenosp by abreve;
+sub A ogoneknosp by Aogonek;
+sub a ogoneknosp by aogonek;
+sub C acutecomb by Cacute;
+sub c acutecomb by cacute;
+sub C circumflexnosp by Ccircumflex;
+sub c circumflexnosp by ccircumflex;
+sub C dotnosp by Cdotaccent;
+sub c dotnosp by cdotaccent;
+sub C caroncmb by Ccaron;
+sub c caroncmb by ccaron;
+sub D caroncmb by Dcaron;
+sub E macroncomb by Emacron;
+sub e macroncomb by emacron;
+sub E brevenosp by Ebreve;
+sub e brevenosp by ebreve;
+sub E dotnosp by Edotaccent;
+sub e dotnosp by edotaccent;
+sub E ogoneknosp by Eogonek;
+sub e ogoneknosp by eogonek;
+sub E caroncmb by Ecaron;
+sub e caroncmb by ecaron;
+sub G circumflexnosp by Gcircumflex;
+sub g circumflexnosp by gcircumflex;
+sub G brevenosp by Gbreve;
+sub g brevenosp by gbreve;
+sub G dotnosp by Gdotaccent;
+sub g dotnosp by gdotaccent;
+sub G commaaccent by Gcommaaccent;
+sub g commaaccentrotate.cn by gcommaaccent;
+sub H circumflexnosp by Hcircumflex;
+sub h circumflexnosp by hcircumflex;
+sub I tildecomb by Itilde;
+sub idotless tildecomb by itilde;
+sub I macroncomb by Imacron;
+sub idotless macroncomb by imacron;
+sub I brevenosp by Ibreve;
+sub idotless brevenosp by ibreve;
+sub I ogoneknosp by Iogonek;
+sub i ogoneknosp by iogonek;
+sub I dotnosp by Idotaccent;
+sub J circumflexnosp by Jcircumflex;
+sub jdotless circumflexnosp by jcircumflex;
+sub K commaaccent by Kcommaaccent;
+sub k commaaccent by kcommaaccent;
+sub L acutecomb by Lacute;
+sub l acutecomb by lacute;
+sub L commaaccent by Lcommaaccent;
+sub l commaaccent by lcommaaccent;
+sub L dotnosp by Ldot;
+sub l dotnosp by ldot;
+sub N acutecomb by Nacute;
+sub n acutecomb by nacute;
+sub N commaaccent by Ncommaaccent;
+sub n commaaccent by ncommaaccent;
+sub N caroncmb by Ncaron;
+sub n caroncmb by ncaron;
+sub O macroncomb by Omacron;
+sub o macroncomb by omacron;
+sub O brevenosp by Obreve;
+sub o brevenosp by obreve;
+sub O acutedblnosp by Ohungarumlaut;
+sub o acutedblnosp by ohungarumlaut;
+sub R acutecomb by Racute;
+sub r acutecomb by racute;
+sub R commaaccent by Rcommaaccent;
+sub r commaaccent by rcommaaccent;
+sub R caroncmb by Rcaron;
+sub r caroncmb by rcaron;
+sub S acutecomb by Sacute;
+sub s acutecomb by sacute;
+sub S circumflexnosp by Scircumflex;
+sub s circumflexnosp by scircumflex;
+sub S cedillanosp by Scedilla;
+sub s cedillanosp by scedilla;
+sub S commaaccent by Scommaaccent;
+sub s commaaccent by scommaaccent;
+sub S caroncmb by Scaron;
+sub s caroncmb by scaron;
+sub T commaaccent by uni021A;
+sub t commaaccent by uni021B;
+sub T cedillanosp by Tcommaaccent;
+sub t cedillanosp by tcommaaccent;
+sub T caroncmb by Tcaron;
+sub U tildecomb by Utilde;
+sub u tildecomb by utilde;
+sub U macroncomb by Umacron;
+sub u macroncomb by umacron;
+sub U brevenosp by Ubreve;
+sub u brevenosp by ubreve;
+sub U ringnosp by Uring;
+sub u ringnosp by uring;
+sub U acutedblnosp by Uhungarumlaut;
+sub u acutedblnosp by uhungarumlaut;
+sub U ogoneknosp by Uogonek;
+sub u ogoneknosp by uogonek;
+sub W circumflexnosp by Wcircumflex;
+sub w circumflexnosp by wcircumflex;
+sub Y circumflexnosp by Ycircumflex;
+sub y circumflexnosp by ycircumflex;
+sub Y dieresisnosp by Ydieresis;
+sub Z acutecomb by Zacute;
+sub z acutecomb by zacute;
+sub Z dotnosp by Zdotaccent;
+sub z dotnosp by zdotaccent;
+sub Z caroncmb by Zcaron;
+sub z caroncmb by zcaron;
+sub AE acutecomb by AEacute;
+sub ae acutecomb by aeacute;
+sub Oslash acutecomb by Oslashacute;
+sub oslash acutecomb by oslashacute;
+#sub z caroncmb by zcaron;
+sub W gravecomb by Wgrave;
+sub w gravecomb by wgrave;
+sub W acutecomb by Wacute;
+sub w acutecomb by wacute;
+sub W dieresisnosp by Wdieresis;
+sub w dieresisnosp by wdieresis;
+sub Y gravecomb by Ygrave;
+sub y gravecomb by ygrave;
+sub jdotless caroncmb by jcaron;
+sub A dotbelow by Adotbelow;
+sub a dotbelow by adotbelow;
+sub A hook by Ahookabove;
+sub a hook by ahookabove;
+#sub A circumflexacutecomb.cn by uni1EA4;
+sub A circumflexnosp acutecomb by Acircumflexacute;
+sub a circumflexacutecomb.cn by acircumflexacute;
+#sub A circumflexgravecomb.cn by uni1EA6;
+sub A circumflexnosp gravecomb by Acircumflexgrave;
+sub a circumflexgravecomb.cn by acircumflexgrave;
+#sub A circumflexhookcomb.cn by uni1EA8;
+sub A circumflexnosp hook by Acircumflexhookabove;
+sub a circumflexhookcomb.cn by acircumflexhookabove;
+#sub A circumflextildecomb.cn by uni1EAA;
+sub A circumflexnosp tildecomb by Acircumflextilde;
+sub a circumflextildecomb.cn by acircumflextilde;
+#sub A breveacutecomb.cn by uni1EAE;
+sub A brevenosp acutecomb by Abreveacute;
+sub a breveacutecomb.cn by abreveacute;
+#sub A brevegravecomb.cn by uni1EB0;
+sub A brevenosp gravecomb by Abrevegrave;
+sub a brevegravecomb.cn by abrevegrave;
+#sub A brevehookcomb.cn by uni1EB2;
+sub A brevenosp hook by Abrevehookabove;
+sub a brevehookcomb.cn by abrevehookabove;
+sub A brevetildecomb.cn by Abrevetilde;
+sub a brevetildecomb.cn by abrevetilde;
+sub E dotbelow by Edotbelow;
+sub e dotbelow by edotbelow;
+sub E hook by Ehookabove;
+sub e hook by ehookabove;
+sub E tildecomb by Etilde;
+sub e tildecomb by etilde;
+#sub E circumflexacutecomb.cn by uni1EBE;
+sub E circumflexnosp acutecomb by Ecircumflexacute;
+sub e circumflexacutecomb.cn by ecircumflexacute;
+#sub E circumflexgravecomb.cn by uni1EC0;
+sub E circumflexnosp gravecomb by Ecircumflexgrave;
+sub e circumflexgravecomb.cn by ecircumflexgrave;
+#sub E circumflexhookcomb.cn by uni1EC2;
+sub E circumflexnosp hook by Ecircumflexhookabove;
+sub e circumflexhookcomb.cn by ecircumflexhookabove;
+#sub E circumflextildecomb.cn by uni1EC4;
+sub E circumflexnosp tildecomb by Ecircumflextilde;
+sub e circumflextildecomb.cn by ecircumflextilde;
+sub I hook by Ihookabove;
+sub idotless hook by ihookabove;
+sub I dotbelow by Idotbelow;
+sub i dotbelow by idotbelow;
+sub O dotbelow by Odotbelow;
+sub o dotbelow by odotbelow;
+sub O hook by Ohookabove;
+sub o hook by ohookabove;
+#sub O circumflexacutecomb.cn by uni1ED0;
+sub O circumflexnosp acutecomb by Ocircumflexacute;
+sub o circumflexacutecomb.cn by ocircumflexacute;
+#sub O circumflexgravecomb.cn by uni1ED2;
+sub O circumflexnosp gravecomb by Ocircumflexgrave;
+sub o circumflexgravecomb.cn by ocircumflexgrave;
+#sub O circumflexhookcomb.cn by uni1ED4;
+sub O circumflexnosp hook by Ocircumflexhookabove;
+sub o circumflexhookcomb.cn by ocircumflexhookabove;
+#sub O circumflextildecomb.cn by uni1ED6;
+sub O circumflexnosp tildecomb by Ocircumflextilde;
+sub o circumflextildecomb.cn by ocircumflextilde;
+sub Ohorn acutecomb by Ohornacute;
+sub ohorn acutecomb by ohornacute;
+sub Ohorn gravecomb by Ohorngrave;
+sub ohorn gravecomb by ohorngrave;
+sub Ohorn hook by Ohornhookabove;
+sub ohorn hook by ohornhookabove;
+sub Ohorn tildecomb by Ohorntilde;
+sub ohorn tildecomb by ohorntilde;
+sub Ohorn dotbelow by Ohorndotbelow;
+sub ohorn dotbelow by ohorndotbelow;
+sub U dotbelow by Udotbelow;
+sub u dotbelow by udotbelow;
+sub U hook by Uhookabove;
+sub u hook by uhookabove;
+sub Uhorn acutecomb by Uhornacute;
+sub uhorn acutecomb by uhornacute;
+sub Uhorn gravecomb by Uhorngrave;
+sub uhorn gravecomb by uhorngrave;
+sub Uhorn hook by Uhornhookabove;
+sub uhorn hook by uhornhookabove;
+sub Uhorn tildecomb by Uhorntilde;
+sub uhorn tildecomb by uhorntilde;
+sub Uhorn dotbelow by Uhorndotbelow;
+sub uhorn dotbelow by uhorndotbelow;
+sub Y dotbelow by Ydotbelow;
+sub y dotbelow by ydotbelow;
+sub Y hook by Yhookabove;
+sub y hook by yhookabove;
+sub Y tildecomb by Ytilde;
+sub y tildecomb by ytilde;
+sub A caroncmb by Acaron;
+sub a caroncmb by acaron;
+sub I caroncmb by Icaron;
+sub idotless caroncmb by icaron;
+sub O caroncmb by Ocaron;
+sub o caroncmb by ocaron;
+sub U caroncmb by Ucaron;
+sub u caroncmb by ucaron;
+#sub U dieresismacroncomb.cn by uni01D5;
+sub U dieresisnosp macroncomb by Udieresismacron;
+sub u dieresismacroncomb.cn by udieresismacron;
+#sub U dieresisacutecomb.cn by uni01D7;
+sub U dieresisnosp acutecomb by Udieresisacute;
+sub u dieresisacutecomb.cn by udieresisacute;
+#sub U dieresiscaroncomb.cn by uni01D9;
+sub U dieresisnosp caroncmb by Udieresiscaron;
+sub u dieresiscaroncomb.cn by udieresiscaron;
+#sub U dieresisgravecomb.cn by uni01DB;
+sub U dieresisnosp gravecomb by Udieresisgrave;
+sub u dieresisgravecomb.cn by udieresisgrave;
+#sub A dieresismacroncomb.cn by uni01DE;
+sub A dieresisnosp macroncomb by Adieresismacron;
+sub a dieresismacroncomb.cn by adieresismacron;
+#sub A dotmacroncomb.cn by uni01E0;
+sub A dotnosp macroncomb by Adotmacron;
+sub a dotmacroncomb.cn by adotmacron;
+sub AE macroncomb by AEmacron;
+sub ae macroncomb by aemacron;
+sub G caroncmb by Gcaron;
+sub g caroncmb by gcaron;
+sub K caroncmb by Kcaron;
+sub k caroncmb by kcaron;
+sub O ogoneknosp by Oogonek;
+sub o ogoneknosp by oogonek;
+sub G acutecomb by Gacute;
+sub g acutecomb by gacute;
+sub N gravecomb by uni01F8;
+sub n gravecomb by uni01F9;
+sub A dblgravecmb by Adblgrave;
+sub a dblgravecmb by adblgrave;
+sub A breveinvnosp by Ainvertedbreve;
+sub a breveinvnosp by ainvertedbreve;
+sub E dblgravecmb by Edblgrave;
+sub e dblgravecmb by edblgrave;
+sub E breveinvnosp by Einvertedbreve;
+sub e breveinvnosp by einvertedbreve;
+sub I dblgravecmb by Idblgrave;
+sub idotless dblgravecmb by idblgrave;
+sub I breveinvnosp by Iinvertedbreve;
+sub idotless breveinvnosp by iinvertedbreve;
+sub O dblgravecmb by Odblgrave;
+sub o dblgravecmb by odblgrave;
+sub O breveinvnosp by Oinvertedbreve;
+sub o breveinvnosp by oinvertedbreve;
+sub R dblgravecmb by Rdblgrave;
+sub r dblgravecmb by rdblgrave;
+sub R breveinvnosp by Rinvertedbreve;
+sub r breveinvnosp by rinvertedbreve;
+sub U dblgravecmb by Udblgrave;
+sub u dblgravecmb by udblgrave;
+sub U breveinvnosp by Uinvertedbreve;
+sub u breveinvnosp by uinvertedbreve;
+sub H caroncmb by uni021E;
+sub h caroncmb by uni021F;
+sub A dotnosp by uni0226;
+sub a dotnosp by uni0227;
+sub E cedillanosp by uni0228;
+sub e cedillanosp by uni0229;
+#sub O dieresismacroncomb.cn by uni022A;
+sub O dieresisnosp macroncomb by uni022A;
+sub o dieresismacroncomb.cn by uni022B;
+#sub O tildemacroncomb.cn by uni022C;
+sub O tildecomb macroncomb by uni022C;
+sub o tildemacroncomb.cn by uni022D;
+sub O dotnosp by uni022E;
+sub o dotnosp by uni022F;
+#sub O dotmacroncomb.cn by uni0230;
+sub O dotnosp macroncomb by uni0230;
+sub o dotmacroncomb.cn by uni0231;
+sub Y macroncomb by uni0232;
+sub y macroncomb by uni0233;
+sub Upsilonhooksymbol acutecomb by Upsilonacutehooksymbolgreek;
+sub Upsilonhooksymbol dieresisnosp by Upsilondieresishooksymbolgreek;
+sub B dotnosp by Bdotaccent;
+sub b dotnosp by bdotaccent;
+sub B dotbelow by Bdotbelow;
+sub b dotbelow by bdotbelow;
+sub B macronsubnosp by Blinebelow;
+sub b macronsubnosp by blinebelow;
+sub D dotnosp by Ddotaccent;
+sub d dotnosp by ddotaccent;
+sub D dotbelow by Ddotbelow;
+sub d dotbelow by ddotbelow;
+sub D macronsubnosp by Dlinebelow;
+sub d macronsubnosp by dlinebelow;
+sub D commaaccent by Dcedilla;
+sub d commaaccent by dcedilla;
+sub D circumflexsubnosp by Dcircumflexbelow;
+sub d circumflexsubnosp by dcircumflexbelow;
+#sub E macrongravecomb.cn by uni1E14;
+sub E macroncomb gravecomb by Emacrongrave;
+sub e macrongravecomb.cn by emacrongrave;
+#sub E macronacutecomb.cn by uni1E16;
+sub E macroncomb acutecomb by Emacronacute;
+sub e macronacutecomb.cn by emacronacute;
+sub E circumflexsubnosp by Ecircumflexbelow;
+sub e circumflexsubnosp by ecircumflexbelow;
+sub E tildesubnosp by Etildebelow;
+sub e tildesubnosp by etildebelow;
+sub F dotnosp by Fdotaccent;
+sub f dotnosp by fdotaccent;
+sub G macroncomb by Gmacron;
+sub g macroncomb by gmacron;
+sub H dotnosp by Hdotaccent;
+sub h dotnosp by hdotaccent;
+sub H dotbelow by Hdotbelow;
+sub h dotbelow by hdotbelow;
+sub H dieresisnosp by Hdieresis;
+sub h dieresisnosp by hdieresis;
+sub H brevesubnosp by Hbrevebelow;
+sub h brevesubnosp by hbrevebelow;
+sub I tildesubnosp by Itildebelow;
+sub i tildesubnosp by itildebelow;
+#sub I dieresisacutecomb.cn by Idieresisacute;
+sub I dieresisnosp acutecomb by Idieresisacute;
+sub idotless dieresisacutecomb.cn by idieresisacute;
+sub K acutecomb by Kacute;
+sub k acutecomb by kacute;
+sub K dotbelow by Kdotbelow;
+sub k dotbelow by kdotbelow;
+sub K macronsubnosp by Klinebelow;
+sub k macronsubnosp by klinebelow;
+sub L dotbelow by Ldotbelow;
+sub l dotbelow by ldotbelow;
+sub L macronsubnosp by Llinebelow;
+sub l macronsubnosp by llinebelow;
+sub L circumflexsubnosp by Lcircumflexbelow;
+sub l circumflexsubnosp by lcircumflexbelow;
+sub M acutecomb by Macute;
+sub m acutecomb by macute;
+sub M dotnosp by Mdotaccent;
+sub m dotnosp by mdotaccent;
+sub M dotbelow by Mdotbelow;
+sub m dotbelow by mdotbelow;
+sub N dotnosp by Ndotaccent;
+sub n dotnosp by ndotaccent;
+sub N dotbelow by Ndotbelow;
+sub n dotbelow by ndotbelow;
+sub N macronsubnosp by Nlinebelow;
+sub n macronsubnosp by nlinebelow;
+sub N circumflexsubnosp by Ncircumflexbelow;
+sub n circumflexsubnosp by ncircumflexbelow;
+#sub O tildeacutecomb.cn by uni1E4C;
+sub O tildecomb acutecomb by Otildeacute;
+sub o tildeacutecomb.cn by otildeacute;
+#sub O tildedieresiscomb.cn by uni1E4E;
+sub O tildecomb dieresisnosp by Otildedieresis;
+sub o tildedieresiscomb.cn by otildedieresis;
+#sub O macrongravecomb.cn by uni1E50;
+sub O macroncomb gravecomb by Omacrongrave;
+sub o macrongravecomb.cn by omacrongrave;
+#sub O macronacutecomb.cn by uni1E52;
+sub O macroncomb acutecomb by Omacronacute;
+sub o macronacutecomb.cn by omacronacute;
+sub P acutecomb by Pacute;
+sub p acutecomb by pacute;
+sub P dotnosp by Pdotaccent;
+sub p dotnosp by pdotaccent;
+sub R dotnosp by Rdotaccent;
+sub r dotnosp by rdotaccent;
+sub R dotbelow by Rdotbelow;
+sub r dotbelow by rdotbelow;
+sub R macronsubnosp by Rlinebelow;
+sub r macronsubnosp by rlinebelow;
+sub S dotnosp by Sdotaccent;
+sub s dotnosp by sdotaccent;
+sub S dotbelow by Sdotbelow;
+sub s dotbelow by sdotbelow;
+#sub S acutedotcomb.cn by uni1E64;
+sub S acutecomb dotnosp by Sacutedotaccent;
+sub s acutedotcomb.cn by sacutedotaccent;
+#sub S carondotcomb.cn by uni1E66;
+sub S caroncmb dotnosp by Scarondotaccent;
+sub s carondotcomb.cn by scarondotaccent;
+sub T dotnosp by Tdotaccent;
+sub t dotnosp by tdotaccent;
+sub T dotbelow by Tdotbelow;
+sub t dotbelow by tdotbelow;
+sub T macronsubnosp by Tlinebelow;
+sub t macronsubnosp by tlinebelow;
+sub T circumflexsubnosp by Tcircumflexbelow;
+sub t circumflexsubnosp by tcircumflexbelow;
+sub U dotdblsubnosp by Udieresisbelow;
+sub u dotdblsubnosp by udieresisbelow;
+sub U tildesubnosp by Utildebelow;
+sub u tildesubnosp by utildebelow;
+sub U circumflexsubnosp by Ucircumflexbelow;
+sub u circumflexsubnosp by ucircumflexbelow;
+#sub U tildeacutecomb.cn by uni1E78;
+sub U tildecomb acutecomb by Utildeacute;
+sub u tildeacutecomb.cn by utildeacute;
+#sub U macrondieresiscomb.cn by uni1E7A;
+sub U macroncomb dieresisnosp by Umacrondieresis;
+sub u macrondieresiscomb.cn by umacrondieresis;
+sub V tildecomb by Vtilde;
+sub v tildecomb by vtilde;
+sub V dotbelow by Vdotbelow;
+sub v dotbelow by vdotbelow;
+sub W dotnosp by Wdotaccent;
+sub w dotnosp by wdotaccent;
+sub W dotbelow by Wdotbelow;
+sub w dotbelow by wdotbelow;
+sub X dotnosp by Xdotaccent;
+sub x dotnosp by xdotaccent;
+sub X dieresisnosp by Xdieresis;
+sub x dieresisnosp by xdieresis;
+sub Y dotnosp by Ydotaccent;
+sub y dotnosp by ydotaccent;
+sub Z circumflexnosp by Zcircumflex;
+sub z circumflexnosp by zcircumflex;
+sub Z dotbelow by Zdotbelow;
+sub z dotbelow by zdotbelow;
+sub Z macronsubnosp by Zlinebelow;
+sub z macronsubnosp by zlinebelow;
+sub h macronsubnosp by hlinebelow;
+sub t dieresisnosp by tdieresis;
+sub w ringnosp by wring;
+sub y ringnosp by yring;
+sub longs dotnosp by slongdotaccent;
+sub A ringsubnosp by Aringbelow;
+sub a ringsubnosp by aringbelow;
+} ccmp03;
+
 } ccmp;
 
 feature aalt {
-  feature locl;
-  feature frac;
-  feature numr;
-  feature dnom;
-  feature tnum;
-  feature ss01;
-  feature zero;
-  feature calt;
+# automatic
+feature ccmp;
+feature locl;
+feature frac;
+feature dnom;
+feature numr;
+feature case;
+feature calt;
+feature ss01;
+feature tnum;
+feature zero;
+
 } aalt;
 
 feature locl {
- script latn; language dflt; #set comment (#) for FDK 2.5
- language MOL  exclude_dflt; # Moldavian
-  sub [Scedilla scedilla] by [Scommaaccent scommaaccent];
- language ROM  exclude_dflt; # Romanian
-  sub [Scedilla scedilla] by [Scommaaccent scommaaccent];
- language FRA  exclude_dflt; # French
-  sub [thinspace] by [uni2009.fra];
+# automatic
+script latn;
+language CAT;
+sub  l' periodcentered' l by ldot;
+sub  L' periodcentered' L by Ldot;
+language ROM;
+sub Scedilla by Scommaaccent;
+sub scedilla by scommaaccent;
+language MOL;
+sub Scedilla by Scommaaccent;
+sub scedilla by scommaaccent;
+
 } locl;
 
 feature frac {
-  # Latin
-  lookup frac_1 {
-  sub slash by fraction;
-  } frac_1;
-  lookup frac_2 {
-  sub @frac3 @frac1' by @frac4;
-  } frac_2;
-  lookup frac_3 {
-  sub @frac1 by @frac2;
-  } frac_3;
+# automatic
+sub one slash eight by oneeighth;
+sub one slash four by onequarter;
+sub three slash eight by threeeighths;
+sub one slash two by onehalf;
+sub five slash eight by fiveeighths;
+sub three slash four by threequarters;
+sub seven slash eight by seveneighths;
+sub one slash three by onethird;
+sub two slash three by twothirds;
+
 } frac;
 
 feature dnom {
-  sub @frac1 by @frac4;
+sub @frac1 by @frac4;
 } dnom;
 
 feature numr {
-  sub @frac1 by @frac2;
+sub @frac1 by @frac2;
 } numr;
 
 feature case {
-  sub @CASE_L by @CASE_R;
+# automatic
+sub parenleft by parenleft.case;
+sub parenright by parenright.case;
+sub bracketleft by bracketleft.case;
+sub bracketright by bracketright.case;
+sub braceleft by braceleft.case;
+sub braceright by braceright.case;
+sub at by at.case;
+sub hyphen by hyphen.case;
+sub endash by endash.case;
+sub figuredash by figuredash.case;
+sub emdash by emdash.case;
+sub bullet by bullet.case;
+sub colon by colon.case;
+sub equal by equal.case;
+sub notequal by notequal.case;
+sub plus by plus.case;
+sub minus by minus.case;
+sub multiply by multiply.case;
+sub divide by divide.case;
+sub plusminus by plusminus.case;
+sub asterisk by asterisk.case;
+sub arrowleft by arrowleft.case;
+sub arrowleftlong by arrowleftlong.case;
+sub arrowright by arrowright.case;
+sub arrowrightlong by arrowrightlong.case;
+
 } case;
 
 feature calt {
@@ -1019,23 +888,33 @@ feature calt {
 feature ss01 {
 # notes:
 # Name: Alternate digits
-  sub @SS01_L by @SS01_R;
+# automatic
+sub one by one.ss01;
+sub one.tf by one.tf.ss01;
+sub four by four.ss01;
+sub four.tf by four.tf.ss01;
+sub six by six.ss01;
+sub six.tf by six.tf.ss01;
+sub nine by nine.ss01;
+sub nine.tf by nine.tf.ss01;
+
 } ss01;
 
 feature tnum {
-  sub @TNUM_L by @TNUM_R;
+sub @TNUM_L by @TNUM_R;
 } tnum;
 
 feature zero {
-  sub zero by zero.slash;
-  sub zero.tnum by zero.tnum.slash;
+sub zero by zero.slash;
+sub zero.tf by zero.tf.slash;
+
 } zero;
 
 table GDEF {
   # automatic
   GlyphClassDef
-    [A Agrave Aacute Acircumflex Aring Amacron Abreve Aogonek Acaron Adieresismacron Adotmacron Aringacute Adblgrave Ainvertedbreve uni0226 Aringbelow Adotbelow Ahookabove Acircumflexacute Acircumflexgrave Acircumflexhookabove Acircumflextilde Acircumflexdotbelow Abreveacute Abrevegrave Abrevehookabove Abrevetilde Abrevedotbelow Alpha Alphatonos uni1F08 uni1F09 uni1F0A uni1F0B uni1F0C uni1F0D uni1F0E uni1F0F uni1FB8 uni1FB9 uni1FBA uni1FBB afii10017 Abrevecyrillic Adieresiscyrillic uni1F88 uni1F89 uni1F8A uni1F8B uni1F8C uni1F8D uni1F8E uni1F8F uni1FBC AE AEmacron AEacute Aiecyrillic B Bdotaccent Bdotbelow Blinebelow uni0243 afii10019 Beta C Ccedilla Cacute Ccircumflex Cdotaccent Ccaron Ccedillaacute uni03F9 D Dcaron Ddotaccent Ddotbelow Dlinebelow Dcedilla Dcircumflexbelow E Egrave Eacute Ecircumflex Edieresis Emacron Ebreve Edotaccent Eogonek Ecaron Edblgrave Einvertedbreve uni0228 Emacrongrave Emacronacute Ecircumflexbelow Etildebelow Ecedillabreve Edotbelow Ehookabove Etilde Ecircumflexacute Ecircumflexgrave Ecircumflexhookabove Ecircumflextilde Ecircumflexdotbelow Epsilon Epsilontonos uni1F18 uni1F19 uni1F1A uni1F1B uni1F1C uni1F1D uni1FC8 uni1FC9 afii10022 uni0400 afii10023 Iebrevecyrillic F Fdotaccent G Gbar Gcircumflex Gbreve Gdotaccent Gcommaaccent Gcaron Gacute Gmacron H Hcircumflex uni021E Hdotaccent Hdotbelow Hdieresis Hbrevebelow Hbar Endescendercyrillic uni04C9 Eta Etatonos uni1F28 uni1F29 uni1F2A uni1F2B uni1F2C uni1F2D uni1F2E uni1F2F uni1FCA uni1FCB afii10031 uni1F98 uni1F99 uni1F9A uni1F9B uni1F9C uni1F9D uni1F9E uni1F9F uni1FCC I Idieresisacute Istroke Itildebelow Igrave Iacute Icircumflex Itilde Imacron Ibreve Iogonek Idotaccent Icaron Idblgrave Iinvertedbreve Ihookabove Idotbelow Iota Iotatonos Iotadieresis uni1F38 uni1F39 uni1F3A uni1F3B uni1F3C uni1F3D uni1F3E uni1F3F uni1FD8 uni1FD9 uni1FDA uni1FDB afii10055 afii10056 J Jcircumflex uni0248 uni037F afii10057 K Kcommaaccent Kcaron Kacute Kdotbelow Klinebelow Kappa L Lacute Lcommaaccent Lcaron Ldotbelow Ldotbelowmacron Llinebelow Lcircumflexbelow M Macute Mdotaccent Mdotbelow uni04CD Mu uni03FA afii10030 N Ntilde Nacute Ncommaaccent Ncaron uni01F8 Ndotaccent Ndotbelow Nlinebelow Ncircumflexbelow Eng afii10026 uni040D afii10027 Imacroncyrillic Idieresiscyrillic uni048A Nu O Oslash Ohorn Ograve Oacute Ocircumflex Omacron Obreve Ohungarumlaut Ocaron Oogonek Oogonekmacron Odblgrave Oinvertedbreve uni022A uni022C uni022E uni0230 Otildeacute Otildedieresis Omacrongrave Omacronacute Odotbelow Ohookabove Ocircumflexacute Ocircumflexgrave Ocircumflexhookabove Ocircumflextilde Ocircumflexdotbelow Ohornacute Ohorngrave Ohornhookabove Ohorntilde Ohorndotbelow Oslashacute Omicron Omicrontonos uni1F48 uni1F49 uni1F4A uni1F4B uni1F4C uni1F4D uni1FF8 uni03F4 uni1FF9 afii10032 Odieresiscyrillic Obar Obarredcyrillic Obarreddieresiscyrillic OE P Pacute Pdotaccent Rho uni1FEC Q R Racute Rcommaaccent Rcaron Rdblgrave Rinvertedbreve Rdotaccent Rdotbelow Rdotbelowmacron Rlinebelow uni024C S Sacute Scircumflex Scedilla Scaron Scommaaccent Sdotaccent Sdotbelow Sacutedotaccent Scarondotaccent Sdotbelowdotaccent afii10054 T Tcommaaccent Tcaron uni021A Tdotaccent Tdotbelow Tlinebelow Tcircumflexbelow Tau U Uhorn Ugrave Uacute Ucircumflex Udieresis Utilde Umacron Ubreve Uring Uhungarumlaut Uogonek Ucaron Udieresismacron Udieresisacute Udieresiscaron Udieresisgrave Udblgrave Uinvertedbreve Udieresisbelow Utildebelow Ucircumflexbelow Utildeacute Umacrondieresis Udotbelow Uhookabove Uhornacute Uhorngrave Uhornhookabove Uhorntilde Uhorndotbelow uni0244 V Vtilde Vdotbelow W Wcircumflex Wgrave Wacute Wdieresis Wdotaccent Wdotbelow X Xdotaccent Xdieresis Hadescendercyrillic uni04FC Chi Y Yacute Ycircumflex Ydieresis uni0232 Ydotaccent Ygrave Ydotbelow Yhookabove Ytilde uni024E Upsilon Upsilontonos Upsilondieresis Upsilonhooksymbol Upsilonacutehooksymbolgreek Upsilondieresishooksymbolgreek uni1F59 uni1F5B uni1F5D uni1F5F uni1FE8 uni1FE9 uni1FEA uni1FEB Z Zacute Zdotaccent Zcaron Zcircumflex Zdotbelow Zlinebelow Zbar Zeta a arighthalfring agrave aacute acircumflex aring amacron abreve aogonek acaron adieresismacron adotmacron aringacute adblgrave ainvertedbreve uni0227 adotbelow ahookabove acircumflexacute acircumflexgrave acircumflexhookabove acircumflextilde acircumflexdotbelow abreveacute abrevegrave abrevehookabove abrevetilde abrevedotbelow aturn afii10065 abrevecyrillic adieresiscyrillic ae aemacron aeacute aiecyrillic b bbar bhook bdotaccent bdotbelow blinebelow c ccurl ccedilla cacute ccircumflex cdotaccent ccaron ccedillaacute sigmalunatesymbolgreek escyrillic d dcroat drthook dhook dcaron ddotaccent ddotbelow dlinebelow dcedilla dcircumflexbelow dz dzcurl dyogh dong e egrave eacute ecircumflex emacron ebreve edotaccent eogonek ecaron edblgrave einvertedbreve uni0229 emacrongrave emacronacute ecircumflexbelow etildebelow ecedillabreve edotbelow ehookabove etilde ecircumflexacute ecircumflexgrave ecircumflexhookabove ecircumflextilde ecircumflexdotbelow iecyrillic uni0450 iocyrillic iebrevecyrillic eturn f fdotaccent feng g ghook gbar gcircumflex gbreve gdotaccent gcommaaccent gcaron gacute gmacron h hhook henghook hturn hturnlthook hturnhook2 hbar hcircumflex uni021F hdotaccent hdotbelow hdieresis hbrevebelow hlinebelow shhacyrillic i idotless idieresis idieresisacute itildebelow uni1E2D.ccmp ibar igrave iacute icircumflex imacron ibreve uni012F.ccmp iogonek icaron idblgrave iinvertedbreve ihookabove idotbelow uni1ECB.ccmp jdotless uni006A.ccmp jdotlessbar uni0249 uni0249.ccmp icyrillic yicyrillic j jcrosstail.ccmp jcrosstail jcircumflex jcaron yotgreek jecyrillic k kcommaaccent kcaron kacute kdotbelow klinebelow kturn l lslash lbar lmidtilde lrthook lbelt ldot lacute lcommaaccent lcaron ldotbelow ldotbelowmacron llinebelow lcircumflexbelow uni04CF m mhook mturn mturndescend macute mdotaccent mdotbelow n nrthook eng nlfthook nlegrightlong napostrophe nacute ncommaaccent ncaron uni01F9 ndotaccent ndotbelow nlinebelow ncircumflexbelow o oslash ohorn ograve oacute ocircumflex omacron obreve ohungarumlaut ocaron oogonek oogonekmacron odblgrave oinvertedbreve uni022B uni022D uni022F uni0231 otildeacute otildedieresis omacrongrave omacronacute odotbelow ohookabove ocircumflexacute ocircumflexgrave ocircumflexhookabove ocircumflextilde ocircumflexdotbelow ohornacute ohorngrave ohornhookabove ohorntilde ohorndotbelow oslashacute omicron omicrontonos uni1F40 uni1F41 uni1F42 uni1F43 uni1F44 uni1F45 uni1F78 fitacyrillic obar ocyrillic odieresiscyrillic oe p pacute pdotaccent ercyrillic q qhook r rrthook uni024D rturn rturnrthook rfishhookrev rfishhook rdescend racute rcommaaccent rcaron rdblgrave rinvertedbreve rdotaccent rdotbelow rdotbelowmacron rlinebelow s srthook sacute scircumflex scedilla scaron scommaaccent sdotaccent sdotbelow sacutedotaccent scarondotaccent sdotbelowdotaccent dzecyrillic t trthook tccurl tturn tbar tcommaaccent tcaron uni021B tdotaccent tdotbelow tlinebelow tcircumflexbelow tdieresis u uhorn ubar ugrave uacute ucircumflex umacron ubreve uring uhungarumlaut uogonek ucaron udieresismacron udieresisacute udieresiscaron udieresisgrave udblgrave uinvertedbreve udieresisbelow utildebelow ucircumflexbelow utildeacute umacrondieresis udotbelow uhookabove uhornacute uhorngrave uhornhookabove uhorntilde uhorndotbelow v vturn vtilde vdotbelow w wturn wcircumflex wgrave wacute wdotaccent wdotbelow wring x xdotaccent xdieresis khacyrillic y uni024F yacute ycircumflex uni0233 ydotaccent yring ygrave ydotbelow yhookabove ytilde ucyrillic ushortcyrillic umacroncyrillic udieresiscyrillic uhungarumlautcyrillic yturn z zbar zrthook zacute zdotaccent zcaron zcircumflex zdotbelow zlinebelow zcurl Gamma Pi Omega uni1FFB Omegatonos uni1F68 uni1F69 uni1F6A uni1F6B uni1F6C uni1F6D uni1F6E uni1F6F uni1FFA uni1FA8 uni1FA9 uni1FAA uni1FAB uni1FAC uni1FAD uni1FAE uni1FAF uni1FFC afii10024 Zhedescendercyrillic afii10025 afii10029 afii10147 afii10037 afii10041 Chedescendercyrillic Shhacyrillic afii10045 afii10046 afii10047 afii10049 afii10053 Haabkhasiancyrillic Cheabkhasiancyrillic Schwacyrillic afii10148 alpha alphatonos uni1F00 uni1F01 uni1F02 uni1F03 uni1F04 uni1F05 uni1F06 uni1F07 uni1F70 uni1F80 uni1F81 uni1F82 uni1F83 uni1F84 uni1F85 uni1F86 uni1F87 uni1FB0 uni1FB1 uni1FB2 uni1FB3 uni1FB4 uni1FB6 uni1FB7 gamma epsilon epsilontonos uni1F10 uni1F11 uni1F12 uni1F13 uni1F14 uni1F15 uni1F72 eta etatonos uni1F20 uni1F21 uni1F22 uni1F23 uni1F24 uni1F25 uni1F26 uni1F27 uni1F74 uni1F90 uni1F91 uni1F92 uni1F93 uni1F94 uni1F95 uni1F96 uni1F97 uni1FC2 uni1FC3 uni1FC4 uni1FC6 uni1FC7 iota iotadieresistonos iotatonos iotadieresis uni1F30 uni1F31 uni1F32 uni1F33 uni1F34 uni1F35 uni1F36 uni1F37 uni1F76 uni1FD0 uni1FD1 uni1FD2 uni1FD6 uni1FD7 lambda rho uni1FE4 uni1FE5 upsilon upsilondieresistonos upsilondieresis upsilontonos uni1F50 uni1F51 uni1F52 uni1F53 uni1F54 uni1F55 uni1F56 uni1F57 uni1F7A uni1FE0 uni1FE1 uni1FE2 uni1FE6 uni1FE7 psi omega omegatonos uni1F60 uni1F61 uni1F62 uni1F63 uni1F64 uni1F65 uni1F66 uni1F67 uni1F7C uni1FA0 uni1FA1 uni1FA2 uni1FA3 uni1FA4 uni1FA5 uni1FA6 uni1FA7 uni1FF2 uni1FF3 uni1FF4 uni1FF6 uni1FF7 gamma1 vecyrillic gecyrillic decyrillic zhecyrillic zhedescendercyrillic zecyrillic iicyrillic uni048B kacyrillic kadescendercyrillic elcyrillic uni04C6 uni052F emcyrillic uni04CE encyrillic endescendercyrillic uni04CA pecyrillic tecyrillic efcyrillic uni04FD hadescendercyrillic tsecyrillic checyrillic chedescendercyrillic shacyrillic shchacyrillic softsigncyrillic yericyrillic uni048D yatcyrillic ereversedcyrillic iucyrillic iacyrillic ecyrillic haabkhasiancyrillic cheabkhasiancyrillic izhitsacyrillic franc acute hungarumlaut grave dieresis circumflex tilde macron breve dotaccent ring caron cedilla ogonek commaaccent acutedblnosp dblgravecmb dieresisnosp brevenosp breveinvnosp hook circumflexnosp caroncmb dotnosp ringnosp circumflexsubnosp brevesubnosp dotbelow commabelowcmb dotdblsubnosp ringsubnosp underscorenosp tildesubnosp overscoredblnosp acutedotcomb.lc tildedieresiscomb.lc dieresisacutecomb.lc carondotcomb.lc oopen Gsmallcaphook anglesupnosp breveinvsubnosp commaturnsupnosp ringrighthalfsubnosp uni02AB uni02AC OEsmallcap tackupsubnosp seagullsubnosp longs Ysmallcap gravesubnosp glottalstoprevinv erev cstretch Rsmallcap epsilon1 candrabindunosp glottalstopinv uni0268.ccmp schwahook uni0458.ccmp tesh philatin glottalstop epsilon1revclosed linevertnosp linevertsubnosp perispomenigreekcmb koroniscmb tackdownsubnosp uni2071.ccmp babygamma overscorenosp diaeresistonosnosp rturnascend bridgesubnosp dotmacroncomb.lc macronsubnosp ringlefthalfsubnosp Lsmallcap squaresubnosp Schwa finalmem Gsmallcap Esh dieresismacroncomb.lc Rsmallcapinv ts pisymbolgreek dieresisgravecomb.lc commasuprevnosp archdblsubnosp plussubnosp tildemacroncomb.lc iota1 macrondieresiscomb.lc epsilonclosed omegacyrillic Omegacyrillic ksicyrillic tildeacutecomb.lc uni0456.ccmp bullseye dieresiscaroncomb.lc ascriptturn glottalstopbarrev ezh ezhcurl omegaroundcyrillic otcyrillic gcursive upsilonlatin omegaclosed xsupnosp eshshortrev vscript acuterightnosp tildevertsupnosp linevertdblnosp uni03F3.ccmp jhookdblbar ascript epsilon1rev Epsilon1 iotasubnosp kgreenlandic graveleftnosp tackleftsubnosp glottalstopbar minussubnosp lambdabar underscoredblnosp tackrightsubnosp schwa koppacyrillic Koppacyrillic eshcurl caronbelowcmb acutesubnosp finalkaf Ismallcap epsilon1revhook lyogh Nsmallcap uni02B2.ccmp bridgeinvsubnosp esh commaabovecmb Eth Dcroat Ldot Tbar Aogonek.NAV Eogonek.NAV Oogonek.NAV afii10020 afii10052 afii10034 afii10035 afii10036 afii10039 Ghestrokecyrillic Zedescendercyrillic Esdescendercyrillic Tedescendercyrillic Ustraightcyrillic Ustraightstrokecyrillic Chedescenderabkhasiancyrillic palochkacyrillic Chekhakassiancyrillic uni04F6 uni04FE afii10061 Schwadieresiscyrillic Zhebrevecyrillic Zhedieresiscyrillic Zedieresiscyrillic afii10062 Umacroncyrillic Udieresiscyrillic Uhungarumlautcyrillic Chedieresiscyrillic Yerudieresiscyrillic uni04EC Izhitsadblgravecyrillic uni0299 uni029C aogonek.NAV eogonek.NAV oogonek.NAV kappa nu uni1F71 uni1F73 uni1F75 uni1F77 uni1F79 uni1F7B uni1F7D uni1FD3 uni1FE3 psicyrillic ghestrokecyrillic zedescendercyrillic esdescendercyrillic tedescendercyrillic chedescenderabkhasiancyrillic chekhakassiancyrillic schwacyrillic schwadieresiscyrillic obarredcyrillic obarreddieresiscyrillic uni04F7 uni04FF chedieresiscyrillic uni04ED gjecyrillic iishortcyrillic uni045D imacroncyrillic idieresiscyrillic izhitsadblgravecyrillic kjecyrillic yerudieresiscyrillic zedieresiscyrillic zhebrevecyrillic zhedieresiscyrillic], # Base
-    [L_slash L_bar a_uni02DE o_uni02DE], # Liga
+    [A Agrave Aacute Acircumflex Aring Amacron Abreve Aogonek Acaron Adieresismacron Adotmacron Adblgrave Ainvertedbreve uni0226 Aringbelow Adotbelow Ahookabove Acircumflexacute Acircumflexgrave Acircumflexhookabove Acircumflextilde Acircumflexdotbelow Abreveacute Abrevegrave Abrevehookabove Abrevetilde Abrevedotbelow Alpha Alphatonos uni1F08 uni1F0A uni1FB8 uni1FB9 afii10017 Abrevecyrillic uni1F88 uni1F8A uni1FBC AE AEmacron AEacute Aiecyrillic B Bdotaccent Bdotbelow Blinebelow afii10019 Beta C Ccedilla Cacute Ccircumflex Cdotaccent Ccaron Ccedillaacute uni03F9 D Dcaron Ddotaccent Ddotbelow Dlinebelow Dcedilla Dcircumflexbelow E Egrave Eacute Ecircumflex Edieresis Emacron Ebreve Edotaccent Eogonek Ecaron Edblgrave Einvertedbreve uni0228 Emacrongrave Emacronacute Ecircumflexbelow Etildebelow Ecedillabreve Edotbelow Ehookabove Etilde Ecircumflexacute Ecircumflexgrave Ecircumflexhookabove Ecircumflextilde Ecircumflexdotbelow Epsilon Epsilontonos uni1F18 uni1F1A afii10022 uni0400 afii10023 Iebrevecyrillic F Fdotaccent G Gbar Gcircumflex Gbreve Gdotaccent Gcommaaccent Gcaron Gacute Gmacron H Hcircumflex uni021E Hdotaccent Hdotbelow Hdieresis Hbrevebelow uni04C9 Eta Etatonos uni1F28 afii10031 uni1F98 uni1FCC I Itildebelow Igrave Iacute Icircumflex Itilde Imacron Ibreve Iogonek Idotaccent Icaron Idblgrave Iinvertedbreve Ihookabove Idotbelow Iota Iotatonos uni1F38 uni1FD8 uni1FD9 afii10055 afii10056 J Jcircumflex uni037F afii10057 K Kcommaaccent Kcaron Kacute Kdotbelow Klinebelow Kappa L Lacute Lcommaaccent Lcaron Ldotbelow Ldotbelowmacron Llinebelow Lcircumflexbelow M Macute Mdotaccent Mdotbelow uni04CD Mu uni03FA afii10030 N Ntilde Nacute Ncommaaccent Ncaron uni01F8 Ndotaccent Ndotbelow Nlinebelow Ncircumflexbelow Eng afii10026 uni040D afii10027 Imacroncyrillic Idieresiscyrillic uni048A Nu O Ograve Oacute Ocircumflex Omacron Obreve Ohungarumlaut Ocaron Oogonek Oogonekmacron Odblgrave Oinvertedbreve uni022A uni022C uni0230 Otildeacute Otildedieresis Omacrongrave Omacronacute Odotbelow Ohookabove Ocircumflexacute Ocircumflexgrave Ocircumflexhookabove Ocircumflextilde Ocircumflexdotbelow Ohornacute Ohorngrave Ohornhookabove Ohorntilde Ohorndotbelow Omicron Omicrontonos uni1F48 afii10032 P Pacute Pdotaccent Rho R Racute Rcommaaccent Rcaron Rdblgrave Rinvertedbreve Rdotaccent Rdotbelow Rdotbelowmacron Rlinebelow uni024C S Sacute Scircumflex Scedilla Scaron Scommaaccent Sdotaccent Sdotbelow Sacutedotaccent Scarondotaccent Sdotbelowdotaccent afii10054 T Tcommaaccent Tcaron uni021A Tdotaccent Tdotbelow Tlinebelow Tcircumflexbelow Tau U Uhorn Ugrave Uacute Ucircumflex Udieresis Utilde Umacron Ubreve Uring Uhungarumlaut Uogonek Ucaron Udieresismacron Udieresiscaron Udieresisgrave Udblgrave Uinvertedbreve Udieresisbelow Utildebelow Ucircumflexbelow Utildeacute Umacrondieresis Udotbelow Uhookabove Uhornacute Uhorngrave Uhornhookabove Uhorntilde Uhorndotbelow uni0244 V Vtilde Vdotbelow W Wcircumflex Wgrave Wacute Wdieresis Wdotaccent Wdotbelow X Xdotaccent Xdieresis Chi Y Yacute Ycircumflex Ydieresis uni0232 Ydotaccent Ygrave Ydotbelow Yhookabove Ytilde uni024E Upsilon Upsilontonos Upsilonhooksymbol Upsilonacutehooksymbolgreek Upsilondieresishooksymbolgreek uni1FE8 uni1FE9 Z Zacute Zdotaccent Zcaron Zcircumflex Zdotbelow Zlinebelow Zeta a agrave aacute acircumflex aring amacron abreve aogonek acaron adieresismacron adotmacron aringacute adblgrave ainvertedbreve adotbelow ahookabove acircumflexacute acircumflexgrave acircumflexhookabove acircumflextilde acircumflexdotbelow abreveacute abrevegrave abrevehookabove abrevetilde abrevedotbelow aturn afii10065 abrevecyrillic adieresiscyrillic ae aemacron aeacute aiecyrillic b bhook bdotbelow blinebelow c ccurl ccedilla cacute ccircumflex cdotaccent ccaron ccedillaacute sigmalunatesymbolgreek escyrillic drthook dhook dcaron ddotaccent ddotbelow dlinebelow dcedilla dcircumflexbelow dz dzcurl dyogh e egrave eacute ecircumflex emacron ebreve edotaccent eogonek ecaron edblgrave einvertedbreve uni0229 emacrongrave emacronacute ecircumflexbelow etildebelow ecedillabreve edotbelow ehookabove etilde ecircumflexacute ecircumflexgrave ecircumflexhookabove ecircumflextilde ecircumflexdotbelow iecyrillic uni0450 iocyrillic iebrevecyrillic eturn f fdotaccent feng g ghook gcircumflex gbreve gdotaccent gcommaaccent gcaron gacute gmacron h hhook henghook hturn hturnlthook hturnhook2 hcircumflex uni021F hdotaccent hdotbelow hdieresis hbrevebelow hlinebelow shhacyrillic i idotless idieresis itildebelow uni1E2D.ccmp igrave iacute icircumflex imacron ibreve uni012F.ccmp iogonek icaron idblgrave iinvertedbreve ihookabove idotbelow uni1ECB.ccmp jdotless yicyrillic j jcrosstail.ccmp jcrosstail jcircumflex jcaron yotgreek jecyrillic k kcommaaccent kcaron kacute kdotbelow klinebelow kturn l lslash lbar lmidtilde lrthook lbelt ldot lacute lcommaaccent lcaron ldotbelow ldotbelowmacron llinebelow lcircumflexbelow uni04CF m mhook mturn mturndescend macute mdotaccent mdotbelow n nrthook eng nlfthook nlegrightlong napostrophe nacute ncommaaccent ncaron uni01F9 ndotaccent ndotbelow nlinebelow ncircumflexbelow o oslash ohorn ograve oacute ocircumflex omacron obreve ohungarumlaut ocaron oogonek oogonekmacron odblgrave oinvertedbreve uni022B uni022D uni022F uni0231 otildeacute otildedieresis omacrongrave omacronacute odotbelow ohookabove ocircumflexacute ocircumflexgrave ocircumflexhookabove ocircumflextilde ocircumflexdotbelow ohornacute ohorngrave ohornhookabove ohorntilde ohorndotbelow oslashacute omicron uni1F40 uni1F41 uni1F42 uni1F45 uni1F78 fitacyrillic obar ocyrillic odieresiscyrillic oe p pacute pdotaccent ercyrillic q qhook r rrthook uni024D rturn rturnrthook rfishhookrev rfishhook rdescend racute rcommaaccent rcaron rdblgrave rinvertedbreve rdotaccent rdotbelow rdotbelowmacron rlinebelow s srthook sacute scircumflex scedilla scaron scommaaccent sdotaccent sdotbelow sacutedotaccent scarondotaccent sdotbelowdotaccent dzecyrillic t trthook tccurl tturn tcommaaccent tcaron uni021B tdotaccent tdotbelow tlinebelow tcircumflexbelow tdieresis u uhorn ubar ugrave uacute ucircumflex umacron ubreve uring uhungarumlaut uogonek ucaron udieresismacron udieresisacute udieresiscaron udieresisgrave udblgrave uinvertedbreve udieresisbelow utildebelow ucircumflexbelow utildeacute umacrondieresis udotbelow uhookabove uhornacute uhorngrave uhornhookabove uhorntilde uhorndotbelow v vturn vtilde vdotbelow w wturn wcircumflex wgrave wacute wdotaccent wdotbelow wring x xdotaccent xdieresis khacyrillic y uni024F yacute ycircumflex uni0233 ydotaccent yring ygrave ydotbelow yhookabove ytilde ucyrillic ushortcyrillic umacroncyrillic udieresiscyrillic uhungarumlautcyrillic yturn z zrthook zacute zdotaccent zcaron zcircumflex zdotbelow zlinebelow zcurl Gamma Pi Omega Omegatonos uni1F68 uni1F6A uni1FA8 uni1FFC afii10024 Zhedescendercyrillic afii10025 afii10029 afii10037 afii10041 Shhacyrillic afii10045 afii10046 afii10047 afii10049 afii10053 Haabkhasiancyrillic Cheabkhasiancyrillic Schwacyrillic afii10148 alpha uni1F00 uni1F01 uni1F03 uni1F05 uni1F07 uni1F70 uni1F80 uni1F81 uni1F83 uni1F85 uni1F87 uni1FB0 uni1FB1 uni1FB2 uni1FB3 uni1FB4 uni1FB6 uni1FB7 gamma epsilon uni1F10 uni1F11 uni1F13 uni1F15 uni1F72 eta uni1F20 uni1F21 uni1F23 uni1F25 uni1F27 uni1F74 uni1F90 uni1F91 uni1F93 uni1F95 uni1F97 uni1FC2 uni1FC3 uni1FC4 uni1FC6 uni1FC7 iota iotadieresistonos iotadieresis uni1F30 uni1F31 uni1F33 uni1F35 uni1F37 uni1F76 uni1FD0 uni1FD1 uni1FD2 uni1FD6 uni1FD7 lambda rho uni1FE4 uni1FE5 upsilon upsilondieresistonos upsilondieresis uni1F50 uni1F51 uni1F53 uni1F55 uni1F57 uni1F7A uni1FE0 uni1FE1 uni1FE2 uni1FE6 uni1FE7 psi omega uni1F60 uni1F61 uni1F63 uni1F65 uni1F67 uni1F7C uni1FA0 uni1FA1 uni1FA3 uni1FA5 uni1FA7 uni1FF2 uni1FF3 uni1FF4 uni1FF6 uni1FF7 gamma1 vecyrillic gecyrillic decyrillic zhecyrillic zhedescendercyrillic zecyrillic iicyrillic uni048B kacyrillic kadescendercyrillic elcyrillic uni04C6 uni052F emcyrillic uni04CE encyrillic endescendercyrillic uni04CA pecyrillic tecyrillic efcyrillic uni04FD hadescendercyrillic tsecyrillic checyrillic chedescendercyrillic shacyrillic shchacyrillic softsigncyrillic yericyrillic uni048D yatcyrillic ereversedcyrillic iucyrillic iacyrillic ecyrillic haabkhasiancyrillic cheabkhasiancyrillic izhitsacyrillic franc two acute hungarumlaut grave dieresis circumflex tilde macron breve ring caron dieresisnosp brevenosp circumflexnosp dotnosp ringnosp commabelowcmb ringsubnosp underscorenosp overscoredblnosp acutedotcomb.lc tildedieresiscomb.lc dieresisacutecomb.lc carondotcomb.lc oopen Gsmallcaphook anglesupnosp breveinvsubnosp commaturnsupnosp uni02AB uni02AC OEsmallcap tackupsubnosp seagullsubnosp longs Ysmallcap gravesubnosp glottalstoprevinv erev cstretch Rsmallcap epsilon1 glottalstopinv schwahook uni0458.ccmp tesh philatin glottalstop epsilon1revclosed linevertnosp linevertsubnosp perispomenigreekcmb koroniscmb tackdownsubnosp uni2071.ccmp babygamma overscorenosp diaeresistonosnosp rturnascend bridgesubnosp dotmacroncomb.lc Lsmallcap squaresubnosp Schwa finalmem Gsmallcap Esh dieresismacroncomb.lc Rsmallcapinv ts pisymbolgreek dieresisgravecomb.lc commasuprevnosp archdblsubnosp plussubnosp tildemacroncomb.lc iota1 macrondieresiscomb.lc epsilonclosed omegacyrillic Omegacyrillic ksicyrillic tildeacutecomb.lc uni0456.ccmp bullseye dieresiscaroncomb.lc ascriptturn ezh ezhcurl omegaroundcyrillic otcyrillic gcursive upsilonlatin omegaclosed xsupnosp eshshortrev vscript acuterightnosp tildevertsupnosp linevertdblnosp uni03F3.ccmp ascript epsilon1rev Epsilon1 iotasubnosp kgreenlandic graveleftnosp tackleftsubnosp glottalstopbar minussubnosp lambdabar underscoredblnosp tackrightsubnosp schwa koppacyrillic Koppacyrillic eshcurl acutesubnosp finalkaf Ismallcap epsilon1revhook lyogh Nsmallcap uni02B2.ccmp bridgeinvsubnosp esh commaabovecmb Ldot Aogonek.NAV Eogonek.NAV Oogonek.NAV afii10020 afii10052 afii10034 afii10035 afii10036 afii10039 Ghestrokecyrillic Tedescendercyrillic Ustraightcyrillic Ustraightstrokecyrillic palochkacyrillic Chekhakassiancyrillic uni04F6 uni04FE afii10061 Schwadieresiscyrillic Zhebrevecyrillic Zhedieresiscyrillic Zedieresiscyrillic afii10062 Umacroncyrillic Udieresiscyrillic Uhungarumlautcyrillic Chedieresiscyrillic Yerudieresiscyrillic uni04EC Izhitsadblgravecyrillic uni0299 uni029C aogonek.NAV eogonek.NAV oogonek.NAV kappa nu uni1F71 uni1F73 uni1F75 uni1F77 uni1F79 uni1F7B uni1F7D uni1FD3 uni1FE3 psicyrillic ghestrokecyrillic tedescendercyrillic schwacyrillic schwadieresiscyrillic obarredcyrillic obarreddieresiscyrillic chedieresiscyrillic uni04ED gjecyrillic iishortcyrillic uni045D imacroncyrillic idieresiscyrillic izhitsadblgravecyrillic kjecyrillic yerudieresiscyrillic zedieresiscyrillic zhebrevecyrillic zhedieresiscyrillic], # Base
+    [a_uni02DE o_uni02DE], # Liga
     [acutecomb gravecomb macroncomb tildecomb uni0346 uni1DD8 uni1DD9 uni1DD2 uni1DD3 uni1DD0 uni1DD1 uni1DD4 uni1DD5 uni1DDB uni1DDC uni1DDF uni1DDD uni1DDE uni036A uni036B uni036C uni036D uni036E uni036F uni0362 uni0363 uni0364 uni0365 uni0366 uni0367 uni0368 uni0369 uni0359 uni0358 uni0355 uni0354 uni0357 uni0356 uni0351 uni0350 uni0353 uni0352 uni035E uni035F uni035C uni035B uniA69F uni1DD6 uni1DD7 uni034B uni034C uni034A uni034F uni034D uni034E uni0348 uni0349 uni0347 uni1DC6 uni1DC4 macrongravecomb.lc macronacutecomb.lc uni1DCF uni1DCE uni1DCD uni1DCC uni1DCB uni1DCA uni1DC9 uni1DC8 uni1DC7 uni1DC5 uni1DC3 uni1DC2 uni1DC1 uni1DC0 uni1DE9 uni035D uni035A uni1DE2 uni20DC uni20DB uni20E8 uni1DDA uni0487 uni20F0 uni1DF0 uni1DF1 uni1DF2 uni1DF3 uni1DF4 uni1DF5 uni1DFC uni1DFD uni1DFE uni1DFF uniFE29 uniFE22 uniFE23 uniFE24 uniFE25 uniFE26 uniFE2A uniFE2B uniFE2C uniFE2D uni1DEE uni1DED uni1DEF uni1DEA uni1DEC uni1DEB uni1DE8 uni1DE5 uni1DE4 uni1DE7 uni1DE6 uni1DE1 uni1DE0 uni1DE3 macronacutecomb.cn macrongravecomb.cn], # Mark
     ;
 } GDEF;

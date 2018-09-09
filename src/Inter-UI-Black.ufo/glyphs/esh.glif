@@ -5,10 +5,12 @@
   <guideline y="2140.875"/>
   <guideline y="-599.5"/>
   <anchor x="356.0" y="-616.0" name="bottom"/>
+  <anchor x="656.0" y="156.0" name="cross"/>
   <anchor x="944.0" y="2340.0" name="top"/>
   <anchor x="1240.0" y="2340.0" name="top0315"/>
   <outline>
     <contour>
+      <point x="432.0" y="0.0" type="line"/>
       <point x="880.0" y="0.0" type="line"/>
       <point x="880.0" y="1608.0" type="line" smooth="yes"/>
       <point x="880.0" y="1724.0"/>
@@ -24,9 +26,13 @@
       <point x="652.0" y="2140.0"/>
       <point x="432.0" y="1956.0"/>
       <point x="432.0" y="1608.0" type="curve" smooth="yes"/>
-      <point x="432.0" y="0.0" type="line"/>
     </contour>
     <contour>
+      <point x="316.0" y="-600.0" type="curve" smooth="yes"/>
+      <point x="660.0" y="-600.0"/>
+      <point x="880.0" y="-412.0"/>
+      <point x="880.0" y="-68.0" type="curve" smooth="yes"/>
+      <point x="880.0" y="1540.0" type="line"/>
       <point x="432.0" y="1540.0" type="line"/>
       <point x="432.0" y="-68.0" type="line" smooth="yes"/>
       <point x="432.0" y="-180.0"/>
@@ -38,18 +44,13 @@
       <point x="104.0" y="-572.0" type="line"/>
       <point x="168.0" y="-588.0"/>
       <point x="240.0" y="-600.0"/>
-      <point x="316.0" y="-600.0" type="curve" smooth="yes"/>
-      <point x="660.0" y="-600.0"/>
-      <point x="880.0" y="-412.0"/>
-      <point x="880.0" y="-68.0" type="curve" smooth="yes"/>
-      <point x="880.0" y="1540.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/01 23:10:14</string>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.15</key>
+      <string>2018/09/08 19:54:48</string>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.0</key>
       <dict>
         <key>name</key>
         <string>hr00</string>

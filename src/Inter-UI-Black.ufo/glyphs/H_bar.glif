@@ -2,9 +2,6 @@
 <glyph name="Hbar" format="2">
   <advance width="1952.0"/>
   <unicode hex="0126"/>
-  <anchor x="976.0" y="16.0" name="bottom"/>
-  <anchor x="976.0" y="2200.0" name="top"/>
-  <anchor x="1992.0" y="2200.0" name="top0315"/>
   <outline>
     <contour>
       <point x="1960.0" y="1708.0" type="line"/>
@@ -12,29 +9,12 @@
       <point x="-8.0" y="1460.0" type="line"/>
       <point x="1960.0" y="1460.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1484.0" y="1216.0" type="line"/>
-      <point x="456.0" y="1216.0" type="line"/>
-      <point x="456.0" y="832.0" type="line"/>
-      <point x="1484.0" y="832.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="608.0" y="2048.0" type="line"/>
-      <point x="144.0" y="2048.0" type="line"/>
-      <point x="144.0" y="0.0" type="line"/>
-      <point x="608.0" y="0.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1808.0" y="2048.0" type="line"/>
-      <point x="1344.0" y="2048.0" type="line"/>
-      <point x="1344.0" y="0.0" type="line"/>
-      <point x="1808.0" y="0.0" type="line"/>
-    </contour>
+    <component base="H"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/01 23:10:14</string>
+      <string>2018/09/08 20:59:37</string>
     </dict>
   </lib>
 </glyph>

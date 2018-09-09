@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kadescendercyrillic" format="2">
-  <advance width="1776.0"/>
+  <advance width="1520.0"/>
   <unicode hex="049B"/>
   <anchor x="1512.0" y="1744.0" name="top0315"/>
   <outline>
-    <component base="kacyrillic" xOffset="-32.0"/>
-    <component base="cyrillictic" xOffset="1172.0"/>
+    <component base="kacyrillic"/>
+    <component base="cyrillictic.cn" xOffset="1164.0"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/01 23:10:14</string>
-      <key>com.schriftgestaltung.componentsAlignment</key>
-      <array>
-        <integer>-1</integer>
-        <integer>-1</integer>
-      </array>
+      <string>2018/09/08 22:13:04</string>
     </dict>
   </lib>
 </glyph>

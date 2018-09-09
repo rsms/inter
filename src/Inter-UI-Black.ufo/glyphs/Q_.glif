@@ -3,11 +3,6 @@
   <advance width="2040.0"/>
   <unicode hex="0051"/>
   <guideline x="1024.0" y="1432.0" angle="90.0"/>
-  <anchor x="1024.0" y="-16.0" name="bottom"/>
-  <anchor x="2012.0" y="-560.0" name="bottom_dd"/>
-  <anchor x="1024.0" y="2200.0" name="top"/>
-  <anchor x="2012.0" y="2200.0" name="top0315"/>
-  <anchor x="2012.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
       <point x="840.0" y="704.0" type="line"/>
@@ -19,39 +14,12 @@
       <point x="1364.0" y="500.0" type="line"/>
       <point x="1220.0" y="704.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1920.0" y="1020.0" type="curve"/>
-      <point x="1920.0" y="1696.0"/>
-      <point x="1532.0" y="2076.0"/>
-      <point x="1024.0" y="2076.0" type="curve" smooth="yes"/>
-      <point x="512.0" y="2076.0"/>
-      <point x="120.0" y="1696.0"/>
-      <point x="120.0" y="1020.0" type="curve"/>
-      <point x="120.0" y="348.0"/>
-      <point x="512.0" y="-28.0"/>
-      <point x="1024.0" y="-28.0" type="curve" smooth="yes"/>
-      <point x="1532.0" y="-28.0"/>
-      <point x="1920.0" y="348.0"/>
-    </contour>
-    <contour>
-      <point x="1452.0" y="1020.0" type="curve"/>
-      <point x="1452.0" y="560.0"/>
-      <point x="1276.0" y="388.0"/>
-      <point x="1024.0" y="388.0" type="curve" smooth="yes"/>
-      <point x="772.0" y="388.0"/>
-      <point x="588.0" y="560.0"/>
-      <point x="588.0" y="1020.0" type="curve"/>
-      <point x="588.0" y="1480.0"/>
-      <point x="772.0" y="1660.0"/>
-      <point x="1024.0" y="1660.0" type="curve" smooth="yes"/>
-      <point x="1276.0" y="1660.0"/>
-      <point x="1452.0" y="1480.0"/>
-    </contour>
+    <component base="O"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/01 23:10:14</string>
+      <string>2018/09/08 18:22:46</string>
       <key>public.markColor</key>
       <string>0.859,0.922,0.969,0.004</string>
     </dict>

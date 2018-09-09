@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="breveinvnosp" format="2">
   <unicode hex="0311"/>
-  <anchor x="-792.0" y="1595.0" name="_marktop"/>
   <anchor x="-792.0" y="1595.0" name="_top"/>
-  <anchor x="-792.0" y="2145.0" name="mkmktop"/>
-  <anchor x="-792.0" y="2145.0" name="mkmktop_acc"/>
-  <anchor x="-792.0" y="1790.0" name="parent_top"/>
   <outline>
     <contour>
-      <point x="-294.0" y="1580.0" type="line"/>
-      <point x="-294.0" y="1829.0"/>
-      <point x="-487.0" y="2002.0"/>
-      <point x="-792.0" y="2002.0" type="curve" smooth="yes"/>
-      <point x="-1099.0" y="2002.0"/>
-      <point x="-1291.0" y="1829.0"/>
       <point x="-1291.0" y="1580.0" type="curve"/>
       <point x="-986.0" y="1580.0" type="line"/>
       <point x="-986.0" y="1671.0"/>
@@ -22,12 +12,18 @@
       <point x="-652.0" y="1755.0"/>
       <point x="-601.0" y="1671.0"/>
       <point x="-601.0" y="1580.0" type="curve"/>
+      <point x="-294.0" y="1580.0" type="line"/>
+      <point x="-294.0" y="1829.0"/>
+      <point x="-487.0" y="2002.0"/>
+      <point x="-792.0" y="2002.0" type="curve" smooth="yes"/>
+      <point x="-1099.0" y="2002.0"/>
+      <point x="-1291.0" y="1829.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/01 23:10:14</string>
+      <string>2018/09/09 01:00:19</string>
       <key>public.markColor</key>
       <string>0.98,0.89,0.89,0.004</string>
     </dict>
