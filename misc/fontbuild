@@ -13,8 +13,10 @@ import logging
 import re
 import signal
 import subprocess
+from functools import partial
 from fontmake.font_project import FontProject
 from fontTools import designspaceLib
+from fontTools import varLib
 from glyphsLib.interpolation import apply_instance_data
 from mutatorMath.ufo.document import DesignSpaceDocumentReader
 
@@ -35,6 +37,11 @@ def sighandler(signum, frame):
 def mkdirs(path):
   if not os.access(path, os.F_OK):
     os.makedirs(path)
+
+
+def fatal(msg):
+  print(sys.argv[0] + ': ' + msg, file=sys.stderr)
+  sys.exit(1)
 
 
 # setFontInfo patches font.info
@@ -123,6 +130,12 @@ class Main(object):
 
   def __init__(self):
     self.tmpdir = pjoin(BASEDIR,'build','tmp')
+    self.quiet = False
+
+
+  def log(self, msg):
+    if not self.quiet:
+      print(msg)
 
 
   def main(self, argv):
@@ -136,6 +149,7 @@ class Main(object):
 
       Commands:
         compile      Build font files
+        compile-var  Build variable font files
         glyphsync    Generate designspace and UFOs from Glyphs file
         instancegen  Generate instance UFOs for designspace
       '''.strip().replace('\n      ', '\n'))
@@ -143,19 +157,95 @@ class Main(object):
     argparser.add_argument('-v', '--verbose', action='store_true',
       help='Print more details')
 
+    argparser.add_argument('--debug', action='store_true',
+      help='Print lots of details')
+
+    argparser.add_argument('-q', '--quiet', action='store_true',
+      help='Only print errors')
+
+    argparser.add_argument('-C', metavar='<dir>', dest='chdir',
+      help='Run as if %(prog)s started in <dir> instead of the '+\
+           'current working directory.')
+
     argparser.add_argument('command', metavar='<command>')
 
-    args = argparser.parse_args(argv[1:2])
-    if args.verbose:
+    # search past base arguments
+    i = 1
+    while i < len(argv) and argv[i][0] == '-':
+      i = i + 1
+    i = i + 1
+
+    # parse CLI arguments
+    args = argparser.parse_args(argv[1:i])
+    if args.quiet:
+      self.quiet = True
+      if args.debug:
+        fatal("--quiet and --debug are mutually exclusive arguments")
+      if args.verbose:
+        fatal("--quiet and --verbose are mutually exclusive arguments")
+    elif args.debug:
       logging.basicConfig(level=logging.DEBUG)
+    elif args.verbose:
+      logging.basicConfig(level=logging.INFO)
     else:
       logging.basicConfig(level=logging.ERROR)
+
+    if args.chdir:
+      os.chdir(args.chdir)
+
     cmd = 'cmd_' + args.command.replace('-', '_')
     if not hasattr(self, cmd):
-      print('Unrecognized command %s. Try --help' % args.command,
-        file=sys.stderr)
-      exit(1)
-    getattr(self, cmd)(argv[2:])
+      fatal('Unrecognized command %s. Try --help' % args.command)
+    getattr(self, cmd)(argv[i:])
+
+
+
+  def cmd_compile_var(self, argv):
+    argparser = argparse.ArgumentParser(
+      usage='%(prog)s compile-var [-h] [-o <file>] <designspace>',
+      description='Compile variable font file')
+
+    argparser.add_argument('srcfile', metavar='<designspace>',
+      help='Source file (.designspace file)')
+
+    argparser.add_argument('-o', '--output', metavar='<fontfile>',
+      help='Output font file')
+
+    args = argparser.parse_args(argv)
+
+    # decide output filename (or check user-provided name)
+    outfilename = args.output
+    if outfilename is None or outfilename == '':
+      outfilename = os.path.splitext(basename(args.srcfile))[0] + '.var.ttf'
+      logging.info('setting --output %r' % outfilename)
+    else:
+      outfileext = os.path.splitext(outfilename)[1]
+      if outfileext.lower() != '.ttf':
+        fatal('Invalid file extension %r (expected ".ttf")' % outfileext)
+
+    project = FontProject(
+      timing=None,
+      verbose='WARNING',
+      validate_ufo=False,
+    )
+
+    mkdirs(dirname(outfilename))
+
+    project.run_from_designspace(
+      args.srcfile,
+      interpolate=False,
+      masters_as_instances=False,
+      round_instances=True,
+      output_path=outfilename,
+      output=['variable'],
+      subroutinize=True,
+      overlaps_backend='pathops', # use Skia's pathops
+    )
+
+    self.log("write %s" % outfilename)
+
+    # Note: we can't run ots-sanitize on the generated file as OTS
+    # currently doesn't support variable fonts.
 
 
 
@@ -163,47 +253,46 @@ class Main(object):
     argparser = argparse.ArgumentParser(
       usage='%(prog)s compile [-h] [-o <file>] <ufo>',
       description='Compile font files')
-    
-    argparser.add_argument('ufo', metavar='<ufo>',
-      help='UFO source file')
+
+    argparser.add_argument('srcfile', metavar='<ufo>',
+      help='Source file (.ufo file)')
 
     argparser.add_argument('-o', '--output', metavar='<fontfile>',
-      help='Output font file (.otf, .ttf, .ufo or .gx)')
+      help='Output font file (.otf, .ttf or .ufo)')
 
     argparser.add_argument('--validate', action='store_true',
       help='Enable ufoLib validation on reading/writing UFO files')
 
-    # argparser.add_argument('-f', '--formats', nargs='+', metavar='<format>',
-    #   help='Output formats. Any of %(choices)s. Defaults to "otf".',
-    #   choices=tuple(all_formats),
-    #   default=('otf'))
-    
     args = argparser.parse_args(argv)
 
     ext_to_format = {
       '.ufo': 'ufo',
       '.otf': 'otf',
       '.ttf': 'ttf',
+
+      # non-filename mapping targets: (kept for completeness)
       # 'ttf-interpolatable',
-      '.gx': 'variable',
+      # 'variable',
     }
 
+    # decide output filename
+    outfilename = args.output
+    if outfilename is None or outfilename == '':
+      outfilename = os.path.splitext(basename(args.srcfile))[0] + '.otf'
+      logging.info('setting --output %r' % outfilename)
+    
+    # build formats list from filename extension
     formats = []
-    filename = args.output
-    if filename is None or filename == '':
-      ufoname = basename(args.ufo)
-      name, ext = os.path.splitext(ufoname)
-      filename = name + '.otf'
-      logging.info('setting --output %r' % filename)
-    # for filename in args.output:
-    ext = os.path.splitext(filename)[1]
+    # for outfilename in args.outputs:
+    ext = os.path.splitext(outfilename)[1]
     ext_lc = ext.lower()
     if ext_lc in ext_to_format:
       formats.append(ext_to_format[ext_lc])
     else:
-      print('Unsupported output format %s' % ext, file=sys.stderr)
-      exit(1)
+      fatal('Unsupported output format %s' % ext)
 
+    # temp file to write to
+    tmpfilename = pjoin(self.tmpdir, basename(outfilename))
     mkdirs(self.tmpdir)
 
     project = FontProject(
@@ -212,23 +301,31 @@ class Main(object):
       validate_ufo=args.validate
     )
 
+    # run fontmake to produce OTF/TTF file at tmpfilename
     project.run_from_ufos(
-      [args.ufo],
-      output_dir=self.tmpdir,
+      [args.srcfile],
+      output_path=tmpfilename,
       output=formats,
       subroutinize=True,
       overlaps_backend='pathops', # use Skia's pathops
     )
 
+    # Run ots-sanitize on produced OTF/TTF file and write sanitized version
+    # to outfilename
+    self._ots_sanitize(tmpfilename, outfilename)
+
+
+  def _ots_sanitize(self, tmpfilename, outfilename):
     # run through ots-sanitize
     # for filename in args.output:
-    tmpfile = pjoin(self.tmpdir, basename(filename))
-    mkdirs(dirname(filename))
+    tmpfile = pjoin(self.tmpdir, tmpfilename)
+    mkdirs(dirname(outfilename))
     success = True
     try:
+      self.log("write %s" % outfilename)
       otssan_res = subprocess.check_output(
-        ['ots-sanitize', tmpfile, filename],
-        # ['cp', tmpfile, filename],
+        ['ots-sanitize', tmpfile, outfilename],
+        # ['cp', tmpfile, outfilename],
         shell=False
       ).strip()
       # Note: ots-sanitize does not exit with an error in many cases where
@@ -241,9 +338,7 @@ class Main(object):
     if success:
       os.unlink(tmpfile)
     else:
-      print('ots-sanitize failed for %s: %s' % (
-        tmpfile, otssan_res), file=sys.stderr)
-      exit(1)
+      fatal('ots-sanitize failed for %s: %s' % (tmpfile, otssan_res))
 
 
 
@@ -273,7 +368,7 @@ class Main(object):
     instance_dir = pjoin(BASEDIR, 'build', 'ufo')
 
     # load glyphs project file
-    print("generating %s from %s" % (
+    self.log("generating %s from %s" % (
       relpath(designspace_file, os.getcwd()),
       relpath(glyphsfile, os.getcwd())
     ))
@@ -326,7 +421,7 @@ class Main(object):
 
       # write UFO file
       source.path = ufo_path
-      print("write %s" % relpath(ufo_path, os.getcwd()))
+      self.log("write %s" % relpath(ufo_path, os.getcwd()))
       source.font.save(ufo_path)
 
     # patch instance names
@@ -335,7 +430,7 @@ class Main(object):
       instance.name = instance.styleName.lower().replace(' ', '')
       instance.filename = instance.filename.replace('InterUI', 'Inter-UI')
 
-    print("write %s" % relpath(designspace_file, os.getcwd()))
+    self.log("write %s" % relpath(designspace_file, os.getcwd()))
     designspace.write(designspace_file)
 
 
@@ -380,7 +475,7 @@ class Main(object):
           pjoin(dirname(designspace_file), instance.filename),
           os.getcwd()
         )
-        print('generating %s' % relname)
+        self.log('generating %s' % relname)
         gen.readInstance(("name", instance.name))
         instance_files.add(instance.filename)
         instance_weight[filebase] = int(instance.location['Weight'])
@@ -388,8 +483,7 @@ class Main(object):
           instances.remove(instance.name)
 
     if len(instances) > 0:
-      print('unknown style(s): %s' % ', '.join(list(instances)), file=sys.stderr)
-      sys.exit(1)
+      fatal('unknown style(s): %s' % ', '.join(list(instances)))
 
     ufos = apply_instance_data(designspace_file, instance_files)
 
