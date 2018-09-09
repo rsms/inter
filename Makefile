@@ -19,6 +19,8 @@
 #   all_var_hinted    Build all variable font files with hints into
 #                     FONTDIR/var-hinted
 #
+#   designspace       Build src/Inter-UI.designspace from src/Inter-UI.glyphs
+#
 # Style-specific targets:
 #   STYLE_otf         Build OTF file for STYLE into FONTDIR/const
 #   STYLE_ttf         Build TTF file for STYLE into FONTDIR/const
@@ -86,6 +88,9 @@ $(FONTDIR)/const/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspa
 # designspace <- glyphs file
 src/Inter-UI.designspace: src/Inter-UI.glyphs
 	misc/fontbuild glyphsync $<
+
+designspace: src/Inter-UI.designspace
+.PHONY: designspace
 
 # These rules simply short-circuit Make for performance
 src/Inter-UI.glyphs:
