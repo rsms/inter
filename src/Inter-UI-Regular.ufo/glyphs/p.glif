@@ -3,24 +3,65 @@
   <advance width="1716.0"/>
   <unicode hex="0070"/>
   <anchor x="332.0" y="-576.0" name="bottom"/>
+  <anchor x="1700.0" y="-680.0" name="bottom0315"/>
   <anchor x="1560.0" y="-560.0" name="bottom_dd"/>
+  <anchor x="336.0" y="-224.0" name="cross"/>
   <anchor x="904.0" y="1792.0" name="marktop"/>
   <anchor x="904.0" y="1792.0" name="top"/>
   <anchor x="1560.0" y="1760.0" name="top0315"/>
   <anchor x="1560.0" y="2200.0" name="top_dd"/>
   <outline>
     <contour>
-      <point x="216.0" y="-480.0" type="line"/>
+      <point x="920.0" y="-32.0" type="curve" smooth="yes"/>
+      <point x="1304.0" y="-32.0"/>
+      <point x="1572.0" y="276.0"/>
+      <point x="1572.0" y="764.0" type="curve" smooth="yes"/>
+      <point x="1572.0" y="1248.0"/>
+      <point x="1304.0" y="1556.0"/>
+      <point x="916.0" y="1556.0" type="curve" smooth="yes"/>
+      <point x="616.0" y="1556.0"/>
+      <point x="524.0" y="1372.0"/>
+      <point x="472.0" y="1292.0" type="curve"/>
+      <point x="356.0" y="1292.0" type="line"/>
+      <point x="356.0" y="236.0" type="line"/>
+      <point x="472.0" y="236.0" type="line"/>
+      <point x="524.0" y="152.0"/>
+      <point x="624.0" y="-32.0"/>
+    </contour>
+    <contour>
       <point x="216.0" y="-576.0" type="line"/>
       <point x="452.0" y="-576.0" type="line"/>
       <point x="452.0" y="-480.0" type="line"/>
+      <point x="216.0" y="-480.0" type="line"/>
     </contour>
-    <component base="b" yScale="-1.0" yOffset="1536.0"/>
+    <contour>
+      <point x="216.0" y="-512.0" type="line"/>
+      <point x="452.0" y="-512.0" type="line"/>
+      <point x="452.0" y="364.0" type="line"/>
+      <point x="372.0" y="752.0" type="line"/>
+      <point x="444.0" y="1248.0" type="line"/>
+      <point x="444.0" y="1536.0" type="line"/>
+      <point x="216.0" y="1536.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="888.0" y="180.0" type="curve" smooth="yes"/>
+      <point x="604.0" y="180.0"/>
+      <point x="448.0" y="420.0"/>
+      <point x="448.0" y="768.0" type="curve" smooth="yes"/>
+      <point x="448.0" y="1112.0"/>
+      <point x="600.0" y="1344.0"/>
+      <point x="888.0" y="1344.0" type="curve" smooth="yes"/>
+      <point x="1188.0" y="1344.0"/>
+      <point x="1336.0" y="1092.0"/>
+      <point x="1336.0" y="768.0" type="curve" smooth="yes"/>
+      <point x="1336.0" y="440.0"/>
+      <point x="1184.0" y="180.0"/>
+    </contour>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/08 17:14:59</string>
+      <string>2018/09/09 20:17:36</string>
       <key>public.markColor</key>
       <string>0.859,0.922,0.969,0.004</string>
     </dict>
