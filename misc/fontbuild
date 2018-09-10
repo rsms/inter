@@ -17,10 +17,13 @@ from functools import partial
 from fontmake.font_project import FontProject
 from fontTools import designspaceLib
 from fontTools import varLib
+from fontTools.misc.transform import Transform
+from fontTools.pens.transformPen import TransformPen
+from fontTools.pens.reverseContourPen import ReverseContourPen
 from glyphsLib.interpolation import apply_instance_data
 from mutatorMath.ufo.document import DesignSpaceDocumentReader
 
-
+log = logging.getLogger(__name__)
 stripItalic_re = re.compile(r'(?:^|\b)italic(?:\b|$)', re.I | re.U)
 
 
@@ -42,6 +45,66 @@ def mkdirs(path):
 def fatal(msg):
   print(sys.argv[0] + ': ' + msg, file=sys.stderr)
   sys.exit(1)
+
+
+def composedGlyphIsNonTrivial(g):
+  # A non-trivial glyph is one that is composed from either multiple
+  # components or that uses component transformations.
+  if g.components and len(g.components) > 0:
+    if len(g.components) > 1:
+      return True
+    for c in g.components:
+      # has non-trivial transformation? (i.e. scaled)
+      # Example of optimally trivial transformation:
+      #   (1, 0, 0, 1, 0, 0)  no scale or offset
+      # Example of scaled transformation matrix:
+      #   (-1.0, 0, 0.3311, 1, 1464.0, 0)  flipped x axis, sheered and offset
+      # 
+      xScale, xyScale, yxScale, yScale, xOffset, yOffset = c.transformation
+      if xScale != 1 or xyScale != 0 or yxScale != 0 or yScale != 1:
+        return True
+  return False
+
+
+class VarFontProject(FontProject):
+  def decompose_glyphs(self, ufos, glyph_filter=lambda g: True):
+    """Move components of UFOs' glyphs to their outlines."""
+    for ufo in ufos:
+      log.info('Decomposing glyphs for ' + self._font_name(ufo))
+      for glyph in ufo:
+        if not glyph.components or not glyph_filter(glyph):
+          continue
+        self._deep_copy_contours(ufo, glyph, glyph, Transform())
+        glyph.clearComponents()
+
+  def _deep_copy_contours(self, ufo, parent, component, transformation):
+    """Copy contours from component to parent, including nested components."""
+    for nested in component.components:
+      self._deep_copy_contours(
+        ufo, parent, ufo[nested.baseGlyph],
+        transformation.transform(nested.transformation))
+    if component != parent:
+      pen = TransformPen(parent.getPen(), transformation)
+      # if the transformation has a negative determinant, it will reverse
+      # the contour direction of the component
+      xx, xy, yx, yy = transformation[:4]
+      if xx*yy - xy*yx < 0:
+          pen = ReverseContourPen(pen)
+      component.draw(pen)
+
+  def build_interpolatable_ttfs(self, ufos, **kwargs):
+    """Build OpenType binaries with interpolatable TrueType outlines."""
+    # We decompose any glyph with two or more components to make sure
+    # that fontTools varLib is able to produce properly-slanting interpolation.
+    
+    decomposeGlyphs = set()
+    for ufo in ufos:
+      for glyph in ufo:
+        if glyph.components and composedGlyphIsNonTrivial(glyph):
+          decomposeGlyphs.add(glyph.name)
+
+    self.decompose_glyphs(ufos, lambda g: g.name in decomposeGlyphs)
+    self.save_otfs(ufos, ttf=True, interpolatable=True, **kwargs)
 
 
 # setFontInfo patches font.info
@@ -131,6 +194,7 @@ class Main(object):
   def __init__(self):
     self.tmpdir = pjoin(BASEDIR,'build','tmp')
     self.quiet = False
+    self.logLevelName = 'ERROR'
 
 
   def log(self, msg):
@@ -185,10 +249,13 @@ class Main(object):
         fatal("--quiet and --verbose are mutually exclusive arguments")
     elif args.debug:
       logging.basicConfig(level=logging.DEBUG)
+      self.logLevelName = 'DEBUG'
     elif args.verbose:
       logging.basicConfig(level=logging.INFO)
+      self.logLevelName = 'INFO'
     else:
       logging.basicConfig(level=logging.ERROR)
+      self.logLevelName = 'ERROR'
 
     if args.chdir:
       os.chdir(args.chdir)
@@ -217,17 +284,13 @@ class Main(object):
     outfilename = args.output
     if outfilename is None or outfilename == '':
       outfilename = os.path.splitext(basename(args.srcfile))[0] + '.var.ttf'
-      logging.info('setting --output %r' % outfilename)
+      log.info('setting --output %r' % outfilename)
     else:
       outfileext = os.path.splitext(outfilename)[1]
       if outfileext.lower() != '.ttf':
         fatal('Invalid file extension %r (expected ".ttf")' % outfileext)
 
-    project = FontProject(
-      timing=None,
-      verbose='WARNING',
-      validate_ufo=False,
-    )
+    project = VarFontProject(verbose=self.logLevelName)
 
     mkdirs(dirname(outfilename))
 
@@ -279,7 +342,7 @@ class Main(object):
     outfilename = args.output
     if outfilename is None or outfilename == '':
       outfilename = os.path.splitext(basename(args.srcfile))[0] + '.otf'
-      logging.info('setting --output %r' % outfilename)
+      log.info('setting --output %r' % outfilename)
     
     # build formats list from filename extension
     formats = []
@@ -295,11 +358,7 @@ class Main(object):
     tmpfilename = pjoin(self.tmpdir, basename(outfilename))
     mkdirs(self.tmpdir)
 
-    project = FontProject(
-      timing=None,
-      verbose='WARNING',
-      validate_ufo=args.validate
-    )
+    project = FontProject(verbose=self.logLevelName, validate_ufo=args.validate)
 
     # run fontmake to produce OTF/TTF file at tmpfilename
     project.run_from_ufos(
@@ -309,6 +368,9 @@ class Main(object):
       subroutinize=True,
       overlaps_backend='pathops', # use Skia's pathops
     )
+
+    # TODO: if outfile is a ufo, simply move it to outfilename instead
+    # of running ots-sanitize
 
     # Run ots-sanitize on produced OTF/TTF file and write sanitized version
     # to outfilename
@@ -515,11 +577,11 @@ class Main(object):
       # Note: ots-idempotent does not exit with an error in many cases where
       # it fails to sanitize the font.
       if res.find('Failed') != -1:
-        logging.error('[checkfont] ots-idempotent failed for %r: %s' % (
+        log.error('[checkfont] ots-idempotent failed for %r: %s' % (
           fontfile, res))
         return False
     except:
-      logging.error('[checkfont] ots-idempotent failed for %r' % fontfile)
+      log.error('[checkfont] ots-idempotent failed for %r' % fontfile)
       return False
     return True
 
