@@ -310,12 +310,14 @@ else
     Black \
   )
   derived_styles=( \
-    "Italic         : Regular" \
-    "Medium         : Regular Black" \
-    "MediumItalic   : Regular Black" \
-    "Bold           : Regular Black" \
-    "BoldItalic     : Regular Black" \
-    "BlackItalic    : Regular Black" \
+    "Italic           : Regular" \
+    "Medium           : Regular Black" \
+    "MediumItalic     : Regular Black" \
+    "Bold             : Regular Black" \
+    "BoldItalic       : Regular Black" \
+    "ExtraBold        : Regular Black" \
+    "ExtraBoldItalic  : Regular Black" \
+    "BlackItalic      : Regular Black" \
   )
   web_formats=( woff woff2 )  # Disabled/unused: eot
 
