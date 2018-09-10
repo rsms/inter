@@ -62,6 +62,9 @@ build/%.woff2: build/%.ttf
 build/%.woff: build/%.ttf
 	ttf2woff -O -t woff "$<" "$@"
 
+# make sure intermediate TTFs are not gc'd by make
+.PRECIOUS: build/%.ttf
+
 # TTF -> EOT (disabled)
 # build/%.eot: build/%.ttf
 # 	ttf2eot "$<" > "$@"
@@ -106,6 +109,9 @@ $(Black_ufo_d):
 build/ufo/Inter-UI-%.ufo: src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
 	misc/fontbuild instancegen src/Inter-UI.designspace $*
 
+# make sure intermediate UFOs are not gc'd by make
+.PRECIOUS: build/ufo/Inter-UI-%.ufo
+
 # Note: The seemingly convoluted dependency graph above is required to
 # make sure that glyphsync and instancegen are not run in parallel.
 
@@ -118,6 +124,9 @@ $(FONTDIR)/const-hinted/%.ttf: $(FONTDIR)/const/%.ttf
 $(FONTDIR)/var-hinted/%.ttf: $(FONTDIR)/var/%.ttf
 	mkdir -p "$(dir $@)"
 	ttfautohint --fallback-stem-width=256 --no-info --composites "$<" "$@"
+
+# make sure intermediate TTFs are not gc'd by make
+.PRECIOUS: $(FONTDIR)/const/%.ttf $(FONTDIR)/var/%.ttf
 
 # check var
 all_check_var: $(FONTDIR)/var/Inter-UI.var.ttf
