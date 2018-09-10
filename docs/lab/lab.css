@@ -12,9 +12,6 @@ body {
 .systemFont {
   font-family: system-ui,-apple-system,"SF Pro Text","SF UI Text",BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;, serif;
 }
-.italic {
-  font-style: italic;
-}
 .de-emphasize {
   color:#555;
 }
@@ -44,7 +41,7 @@ h2 {
   top:0; right:0; bottom:0;
   background:#f4f4f4;
   padding: 24px;
-  user-select:none;
+  user-select:none; -moz-user-select: none;
   font-family: sans-serif !important;
   overflow: auto;
   letter-spacing:0.01em;
@@ -73,7 +70,7 @@ h2 {
     width:90px;
   }
   .options .label-and-value input {
-    width:50px;
+    width: 50px;
   }
   .options .label-and-value select {
     min-width:50px;
@@ -89,9 +86,49 @@ h2 {
   .options label.rasterizePhrase input {
     width:100%;
   }
+  .options label.style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .options input[type="checkbox"] + * {
+    user-select: none; -moz-user-select: none;
+  }
+  .options .varfontControl {
+    display: none;
+  }
+  body.varfont .options .varfontControl {
+    display: block;
+  }
+  .options .varfontControl .label-and-value {
+    display: flex;
+  }
+  .options .varfontControl .label-and-value > span {
+    padding-left: 10px;
+    width: 80px;
+    flex: 0 0 auto;
+  }
+  .options .varfontControl input[type="range"] {
+    flex: 1 1 auto;
+  }
+  .options .varfontControl input[type="number"] {
+    flex: 0 1 auto;
+    width: 35px;
+    border: none;
+    padding: 0;
+    margin-left: 4px;
+  }
+  body.varfont .options select[name="weight"] {
+    pointer-events: none;
+    opacity: 0.4;
+  }
 
 input[type="number"] {
   width:50px;
+  background: none;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 4px;
+  border-radius: 2px;
 }
 
 label {
@@ -118,6 +155,15 @@ samples {
   display: flex;
   padding: 24px 0;
   width:100%;
+}
+body.italic samples {
+  font-style: italic;
+}
+body.varfont.italic samples {
+  /* [BUG] (Safari 11.1) font-style:italic and ital axis is not
+     mutually exclusive, meaning we have to set either or. */
+  font-style: normal;
+  font-variation-settings: 'ital' 100;
 }
   sample {
     margin: 0;
