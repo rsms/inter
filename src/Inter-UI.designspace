@@ -57,7 +57,7 @@
                 </dict>
             </lib>
         </instance>
-        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Medium.ufo" name="medium" postscriptfontname="InterUI-Medium" stylemapfamilyname="Inter UI Medium" stylemapstylename="regular" stylename="Medium">
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Medium.ufo" name="medium" stylemapfamilyname="Inter UI Medium" stylemapstylename="regular" stylename="Medium">
             <location>
                 <dimension name="Weight" xvalue="500" />
             </location>
@@ -123,7 +123,7 @@
                 </dict>
             </lib>
         </instance>
-        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Bold.ufo" name="bold" postscriptfontname="InterUI-Bold" stylemapfamilyname="Inter UI" stylemapstylename="bold" stylename="Bold">
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Bold.ufo" name="bold" stylemapfamilyname="Inter UI" stylemapstylename="bold" stylename="Bold">
             <location>
                 <dimension name="Weight" xvalue="700" />
             </location>
@@ -184,6 +184,72 @@
                                 <integer>0</integer>
                                 <integer>4</integer>
                             </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-ExtraBold.ufo" name="extrabold" stylemapfamilyname="Inter UI Extra Bold" stylemapstylename="regular" stylename="Extra Bold">
+            <location>
+                <dimension name="Weight" xvalue="800" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>9</integer>
+                                <integer>2</integer>
+                                <integer>4</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-ExtraBoldItalic.ufo" name="extrabolditalic" stylemapfamilyname="Inter UI Extra Bold" stylemapstylename="italic" stylename="Extra Bold Italic">
+            <location>
+                <dimension name="Weight" xvalue="800" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>9</integer>
+                                <integer>2</integer>
+                                <integer>4</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                        <array>
+                            <string>Filter</string>
+                            <string>Transformations;Slant:9.4;Origin:4;</string>
+                        </array>
+                        <array>
+                            <string>italicAngle</string>
+                            <string>9.4</string>
                         </array>
                     </array>
                 </dict>
