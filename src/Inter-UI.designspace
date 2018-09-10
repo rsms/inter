@@ -5,6 +5,12 @@
         <axis default="0" maximum="100" minimum="0" name="Italic" tag="ital" />
     </axes>
     <sources>
+        <source familyname="Inter UI" filename="Inter-UI-RegularItalic.ufo" name="regularitalic" stylename="Regular Italic">
+            <location>
+                <dimension name="Weight" xvalue="400" />
+                <dimension name="Italic" xvalue="100" />
+            </location>
+        </source>
         <source familyname="Inter UI" filename="Inter-UI-Regular.ufo" name="regular" stylename="Regular">
             <lib copy="1" />
             <groups copy="1" />
@@ -23,44 +29,6 @@
         </source>
     </sources>
     <instances>
-        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Italic.ufo" name="italic" stylemapfamilyname="Inter UI" stylemapstylename="italic" stylename="Italic">
-            <location>
-                <dimension name="Weight" xvalue="400" />
-                <dimension name="Italic" xvalue="100" />
-            </location>
-            <kerning />
-            <info />
-            <lib>
-                <dict>
-                    <key>com.schriftgestaltung.customParameters</key>
-                    <array>
-                        <array>
-                            <string>italicAngle</string>
-                            <string>9.4</string>
-                        </array>
-                        <array>
-                            <string>Filter</string>
-                            <string>Transformations;Slant:9.4;Origin:4;</string>
-                        </array>
-                        <array>
-                            <string>panose</string>
-                            <array>
-                                <integer>2</integer>
-                                <integer>11</integer>
-                                <integer>5</integer>
-                                <integer>2</integer>
-                                <integer>3</integer>
-                                <integer>0</integer>
-                                <integer>0</integer>
-                                <integer>0</integer>
-                                <integer>0</integer>
-                                <integer>4</integer>
-                            </array>
-                        </array>
-                    </array>
-                </dict>
-            </lib>
-        </instance>
         <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Medium.ufo" name="medium" stylemapfamilyname="Inter UI Medium" stylemapstylename="regular" stylename="Medium">
             <location>
                 <dimension name="Weight" xvalue="500" />
@@ -107,7 +75,7 @@
                             <string>9.4</string>
                         </array>
                         <array>
-                            <string>Filter</string>
+                            <string>x-Filter</string>
                             <string>Transformations;Slant:9.4;Origin:4;</string>
                         </array>
                         <array>
@@ -159,7 +127,7 @@
                 </dict>
             </lib>
         </instance>
-        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-BoldItalic.ufo" name="bolditalic" stylemapfamilyname="Inter UI Bold" stylemapstylename="italic" stylename="Bold Italic">
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-BoldItalic.ufo" name="bolditalic" stylemapfamilyname="Inter UI" stylemapstylename="bold italic" stylename="Bold Italic">
             <location>
                 <dimension name="Weight" xvalue="700" />
                 <dimension name="Italic" xvalue="100" />
@@ -171,7 +139,7 @@
                     <key>com.schriftgestaltung.customParameters</key>
                     <array>
                         <array>
-                            <string>Filter</string>
+                            <string>x-Filter</string>
                             <string>Transformations;Slant:9.4;Origin:4;</string>
                         </array>
                         <array>
@@ -254,7 +222,7 @@
                             </array>
                         </array>
                         <array>
-                            <string>Filter</string>
+                            <string>x-Filter</string>
                             <string>Transformations;Slant:9.4;Origin:4;</string>
                         </array>
                         <array>
@@ -277,7 +245,7 @@
                     <key>com.schriftgestaltung.customParameters</key>
                     <array>
                         <array>
-                            <string>Filter</string>
+                            <string>x-Filter</string>
                             <string>Transformations;Slant:9.4;Origin:4;</string>
                         </array>
                         <array>
