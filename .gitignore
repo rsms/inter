@@ -20,3 +20,6 @@ build
 
 src/FontInspector.html
 src/svg
+
+# layers with spaces breaks make (like backup layers from Glyphs)
+src/*.ufo/glyphs.* *
