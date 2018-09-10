@@ -29,15 +29,20 @@ Inter UI is similar to Roboto, San Francisco, Akkurat, Asap, Lucida Grande and o
 
 Current font styles:
 
-- Regular — master
-  - Italic
-- Medium — derived from Regular and Black by mixing
-  - MediumItalic
-- Bold — derived from Regular and Black by mixing
-  - BoldItalic
-- Black — master
-  - BlackItalic
+| Name                 | Weight class
+| -------------------- | ----------------
+| Regular              | 400
+| Italic               | 400
+| Medium               | 600
+| Medium Italic        | 600
+| Bold                 | 700
+| Bold Italic          | 700
+| Extra Bold           | 800
+| Extra Bold Italic    | 800
+| Black                | 900
+| Black Italic         | 900
 
+Inter UI also ships as a variable font.<br>
 Future versions may include lighter weights.
 
 
