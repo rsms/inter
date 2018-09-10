@@ -1,5 +1,8 @@
 {
 .appVersion = "1141";
+DisplayStrings = (
+g
+);
 classes = (
 {
 code = "\012  A - Z\012  AE AEacute Aacute Abreve Acircumflex Adieresis Agrave Alpha Alphatonos\012  Amacron Aogonek Aogonek.NAV Aring Aringacute Atilde Beta Cacute Ccaron\012  Ccedilla Ccircumflex Dcaron Dcroat Delta Eacute Ebreve Ecaron Ecircumflex\012  Edieresis Edotaccent Egrave Emacron Eng Eogonek Eogonek.NAV Epsilon\012  Epsilontonos Eta Etatonos Eth Gamma Gbreve Gcircumflex Gcommaaccent Germandbls\012  Hbar Hcircumflex IJ Iacute Ibreve Icircumflex Idieresis Igrave Imacron Iogonek\012  Iota Iotadieresis Iotatonos Itilde Jcircumflex Kappa Kcommaaccent Lacute\012  Lambda Lcaron Lcommaaccent Ldot L_slash Nacute Ncaron Ncommaaccent Ntilde Nu\012  OE Oacute Obreve Ocircumflex Odieresis Ograve Ohungarumlaut Omacron Omega\012  Omegatonos Omicron Omicrontonos Oogonek Oogonek.NAV Oslash Oslashacute Otilde\012  Phi Pi Psi Racute Rcaron Rcommaaccent Rho Sacute Scaron Scedilla Scircumflex\012  Sigma Tau Tbar Tcaron Theta Thorn Uacute Ubreve Ucircumflex Udieresis Ugrave\012  Uhungarumlaut Umacron Uogonek Upsilon Upsilondieresis Upsilontonos Uring\012  Utilde Wacute Wcircumflex Wdieresis Wgrave Xi Yacute Ycircumflex Ydieresis\012  Ygrave Zacute Zcaron Zdotaccent Zeta ampersand Cdotaccent Gdotaccent\012  Tcommaaccent Scommaaccent uni021A uni037F\012";
@@ -45898,16 +45901,15 @@ com.typemytype.robofont.guideline.magnetic.5XWlAkuiPv = 5;
 },
 {
 glyphname = edieresis;
-lastChange = "2018-09-09 23:42:39 +0000";
+lastChange = "2018-09-10 00:13:12 +0000";
 layers = (
 {
 components = (
 {
-name = dieresis;
-transform = "{1, 0, 0, 1, -4, 0}";
+name = e;
 },
 {
-name = e;
+name = dieresis;
 }
 );
 guideLines = (
@@ -45917,7 +45919,7 @@ position = "{812, 1180}";
 }
 );
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
-width = 1640;
+width = 1644;
 },
 {
 components = (
@@ -48253,7 +48255,7 @@ unicode = 0450;
 },
 {
 glyphname = iocyrillic;
-lastChange = "2018-09-09 23:42:39 +0000";
+lastChange = "2018-09-10 00:13:36 +0000";
 layers = (
 {
 components = (
@@ -48262,7 +48264,7 @@ name = edieresis;
 }
 );
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
-width = 1640;
+width = 1644;
 },
 {
 components = (
