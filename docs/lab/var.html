@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="../inter-ui.css" rel="stylesheet">
+<style type="text/css">
+
+@font-face {
+  font-family: 'Inter UI var';
+  font-weight: 400 900;
+  src: url('fonts/var/Inter-UI.var.woff2') format("woff2-variations"),
+       url('../font-files/Inter-UI.var.woff2') format("woff2-variations");
+}
+
+html {
+  font-family: 'Inter UI', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.001em;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.sample {
+  padding: 40px 40px 40px 35px;
+  font-size: 96px;
+  letter-spacing: -0.03em;
+  /*font-variation-settings: 'wght' 400, 'ital' 0;*/
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter UI var', sans-serif;
+  }
+}
+
+label {
+  user-select: none;
+}
+
+.ctrl {
+  display: flex;
+  /*justify-content:center;*/
+  align-items:center;
+  background: #e5e5e5;
+  color: #333;
+  padding:20px 20px 20px 40px;
+}
+  .ctrl input {
+    margin:0 8px;
+  }
+  .ctrl label {
+    display: flex;
+    /*justify-content:center;*/
+    align-items:center;
+    margin-right:20px;
+  }
+
+</style>
+</head>
+<body>
+<div class="ctrl">
+  <label>
+    Weight:
+    <input type="range" value="400" min="400" max="900" name="weight">
+  </label>
+  <label>
+    Italic:
+    <input type="range" value="0" min="0" max="100" name="italic">
+  </label>
+  <label>
+    <input type="checkbox" name="animate">
+    Animate
+  </label>
+</div>
+<div class="sample" contenteditable>
+Inter UI 2.6 coming soon <br>
+Refined glyphs & kerning <br>
+Variable weight axis <br>
+Major overhaul 123ABC! <br>
+</div>
+<script type="text/javascript">
+
+var state = {
+  weight: 400,
+  italic: 0,
+}
+
+var samples = document.querySelectorAll('div.sample')
+var weightInput = document.querySelector('[name="weight"]')
+var italicInput = document.querySelector('[name="italic"]')
+
+weightInput.value = String(state.weight)
+italicInput.value = String(state.italic)
+
+function updateFontVariationSettings() {
+  for (let i = 0; i < samples.length; i++) {
+    let sample = samples[i]
+    // sample.style.fontVariationSettings =
+    //   `'wght' ${state.weight}, 'ital' ${state.italic}`
+    sample.style.fontVariationSettings =
+      `'wght' ${state.weight}, 'ital' ${state.italic}`
+  }
+}
+
+function setWeight(weight) {
+  state.weight = weight
+  updateFontVariationSettings()
+}
+
+function setItalic(italic) {
+  state.italic = italic
+  updateFontVariationSettings()
+}
+
+// monotime() :float  milliseconds
+//
+var monotime = (
+  window.performance !== undefined && window.performance.now ? function() {
+    return window.performance.now()
+  } : Date.now ? function() {
+    return Date.now()
+  } : function() {
+    return (new Date()).getTime()
+  }
+)
+
+
+var isAnimating = false
+function startAnimation() {
+  if (isAnimating) {
+    return
+  }
+  weightInput.disabled = true
+  isAnimating = true
+  let v = 0
+  let wmin = parseFloat(weightInput.min)
+    , wmax = parseFloat(weightInput.max)
+    , imin = parseFloat(italicInput.min)
+    , imax = parseFloat(italicInput.max)
+    , wspeed = 200    // lower is faster; time divisor
+    , ispeed = 800
+    , clamp = 0.001
+    , startTime = monotime()
+  function update() {
+    let r = 0, v = 0
+
+    r = (1 + Math.sin((monotime() - startTime) / wspeed)) * 0.5
+    v = (wmin * (1 - clamp)) + (((wmax * (1 + clamp)) - (wmin * (1 - clamp))) * r)
+    v = Math.max(wmin, Math.min(wmax, v))
+    setWeight(v)
+    weightInput.value = v
+
+    r = (1 + Math.sin((monotime() - startTime) / ispeed)) * 0.5
+    v = (imin * (1 - clamp)) + (((imax * (1 + clamp)) - (imin * (1 - clamp))) * r)
+    v = Math.max(imin, Math.min(imax, v))
+    setItalic(v)
+    italicInput.value = v
+    
+    if (isAnimating) {
+      requestAnimationFrame(update)
+    }
+  }
+  update()
+}
+
+function stopAnimation() {
+  isAnimating = false
+  weightInput.disabled = false
+  weightInput.value = String(state.weight)
+}
+
+// UI control: weight slider
+weightInput.addEventListener('input',
+  weightInput.valueAsNumber !== undefined ? ev => {
+    setWeight(weightInput.valueAsNumber)
+  } : ev => {
+    setWeight(parseFloat(weightInput.value))
+  }
+)
+
+// UI control: italic slider
+italicInput.addEventListener('input',
+  italicInput.valueAsNumber !== undefined ? ev => {
+    setItalic(italicInput.valueAsNumber)
+  } : ev => {
+    setItalic(parseFloat(italicInput.value))
+  }
+)
+
+// UI control: animate
+var animateInput = document.querySelector('[name="animate"]')
+if (!window.requestAnimationFrame) {
+  animateInput.disabled = true
+} else {
+  animateInput.addEventListener('change', ev => {
+    if (animateInput.checked) {
+      startAnimation()
+    } else {
+      stopAnimation()
+    }
+  })
+}
+
+</script>
+  </body>
+</html>
