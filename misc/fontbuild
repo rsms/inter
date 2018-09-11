@@ -8,6 +8,7 @@ from common import BASEDIR, VENVDIR, getGitHash, getVersion
 
 import argparse
 import datetime
+import errno
 import glyphsLib
 import logging
 import re
@@ -38,8 +39,11 @@ def sighandler(signum, frame):
 
 
 def mkdirs(path):
-  if not os.access(path, os.F_OK):
+  try:
     os.makedirs(path)
+  except OSError as e:
+    if e.errno != errno.EEXIST:
+      raise  # raises the error again
 
 
 def fatal(msg):
