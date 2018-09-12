@@ -83,8 +83,6 @@ $(FONTDIR)/const/Inter-UI-Regular.%: src/Inter-UI.designspace $(Regular_ufo_d)
 $(FONTDIR)/const/Inter-UI-Black.%: src/Inter-UI.designspace $(Black_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Black.ufo
 
-Italic_ufo_d :=  $(wildcard src/Inter-UI-RegularItalic.ufo/*.{fea,plist} src/Inter-UI-RegularItalic.ufo/glyphs/*.{glif,plist})
-
 $(FONTDIR)/const/Inter-UI-Italic.%: src/Inter-UI.designspace $(Italic_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-RegularItalic.ufo
 

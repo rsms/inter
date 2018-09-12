@@ -308,16 +308,16 @@ else
   master_styles=( \
     Regular \
     Black \
+    Italic \
   )
   derived_styles=( \
-    "Italic           : Regular" \
     "Medium           : Regular Black" \
-    "MediumItalic     : Regular Black" \
+    "MediumItalic     : Regular Black Italic" \
     "Bold             : Regular Black" \
-    "BoldItalic       : Regular Black" \
+    "BoldItalic       : Regular Black Italic" \
     "ExtraBold        : Regular Black" \
-    "ExtraBoldItalic  : Regular Black" \
-    "BlackItalic      : Regular Black" \
+    "ExtraBoldItalic  : Regular Black Italic" \
+    "BlackItalic      : Regular Black Italic" \
   )
   web_formats=( woff woff2 )  # Disabled/unused: eot
 
@@ -348,8 +348,12 @@ else
     # add master styles to style array
     for style in "${master_styles[@]}"; do
       all_styles+=( $style )
-      echo "${style}_ufo_d := " \
-        "\$(wildcard src/Inter-UI-${style}.ufo/* src/Inter-UI-${style}.ufo/*/*)" >> "$GEN_MAKE_FILE"
+      echo -n "${style}_ufo_d := \$(wildcard" >> "$GEN_MAKE_FILE"
+      echo -n " src/Inter-UI-${style}.ufo/*.plist" >> "$GEN_MAKE_FILE"
+      echo -n " src/Inter-UI-${style}.ufo/*.fea" >> "$GEN_MAKE_FILE"
+      echo -n " src/Inter-UI-${style}.ufo/glyphs/*.plist" >> "$GEN_MAKE_FILE"
+      echo -n " src/Inter-UI-${style}.ufo/glyphs/*.glif" >> "$GEN_MAKE_FILE"
+      echo ")" >> "$GEN_MAKE_FILE"
     done
 
     # generate all_ufo: <master_ufos>
