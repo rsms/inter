@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="asterisk.case" format="2">
-  <advance width="1648.0"/>
+  <advance width="1664.0"/>
   <note>
 Recipe:
 1. make horizontal rect
@@ -14,37 +14,14 @@ Recipe:
   <guideline x="768.0" y="636.0" angle="90.0"/>
   <guideline x="1516.0" y="1024.0" angle="0.0"/>
   <outline>
-    <contour>
-      <point x="600.0" y="400.0" type="line"/>
-      <point x="816.0" y="776.0" type="line"/>
-      <point x="832.0" y="776.0" type="line"/>
-      <point x="1048.0" y="400.0" type="line"/>
-      <point x="1276.0" y="528.0" type="line"/>
-      <point x="1044.0" y="892.0" type="line"/>
-      <point x="1052.0" y="908.0" type="line"/>
-      <point x="1500.0" y="896.0" type="line"/>
-      <point x="1500.0" y="1152.0" type="line"/>
-      <point x="1048.0" y="1140.0" type="line"/>
-      <point x="1040.0" y="1156.0" type="line"/>
-      <point x="1272.0" y="1520.0" type="line"/>
-      <point x="1048.0" y="1648.0" type="line"/>
-      <point x="832.0" y="1268.0" type="line"/>
-      <point x="816.0" y="1268.0" type="line"/>
-      <point x="600.0" y="1648.0" type="line"/>
-      <point x="372.0" y="1520.0" type="line"/>
-      <point x="612.0" y="1156.0" type="line"/>
-      <point x="604.0" y="1140.0" type="line"/>
-      <point x="148.0" y="1152.0" type="line"/>
-      <point x="148.0" y="896.0" type="line"/>
-      <point x="600.0" y="908.0" type="line"/>
-      <point x="608.0" y="892.0" type="line"/>
-      <point x="372.0" y="528.0" type="line"/>
-    </contour>
+    <component base="asterisk" yOffset="-448.0"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/10 02:45:13</string>
+      <string>2018/09/12 03:20:03</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
     </dict>
   </lib>
 </glyph>
