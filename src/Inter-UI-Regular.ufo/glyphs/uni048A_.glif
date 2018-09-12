@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni048A" format="2">
-  <advance width="2288.0"/>
+  <advance width="2080.0"/>
   <unicode hex="048A"/>
-  <anchor x="1004.0" y="2688.0" name="top"/>
-  <anchor x="1968.0" y="2216.0" name="top0315"/>
   <outline>
-    <component base="afii10026" xOffset="-48.0"/>
-    <component base="breve" xOffset="368.0" yOffset="444.0"/>
-    <component base="comma" xOffset="1520.0" yOffset="-100.0"/>
+    <component base="afii10026"/>
+    <component base="breve" xOffset="416.0" yOffset="528.0"/>
+    <component base="cyrillictail.cn" xOffset="1536.0" yOffset="-100.0"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/10 01:55:08</string>
+      <string>2018/09/11 17:03:24</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <integer>-1</integer>
-        <integer>-1</integer>
-        <integer>-1</integer>
+        <integer>0</integer>
+        <integer>0</integer>
+        <integer>1</integer>
       </array>
     </dict>
   </lib>

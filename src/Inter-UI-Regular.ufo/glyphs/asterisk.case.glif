@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="asterisk.case" format="2">
-  <advance width="1552.0"/>
+  <advance width="1432.0"/>
   <note>
 Recipe:
 1. make horizontal rect
@@ -11,43 +11,20 @@ Recipe:
 6. flip on vertical axis
 7. enter transform mode and center it
 </note>
-  <guideline x="1072.0" y="1024.0" angle="0.0"/>
-  <guideline x="1132.0" y="1448.0" angle="0.0"/>
-  <guideline x="1132.0" y="460.0" angle="0.0"/>
-  <guideline x="940.0" y="352.0" angle="0.0"/>
-  <guideline x="768.0" y="1708.0" angle="90.0"/>
+  <guideline x="1012.0" y="1024.0" angle="0.0"/>
+  <guideline x="1072.0" y="1448.0" angle="0.0"/>
+  <guideline x="1072.0" y="460.0" angle="0.0"/>
+  <guideline x="880.0" y="352.0" angle="0.0"/>
+  <guideline x="708.0" y="1708.0" angle="90.0"/>
   <outline>
-    <contour>
-      <point x="552.0" y="428.0" type="line"/>
-      <point x="768.0" y="820.0" type="line"/>
-      <point x="784.0" y="820.0" type="line"/>
-      <point x="1000.0" y="428.0" type="line"/>
-      <point x="1180.0" y="532.0" type="line"/>
-      <point x="944.0" y="916.0" type="line"/>
-      <point x="952.0" y="932.0" type="line"/>
-      <point x="1404.0" y="920.0" type="line"/>
-      <point x="1404.0" y="1128.0" type="line"/>
-      <point x="960.0" y="1116.0" type="line"/>
-      <point x="952.0" y="1132.0" type="line"/>
-      <point x="1184.0" y="1516.0" type="line"/>
-      <point x="1000.0" y="1620.0" type="line"/>
-      <point x="784.0" y="1224.0" type="line"/>
-      <point x="768.0" y="1224.0" type="line"/>
-      <point x="552.0" y="1620.0" type="line"/>
-      <point x="368.0" y="1516.0" type="line"/>
-      <point x="604.0" y="1132.0" type="line"/>
-      <point x="596.0" y="1116.0" type="line"/>
-      <point x="148.0" y="1128.0" type="line"/>
-      <point x="148.0" y="920.0" type="line"/>
-      <point x="600.0" y="932.0" type="line"/>
-      <point x="608.0" y="916.0" type="line"/>
-      <point x="372.0" y="532.0" type="line"/>
-    </contour>
+    <component base="asterisk" xOffset="12.0" yOffset="-448.0"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/10 02:45:13</string>
+      <string>2018/09/12 03:20:03</string>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
     </dict>
   </lib>
 </glyph>
