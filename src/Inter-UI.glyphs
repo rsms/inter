@@ -69431,7 +69431,7 @@ interface.gridadjust.original = "{'width': 2354.0, 'leftMargin': 83, 'rightMargi
 {
 color = (219,235,247,1);
 glyphname = g;
-lastChange = "2018-09-12 16:14:17 +0000";
+lastChange = "2018-09-12 16:50:37 +0000";
 layers = (
 {
 anchors = (
@@ -69473,7 +69473,6 @@ nodes = (
 "1272 1200 LINE",
 "1348 768 LINE",
 "1264 360 LINE",
-"1264 280 LINE",
 "1264 12 LINE",
 "1268 -244 OFFCURVE",
 "1064 -364 OFFCURVE",
@@ -69575,9 +69574,8 @@ nodes = (
 "1308 728 LINE",
 "1144 384 LINE",
 "1144 96 LINE",
-"1144 124 LINE",
-"1144 -94 OFFCURVE",
-"982 -204 OFFCURVE",
+"1144 -69 OFFCURVE",
+"996 -204 OFFCURVE",
 "792 -204 CURVE SMOOTH",
 "642 -204 OFFCURVE",
 "520 -136 OFFCURVE",
@@ -69764,7 +69762,6 @@ nodes = (
 "1344 1200 LINE",
 "1348 768 LINE",
 "1196 360 LINE",
-"1184 280 LINE",
 "1140 12 LINE",
 "1100 -244 OFFCURVE",
 "876 -364 OFFCURVE",
@@ -69830,23 +69827,9 @@ userData = {
 },
 {
 glyphname = ghook;
-lastChange = "2018-09-10 01:55:08 +0000";
+lastChange = "2018-09-12 16:53:02 +0000";
 layers = (
 {
-anchors = (
-{
-name = bottom;
-position = "{748, -616}";
-},
-{
-name = top;
-position = "{748, 1776}";
-},
-{
-name = top0315;
-position = "{1652, 1776}";
-}
-);
 components = (
 {
 name = g;
@@ -69879,20 +69862,6 @@ nodes = (
 width = 1728;
 },
 {
-anchors = (
-{
-name = bottom;
-position = "{928, -616}";
-},
-{
-name = top;
-position = "{928, 1776}";
-},
-{
-name = top0315;
-position = "{2088, 1776}";
-}
-);
 components = (
 {
 name = g;
@@ -69903,42 +69872,28 @@ paths = (
 {
 closed = 1;
 nodes = (
-"1584 1548 LINE SMOOTH",
-"1584 1640 OFFCURVE",
-"1716 1660 OFFCURVE",
-"1816 1660 CURVE SMOOTH",
-"1856 1660 OFFCURVE",
-"1848 1660 OFFCURVE",
-"1940 1652 CURVE",
-"1940 2060 LINE",
-"1872 2064 OFFCURVE",
-"1800 2076 OFFCURVE",
-"1664 2076 CURVE SMOOTH",
-"1376 2076 OFFCURVE",
-"1036 2032 OFFCURVE",
-"1036 1548 CURVE SMOOTH",
-"1036 1436 LINE",
-"1584 1436 LINE"
+"1676 1548 LINE SMOOTH",
+"1676 1640 OFFCURVE",
+"1808 1660 OFFCURVE",
+"1908 1660 CURVE SMOOTH",
+"1948 1660 OFFCURVE",
+"1940 1660 OFFCURVE",
+"2032 1652 CURVE",
+"2032 2060 LINE",
+"1964 2064 OFFCURVE",
+"1892 2076 OFFCURVE",
+"1756 2076 CURVE SMOOTH",
+"1468 2076 OFFCURVE",
+"1128 2032 OFFCURVE",
+"1128 1548 CURVE SMOOTH",
+"1128 1436 LINE",
+"1676 1436 LINE"
 );
 }
 );
-width = 1788;
+width = 1900;
 },
 {
-anchors = (
-{
-name = bottom;
-position = "{748, -616}";
-},
-{
-name = top;
-position = "{748, 1776}";
-},
-{
-name = top0315;
-position = "{1652, 1776}";
-}
-);
 components = (
 {
 name = g;
@@ -69949,22 +69904,22 @@ paths = (
 {
 closed = 1;
 nodes = (
-"1500 1664 LINE SMOOTH",
-"1500 1824 OFFCURVE",
-"1596 1872 OFFCURVE",
-"1724 1872 CURVE SMOOTH",
-"1752 1872 OFFCURVE",
-"1780 1868 OFFCURVE",
-"1800 1864 CURVE",
-"1800 2064 LINE",
-"1764 2076 OFFCURVE",
-"1712 2076 OFFCURVE",
-"1664 2076 CURVE SMOOTH",
-"1440 2076 OFFCURVE",
-"1272 1928 OFFCURVE",
-"1272 1664 CURVE SMOOTH",
-"1272 1464 LINE",
-"1500 1464 LINE"
+"1652 1664 LINE SMOOTH",
+"1682 1824 OFFCURVE",
+"1781 1872 OFFCURVE",
+"1908 1872 CURVE SMOOTH",
+"1937 1872 OFFCURVE",
+"1964 1868 OFFCURVE",
+"1984 1864 CURVE",
+"2016 2064 LINE",
+"1983 2076 OFFCURVE",
+"1931 2076 OFFCURVE",
+"1884 2076 CURVE SMOOTH",
+"1659 2076 OFFCURVE",
+"1473 1927 OFFCURVE",
+"1424 1664 CURVE SMOOTH",
+"1400 1536 LINE",
+"1628 1536 LINE"
 );
 }
 );
