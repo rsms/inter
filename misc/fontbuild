@@ -166,7 +166,7 @@ def setFontInfo(font, weight, updateCreated=True):
   # - Medium  => "Family Medium", ("regular" | "italic")
   # - Black   => "Family Black", ("regular" | "italic")
   # and so on.
-  subfamily = stripItalic(style) # "A Italic" => "A", "A" => "A"
+  subfamily = stripItalic(style).strip() # "A Italic" => "A", "A" => "A"
   if len(subfamily) == 0:
     subfamily = "Regular"
   subfamily_lc = subfamily.lower()
@@ -185,7 +185,7 @@ def setFontInfo(font, weight, updateCreated=True):
       else:
         font.info.styleMapStyleName = "bold"
   else:
-    font.info.styleMapFamilyName = family + ' ' + subfamily
+    font.info.styleMapFamilyName = (family + ' ' + subfamily).strip()
     # name ID 2 "Subfamily name" (legacy, but required)
     if isitalic:
       font.info.styleMapStyleName = "italic"
@@ -467,8 +467,17 @@ class Main(object):
       # no need to also set the relative 'filename' attribute as that
       # will be auto-updated on writing the designspace document
 
-      # name "Inter UI Black" => "black"
-      source.name = source.styleName.lower().replace(' ', '')
+      if source.styleName == "Italic Italic":
+        # Workaround for Glyphs limitation
+        # (Base italic master can't be called just Italic, so it's called
+        # "Italic Italic" which is converted here to just "Italic")
+        ufo_path = pjoin(master_dir, 'Inter-UI-Italic.ufo')
+        source.styleName = "Italic"
+        source.name = "italic"
+        source.font.info.styleName = "Italic"
+      else:
+        # name "Inter UI Black" => "black"
+        source.name = source.styleName.lower().replace(' ', '')
 
       # fixup font info
       weight = int(source.location['Weight'])
@@ -484,6 +493,10 @@ class Main(object):
         lib[key] = value
       source.font.lib.clear()
       source.font.lib.update(lib)
+
+      # clear anchors
+      for g in source.font:
+        g.clearAnchors()
 
       # write UFO file
       source.path = ufo_path
@@ -563,6 +576,10 @@ class Main(object):
         italicAngle = float(italicAngle)
         del font.lib[italicAngleKey]
         font.info.italicAngle = italicAngle
+
+      # clear anchors
+      for g in font:
+        g.clearAnchors()
       
       # update font info
       weight = instance_weight[basename(font.path)]
