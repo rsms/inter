@@ -198,7 +198,7 @@ class Main(object):
   def __init__(self):
     self.tmpdir = pjoin(BASEDIR,'build','tmp')
     self.quiet = False
-    self.logLevelName = 'ERROR'
+    self.logLevelName = 'WARNING'
 
 
   def log(self, msg):
@@ -258,8 +258,8 @@ class Main(object):
       logging.basicConfig(level=logging.INFO)
       self.logLevelName = 'INFO'
     else:
-      logging.basicConfig(level=logging.ERROR)
-      self.logLevelName = 'ERROR'
+      logging.basicConfig(level=logging.WARNING)
+      self.logLevelName = 'WARNING'
 
     if args.chdir:
       os.chdir(args.chdir)
