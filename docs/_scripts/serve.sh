@@ -16,6 +16,7 @@ sh <<_EOF_ &
 N=3
 while [ \$N -gt 0 ]; do
   sleep 1
+  mkdir -p _site/lab
   ln -fs ../../../build/fonts _site/lab/fonts
   sleep 5
   if [ -d _site/lab/fonts ]; then
@@ -23,6 +24,7 @@ while [ \$N -gt 0 ]; do
   else
     rm -f _site/lab/fonts
   fi
+  mkdir -p _site/lab
   ln -fs ../../../build/fonts _site/lab/fonts
   let N=N-1
 done
