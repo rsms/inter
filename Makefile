@@ -86,6 +86,9 @@ $(FONTDIR)/const/Inter-UI-Black.%: src/Inter-UI.designspace $(Black_ufo_d)
 $(FONTDIR)/const/Inter-UI-Italic.%: src/Inter-UI.designspace $(Italic_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Italic.ufo
 
+$(FONTDIR)/const/Inter-UI-BlackItalic.%: src/Inter-UI.designspace $(BlackItalic_ufo_d)
+	misc/fontbuild compile -o $@ src/Inter-UI-BlackItalic.ufo
+
 $(FONTDIR)/const/Inter-UI-%.otf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
 	misc/fontbuild compile -o $@ $<
 

@@ -309,15 +309,15 @@ else
     Regular \
     Black \
     Italic \
+    BlackItalic \
   )
   derived_styles=( \
     "Medium           : Regular Black" \
-    "MediumItalic     : Regular Black Italic" \
+    "MediumItalic     : Italic BlackItalic" \
     "Bold             : Regular Black" \
-    "BoldItalic       : Regular Black Italic" \
+    "BoldItalic       : Italic BlackItalic" \
     "ExtraBold        : Regular Black" \
-    "ExtraBoldItalic  : Regular Black Italic" \
-    "BlackItalic      : Regular Black Italic" \
+    "ExtraBoldItalic  : Italic BlackItalic" \
   )
   web_formats=( woff woff2 )  # Disabled/unused: eot
 
