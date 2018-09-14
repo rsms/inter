@@ -27,6 +27,12 @@
                 <dimension name="Italic" xvalue="0" />
             </location>
         </source>
+        <source familyname="Inter UI" filename="Inter-UI-BlackItalic.ufo" name="blackitalic" stylename="Black Italic">
+            <location>
+                <dimension name="Weight" xvalue="900" />
+                <dimension name="Italic" xvalue="100" />
+            </location>
+        </source>
     </sources>
     <instances>
         <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Medium.ufo" name="medium" stylemapfamilyname="Inter UI Medium" stylemapstylename="regular" stylename="Medium">
@@ -228,44 +234,6 @@
                         <array>
                             <string>italicAngle</string>
                             <string>9.4</string>
-                        </array>
-                    </array>
-                </dict>
-            </lib>
-        </instance>
-        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-BlackItalic.ufo" name="blackitalic" stylemapfamilyname="Inter UI Black" stylemapstylename="italic" stylename="Black Italic">
-            <location>
-                <dimension name="Weight" xvalue="900" />
-                <dimension name="Italic" xvalue="1" />
-            </location>
-            <kerning />
-            <info />
-            <lib>
-                <dict>
-                    <key>com.schriftgestaltung.customParameters</key>
-                    <array>
-                        <array>
-                            <string>Filter</string>
-                            <string>Transformations;Slant:9.4;Origin:4;</string>
-                        </array>
-                        <array>
-                            <string>italicAngle</string>
-                            <string>9.4</string>
-                        </array>
-                        <array>
-                            <string>panose</string>
-                            <array>
-                                <integer>2</integer>
-                                <integer>11</integer>
-                                <integer>10</integer>
-                                <integer>2</integer>
-                                <integer>3</integer>
-                                <integer>0</integer>
-                                <integer>0</integer>
-                                <integer>0</integer>
-                                <integer>0</integer>
-                                <integer>4</integer>
-                            </array>
                         </array>
                     </array>
                 </dict>
