@@ -1128,6 +1128,8 @@ class Vars {
         .map(s => s.split('=').map(decodeURIComponent))
     )
     this.vars = new Map()
+    this._historyReplaceStateTimer = null
+    this._needsHistoryReplaceState = false
   }
 
   getValue(name) {
@@ -1153,7 +1155,29 @@ class Vars {
     } else {
       this.values.set(name, value)
     }
+    this._setNeedsHistoryReplaceState()
+  }
+
+  _performHistoryReplaceState() {
     history.replaceState({} , '', '?' + this.getQueryString())
+    this._needsHistoryReplaceState = false
+  }
+
+  _setNeedsHistoryReplaceState() {
+    // We employ some backoff on calling history.replaceState as
+    // Chrome will start to throttle (meaning ignoring) calls to
+    // history.replaceState if the frequency gets too high.
+    if (this._historyReplaceStateTimer === null) {
+      this._performHistoryReplaceState()
+      this._historyReplaceStateTimer = setTimeout(() => {
+        this._historyReplaceStateTimer = null
+        if (this._needsHistoryReplaceState) {
+          this._performHistoryReplaceState()
+        }
+      }, 200)
+    } else {
+      this._needsHistoryReplaceState = true
+    }
   }
 
   refreshValue(name) {
