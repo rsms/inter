@@ -18,9 +18,11 @@ from collections import OrderedDict
 from math import ceil, floor
 from defcon import Font
 from svg import SVGPathPen
+from ufo2ft.filters.decomposeComponents import DecomposeComponentsFilter
+from ufo2ft.filters.removeOverlaps import RemoveOverlapsFilter
 
 
-font = None  # RFont
+ufo = None
 ufopath = ''
 effectiveAscender = 0
 scale = 0.1
@@ -28,31 +30,6 @@ scale = 0.1
 
 def num(s):
   return int(s) if s.find('.') == -1 else float(s)
-
-
-def decomposeGlyph(font, glyph):
-  """Moves the components of a glyph to its outline."""
-  if len(glyph.components):
-    deepCopyContours(font, glyph, glyph, (0, 0), (1, 1))
-    glyph.clearComponents()
-
-
-def deepCopyContours(font, parent, component, offset, scale):
-  """Copy contours to parent from component, including nested components."""
-
-  for nested in component.components:
-    deepCopyContours(
-      font, parent, font[nested.baseGlyph],
-      (offset[0] + nested.offset[0], offset[1] + nested.offset[1]),
-      (scale[0] * nested.scale[0], scale[1] * nested.scale[1]))
-
-  if component == parent:
-    return
-  for contour in component:
-    contour = contour.copy()
-    contour.scale(scale)
-    contour.move(offset)
-    parent.appendContour(contour)
 
 
 
@@ -82,16 +59,16 @@ def glyphToSVG(g):
   ''' % {
     'name': g.name,
     'width': int(ceil(width * scale)),
-    'height': int(ceil((effectiveAscender - font.info.descender) * scale)),
+    'height': int(ceil((effectiveAscender - ufo.info.descender) * scale)),
     'xoffs': -(xoffs * scale),
     'yoffs': effectiveAscender * scale,
     # 'leftMargin': g.leftMargin * scale,
     # 'rightMargin': g.rightMargin * scale,
     'glyphSVGPath': glyphToSVGPath(g, -1),
-    # 'ascender': font.info.ascender * scale,
-    # 'descender': font.info.descender * scale,
-    # 'baselineOffset': (font.info.unitsPerEm + font.info.descender) * scale,
-    # 'unitsPerEm': font.info.unitsPerEm,
+    # 'ascender': ufo.info.ascender * scale,
+    # 'descender': ufo.info.descender * scale,
+    # 'baselineOffset': (ufo.info.unitsPerEm + ufo.info.descender) * scale,
+    # 'unitsPerEm': ufo.info.unitsPerEm,
     'scale': scale,
 
     # 'margin': [g.leftMargin * scale, g.rightMargin * scale],
@@ -173,7 +150,7 @@ def findGlifFile(glyphname):
 usedSVGNames = set()
 
 def genGlyph(glyphName):
-  g = font[glyphName]
+  g = ufo[glyphName]
   return glyphToSVG(g)
 
 
@@ -188,11 +165,11 @@ def genGlyphIDs(glyphnames):
   return nameToIdMap, idToNameMap
 
 
-def genKerningInfo(font, glyphnames, nameToIdMap):
-  kerning = font.kerning
+def genKerningInfo(ufo, glyphnames, nameToIdMap):
+  kerning = ufo.kerning
 
   # load groups
-  filename = os.path.join(font.path, 'groups.plist')
+  filename = os.path.join(ufo.path, 'groups.plist')
   groups = plistlib.readPlist(filename)
 
   pairs = []
@@ -269,16 +246,27 @@ if len(args.scale):
 
 ufopath = args.ufopath.rstrip('/')
 
-font = Font(ufopath)
-effectiveAscender = max(font.info.ascender, font.info.unitsPerEm)
+ufo = Font(ufopath)
+effectiveAscender = max(ufo.info.ascender, ufo.info.unitsPerEm)
 
-# print('\n'.join(font.keys()))
+print('preprocessing glyphs')
+filters = [
+  DecomposeComponentsFilter(),
+  RemoveOverlapsFilter(backend=RemoveOverlapsFilter.Backend.SKIA_PATHOPS),
+]
+glyphSet = {g.name: g for g in ufo}
+for func in filters:
+  func(ufo, glyphSet)
+
+print('generating SVGs and metrics data')
+
+# print('\n'.join(ufo.keys()))
 # sys.exit(0)
 
 deleteNames.add('.notdef')
 deleteNames.add('.null')
 
-glyphnames = args.glyphs if len(args.glyphs) else font.keys()
+glyphnames = args.glyphs if len(args.glyphs) else ufo.keys()
 glyphnameSet = set(glyphnames)
 
 glyphnames = [gn for gn in glyphnames if gn not in deleteNames]
@@ -321,7 +309,7 @@ if startPos == -1 or endPos == -1:
   print(msg % relfilename, file=sys.stderr)
   sys.exit(1)
 
-kerning = genKerningInfo(font, glyphnames, nameToIdMap)
+kerning = genKerningInfo(ufo, glyphnames, nameToIdMap)
 metaJson = '{\n'
 metaJson += '"nameids":' + fmtJsonDict(idToNameMap) + ',\n'
 metaJson += '"metrics":' + fmtJsonDict(glyphMetrics) + ',\n'
