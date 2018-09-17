@@ -130,7 +130,7 @@ fetchAll(render)
 
 
 var styleSheet = document.styleSheets[document.styleSheets.length-1]
-var glyphRule, baselineRule, zeroWidthAdvRule
+var glyphRule, lineRule, zeroWidthAdvRule
 var currentScale = 0
 var defaultSingleScale = 1
 var currentSingleScale = 1
@@ -183,7 +183,7 @@ function setScale(scale) {
 
   if (!glyphRule) {
     glyphRule = styleSheet.cssRules[styleSheet.insertRule('#glyphs .glyph {}', styleSheet.cssRules.length)]
-    baselineRule = styleSheet.cssRules[styleSheet.insertRule('#glyphs .glyph .baseline {}', styleSheet.cssRules.length)]
+    lineRule = styleSheet.cssRules[styleSheet.insertRule('#glyphs .glyph .line {}', styleSheet.cssRules.length)]
     zeroWidthAdvRule = styleSheet.cssRules[styleSheet.insertRule('#glyphs .glyph.zero-width .advance {}', styleSheet.cssRules.length)]
   }
 
@@ -197,7 +197,7 @@ function setScale(scale) {
       glyphRule.style.marginBottom = Math.ceil(16 / scale) + 'px';
     }
   }
-  baselineRule.style.height = hairline + 'px'
+  lineRule.style.height = hairline + 'px'
   zeroWidthAdvRule.style.borderWidth = (hairline) + 'px'
 
   updateLayoutAfterChanges()
@@ -474,9 +474,20 @@ function renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph) {
     glyph.title = name
   }
 
-  var baseline = document.createElement('div')
-  baseline.className = 'baseline'
-  glyph.appendChild(baseline)
+  var line = document.createElement('div')
+  line.className = 'line baseline'
+  line.title = "Baseline"
+  glyph.appendChild(line)
+
+  line = document.createElement('div')
+  line.className = 'line x-height'
+  line.title = "x-height"
+  glyph.appendChild(line)
+
+  line = document.createElement('div')
+  line.className = 'line cap-height'
+  line.title = "Cap height"
+  glyph.appendChild(line)
 
   names = document.createElement('div')
   names.className = 'names'

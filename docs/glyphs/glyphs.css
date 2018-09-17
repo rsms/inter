@@ -27,6 +27,7 @@ body.single #glyphs {
   max-width:888px;
   margin:0 auto;
   padding-left: 0;
+  overflow: visible;
 }
   .glyph {
     height: 346px;
@@ -41,13 +42,25 @@ body.single #glyphs {
     position: relative;
     text-shadow: none;
   }
-  .glyph .baseline {
-    background: rgba(0,90,230,.6);
+  .glyph .line {
+    background: rgba(0,0,0,.1);
     position: absolute;
-    left:0; right:0; bottom:64px;
+    left:0; right:0;
     height: 1px;
     z-index:0;
     visibility: hidden;
+  }
+  .glyph .line.baseline {
+    background: rgba(0,90,230,.6);
+    bottom: 64px;
+  }
+  .glyph .line.x-height {
+    background: rgba(230,60,10,.6);
+    top: 128px;
+  }
+  .glyph .line.cap-height {
+    background: rgba(60,130,20,.6);
+    top: 76px;
   }
   .glyph .names {
     position: absolute;
@@ -74,7 +87,7 @@ body.single #glyphs {
     background: transparent;
     border-left: 1px dashed transparent;
   }
-  .glyph:hover .baseline {
+  .glyph:hover .line {
     visibility: visible;
   }
   .glyph:hover .advance {
@@ -94,6 +107,9 @@ body.single #glyphs {
     top:0; bottom:0;
     z-index:1;
     opacity:0.95;
+  }
+  body.single .glyph svg {
+    overflow: visible;
   }
   .glyph .advancez {
     display: block;
