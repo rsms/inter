@@ -314,6 +314,8 @@ else
   derived_styles=( \
     "Medium           : Regular Black" \
     "MediumItalic     : Italic BlackItalic" \
+    "SemiBold         : Regular Black" \
+    "SemiBoldItalic   : Italic BlackItalic" \
     "Bold             : Regular Black" \
     "BoldItalic       : Italic BlackItalic" \
     "ExtraBold        : Regular Black" \
