@@ -38,6 +38,8 @@ endfor
           <option value="medium-italic">Medium Italic</option>
           <option value="bold" default>Bold</option>
           <option value="bold-italic">Bold Italic</option>
+          <option value="extra-bold" default>Extra Bold</option>
+          <option value="extra-bold-italic">Extra Bold Italic</option>
           <option value="black" default>Black</option>
           <option value="black-italic">Black Italic</option>
         </select>
@@ -184,6 +186,16 @@ graph.setOrigin(-0.2, 0.8)
 graph.setScale(0.049, 5)
 
 var s2 = $('livesample.s2')
+var samples = $$('livesample')
+
+// filter paste to match style
+samples.forEach(sample => {
+  sample.addEventListener('paste', ev => {
+    ev.preventDefault()
+    let text = ev.clipboardData.getData("text/plain")
+    document.execCommand("insertHTML", false, text)
+  }, {capture:true,passive:false})
+})
 
 function updateWidth() {
   var fontSize = bindings.value('font-size', 0)
@@ -235,6 +247,8 @@ bindings.configure('style', null, null, function (style) {
   cl.remove('font-style-medium-italic')
   cl.remove('font-style-bold')
   cl.remove('font-style-bold-italic')
+  cl.remove('font-style-extra-bold')
+  cl.remove('font-style-extra-bold-italic')
   cl.remove('font-style-black')
   cl.remove('font-style-black-italic')
   cl.add('font-style-' + style)

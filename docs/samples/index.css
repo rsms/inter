@@ -65,14 +65,16 @@ livesample.col2 {
   column-count: 2;
 }
 
-.font-style-regular       { font-weight:400 !important; font-style:normal !important; }
-.font-style-italic        { font-weight:400 !important; font-style:italic !important; }
-.font-style-medium        { font-weight:500 !important; font-style:normal !important; }
-.font-style-medium-italic { font-weight:500 !important; font-style:italic !important; }
-.font-style-bold          { font-weight:700 !important; font-style:normal !important; }
-.font-style-bold-italic   { font-weight:700 !important; font-style:italic !important; }
-.font-style-black         { font-weight:900 !important; font-style:normal !important; }
-.font-style-black-italic  { font-weight:900 !important; font-style:italic !important; }
+.font-style-regular           { font-variation-settings: "wght" 400, "ital" 0   !important; font-weight:400 !important; font-style:normal !important; }
+.font-style-italic            { font-variation-settings: "wght" 400, "ital" 100 !important; font-weight:400 !important; font-style:italic !important; }
+.font-style-medium            { font-variation-settings: "wght" 500, "ital" 0   !important; font-weight:500 !important; font-style:normal !important; }
+.font-style-medium-italic     { font-variation-settings: "wght" 500, "ital" 100 !important; font-weight:500 !important; font-style:italic !important; }
+.font-style-bold              { font-variation-settings: "wght" 700, "ital" 0   !important; font-weight:700 !important; font-style:normal !important; }
+.font-style-bold-italic       { font-variation-settings: "wght" 700, "ital" 100 !important; font-weight:700 !important; font-style:italic !important; }
+.font-style-extra-bold        { font-variation-settings: "wght" 800, "ital" 0   !important; font-weight:800 !important; font-style:normal !important; }
+.font-style-extra-bold-italic { font-variation-settings: "wght" 800, "ital" 100 !important; font-weight:800 !important; font-style:italic !important; }
+.font-style-black             { font-variation-settings: "wght" 900, "ital" 0   !important; font-weight:900 !important; font-style:normal !important; }
+.font-style-black-italic      { font-variation-settings: "wght" 900, "ital" 100 !important; font-weight:900 !important; font-style:italic !important; }
 
 div.live {
   margin-top:1em;

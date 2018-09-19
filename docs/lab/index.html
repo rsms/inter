@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="../favicon.png" />
+    <title>lab</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link href="../inter-ui.css" rel="stylesheet">
     <script type="text/javascript">
 
@@ -743,8 +744,6 @@ for (const ch of uniqueChars) {
 
 // end of samples
     </script>
-    <meta charset="utf-8">
-    <title>👀</title>
     <style id="font-css" type="text/css-template">
 /* Roboto for comparison */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
@@ -1295,6 +1294,15 @@ function main() {
   const repertoireControl = document.querySelector('.repertoireControl')
   const samplesElement = document.querySelector('samples')
 
+  // filter paste to match style
+  ;[].slice.call(document.querySelectorAll('[contenteditable]')).forEach(el => {
+    el.addEventListener('paste', ev => {
+      ev.preventDefault()
+      let text = ev.clipboardData.getData("text/plain")
+      document.execCommand("insertHTML", false, text)
+    }, {capture:true,passive:false})
+  })
+
   let sizeVar = null
 
   function forEachGlyphlist(fn) {
@@ -1513,10 +1521,6 @@ function main() {
     return e.valueAsNumber !== undefined ? e.valueAsNumber : e.value
   })
 
-  vars.bind('varItalic', (e, v) => {
-    console.log('varItalic', v)
-  })
-
 
   // compare
   let secondarySampleClassNameAddition = null
@@ -1709,6 +1713,9 @@ function main() {
   </body>
   <script type="text/javascript">
     main();
-    document.title += ' ' + (new Date()).toTimeString().split(':').slice(0,2).join(':');
+    document.title = (
+      (new Date()).toTimeString().split(':').slice(0,2).join(':') +
+      ' — ' + (new Date()).toDateString()
+    );
   </script>
 </html>
