@@ -103,6 +103,66 @@
                 </dict>
             </lib>
         </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-SemiBold.ufo" name="semibold" stylemapfamilyname="Inter UI Semi Bold" stylemapstylename="regular" stylename="Semi Bold">
+            <location>
+                <dimension name="Weight" xvalue="600" />
+                <dimension name="Italic" xvalue="0" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>7</integer>
+                                <integer>2</integer>
+                                <integer>3</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-SemiBoldItalic.ufo" name="semibolditalic" stylemapfamilyname="Inter UI Semi Bold" stylemapstylename="italic" stylename="Semi Bold Italic">
+            <location>
+                <dimension name="Weight" xvalue="600" />
+                <dimension name="Italic" xvalue="100" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>7</integer>
+                                <integer>2</integer>
+                                <integer>3</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
         <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Bold.ufo" name="bold" stylemapfamilyname="Inter UI" stylemapstylename="bold" stylename="Bold">
             <location>
                 <dimension name="Weight" xvalue="700" />
