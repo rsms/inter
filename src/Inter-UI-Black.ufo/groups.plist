@@ -436,8 +436,8 @@
       <string>trademark</string>
       <string>ordfeminine</string>
       <string>ordmasculine</string>
-      <string>isuperior</string>
-      <string>nsuperior</string>
+      <string>i.numr</string>
+      <string>n.numr</string>
     </array>
     <key>public.kern1.dcaron</key>
     <array>
@@ -474,39 +474,41 @@
     </array>
     <key>public.kern1.eight.subs</key>
     <array>
-      <string>zerosub</string>
-      <string>oneinferior</string>
-      <string>twosub</string>
-      <string>threesub</string>
-      <string>foursub</string>
-      <string>fivesub</string>
-      <string>sixinferior</string>
-      <string>sevensub</string>
-      <string>eightsub</string>
-      <string>nineinferior</string>
-      <string>plussub</string>
-      <string>minussub</string>
-      <string>equalsub</string>
-      <string>parenleftinferior</string>
-      <string>parenrightsub</string>
+      <string>eight.sup</string>
+      <string>zero.dnom</string>
+      <string>one.dnom</string>
+      <string>two.dnom</string>
+      <string>three.dnom</string>
+      <string>four.dnom</string>
+      <string>five.dnom</string>
+      <string>six.dnom</string>
+      <string>seven.dnom</string>
+      <string>eight.dnom</string>
+      <string>nine.dnom</string>
+      <string>plus.dnom</string>
+      <string>minus.dnom</string>
+      <string>equal.dnom</string>
+      <string>parenleft.dnom</string>
+      <string>parenright.dnom</string>
     </array>
     <key>public.kern1.eight.sups</key>
     <array>
-      <string>zerosuperior</string>
-      <string>onesuperior</string>
-      <string>twosuperior</string>
-      <string>threesuperior</string>
-      <string>foursuperior</string>
-      <string>fivesuperior</string>
-      <string>sixsuperior</string>
-      <string>sevensuperior</string>
-      <string>eightsuperior</string>
-      <string>ninesuperior</string>
-      <string>plussuperior</string>
-      <string>minussuperior</string>
-      <string>equalsuperior</string>
-      <string>parenleftsuperior</string>
-      <string>parenrightsuperior</string>
+      <string>zero.numr</string>
+      <string>one.numr</string>
+      <string>two.numr</string>
+      <string>three.numr</string>
+      <string>four.numr</string>
+      <string>five.numr</string>
+      <string>six.numr</string>
+      <string>seven.numr</string>
+      <string>eight.numr</string>
+      <string>nine.numr</string>
+      <string>plus.numr</string>
+      <string>minus.numr</string>
+      <string>equal.numr</string>
+      <string>parenleft.numr</string>
+      <string>parenright.numr</string>
+      <string>eight.frac</string>
     </array>
     <key>public.kern1.epsilongreek</key>
     <array>
@@ -678,6 +680,10 @@
       <string>t</string>
       <string>tpalatalhook</string>
       <string>tcaron</string>
+    </array>
+    <key>public.kern1.two</key>
+    <array>
+      <string>two</string>
     </array>
     <key>public.kern1.u</key>
     <array>
@@ -990,7 +996,6 @@
       <string>aogonek</string>
       <string>acaron</string>
       <string>aringacute</string>
-      <string>a_uni02DE</string>
       <string>ae</string>
       <string>aemacron</string>
       <string>aeacute</string>
@@ -1104,8 +1109,8 @@
       <string>trademark</string>
       <string>ordfeminine</string>
       <string>ordmasculine</string>
-      <string>isuperior</string>
-      <string>nsuperior</string>
+      <string>i.numr</string>
+      <string>n.numr</string>
     </array>
     <key>public.kern2.deltagreek</key>
     <array>
@@ -1147,39 +1152,41 @@
     </array>
     <key>public.kern2.eight.subs</key>
     <array>
-      <string>zerosub</string>
-      <string>oneinferior</string>
-      <string>twosub</string>
-      <string>threesub</string>
-      <string>foursub</string>
-      <string>fivesub</string>
-      <string>sixinferior</string>
-      <string>sevensub</string>
-      <string>eightsub</string>
-      <string>nineinferior</string>
-      <string>plussub</string>
-      <string>minussub</string>
-      <string>equalsub</string>
-      <string>parenleftinferior</string>
-      <string>parenrightsub</string>
+      <string>eight.sup</string>
+      <string>zero.dnom</string>
+      <string>one.dnom</string>
+      <string>two.dnom</string>
+      <string>three.dnom</string>
+      <string>four.dnom</string>
+      <string>five.dnom</string>
+      <string>six.dnom</string>
+      <string>seven.dnom</string>
+      <string>eight.dnom</string>
+      <string>nine.dnom</string>
+      <string>plus.dnom</string>
+      <string>minus.dnom</string>
+      <string>equal.dnom</string>
+      <string>parenleft.dnom</string>
+      <string>parenright.dnom</string>
     </array>
     <key>public.kern2.eight.sups</key>
     <array>
-      <string>zerosuperior</string>
-      <string>onesuperior</string>
-      <string>twosuperior</string>
-      <string>threesuperior</string>
-      <string>foursuperior</string>
-      <string>fivesuperior</string>
-      <string>sixsuperior</string>
-      <string>sevensuperior</string>
-      <string>eightsuperior</string>
-      <string>ninesuperior</string>
-      <string>plussuperior</string>
-      <string>minussuperior</string>
-      <string>equalsuperior</string>
-      <string>parenleftsuperior</string>
-      <string>parenrightsuperior</string>
+      <string>zero.numr</string>
+      <string>one.numr</string>
+      <string>two.numr</string>
+      <string>three.numr</string>
+      <string>four.numr</string>
+      <string>five.numr</string>
+      <string>six.numr</string>
+      <string>seven.numr</string>
+      <string>eight.numr</string>
+      <string>nine.numr</string>
+      <string>plus.numr</string>
+      <string>minus.numr</string>
+      <string>equal.numr</string>
+      <string>parenleft.numr</string>
+      <string>parenright.numr</string>
+      <string>eight.frac</string>
     </array>
     <key>public.kern2.elcyrillic</key>
     <array>
@@ -1323,6 +1330,10 @@
       <string>tpalatalhook</string>
       <string>tccurl</string>
       <string>tcaron</string>
+    </array>
+    <key>public.kern2.two</key>
+    <array>
+      <string>two</string>
     </array>
     <key>public.kern2.u</key>
     <array>

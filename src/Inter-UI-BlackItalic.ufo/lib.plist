@@ -501,7 +501,6 @@
       <string>abrevehookabove</string>
       <string>abrevetilde</string>
       <string>abrevedotbelow</string>
-      <string>a_uni02DE</string>
       <string>aturn</string>
       <string>afii10065</string>
       <string>abrevecyrillic</string>
@@ -1223,6 +1222,7 @@
       <string>uni2047</string>
       <string>uni2048</string>
       <string>questiondown</string>
+      <string>interrobang</string>
       <string>parenleft</string>
       <string>parenleft.case</string>
       <string>parenright</string>
@@ -1319,8 +1319,8 @@
       <string>degree</string>
       <string>ordfeminine</string>
       <string>ordmasculine</string>
-      <string>isuperior</string>
-      <string>nsuperior</string>
+      <string>i.numr</string>
+      <string>n.numr</string>
       <string>paragraph</string>
       <string>section</string>
       <string>copyright</string>
@@ -1332,57 +1332,66 @@
       <string>radical</string>
       <string>emptyset</string>
       <string>lozenge</string>
+      <string>zero.sup</string>
+      <string>one.sup</string>
+      <string>two.sup</string>
+      <string>three.sup</string>
+      <string>four.sup</string>
+      <string>five.sup</string>
+      <string>six.sup</string>
+      <string>seven.sup</string>
+      <string>eight.sup</string>
+      <string>nine.sup</string>
       <string>fraction</string>
-      <string>zerosub</string>
-      <string>oneinferior</string>
-      <string>twosub</string>
-      <string>threesub</string>
-      <string>foursub</string>
-      <string>fivesub</string>
-      <string>sixinferior</string>
-      <string>sevensub</string>
-      <string>eightsub</string>
-      <string>nineinferior</string>
-      <string>plussub</string>
-      <string>minussub</string>
-      <string>equalsub</string>
-      <string>parenleftinferior</string>
-      <string>parenrightsub</string>
-      <string>zerosuperior</string>
-      <string>onesuperior</string>
-      <string>twosuperior</string>
-      <string>threesuperior</string>
-      <string>foursuperior</string>
-      <string>fivesuperior</string>
-      <string>sixsuperior</string>
-      <string>sevensuperior</string>
-      <string>eightsuperior</string>
-      <string>ninesuperior</string>
-      <string>plussuperior</string>
-      <string>minussuperior</string>
-      <string>equalsuperior</string>
-      <string>parenleftsuperior</string>
-      <string>parenrightsuperior</string>
+      <string>zero.dnom</string>
+      <string>one.dnom</string>
+      <string>two.dnom</string>
+      <string>three.dnom</string>
+      <string>four.dnom</string>
+      <string>five.dnom</string>
+      <string>six.dnom</string>
+      <string>seven.dnom</string>
+      <string>eight.dnom</string>
+      <string>nine.dnom</string>
+      <string>plus.dnom</string>
+      <string>minus.dnom</string>
+      <string>equal.dnom</string>
+      <string>parenleft.dnom</string>
+      <string>parenright.dnom</string>
+      <string>zero.numr</string>
+      <string>one.numr</string>
+      <string>two.numr</string>
+      <string>three.numr</string>
+      <string>four.numr</string>
+      <string>five.numr</string>
+      <string>six.numr</string>
+      <string>seven.numr</string>
+      <string>eight.numr</string>
+      <string>nine.numr</string>
+      <string>plus.numr</string>
+      <string>minus.numr</string>
+      <string>equal.numr</string>
+      <string>parenleft.numr</string>
+      <string>parenright.numr</string>
+      <string>zero.frac</string>
+      <string>one.frac</string>
+      <string>two.frac</string>
+      <string>three.frac</string>
+      <string>four.frac</string>
+      <string>five.frac</string>
+      <string>six.frac</string>
+      <string>seven.frac</string>
+      <string>eight.frac</string>
+      <string>nine.frac</string>
       <string>onehalf</string>
       <string>onequarter</string>
       <string>threequarters</string>
-      <string>uni215A</string>
-      <string>uni215F</string>
-      <string>uni2151</string>
-      <string>uni2150</string>
-      <string>uni2152</string>
-      <string>uni2155</string>
-      <string>uni2157</string>
-      <string>uni2156</string>
-      <string>onethird</string>
-      <string>uni2159</string>
-      <string>uni2158</string>
+      <string>fivesixths</string>
+      <string>onefraction</string>
       <string>seveneighths</string>
       <string>oneeighth</string>
       <string>fiveeighths</string>
-      <string>twothirds</string>
       <string>threeeighths</string>
-      <string>uni2189</string>
       <string>percent</string>
       <string>perthousand</string>
       <string>numero</string>
@@ -1516,14 +1525,12 @@
       <string>uni03F5</string>
       <string>uni03F6</string>
       <string>longs</string>
-      <string>one.sup</string>
       <string>trianglebullet</string>
       <string>Ysmallcap</string>
       <string>uni03FB</string>
       <string>uni03FD</string>
       <string>uni03FE</string>
       <string>uni03FF</string>
-      <string>iota1_uni02DE</string>
       <string>uni0373</string>
       <string>uni0372</string>
       <string>uni0371</string>
@@ -1536,7 +1543,6 @@
       <string>uni037C</string>
       <string>uni037B</string>
       <string>uni037D</string>
-      <string>interrobang</string>
       <string>primemod</string>
       <string>uni213B</string>
       <string>erev</string>
@@ -1547,7 +1553,6 @@
       <string>commareversedmod</string>
       <string>ringhalfleft</string>
       <string>Rsmallcap</string>
-      <string>five.frac</string>
       <string>Tonesix</string>
       <string>tavdages</string>
       <string>beta1</string>
@@ -1602,7 +1607,6 @@
       <string>arrowheadrightmod</string>
       <string>glottalstopmod</string>
       <string>firsttonechinese</string>
-      <string>five.sup</string>
       <string>uni021D</string>
       <string>uni0268.ccmp</string>
       <string>uni021C</string>
@@ -1708,8 +1712,7 @@
       <string>uni2071.ccmp</string>
       <string>uni02ED</string>
       <string>uni02EF</string>
-      <string>glottalstopreversedsuperior</string>
-      <string>six.sup</string>
+      <string>glottalstopreversed.numr</string>
       <string>afii61664</string>
       <string>uni1DC6</string>
       <string>uni1DC4</string>
@@ -1767,14 +1770,11 @@
       <string>uni2B5F</string>
       <string>uni2B5D</string>
       <string>uni2B5E</string>
-      <string>three.sup</string>
       <string>oi</string>
       <string>Tonetwo</string>
-      <string>two.sup</string>
       <string>finalmem</string>
       <string>Gsmallcap</string>
       <string>Esh</string>
-      <string>zero.sup</string>
       <string>dieresismacroncomb.lc</string>
       <string>Rsmallcapinv</string>
       <string>zerowidthjoiner</string>
@@ -1795,10 +1795,8 @@
       <string>published</string>
       <string>wsuper</string>
       <string>macronacutecomb.lc</string>
-      <string>oopen_uni02DE</string>
-      <string>four.frac</string>
       <string>onedotleader</string>
-      <string>plussubnosp</string>
+      <string>plus.dnomnosp</string>
       <string>largerighthook</string>
       <string>romanthree</string>
       <string>uni1DCF</string>
@@ -1832,7 +1830,6 @@
       <string>Eiotifiedcyrillic</string>
       <string>yuslittleiotifiedcyrillic</string>
       <string>Yuslittleiotifiedcyrillic</string>
-      <string>four.sup</string>
       <string>hhooksuper</string>
       <string>Yusbigiotifiedcyrillic</string>
       <string>yusbigcyrillic</string>
@@ -1841,7 +1838,6 @@
       <string>Ksicyrillic</string>
       <string>yusbigiotifiedcyrillic</string>
       <string>tildeacutecomb.lc</string>
-      <string>nine.frac</string>
       <string>romanthousand</string>
       <string>macronsub</string>
       <string>bullseye</string>
@@ -1853,7 +1849,6 @@
       <string>ezh</string>
       <string>ezhcurl</string>
       <string>uni1DE9</string>
-      <string>nine.sup</string>
       <string>numeralgreek</string>
       <string>Omegaroundcyrillic</string>
       <string>omegaroundcyrillic</string>
@@ -1876,9 +1871,7 @@
       <string>uni1DE2</string>
       <string>OI</string>
       <string>xsupnosp</string>
-      <string>ascriptturn_uni02DE</string>
       <string>sampi</string>
-      <string>epsilon1revclosed_uni02DE</string>
       <string>eshshortrev</string>
       <string>ounce</string>
       <string>vscript</string>
@@ -1887,11 +1880,8 @@
       <string>tildevertsupnosp</string>
       <string>linevertdblnosp</string>
       <string>jhookdblbar</string>
-      <string>six.frac</string>
-      <string>seven.frac</string>
       <string>overline</string>
       <string>ascript</string>
-      <string>seven.sup</string>
       <string>uni03CF</string>
       <string>uni20DC</string>
       <string>uni20DB</string>
@@ -1900,7 +1890,6 @@
       <string>uni1FBE</string>
       <string>ypogegrammeni</string>
       <string>romaneight</string>
-      <string>zero.frac</string>
       <string>charactertie</string>
       <string>Stigma</string>
       <string>epsilon1rev</string>
@@ -1932,11 +1921,10 @@
       <string>uni20E3</string>
       <string>dblapostrophe</string>
       <string>glottalstopbar</string>
-      <string>minussubnosp</string>
+      <string>minus.dnomnosp</string>
       <string>rturnsuper</string>
       <string>linevert</string>
       <string>addresssubject</string>
-      <string>eight.frac</string>
       <string>primetriplerev1</string>
       <string>uni217F</string>
       <string>uni217E</string>
@@ -1991,7 +1979,6 @@
       <string>caronbelowcmb</string>
       <string>acutesubnosp</string>
       <string>romantwo</string>
-      <string>eight.sup</string>
       <string>finalkaf</string>
       <string>uni1DFC</string>
       <string>uni1DFD</string>
