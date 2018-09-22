@@ -2,18 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
-    <key>Delta</key>
-    <dict>
-      <key>asterisk.case</key>
-      <real>-134.0</real>
-      <key>eth</key>
-      <real>-22.0</real>
-    </dict>
-    <key>Dzcaron_</key>
-    <dict>
-      <key>T</key>
-      <real>-74.0</real>
-    </dict>
     <key>Gamma</key>
     <dict>
       <key>Omega</key>
@@ -36,8 +24,6 @@
       <real>-266.0</real>
       <key>public.kern2.Omicrongreek</key>
       <real>-122.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-345.0</real>
       <key>public.kern2.approxequal</key>
       <real>-29.0</real>
       <key>public.kern2.colon</key>
@@ -48,8 +34,6 @@
       <real>-348.0</real>
       <key>public.kern2.divide</key>
       <real>-273.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-185.0</real>
       <key>public.kern2.epsilongreek</key>
       <real>-347.0</real>
       <key>public.kern2.gammagreek</key>
@@ -93,38 +77,11 @@
       <real>36.0</real>
       <key>public.kern2.dagger</key>
       <real>57.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>63.0</real>
-    </dict>
-    <key>Idieresis</key>
-    <dict>
-      <key>Idieresis</key>
-      <real>134.0</real>
-      <key>Idieresisacute</key>
-      <real>134.0</real>
-      <key>jcrosstail</key>
-      <real>-269.0</real>
     </dict>
     <key>Kappa</key>
     <dict>
       <key>tbar</key>
       <real>-43.0</real>
-    </dict>
-    <key>L</key>
-    <dict>
-      <key>asterisk.case</key>
-      <real>-101.0</real>
-      <key>quotedblreversed</key>
-      <real>-134.0</real>
-      <key>quotereversed</key>
-      <real>-134.0</real>
-    </dict>
-    <key>Lambda</key>
-    <dict>
-      <key>asterisk.case</key>
-      <real>-134.0</real>
-      <key>eth</key>
-      <real>-22.0</real>
     </dict>
     <key>Lslash</key>
     <dict>
@@ -152,8 +109,6 @@
       <real>-151.0</real>
       <key>public.kern2.divide</key>
       <real>-93.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-240.0</real>
       <key>public.kern2.quotedbl</key>
       <real>-216.0</real>
       <key>public.kern2.quotedblleft</key>
@@ -162,15 +117,6 @@
       <real>-280.0</real>
       <key>question</key>
       <real>-72.0</real>
-    </dict>
-    <key>Ohorn</key>
-    <dict>
-      <key>M</key>
-      <real>-101.0</real>
-      <key>idieresisacute</key>
-      <real>173.0</real>
-      <key>idotless</key>
-      <real>-65.0</real>
     </dict>
     <key>Psi</key>
     <dict>
@@ -210,8 +156,6 @@
       <real>-209.0</real>
       <key>public.kern2.Omicrongreek</key>
       <real>-43.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-81.0</real>
       <key>public.kern2.approxequal</key>
       <real>-107.0</real>
       <key>public.kern2.asciicircum</key>
@@ -226,8 +170,6 @@
       <real>-79.0</real>
       <key>public.kern2.divide</key>
       <real>-146.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-295.0</real>
       <key>public.kern2.epsilongreek</key>
       <real>-80.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -267,7 +209,7 @@
     </dict>
     <key>Rx</key>
     <dict>
-      <key>T</key>
+      <key>public.kern2.T</key>
       <real>-336.0</real>
     </dict>
     <key>Sigma</key>
@@ -282,8 +224,6 @@
       <real>-114.0</real>
       <key>public.kern2.Omicrongreek</key>
       <real>-101.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-86.0</real>
       <key>public.kern2.deltagreek</key>
       <real>-81.0</real>
       <key>public.kern2.divide</key>
@@ -315,15 +255,6 @@
       <key>zeta</key>
       <real>-81.0</real>
     </dict>
-    <key>T</key>
-    <dict>
-      <key>asterisk.case</key>
-      <real>-67.0</real>
-      <key>eth</key>
-      <real>-151.0</real>
-      <key>jdotless</key>
-      <real>-588.0</real>
-    </dict>
     <key>Tbar</key>
     <dict>
       <key>infinity</key>
@@ -350,8 +281,6 @@
       <real>-202.0</real>
       <key>public.kern2.divide</key>
       <real>-101.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-192.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-44.0</real>
       <key>public.kern2.quotedblbase</key>
@@ -399,10 +328,6 @@
       <real>-275.0</real>
       <key>public.kern2.dagger</key>
       <real>-8.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-117.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-34.0</real>
       <key>public.kern2.guillemetright</key>
       <real>-65.0</real>
       <key>public.kern2.quotedblbase</key>
@@ -415,30 +340,6 @@
       <real>-43.0</real>
       <key>question</key>
       <real>-44.0</real>
-    </dict>
-    <key>Uhorn</key>
-    <dict>
-      <key>idieresisacute</key>
-      <real>231.0</real>
-      <key>idotless</key>
-      <real>-180.0</real>
-    </dict>
-    <key>V</key>
-    <dict>
-      <key>asterisk.case</key>
-      <real>-134.0</real>
-      <key>public.kern2.B</key>
-      <real>-25.0</real>
-    </dict>
-    <key>W</key>
-    <dict>
-      <key>asterisk.case</key>
-      <real>-50.0</real>
-    </dict>
-    <key>Y</key>
-    <dict>
-      <key>asterisk.case</key>
-      <real>-248.0</real>
     </dict>
     <key>adieresis</key>
     <dict>
@@ -652,8 +553,6 @@
       <real>-50.0</real>
       <key>public.kern2.divide</key>
       <real>-15.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-40.0</real>
       <key>public.kern2.one</key>
       <real>-80.0</real>
       <key>public.kern2.quotedbl</key>
@@ -691,8 +590,6 @@
       <real>-37.0</real>
       <key>public.kern2.asciicircum</key>
       <real>-59.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-29.0</real>
       <key>public.kern2.one</key>
       <real>-36.0</real>
       <key>public.kern2.quotedbl</key>
@@ -750,8 +647,6 @@
       <real>-81.0</real>
       <key>public.kern2.divide</key>
       <real>-50.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-90.0</real>
       <key>public.kern2.gammagreek</key>
       <real>-101.0</real>
       <key>public.kern2.m</key>
@@ -798,21 +693,19 @@
     </dict>
     <key>asterisk.case</key>
     <dict>
-      <key>A</key>
-      <real>-134.0</real>
-      <key>Delta</key>
-      <real>-134.0</real>
-      <key>Lambda</key>
-      <real>-134.0</real>
       <key>Sigma</key>
       <real>-101.0</real>
-      <key>T</key>
-      <real>-67.0</real>
-      <key>V</key>
+      <key>public.kern2.A</key>
       <real>-134.0</real>
-      <key>W</key>
+      <key>public.kern2.Alphagreek</key>
+      <real>-134.0</real>
+      <key>public.kern2.T</key>
+      <real>-67.0</real>
+      <key>public.kern2.V</key>
+      <real>-134.0</real>
+      <key>public.kern2.W</key>
       <real>-50.0</real>
-      <key>Y</key>
+      <key>public.kern2.Y</key>
       <real>-168.0</real>
     </dict>
     <key>at</key>
@@ -850,10 +743,6 @@
     </dict>
     <key>atilde</key>
     <dict>
-      <key>Trthook</key>
-      <real>-134.0</real>
-      <key>gamma1</key>
-      <real>-134.0</real>
       <key>public.kern2.T</key>
       <real>-118.0</real>
       <key>public.kern2.Y</key>
@@ -962,22 +851,10 @@
       <key>public.kern2.quotedblleft</key>
       <real>-66.0</real>
     </dict>
-    <key>colon</key>
-    <dict>
-      <key>j</key>
-      <real>-134.0</real>
-    </dict>
     <key>colon.case</key>
     <dict>
       <key>seven</key>
       <real>-21.0</real>
-    </dict>
-    <key>comma</key>
-    <dict>
-      <key>quotedblreversed</key>
-      <real>-134.0</real>
-      <key>quotereversed</key>
-      <real>-134.0</real>
     </dict>
     <key>d</key>
     <dict>
@@ -988,8 +865,6 @@
     <dict>
       <key>backslash</key>
       <real>58.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>20.0</real>
       <key>public.kern2.quotedbl</key>
       <real>36.0</real>
       <key>public.kern2.quotedblleft</key>
@@ -999,31 +874,15 @@
     </dict>
     <key>dhook</key>
     <dict>
-      <key>T</key>
+      <key>public.kern2.T</key>
       <real>67.0</real>
-    </dict>
-    <key>dzcaron</key>
-    <dict>
-      <key>T</key>
-      <real>-74.0</real>
     </dict>
     <key>edieresis</key>
     <dict>
-      <key>Gamma1</key>
-      <real>-134.0</real>
       <key>public.kern2.T</key>
       <real>-134.0</real>
       <key>public.kern2.Y</key>
       <real>-202.0</real>
-    </dict>
-    <key>eight</key>
-    <dict>
-      <key>j</key>
-      <real>-168.0</real>
-      <key>public.kern2.two</key>
-      <real>-48.0</real>
-      <key>seven</key>
-      <real>-50.0</real>
     </dict>
     <key>emdash</key>
     <dict>
@@ -1037,12 +896,6 @@
     </dict>
     <key>eth</key>
     <dict>
-      <key>V</key>
-      <real>-202.0</real>
-      <key>Y</key>
-      <real>-200.0</real>
-      <key>Yhook</key>
-      <real>-200.0</real>
       <key>public.kern2.T</key>
       <real>-101.0</real>
     </dict>
@@ -1073,8 +926,6 @@
       <real>-22.0</real>
       <key>backslash</key>
       <real>22.0</real>
-      <key>j</key>
-      <real>-168.0</real>
       <key>public.kern2.A</key>
       <real>-15.0</real>
       <key>public.kern2.AE</key>
@@ -1085,6 +936,8 @@
       <real>-114.0</real>
       <key>public.kern2.dagger</key>
       <real>-8.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-168.0</real>
       <key>public.kern2.one</key>
       <real>-29.0</real>
       <key>underscore</key>
@@ -1100,8 +953,6 @@
       <real>-16.0</real>
       <key>afii10044</key>
       <real>-42.0</real>
-      <key>j</key>
-      <real>-168.0</real>
       <key>public.kern2.AE</key>
       <real>-57.0</real>
       <key>public.kern2.Djecyrillic</key>
@@ -1122,10 +973,10 @@
       <real>-50.0</real>
       <key>public.kern2.dagger</key>
       <real>-7.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-22.0</real>
       <key>public.kern2.gammagreek</key>
       <real>-23.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-168.0</real>
       <key>public.kern2.one</key>
       <real>-37.0</real>
       <key>public.kern2.quotedblbase</key>
@@ -1175,8 +1026,6 @@
       <real>-50.0</real>
       <key>public.kern2.dagger</key>
       <real>-7.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-22.0</real>
       <key>public.kern2.gammagreek</key>
       <real>-23.0</real>
       <key>public.kern2.one</key>
@@ -1200,32 +1049,12 @@
       <key>tenge</key>
       <real>-15.0</real>
     </dict>
-    <key>g</key>
-    <dict>
-      <key>T</key>
-      <real>-336.0</real>
-      <key>j</key>
-      <real>-64.0</real>
-    </dict>
-    <key>gamma1</key>
-    <dict>
-      <key>T</key>
-      <real>-403.0</real>
-    </dict>
     <key>germandbls</key>
     <dict>
-      <key>Psi</key>
-      <real>-109.0</real>
-      <key>pi</key>
-      <real>-15.0</real>
       <key>public.kern2.A</key>
       <real>-14.0</real>
-      <key>public.kern2.AE</key>
-      <real>-65.0</real>
       <key>public.kern2.C</key>
       <real>-23.0</real>
-      <key>public.kern2.Omicrongreek</key>
-      <real>-21.0</real>
       <key>public.kern2.T</key>
       <real>-87.0</real>
       <key>public.kern2.V</key>
@@ -1238,24 +1067,14 @@
       <real>-107.0</real>
       <key>public.kern2.dagger</key>
       <real>-22.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-21.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-48.0</real>
       <key>public.kern2.m</key>
       <real>-14.0</real>
-      <key>public.kern2.quotedblbase</key>
-      <real>-72.0</real>
       <key>public.kern2.quotedblleft</key>
       <real>-101.0</real>
-      <key>public.kern2.quotedblright</key>
-      <real>-36.0</real>
       <key>public.kern2.t</key>
       <real>-16.0</real>
       <key>public.kern2.w</key>
       <real>-21.0</real>
-      <key>tau</key>
-      <real>-15.0</real>
     </dict>
     <key>greater</key>
     <dict>
@@ -1277,8 +1096,6 @@
       <real>-21.0</real>
       <key>afii10049</key>
       <real>-36.0</real>
-      <key>j</key>
-      <real>-168.0</real>
       <key>public.kern2.A</key>
       <real>-72.0</real>
       <key>public.kern2.AE</key>
@@ -1303,6 +1120,8 @@
       <real>-87.0</real>
       <key>public.kern2.gammagreek</key>
       <real>-72.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-168.0</real>
       <key>public.kern2.quotedblleft</key>
       <real>-137.0</real>
       <key>public.kern2.v</key>
@@ -1339,8 +1158,6 @@
     </dict>
     <key>idieresis</key>
     <dict>
-      <key>jcrosstail</key>
-      <real>-269.0</real>
       <key>public.kern2.T</key>
       <real>185.0</real>
     </dict>
@@ -1367,29 +1184,12 @@
     </dict>
     <key>itilde</key>
     <dict>
-      <key>jcrosstail</key>
-      <real>-269.0</real>
       <key>public.kern2.T</key>
       <real>17.0</real>
       <key>public.kern2.V</key>
       <real>17.0</real>
       <key>public.kern2.Y</key>
       <real>1.0</real>
-    </dict>
-    <key>j</key>
-    <dict>
-      <key>j</key>
-      <real>-116.0</real>
-    </dict>
-    <key>k</key>
-    <dict>
-      <key>T</key>
-      <real>-292.0</real>
-    </dict>
-    <key>khook</key>
-    <dict>
-      <key>T</key>
-      <real>-292.0</real>
     </dict>
     <key>lambda</key>
     <dict>
@@ -1403,8 +1203,6 @@
       <real>-217.0</real>
       <key>public.kern2.Omicrongreek</key>
       <real>-50.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-76.0</real>
       <key>public.kern2.deltagreek</key>
       <real>-78.0</real>
       <key>public.kern2.divide</key>
@@ -1475,16 +1273,10 @@
       <real>-79.0</real>
       <key>public.kern2.A</key>
       <real>-107.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-23.0</real>
       <key>public.kern2.deltagreek</key>
       <real>-23.0</real>
       <key>public.kern2.divide</key>
       <real>-92.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-166.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>62.0</real>
       <key>public.kern2.epsilongreek</key>
       <real>-16.0</real>
       <key>public.kern2.gammagreek</key>
@@ -1519,16 +1311,6 @@
       <real>-37.0</real>
       <key>zeta</key>
       <real>-34.0</real>
-    </dict>
-    <key>mturn</key>
-    <dict>
-      <key>T</key>
-      <real>-269.0</real>
-    </dict>
-    <key>mturndescend</key>
-    <dict>
-      <key>T</key>
-      <real>-269.0</real>
     </dict>
     <key>multiply</key>
     <dict>
@@ -1573,35 +1355,10 @@
       <key>tenge</key>
       <real>-50.0</real>
     </dict>
-    <key>nine</key>
-    <dict>
-      <key>j</key>
-      <real>-168.0</real>
-      <key>nine</key>
-      <real>-8.0</real>
-      <key>slash</key>
-      <real>-84.0</real>
-    </dict>
     <key>nine.ss01</key>
     <dict>
-      <key>eight</key>
-      <real>-118.0</real>
-      <key>four</key>
-      <real>-168.0</real>
-      <key>four.ss01</key>
-      <real>-168.0</real>
-      <key>i</key>
-      <real>-67.0</real>
-      <key>j</key>
-      <real>-235.0</real>
-      <key>nine.ss01</key>
-      <real>-118.0</real>
-      <key>period</key>
-      <real>-286.0</real>
       <key>slash</key>
       <real>-252.0</real>
-      <key>zero</key>
-      <real>-50.0</real>
     </dict>
     <key>ntilde</key>
     <dict>
@@ -1619,8 +1376,6 @@
     </dict>
     <key>odieresis</key>
     <dict>
-      <key>Gamma1</key>
-      <real>-134.0</real>
       <key>public.kern2.T</key>
       <real>-101.0</real>
       <key>public.kern2.V</key>
@@ -1628,17 +1383,8 @@
       <key>public.kern2.Y</key>
       <real>-151.0</real>
     </dict>
-    <key>oslash</key>
-    <dict>
-      <key>T</key>
-      <real>-141.0</real>
-    </dict>
     <key>otilde</key>
     <dict>
-      <key>gamma1</key>
-      <real>-134.0</real>
-      <key>jcrosstail</key>
-      <real>-134.0</real>
       <key>public.kern2.T</key>
       <real>-118.0</real>
       <key>public.kern2.V</key>
@@ -1654,31 +1400,6 @@
       <real>-158.0</real>
       <key>public.kern2.quotedblright</key>
       <real>-180.0</real>
-    </dict>
-    <key>period</key>
-    <dict>
-      <key>eight</key>
-      <real>-118.0</real>
-      <key>five</key>
-      <real>-84.0</real>
-      <key>j</key>
-      <real>-134.0</real>
-      <key>nine</key>
-      <real>-118.0</real>
-      <key>nine.ss01</key>
-      <real>-185.0</real>
-      <key>public.kern2.one</key>
-      <real>-118.0</real>
-      <key>seven</key>
-      <real>-101.0</real>
-      <key>six</key>
-      <real>-101.0</real>
-      <key>six.ss01</key>
-      <real>-101.0</real>
-      <key>three</key>
-      <real>-101.0</real>
-      <key>zero</key>
-      <real>-134.0</real>
     </dict>
     <key>periodcentered</key>
     <dict>
@@ -1742,16 +1463,12 @@
       <real>-50.0</real>
       <key>less</key>
       <real>-36.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-79.0</real>
       <key>public.kern2.comma</key>
       <real>-28.0</real>
       <key>public.kern2.deltagreek</key>
       <real>-81.0</real>
       <key>public.kern2.divide</key>
       <real>-65.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>48.0</real>
       <key>public.kern2.epsilongreek</key>
       <real>-72.0</real>
       <key>public.kern2.gammagreek</key>
@@ -1777,6 +1494,8 @@
     </dict>
     <key>public.kern1.A</key>
     <dict>
+      <key>T</key>
+      <real>134.0</real>
       <key>Tbar</key>
       <real>-144.0</real>
       <key>asterisk.case</key>
@@ -1829,8 +1548,6 @@
       <real>-210.0</real>
       <key>public.kern2.divide</key>
       <real>-79.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-214.0</real>
       <key>public.kern2.f</key>
       <real>-57.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -1875,6 +1592,13 @@
       <key>public.kern2.C</key>
       <real>-40.0</real>
     </dict>
+    <key>public.kern1.Alphagreek</key>
+    <dict>
+      <key>asterisk.case</key>
+      <real>-134.0</real>
+      <key>public.kern2.c</key>
+      <real>-22.0</real>
+    </dict>
     <key>public.kern1.B</key>
     <dict>
       <key>periodcentered</key>
@@ -1918,8 +1642,6 @@
       <real>-179.0</real>
       <key>public.kern2.Y</key>
       <real>-185.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-13.0</real>
       <key>public.kern2.idieresis</key>
       <real>67.0</real>
       <key>underscore</key>
@@ -1959,8 +1681,6 @@
       <real>-145.0</real>
       <key>public.kern2.dagger</key>
       <real>-7.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-40.0</real>
       <key>public.kern2.guillemetright</key>
       <real>-37.0</real>
       <key>public.kern2.idieresis</key>
@@ -2100,8 +1820,6 @@
     </dict>
     <key>public.kern1.F</key>
     <dict>
-      <key>F</key>
-      <real>-134.0</real>
       <key>ampersand</key>
       <real>-57.0</real>
       <key>backslash</key>
@@ -2116,6 +1834,8 @@
       <real>-437.0</real>
       <key>public.kern2.AE</key>
       <real>-187.0</real>
+      <key>public.kern2.B</key>
+      <real>-134.0</real>
       <key>public.kern2.C</key>
       <real>-185.0</real>
       <key>public.kern2.J</key>
@@ -2128,8 +1848,6 @@
       <real>-169.0</real>
       <key>public.kern2.comma</key>
       <real>-238.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-137.0</real>
       <key>public.kern2.idieresis</key>
       <real>118.0</real>
       <key>public.kern2.idotless</key>
@@ -2293,8 +2011,12 @@
     <dict>
       <key>backslash</key>
       <real>43.0</real>
+      <key>jcrosstail</key>
+      <real>-269.0</real>
       <key>public.kern2.A</key>
       <real>-25.0</real>
+      <key>public.kern2.B</key>
+      <real>134.0</real>
       <key>public.kern2.C</key>
       <real>-34.0</real>
       <key>public.kern2.idieresis</key>
@@ -2324,8 +2046,6 @@
       <real>-50.0</real>
       <key>public.kern2.comma</key>
       <real>-23.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-21.0</real>
       <key>public.kern2.one</key>
       <real>-44.0</real>
       <key>public.kern2.quotedbl</key>
@@ -2453,6 +2173,8 @@
     <dict>
       <key>Tbar</key>
       <real>-274.0</real>
+      <key>asterisk.case</key>
+      <real>-101.0</real>
       <key>backslash</key>
       <real>-43.0</real>
       <key>eight</key>
@@ -2485,8 +2207,6 @@
       <real>-202.0</real>
       <key>public.kern2.divide</key>
       <real>-160.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-310.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-108.0</real>
       <key>public.kern2.one</key>
@@ -2507,6 +2227,10 @@
       <real>-195.0</real>
       <key>question</key>
       <real>-209.0</real>
+      <key>quotedblreversed</key>
+      <real>-134.0</real>
+      <key>quotereversed</key>
+      <real>-134.0</real>
       <key>seven</key>
       <real>-101.0</real>
     </dict>
@@ -2542,6 +2266,8 @@
       <real>-43.0</real>
       <key>hyphenbullet</key>
       <real>-22.0</real>
+      <key>idieresisacute</key>
+      <real>173.0</real>
       <key>infinity</key>
       <real>-65.0</real>
       <key>integral</key>
@@ -2566,6 +2292,8 @@
       <real>-130.0</real>
       <key>public.kern2.AE</key>
       <real>-124.0</real>
+      <key>public.kern2.B</key>
+      <real>-101.0</real>
       <key>public.kern2.J</key>
       <real>-44.0</real>
       <key>public.kern2.T</key>
@@ -2574,8 +2302,6 @@
       <real>-50.0</real>
       <key>public.kern2.approxequal</key>
       <real>-66.0</real>
-      <key>public.kern2.b</key>
-      <real>28.0</real>
       <key>public.kern2.braceright</key>
       <real>37.0</real>
       <key>public.kern2.c</key>
@@ -2588,12 +2314,12 @@
       <real>22.0</real>
       <key>public.kern2.divide</key>
       <real>-65.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>165.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-79.0</real>
       <key>public.kern2.idieresis</key>
       <real>269.0</real>
+      <key>public.kern2.idotless</key>
+      <real>-65.0</real>
       <key>public.kern2.quotedbl</key>
       <real>87.0</real>
       <key>public.kern2.quotedblbase</key>
@@ -2664,8 +2390,6 @@
       <real>-92.0</real>
       <key>public.kern2.comma</key>
       <real>-158.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-27.0</real>
       <key>public.kern2.epsilongreek</key>
       <real>-15.0</real>
       <key>public.kern2.guillemetright</key>
@@ -2727,8 +2451,6 @@
       <real>-90.0</real>
       <key>public.kern2.comma</key>
       <real>-348.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-473.0</real>
       <key>public.kern2.f</key>
       <real>74.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -2816,18 +2538,24 @@
       <real>-101.0</real>
       <key>ampersand</key>
       <real>-183.0</real>
+      <key>asterisk.case</key>
+      <real>-67.0</real>
       <key>atilde</key>
       <real>-84.0</real>
       <key>backslash</key>
       <real>44.0</real>
       <key>edieresis</key>
       <real>-134.0</real>
+      <key>eth</key>
+      <real>-151.0</real>
       <key>four</key>
       <real>-292.0</real>
       <key>idieresis</key>
       <real>185.0</real>
       <key>itilde</key>
       <real>17.0</real>
+      <key>jdotless</key>
+      <real>-588.0</real>
       <key>less</key>
       <real>-209.0</real>
       <key>ntilde</key>
@@ -2856,8 +2584,6 @@
       <real>-413.0</real>
       <key>public.kern2.divide</key>
       <real>-428.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-283.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-297.0</real>
       <key>public.kern2.guillemetright</key>
@@ -2971,8 +2697,6 @@
       <real>-101.0</real>
       <key>public.kern2.ecyrillic</key>
       <real>-180.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-132.0</real>
       <key>public.kern2.elcyrillic</key>
       <real>-195.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -3034,6 +2758,8 @@
       <real>-151.0</real>
       <key>hyphenbullet</key>
       <real>-217.0</real>
+      <key>idieresisacute</key>
+      <real>231.0</real>
       <key>infinity</key>
       <real>-173.0</real>
       <key>integral</key>
@@ -3076,8 +2802,6 @@
       <real>-202.0</real>
       <key>public.kern2.approxequal</key>
       <real>-172.0</real>
-      <key>public.kern2.b</key>
-      <real>33.0</real>
       <key>public.kern2.braceright</key>
       <real>129.0</real>
       <key>public.kern2.c</key>
@@ -3090,10 +2814,6 @@
       <real>23.0</real>
       <key>public.kern2.divide</key>
       <real>-215.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-205.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>96.0</real>
       <key>public.kern2.f</key>
       <real>-22.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -3102,6 +2822,8 @@
       <real>-144.0</real>
       <key>public.kern2.idieresis</key>
       <real>202.0</real>
+      <key>public.kern2.idotless</key>
+      <real>-180.0</real>
       <key>public.kern2.m</key>
       <real>-174.0</real>
       <key>public.kern2.quotedbl</key>
@@ -3145,6 +2867,8 @@
       <real>-168.0</real>
       <key>ampersand</key>
       <real>-146.0</real>
+      <key>asterisk.case</key>
+      <real>-134.0</real>
       <key>at</key>
       <real>-92.0</real>
       <key>atilde</key>
@@ -3179,6 +2903,8 @@
       <real>-370.0</real>
       <key>public.kern2.AE</key>
       <real>-323.0</real>
+      <key>public.kern2.B</key>
+      <real>-25.0</real>
       <key>public.kern2.C</key>
       <real>-218.0</real>
       <key>public.kern2.J</key>
@@ -3197,8 +2923,6 @@
       <real>-319.0</real>
       <key>public.kern2.divide</key>
       <real>-139.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-240.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-151.0</real>
       <key>public.kern2.guillemetright</key>
@@ -3261,6 +2985,8 @@
     <dict>
       <key>ampersand</key>
       <real>-145.0</real>
+      <key>asterisk.case</key>
+      <real>-50.0</real>
       <key>at</key>
       <real>-37.0</real>
       <key>backslash</key>
@@ -3307,8 +3033,6 @@
       <real>-319.0</real>
       <key>public.kern2.divide</key>
       <real>-139.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-200.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-165.0</real>
       <key>public.kern2.guillemetright</key>
@@ -3417,6 +3141,8 @@
       <real>-168.0</real>
       <key>ampersand</key>
       <real>-188.0</real>
+      <key>asterisk.case</key>
+      <real>-248.0</real>
       <key>at</key>
       <real>-87.0</real>
       <key>atilde</key>
@@ -3477,8 +3203,6 @@
       <real>-35.0</real>
       <key>public.kern2.divide</key>
       <real>-188.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-296.0</real>
       <key>public.kern2.f</key>
       <real>-71.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -3547,6 +3271,10 @@
     </dict>
     <key>public.kern1.a</key>
     <dict>
+      <key>Trthook</key>
+      <real>-134.0</real>
+      <key>gamma1</key>
+      <real>-134.0</real>
       <key>pi</key>
       <real>-29.0</real>
       <key>public.kern2.T</key>
@@ -3565,8 +3293,6 @@
       <real>-17.0</real>
       <key>public.kern2.dagger</key>
       <real>-28.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-40.0</real>
       <key>public.kern2.gammagreek</key>
       <real>-42.0</real>
       <key>public.kern2.jdotless</key>
@@ -3603,6 +3329,10 @@
     </dict>
     <key>public.kern1.ae</key>
     <dict>
+      <key>Gamma1</key>
+      <real>-134.0</real>
+      <key>T</key>
+      <real>-44.0</real>
       <key>Tbar</key>
       <real>-42.0</real>
       <key>public.kern2.A</key>
@@ -3658,16 +3388,10 @@
       <real>-81.0</real>
       <key>public.kern2.A</key>
       <real>-58.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-22.0</real>
       <key>public.kern2.deltagreek</key>
       <real>-30.0</real>
       <key>public.kern2.divide</key>
       <real>-95.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-84.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>63.0</real>
       <key>public.kern2.epsilongreek</key>
       <real>-14.0</real>
       <key>public.kern2.gammagreek</key>
@@ -3781,10 +3505,24 @@
     </dict>
     <key>public.kern1.b</key>
     <dict>
+      <key>Gamma1</key>
+      <real>-134.0</real>
+      <key>T</key>
+      <real>-141.0</real>
       <key>Tbar</key>
       <real>-50.0</real>
+      <key>V</key>
+      <real>-202.0</real>
+      <key>Y</key>
+      <real>-200.0</real>
+      <key>Yhook</key>
+      <real>-200.0</real>
       <key>eight</key>
       <real>-15.0</real>
+      <key>gamma1</key>
+      <real>-134.0</real>
+      <key>jcrosstail</key>
+      <real>-134.0</real>
       <key>nine</key>
       <real>-23.0</real>
       <key>nine.ss01</key>
@@ -3883,8 +3621,6 @@
     <dict>
       <key>checyrillic</key>
       <real>-22.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-14.0</real>
       <key>public.kern2.c</key>
       <real>-50.0</real>
       <key>public.kern2.deltagreek</key>
@@ -3970,6 +3706,8 @@
       <real>-50.0</real>
       <key>public.kern2.Y</key>
       <real>-166.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-134.0</real>
       <key>public.kern2.quotedblleft</key>
       <real>-65.0</real>
       <key>public.kern2.two</key>
@@ -3998,9 +3736,29 @@
     </dict>
     <key>public.kern1.comma</key>
     <dict>
+      <key>eight</key>
+      <real>-118.0</real>
+      <key>five</key>
+      <real>-84.0</real>
+      <key>nine</key>
+      <real>-118.0</real>
+      <key>nine.ss01</key>
+      <real>-185.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-134.0</real>
+      <key>public.kern2.one</key>
+      <real>-118.0</real>
+      <key>public.kern2.six</key>
+      <real>-101.0</real>
       <key>quotedblreversed</key>
       <real>-134.0</real>
       <key>quotereversed</key>
+      <real>-134.0</real>
+      <key>seven</key>
+      <real>-101.0</real>
+      <key>three</key>
+      <real>-101.0</real>
+      <key>zero</key>
       <real>-134.0</real>
     </dict>
     <key>public.kern1.dagger</key>
@@ -4023,6 +3781,8 @@
       <real>-8.0</real>
       <key>public.kern2.J</key>
       <real>-158.0</real>
+      <key>public.kern2.T</key>
+      <real>-134.0</real>
       <key>public.kern2.X</key>
       <real>-57.0</real>
       <key>public.kern2.Y</key>
@@ -4086,10 +3846,6 @@
       <real>108.0</real>
       <key>public.kern2.divide</key>
       <real>-80.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-138.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>212.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-74.0</real>
       <key>public.kern2.one</key>
@@ -4299,6 +4055,8 @@
       <real>-15.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-71.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-168.0</real>
       <key>public.kern2.quotedbl</key>
       <real>-35.0</real>
       <key>public.kern2.quotedblbase</key>
@@ -4309,108 +4067,12 @@
       <real>-92.0</real>
       <key>public.kern2.six</key>
       <real>-14.0</real>
+      <key>public.kern2.two</key>
+      <real>-48.0</real>
+      <key>seven</key>
+      <real>-50.0</real>
       <key>underscore</key>
       <real>-108.0</real>
-    </dict>
-    <key>public.kern1.eight.dnom</key>
-    <dict>
-      <key>Psi</key>
-      <real>-296.0</real>
-      <key>Tbar</key>
-      <real>-192.0</real>
-      <key>afii10041</key>
-      <real>-56.0</real>
-      <key>afii10044</key>
-      <real>-48.0</real>
-      <key>five</key>
-      <real>-14.0</real>
-      <key>pi</key>
-      <real>-90.0</real>
-      <key>public.kern2.C</key>
-      <real>-41.0</real>
-      <key>public.kern2.Djecyrillic</key>
-      <real>-282.0</real>
-      <key>public.kern2.Omicrongreek</key>
-      <real>-13.0</real>
-      <key>public.kern2.T</key>
-      <real>-283.0</real>
-      <key>public.kern2.Ucyrillic</key>
-      <real>-22.0</real>
-      <key>public.kern2.V</key>
-      <real>-240.0</real>
-      <key>public.kern2.W</key>
-      <real>-200.0</real>
-      <key>public.kern2.Y</key>
-      <real>-297.0</real>
-      <key>public.kern2.gammagreek</key>
-      <real>-116.0</real>
-      <key>public.kern2.jdotless</key>
-      <real>159.0</real>
-      <key>public.kern2.m</key>
-      <real>-88.0</real>
-      <key>public.kern2.one</key>
-      <real>-192.0</real>
-      <key>public.kern2.six</key>
-      <real>-27.0</real>
-      <key>public.kern2.t</key>
-      <real>-88.0</real>
-      <key>public.kern2.v</key>
-      <real>-123.0</real>
-      <key>public.kern2.w</key>
-      <real>-84.0</real>
-      <key>tau</key>
-      <real>-90.0</real>
-    </dict>
-    <key>public.kern1.eight.numr</key>
-    <dict>
-      <key>Hbar</key>
-      <real>62.0</real>
-      <key>afii10021</key>
-      <real>-35.0</real>
-      <key>ampersand</key>
-      <real>-22.0</real>
-      <key>four</key>
-      <real>-144.0</real>
-      <key>pi</key>
-      <real>48.0</real>
-      <key>public.kern2.A</key>
-      <real>-213.0</real>
-      <key>public.kern2.AE</key>
-      <real>-331.0</real>
-      <key>public.kern2.Elcyrillic</key>
-      <real>-42.0</real>
-      <key>public.kern2.J</key>
-      <real>-330.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-56.0</real>
-      <key>public.kern2.c</key>
-      <real>-55.0</real>
-      <key>public.kern2.comma</key>
-      <real>-151.0</real>
-      <key>public.kern2.deltagreek</key>
-      <real>-55.0</real>
-      <key>public.kern2.epsilongreek</key>
-      <real>-54.0</real>
-      <key>public.kern2.guillemetleft</key>
-      <real>-109.0</real>
-      <key>public.kern2.m</key>
-      <real>48.0</real>
-      <key>public.kern2.omegagreek</key>
-      <real>-55.0</real>
-      <key>public.kern2.quotedblbase</key>
-      <real>-199.0</real>
-      <key>public.kern2.t</key>
-      <real>48.0</real>
-      <key>rho</key>
-      <real>-56.0</real>
-      <key>tau</key>
-      <real>48.0</real>
-      <key>theta</key>
-      <real>-15.0</real>
-      <key>xi</key>
-      <real>-54.0</real>
-      <key>zeta</key>
-      <real>-54.0</real>
     </dict>
     <key>public.kern1.epsilongreek</key>
     <dict>
@@ -4475,10 +4137,6 @@
       <real>-158.0</real>
       <key>public.kern2.divide</key>
       <real>-37.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-232.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>31.0</real>
       <key>public.kern2.f</key>
       <real>67.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -4502,6 +4160,12 @@
     </dict>
     <key>public.kern1.g</key>
     <dict>
+      <key>T</key>
+      <real>-269.0</real>
+      <key>j</key>
+      <real>-64.0</real>
+      <key>public.kern2.T</key>
+      <real>-336.0</real>
       <key>public.kern2.V</key>
       <real>-59.0</real>
       <key>public.kern2.W</key>
@@ -4543,8 +4207,6 @@
       <real>-8.0</real>
       <key>public.kern2.A</key>
       <real>-160.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-57.0</real>
       <key>public.kern2.braceright</key>
       <real>-50.0</real>
       <key>public.kern2.comma</key>
@@ -4553,8 +4215,6 @@
       <real>-41.0</real>
       <key>public.kern2.divide</key>
       <real>-92.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>62.0</real>
       <key>public.kern2.epsilongreek</key>
       <real>-65.0</real>
       <key>public.kern2.gammagreek</key>
@@ -4626,8 +4286,6 @@
       <real>-15.0</real>
       <key>public.kern2.ecyrillic</key>
       <real>-50.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-55.0</real>
       <key>public.kern2.elcyrillic</key>
       <real>-74.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -4748,8 +4406,6 @@
       <real>-252.0</real>
       <key>public.kern2.Z</key>
       <real>-72.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-63.0</real>
       <key>public.kern2.elcyrillic</key>
       <real>-23.0</real>
       <key>public.kern2.f</key>
@@ -4824,18 +4480,18 @@
     </dict>
     <key>public.kern1.idieresis</key>
     <dict>
-      <key>V</key>
-      <real>168.0</real>
       <key>idieresisacute</key>
       <real>286.0</real>
       <key>jcrosstail</key>
-      <real>-118.0</real>
+      <real>-269.0</real>
       <key>public.kern2.B</key>
       <real>151.0</real>
       <key>public.kern2.C</key>
       <real>17.0</real>
       <key>public.kern2.T</key>
       <real>269.0</real>
+      <key>public.kern2.V</key>
+      <real>168.0</real>
       <key>public.kern2.W</key>
       <real>168.0</real>
       <key>public.kern2.X</key>
@@ -4850,6 +4506,8 @@
       <real>269.0</real>
       <key>public.kern2.idotless</key>
       <real>269.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-118.0</real>
       <key>public.kern2.t</key>
       <real>118.0</real>
       <key>seven</key>
@@ -4857,6 +4515,8 @@
     </dict>
     <key>public.kern1.idotless</key>
     <dict>
+      <key>j</key>
+      <real>-116.0</real>
       <key>public.kern2.V</key>
       <real>-50.0</real>
       <key>public.kern2.Y</key>
@@ -4890,16 +4550,10 @@
       <real>-79.0</real>
       <key>public.kern2.A</key>
       <real>-59.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-21.0</real>
       <key>public.kern2.deltagreek</key>
       <real>-22.0</real>
       <key>public.kern2.divide</key>
       <real>-92.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-164.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>61.0</real>
       <key>public.kern2.epsilongreek</key>
       <real>-14.0</real>
       <key>public.kern2.gammagreek</key>
@@ -4937,6 +4591,8 @@
     </dict>
     <key>public.kern1.k</key>
     <dict>
+      <key>T</key>
+      <real>-292.0</real>
       <key>ampersand</key>
       <real>-58.0</real>
       <key>at</key>
@@ -5061,6 +4717,20 @@
       <real>-21.0</real>
       <key>backslash</key>
       <real>59.0</real>
+      <key>eight</key>
+      <real>-118.0</real>
+      <key>four</key>
+      <real>-168.0</real>
+      <key>four.ss01</key>
+      <real>-168.0</real>
+      <key>j</key>
+      <real>-235.0</real>
+      <key>nine</key>
+      <real>-8.0</real>
+      <key>nine.ss01</key>
+      <real>-118.0</real>
+      <key>period</key>
+      <real>-286.0</real>
       <key>public.kern2.A</key>
       <real>-44.0</real>
       <key>public.kern2.AE</key>
@@ -5087,10 +4757,12 @@
       <real>-23.0</real>
       <key>public.kern2.comma</key>
       <real>-134.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-28.0</real>
       <key>public.kern2.gammagreek</key>
       <real>-14.0</real>
+      <key>public.kern2.idotless</key>
+      <real>-67.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-168.0</real>
       <key>public.kern2.quotedbl</key>
       <real>-23.0</real>
       <key>public.kern2.quotedblbase</key>
@@ -5099,6 +4771,8 @@
       <real>-93.0</real>
       <key>public.kern2.quotedblright</key>
       <real>-21.0</real>
+      <key>public.kern2.six</key>
+      <real>-50.0</real>
       <key>public.kern2.v</key>
       <real>-14.0</real>
       <key>public.kern2.w</key>
@@ -5107,6 +4781,8 @@
       <real>-14.0</real>
       <key>seven</key>
       <real>-58.0</real>
+      <key>slash</key>
+      <real>-84.0</real>
       <key>tenge</key>
       <real>-16.0</real>
       <key>three</key>
@@ -5182,10 +4858,6 @@
       <real>43.0</real>
       <key>public.kern2.divide</key>
       <real>-80.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-96.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>48.0</real>
       <key>public.kern2.f</key>
       <real>42.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -5262,8 +4934,6 @@
       <real>-67.0</real>
       <key>four.ss01</key>
       <real>-118.0</real>
-      <key>j</key>
-      <real>-134.0</real>
       <key>nine</key>
       <real>-67.0</real>
       <key>nine.ss01</key>
@@ -5276,6 +4946,8 @@
       <real>18.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-17.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-134.0</real>
       <key>public.kern2.one</key>
       <real>-84.0</real>
       <key>public.kern2.quotedbl</key>
@@ -5286,14 +4958,12 @@
       <real>-4.0</real>
       <key>public.kern2.quotedblright</key>
       <real>-4.0</real>
+      <key>public.kern2.six</key>
+      <real>-84.0</real>
       <key>public.kern2.two</key>
       <real>-48.0</real>
       <key>seven</key>
       <real>-101.0</real>
-      <key>six</key>
-      <real>-84.0</real>
-      <key>six.ss01</key>
-      <real>-84.0</real>
       <key>three</key>
       <real>-67.0</real>
     </dict>
@@ -5409,8 +5079,6 @@
       <real>-261.0</real>
       <key>public.kern2.asciicircum</key>
       <real>-202.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>-130.0</real>
       <key>public.kern2.gammagreek</key>
       <real>-74.0</real>
       <key>public.kern2.one</key>
@@ -5529,8 +5197,6 @@
       <real>-57.0</real>
       <key>public.kern2.a</key>
       <real>-116.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-151.0</real>
       <key>public.kern2.approxequal</key>
       <real>-81.0</real>
       <key>public.kern2.asciicircum</key>
@@ -5634,10 +5300,6 @@
       <real>-252.0</real>
       <key>public.kern2.divide</key>
       <real>-92.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-152.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>63.0</real>
       <key>public.kern2.f</key>
       <real>66.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -5654,6 +5316,8 @@
       <real>108.0</real>
       <key>public.kern2.s</key>
       <real>-50.0</real>
+      <key>public.kern2.t</key>
+      <real>67.0</real>
       <key>public.kern2.v</key>
       <real>50.0</real>
       <key>public.kern2.w</key>
@@ -5664,25 +5328,34 @@
       <real>-14.0</real>
       <key>slash</key>
       <real>-74.0</real>
-      <key>t</key>
-      <real>67.0</real>
-      <key>tcaron</key>
-      <real>67.0</real>
-      <key>tccurl</key>
-      <real>67.0</real>
       <key>underscore</key>
       <real>-172.0</real>
     </dict>
+    <key>public.kern1.rthook</key>
+    <dict>
+      <key>public.kern2.T</key>
+      <real>-420.0</real>
+    </dict>
     <key>public.kern1.s</key>
     <dict>
+      <key>Psi</key>
+      <real>-109.0</real>
+      <key>T</key>
+      <real>-269.0</real>
       <key>periodcentered</key>
       <real>-8.0</real>
+      <key>pi</key>
+      <real>-15.0</real>
       <key>public.kern2.A</key>
       <real>-44.0</real>
+      <key>public.kern2.AE</key>
+      <real>-65.0</real>
       <key>public.kern2.B</key>
       <real>-50.0</real>
       <key>public.kern2.C</key>
       <real>-50.0</real>
+      <key>public.kern2.Omicrongreek</key>
+      <real>-21.0</real>
       <key>public.kern2.T</key>
       <real>-340.0</real>
       <key>public.kern2.V</key>
@@ -5693,8 +5366,6 @@
       <real>-80.0</real>
       <key>public.kern2.Y</key>
       <real>-237.0</real>
-      <key>public.kern2.b</key>
-      <real>-48.0</real>
       <key>public.kern2.dagger</key>
       <real>-37.0</real>
       <key>public.kern2.idotless</key>
@@ -5705,8 +5376,12 @@
       <real>-50.0</real>
       <key>public.kern2.one</key>
       <real>-37.0</real>
+      <key>public.kern2.quotedblbase</key>
+      <real>-72.0</real>
       <key>public.kern2.quotedblleft</key>
       <real>-117.0</real>
+      <key>public.kern2.quotedblright</key>
+      <real>-36.0</real>
       <key>public.kern2.s</key>
       <real>-28.0</real>
       <key>public.kern2.t</key>
@@ -5719,6 +5394,8 @@
       <real>-50.0</real>
       <key>seven</key>
       <real>-50.0</real>
+      <key>tau</key>
+      <real>-15.0</real>
       <key>underscore</key>
       <real>-72.0</real>
     </dict>
@@ -5744,8 +5421,6 @@
       <real>-34.0</real>
       <key>public.kern2.divide</key>
       <real>-29.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>48.0</real>
       <key>public.kern2.f</key>
       <real>-17.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -5779,8 +5454,6 @@
       <real>-15.0</real>
       <key>public.kern2.Y</key>
       <real>-29.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-8.0</real>
       <key>public.kern2.c</key>
       <real>-7.0</real>
       <key>public.kern2.comma</key>
@@ -5795,6 +5468,8 @@
       <real>-70.0</real>
       <key>public.kern2.iotadieresisgreek</key>
       <real>-6.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-168.0</real>
       <key>public.kern2.omegagreek</key>
       <real>-6.0</real>
       <key>rho</key>
@@ -5806,6 +5481,10 @@
     </dict>
     <key>public.kern1.u</key>
     <dict>
+      <key>Gamma1</key>
+      <real>-134.0</real>
+      <key>T</key>
+      <real>-269.0</real>
       <key>public.kern2.T</key>
       <real>-309.0</real>
       <key>public.kern2.V</key>
@@ -5911,10 +5590,6 @@
       <real>66.0</real>
       <key>public.kern2.divide</key>
       <real>-88.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-144.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>77.0</real>
       <key>public.kern2.f</key>
       <real>43.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -5954,6 +5629,8 @@
     </dict>
     <key>public.kern1.v</key>
     <dict>
+      <key>T</key>
+      <real>-403.0</real>
       <key>ampersand</key>
       <real>-71.0</real>
       <key>at</key>
@@ -5998,8 +5675,6 @@
       <real>-202.0</real>
       <key>public.kern2.divide</key>
       <real>-50.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-124.0</real>
       <key>public.kern2.f</key>
       <real>29.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -6020,6 +5695,10 @@
       <real>-86.0</real>
       <key>underscore</key>
       <real>-239.0</real>
+      <key>uni0221</key>
+      <real>-134.0</real>
+      <key>uni023A</key>
+      <real>-269.0</real>
     </dict>
     <key>public.kern1.vecyrillic</key>
     <dict>
@@ -6062,6 +5741,8 @@
     </dict>
     <key>public.kern1.w</key>
     <dict>
+      <key>Gamma1</key>
+      <real>-134.0</real>
       <key>ampersand</key>
       <real>-101.0</real>
       <key>at</key>
@@ -6108,8 +5789,6 @@
       <real>-202.0</real>
       <key>public.kern2.divide</key>
       <real>-50.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-83.0</real>
       <key>public.kern2.f</key>
       <real>36.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -6130,6 +5809,8 @@
       <real>-59.0</real>
       <key>underscore</key>
       <real>-237.0</real>
+      <key>uni0248</key>
+      <real>-134.0</real>
     </dict>
     <key>public.kern1.x</key>
     <dict>
@@ -6186,6 +5867,8 @@
     </dict>
     <key>public.kern1.z</key>
     <dict>
+      <key>T</key>
+      <real>-74.0</real>
       <key>less</key>
       <real>-87.0</real>
       <key>logicalnot</key>
@@ -6219,16 +5902,6 @@
       <key>public.kern2.quotedblleft</key>
       <real>-44.0</real>
     </dict>
-    <key>q</key>
-    <dict>
-      <key>T</key>
-      <real>-336.0</real>
-    </dict>
-    <key>qrthook</key>
-    <dict>
-      <key>T</key>
-      <real>-420.0</real>
-    </dict>
     <key>question</key>
     <dict>
       <key>afii10024</key>
@@ -6247,8 +5920,6 @@
       <real>-124.0</real>
       <key>public.kern2.Elcyrillic</key>
       <real>-74.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-41.0</real>
       <key>public.kern2.elcyrillic</key>
       <real>-29.0</real>
       <key>zecyrillic</key>
@@ -6303,18 +5974,11 @@
       <real>-79.0</real>
       <key>public.kern2.V</key>
       <real>-65.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-14.0</real>
     </dict>
     <key>radical</key>
     <dict>
       <key>tecyrillic</key>
       <real>-22.0</real>
-    </dict>
-    <key>registered</key>
-    <dict>
-      <key>T</key>
-      <real>-134.0</real>
     </dict>
     <key>seven</key>
     <dict>
@@ -6352,8 +6016,6 @@
       <real>-7.0</real>
       <key>iacyrillic</key>
       <real>-29.0</real>
-      <key>j</key>
-      <real>-168.0</real>
       <key>less</key>
       <real>-173.0</real>
       <key>nine</key>
@@ -6376,8 +6038,6 @@
       <real>-15.0</real>
       <key>public.kern2.a</key>
       <real>-95.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-88.0</real>
       <key>public.kern2.c</key>
       <real>-88.0</real>
       <key>public.kern2.colon</key>
@@ -6390,8 +6050,6 @@
       <real>-87.0</real>
       <key>public.kern2.ecyrillic</key>
       <real>-16.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-227.0</real>
       <key>public.kern2.elcyrillic</key>
       <real>-74.0</real>
       <key>public.kern2.epsilongreek</key>
@@ -6402,6 +6060,8 @@
       <real>-28.0</real>
       <key>public.kern2.iotadieresisgreek</key>
       <real>-72.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-168.0</real>
       <key>public.kern2.omegagreek</key>
       <real>-88.0</real>
       <key>public.kern2.psigreek</key>
@@ -6459,18 +6119,12 @@
       <real>-86.0</real>
       <key>public.kern2.A</key>
       <real>-137.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-72.0</real>
       <key>public.kern2.comma</key>
       <real>-273.0</real>
       <key>public.kern2.deltagreek</key>
       <real>-57.0</real>
       <key>public.kern2.divide</key>
       <real>-64.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-130.0</real>
-      <key>public.kern2.eight.numr</key>
-      <real>61.0</real>
       <key>public.kern2.epsilongreek</key>
       <real>-59.0</real>
       <key>public.kern2.gammagreek</key>
@@ -6519,8 +6173,6 @@
       <real>-16.0</real>
       <key>backslash</key>
       <real>23.0</real>
-      <key>j</key>
-      <real>-168.0</real>
       <key>public.kern2.A</key>
       <real>-65.0</real>
       <key>public.kern2.AE</key>
@@ -6535,6 +6187,8 @@
       <real>-65.0</real>
       <key>public.kern2.comma</key>
       <real>-116.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-168.0</real>
       <key>public.kern2.quotedblbase</key>
       <real>-88.0</real>
       <key>public.kern2.quotedblleft</key>
@@ -6554,8 +6208,6 @@
       <real>-16.0</real>
       <key>backslash</key>
       <real>23.0</real>
-      <key>j</key>
-      <real>-168.0</real>
       <key>nine.ss01</key>
       <real>-185.0</real>
       <key>public.kern2.A</key>
@@ -6572,6 +6224,8 @@
       <real>-65.0</real>
       <key>public.kern2.comma</key>
       <real>-116.0</real>
+      <key>public.kern2.jdotless</key>
+      <real>-168.0</real>
       <key>public.kern2.quotedblbase</key>
       <real>-88.0</real>
       <key>public.kern2.quotedblleft</key>
@@ -6611,8 +6265,6 @@
       <real>16.0</real>
       <key>public.kern2.Y</key>
       <real>15.0</real>
-      <key>public.kern2.b</key>
-      <real>14.0</real>
       <key>public.kern2.comma</key>
       <real>-122.0</real>
       <key>public.kern2.f</key>
@@ -6621,11 +6273,6 @@
       <real>15.0</real>
       <key>seven</key>
       <real>28.0</real>
-    </dict>
-    <key>srthook</key>
-    <dict>
-      <key>T</key>
-      <real>-269.0</real>
     </dict>
     <key>summation</key>
     <dict>
@@ -6650,16 +6297,12 @@
       <real>-36.0</real>
       <key>public.kern2.A</key>
       <real>-80.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-81.0</real>
       <key>public.kern2.comma</key>
       <real>-123.0</real>
       <key>public.kern2.deltagreek</key>
       <real>-95.0</real>
       <key>public.kern2.divide</key>
       <real>-65.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>-83.0</real>
       <key>public.kern2.epsilongreek</key>
       <real>-65.0</real>
       <key>public.kern2.gammagreek</key>
@@ -6691,8 +6334,6 @@
     <dict>
       <key>periodcentered</key>
       <real>15.0</real>
-      <key>public.kern2.eight.dnom</key>
-      <real>41.0</real>
       <key>public.kern2.quotedblleft</key>
       <real>-29.0</real>
     </dict>
@@ -6745,8 +6386,6 @@
       <real>-21.0</real>
       <key>public.kern2.A</key>
       <real>-87.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-14.0</real>
       <key>public.kern2.braceright</key>
       <real>-50.0</real>
       <key>public.kern2.comma</key>
@@ -6780,20 +6419,11 @@
     </dict>
     <key>three</key>
     <dict>
-      <key>j</key>
-      <real>-168.0</real>
       <key>nine.ss01</key>
       <real>-86.0</real>
     </dict>
-    <key>two</key>
-    <dict>
-      <key>j</key>
-      <real>-168.0</real>
-    </dict>
     <key>udieresis</key>
     <dict>
-      <key>Gamma1</key>
-      <real>-134.0</real>
       <key>public.kern2.T</key>
       <real>-101.0</real>
     </dict>
@@ -6859,8 +6489,6 @@
       <real>-302.0</real>
       <key>public.kern2.a</key>
       <real>-80.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-80.0</real>
       <key>public.kern2.asciicircum</key>
       <real>-202.0</real>
       <key>public.kern2.c</key>
@@ -6914,30 +6542,15 @@
       <key>zeta</key>
       <real>-138.0</real>
     </dict>
-    <key>uni01F6</key>
-    <dict>
-      <key>T</key>
-      <real>-269.0</real>
-    </dict>
     <key>uni0221</key>
     <dict>
-      <key>T</key>
+      <key>public.kern2.T</key>
       <real>-571.0</real>
-    </dict>
-    <key>uni023A</key>
-    <dict>
-      <key>T</key>
-      <real>134.0</real>
     </dict>
     <key>uni0240</key>
     <dict>
-      <key>T</key>
+      <key>public.kern2.T</key>
       <real>-269.0</real>
-    </dict>
-    <key>uni0247</key>
-    <dict>
-      <key>T</key>
-      <real>-44.0</real>
     </dict>
     <key>uni20BD</key>
     <dict>
@@ -6977,13 +6590,6 @@
       <key>public.kern2.T</key>
       <real>-134.0</real>
     </dict>
-    <key>wdieresis</key>
-    <dict>
-      <key>Gamma1</key>
-      <real>-134.0</real>
-      <key>uni0248</key>
-      <real>-134.0</real>
-    </dict>
     <key>xi</key>
     <dict>
       <key>Psi</key>
@@ -6992,8 +6598,6 @@
       <real>-50.0</real>
       <key>public.kern2.A</key>
       <real>-22.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-59.0</real>
       <key>public.kern2.deltagreek</key>
       <real>-42.0</real>
       <key>public.kern2.divide</key>
@@ -7023,25 +6627,11 @@
     <dict>
       <key>public.kern2.T</key>
       <real>-84.0</real>
-      <key>uni0221</key>
-      <real>-134.0</real>
-      <key>uni023A</key>
-      <real>-269.0</real>
     </dict>
     <key>yhook</key>
     <dict>
-      <key>T</key>
+      <key>public.kern2.T</key>
       <real>158.0</real>
-    </dict>
-    <key>zero</key>
-    <dict>
-      <key>j</key>
-      <real>-168.0</real>
-    </dict>
-    <key>zero.slash</key>
-    <dict>
-      <key>j</key>
-      <real>-168.0</real>
     </dict>
     <key>zeta</key>
     <dict>
@@ -7051,8 +6641,6 @@
       <real>-72.0</real>
       <key>public.kern2.A</key>
       <real>-23.0</real>
-      <key>public.kern2.alphagreek</key>
-      <real>-50.0</real>
       <key>public.kern2.deltagreek</key>
       <real>-42.0</real>
       <key>public.kern2.divide</key>
