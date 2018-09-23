@@ -232,7 +232,7 @@ docs_fonts:
 docs/_data/fontinfo.json: docs/font-files/Inter-UI-Regular.otf misc/tools/fontinfo.py
 	misc/tools/fontinfo.py -pretty $< > docs/_data/fontinfo.json
 
-docs/lab/glyphinfo.json: build/UnicodeData.txt misc/tools/gen-glyphinfo.py
+docs/lab/glyphinfo.json: build/UnicodeData.txt misc/tools/gen-glyphinfo.py $(all_ufo_masters)
 	misc/tools/gen-glyphinfo.py -ucd $< src/Inter-UI-*.ufo > $@
 
 docs/glyphs/metrics.json: $(Regular_ufo_d) misc/tools/gen-metrics-and-svgs.py
