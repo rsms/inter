@@ -35,6 +35,23 @@
 @font-face {
   font-family: 'Inter UI';
   font-style:  normal;
+  font-weight: 600;
+  src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
+       url("font-files/Inter-UI-SemiBold.woff2?v=3.0") format("woff2"),
+       url("font-files/Inter-UI-SemiBold.woff?v=3.0") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 600;
+  src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
+       url("font-files/Inter-UI-SemiBoldItalic.woff2?v=3.0") format("woff2"),
+       url("font-files/Inter-UI-SemiBoldItalic.woff?v=3.0") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
   font-weight: 700;
   src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
        url("font-files/Inter-UI-Bold.woff2?v=3.0") format("woff2"),
@@ -47,6 +64,23 @@
   src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
        url("font-files/Inter-UI-BoldItalic.woff2?v=3.0") format("woff2"),
        url("font-files/Inter-UI-BoldItalic.woff?v=3.0") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 800;
+  src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
+       url("font-files/Inter-UI-ExtraBold.woff2?v=3.0") format("woff2"),
+       url("font-files/Inter-UI-ExtraBold.woff?v=3.0") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 800;
+  src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
+       url("font-files/Inter-UI-ExtraBoldItalic.woff2?v=3.0") format("woff2"),
+       url("font-files/Inter-UI-ExtraBoldItalic.woff?v=3.0") format("woff");
 }
 
 @font-face {

@@ -33,8 +33,10 @@ Current font styles:
 | -------------------- | ----------------
 | Regular              | 400
 | Italic               | 400
-| Medium               | 600
-| Medium Italic        | 600
+| Medium               | 500
+| Medium Italic        | 500
+| Semi Bold            | 600
+| Semi Bold Italic     | 600
 | Bold                 | 700
 | Bold Italic          | 700
 | Extra Bold           | 800

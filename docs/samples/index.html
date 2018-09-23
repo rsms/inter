@@ -36,6 +36,8 @@ endfor
           <option value="italic">Italic</option>
           <option value="medium" default>Medium</option>
           <option value="medium-italic">Medium Italic</option>
+          <option value="semi-bold" default>Extra Bold</option>
+          <option value="semi-bold-italic">Extra Bold Italic</option>
           <option value="bold" default>Bold</option>
           <option value="bold-italic">Bold Italic</option>
           <option value="extra-bold" default>Extra Bold</option>
@@ -245,6 +247,8 @@ bindings.configure('style', null, null, function (style) {
   cl.remove('font-style-italic')
   cl.remove('font-style-medium')
   cl.remove('font-style-medium-italic')
+  cl.remove('font-style-semi-bold')
+  cl.remove('font-style-semi-bold-italic')
   cl.remove('font-style-bold')
   cl.remove('font-style-bold-italic')
   cl.remove('font-style-extra-bold')
