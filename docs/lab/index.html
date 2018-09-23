@@ -132,7 +132,7 @@ f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fA fB fC fD fE fF fa fb fc fd fe ff
 `)
 
 
-samples.set('Numbers: Fractions', `
+samples.set('Feature: frac', `
 Dedicated glyphs & codepoints:
 \u00BD \u00BC \u00BE \u215A \u215E \u215B \u215D \u215C
 
@@ -153,7 +153,7 @@ Ambiguation: (should not be fractions)
 (make sure to enable the "frac" feature for the above to work)
 `)
 
-samples.set('Features test', `
+samples.set('Feature: calt', `
 (m) (M) (6) [m] [M] [6] {m} {M} {6}
 m@n M@N
 3×5 ×9 8×  3x4 x9 2x
@@ -190,6 +190,94 @@ left side cascades up to 5 characters:
 @@@@@@M@@@@@@
 ++++++M++++++
 `)
+
+
+samples.set('Feature: sups', `
+Dedicated glyphs, corresponding ASCII, codepoint
+\u2070 \t 0 \t U+2070
+\u00b9 \t 1 \t U+00B9
+\u00b2 \t 2 \t U+00B2
+\u00b3 \t 3 \t U+00B3
+\u2074 \t 4 \t U+2074
+\u2075 \t 5 \t U+2075
+\u2076 \t 6 \t U+2076
+\u2077 \t 7 \t U+2077
+\u2078 \t 8 \t U+2078
+\u2079 \t 9 \t U+2079
+\u207a \t + \t U+207A
+\u207b \t - \t U+207B
+\u207c \t = \t U+207C
+\u207d \t ( \t U+207D
+\u207e \t ) \t U+207E
+\u1d43 \t a \t U+1D43
+\u1d47 \t b \t U+1D47
+\u1d9c \t c \t U+1D9C
+\u1d48 \t d \t U+1D48
+\u1d49 \t e \t U+1D49
+\u1da0 \t f \t U+1DA0
+\u1d4d \t g \t U+1D4D
+\u02b0 \t h \t U+02B0
+\u1da6 \t i \t U+1DA6
+\u02b2 \t j \t U+02B2
+\u1d4f \t k \t U+1D4F
+\u02e1 \t l \t U+02E1
+\u1d50 \t m \t U+1D50
+\u207f \t n \t U+207F
+\u1d52 \t o \t U+1D52
+\u1d56 \t p \t U+1D56
+\u146b \t q \t U+146B
+\u02b3 \t r \t U+02B3
+\u02e2 \t s \t U+02E2
+\u1d57 \t t \t U+1D57
+\u1d58 \t u \t U+1D58
+\u1d5b \t v \t U+1D5B
+\u02b7 \t w \t U+02B7
+\u02e3 \t x \t U+02E3
+\u02b8 \t y \t U+02B8
+\u1dbb \t z \t U+1DBB
+
+(enable sups feature to turn column 2 == column 1)
+`)
+
+
+samples.set('Feature: subs', `
+Dedicated glyphs, corresponding ASCII, codepoint
+\u2080 \t 0 \t U+2080
+\u2081 \t 1 \t U+2081
+\u2082 \t 2 \t U+2082
+\u2083 \t 3 \t U+2083
+\u2084 \t 4 \t U+2084
+\u2085 \t 5 \t U+2085
+\u2086 \t 6 \t U+2086
+\u2087 \t 7 \t U+2087
+\u2088 \t 8 \t U+2088
+\u2089 \t 9 \t U+2089
+\u208A \t + \t U+208A
+\u208B \t - \t U+208B
+\u208C \t = \t U+208C
+\u208D \t ( \t U+208D
+\u208E \t ) \t U+208E
+\u2090 \t a \t U+2090
+\u2091 \t e \t U+2091
+\u2095 \t h \t U+2095
+\u1D62 \t i \t U+1D62
+\u2C7C \t j \t U+2C7C
+\u2096 \t k \t U+2096
+\u2097 \t l \t U+2097
+\u2098 \t m \t U+2098
+\u2099 \t n \t U+2099
+\u2092 \t o \t U+2092
+\u209A \t p \t U+209A
+\u1D63 \t r \t U+1D63
+\u209B \t s \t U+209B
+\u209C \t t \t U+209C
+\u1D64 \t u \t U+1D64
+\u1D65 \t v \t U+1D65
+\u2093 \t x \t U+2093
+
+(enable subs feature to turn column 2 == column 1)
+`)
+
 
 // From http://justanotherfoundry.com/generator
 samples.set('Kerning body en',
@@ -402,6 +490,57 @@ In complex systems, the human–machine interface is typically computerized. The
 The engineering of the human–machine interfaces is enhanced by considering ergonomics (human factors). The corresponding disciplines are human factors engineering (HFE) and usability engineering (UE), which is part of systems engineering.
 
 Tools used for incorporating human factors in the interface design are developed based on knowledge of computer science, such as computer graphics, operating systems, programming languages. Nowadays, we use the expression graphical user interface for human–machine interface on computers, as nearly all of them are now using graphics.
+`)
+
+
+samples.set('Body text 2', `
+One of the most famous lighthouses of antiquity, as I have already pointed out, was the pharos of Alexandria, which ancient writers included among the Seven Wonders of the World. It might naturally be supposed that the founder of so remarkable a monument of architectural skill would be well known; yet while Strabo and Pliny, Eusebius, Suidas, and Lucian ascribe its erection to Ptolemæus Philadelphus, the wisest and most benevolent of the Ptolemean kings of Egypt, by Tzetzes and Ammianus Marcellinus the honour is given to Cleopatra; and other authorities even attribute it to Alexander the Great.
+
+All that can with certainty be affirmed is, that the architect was named Sostrates. Montfaucon, in his great work, endeavours to explain how it is that while we are thus informed as to the architect, we are so doubtful as to the founder, whom, for his part, he believes to have been Ptolemæus. Our ignorance, he says, is owing to the knavery of Sostrates. He wished to immortalize his name; a blameless wish, if at the same time he had not sought to suppress that of the founder, whose glory it was to have suggested the erection. For this purpose Sostrates devised a stratagem which proved successful; deep in the wall of the tower he cut the following inscription: “Sostrates of Cnidos, son of Dexiphanes, to the gods who Protect those who are upon the Sea.” But, mistrustful that King Ptolemæus would scarcely be satisfied with an inscription in which he was wholly ignored, he covered it with a light coat of cement, which he knew would not long endure the action of the atmosphere, and carved thereon the name of Ptolemæus. After a few years the cement and the name of the king disappeared, and revealed the inscription which gave all the glory to Sostrates.
+
+Montfaucon, with genial credulity, adopts this anecdote as authentic, and adds: Pliny pretends that Ptolemæus, out of the modesty and greatness of his soul, desired the architect’s name to be engraved upon the tower, and no reference to himself to be made. But this statement is very dubious; it would have passed as incredible in those times, and even to-day would be regarded as an ill-understood act of magnanimity. We have never heard of any prince prohibiting the perpetuation of his name upon magnificent works designed for the public utility, or being content that the architect should usurp the entire honour.
+
+To solve the difficulty, Champollion represents the pharos as constructed by Ptolemæus Soter. But, as Edrisi solemnly remarks, “God alone knows what is the truth.”
+
+Much etymological erudition has been expended on the derivation of the word Pharos. As far as the Alexandrian light-tower is concerned, there can be no doubt that it was named from the islet on which it stood; yet Isidore asserts that the word came from φὼς, “light,” and ὁρἀν, “to see.” To quote again from Montfaucon: That numerous persons, who have not read the Greek authors, should exercise their ingenuity to no avail in the extraction of these etymologies, is far less surprising than that so good a scholar as Isaac Vossius should seek the origin of Pharos in the Greek language. From ϕαἰνειν, “to shine,” he says, comes ϕανερός, and from ϕανερός, ϕάρος.... But the island was called Pharos seven or eight hundred years before it possessed either tower or beacon-light.
+
+The most reasonable conjecture seems to be that the word is a Hellenic form of Phrah, the Egyptian name of the sun, to whom the Alexandrian lighthouse would naturally be compared by wondering spectators, or dedicated by a devout prince.
+
+At a later date we find the word applied to very different objects, though always retaining the signification of light or brilliancy. A pharos of fire—i.e., a ball or meteor—was seen, says Gregory of Tours, to issue from the church of St. Hilaire, and descend upon King Clovis. The same historian uses the word to describe a conflagration:—“They (the barbarians) set fire to the church of St. Hilaire, kindled a great pharos, and while the church was burning, pillaged the monastery.” The old French historian frequently employs the word in this sense, which leads us to suppose that in his time an incendiary was probably designated “a maker of pharoses” (un faiseur de phares). Still later, the term pharos was applied to certain machines in which a number of lamps or tapers were placed, as in a candelabrum. A modern French writer quotes from Anastasius the Librarian, that Pope Sylvester caused “a pharos of pure gold” to be constructed; and that Pope Adrian I. made one, “in the form of a cross,” capable of receiving one hundred and seventy candles or tapers. And Leon of Ostia, in his “Chronicle of Monte Cassino,” says, that the Abbot Didier had a pharos, or great silver crown, weighing one hundred pounds, constructed, which was surmounted by twelve little turrets, and from which were suspended six and thirty lamps.
+
+We may add that the poets have employed the word “pharos” in a still more metaphorical sense, to signify an object which instructs while it illuminates, or those remarkable individuals whose genius becomes for all time the light of the world, and a beacon to posterity. Says the French poet Ronsard to Charles IX.:—
+
+\t“Soyez mon phare, et gardez d’abymer,
+\tMa nef qui nage en si profonde mer.”
+\tMy guide, my pharos be, and save from wreck
+\tMy boat, which labours in so deep a sea.
+\tBut from this digression we return to the Alexandrian Wonder.
+
+The long narrow island of Pharos lay in front of the city of Alexandria, sheltering both its harbours—the Greater Harbour and the Haven of Happy Return (Εὔνοστος)—from the fury of the north wind and the occasional high tides of the Mediterranean.
+
+It was a strip of white and dazzling calcareous rock, about a mile from Alexandria, and 150 stadia from the Canobic mouth of the river Nile. Its northern coast was fringed with small islets, which, in the fourth and fifth centuries, became the resort of Christian anchorites. A deep bay on the northern side was called the “Pirates’ Haven,” because, in early times, it had been a place of refuge for the Carian and Samian rovers. An artificial mound, or causeway, connected the island with the mainland. From its extent (seven stadia, 4270 English feet, or three-quarters of a mile), it was called the Heptastadium. In its whole length two breaks occurred, to permit of the passage of the water, and these breaks were crossed by drawbridges. At the insular end stood a temple to Hephæstus, and at the other the great Gate of the Moon. The famous lighthouse stood on a kind of peninsular rock at the eastern end of the island; and as it was built of white stone, and rose to a great height, it was scarcely a less conspicuous object from the city than from the neighbouring waters.
+
+Some remarkable discrepancies occur in the accounts of this noble edifice, which have been handed down to us, but after all allowance has been made for error and exaggeration, it remains obvious that the wondering admiration bestowed upon it by the ancients was not unjustified. The statements of the distance at which its light could be seen are, however, most undeniably fictitious. That of Josephus, who compares it to the second of Herod’s three towers at Jerusalem—called Phasael, in honour of his brother—is the least incredible; yet even he asserts that the fire which burned on its summit was visible thirty-four English miles at sea! Such a range for a lighthouse on the low shores of Egypt would require, says Mr. Alan Stevenson, a tower about 550 feet in height.
+
+Pliny affirms that its erection cost a sum of money equal, at the present value, to about £390,000, and if this were true, we might not dispute some of the assertions of ancient writers in reference to its elevation and solidity. But the fact that it has entirely disappeared seems to disprove the dimensions they have assigned to it. We are wholly unable to decide whether the help it afforded to mariners was from a common fire or from a more complete system of illumination. The poet Lucan, in his “Pharsalia,” asserts that it indicated to Julius Cæsar his approach to Egypt on the seventh night after he sailed from Troy; and he makes use of the significant expression “lampada,” which could hardly be applied, even poetically, to an open fire. Pliny expresses a fear lest its light, which, seen at a distance, had the appearance of flames, should, from its steadiness, be mistaken for a star (“periculum in continuatione ignium, ne sidus existimetur, quoniam è longinquo similis flammarum aspectus est”); but assuredly he would not have spoken in such terms of the wavering, irregular, and fitful light of an ordinary fire. We conclude, therefore, that its lighting apparatus was more complete than has generally been supposed.
+
+When was this great monument destroyed?
+
+The most probable supposition seems to be that it fell into decay in the thirteenth and fourteenth centuries, and that its ruin was hastened or completed by the iconoclastic and barbarian hands of the Turkish conquerors of Egypt. That it existed in the twelfth century, we know from the graphic description of Edrisi; a description which will enable the reader to reproduce it before his “mind’s eye” in all its pristine glory.
+
+“This pharos,” he says, “has not its like in the world for skill of construction or for solidity; since, to say nothing of the fact that it is built of excellent stone of the kind called kedan, the layers of these stones are united by molten lead, and the joints are so adherent that the whole is indissoluble, though the waves of the sea from the north incessantly beat against it. From the ground to the middle gallery or stage the measurement is exactly seventy fathoms, and from this gallery to the summit, twenty-six.
+
+“We ascend to the summit by a staircase constructed in the interior, which is as broad as those ordinarily erected in towers. This staircase terminates at about half-way, and thence the building becomes much narrower. In the interior, and under the staircase, some chambers have been built. Starting from the gallery, the pharos rises to its summit with a continually increasing contraction, until at last it may be folded round by a man’s arms. From this same gallery we recommence our ascent by a flight of steps of much narrower dimensions than the lower staircase: in every part it is pierced with windows to give light to persons making use of it, and to assist them in gaining a proper footing as they ascend.
+
+“This edifice,” adds Edrisi, “is singularly remarkable, as much on account of its height as of its massiveness; it is of exceeding utility, because its fire burns night and day for the guidance of navigators: they are well acquainted with the fire, and steer their course in consequence, for it is visible at the distance of a day’s sail (!). During the night it shines like a star; by day you may distinguish its smoke.”
+
+This latter passage shows that if any better mode of illumination had once been in use, as we are inclined to believe, it had been discontinued, or its secret forgotten, by the degenerate successors of the Alexandrian Greeks.
+
+Edrisi remarks, in language resembling Pliny’s, that from a distance the light of the pharos was so like a star which had risen upon the horizon, that the mariners, mistaking it, directed their prows towards the other coast, and were often wrecked upon the sands of Marmorica.
+
+Montfaucon also records this unfortunate peculiarity, which, however, is not unknown in our own days. More than one of the lighthouses intended to warn the seaman as he approaches a dangerous rock or headland now carries a couple of lights: one at the summit, and one below; that the upper may not be mistaken for a star.
+
+[Excerpt from "LIGHTHOUSES AND LIGHTSHIPS" http://www.gutenberg.org/files/57900/57900-h/57900-h.htm]
 `)
 
 samples.set('Body neutral 1', `
@@ -1055,15 +1194,19 @@ document.head.appendChild(fontCSS)
       <div class="checkbox-group">
       <span>Features:</span>
       <!-- <label><input type="checkbox" class="featopt" name="feat:liga=0">Disable liga</label> -->
-      <label><input type="checkbox" class="featopt" name="feat:dlig"> Enable dlig</label>
+      <label><input type="checkbox" class="featopt" name="feat:dlig" title="Discretionary ligatures, e.g. !? -> interrobang"> Enable dlig</label>
+      <label><input type="checkbox" class="featopt" name="feat:numr" title="Convert all numbers to numerators"> Enable numr</label>
+      <label><input type="checkbox" class="featopt" name="feat:dnom" title="Convert all numbers to denominators"> Enable dnom</label>
       <!-- <label><input type="checkbox" class="featopt" name="feat:onum"> Enable onum</label> -->
       <!-- <label><input type="checkbox" class="featopt" name="feat:pnum"> Enable pnum</label> -->
-      <label><input type="checkbox" class="featopt" name="feat:tnum"> Enable tnum</label>
+      <label><input type="checkbox" class="featopt" name="feat:tnum" title="Tabular numbers (fixed width)"> Enable tnum</label>
       <!-- <label><input type="checkbox" class="featopt" name="feat:lnum"> Enable lnum</label> -->
       <!-- <label><input type="checkbox" class="featopt" name="feat:kern"> Enable kern</label> -->
-      <label><input type="checkbox" class="featopt" name="feat:case"> Enable case</label>
+      <label><input type="checkbox" class="featopt" name="feat:case" title="Upper case adjustments"> Enable case</label>
       <label><input type="checkbox" class="featopt" name="feat:zero"> Enable (slashed) zero</label>
-      <label><input type="checkbox" class="featopt" name="feat:frac"> Enable frac(tions)</label>
+      <label><input type="checkbox" class="featopt" name="feat:frac" title="Contextual automatic fractions"> Enable frac</label>
+      <label><input type="checkbox" class="featopt" name="feat:sups" title="Superscript"> Enable sups</label>
+      <label><input type="checkbox" class="featopt" name="feat:subs" title="Subscript"> Enable subs</label>
       <!-- <label><input type="checkbox" class="featopt" name="feat:c2sc"> Enable c2sc</label> -->
       <label><input type="checkbox" class="featopt" name="feat:ss01"> Enable Stylistic set 1</label>
       <!-- <label><input type="checkbox" class="featopt" name="feat:salt"> Enable Stylistic alternates</label> -->
