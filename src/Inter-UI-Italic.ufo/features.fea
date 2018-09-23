@@ -151,9 +151,9 @@ comma.tf ];
 
 @frac2 = [  zero.frac one.numr two.numr three.numr four.frac five.frac six.frac seven.frac eight.frac nine.frac  ];
 
-@frac3 = [  fraction zero.sup one.sup two.sup three.sup four.sup five.sup six.sup seven.sup eight.sup nine.sup  ];
+@frac3 = [  fraction zero.dnomf one.dnomf two.dnomf three.dnomf four.dnomf five.dnomf six.dnomf seven.dnomf eight.dnomf nine.dnomf  ];
 
-@frac4 = [  zero.sup one.sup two.sup three.sup four.sup five.sup six.sup seven.sup eight.sup nine.sup  ];
+@frac4 = [  zero.dnomf one.dnomf two.dnomf three.dnomf four.dnomf five.dnomf six.dnomf seven.dnomf eight.dnomf nine.dnomf  ];
 
 @CCMP_ACC = [ gravecomb acutecomb tildecomb brevetildecomb.cn brevehookcomb.cn breveacutecomb.cn
 circumflextildecomb.cn circumflexhookcomb.cn circumflexgravecomb.cn circumflexacutecomb.cn
@@ -846,16 +846,16 @@ feature frac {
     nine.numr
 ];
 @denominators = [
-    zero.sup
-    one.sup
-    two.sup
-    three.sup
-    four.sup
-    five.sup
-    six.sup
-    seven.sup
-    eight.sup
-    nine.sup
+    zero.dnomf
+    one.dnomf
+    two.dnomf
+    three.dnomf
+    four.dnomf
+    five.dnomf
+    six.dnomf
+    seven.dnomf
+    eight.dnomf
+    nine.dnomf
 ];
 @denominators2 = [
     zero.dnom
@@ -1181,6 +1181,50 @@ sub [plus plus.case] by plus.sups;
 sub [minus minus.case hyphen hyphen.case] by minus.sups;
 sub [equal equal.case] by equal.sups;
 } sups;
+
+feature subs {
+sub a by a.subs;
+sub b by b.subs;
+sub c by c.subs;
+sub d by d.subs;
+sub e by e.subs;
+sub f by f.subs;
+sub g by g.subs;
+sub h by h.subs;
+sub i by i.subs;
+sub j by j.subs;
+sub k by k.subs;
+sub l by l.subs;
+sub m by m.subs;
+sub n by n.subs;
+sub o by o.subs;
+sub p by p.subs;
+sub q by q.subs;
+sub r by r.subs;
+sub s by s.subs;
+sub t by t.subs;
+sub u by u.subs;
+sub v by v.subs;
+sub w by w.subs;
+sub x by x.subs;
+sub y by y.subs;
+sub z by z.subs;
+sub [zero zero.slash] by zero.subs;
+sub [one one.ss01] by one.subs;
+sub two by two.subs;
+sub three by three.subs;
+sub [four four.ss01] by four.subs;
+sub five by five.subs;
+sub [six six.ss01] by six.subs;
+sub seven by seven.subs;
+sub eight by eight.subs;
+sub [nine nine.ss01] by nine.subs;
+sub [parenleft parenleft.case] by parenleft.subs;
+sub [parenright parenright.case] by parenright.subs;
+sub [plus plus.case] by plus.subs;
+sub [minus minus.case hyphen hyphen.case] by minus.subs;
+sub [equal equal.case] by equal.subs;
+} subs;
 
 feature ordn {
 # automatic
