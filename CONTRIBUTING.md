@@ -185,7 +185,7 @@ This only includes existing kerning and is thus only useful for adjustments. Add
 
 There are several tools included with Inter UI to help "wrangle" metrics, generate glyphs, create PDFs and so on. You can find these tools in the `misc/tools` directory. They are all command-line tools and their usage can be queried by providing the help flag `-h`.
 
-For example, the fontinfo tool can be used to generate a JSON description of all metadata and merics of a TTF or OTF file:
+For example, the fontinfo tool can be used to generate a JSON description of all metadata and metrics of a TTF or OTF file:
 
 ```
 misc/tools/fontinfo.py -h
