@@ -189,6 +189,7 @@ build/release/Inter-UI-%.zip: build/tmp/a.zip
 	@mkdir -p "$(shell dirname "$@")"
 	@mv -f "$<" "$@"
 	@echo write "$@"
+	@sh -c "if [ -f /usr/bin/open ]; then /usr/bin/open --reveal '$@'; fi"
 
 zip: ${ZIP_FILE_DEV}
 zip_dist: pre_dist test ${ZIP_FILE_DIST}
