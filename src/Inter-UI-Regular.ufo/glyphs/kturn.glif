@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kturn" format="2">
-  <advance width="1500.0"/>
+  <advance width="1532.0"/>
   <unicode hex="029E"/>
   <outline>
-    <component base="k" xScale="-1.0" yScale="-1.0" xOffset="1484.0" yOffset="1536.0"/>
+    <contour>
+      <point x="1096.0" y="976.0" type="line"/>
+      <point x="824.0" y="724.0" type="line"/>
+      <point x="804.0" y="724.0" type="line"/>
+      <point x="88.0" y="0.0" type="line"/>
+      <point x="380.0" y="0.0" type="line"/>
+      <point x="1052.0" y="684.0" type="line"/>
+      <point x="1100.0" y="684.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1316.0" y="1536.0" type="line"/>
+      <point x="1080.0" y="1536.0" type="line"/>
+      <point x="1080.0" y="-512.0" type="line"/>
+      <point x="1316.0" y="-512.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="340.0" y="1536.0" type="line"/>
+      <point x="40.0" y="1536.0" type="line"/>
+      <point x="772.0" y="612.0" type="line"/>
+      <point x="940.0" y="776.0" type="line"/>
+    </contour>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/15 17:52:30</string>
-      <key>com.schriftgestaltung.componentsAlignment</key>
-      <array>
-        <integer>-1</integer>
-      </array>
+      <string>2018/09/24 17:59:35</string>
     </dict>
   </lib>
 </glyph>
