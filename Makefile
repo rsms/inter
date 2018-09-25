@@ -8,7 +8,7 @@
 #   all_const         Build all non-variable files
 #   all_const_hinted  Build all non-variable files with hints
 #   all_var           Build all variable files
-#   all_var_hinted    Build all variable files with hints
+#   all_var_hinted    Build all variable files with hints (disabled)
 #
 #   all_otf					  Build all OTF files into FONTDIR/const
 #   all_ttf					  Build all TTF files into FONTDIR/const
@@ -36,18 +36,21 @@
 # 		const
 # 		const-hinted
 # 		var
-# 		var-hinted
+# 		var-hinted  (disabled)
 #
 FONTDIR = build/fonts
 
-all: all_const  all_const_hinted  all_var  all_var_hinted
+all: all_const  all_const_hinted  all_var
 
 all_const: all_otf  all_ttf  all_web
 all_const_hinted: all_ttf_hinted  all_web_hinted
 all_var: $(FONTDIR)/var/Inter-UI.var.woff2
-all_var_hinted: $(FONTDIR)/var-hinted/Inter-UI.var.ttf $(FONTDIR)/var-hinted/Inter-UI.var.woff2
 
-.PHONY: all_const  all_const_hinted  all_var  all_var_hinted
+# Disabled. See https://github.com/rsms/inter/issues/75
+# all_var_hinted: $(FONTDIR)/var-hinted/Inter-UI.var.ttf $(FONTDIR)/var-hinted/Inter-UI.var.woff2
+# .PHONY: all_var_hinted
+
+.PHONY: all_const  all_const_hinted  all_var
 
 export PATH := $(PWD)/build/venv/bin:$(PATH)
 
@@ -127,9 +130,9 @@ $(FONTDIR)/const-hinted/%.ttf: $(FONTDIR)/const/%.ttf
 	mkdir -p "$(dir $@)"
 	ttfautohint --fallback-stem-width=256 --no-info --composites "$<" "$@"
 
-$(FONTDIR)/var-hinted/%.ttf: $(FONTDIR)/var/%.ttf
-	mkdir -p "$(dir $@)"
-	ttfautohint --fallback-stem-width=256 --no-info --composites "$<" "$@"
+# $(FONTDIR)/var-hinted/%.ttf: $(FONTDIR)/var/%.ttf
+# 	mkdir -p "$(dir $@)"
+# 	ttfautohint --fallback-stem-width=256 --no-info --composites "$<" "$@"
 
 # make sure intermediate TTFs are not gc'd by make
 .PRECIOUS: $(FONTDIR)/const/%.ttf $(FONTDIR)/var/%.ttf
@@ -161,19 +164,22 @@ build/tmp/a.zip: all
 	  "$(ZD)/Inter UI (TTF)" \
 	  "$(ZD)/Inter UI (TTF hinted)" \
 	  "$(ZD)/Inter UI (TTF variable)" \
-	  "$(ZD)/Inter UI (TTF variable hinted)" \
 	  "$(ZD)/Inter UI (OTF)"
+	  # "$(ZD)/Inter UI (TTF variable hinted)"
 	# copy font files
 	cp -a $(FONTDIR)/const/*.woff \
 	      $(FONTDIR)/const/*.woff2 \
 	      $(FONTDIR)/var/*.woff2        "$(ZD)/Inter UI (web)/"
+	# cp -a $(FONTDIR)/const-hinted/*.woff \
+	#       $(FONTDIR)/const-hinted/*.woff2 \
+	#       $(FONTDIR)/var-hinted/*.woff2 "$(ZD)/Inter UI (web hinted)/"
 	cp -a $(FONTDIR)/const-hinted/*.woff \
 	      $(FONTDIR)/const-hinted/*.woff2 \
-	      $(FONTDIR)/var-hinted/*.woff2 "$(ZD)/Inter UI (web hinted)/"
+	      													    "$(ZD)/Inter UI (web hinted)/"
 	cp -a $(FONTDIR)/const/*.ttf        "$(ZD)/Inter UI (TTF)/"
 	cp -a $(FONTDIR)/const-hinted/*.ttf "$(ZD)/Inter UI (TTF hinted)/"
 	cp -a $(FONTDIR)/var/*.ttf          "$(ZD)/Inter UI (TTF variable)/"
-	cp -a $(FONTDIR)/var-hinted/*.ttf   "$(ZD)/Inter UI (TTF variable hinted)/"
+	# cp -a $(FONTDIR)/var-hinted/*.ttf   "$(ZD)/Inter UI (TTF variable hinted)/"
 	cp -a $(FONTDIR)/const/*.otf        "$(ZD)/Inter UI (OTF)/"
 	# copy misc stuff
 	cp -a misc/dist/inter-ui.css        "$(ZD)/Inter UI (web)/"
