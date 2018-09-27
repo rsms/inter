@@ -8,8 +8,6 @@
   <guideline x="1916.0" y="356.0" angle="90.0"/>
   <outline>
     <contour>
-      <point x="312.0" y="2048.0" type="line"/>
-      <point x="60.0" y="2048.0" type="line"/>
       <point x="620.0" y="0.0" type="line"/>
       <point x="876.0" y="0.0" type="line"/>
       <point x="1328.0" y="1632.0" type="line"/>
@@ -24,6 +22,8 @@
       <point x="1196.0" y="2048.0" type="line"/>
       <point x="760.0" y="380.0" type="line"/>
       <point x="740.0" y="380.0" type="line"/>
+      <point x="312.0" y="2048.0" type="line"/>
+      <point x="60.0" y="2048.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -38,7 +38,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>15.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -58,7 +58,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>14.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

@@ -1038,7 +1038,9 @@
       <key>public.kern2.T</key>
       <real>-112.0</real>
       <key>public.kern2.V</key>
-      <real>-144.0</real>
+      <real>-164.0</real>
+      <key>public.kern2.W</key>
+      <real>-164.0</real>
       <key>public.kern2.comma</key>
       <real>112.0</real>
       <key>public.kern2.gammagreek</key>
@@ -1752,9 +1754,9 @@
       <key>public.kern2.T</key>
       <real>-240.0</real>
       <key>public.kern2.V</key>
-      <real>-192.0</real>
+      <real>-296.0</real>
       <key>public.kern2.W</key>
-      <real>-160.0</real>
+      <real>-240.0</real>
       <key>public.kern2.Y</key>
       <real>-208.0</real>
       <key>public.kern2.approxequal</key>
@@ -1855,7 +1857,7 @@
     <key>public.kern1.D</key>
     <dict>
       <key>public.kern2.A</key>
-      <real>-96.0</real>
+      <real>-176.0</real>
       <key>public.kern2.T</key>
       <real>-96.0</real>
       <key>public.kern2.Y</key>
@@ -2133,7 +2135,7 @@
       <key>primetripl1</key>
       <real>-192.0</real>
       <key>public.kern2.A</key>
-      <real>128.0</real>
+      <real>0.0</real>
       <key>public.kern2.T</key>
       <real>-272.0</real>
       <key>public.kern2.V</key>
@@ -2455,6 +2457,8 @@
       <real>-144.0</real>
       <key>at</key>
       <real>-96.0</real>
+      <key>backslash</key>
+      <real>40.0</real>
       <key>four</key>
       <real>-96.0</real>
       <key>idblgrave</key>
@@ -2470,9 +2474,11 @@
       <key>periodcentered</key>
       <real>-112.0</real>
       <key>public.kern2.A</key>
-      <real>-176.0</real>
+      <real>-296.0</real>
       <key>public.kern2.AE</key>
       <real>-368.0</real>
+      <key>public.kern2.C</key>
+      <real>-68.0</real>
       <key>public.kern2.J</key>
       <real>-272.0</real>
       <key>public.kern2.a</key>
@@ -2480,7 +2486,7 @@
       <key>public.kern2.approxequal</key>
       <real>-176.0</real>
       <key>public.kern2.c</key>
-      <real>-144.0</real>
+      <real>-196.0</real>
       <key>public.kern2.colon</key>
       <real>-176.0</real>
       <key>public.kern2.comma</key>
@@ -2497,8 +2503,10 @@
       <real>-320.0</real>
       <key>public.kern2.s</key>
       <real>-128.0</real>
+      <key>questiondown</key>
+      <real>-160.0</real>
       <key>slash</key>
-      <real>-208.0</real>
+      <real>-164.0</real>
       <key>underscore</key>
       <real>-224.0</real>
     </dict>
@@ -2506,6 +2514,8 @@
     <dict>
       <key>ampersand</key>
       <real>-144.0</real>
+      <key>backslash</key>
+      <real>40.0</real>
       <key>four</key>
       <real>-96.0</real>
       <key>idblgrave</key>
@@ -2515,7 +2525,9 @@
       <key>periodcentered</key>
       <real>-96.0</real>
       <key>public.kern2.A</key>
-      <real>-160.0</real>
+      <real>-240.0</real>
+      <key>public.kern2.AE</key>
+      <real>-320.0</real>
       <key>public.kern2.C</key>
       <real>-96.0</real>
       <key>public.kern2.J</key>
@@ -2542,6 +2554,10 @@
       <real>-304.0</real>
       <key>public.kern2.s</key>
       <real>-96.0</real>
+      <key>questiondown</key>
+      <real>-160.0</real>
+      <key>slash</key>
+      <real>-164.0</real>
     </dict>
     <key>public.kern1.X</key>
     <dict>
@@ -2707,6 +2723,8 @@
       <real>-144.0</real>
       <key>public.kern2.Y</key>
       <real>-240.0</real>
+      <key>public.kern2.v</key>
+      <real>-48.0</real>
       <key>uni023E</key>
       <real>-224.0</real>
     </dict>
@@ -2794,7 +2812,7 @@
       <key>public.kern2.T</key>
       <real>-112.0</real>
       <key>public.kern2.V</key>
-      <real>-144.0</real>
+      <real>-196.0</real>
       <key>public.kern2.W</key>
       <real>-144.0</real>
       <key>public.kern2.Y</key>
@@ -2803,6 +2821,10 @@
       <real>-96.0</real>
       <key>public.kern2.quotedblleft</key>
       <real>-176.0</real>
+      <key>public.kern2.v</key>
+      <real>-48.0</real>
+      <key>public.kern2.w</key>
+      <real>-28.0</real>
       <key>uni023E</key>
       <real>-224.0</real>
     </dict>
@@ -2831,6 +2853,8 @@
       <real>96.0</real>
       <key>public.kern2.T</key>
       <real>-208.0</real>
+      <key>public.kern2.W</key>
+      <real>-136.0</real>
       <key>public.kern2.Y</key>
       <real>-176.0</real>
     </dict>
@@ -3833,7 +3857,7 @@
       <key>public.kern2.approxequal</key>
       <real>-112.0</real>
       <key>public.kern2.c</key>
-      <real>-56.0</real>
+      <real>-48.0</real>
       <key>public.kern2.comma</key>
       <real>-96.0</real>
       <key>public.kern2.eight.subs</key>
@@ -3874,6 +3898,8 @@
       <real>-144.0</real>
       <key>public.kern2.Z</key>
       <real>-96.0</real>
+      <key>public.kern2.c</key>
+      <real>-28.0</real>
       <key>public.kern2.comma</key>
       <real>-208.0</real>
       <key>public.kern2.guillemetleft</key>
@@ -3926,6 +3952,10 @@
       <real>-256.0</real>
       <key>Tbar</key>
       <real>-192.0</real>
+      <key>public.kern2.V</key>
+      <real>-160.0</real>
+      <key>public.kern2.W</key>
+      <real>-160.0</real>
       <key>public.kern2.gammagreek</key>
       <real>-96.0</real>
       <key>public.kern2.quotedblleft</key>
@@ -4087,6 +4117,10 @@
       <real>112.0</real>
       <key>public.kern2.J</key>
       <real>-176.0</real>
+      <key>public.kern2.V</key>
+      <real>40.0</real>
+      <key>public.kern2.W</key>
+      <real>40.0</real>
       <key>public.kern2.comma</key>
       <real>-112.0</real>
     </dict>
