@@ -1772,7 +1772,7 @@
       <key>public.kern2.idieresis</key>
       <real>128.0</real>
       <key>public.kern2.idotless</key>
-      <real>96.0</real>
+      <real>16.0</real>
       <key>public.kern2.nine.1</key>
       <real>-28.0</real>
       <key>public.kern2.one</key>
@@ -2035,13 +2035,15 @@
       <key>llinebelow</key>
       <real>128.0</real>
       <key>public.kern2.B</key>
-      <real>96.0</real>
+      <real>16.0</real>
       <key>public.kern2.idieresis</key>
       <real>208.0</real>
       <key>public.kern2.idotless</key>
       <real>32.0</real>
       <key>public.kern2.jdotless</key>
       <real>96.0</real>
+      <key>public.kern2.m</key>
+      <real>0.0</real>
       <key>rlinebelow</key>
       <real>128.0</real>
       <key>underscore</key>
@@ -2209,6 +2211,8 @@
       <real>-208.0</real>
       <key>public.kern2.J</key>
       <real>-272.0</real>
+      <key>public.kern2.c</key>
+      <real>-16.0</real>
       <key>public.kern2.comma</key>
       <real>-112.0</real>
       <key>public.kern2.divide</key>
@@ -2220,6 +2224,8 @@
     </dict>
     <key>public.kern1.R</key>
     <dict>
+      <key>public.kern2.c</key>
+      <real>-16.0</real>
       <key>public.kern2.idieresis</key>
       <real>128.0</real>
     </dict>
@@ -2586,6 +2592,8 @@
       <real>-160.0</real>
       <key>four</key>
       <real>-192.0</real>
+      <key>iacute</key>
+      <real>-80.0</real>
       <key>idblgrave</key>
       <real>112.0</real>
       <key>infinity</key>
@@ -2610,10 +2618,12 @@
       <real>-96.0</real>
       <key>public.kern2.T</key>
       <real>128.0</real>
+      <key>public.kern2.a</key>
+      <real>-200.0</real>
       <key>public.kern2.approxequal</key>
       <real>-272.0</real>
       <key>public.kern2.c</key>
-      <real>-96.0</real>
+      <real>-216.0</real>
       <key>public.kern2.colon</key>
       <real>-176.0</real>
       <key>public.kern2.comma</key>
@@ -2627,7 +2637,7 @@
       <key>public.kern2.guillemetright</key>
       <real>-176.0</real>
       <key>public.kern2.idotless</key>
-      <real>96.0</real>
+      <real>0.0</real>
       <key>public.kern2.m</key>
       <real>-112.0</real>
       <key>public.kern2.quotedblbase</key>
@@ -3361,7 +3371,7 @@
       <key>llinebelow</key>
       <real>128.0</real>
       <key>public.kern2.B</key>
-      <real>112.0</real>
+      <real>16.0</real>
       <key>public.kern2.V</key>
       <real>96.0</real>
       <key>public.kern2.W</key>
@@ -3371,9 +3381,11 @@
       <key>public.kern2.idieresis</key>
       <real>112.0</real>
       <key>public.kern2.idotless</key>
-      <real>96.0</real>
+      <real>16.0</real>
       <key>public.kern2.jdotless</key>
-      <real>96.0</real>
+      <real>16.0</real>
+      <key>public.kern2.m</key>
+      <real>0.0</real>
       <key>rdblgrave</key>
       <real>96.0</real>
       <key>rlinebelow</key>
@@ -3684,6 +3696,8 @@
       <real>-160.0</real>
       <key>public.kern2.Z</key>
       <real>-96.0</real>
+      <key>public.kern2.c</key>
+      <real>-32.0</real>
       <key>public.kern2.comma</key>
       <real>-176.0</real>
       <key>public.kern2.divide</key>
