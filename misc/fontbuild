@@ -479,7 +479,7 @@ class Main(object):
         ufo_path = pjoin(master_dir, 'Inter-UI-BlackItalic.ufo')
         source.styleName = "Black Italic"
         source.name = "blackitalic"
-        source.font.info.styleName = source.font.info.styleName
+        source.font.info.styleName = source.styleName
       else:
         # name "Inter UI Black" => "black"
         source.name = source.styleName.lower().replace(' ', '')
