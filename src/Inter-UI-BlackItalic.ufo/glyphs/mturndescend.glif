@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="mturndescend" format="2">
-  <advance width="2660.0"/>
+  <advance width="2656.0"/>
   <unicode hex="0270"/>
   <outline>
     <contour>
-      <point x="1772.0" y="-576.0" type="line"/>
-      <point x="2296.0" y="-576.0" type="line"/>
-      <point x="2392.0" y="0.0" type="line"/>
-      <point x="1868.0" y="0.0" type="line"/>
+      <point x="1756.0" y="-576.0" type="line"/>
+      <point x="2280.0" y="-576.0" type="line"/>
+      <point x="2376.0" y="0.0" type="line"/>
+      <point x="1852.0" y="0.0" type="line"/>
     </contour>
-    <component base="mturn" xOffset="16.0"/>
+    <component base="mturn"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>g</string>
+    </dict>
+  </lib>
 </glyph>

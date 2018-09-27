@@ -178,70 +178,6 @@ uni036F titlocyrilliccmb palatalizationcyrilliccmb dasiapneumatacyrilliccmb
 psilipneumatacyrilliccmb uni0487 uni20F0 uniA69F uni2DFF uni20DC uniFE20
 uniFE21 uniFE22 uniFE23 uniFE24 uniFE25 uniFE26 ];
 
-@CASE_DELIM_L = [ 
-  braceleft   braceright
-  bracketleft bracketright
-  parenleft   parenright
- ];
-
-@CASE_NONDELIM_L = [ 
-  asterisk
-  at
-  multiply
-  minus
-  plus
-  plusminus
-  divide
-  equal
-  notequal
-  endash
-  figuredash
-  emdash
-  hyphen
-  bullet
-  openbullet
-  arrowleft
-  arrowleftlong
-  arrowright
-  arrowrightlong
-  notequal
-  colon
- ];
-
-@CASE_L = [  @CASE_DELIM_L @CASE_NONDELIM_L  ];
-
-@CASE_DELIM_R = [ 
-  braceleft.case   braceright.case
-  bracketleft.case bracketright.case
-  parenleft.case   parenright.case
- ];
-
-@CASE_NONDELIM_R = [ 
-  asterisk.case
-  at.case
-  multiply.case
-  minus.case
-  plus.case
-  plusminus.case
-  divide.case
-  equal.case
-  notequal.case
-  endash.case
-  figuredash.case
-  emdash.case
-  hyphen.case
-  bullet.case
-  openbullet.case
-  arrowleft.case
-  arrowleftlong.case
-  arrowright.case
-  arrowrightlong.case
-  notequal.case
-  colon.case
- ];
-
-@CASE_R = [  @CASE_DELIM_R @CASE_NONDELIM_R  ];
-
 # automatic
 @Uppercase = [ A Adieresis Atilde Agrave Aacute Acircumflex Aring Amacron Abreve Aogonek Acaron Adieresismacron Adotmacron Aringacute Adblgrave Ainvertedbreve uni0226 Aringbelow Adotbelow Ahookabove Acircumflexacute Acircumflexgrave Acircumflexhookabove Acircumflextilde Acircumflexdotbelow Abreveacute Abrevegrave Abrevehookabove Abrevetilde Abrevedotbelow Alpha Alphatonos uni1F08 uni1F09 uni1F0A uni1F0B uni1F0C uni1F0D uni1F0E uni1F0F uni1FB8 uni1FB9 uni1FBA uni023A uni1FBB afii10017 Abrevecyrillic Adieresiscyrillic uni1F88 uni1F89 uni1F8A uni1F8B uni1F8C uni1F8D uni1F8E uni1F8F uni1FBC Lambda AE AEmacron AEacute Aiecyrillic B Bdotaccent Bdotbelow Blinebelow uni0243 Bhook afii10019 Beta C Chook Ccedilla Cacute Ccircumflex Cdotaccent Ccaron Ccedillaacute uni023B Oopen uni03F9 D Dhook Dcaron Ddotaccent Ddotbelow Dlinebelow Dcedilla Dcircumflexbelow Dbar1 Dz Dzcaron_ E Egrave Eacute Ecircumflex Edieresis Emacron Ebreve Edotaccent Eogonek Ecaron Edblgrave Einvertedbreve uni0228 Emacrongrave Emacronacute Ecircumflexbelow Etildebelow Ecedillabreve Edotbelow Ehookabove Etilde Ecircumflexacute Ecircumflexgrave Ecircumflexhookabove Ecircumflextilde Ecircumflexdotbelow uni0246 Eturn Epsilon Epsilontonos uni1F18 uni1F19 uni1F1A uni1F1B uni1F1C uni1F1D uni1FC8 uni1FC9 afii10022 uni0400 afii10023 Iebrevecyrillic F Fhook Fdotaccent Fturn G Gbar Ghook Gcircumflex Gbreve Gdotaccent Gcommaaccent Gcaron Gacute Gmacron H Hcedilla Hcircumflex uni021E Hdotaccent Hdotbelow Hdieresis Hbrevebelow Hbar Enhookcyrillic Endescendercyrillic uni04C9 Enghecyrillic uni01F6 Eta Etatonos uni1F28 uni1F29 uni1F2A uni1F2B uni1F2C uni1F2D uni1F2E uni1F2F uni1FCA uni1FCB afii10031 uni1F98 uni1F99 uni1F9A uni1F9B uni1F9C uni1F9D uni1F9E uni1F9F uni1FCC I Idieresis Idieresisacute Istroke Itildebelow Igrave Iacute Icircumflex Itilde Imacron Ibreve Iogonek Idotaccent Icaron Idblgrave Iinvertedbreve Ihookabove Idotbelow Iota Iotatonos Iotadieresis uni1F38 uni1F39 uni1F3A uni1F3B uni1F3C uni1F3D uni1F3E uni1F3F uni1FD8 uni1FD9 uni1FDA uni1FDB afii10055 afii10056 J Jcircumflex uni0248 uni037F afii10057 K Kcommaaccent Kcaron Kacute Kdotbelow Klinebelow Kabashkircyrillic Kadescendercyrillic Khook Kappa L Lacute Lcommaaccent Lcaron Ldotbelow Ldotbelowmacron Llinebelow Lcircumflexbelow Lslash Lbar Lj M Macute Mdotaccent Mdotbelow uni04CD Mu uni03FA afii10030 N Ntilde Nacute Ncommaaccent Ncaron uni01F8 Ndotaccent Ndotbelow Nlinebelow Ncircumflexbelow Nhook Eng afii10026 uni040D afii10027 Imacroncyrillic Idieresiscyrillic uni048A uni0376 Nu Nj O Odieresis Otilde Oslash Ohorn Ograve Oacute Ocircumflex Omacron Obreve Ohungarumlaut Ocaron Oogonek Oogonekmacron Odblgrave Oinvertedbreve uni022A uni022C uni022E uni0230 Otildeacute Otildedieresis Omacrongrave Omacronacute Odotbelow Ohookabove Ocircumflexacute Ocircumflexgrave Ocircumflexhookabove Ocircumflextilde Ocircumflexdotbelow Ohornacute Ohorngrave Ohornhookabove Ohorntilde Ohorndotbelow Oslashacute Omicron Omicrontonos uni1F48 uni1F49 uni1F4A uni1F4B uni1F4C uni1F4D uni1FF8 uni03F4 uni1FF9 afii10032 Odieresiscyrillic Obar Obarredcyrillic Obarreddieresiscyrillic OE P Pacute Pdotaccent uni048E Phook Rho uni1FEC Q R Racute Rcommaaccent Rcaron Rdblgrave Rinvertedbreve Rdotaccent Rdotbelow Rdotbelowmacron Rlinebelow uni024C S Sacute Scircumflex Scedilla Scaron Scommaaccent Sdotaccent Sdotbelow Sacutedotaccent Scarondotaccent Sdotbelowdotaccent afii10054 Tonetwo Germandbls T Tcommaaccent Tcaron uni021A Tdotaccent Tdotbelow Tlinebelow Tcircumflexbelow Thook Trthook uni023E Tau U Uhorn Ugrave Uacute Ucircumflex Udieresis Utilde Umacron Ubreve Uring Uhungarumlaut Uogonek Ucaron Udieresismacron Udieresisacute Udieresiscaron Udieresisgrave Udblgrave Uinvertedbreve Udieresisbelow Utildebelow Ucircumflexbelow Utildeacute Umacrondieresis Udotbelow Uhookabove Uhornacute Uhorngrave Uhornhookabove Uhorntilde Uhorndotbelow uni0244 V Vtilde Vdotbelow W Wcircumflex Wgrave Wacute Wdieresis Wdotaccent Wdotbelow X Xdotaccent Xdieresis Hadescendercyrillic uni04FC Chi Y Yhook Yacute Ycircumflex Ydieresis uni0232 Ydotaccent Ygrave Ydotbelow Yhookabove Ytilde uni024E Upsilon Upsilontonos Upsilondieresis Upsilon2 Upsilonhooksymbol Upsilonacutehooksymbolgreek Upsilondieresishooksymbolgreek uni1F59 uni1F5B uni1F5D uni1F5F uni1FE8 uni1FE9 uni1FEA uni1FEB Z Zacute Zdotaccent Zcaron Zcircumflex Zdotbelow Zlinebelow uni0224 Zbar Zeta uni2C7F Q_rthook Thorn Gamma Delta Theta Xi Pi Sigma Phi Psi Omega uni1FFB Omegatonos uni1F68 uni1F69 uni1F6A uni1F6B uni1F6C uni1F6D uni1F6E uni1F6F uni1FFA uni1FA8 uni1FA9 uni1FAA uni1FAB uni1FAC uni1FAD uni1FAE uni1FAF uni1FFC Gamma1 afii10018 afii10050 uni04FA afii10021 afii10024 Zhedescendercyrillic afii10025 Kacyr Kaverticalstrokecyrillic Kahookcyrillic afii10029 afii10147 afii10145 afii10037 afii10038 afii10040 Tetsecyrillic afii10041 Chedescendercyrillic Cheverticalstrokecyrillic Shhacyrillic afii10060 afii10042 afii10043 afii10044 afii10045 afii10046 afii10058 afii10059 afii10047 afii10048 afii10049 Ghemiddlehookcyrillic Pemiddlehookcyrillic afii10053 Haabkhasiancyrillic Cheabkhasiancyrillic Schwacyrillic Dzeabkhasiancyrillic afii10148 afii10051 Tonefive degreekelvin uni03FD uni03FE uni03FF uni0372 uni0370 Btopbar Koppa Tonesix Digamma uni01F7 uni021C Dtopbar uni1EFE uni1EFA uni1EFC uni03D8 uni0220 Iota1 mcapturn Vcursive uni0241 uni0245 angstrom Schwa Esh Omegacyrillic Yuslittlecyrillic Eiotifiedcyrillic Yuslittleiotifiedcyrillic Yusbigiotifiedcyrillic Yusbigcyrillic Ksicyrillic OI uni03CF Stigma Epsilon1 YR uni0222 Sampi Koppacyrillic Ezhreversed Ezh Eth Dcroat IJ Ldot Tbar LJ NJ DZ Aogonek.NAV Eogonek.NAV Oogonek.NAV uni03F7 afii10020 afii10052 afii10033 afii10034 afii10035 afii10036 afii10039 afii10146 Psicyrillic Ukcyrillic uni048C Ghestrokecyrillic Zedescendercyrillic Esdescendercyrillic Tedescendercyrillic Ustraightcyrillic Ustraightstrokecyrillic Chedescenderabkhasiancyrillic palochkacyrillic Chekhakassiancyrillic uni04F6 uni04FE afii10061 Schwadieresiscyrillic Zhebrevecyrillic Zhedieresiscyrillic Zedieresiscyrillic afii10062 Umacroncyrillic Udieresiscyrillic Uhungarumlautcyrillic Chedieresiscyrillic Yerudieresiscyrillic uni04EC Izhitsadblgravecyrillic Ezhcaron Eltail-cy ];
 
@@ -1083,41 +1019,120 @@ sub multiply by multiply.case;
 sub divide by divide.case;
 sub plusminus by plusminus.case;
 sub asterisk by asterisk.case;
-sub arrowleft by arrowleft.case;
-sub arrowleftlong by arrowleftlong.case;
-sub arrowright by arrowright.case;
-sub arrowrightlong by arrowrightlong.case;
+sub leftArrow by leftArrow.case;
+sub leftLongArrow by leftLongArrow.case;
+sub rightArrow by rightArrow.case;
+sub rightLongArrow by rightLongArrow.case;
+sub leftRightArrow by leftRightArrow.case;
+sub upDownArrow by upDownArrow.case;
+sub leftRightLongArrow by leftRightLongArrow.case;
 
 } case;
 
 feature calt {
-  @UC = [ @UC_ROMAN @UC_SET1 exclam question ];
-  @LC = [ @LC_ROMAN @LC_SET1 ];
-  
-  sub [ @UC @CASE_R ] @CASE_L' by @CASE_R; # Z y' -> Z x -> Z x 'y -> Z x x ...
-  ignore sub @LC @CASE_NONDELIM_L @UC;     # e.g. m multiply M
-  sub @CASE_L' [ @UC @CASE_R ] by @CASE_R; # y' Z -> x Z
+@CASE_DELIM_L = [
+  braceleft   braceright
+  bracketleft bracketright
+  parenleft   parenright
+];
+@CASE_NONDELIM_L = [
+  asterisk
+  at
+  multiply
+  minus
+  plus
+  plusminus
+  divide
+  equal
+  notequal
+  endash
+  figuredash
+  emdash
+  hyphen
+  bullet
+  openbullet
+  leftArrow
+  leftLongArrow
+  rightArrow
+  rightLongArrow
+  leftRightArrow
+  leftRightLongArrow
+  upDownArrow
+  notequal
+  colon
+];
+@CASE_L = [
+  @CASE_DELIM_L
+  @CASE_NONDELIM_L
+];
 
-  # rule to support left-hand repetition of CASE{L}->{R} [issue #57]
-  # e.g. /at /at /UC -> /at.case /at /UC -> /at.case /at.case /UC
-  # Note that we can't look further than 2 glyphs back, since it would break
-  # cases like /a /braceleft /braceright /asterisk /asterisk /A
-  sub @CASE_L' @CASE_L [ @CASE_R @UC ] by @CASE_R;
+@CASE_DELIM_R = [
+  braceleft.case   braceright.case
+  bracketleft.case bracketright.case
+  parenleft.case   parenright.case
+];
+@CASE_NONDELIM_R = [
+  asterisk.case
+  at.case
+  multiply.case
+  minus.case
+  plus.case
+  plusminus.case
+  divide.case
+  equal.case
+  notequal.case
+  endash.case
+  figuredash.case
+  emdash.case
+  hyphen.case
+  bullet.case
+  openbullet.case
+  leftArrow.case
+  leftLongArrow.case
+  rightArrow.case
+  rightLongArrow.case
+  leftRightArrow.case
+  leftRightLongArrow.case
+  upDownArrow.case
+  notequal.case
+  colon.case
+];
+@CASE_R = [
+  @CASE_DELIM_R
+  @CASE_NONDELIM_R
+];
 
-  # arrows: -> and <-
-  @ARROW_DASH_LONG = [ endash emdash ];
-  @ARROW_DASH_LONG_CASE = [ endash.case emdash.case ];
+@UC = [ @UC_ROMAN @UC_SET1 exclam question ];
+@LC = [ @LC_ROMAN @LC_SET1 ];
 
-  sub hyphen greater by arrowright;
-  sub hyphen.case greater by arrowright.case;
-  sub @ARROW_DASH_LONG greater by arrowrightlong;
-  sub @ARROW_DASH_LONG_CASE greater by arrowrightlong.case;
-  # ignore <-NUM e.g. "<-3"
-  ignore sub less [ hyphen hyphen.case @ARROW_DASH_LONG @ARROW_DASH_LONG_CASE ] @NUM;
-  sub less hyphen by arrowleft;
-  sub less hyphen.case by arrowleft.case;
-  sub less @ARROW_DASH_LONG by arrowleftlong;
-  sub less @ARROW_DASH_LONG_CASE by arrowleftlong.case;
+sub [ @UC @CASE_R ] @CASE_L' by @CASE_R; # Z y' -> Z x -> Z x 'y -> Z x x ...
+ignore sub @LC @CASE_NONDELIM_L @UC;     # e.g. m multiply M
+sub @CASE_L' [ @UC @CASE_R ] by @CASE_R; # y' Z -> x Z
+
+# rule to support left-hand repetition of CASE{L}->{R} [issue #57]
+# e.g. /at /at /UC -> /at.case /at /UC -> /at.case /at.case /UC
+# Note that we can't look further than 2 glyphs back, since it would break
+# cases like /a /braceleft /braceright /asterisk /asterisk /A
+sub @CASE_L' @CASE_L [ @CASE_R @UC ] by @CASE_R;
+
+# ignore <-NUM e.g. "<-3"
+ignore sub less [ hyphen hyphen.case endash endash.case emdash emdash.case ] @NUM;
+# arrows: <->
+sub less hyphen greater by leftRightArrow;
+sub less hyphen.case greater by leftRightArrow.case;
+sub less [endash emdash] greater by leftRightLongArrow;
+sub less [endash.case emdash.case] greater by leftRightLongArrow.case;
+# arrows: ->
+sub hyphen greater by rightArrow;
+sub hyphen.case greater by rightArrow.case;
+sub [endash emdash] greater by rightLongArrow;
+sub [endash.case emdash.case] greater by rightLongArrow.case;
+# arrows: <-
+sub less hyphen by leftArrow;
+sub less hyphen.case by leftArrow.case;
+sub less [endash emdash] by leftLongArrow;
+sub less [endash.case emdash.case] by leftLongArrow.case;
+
 } calt;
 
 feature tnum {
