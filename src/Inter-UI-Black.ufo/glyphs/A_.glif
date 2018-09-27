@@ -25,9 +25,39 @@
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
-      <string>2018/09/26 21:07:03</string>
+      <string>2018/09/26 23:43:02</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>6.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>5.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
         <dict>
           <key>horizontal</key>
           <true/>
@@ -74,31 +104,16 @@
           <key>horizontal</key>
           <true/>
           <key>options</key>
-          <integer>4</integer>
-          <key>origin</key>
+          <integer>0</integer>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>6.0</real>
+            <real>320.0</real>
+            <real>432.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>type</key>
-          <string>Anchor</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>4</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>5.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>type</key>
-          <string>Anchor</string>
+          <string>Stem</string>
         </dict>
       </array>
       <key>public.markColor</key>
