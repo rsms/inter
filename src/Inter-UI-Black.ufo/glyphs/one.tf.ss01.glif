@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="one.tf.ss01" format="2">
-  <advance width="2012.0"/>
+  <advance width="1984.0"/>
   <outline>
     <contour>
-      <point x="368.0" y="0.0" type="line"/>
-      <point x="1780.0" y="0.0" type="line"/>
-      <point x="1780.0" y="448.0" type="line"/>
-      <point x="368.0" y="448.0" type="line"/>
+      <point x="288.0" y="0.0" type="line"/>
+      <point x="1700.0" y="0.0" type="line"/>
+      <point x="1700.0" y="448.0" type="line"/>
+      <point x="288.0" y="448.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1320.0" y="2048.0" type="line"/>
-      <point x="864.0" y="2048.0" type="line"/>
-      <point x="364.0" y="1772.0" type="line"/>
-      <point x="572.0" y="1412.0" type="line"/>
-      <point x="808.0" y="1532.0" type="line"/>
-      <point x="820.0" y="1532.0" type="line"/>
-      <point x="820.0" y="0.0" type="line"/>
-      <point x="1320.0" y="0.0" type="line"/>
-    </contour>
+    <component base="one.ss01" xOffset="160.0"/>
   </outline>
   <lib>
     <dict>
@@ -48,10 +39,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>0.0</real>
+            <real>2048.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -72,8 +63,8 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>0.0</real>
+            <real>2.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -107,8 +98,8 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>2.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

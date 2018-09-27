@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="one.tf" format="2">
-  <advance width="2012.0"/>
+  <advance width="1984.0"/>
   <outline>
     <contour>
-      <point x="368.0" y="0.0" type="line"/>
-      <point x="1780.0" y="0.0" type="line"/>
-      <point x="1780.0" y="448.0" type="line"/>
-      <point x="368.0" y="448.0" type="line"/>
+      <point x="288.0" y="0.0" type="line"/>
+      <point x="1700.0" y="0.0" type="line"/>
+      <point x="1700.0" y="448.0" type="line"/>
+      <point x="288.0" y="448.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1340.0" y="2048.0" type="line"/>
-      <point x="840.0" y="2048.0" type="line"/>
-      <point x="850.0" y="2036.0"/>
-      <point x="838.0" y="1688.0"/>
-      <point x="416.0" y="1688.0" type="curve"/>
-      <point x="416.0" y="1256.0" type="line"/>
-      <point x="622.0" y="1256.0"/>
-      <point x="770.0" y="1280.0"/>
-      <point x="828.0" y="1376.0" type="curve"/>
-      <point x="844.0" y="1376.0" type="line"/>
-      <point x="844.0" y="0.0" type="line"/>
-      <point x="1340.0" y="0.0" type="line"/>
-    </contour>
+    <component base="one" xOffset="208.0"/>
   </outline>
   <lib>
     <dict>
@@ -52,10 +39,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>0.0</real>
+            <real>2048.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -111,8 +98,8 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>2.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
