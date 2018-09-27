@@ -152,12 +152,6 @@
       <string>uni0376</string>
       <string>d</string>
       <string>l</string>
-      <string>l.ss02</string>
-    </array>
-    <key>public.kern1.H.sups</key>
-    <array>
-      <string>d.sups</string>
-      <string>l.sups</string>
     </array>
     <key>public.kern1.Hardsigncyrillic</key>
     <array>
@@ -323,13 +317,6 @@
       <string>ncommaaccent</string>
       <string>ncaron</string>
     </array>
-    <key>public.kern1.a.sups</key>
-    <array>
-      <string>a.sups</string>
-      <string>h.sups</string>
-      <string>m.sups</string>
-      <string>n.sups</string>
-    </array>
     <key>public.kern1.acyrillic</key>
     <array>
       <string>tshecyrillic</string>
@@ -354,10 +341,6 @@
       <string>oe</string>
       <string>tccurl</string>
     </array>
-    <key>public.kern1.ae.sups</key>
-    <array>
-      <string>e.sups</string>
-    </array>
     <key>public.kern1.alphagreek</key>
     <array>
       <string>alpha</string>
@@ -370,10 +353,6 @@
       <string>notequal</string>
       <string>plusminus</string>
       <string>approxequal</string>
-    </array>
-    <key>public.kern1.approxequal.sups</key>
-    <array>
-      <string>equal.sups</string>
     </array>
     <key>public.kern1.asciicircum</key>
     <array>
@@ -404,12 +383,6 @@
       <string>thorn</string>
       <string>schwa</string>
     </array>
-    <key>public.kern1.b.sups</key>
-    <array>
-      <string>b.sups</string>
-      <string>o.sups</string>
-      <string>p.sups</string>
-    </array>
     <key>public.kern1.becyrillic</key>
     <array>
       <string>becyrillic</string>
@@ -429,9 +402,12 @@
       <string>bracketleft.case</string>
       <string>braceleft.case</string>
     </array>
-    <key>public.kern1.braceleft.sups</key>
+    <key>public.kern1.bullet</key>
     <array>
-      <string>parenleft.sups</string>
+      <string>bullet</string>
+      <string>bullet.case</string>
+      <string>openbullet</string>
+      <string>openbullet.case</string>
     </array>
     <key>public.kern1.c</key>
     <array>
@@ -442,10 +418,6 @@
       <string>ccircumflex</string>
       <string>ccaron</string>
       <string>cent</string>
-    </array>
-    <key>public.kern1.c.sups</key>
-    <array>
-      <string>c.sups</string>
     </array>
     <key>public.kern1.colon</key>
     <array>
@@ -491,18 +463,6 @@
       <string>rho</string>
       <string>phi</string>
     </array>
-    <key>public.kern1.divide</key>
-    <array>
-      <string>hyphen</string>
-      <string>plus</string>
-      <string>minus</string>
-      <string>divide</string>
-    </array>
-    <key>public.kern1.divide.sups</key>
-    <array>
-      <string>plus.sups</string>
-      <string>minus.sups</string>
-    </array>
     <key>public.kern1.ecyrillic</key>
     <array>
       <string>ecyrillic</string>
@@ -512,29 +472,49 @@
       <string>three</string>
       <string>eight</string>
     </array>
-    <key>public.kern1.eight.subs</key>
-    <array>
-      <string>eight.dnomf</string>
-      <string>zero.dnom</string>
-      <string>one.dnom</string>
-      <string>two.dnom</string>
-      <string>three.dnom</string>
-      <string>four.dnom</string>
-      <string>five.dnom</string>
-      <string>six.dnom</string>
-      <string>seven.dnom</string>
-      <string>eight.dnom</string>
-      <string>nine.dnom</string>
-      <string>plus.dnom</string>
-      <string>minus.dnom</string>
-      <string>equal.dnom</string>
-      <string>parenleft.dnom</string>
-      <string>parenright.dnom</string>
-    </array>
     <key>public.kern1.eight.sups</key>
     <array>
+      <string>a.sups</string>
+      <string>b.sups</string>
+      <string>c.sups</string>
+      <string>d.sups</string>
+      <string>e.sups</string>
+      <string>f.sups</string>
+      <string>g.sups</string>
+      <string>h.sups</string>
+      <string>i.sups</string>
+      <string>j.sups</string>
+      <string>k.sups</string>
+      <string>l.sups</string>
+      <string>m.sups</string>
+      <string>n.sups</string>
+      <string>o.sups</string>
+      <string>p.sups</string>
+      <string>q.sups</string>
+      <string>r.sups</string>
+      <string>s.sups</string>
+      <string>t.sups</string>
+      <string>u.sups</string>
+      <string>v.sups</string>
+      <string>w.sups</string>
+      <string>x.sups</string>
+      <string>y.sups</string>
+      <string>z.sups</string>
+      <string>zero.sups</string>
+      <string>one.sups</string>
+      <string>two.sups</string>
       <string>three.sups</string>
+      <string>four.sups</string>
+      <string>five.sups</string>
+      <string>six.sups</string>
+      <string>seven.sups</string>
       <string>eight.sups</string>
+      <string>nine.sups</string>
+      <string>parenleft.sups</string>
+      <string>parenright.sups</string>
+      <string>plus.sups</string>
+      <string>minus.sups</string>
+      <string>equal.sups</string>
       <string>zero.numr</string>
       <string>one.numr</string>
       <string>two.numr</string>
@@ -552,6 +532,19 @@
       <string>parenright.numr</string>
       <string>eight.frac</string>
     </array>
+    <key>public.kern1.emdash</key>
+    <array>
+      <string>emdash</string>
+      <string>emdash.case</string>
+      <string>horizontalbar</string>
+    </array>
+    <key>public.kern1.endash</key>
+    <array>
+      <string>endash</string>
+      <string>endash.case</string>
+      <string>figuredash</string>
+      <string>figuredash.case</string>
+    </array>
     <key>public.kern1.epsilongreek</key>
     <array>
       <string>epsilon</string>
@@ -565,10 +558,6 @@
       <string>f</string>
       <string>slongstroke</string>
       <string>yturn</string>
-    </array>
-    <key>public.kern1.f.sups</key>
-    <array>
-      <string>f.sups</string>
     </array>
     <key>public.kern1.four</key>
     <array>
@@ -587,11 +576,6 @@
       <string>hturnlthook</string>
       <string>mturndescend</string>
       <string>q</string>
-    </array>
-    <key>public.kern1.g.sups</key>
-    <array>
-      <string>g.sups</string>
-      <string>q.sups</string>
     </array>
     <key>public.kern1.gammagreek</key>
     <array>
@@ -619,6 +603,21 @@
       <string>ljecyrillic</string>
       <string>njecyrillic</string>
     </array>
+    <key>public.kern1.hyphen</key>
+    <array>
+      <string>hyphen</string>
+      <string>softhyphen</string>
+      <string>hyphen.case</string>
+      <string>plus</string>
+      <string>minus</string>
+      <string>minus.case</string>
+      <string>divide</string>
+      <string>divide.case</string>
+      <string>arrowleft</string>
+      <string>arrowleft.case</string>
+      <string>arrowleftlong</string>
+      <string>arrowleftlong.case</string>
+    </array>
     <key>public.kern1.idieresis</key>
     <array>
       <string>idieresis</string>
@@ -642,11 +641,6 @@
       <string>jcrosstail</string>
       <string>jcircumflex</string>
     </array>
-    <key>public.kern1.idotless.sups</key>
-    <array>
-      <string>i.sups</string>
-      <string>j.sups</string>
-    </array>
     <key>public.kern1.iotadieresisgreek</key>
     <array>
       <string>iota</string>
@@ -657,10 +651,6 @@
       <string>khook</string>
       <string>kcommaaccent</string>
       <string>kcaron</string>
-    </array>
-    <key>public.kern1.k.sups</key>
-    <array>
-      <string>k.sups</string>
     </array>
     <key>public.kern1.kacyrillic</key>
     <array>
@@ -676,11 +666,6 @@
     <array>
       <string>nine.ss01</string>
     </array>
-    <key>public.kern1.nine.sups</key>
-    <array>
-      <string>zero.sups</string>
-      <string>nine.sups</string>
-    </array>
     <key>public.kern1.ohorn</key>
     <array>
       <string>ohorn</string>
@@ -693,10 +678,6 @@
     <array>
       <string>one</string>
       <string>one.ss01</string>
-    </array>
-    <key>public.kern1.one.sups</key>
-    <array>
-      <string>one.sups</string>
     </array>
     <key>public.kern1.psigreek</key>
     <array>
@@ -734,10 +715,6 @@
       <string>rcommaaccent</string>
       <string>rcaron</string>
     </array>
-    <key>public.kern1.r.sups</key>
-    <array>
-      <string>r.sups</string>
-    </array>
     <key>public.kern1.rthook</key>
     <array>
       <string>drthook</string>
@@ -756,31 +733,24 @@
       <string>scaron</string>
       <string>germandbls</string>
     </array>
-    <key>public.kern1.s.sups</key>
-    <array>
-      <string>s.sups</string>
-    </array>
     <key>public.kern1.six.1</key>
     <array>
       <string>six.ss01</string>
     </array>
+    <key>public.kern1.slash</key>
+    <array>
+      <string>slash</string>
+    </array>
     <key>public.kern1.t</key>
     <array>
+      <string>l.ss02</string>
       <string>t</string>
       <string>tpalatalhook</string>
       <string>tcaron</string>
     </array>
-    <key>public.kern1.t.sups</key>
-    <array>
-      <string>t.sups</string>
-    </array>
     <key>public.kern1.two</key>
     <array>
       <string>two</string>
-    </array>
-    <key>public.kern1.two.sups</key>
-    <array>
-      <string>two.sups</string>
     </array>
     <key>public.kern1.u</key>
     <array>
@@ -799,10 +769,6 @@
       <string>uogonek</string>
       <string>ucaron</string>
     </array>
-    <key>public.kern1.u.sups</key>
-    <array>
-      <string>u.sups</string>
-    </array>
     <key>public.kern1.uhorn</key>
     <array>
       <string>uhorn</string>
@@ -819,11 +785,6 @@
       <string>ygrave</string>
       <string>gamma1</string>
     </array>
-    <key>public.kern1.v.sups</key>
-    <array>
-      <string>v.sups</string>
-      <string>y.sups</string>
-    </array>
     <key>public.kern1.vecyrillic</key>
     <array>
       <string>vecyrillic</string>
@@ -837,17 +798,9 @@
       <string>wgrave</string>
       <string>wacute</string>
     </array>
-    <key>public.kern1.w.sups</key>
-    <array>
-      <string>w.sups</string>
-    </array>
     <key>public.kern1.x</key>
     <array>
       <string>x</string>
-    </array>
-    <key>public.kern1.x.sups</key>
-    <array>
-      <string>x.sups</string>
     </array>
     <key>public.kern1.z</key>
     <array>
@@ -862,9 +815,65 @@
       <string>zdotaccent</string>
       <string>zcaron</string>
     </array>
-    <key>public.kern1.z.sups</key>
+    <key>public.kern1.zero.subs</key>
     <array>
-      <string>z.sups</string>
+      <string>a.subs</string>
+      <string>b.subs</string>
+      <string>c.subs</string>
+      <string>d.subs</string>
+      <string>e.subs</string>
+      <string>f.subs</string>
+      <string>g.subs</string>
+      <string>h.subs</string>
+      <string>i.subs</string>
+      <string>j.subs</string>
+      <string>k.subs</string>
+      <string>l.subs</string>
+      <string>m.subs</string>
+      <string>n.subs</string>
+      <string>o.subs</string>
+      <string>p.subs</string>
+      <string>q.subs</string>
+      <string>r.subs</string>
+      <string>s.subs</string>
+      <string>t.subs</string>
+      <string>u.subs</string>
+      <string>v.subs</string>
+      <string>w.subs</string>
+      <string>x.subs</string>
+      <string>y.subs</string>
+      <string>z.subs</string>
+      <string>zero.subs</string>
+      <string>one.subs</string>
+      <string>two.subs</string>
+      <string>three.subs</string>
+      <string>four.subs</string>
+      <string>five.subs</string>
+      <string>six.subs</string>
+      <string>seven.subs</string>
+      <string>eight.subs</string>
+      <string>nine.subs</string>
+      <string>parenleft.subs</string>
+      <string>parenright.subs</string>
+      <string>plus.subs</string>
+      <string>minus.subs</string>
+      <string>equal.subs</string>
+      <string>eight.dnomf</string>
+      <string>zero.dnom</string>
+      <string>one.dnom</string>
+      <string>two.dnom</string>
+      <string>three.dnom</string>
+      <string>four.dnom</string>
+      <string>five.dnom</string>
+      <string>six.dnom</string>
+      <string>seven.dnom</string>
+      <string>eight.dnom</string>
+      <string>nine.dnom</string>
+      <string>plus.dnom</string>
+      <string>minus.dnom</string>
+      <string>equal.dnom</string>
+      <string>parenleft.dnom</string>
+      <string>parenright.dnom</string>
     </array>
     <key>public.kern2.A</key>
     <array>
@@ -963,13 +972,6 @@
       <string>l.ss02</string>
       <string>Thorn</string>
       <string>numero</string>
-    </array>
-    <key>public.kern2.B.sups</key>
-    <array>
-      <string>b.sups</string>
-      <string>h.sups</string>
-      <string>k.sups</string>
-      <string>l.sups</string>
     </array>
     <key>public.kern2.C</key>
     <array>
@@ -1126,10 +1128,6 @@
       <string>aemacron</string>
       <string>aeacute</string>
     </array>
-    <key>public.kern2.a.sups</key>
-    <array>
-      <string>a.sups</string>
-    </array>
     <key>public.kern2.approxequal</key>
     <array>
       <string>lessequal</string>
@@ -1138,10 +1136,6 @@
       <string>notequal</string>
       <string>plusminus</string>
       <string>approxequal</string>
-    </array>
-    <key>public.kern2.approxequal.sups</key>
-    <array>
-      <string>equal.sups</string>
     </array>
     <key>public.kern2.asciicircum</key>
     <array>
@@ -1161,9 +1155,12 @@
       <string>bracketright.case</string>
       <string>braceright.case</string>
     </array>
-    <key>public.kern2.braceright.sups</key>
+    <key>public.kern2.bullet</key>
     <array>
-      <string>parenright.sups</string>
+      <string>bullet</string>
+      <string>bullet.case</string>
+      <string>openbullet</string>
+      <string>openbullet.case</string>
     </array>
     <key>public.kern2.c</key>
     <array>
@@ -1223,15 +1220,6 @@
       <string>cent</string>
       <string>schwa</string>
     </array>
-    <key>public.kern2.c.sups</key>
-    <array>
-      <string>c.sups</string>
-      <string>d.sups</string>
-      <string>e.sups</string>
-      <string>g.sups</string>
-      <string>o.sups</string>
-      <string>q.sups</string>
-    </array>
     <key>public.kern2.colon</key>
     <array>
       <string>colon</string>
@@ -1266,18 +1254,6 @@
       <string>sigma</string>
       <string>phi</string>
     </array>
-    <key>public.kern2.divide</key>
-    <array>
-      <string>hyphen</string>
-      <string>plus</string>
-      <string>minus</string>
-      <string>divide</string>
-    </array>
-    <key>public.kern2.divide.sups</key>
-    <array>
-      <string>plus.sups</string>
-      <string>minus.sups</string>
-    </array>
     <key>public.kern2.dzhecyrillic</key>
     <array>
       <string>vecyrillic</string>
@@ -1302,27 +1278,49 @@
       <string>efcyrillic</string>
       <string>ecyrillic</string>
     </array>
-    <key>public.kern2.eight.subs</key>
-    <array>
-      <string>eight.dnomf</string>
-      <string>zero.dnom</string>
-      <string>one.dnom</string>
-      <string>two.dnom</string>
-      <string>three.dnom</string>
-      <string>four.dnom</string>
-      <string>five.dnom</string>
-      <string>six.dnom</string>
-      <string>seven.dnom</string>
-      <string>eight.dnom</string>
-      <string>nine.dnom</string>
-      <string>plus.dnom</string>
-      <string>minus.dnom</string>
-      <string>equal.dnom</string>
-      <string>parenleft.dnom</string>
-      <string>parenright.dnom</string>
-    </array>
     <key>public.kern2.eight.sups</key>
     <array>
+      <string>a.sups</string>
+      <string>b.sups</string>
+      <string>c.sups</string>
+      <string>d.sups</string>
+      <string>e.sups</string>
+      <string>f.sups</string>
+      <string>g.sups</string>
+      <string>h.sups</string>
+      <string>i.sups</string>
+      <string>j.sups</string>
+      <string>k.sups</string>
+      <string>l.sups</string>
+      <string>m.sups</string>
+      <string>n.sups</string>
+      <string>o.sups</string>
+      <string>p.sups</string>
+      <string>q.sups</string>
+      <string>r.sups</string>
+      <string>s.sups</string>
+      <string>t.sups</string>
+      <string>u.sups</string>
+      <string>v.sups</string>
+      <string>w.sups</string>
+      <string>x.sups</string>
+      <string>y.sups</string>
+      <string>z.sups</string>
+      <string>zero.sups</string>
+      <string>one.sups</string>
+      <string>two.sups</string>
+      <string>three.sups</string>
+      <string>four.sups</string>
+      <string>five.sups</string>
+      <string>six.sups</string>
+      <string>seven.sups</string>
+      <string>eight.sups</string>
+      <string>nine.sups</string>
+      <string>parenleft.sups</string>
+      <string>parenright.sups</string>
+      <string>plus.sups</string>
+      <string>minus.sups</string>
+      <string>equal.sups</string>
       <string>zero.numr</string>
       <string>one.numr</string>
       <string>two.numr</string>
@@ -1345,6 +1343,19 @@
       <string>elcyrillic</string>
       <string>ljecyrillic</string>
     </array>
+    <key>public.kern2.emdash</key>
+    <array>
+      <string>emdash</string>
+      <string>emdash.case</string>
+      <string>horizontalbar</string>
+    </array>
+    <key>public.kern2.endash</key>
+    <array>
+      <string>endash</string>
+      <string>endash.case</string>
+      <string>figuredash</string>
+      <string>figuredash.case</string>
+    </array>
     <key>public.kern2.epsilongreek</key>
     <array>
       <string>epsilon</string>
@@ -1358,10 +1369,6 @@
       <string>f</string>
       <string>slongstroke</string>
       <string>feng</string>
-    </array>
-    <key>public.kern2.f.sups</key>
-    <array>
-      <string>f.sups</string>
     </array>
     <key>public.kern2.four</key>
     <array>
@@ -1382,6 +1389,22 @@
       <string>guilsinglright</string>
       <string>guillemetright</string>
     </array>
+    <key>public.kern2.hyphen</key>
+    <array>
+      <string>hyphen</string>
+      <string>softhyphen</string>
+      <string>hyphen.case</string>
+      <string>plus</string>
+      <string>minus</string>
+      <string>minus.case</string>
+      <string>divide</string>
+      <string>divide.case</string>
+      <string>logicalnot</string>
+      <string>arrowright</string>
+      <string>arrowright.case</string>
+      <string>arrowrightlong</string>
+      <string>arrowrightlong.case</string>
+    </array>
     <key>public.kern2.idieresis</key>
     <array>
       <string>idieresis</string>
@@ -1401,10 +1424,6 @@
       <string>iogonek</string>
       <string>icaron</string>
     </array>
-    <key>public.kern2.idotless.sups</key>
-    <array>
-      <string>i.sups</string>
-    </array>
     <key>public.kern2.iotadieresisgreek</key>
     <array>
       <string>iota</string>
@@ -1414,10 +1433,6 @@
       <string>jdotless</string>
       <string>j</string>
       <string>jcircumflex</string>
-    </array>
-    <key>public.kern2.jdotless.sups</key>
-    <array>
-      <string>j.sups</string>
     </array>
     <key>public.kern2.m</key>
     <array>
@@ -1441,13 +1456,6 @@
       <string>rcommaaccent</string>
       <string>rcaron</string>
     </array>
-    <key>public.kern2.m.sups</key>
-    <array>
-      <string>m.sups</string>
-      <string>n.sups</string>
-      <string>p.sups</string>
-      <string>r.sups</string>
-    </array>
     <key>public.kern2.nine.1</key>
     <array>
       <string>nine.ss01</string>
@@ -1460,10 +1468,6 @@
     <array>
       <string>one</string>
       <string>one.ss01</string>
-    </array>
-    <key>public.kern2.one.sups</key>
-    <array>
-      <string>one.sups</string>
     </array>
     <key>public.kern2.psigreek</key>
     <array>
@@ -1500,10 +1504,6 @@
       <string>scedilla</string>
       <string>scaron</string>
     </array>
-    <key>public.kern2.s.sups</key>
-    <array>
-      <string>s.sups</string>
-    </array>
     <key>public.kern2.six</key>
     <array>
       <string>zero</string>
@@ -1514,10 +1514,9 @@
     <array>
       <string>six.ss01</string>
     </array>
-    <key>public.kern2.six.sups</key>
+    <key>public.kern2.slash</key>
     <array>
-      <string>zero.sups</string>
-      <string>six.sups</string>
+      <string>slash</string>
     </array>
     <key>public.kern2.t</key>
     <array>
@@ -1526,17 +1525,9 @@
       <string>tccurl</string>
       <string>tcaron</string>
     </array>
-    <key>public.kern2.t.sups</key>
-    <array>
-      <string>t.sups</string>
-    </array>
     <key>public.kern2.two</key>
     <array>
       <string>two</string>
-    </array>
-    <key>public.kern2.two.sups</key>
-    <array>
-      <string>two.sups</string>
     </array>
     <key>public.kern2.u</key>
     <array>
@@ -1557,10 +1548,6 @@
       <string>uogonek</string>
       <string>ucaron</string>
     </array>
-    <key>public.kern2.u.sups</key>
-    <array>
-      <string>u.sups</string>
-    </array>
     <key>public.kern2.v</key>
     <array>
       <string>v</string>
@@ -1573,11 +1560,6 @@
       <string>ygrave</string>
       <string>gamma1</string>
     </array>
-    <key>public.kern2.v.sups</key>
-    <array>
-      <string>v.sups</string>
-      <string>y.sups</string>
-    </array>
     <key>public.kern2.w</key>
     <array>
       <string>w</string>
@@ -1586,17 +1568,9 @@
       <string>wgrave</string>
       <string>wacute</string>
     </array>
-    <key>public.kern2.w.sups</key>
-    <array>
-      <string>w.sups</string>
-    </array>
     <key>public.kern2.x</key>
     <array>
       <string>x</string>
-    </array>
-    <key>public.kern2.x.sups</key>
-    <array>
-      <string>x.sups</string>
     </array>
     <key>public.kern2.z</key>
     <array>
@@ -1610,9 +1584,65 @@
       <string>zcaron</string>
       <string>zcurl</string>
     </array>
-    <key>public.kern2.z.sups</key>
+    <key>public.kern2.zero.subs</key>
     <array>
-      <string>z.sups</string>
+      <string>a.subs</string>
+      <string>b.subs</string>
+      <string>c.subs</string>
+      <string>d.subs</string>
+      <string>e.subs</string>
+      <string>f.subs</string>
+      <string>g.subs</string>
+      <string>h.subs</string>
+      <string>i.subs</string>
+      <string>j.subs</string>
+      <string>k.subs</string>
+      <string>l.subs</string>
+      <string>m.subs</string>
+      <string>n.subs</string>
+      <string>o.subs</string>
+      <string>p.subs</string>
+      <string>q.subs</string>
+      <string>r.subs</string>
+      <string>s.subs</string>
+      <string>t.subs</string>
+      <string>u.subs</string>
+      <string>v.subs</string>
+      <string>w.subs</string>
+      <string>x.subs</string>
+      <string>y.subs</string>
+      <string>z.subs</string>
+      <string>zero.subs</string>
+      <string>one.subs</string>
+      <string>two.subs</string>
+      <string>three.subs</string>
+      <string>four.subs</string>
+      <string>five.subs</string>
+      <string>six.subs</string>
+      <string>seven.subs</string>
+      <string>eight.subs</string>
+      <string>nine.subs</string>
+      <string>parenleft.subs</string>
+      <string>parenright.subs</string>
+      <string>plus.subs</string>
+      <string>minus.subs</string>
+      <string>equal.subs</string>
+      <string>eight.dnomf</string>
+      <string>zero.dnom</string>
+      <string>one.dnom</string>
+      <string>two.dnom</string>
+      <string>three.dnom</string>
+      <string>four.dnom</string>
+      <string>five.dnom</string>
+      <string>six.dnom</string>
+      <string>seven.dnom</string>
+      <string>eight.dnom</string>
+      <string>nine.dnom</string>
+      <string>plus.dnom</string>
+      <string>minus.dnom</string>
+      <string>equal.dnom</string>
+      <string>parenleft.dnom</string>
+      <string>parenright.dnom</string>
     </array>
   </dict>
 </plist>
