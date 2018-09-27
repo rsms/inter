@@ -502,6 +502,7 @@ class Main(object):
       # clear anchors
       for g in source.font:
         g.clearAnchors()
+        del g.lib['com.schriftgestaltung.Glyphs.lastChange']
 
       # write UFO file
       source.path = ufo_path
