@@ -499,6 +499,16 @@ class Main(object):
       source.font.lib.clear()
       source.font.lib.update(lib)
 
+      # remove all but the primary (default) layer
+      layers = source.font.layers
+      defaultLayer = layers.defaultLayer
+      delLayerNames = set()
+      for layer in layers:
+        if layer != defaultLayer:
+          delLayerNames.add(layer.name)
+      for layerName in delLayerNames:
+        del layers[layerName]
+
       # clear anchors
       for g in source.font:
         g.clearAnchors()
