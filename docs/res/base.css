@@ -107,6 +107,11 @@ num { /* number */
   white-space: pre;
 }
 
+em, i, .italic {
+  font-style: italic;
+  font-variation-settings: 'ital' 100;
+}
+
 small {
   font-size: 11px;
   letter-spacing: 0.013em;
@@ -176,6 +181,20 @@ h1 > a, h2 > a, h3 > a {
   text-shadow: none;
   background: none;
 }
+
+/* font style classifiers used by samples and dynmetrics */
+.font-style-regular           { font-variation-settings: "wght" 400, "ital" 0   !important; font-weight:400 !important; font-style:normal !important; }
+.font-style-italic            { font-variation-settings: "wght" 400, "ital" 100 !important; font-weight:400 !important; font-style:italic !important; }
+.font-style-medium            { font-variation-settings: "wght" 500, "ital" 0   !important; font-weight:500 !important; font-style:normal !important; }
+.font-style-medium-italic     { font-variation-settings: "wght" 500, "ital" 100 !important; font-weight:500 !important; font-style:italic !important; }
+.font-style-semi-bold         { font-variation-settings: "wght" 600, "ital" 0   !important; font-weight:800 !important; font-style:normal !important; }
+.font-style-semi-bold-italic  { font-variation-settings: "wght" 600, "ital" 100 !important; font-weight:800 !important; font-style:italic !important; }
+.font-style-bold              { font-variation-settings: "wght" 700, "ital" 0   !important; font-weight:700 !important; font-style:normal !important; }
+.font-style-bold-italic       { font-variation-settings: "wght" 700, "ital" 100 !important; font-weight:700 !important; font-style:italic !important; }
+.font-style-extra-bold        { font-variation-settings: "wght" 800, "ital" 0   !important; font-weight:800 !important; font-style:normal !important; }
+.font-style-extra-bold-italic { font-variation-settings: "wght" 800, "ital" 100 !important; font-weight:800 !important; font-style:italic !important; }
+.font-style-black             { font-variation-settings: "wght" 900, "ital" 0   !important; font-weight:900 !important; font-style:normal !important; }
+.font-style-black-italic      { font-variation-settings: "wght" 900, "ital" 100 !important; font-weight:900 !important; font-style:italic !important; }
 
 .row {
   padding: 50px;

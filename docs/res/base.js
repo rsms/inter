@@ -82,7 +82,8 @@ var HUDNotification = {
 //
 function InterUIDynamicTracking(fontSize) {
   // tracking = a + b * e ^ (c * fontSize)
-  return -0.016 + 0.21 * Math.pow(Math.E, -0.18 * fontSize)
+  var a = -0.017, b = 0.202, c = -0.175;
+  return a + b * Math.pow(Math.E, c * fontSize)
 }
 
 

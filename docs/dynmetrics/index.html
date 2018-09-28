@@ -89,8 +89,12 @@ endfor
         <option value="italic">Italic</option>
         <option value="medium" default>Medium</option>
         <option value="medium-italic">Medium Italic</option>
+        <option value="semi-bold" default>Extra Bold</option>
+        <option value="semi-bold-italic">Extra Bold Italic</option>
         <option value="bold" default>Bold</option>
         <option value="bold-italic">Bold Italic</option>
+        <option value="extra-bold" default>Extra Bold</option>
+        <option value="extra-bold-italic">Extra Bold Italic</option>
         <option value="black" default>Black</option>
         <option value="black-italic">Black Italic</option>
       </select>
@@ -183,61 +187,25 @@ function parseValues(s) {
 }
 
 setIdealValues({
-  // set-2018-02-20
-  6:    0.055,
-  7:    0.044,
-  8:    0.034,
-  9:    0.024,
-  10:   0.018,
-  11:   0.012,
-  12:   0.007,
-  13:   0.003,
-  14:   0.001,
-  15:  -0.002,
-  16:  -0.004,
-  17:  -0.006,
-  18:  -0.008,
-  20:  -0.01,
-  24:  -0.013,
+  // 2018-09-28
+  6:   0.054,
+  7:   0.042,
+  8:   0.033,
+  9:   0.025,
+  10:  0.018,
+  11:  0.012,
+  12:  0.008,
+  13:  0.004,
+  14:  0,
+  15: -0.002,
+  16: -0.005,
+  17: -0.007,
+  18: -0.008,
+  20: -0.011,
+  24: -0.014,
+  30: -0.016,
+  40: -0.017,
 })
-
-// setIdealValues({
-//   // set-2018-02-19
-//   6:    0.059,
-//   7:    0.043,
-//   8:    0.032,
-//   9:    0.022,
-//   10:   0.014,
-//   11:   0.009,
-//   12:   0.004,
-//   13:   0,
-//   14:  -0.003,
-//   15:  -0.005,
-//   16:  -0.0075,
-//   17:  -0.0084,
-//   18:  -0.0095,
-//   20:  -0.012,
-//   24:  -0.014,
-// })
-
-// setIdealValues({
-// // set-2018-02-18
-//   6:   0.06,
-//   7:   0.04,
-//   8:   0.03,
-//   9:   0.02,
-//   10:  0.01,
-//   11:  0.005,
-//   12:  0.002,
-//   13:  0.001,
-//   14:  0,
-//   15: -0.002,
-//   16: -0.005,
-//   17: -0.007,
-//   18: -0.009,
-//   20: -0.011,
-//   24: -0.011,
-// })
 
 
 // Variables for constants involved in Dynamic Metrics
@@ -246,7 +214,8 @@ setIdealValues({
 // var a = -0.013, b = 0.251, c = -0.222 // di=0.001742 on set-2018-02-18
 // var a = -0.015, b = 0.283, c = -0.23; // di=0.00221 on set-2018-02-18
 // var a = -0.0149, b = 0.298, c = -0.23; // di=0.000484 on set-2018-02-19
-var a = -0.016, b = 0.21, c = -0.18; // di=0.000532 on set-2018-02-20
+// var a = -0.018, b = 0.21, c = -0.18; // di=0.000532 on set-2018-02-20
+var a = -0.017, b = 0.202, c = -0.175; // di=0.000247 on 2018-09-28
 
 var l = 1.4
 
@@ -567,8 +536,12 @@ bindings.configure('style', null, null, function (style) {
   cl.remove('font-style-italic')
   cl.remove('font-style-medium')
   cl.remove('font-style-medium-italic')
+  cl.remove('font-style-semi-bold')
+  cl.remove('font-style-semi-bold-italic')
   cl.remove('font-style-bold')
   cl.remove('font-style-bold-italic')
+  cl.remove('font-style-extra-bold')
+  cl.remove('font-style-extra-bold-italic')
   cl.remove('font-style-black')
   cl.remove('font-style-black-italic')
   cl.add('font-style-' + style)
@@ -589,6 +562,20 @@ $('input[type="range"][data-binding="base-tracking"]').addEventListener(
   'dblclick',
   function(ev) { bindings.setValue('base-tracking', 0) }
 )
+
+;[
+  ['var-a',a],
+  ['var-b',b],
+  ['var-c',c],
+  ['var-l',l],
+  ['base-tracking', 0]
+].forEach(p => {
+  let bindname = p[0], defval = p[1]
+  $$('input[type="range"][data-binding="'+bindname+'"]').forEach(e => {
+    e.addEventListener('dblclick', ev =>
+      bindings.setValue(bindname, defval))
+  })
+})
 
 // allow editing of ideal values
 idealValuesTextArea.addEventListener('input', function(ev) {
