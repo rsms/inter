@@ -209,8 +209,7 @@ pre_dist:
 		exit 1; \
   fi
 
-dist: zip_dist  docs_info  docs_fonts
-	# $(MAKE)  docs_info  docs_fonts  -j
+dist: zip_dist  docs
 	misc/tools/versionize-css.py
 	@echo "——————————————————————————————————————————————————————————————————"
 	@echo ""
@@ -225,6 +224,9 @@ dist: zip_dist  docs_info  docs_fonts
 	@echo ""
 	@echo "——————————————————————————————————————————————————————————————————"
 
+docs: docs_fonts
+	$(MAKE) -j docs_info
+
 docs_info: docs/_data/fontinfo.json docs/lab/glyphinfo.json docs/glyphs/metrics.json
 
 docs_fonts:
@@ -235,6 +237,8 @@ docs_fonts:
 	      $(FONTDIR)/const/*.otf \
 	      $(FONTDIR)/var/*.woff2 \
 	      docs/font-files/
+
+.PHONY: docs docs_info docs_fonts
 
 docs/_data/fontinfo.json: docs/font-files/Inter-UI-Regular.otf misc/tools/fontinfo.py
 	misc/tools/fontinfo.py -pretty $< > docs/_data/fontinfo.json
@@ -279,4 +283,4 @@ install: install_otf
 clean:
 	rm -rvf build/tmp build/fonts
 
-.PHONY: all web clean install install_otf install_ttf deploy pre_dist dist geninfo copy_docs_fonts test glyphsync
+.PHONY: all web clean install install_otf install_ttf deploy pre_dist dist geninfo test glyphsync
