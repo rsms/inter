@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <designspace format="4.0">
     <axes>
-        <axis default="400" maximum="900" minimum="100" name="Weight" tag="wght" />
+        <axis default="400" maximum="900" minimum="400" name="Weight" tag="wght" />
         <axis default="0" maximum="100" minimum="0" name="Italic" tag="ital" />
     </axes>
     <sources>
@@ -35,11 +35,21 @@
         </source>
     </sources>
     <instances>
-        <instance familyname="Inter UI" filename="Inter-UI-Regular.ufo" name="regular" stylemapfamilyname="Inter UI" stylemapstylename="regular" stylename="Regular">
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Regular.ufo" name="regular" stylemapfamilyname="Inter UI" stylemapstylename="regular" stylename="Regular">
             <location>
                 <dimension name="Weight" xvalue="400" />
                 <dimension name="Italic" xvalue="0" />
             </location>
+            <kerning />
+            <info />
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Italic.ufo" name="italic" stylemapfamilyname="Inter UI" stylemapstylename="italic" stylename="Italic">
+            <location>
+                <dimension name="Weight" xvalue="400" />
+                <dimension name="Italic" xvalue="100" />
+            </location>
+            <kerning />
+            <info />
         </instance>
         <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Medium.ufo" name="medium" stylemapfamilyname="Inter UI Medium" stylemapstylename="regular" stylename="Medium">
             <location>
@@ -304,6 +314,22 @@
                     </array>
                 </dict>
             </lib>
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Black.ufo" name="black" stylemapfamilyname="Inter UI Black" stylemapstylename="regular" stylename="Black">
+            <location>
+                <dimension name="Weight" xvalue="900" />
+                <dimension name="Italic" xvalue="0" />
+            </location>
+            <kerning />
+            <info />
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-BlackItalic.ufo" name="blackitalic" stylemapfamilyname="Inter UI Black" stylemapstylename="italic" stylename="Black Italic">
+            <location>
+                <dimension name="Weight" xvalue="900" />
+                <dimension name="Italic" xvalue="100" />
+            </location>
+            <kerning />
+            <info />
         </instance>
     </instances>
 </designspace>
