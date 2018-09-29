@@ -1,4 +1,4 @@
-* { margin:0; padding:0; }
+* { margin:0; padding:0; font-synthesis: none; }
 html { }
 body {
   background-color: #f4f4f4;
@@ -103,7 +103,7 @@ num { /* number */
   -o-font-feature-settings:      'calt' 1, 'ss01' 1;
   -webkit-font-feature-settings: 'calt' 1, 'ss01' 1;
   font-feature-settings:         'calt' 1, 'ss01' 1;*/
-  letter-spacing:0.02em;
+  letter-spacing:0.01em;
   white-space: pre;
 }
 
@@ -114,7 +114,7 @@ em, i, .italic {
 
 small {
   font-size: 11px;
-  letter-spacing: 0.013em;
+  letter-spacing: 0.012em;
 }
 
 h1, h2, h3 {
@@ -134,7 +134,7 @@ h1 {
 }
 h2 {
   font-size: 24px;
-  letter-spacing: -0.4px;
+  letter-spacing: -0.02em;
   line-height: 30px;
   margin-bottom: 25px;
   margin-top: 10px;

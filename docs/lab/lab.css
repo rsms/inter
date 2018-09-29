@@ -1,4 +1,4 @@
-* { margin:0; padding:0; }
+* { margin:0; padding:0; font-synthesis: none; }
 html { }
 body {
   background-color: white;
@@ -44,7 +44,7 @@ h2 {
   user-select:none; -moz-user-select: none;
   font-family: sans-serif !important;
   overflow: auto;
-  letter-spacing:0.01em;
+  letter-spacing:0.012em;
 }
 .options > * {
   display: block;

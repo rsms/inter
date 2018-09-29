@@ -15,7 +15,7 @@
 html {
   font-family: 'Inter UI', sans-serif;
   font-size: 14px;
-  letter-spacing: 0.001em;
+  letter-spacing: 0;
 }
 body {
   margin: 0;
@@ -133,6 +133,7 @@ function startAnimation() {
     return
   }
   weightInput.disabled = true
+  italicInput.disabled = true
   isAnimating = true
   let v = 0
   let wmin = parseFloat(weightInput.min)
@@ -168,7 +169,9 @@ function startAnimation() {
 function stopAnimation() {
   isAnimating = false
   weightInput.disabled = false
+  italicInput.disabled = false
   weightInput.value = String(state.weight)
+  italicInput.value = String(state.italic)
 }
 
 // UI control: weight slider
