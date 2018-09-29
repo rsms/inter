@@ -450,14 +450,6 @@ class Main(object):
     # strip lib data
     designspace.lib.clear()
 
-    # fixup axes
-    for axis in designspace.axes:
-      if axis.tag == "wght":
-        axis.map = []
-        axis.minimum = 100
-        axis.maximum = 900
-        axis.default = 400
-
     # patch and write UFO files
     # TODO: Only write out-of-date UFOs
     for source in designspace.sources:
