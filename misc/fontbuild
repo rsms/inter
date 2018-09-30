@@ -23,6 +23,7 @@ from fontTools.pens.transformPen import TransformPen
 from fontTools.pens.reverseContourPen import ReverseContourPen
 from glyphsLib.interpolation import apply_instance_data
 from mutatorMath.ufo.document import DesignSpaceDocumentReader
+from multiprocessing import Process, Queue
 
 log = logging.getLogger(__name__)
 stripItalic_re = re.compile(r'(?:^|\b)italic(?:\b|$)', re.I | re.U)
@@ -51,9 +52,11 @@ def fatal(msg):
   sys.exit(1)
 
 
-def composedGlyphIsNonTrivial(g):
+def composedGlyphIsNonTrivial(g, yAxisIsNonTrivial=False):
   # A non-trivial glyph is one that is composed from either multiple
   # components or that uses component transformations.
+  # If yAxisIsNonTrivial is true, then any transformation over the Y axis
+  # is be considered non-trivial.
   if g.components and len(g.components) > 0:
     if len(g.components) > 1:
       return True
@@ -66,6 +69,8 @@ def composedGlyphIsNonTrivial(g):
       # 
       xScale, xyScale, yxScale, yScale, xOffset, yOffset = c.transformation
       if xScale != 1 or xyScale != 0 or yxScale != 0 or yScale != 1:
+        return True
+      if yAxisIsNonTrivial and yOffset != 0:
         return True
   return False
 
@@ -103,8 +108,9 @@ class VarFontProject(FontProject):
     
     decomposeGlyphs = set()
     for ufo in ufos:
+      isItalic = ufo.info.italicAngle != 0
       for glyph in ufo:
-        if glyph.components and composedGlyphIsNonTrivial(glyph):
+        if glyph.components and composedGlyphIsNonTrivial(glyph, yAxisIsNonTrivial=isItalic):
           decomposeGlyphs.add(glyph.name)
 
     self.decompose_glyphs(ufos, lambda g: g.name in decomposeGlyphs)
@@ -408,6 +414,41 @@ class Main(object):
 
 
 
+  def _glyphsyncWriteUFO(self, font, weight, ufo_path):
+    # fixup font info
+    setFontInfo(font, weight, updateCreated=False)
+
+    # cleanup lib
+    lib = dict()
+    for key, value in font.lib.iteritems():
+      if key.startswith('com.schriftgestaltung'):
+        continue
+      if key == 'public.postscriptNames':
+        continue
+      lib[key] = value
+    font.lib.clear()
+    font.lib.update(lib)
+
+    # remove all but the primary (default) layer
+    layers = font.layers
+    defaultLayer = layers.defaultLayer
+    delLayerNames = set()
+    for layer in layers:
+      if layer != defaultLayer:
+        delLayerNames.add(layer.name)
+    for layerName in delLayerNames:
+      del layers[layerName]
+
+    # clear anchors
+    for g in font:
+      g.clearAnchors()
+      del g.lib['com.schriftgestaltung.Glyphs.lastChange']
+
+    # write UFO file
+    self.log("write %s" % relpath(ufo_path, os.getcwd()))
+    font.save(ufo_path)
+
+
   def cmd_glyphsync(self, argv):
     argparser = argparse.ArgumentParser(
       usage='%(prog)s glyphsync <glyphsfile> [options]',
@@ -452,13 +493,14 @@ class Main(object):
 
     # patch and write UFO files
     # TODO: Only write out-of-date UFOs
+    procs = []
+    q = Queue()
     for source in designspace.sources:
       # source : fontTools.designspaceLib.SourceDescriptor
       # source.font : defcon.objects.font.Font
       ufo_path = pjoin(master_dir, source.filename.replace('InterUI', 'Inter-UI'))
       # no need to also set the relative 'filename' attribute as that
       # will be auto-updated on writing the designspace document
-
       if source.styleName == "Italic Italic":
         # Workaround for Glyphs limitation
         # (Base italic master can't be called just Italic, so it's called
@@ -475,41 +517,16 @@ class Main(object):
       else:
         # name "Inter UI Black" => "black"
         source.name = source.styleName.lower().replace(' ', '')
-
-      # fixup font info
-      weight = int(source.location['Weight'])
-      setFontInfo(source.font, weight, updateCreated=False)
-
-      # cleanup lib
-      lib = dict()
-      for key, value in source.font.lib.iteritems():
-        if key.startswith('com.schriftgestaltung'):
-          continue
-        if key == 'public.postscriptNames':
-          continue
-        lib[key] = value
-      source.font.lib.clear()
-      source.font.lib.update(lib)
-
-      # remove all but the primary (default) layer
-      layers = source.font.layers
-      defaultLayer = layers.defaultLayer
-      delLayerNames = set()
-      for layer in layers:
-        if layer != defaultLayer:
-          delLayerNames.add(layer.name)
-      for layerName in delLayerNames:
-        del layers[layerName]
-
-      # clear anchors
-      for g in source.font:
-        g.clearAnchors()
-        del g.lib['com.schriftgestaltung.Glyphs.lastChange']
-
-      # write UFO file
+      
       source.path = ufo_path
-      self.log("write %s" % relpath(ufo_path, os.getcwd()))
-      source.font.save(ufo_path)
+      weight = int(source.location['Weight'])
+
+      p = Process(
+        target=self._glyphsyncWriteUFO,
+        args=(source.font, weight, ufo_path)
+      )
+      p.start()
+      procs.append(p)
 
     # patch instance names
     for instance in designspace.instances:
@@ -519,6 +536,9 @@ class Main(object):
 
     self.log("write %s" % relpath(designspace_file, os.getcwd()))
     designspace.write(designspace_file)
+
+    for p in procs:
+      p.join()
 
 
 
