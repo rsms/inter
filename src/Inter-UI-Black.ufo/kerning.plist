@@ -1037,11 +1037,6 @@
       <key>public.kern2.T</key>
       <real>-224.0</real>
     </dict>
-    <key>braceright</key>
-    <dict>
-      <key>public.kern2.quotedblleft</key>
-      <real>-96.0</real>
-    </dict>
     <key>bracketleft</key>
     <dict>
       <key>idblgrave</key>
@@ -1424,6 +1419,11 @@
       <key>idblgrave</key>
       <real>112.0</real>
     </dict>
+    <key>jcaron</key>
+    <dict>
+      <key>public.kern2.parenright.case</key>
+      <real>200.0</real>
+    </dict>
     <key>jcircumflex</key>
     <dict>
       <key>idblgrave</key>
@@ -1556,11 +1556,11 @@
       <real>128.0</real>
       <key>public.kern2.B</key>
       <real>112.0</real>
-      <key>public.kern2.braceright</key>
-      <real>96.0</real>
       <key>public.kern2.idotless</key>
       <real>112.0</real>
       <key>public.kern2.jdotless</key>
+      <real>96.0</real>
+      <key>public.kern2.parenright</key>
       <real>96.0</real>
       <key>rlinebelow</key>
       <real>128.0</real>
@@ -1669,11 +1669,6 @@
     <dict>
       <key>public.kern2.T</key>
       <real>-144.0</real>
-    </dict>
-    <key>parenleft</key>
-    <dict>
-      <key>idblgrave</key>
-      <real>112.0</real>
     </dict>
     <key>percent</key>
     <dict>
@@ -1999,8 +1994,6 @@
     </dict>
     <key>public.kern1.H</key>
     <dict>
-      <key>Idieresis</key>
-      <real>224.0</real>
       <key>Idieresisacute</key>
       <real>128.0</real>
       <key>Itildebelow</key>
@@ -2015,6 +2008,8 @@
       <real>128.0</real>
       <key>public.kern2.B</key>
       <real>0.0</real>
+      <key>public.kern2.Idieresis</key>
+      <real>224.0</real>
       <key>public.kern2.idieresis</key>
       <real>208.0</real>
       <key>public.kern2.idotless</key>
@@ -2047,6 +2042,11 @@
       <real>-160.0</real>
       <key>underscore</key>
       <real>-144.0</real>
+    </dict>
+    <key>public.kern1.Idieresis</key>
+    <dict>
+      <key>public.kern2.parenright.case</key>
+      <real>200.0</real>
     </dict>
     <key>public.kern1.K</key>
     <dict>
@@ -2158,6 +2158,10 @@
       <real>-160.0</real>
       <key>public.kern2.idotless</key>
       <real>96.0</real>
+      <key>public.kern2.parenright</key>
+      <real>120.0</real>
+      <key>public.kern2.parenright.case</key>
+      <real>40.0</real>
       <key>public.kern2.quotedblbase</key>
       <real>-208.0</real>
       <key>rdblgrave</key>
@@ -2401,6 +2405,10 @@
       <real>-192.0</real>
       <key>public.kern2.m</key>
       <real>-176.0</real>
+      <key>public.kern2.parenright</key>
+      <real>120.0</real>
+      <key>public.kern2.parenright.case</key>
+      <real>80.0</real>
       <key>public.kern2.quotedblbase</key>
       <real>-368.0</real>
       <key>public.kern2.s</key>
@@ -2778,6 +2786,8 @@
       <real>-388.0</real>
       <key>public.kern2.dagger</key>
       <real>-96.0</real>
+      <key>public.kern2.parenright</key>
+      <real>-40.0</real>
       <key>public.kern2.quotedblleft</key>
       <real>-176.0</real>
       <key>public.kern2.v</key>
@@ -2793,15 +2803,6 @@
     <dict>
       <key>hardsigncyrillic</key>
       <real>-96.0</real>
-    </dict>
-    <key>public.kern1.braceleft</key>
-    <dict>
-      <key>idblgrave</key>
-      <real>128.0</real>
-      <key>llinebelow</key>
-      <real>96.0</real>
-      <key>rlinebelow</key>
-      <real>96.0</real>
     </dict>
     <key>public.kern1.c</key>
     <dict>
@@ -2941,6 +2942,12 @@
       <real>96.0</real>
       <key>public.kern2.one</key>
       <real>128.0</real>
+      <key>public.kern2.parenleft</key>
+      <real>40.0</real>
+      <key>public.kern2.parenright</key>
+      <real>200.0</real>
+      <key>public.kern2.parenright.case</key>
+      <real>160.0</real>
       <key>public.kern2.quotedbl</key>
       <real>96.0</real>
       <key>public.kern2.quotedblleft</key>
@@ -3286,14 +3293,16 @@
       <real>96.0</real>
       <key>public.kern2.W</key>
       <real>96.0</real>
-      <key>public.kern2.braceright</key>
-      <real>96.0</real>
       <key>public.kern2.idieresis</key>
       <real>112.0</real>
       <key>public.kern2.idotless</key>
       <real>0.0</real>
       <key>public.kern2.jdotless</key>
       <real>0.0</real>
+      <key>public.kern2.parenright</key>
+      <real>96.0</real>
+      <key>public.kern2.parenright.case</key>
+      <real>160.0</real>
       <key>rdblgrave</key>
       <real>96.0</real>
       <key>rlinebelow</key>
@@ -3371,6 +3380,10 @@
     <dict>
       <key>public.kern2.comma</key>
       <real>-128.0</real>
+      <key>public.kern2.parenleft</key>
+      <real>40.0</real>
+      <key>public.kern2.parenright</key>
+      <real>120.0</real>
     </dict>
     <key>public.kern1.omegagreek</key>
     <dict>
@@ -3383,6 +3396,33 @@
     <dict>
       <key>public.kern2.quotedblbase</key>
       <real>-128.0</real>
+    </dict>
+    <key>public.kern1.parenleft</key>
+    <dict>
+      <key>idblgrave</key>
+      <real>128.0</real>
+      <key>llinebelow</key>
+      <real>96.0</real>
+      <key>rlinebelow</key>
+      <real>96.0</real>
+    </dict>
+    <key>public.kern1.parenleft.case</key>
+    <dict>
+      <key>Fhook</key>
+      <real>280.0</real>
+      <key>jcaron</key>
+      <real>200.0</real>
+      <key>public.kern2.B</key>
+      <real>0.0</real>
+      <key>public.kern2.Idieresis</key>
+      <real>200.0</real>
+      <key>public.kern2.idotless</key>
+      <real>160.0</real>
+    </dict>
+    <key>public.kern1.parenright</key>
+    <dict>
+      <key>public.kern2.quotedblleft</key>
+      <real>-96.0</real>
     </dict>
     <key>public.kern1.psigreek</key>
     <dict>
@@ -3704,6 +3744,10 @@
       <real>-128.0</real>
       <key>public.kern2.one</key>
       <real>96.0</real>
+      <key>public.kern2.parenleft</key>
+      <real>80.0</real>
+      <key>public.kern2.parenright</key>
+      <real>160.0</real>
       <key>public.kern2.quotedblbase</key>
       <real>-192.0</real>
     </dict>

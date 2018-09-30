@@ -128,15 +128,9 @@
       <string>Hcircumflex</string>
       <string>Enhookcyrillic</string>
       <string>I</string>
-      <string>Idieresis</string>
-      <string>Idieresisacute</string>
       <string>Itildebelow</string>
       <string>Igrave</string>
       <string>Iacute</string>
-      <string>Icircumflex</string>
-      <string>Itilde</string>
-      <string>Imacron</string>
-      <string>Ibreve</string>
       <string>Iogonek</string>
       <string>Idotaccent</string>
       <string>Icaron</string>
@@ -178,6 +172,15 @@
       <string>Uogonek</string>
       <string>Ucaron</string>
       <string>uni0244</string>
+    </array>
+    <key>public.kern1.Idieresis</key>
+    <array>
+      <string>Idieresis</string>
+      <string>Idieresisacute</string>
+      <string>Icircumflex</string>
+      <string>Itilde</string>
+      <string>Imacron</string>
+      <string>Ibreve</string>
     </array>
     <key>public.kern1.K</key>
     <array>
@@ -389,18 +392,6 @@
       <string>efcyrillic</string>
       <string>ereversedcyrillic</string>
       <string>iucyrillic</string>
-    </array>
-    <key>public.kern1.braceleft</key>
-    <array>
-      <string>parenleft</string>
-      <string>bracketleft</string>
-      <string>braceleft</string>
-    </array>
-    <key>public.kern1.braceleft.case</key>
-    <array>
-      <string>parenleft.case</string>
-      <string>bracketleft.case</string>
-      <string>braceleft.case</string>
     </array>
     <key>public.kern1.bullet</key>
     <array>
@@ -679,6 +670,30 @@
       <string>one</string>
       <string>one.ss01</string>
     </array>
+    <key>public.kern1.parenleft</key>
+    <array>
+      <string>parenleft</string>
+      <string>bracketleft</string>
+      <string>braceleft</string>
+    </array>
+    <key>public.kern1.parenleft.case</key>
+    <array>
+      <string>parenleft.case</string>
+      <string>bracketleft.case</string>
+      <string>braceleft.case</string>
+    </array>
+    <key>public.kern1.parenright</key>
+    <array>
+      <string>parenright</string>
+      <string>bracketright</string>
+      <string>braceright</string>
+    </array>
+    <key>public.kern1.parenright.case</key>
+    <array>
+      <string>parenright.case</string>
+      <string>bracketright.case</string>
+      <string>braceright.case</string>
+    </array>
     <key>public.kern1.psigreek</key>
     <array>
       <string>upsilon</string>
@@ -928,15 +943,9 @@
       <string>Enhookcyrillic</string>
       <string>uni01F6</string>
       <string>I</string>
-      <string>Idieresis</string>
-      <string>Idieresisacute</string>
       <string>Itildebelow</string>
       <string>Igrave</string>
       <string>Iacute</string>
-      <string>Icircumflex</string>
-      <string>Itilde</string>
-      <string>Imacron</string>
-      <string>Ibreve</string>
       <string>Iogonek</string>
       <string>Idotaccent</string>
       <string>Icaron</string>
@@ -1025,6 +1034,15 @@
     <array>
       <string>afii10029</string>
       <string>afii10058</string>
+    </array>
+    <key>public.kern2.Idieresis</key>
+    <array>
+      <string>Idieresis</string>
+      <string>Idieresisacute</string>
+      <string>Icircumflex</string>
+      <string>Itilde</string>
+      <string>Imacron</string>
+      <string>Ibreve</string>
     </array>
     <key>public.kern2.J</key>
     <array>
@@ -1142,18 +1160,6 @@
       <string>asciicircum</string>
       <string>asterisk</string>
       <string>degree</string>
-    </array>
-    <key>public.kern2.braceright</key>
-    <array>
-      <string>parenright</string>
-      <string>bracketright</string>
-      <string>braceright</string>
-    </array>
-    <key>public.kern2.braceright.case</key>
-    <array>
-      <string>parenright.case</string>
-      <string>bracketright.case</string>
-      <string>braceright.case</string>
     </array>
     <key>public.kern2.bullet</key>
     <array>
@@ -1405,6 +1411,10 @@
       <string>rightLongArrow</string>
       <string>rightLongArrow.case</string>
     </array>
+    <key>public.kern2.idblgrave</key>
+    <array>
+      <string>idblgrave</string>
+    </array>
     <key>public.kern2.idieresis</key>
     <array>
       <string>idieresis</string>
@@ -1468,6 +1478,30 @@
     <array>
       <string>one</string>
       <string>one.ss01</string>
+    </array>
+    <key>public.kern2.parenleft</key>
+    <array>
+      <string>parenleft</string>
+      <string>bracketleft</string>
+      <string>braceleft</string>
+    </array>
+    <key>public.kern2.parenleft.case</key>
+    <array>
+      <string>parenleft.case</string>
+      <string>bracketleft.case</string>
+      <string>braceleft.case</string>
+    </array>
+    <key>public.kern2.parenright</key>
+    <array>
+      <string>parenright</string>
+      <string>bracketright</string>
+      <string>braceright</string>
+    </array>
+    <key>public.kern2.parenright.case</key>
+    <array>
+      <string>parenright.case</string>
+      <string>bracketright.case</string>
+      <string>braceright.case</string>
     </array>
     <key>public.kern2.psigreek</key>
     <array>

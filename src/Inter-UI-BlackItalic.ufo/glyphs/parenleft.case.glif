@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="parenleft.case" format="2">
-  <advance width="1204.0"/>
-  <guideline x="1120.0" y="1640.0" angle="0.0"/>
-  <guideline x="828.0" y="1752.0" angle="0.0"/>
-  <guideline x="388.0" y="1692.0" angle="90.0"/>
-  <guideline x="680.0" y="1584.0" angle="90.0"/>
+  <advance width="1240.0"/>
+  <guideline x="1136.0" y="1640.0" angle="0.0"/>
+  <guideline x="844.0" y="1752.0" angle="0.0"/>
+  <guideline x="404.0" y="1692.0" angle="90.0"/>
+  <guideline x="696.0" y="1584.0" angle="90.0"/>
   <outline>
-    <component base="parenleft" xOffset="24.0" yOffset="192.0"/>
+    <component base="parenleft" xOffset="40.0" yOffset="232.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>parenleft</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>parenleft</string>
       <key>public.markColor</key>
       <string>0.67,0.95,0.38,1</string>
     </dict>

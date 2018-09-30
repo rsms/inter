@@ -4,7 +4,7 @@
   <unicode hex="04C7"/>
   <outline>
     <contour>
-      <point x="1588.0" y="36.0" type="line"/>
+      <point x="1588.0" y="0.0" type="line"/>
       <point x="1588.0" y="-160.0" type="line" smooth="yes"/>
       <point x="1588.0" y="-320.0"/>
       <point x="1496.0" y="-368.0"/>
@@ -19,12 +19,16 @@
       <point x="1652.0" y="-576.0"/>
       <point x="1836.0" y="-428.0"/>
       <point x="1836.0" y="-164.0" type="curve" smooth="yes"/>
-      <point x="1836.0" y="36.0" type="line"/>
+      <point x="1836.0" y="0.0" type="line"/>
     </contour>
     <component base="H"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>H</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>H</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>

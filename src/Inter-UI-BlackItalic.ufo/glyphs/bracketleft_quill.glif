@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="bracketleft_quill" format="2">
-  <advance width="1208.0"/>
+  <advance width="1240.0"/>
   <unicode hex="2045"/>
   <outline>
     <contour>
-      <point x="1176.0" y="1136.0" type="line"/>
-      <point x="624.0" y="1136.0" type="line"/>
-      <point x="564.0" y="756.0" type="line"/>
-      <point x="1116.0" y="756.0" type="line"/>
+      <point x="1228.0" y="984.0" type="line"/>
+      <point x="676.0" y="984.0" type="line"/>
+      <point x="612.0" y="600.0" type="line"/>
+      <point x="1164.0" y="600.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1384.0" y="2392.0" type="line"/>
-      <point x="584.0" y="2392.0" type="line"/>
-      <point x="108.0" y="-492.0" type="line"/>
-      <point x="908.0" y="-492.0" type="line"/>
-      <point x="972.0" y="-112.0" type="line"/>
-      <point x="656.0" y="-112.0" type="line"/>
-      <point x="1004.0" y="2004.0" type="line"/>
-      <point x="1320.0" y="2004.0" type="line"/>
-    </contour>
+    <component base="bracketleft"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>bracketleft</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>bracketleft</string>
       <key>public.markColor</key>
       <string>0.941,0.941,0.941,0.004</string>
     </dict>

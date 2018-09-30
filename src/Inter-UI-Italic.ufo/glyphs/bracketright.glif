@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="bracketright" format="2">
-  <advance width="928.0"/>
+  <advance width="1020.0"/>
   <unicode hex="005D"/>
   <outline>
-    <contour>
-      <point x="396.0" y="2240.0" type="line"/>
-      <point x="360.0" y="2020.0" type="line"/>
-      <point x="640.0" y="2020.0" type="line"/>
-      <point x="268.0" y="-228.0" type="line"/>
-      <point x="-12.0" y="-228.0" type="line"/>
-      <point x="-48.0" y="-448.0" type="line"/>
-      <point x="464.0" y="-448.0" type="line"/>
-      <point x="908.0" y="2240.0" type="line"/>
-    </contour>
+    <component base="bracketleft" xScale="-1.0" yScale="-1.0" xOffset="1052.0" yOffset="1728.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>parenleft</string>
       <key>public.markColor</key>
       <string>0.941,0.941,0.941,0.004</string>
     </dict>

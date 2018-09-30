@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="bracketleft" format="2">
-  <advance width="1208.0"/>
+  <advance width="1240.0"/>
   <unicode hex="005B"/>
   <outline>
     <contour>
-      <point x="1116.0" y="2392.0" type="line"/>
-      <point x="316.0" y="2392.0" type="line"/>
-      <point x="316.0" y="-492.0" type="line"/>
-      <point x="1116.0" y="-492.0" type="line"/>
-      <point x="1116.0" y="-112.0" type="line"/>
-      <point x="800.0" y="-112.0" type="line"/>
-      <point x="800.0" y="2004.0" type="line"/>
-      <point x="1116.0" y="2004.0" type="line"/>
+      <point x="276.0" y="-464.0" type="line"/>
+      <point x="1196.0" y="-464.0" type="line"/>
+      <point x="1196.0" y="-64.0" type="line"/>
+      <point x="812.0" y="-64.0" type="line"/>
+      <point x="812.0" y="1648.0" type="line"/>
+      <point x="1196.0" y="1648.0" type="line"/>
+      <point x="1196.0" y="2048.0" type="line"/>
+      <point x="276.0" y="2048.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>parenleft</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -26,14 +28,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>7.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>2.0</real>
+            <real>0.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>

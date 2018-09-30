@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Enhookcyrillic" format="2">
-  <advance width="1968.0"/>
+  <advance width="2036.0"/>
   <unicode hex="04C7"/>
   <outline>
     <contour>
-      <point x="1348.0" y="160.0" type="line"/>
-      <point x="1348.0" y="60.0" type="line" smooth="yes"/>
-      <point x="1349.0" y="-124.0"/>
-      <point x="1201.0" y="-176.0"/>
-      <point x="1076.0" y="-176.0" type="curve"/>
-      <point x="1037.0" y="-176.0"/>
-      <point x="961.0" y="-172.0"/>
+      <point x="1348.0" y="0.0" type="line"/>
+      <point x="1348.0" y="-16.0" type="line" smooth="yes"/>
+      <point x="1348.0" y="-160.0"/>
+      <point x="1200.0" y="-184.0"/>
+      <point x="1076.0" y="-184.0" type="curve" smooth="yes"/>
+      <point x="1037.0" y="-184.0"/>
+      <point x="961.0" y="-178.0"/>
       <point x="924.0" y="-176.0" type="curve"/>
       <point x="924.0" y="-616.0" type="line"/>
       <point x="933.0" y="-616.0"/>
       <point x="1021.0" y="-628.0"/>
       <point x="1096.0" y="-628.0" type="curve" smooth="yes"/>
       <point x="1905.0" y="-628.0"/>
-      <point x="1905.0" y="-124.0"/>
-      <point x="1904.0" y="20.0" type="curve" smooth="yes"/>
-      <point x="1904.0" y="160.0" type="line"/>
+      <point x="1904.0" y="-200.0"/>
+      <point x="1904.0" y="-56.0" type="curve" smooth="yes"/>
+      <point x="1904.0" y="0.0" type="line"/>
     </contour>
-    <component base="H" xOffset="12.0"/>
+    <component base="H"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>H</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>H</string>
       <key>com.schriftgestaltung.Glyphs.nodeUserData.0.15</key>
       <dict>
         <key>name</key>
