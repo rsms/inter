@@ -8,6 +8,7 @@
 @font-face {
   font-family: 'Inter UI var';
   font-weight: 400 900;
+  font-style: oblique 0deg 10deg;
   src: url('fonts/var/Inter-UI.var.woff2') format("woff2-variations"),
        url('../font-files/Inter-UI.var.woff2') format("woff2-variations");
 }
@@ -24,9 +25,9 @@ body {
 
 .sample {
   padding: 40px 40px 40px 35px;
-  font-size: 96px;
+  font-size: var(--size);
   letter-spacing: -0.03em;
-  /*font-variation-settings: 'wght' 400, 'ital' 0;*/
+  font-variation-settings: 'wght' var(--weight), 'slnt' var(--slant);
 }
 
 @supports (font-variation-settings: normal) {
@@ -61,58 +62,62 @@ label {
 </head>
 <body>
 <div class="ctrl">
-  <label>
-    Weight:
-    <input type="range" value="400" min="400" max="900" name="weight">
-  </label>
-  <label>
-    Italic:
-    <input type="range" value="0" min="0" max="100" name="italic">
-  </label>
+  <label>Weight: <input type="range" value="400" min="400" max="900" name="weight"></label>
+  <label>Slant: <input type="range" value="0" min="0" max="10" step="0.01" name="slant"></label>
+  <label>Size: <input type="range" value="96" min="6" max="400" name="size"></label>
   <label>
     <input type="checkbox" name="animate">
     Animate
   </label>
 </div>
 <div class="sample" contenteditable>
-Inter UI 2.6 coming soon <br>
-Refined glyphs & kerning <br>
-Variable weight axis <br>
-Major overhaul 123ABC! <br>
+Inter UI 3.0 is variable and flexible<br>
+Variable weight axis<br>
+Variable slant/oblique axis<br>
+ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+abcdefghijklmnopqrstuvwxyz<br>
+1234567890?!()[]{}&*^%$#@~&lt;&gt;<br>
 </div>
 <script type="text/javascript">
 
-var state = {
-  weight: 400,
-  italic: 0,
-}
+
 
 var samples = document.querySelectorAll('div.sample')
 var weightInput = document.querySelector('[name="weight"]')
-var italicInput = document.querySelector('[name="italic"]')
+var slantInput = document.querySelector('[name="slant"]')
+var sizeInput = document.querySelector('[name="size"]')
 
-weightInput.value = String(state.weight)
-italicInput.value = String(state.italic)
 
-function updateFontVariationSettings() {
-  for (let i = 0; i < samples.length; i++) {
-    let sample = samples[i]
-    // sample.style.fontVariationSettings =
-    //   `'wght' ${state.weight}, 'ital' ${state.italic}`
-    sample.style.fontVariationSettings =
-      `'wght' ${state.weight}, 'ital' ${state.italic}`
-  }
+var ui = {
+  weight: parseFloat(weightInput.value),
+  slant:  parseFloat(slantInput.value),
+  size:   parseFloat(sizeInput.value),
+
+  setState(props) {
+    for (let k in props) {
+      if (k in this) {
+        this[k] = props[k]
+      }
+    }
+    this.update()
+  },
+
+  update() {
+    let s = document.body.style
+    s.setProperty(`--weight`, this.weight)
+    s.setProperty(`--slant`, this.slant)
+    s.setProperty(`--size`, `${this.size}px`)
+    // for (let i = 0; i < samples.length; i++) {
+    //   let sample = samples[i]
+    //   // sample.style.fontVariationSettings =
+    //   //   `'wght' ${ui.weight}, 'ital' ${ui.slant}`
+    //   sample.style.fontVariationSettings =
+    //     `'wght' ${ui.weight}, 'slnt' ${ui.slant}`
+    // }
+  },
 }
 
-function setWeight(weight) {
-  state.weight = weight
-  updateFontVariationSettings()
-}
-
-function setItalic(italic) {
-  state.italic = italic
-  updateFontVariationSettings()
-}
+ui.update()
 
 // monotime() :float  milliseconds
 //
@@ -133,13 +138,13 @@ function startAnimation() {
     return
   }
   weightInput.disabled = true
-  italicInput.disabled = true
+  slantInput.disabled = true
   isAnimating = true
   let v = 0
   let wmin = parseFloat(weightInput.min)
     , wmax = parseFloat(weightInput.max)
-    , imin = parseFloat(italicInput.min)
-    , imax = parseFloat(italicInput.max)
+    , imin = parseFloat(slantInput.min)
+    , imax = parseFloat(slantInput.max)
     , wspeed = 200    // lower is faster; time divisor
     , ispeed = 800
     , clamp = 0.001
@@ -150,15 +155,17 @@ function startAnimation() {
     r = (1 + Math.sin((monotime() - startTime) / wspeed)) * 0.5
     v = (wmin * (1 - clamp)) + (((wmax * (1 + clamp)) - (wmin * (1 - clamp))) * r)
     v = Math.max(wmin, Math.min(wmax, v))
-    setWeight(v)
+    ui.weight = v
     weightInput.value = v
 
     r = (1 + Math.sin((monotime() - startTime) / ispeed)) * 0.5
     v = (imin * (1 - clamp)) + (((imax * (1 + clamp)) - (imin * (1 - clamp))) * r)
     v = Math.max(imin, Math.min(imax, v))
-    setItalic(v)
-    italicInput.value = v
-    
+    ui.slant = v
+    slantInput.value = v
+
+    ui.update()
+
     if (isAnimating) {
       requestAnimationFrame(update)
     }
@@ -169,28 +176,42 @@ function startAnimation() {
 function stopAnimation() {
   isAnimating = false
   weightInput.disabled = false
-  italicInput.disabled = false
-  weightInput.value = String(state.weight)
-  italicInput.value = String(state.italic)
+  slantInput.disabled = false
+  weightInput.value = String(ui.weight)
+  slantInput.value = String(ui.slant)
 }
 
-// UI control: weight slider
-weightInput.addEventListener('input',
-  weightInput.valueAsNumber !== undefined ? ev => {
-    setWeight(weightInput.valueAsNumber)
-  } : ev => {
-    setWeight(parseFloat(weightInput.value))
-  }
-)
+function bindRangeControl(rangeInput, handler) {
+  rangeInput.addEventListener('input',
+    rangeInput.valueAsNumber !== undefined ? ev => {
+      handler(rangeInput.valueAsNumber)
+    } : ev => {
+      handler(parseFloat(rangeInput.value))
+    }
+  )
+}
 
-// UI control: italic slider
-italicInput.addEventListener('input',
-  italicInput.valueAsNumber !== undefined ? ev => {
-    setItalic(italicInput.valueAsNumber)
-  } : ev => {
-    setItalic(parseFloat(italicInput.value))
-  }
-)
+// UI controls
+bindRangeControl(weightInput, weight => ui.setState({ weight }) )
+bindRangeControl(slantInput, slant => ui.setState({ slant }) )
+bindRangeControl(sizeInput, size => ui.setState({ size }) )
+
+// weightInput.addEventListener('input',
+//   weightInput.valueAsNumber !== undefined ? ev => {
+//     setWeight(weightInput.valueAsNumber)
+//   } : ev => {
+//     setWeight(parseFloat(weightInput.value))
+//   }
+// )
+
+// UI control: slant slider
+// slantInput.addEventListener('input',
+//   slantInput.valueAsNumber !== undefined ? ev => {
+//     setSlant(slantInput.valueAsNumber)
+//   } : ev => {
+//     setSlant(parseFloat(slantInput.value))
+//   }
+// )
 
 // UI control: animate
 var animateInput = document.querySelector('[name="animate"]')

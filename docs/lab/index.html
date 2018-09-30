@@ -1037,6 +1037,7 @@ for (const ch of uniqueChars) {
 @font-face {
   font-family: 'Inter-UI-var-VERSION';
   font-weight: 400 900;
+  font-style: oblique 0deg 10deg;
   src: url('fonts/var/Inter-UI.var.woff2') format("woff2-variations");
 }
 
@@ -1134,9 +1135,11 @@ for (const ch of uniqueChars) {
 }
 
 @font-face {
+  /* Note: Not hinted */
   font-family: 'Inter-UI-var-hinted-VERSION';
   font-weight: 400 900;
-  src: url('fonts/var-hinted/Inter-UI.var.woff2') format("woff2-variations");
+  font-style: oblique 0deg 10deg;
+  src: url('fonts/var/Inter-UI.var.woff2') format("woff2-variations");
 }
 
 /* ----------------------------------------------------------------------- */
@@ -1222,9 +1225,9 @@ document.head.appendChild(fontCSS)
           <input type="number" value="400" step="1" min="400" max="900" name="varWeightNum">
         </label>
         <label class="label-and-value">
-          <span>Italic:</span>
-          <input type="range" value="0" min="0" max="100" name="varItalic">
-          <input type="number" value="0" step="1" min="0" max="100" name="varItalicNum">
+          <span>Slant:</span>
+          <input type="range" value="0" step="0.01" min="0" max="10" name="varSlant">
+          <input type="number" value="0" step="1" min="0" max="10" name="varSlantNum">
         </label>
       </div>
 
@@ -1781,9 +1784,9 @@ function main() {
   })
 
   let usingVarFont = false
-  var varWeightRange, varItalicRange
+  var varWeightRange, varSlantRange
   var varWeightSettingValueImpl = false
-  var varItalicSettingValueImpl = false
+  var varSlantSettingValueImpl = false
 
   let currentBodyWeightClass = null
   vars.bind('weight', (e, v) => {
@@ -1796,32 +1799,32 @@ function main() {
 
   var italicVar = vars.bind('italic', (e, on) => {
     document.body.classList[on ? 'add' : 'remove']('italic')
-    if (usingVarFont && !varItalicSettingValueImpl) {
-      if (varItalicRange) {
-        varItalicRange.setValue(on ? 100 : 0)
+    if (usingVarFont && !varSlantSettingValueImpl) {
+      if (varSlantRange) {
+        varSlantRange.setValue(on ? 100 : 0)
       }
       updateVarFont()
     }
   })
 
   let varState = {
-    weight: 400,
-    italic: 0,
+    weight: 400, // 400-900
+    slant: 0,    // 0-10
   }
 
   function updateVarFont() {
     if (usingVarFont) {
-      varItalicSettingValueImpl = true
-      if (varState.italic <= 0.1) {
-        varState.italic = 0
+      varSlantSettingValueImpl = true
+      if (varState.slant <= 0.1) {
+        varState.slant = 0
         italicVar.setValue(false)
       } else {
         italicVar.setValue(true)
       }
-      varItalicSettingValueImpl = false
+      varSlantSettingValueImpl = false
       setCSSProp(
         "font-variation-settings",
-        `"wght" ${varState.weight}, "ital" ${varState.italic}`
+        `"wght" ${varState.weight}, "slnt" ${varState.slant}`
       )
     } else {
       setCSSProp("font-variation-settings", null)
@@ -1851,9 +1854,9 @@ function main() {
     }
   })
 
-  let varItalicNum = vars.bind('varItalicNum', (e, v) => {
-    if (varItalicRange && !varItalicSettingValueImpl) {
-      varItalicRange.setValue(v)
+  let varSlantNum = vars.bind('varSlantNum', (e, v) => {
+    if (varSlantRange && !varSlantSettingValueImpl) {
+      varSlantRange.setValue(v)
     }
   })
 
@@ -1870,11 +1873,11 @@ function main() {
     return e.valueAsNumber !== undefined ? e.valueAsNumber : e.value
   })
 
-  varItalicRange = vars.bind('varItalic', (e, v) => {
-    varState.italic = v
-    varItalicSettingValueImpl = true
-    varItalicNum.setValue(v)
-    varItalicSettingValueImpl = false
+  varSlantRange = vars.bind('varSlant', (e, v) => {
+    varState.slant = v
+    varSlantSettingValueImpl = true
+    varSlantNum.setValue(v)
+    varSlantSettingValueImpl = false
     updateVarFont()
   }, (e, prevValue, ev) => {
     if (prevValue === undefined) {

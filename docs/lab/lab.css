@@ -154,16 +154,10 @@ samples, boxes {
 samples {
   display: flex;
   padding: 24px 0;
-  width:100%;
+  width: 100%;
 }
 body.italic samples {
   font-style: italic;
-}
-body.varfont.italic samples {
-  /* [BUG] (Safari 11.1) font-style:italic and ital axis is not
-     mutually exclusive, meaning we have to set either or. */
-  font-style: normal;
-  font-variation-settings: 'ital' 100;
 }
   sample {
     margin: 0;

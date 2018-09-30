@@ -101,7 +101,9 @@
 }
 
 /*
-Single variable font.
+------------------------------------------------------------------------------
+Alternative to the above: Single variable font.
+
 Note that you may want to do something like this to make sure you're serving
 constant fonts to older browsers:
 
@@ -117,7 +119,8 @@ html {
 */
 @font-face {
   font-family: 'Inter UI var';
-  font-weight: 400 900; /* safe weight range */
+  font-weight: 400 900;
+  font-style: oblique 0deg 10deg;
   src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
        url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2");
 }
