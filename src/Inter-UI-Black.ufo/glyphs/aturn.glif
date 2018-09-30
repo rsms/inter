@@ -1,54 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="aturn" format="2">
-  <advance width="1636.0"/>
+  <advance width="1664.0"/>
   <unicode hex="0250"/>
   <outline>
-    <contour>
-      <point x="1056.0" y="1564.0" type="curve" smooth="yes"/>
-      <point x="861.0" y="1564.0"/>
-      <point x="733.0" y="1472.0"/>
-      <point x="676.0" y="1324.0" type="curve"/>
-      <point x="664.0" y="1324.0" type="line"/>
-      <point x="664.0" y="1540.0" type="line"/>
-      <point x="140.0" y="1540.0" type="line"/>
-      <point x="140.0" y="488.0" type="line" smooth="yes"/>
-      <point x="141.0" y="204.0"/>
-      <point x="385.0" y="-16.0"/>
-      <point x="808.0" y="-16.0" type="curve" smooth="yes"/>
-      <point x="1241.0" y="-16.0"/>
-      <point x="1497.0" y="216.0"/>
-      <point x="1524.0" y="500.0" type="curve"/>
-      <point x="1008.0" y="524.0" type="line"/>
-      <point x="1001.0" y="428.0"/>
-      <point x="925.0" y="388.0"/>
-      <point x="844.0" y="388.0" type="curve" smooth="yes"/>
-      <point x="761.0" y="388.0"/>
-      <point x="701.0" y="436.0"/>
-      <point x="700.0" y="504.0" type="curve"/>
-      <point x="701.0" y="588.0"/>
-      <point x="793.0" y="588.0"/>
-      <point x="876.0" y="596.0" type="curve" smooth="yes"/>
-      <point x="1365.0" y="640.0"/>
-      <point x="1545.0" y="844.0"/>
-      <point x="1544.0" y="1108.0" type="curve" smooth="yes"/>
-      <point x="1545.0" y="1404.0"/>
-      <point x="1321.0" y="1564.0"/>
-    </contour>
-    <contour>
-      <point x="892.0" y="1184.0" type="curve" smooth="yes"/>
-      <point x="969.0" y="1184.0"/>
-      <point x="1013.0" y="1144.0"/>
-      <point x="1012.0" y="1072.0" type="curve" smooth="yes"/>
-      <point x="1013.0" y="936.0"/>
-      <point x="857.0" y="920.0"/>
-      <point x="808.0" y="912.0" type="curve" smooth="yes"/>
-      <point x="777.0" y="904.0"/>
-      <point x="721.0" y="892.0"/>
-      <point x="700.0" y="884.0" type="curve"/>
-      <point x="700.0" y="1072.0" type="line" smooth="yes"/>
-      <point x="701.0" y="1148.0"/>
-      <point x="817.0" y="1184.0"/>
-    </contour>
+    <component base="a" xScale="-1.0" yScale="-1.0" xOffset="1664.0" yOffset="1536.0"/>
   </outline>
   <lib>
     <dict>
@@ -58,95 +13,11 @@
           <key>horizontal</key>
           <true/>
           <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>9.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <string>u</string>
-            <string>p</string>
-          </array>
-          <key>type</key>
-          <string>BottomGhost</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>28.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <string>d</string>
-            <string>o</string>
-            <string>w</string>
-            <string>n</string>
-          </array>
-          <key>type</key>
-          <string>TopGhost</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>5.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <string>d</string>
-            <string>o</string>
-            <string>w</string>
-            <string>n</string>
-          </array>
-          <key>type</key>
-          <string>TopGhost</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <false/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>6.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>25.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>9.0</real>
+            <real>-16.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -158,10 +29,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>28.0</real>
+            <real>1564.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -173,10 +44,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>5.0</real>
+            <real>1540.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
