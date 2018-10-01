@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ncurl" format="2">
-  <advance width="1976.0"/>
+  <advance width="2100.0"/>
   <unicode hex="0235"/>
   <outline>
     <contour>
-      <point x="1152.0" y="568.0" type="line"/>
+      <point x="1080.0" y="152.0" type="line"/>
       <point x="1072.0" y="88.0" type="line"/>
       <point x="1036.0" y="-116.0"/>
       <point x="1116.0" y="-344.0"/>
@@ -32,39 +32,17 @@
       <point x="1456.0" y="-140.0" type="curve" smooth="yes"/>
       <point x="1356.0" y="-140.0"/>
       <point x="1284.0" y="-64.0"/>
-      <point x="1296.0" y="28.0" type="curve" smooth="yes"/>
-      <point x="1312.0" y="112.0"/>
-      <point x="1388.0" y="568.0"/>
-      <point x="1388.0" y="568.0" type="curve"/>
+      <point x="1296.0" y="28.0" type="curve"/>
+      <point x="1316.0" y="152.0" type="line"/>
     </contour>
-    <contour>
-      <point x="476.0" y="908.0" type="line" smooth="yes"/>
-      <point x="524.0" y="1196.0"/>
-      <point x="764.0" y="1328.0"/>
-      <point x="940.0" y="1328.0" type="curve" smooth="yes"/>
-      <point x="1136.0" y="1328.0"/>
-      <point x="1252.0" y="1184.0"/>
-      <point x="1216.0" y="960.0" type="curve" smooth="yes"/>
-      <point x="1056.0" y="0.0" type="line"/>
-      <point x="1292.0" y="0.0" type="line"/>
-      <point x="1456.0" y="976.0" type="line" smooth="yes"/>
-      <point x="1520.0" y="1368.0"/>
-      <point x="1344.0" y="1556.0"/>
-      <point x="1056.0" y="1556.0" type="curve" smooth="yes"/>
-      <point x="824.0" y="1556.0"/>
-      <point x="648.0" y="1432.0"/>
-      <point x="552.0" y="1276.0" type="curve"/>
-      <point x="536.0" y="1276.0" type="line"/>
-      <point x="580.0" y="1536.0" type="line"/>
-      <point x="344.0" y="1536.0" type="line"/>
-      <point x="88.0" y="0.0" type="line"/>
-      <point x="324.0" y="0.0" type="line"/>
-    </contour>
+    <component base="n"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
       <string>n</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>t</string>
     </dict>
   </lib>
 </glyph>

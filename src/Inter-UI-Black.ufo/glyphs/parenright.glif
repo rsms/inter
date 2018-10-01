@@ -15,18 +15,38 @@
       <array>
         <dict>
           <key>horizontal</key>
-          <false/>
+          <true/>
           <key>options</key>
-          <integer>0</integer>
+          <integer>4</integer>
           <key>place</key>
           <array>
-            <real>84.0</real>
-            <real>852.0</real>
+            <real>2048.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>type</key>
-          <string>Stem</string>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>-464.0</real>
+            <real>21.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
         </dict>
         <dict>
           <key>horizontal</key>

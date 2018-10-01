@@ -6,12 +6,6 @@
   <guideline x="1068.0" y="964.0" angle="90.0"/>
   <outline>
     <contour>
-      <point x="1812.0" y="752.0" type="line"/>
-      <point x="516.0" y="752.0" type="line"/>
-      <point x="516.0" y="320.0" type="line"/>
-      <point x="1812.0" y="320.0" type="line"/>
-    </contour>
-    <contour>
       <point x="672.0" y="0.0" type="line"/>
       <point x="1156.0" y="1364.0" type="line"/>
       <point x="1172.0" y="1364.0" type="line"/>
@@ -20,6 +14,12 @@
       <point x="1464.0" y="2048.0" type="line"/>
       <point x="868.0" y="2048.0" type="line"/>
       <point x="72.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="560.0" y="752.0" type="line"/>
+      <point x="560.0" y="320.0" type="line"/>
+      <point x="1768.0" y="320.0" type="line"/>
+      <point x="1768.0" y="752.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -33,7 +33,7 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>6.0</real>
           </array>
           <key>stem</key>
@@ -48,7 +48,7 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>5.0</real>
           </array>
           <key>stem</key>
@@ -63,7 +63,7 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>6.0</real>
           </array>
           <key>stem</key>
@@ -83,7 +83,7 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>5.0</real>
           </array>
           <key>stem</key>
@@ -103,13 +103,18 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>place</key>
+          <key>origin</key>
           <array>
-            <real>320.0</real>
-            <real>432.0</real>
+            <real>1.0</real>
+            <real>0.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>1.0</real>
+            <real>3.0</real>
+          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>

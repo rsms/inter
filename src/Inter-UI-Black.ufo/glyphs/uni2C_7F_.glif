@@ -4,9 +4,6 @@
   <unicode hex="2C7F"/>
   <outline>
     <contour>
-      <point x="292.0" y="0.0" type="line"/>
-      <point x="904.0" y="0.0"/>
-      <point x="996.0" y="-600.0"/>
       <point x="1568.0" y="-600.0" type="curve" smooth="yes"/>
       <point x="1664.0" y="-600.0"/>
       <point x="1748.0" y="-580.0"/>
@@ -15,23 +12,19 @@
       <point x="1748.0" y="-160.0"/>
       <point x="1680.0" y="-168.0"/>
       <point x="1604.0" y="-168.0" type="curve" smooth="yes"/>
-      <point x="1252.0" y="-168.0"/>
-      <point x="1088.0" y="436.0"/>
-      <point x="476.0" y="436.0" type="curve"/>
-    </contour>
-    <contour>
+      <point x="1328.0" y="-168.0"/>
+      <point x="1164.0" y="208.0"/>
+      <point x="808.0" y="368.0" type="curve"/>
       <point x="1792.0" y="1712.0" type="line"/>
       <point x="1792.0" y="1988.0" type="line"/>
-      <point x="1408.0" y="1988.0" type="line"/>
-      <point x="136.0" y="280.0" type="line"/>
-      <point x="136.0" y="0.0" type="line"/>
-      <point x="540.0" y="0.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1628.0" y="1988.0" type="line"/>
       <point x="140.0" y="1988.0" type="line"/>
       <point x="140.0" y="1552.0" type="line"/>
-      <point x="1628.0" y="1552.0" type="line"/>
+      <point x="1084.0" y="1552.0" type="line"/>
+      <point x="136.0" y="280.0" type="line"/>
+      <point x="136.0" y="0.0" type="line"/>
+      <point x="292.0" y="0.0" type="line" smooth="yes"/>
+      <point x="904.0" y="0.0"/>
+      <point x="996.0" y="-600.0"/>
     </contour>
   </outline>
   <lib>
@@ -46,7 +39,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>5.0</real>
+            <real>2.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -65,8 +58,8 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
-            <real>3.0</real>
+            <real>0.0</real>
+            <real>16.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -86,7 +79,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>5.0</real>
+            <real>6.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -100,8 +93,8 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
-            <real>3.0</real>
+            <real>0.0</real>
+            <real>20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

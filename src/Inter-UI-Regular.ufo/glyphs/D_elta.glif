@@ -1,32 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Delta" format="2">
-  <advance width="2032.0"/>
+  <advance width="1904.0"/>
   <unicode hex="0394"/>
   <unicode hex="2206"/>
   <outline>
     <contour>
-      <point x="1096.0" y="1868.0" type="line"/>
-      <point x="1096.0" y="2048.0" type="line"/>
-      <point x="920.0" y="2048.0" type="line"/>
-      <point x="76.0" y="0.0" type="line"/>
-      <point x="356.0" y="0.0" type="line"/>
+      <point x="72.0" y="0.0" type="line"/>
+      <point x="1832.0" y="0.0" type="line"/>
+      <point x="1080.0" y="2048.0" type="line"/>
+      <point x="824.0" y="2048.0" type="line"/>
     </contour>
     <contour>
-      <point x="1680.0" y="0.0" type="line"/>
-      <point x="1960.0" y="0.0" type="line"/>
-      <point x="1168.0" y="2048.0" type="line"/>
-      <point x="992.0" y="2048.0" type="line"/>
-      <point x="984.0" y="1872.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1736.0" y="224.0" type="line"/>
-      <point x="292.0" y="224.0" type="line"/>
-      <point x="292.0" y="0.0" type="line"/>
-      <point x="1736.0" y="0.0" type="line"/>
+      <point x="412.0" y="220.0" type="line"/>
+      <point x="944.0" y="1724.0" type="line"/>
+      <point x="960.0" y="1724.0" type="line"/>
+      <point x="1492.0" y="220.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>A</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>A</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -37,39 +33,17 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>2.0</real>
+            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>2.0</real>
-            <real>0.0</real>
+            <real>1.0</real>
+            <real>3.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>1.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <string>d</string>
-            <string>o</string>
-            <string>w</string>
-            <string>n</string>
-          </array>
-          <key>type</key>
-          <string>TopGhost</string>
         </dict>
         <dict>
           <key>horizontal</key>
@@ -79,14 +53,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>2.0</real>
+            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>2.0</real>
-            <real>0.0</real>
+            <real>1.0</real>
+            <real>3.0</real>
           </array>
           <key>type</key>
           <string>TTStem</string>
@@ -98,8 +72,8 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>0.0</real>
             <real>1.0</real>
+            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
