@@ -81,6 +81,13 @@ def main():
       if name in visitedGlyphNames:
         continue
 
+      if name not in font:
+        print(
+          "warning: %r in public.glyphOrder but doesn't exist in font" % name,
+          file=sys.stderr
+        )
+        continue
+
       g = font[name]
 
       # color
