@@ -1306,7 +1306,6 @@ sub N o period by numero;
 } ordn;
 
 feature salt {
-# automatic
 sub one by one.ss01;
 sub one.tf by one.tf.ss01;
 sub four by four.ss01;
@@ -1316,6 +1315,33 @@ sub six.tf by six.tf.ss01;
 sub nine by nine.ss01;
 sub nine.tf by nine.tf.ss01;
 
+sub l by l.ss02;
+sub lslash by lslash.ss02;
+sub lbar by lbar.ss02;
+sub lmidtilde by lmidtilde.ss02;
+sub lbelt by lbelt.ss02;
+sub ldot by ldot.ss02;
+sub lacute by lacute.ss02;
+sub lcommaaccent by lcommaaccent.ss02;
+sub lcaron by lcaron.ss02;
+sub ldotbelow by ldotbelow.ss02;
+sub ldotbelowmacron by ldotbelowmacron.ss02;
+sub llinebelow by llinebelow.ss02;
+sub lcircumflexbelow by lcircumflexbelow.ss02;
+
+sub r by r.1;
+sub rrthook by rrthook.1;
+sub uni024D by uni024D.1;
+sub rdescend by rdescend.1;
+sub racute by racute.1;
+sub rcommaaccent by rcommaaccent.1;
+sub rcaron by rcaron.1;
+sub rdblgrave by rdblgrave.1;
+sub rinvertedbreve by rinvertedbreve.1;
+sub rdotaccent by rdotaccent.1;
+sub rdotbelow by rdotbelow.1;
+sub rdotbelowmacron by rdotbelowmacron.1;
+sub rlinebelow by rlinebelow.1;
 } salt;
 
 feature ss01 {
