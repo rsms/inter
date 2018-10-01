@@ -16,6 +16,7 @@ import signal
 import subprocess
 from functools import partial
 from fontmake.font_project import FontProject
+from defcon import Font
 from fontTools import designspaceLib
 from fontTools import varLib
 from fontTools.misc.transform import Transform
@@ -109,6 +110,7 @@ class VarFontProject(FontProject):
     
     decomposeGlyphs = set()
     for ufo in ufos:
+      updateFontVersion(ufo)
       isItalic = ufo.info.italicAngle != 0
       for glyph in ufo:
         if glyph.components and composedGlyphIsNonTrivial(glyph, yAxisIsNonTrivial=isItalic):
@@ -125,6 +127,24 @@ class VarFontProject(FontProject):
     self.save_otfs(ufos, ttf=True, interpolatable=True, **kwargs)
 
 
+def updateFontVersion(font, updateCreated=True):
+  version = getVersion()
+  buildtag = getGitHash()
+  versionMajor, versionMinor = [int(num) for num in version.split(".")]
+  now = datetime.datetime.utcnow()
+  font.info.version = version
+  font.info.versionMajor = versionMajor
+  font.info.versionMinor = versionMinor
+  font.info.woffMajorVersion = versionMajor
+  font.info.woffMinorVersion = versionMinor
+  font.info.year = now.year
+  font.info.openTypeNameVersion = "%s;%s" % (version, buildtag)
+  font.info.openTypeNameUniqueID = "%s %s:%d:%s" % (font.info.familyName, font.info.styleName, now.year, buildtag)
+  if updateCreated:
+    # creation date & time (YYYY/MM/DD HH:MM:SS)
+    font.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
+
+
 # setFontInfo patches font.info
 # 
 def setFontInfo(font, weight, updateCreated=True):
@@ -135,10 +155,6 @@ def setFontInfo(font, weight, updateCreated=True):
   # For OpenType NAME table IDs, see
   # https://docs.microsoft.com/en-us/typography/opentype/spec/name#name-ids
   #
-  version = getVersion()
-  buildtag = getGitHash()
-  versionMajor, versionMinor = [int(num) for num in version.split(".")]
-  now = datetime.datetime.utcnow()
   family = font.info.familyName  # i.e. "Inter UI"
   style = font.info.styleName    # e.g. "Medium Italic"
   isitalic = font.info.italicAngle != 0
@@ -146,19 +162,8 @@ def setFontInfo(font, weight, updateCreated=True):
   # weight
   font.info.openTypeOS2WeightClass = weight
 
-  # creation date & time (YYYY/MM/DD HH:MM:SS)
-  if updateCreated:
-    font.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
-
   # version
-  font.info.version = version
-  font.info.versionMajor = versionMajor
-  font.info.versionMinor = versionMinor
-  font.info.woffMajorVersion = versionMajor
-  font.info.woffMinorVersion = versionMinor
-  font.info.year = now.year
-  font.info.openTypeNameVersion = "%s;%s" % (version, buildtag)
-  font.info.openTypeNameUniqueID = "%s %s:%d:%s" % (family, style, now.year, buildtag)
+  updateFontVersion(font, updateCreated=updateCreated)
 
   # Names
   family_nosp = re.sub(r'\s', '', family)
@@ -378,9 +383,12 @@ class Main(object):
 
     project = FontProject(verbose=self.logLevelName, validate_ufo=args.validate)
 
+    ufo = Font(args.srcfile)
+    updateFontVersion(ufo)
+
     # run fontmake to produce OTF/TTF file at tmpfilename
     project.run_from_ufos(
-      [args.srcfile],
+      [ ufo ],
       output_path=tmpfilename,
       output=formats,
       subroutinize=True,
