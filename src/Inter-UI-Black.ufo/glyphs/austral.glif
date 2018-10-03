@@ -1,39 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="austral" format="2">
-  <advance width="2376.0"/>
+  <advance width="2240.0"/>
   <unicode hex="20B3"/>
+  <guideline x="1240.0" y="68.0" angle="90.0"/>
   <outline>
     <contour>
-      <point x="2220.0" y="1276.0" type="line"/>
-      <point x="156.0" y="1276.0" type="line"/>
-      <point x="156.0" y="864.0" type="line"/>
-      <point x="2220.0" y="864.0" type="line"/>
+      <point x="64.0" y="844.0" type="line"/>
+      <point x="2176.0" y="844.0" type="line"/>
+      <point x="2176.0" y="1044.0" type="line"/>
+      <point x="64.0" y="1044.0" type="line"/>
     </contour>
     <contour>
-      <point x="2220.0" y="740.0" type="line"/>
-      <point x="156.0" y="740.0" type="line"/>
-      <point x="156.0" y="324.0" type="line"/>
-      <point x="2220.0" y="324.0" type="line"/>
+      <point x="64.0" y="444.0" type="line"/>
+      <point x="2176.0" y="444.0" type="line"/>
+      <point x="2176.0" y="644.0" type="line"/>
+      <point x="64.0" y="644.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1836.0" y="752.0" type="line"/>
-      <point x="540.0" y="752.0" type="line"/>
-      <point x="540.0" y="320.0" type="line"/>
-      <point x="1836.0" y="320.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="696.0" y="0.0" type="line"/>
-      <point x="1176.0" y="1364.0" type="line"/>
-      <point x="1200.0" y="1364.0" type="line"/>
-      <point x="1680.0" y="0.0" type="line"/>
-      <point x="2280.0" y="0.0" type="line"/>
-      <point x="1488.0" y="2048.0" type="line"/>
-      <point x="892.0" y="2048.0" type="line"/>
-      <point x="96.0" y="0.0" type="line"/>
-    </contour>
+    <component base="Lambda"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>A</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>A</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -41,10 +31,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>3.0</real>
-            <real>6.0</real>
+            <real>0.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -61,10 +51,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>3.0</real>
-            <real>5.0</real>
+            <real>2048.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -83,10 +73,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>3.0</real>
-            <real>6.0</real>
+            <real>0.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -98,10 +88,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>3.0</real>
-            <real>5.0</real>
+            <real>2048.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

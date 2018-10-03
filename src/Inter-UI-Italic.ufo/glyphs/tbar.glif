@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tbar" format="2">
-  <advance width="1064.0"/>
+  <advance width="1040.0"/>
   <unicode hex="0167"/>
   <outline>
     <contour>
-      <point x="100.0" y="840.0" type="line"/>
-      <point x="896.0" y="840.0" type="line"/>
-      <point x="928.0" y="1024.0" type="line"/>
-      <point x="132.0" y="1024.0" type="line"/>
+      <point x="104.0" y="840.0" type="line"/>
+      <point x="900.0" y="840.0" type="line"/>
+      <point x="932.0" y="1024.0" type="line"/>
+      <point x="136.0" y="1024.0" type="line"/>
     </contour>
-    <component base="t" xOffset="20.0"/>
+    <component base="t"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>t</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>t</string>
+    </dict>
+  </lib>
 </glyph>

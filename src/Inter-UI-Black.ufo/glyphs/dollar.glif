@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dollar" format="2">
-  <advance width="1944.0"/>
+  <advance width="1876.0"/>
   <unicode hex="0024"/>
-  <guideline x="8.0" y="2280.0" angle="0.0"/>
-  <guideline x="8.0" y="764.0" angle="0.0"/>
+  <guideline y="2280.0"/>
+  <guideline y="764.0"/>
   <outline>
     <contour>
-      <point x="888.0" y="-256.0" type="line"/>
-      <point x="1016.0" y="-256.0" type="line"/>
-      <point x="1016.0" y="2304.0" type="line"/>
-      <point x="888.0" y="2304.0" type="line"/>
+      <point x="880.0" y="-256.0" type="line"/>
+      <point x="1008.0" y="-256.0" type="line"/>
+      <point x="1008.0" y="2304.0" type="line"/>
+      <point x="880.0" y="2304.0" type="line"/>
     </contour>
-    <component base="S" xOffset="8.0"/>
+    <component base="S"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>S</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>S</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>

@@ -2,16 +2,12 @@
 <glyph name="one.tf.ss01" format="2">
   <advance width="1984.0"/>
   <outline>
-    <contour>
-      <point x="288.0" y="0.0" type="line"/>
-      <point x="1700.0" y="0.0" type="line"/>
-      <point x="1700.0" y="448.0" type="line"/>
-      <point x="288.0" y="448.0" type="line"/>
-    </contour>
-    <component base="one.ss01" xOffset="160.0"/>
+    <component base="one.ss01" xOffset="292.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>zero.tf</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -19,10 +15,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>3.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -61,18 +57,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>288.0</real>
+            <real>1412.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -81,10 +72,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>3.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -96,10 +87,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>448.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

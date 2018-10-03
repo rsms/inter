@@ -727,6 +727,7 @@
       <string>rrthook</string>
       <string>uni024D</string>
       <string>rfishhook</string>
+      <string>rdescend</string>
       <string>racute</string>
       <string>rcommaaccent</string>
       <string>rcaron</string>
@@ -751,6 +752,7 @@
       <string>scircumflex</string>
       <string>scedilla</string>
       <string>scaron</string>
+      <string>rupee</string>
     </array>
     <key>public.kern1.six.1</key>
     <array>
@@ -766,6 +768,8 @@
       <string>ncurl</string>
       <string>t</string>
       <string>tpalatalhook</string>
+      <string>trthook</string>
+      <string>tbar</string>
       <string>tcaron</string>
     </array>
     <key>public.kern1.two</key>
@@ -987,6 +991,7 @@
       <string>l.ss02</string>
       <string>germandbls</string>
       <string>Thorn</string>
+      <string>rupee</string>
       <string>numero</string>
     </array>
     <key>public.kern2.C</key>
@@ -1056,6 +1061,10 @@
       <string>J</string>
       <string>Jcircumflex</string>
       <string>uni0248</string>
+    </array>
+    <key>public.kern2.O</key>
+    <array>
+      <string>Q_rthook</string>
     </array>
     <key>public.kern2.Omicrongreek</key>
     <array>
@@ -1537,6 +1546,10 @@
       <string>primetripl1</string>
       <string>quotedblright</string>
     </array>
+    <key>public.kern2.r</key>
+    <array>
+      <string>rdescend</string>
+    </array>
     <key>public.kern2.s</key>
     <array>
       <string>s</string>
@@ -1564,7 +1577,9 @@
     <array>
       <string>t</string>
       <string>tpalatalhook</string>
+      <string>trthook</string>
       <string>tccurl</string>
+      <string>tbar</string>
       <string>tcaron</string>
     </array>
     <key>public.kern2.two</key>

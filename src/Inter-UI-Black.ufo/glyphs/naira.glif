@@ -1,34 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="naira" format="2">
-  <advance width="2516.0"/>
+  <advance width="2104.0"/>
   <unicode hex="20A6"/>
   <outline>
     <contour>
-      <point x="2420.0" y="1412.0" type="line"/>
-      <point x="96.0" y="1412.0" type="line"/>
-      <point x="96.0" y="1192.0" type="line"/>
-      <point x="2420.0" y="1192.0" type="line"/>
+      <point x="2072.0" y="1300.0" type="line"/>
+      <point x="32.0" y="1300.0" type="line"/>
+      <point x="32.0" y="1100.0" type="line"/>
+      <point x="2072.0" y="1100.0" type="line"/>
     </contour>
     <contour>
-      <point x="2420.0" y="940.0" type="line"/>
-      <point x="96.0" y="940.0" type="line"/>
-      <point x="96.0" y="720.0" type="line"/>
-      <point x="2420.0" y="720.0" type="line"/>
+      <point x="2072.0" y="868.0" type="line"/>
+      <point x="32.0" y="868.0" type="line"/>
+      <point x="32.0" y="668.0" type="line"/>
+      <point x="2072.0" y="668.0" type="line"/>
     </contour>
-    <contour>
-      <point x="2144.0" y="2048.0" type="line"/>
-      <point x="1588.0" y="2048.0" type="line"/>
-      <point x="1588.0" y="928.0" type="line"/>
-      <point x="1572.0" y="928.0" type="line"/>
-      <point x="924.0" y="2048.0" type="line"/>
-      <point x="372.0" y="2048.0" type="line"/>
-      <point x="372.0" y="0.0" type="line"/>
-      <point x="924.0" y="0.0" type="line"/>
-      <point x="924.0" y="1124.0" type="line"/>
-      <point x="940.0" y="1124.0" type="line"/>
-      <point x="1596.0" y="0.0" type="line"/>
-      <point x="2144.0" y="0.0" type="line"/>
-    </contour>
+    <component base="N" xOffset="36.0"/>
   </outline>
   <lib>
     <dict>
@@ -39,10 +26,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>5.0</real>
+            <real>0.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -59,18 +46,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>720.0</real>
+            <real>220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -79,18 +61,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1192.0</real>
+            <real>220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -99,10 +76,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>4.0</real>
+            <real>2048.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -121,10 +98,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>5.0</real>
+            <real>0.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -136,18 +113,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>720.0</real>
+            <real>220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
@@ -156,18 +128,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1192.0</real>
+            <real>220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
@@ -176,10 +143,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>4.0</real>
+            <real>2048.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

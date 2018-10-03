@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni023E" format="2">
-  <advance width="1828.0"/>
+  <advance width="1932.0"/>
   <unicode hex="023E"/>
   <outline>
     <contour>
-      <point x="488.0" y="-28.0" type="line"/>
-      <point x="1740.0" y="2216.0" type="line"/>
-      <point x="1496.0" y="2344.0" type="line"/>
-      <point x="244.0" y="100.0" type="line"/>
+      <point x="476.0" y="-260.0" type="line"/>
+      <point x="760.0" y="-260.0" type="line"/>
+      <point x="1536.0" y="2308.0" type="line"/>
+      <point x="1252.0" y="2308.0" type="line"/>
     </contour>
-    <component base="T" xOffset="8.0"/>
+    <component base="T"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>T</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>T</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -20,10 +24,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>-28.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -40,18 +44,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>244.0</real>
+            <real>1496.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -60,10 +59,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>-28.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
