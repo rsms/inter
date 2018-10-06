@@ -1,94 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zrthook" format="2">
-  <advance width="1620.0"/>
+  <advance width="2040.0"/>
   <unicode hex="0290"/>
-  <guideline x="764.0" y="656.0" angle="90.0"/>
+  <guideline x="748.0" y="656.0" angle="90.0"/>
   <outline>
     <contour>
-      <point x="1156.0" y="416.0" type="line"/>
-      <point x="1156.0" y="-76.0" type="line" smooth="yes"/>
-      <point x="1156.0" y="-408.0"/>
-      <point x="1340.0" y="-600.0"/>
-      <point x="1668.0" y="-600.0" type="curve" smooth="yes"/>
-      <point x="1740.0" y="-600.0"/>
-      <point x="1792.0" y="-596.0"/>
-      <point x="1868.0" y="-580.0" type="curve"/>
-      <point x="1868.0" y="-244.0" type="line"/>
-      <point x="1820.0" y="-248.0"/>
-      <point x="1792.0" y="-252.0"/>
-      <point x="1740.0" y="-252.0" type="curve" smooth="yes"/>
-      <point x="1640.0" y="-252.0"/>
-      <point x="1496.0" y="-216.0"/>
-      <point x="1496.0" y="-76.0" type="curve" smooth="yes"/>
-      <point x="1496.0" y="416.0" type="line"/>
+      <point x="1164.0" y="0.0" type="line"/>
+      <point x="1164.0" y="-76.0" type="line" smooth="yes"/>
+      <point x="1164.0" y="-408.0"/>
+      <point x="1348.0" y="-600.0"/>
+      <point x="1676.0" y="-600.0" type="curve" smooth="yes"/>
+      <point x="1748.0" y="-600.0"/>
+      <point x="1800.0" y="-596.0"/>
+      <point x="1876.0" y="-580.0" type="curve"/>
+      <point x="1876.0" y="-244.0" type="line"/>
+      <point x="1828.0" y="-248.0"/>
+      <point x="1800.0" y="-252.0"/>
+      <point x="1748.0" y="-252.0" type="curve" smooth="yes"/>
+      <point x="1648.0" y="-252.0"/>
+      <point x="1504.0" y="-216.0"/>
+      <point x="1504.0" y="-76.0" type="curve" smooth="yes"/>
+      <point x="1504.0" y="0.0" type="line"/>
     </contour>
-    <component base="z" xOffset="16.0"/>
+    <component base="z"/>
   </outline>
   <lib>
     <dict>
-      <key>com.schriftgestaltung.hints</key>
-      <array>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>3.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>15.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <false/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>13.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>4</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>3.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>15.0</real>
-          </array>
-          <key>type</key>
-          <string>TTStem</string>
-        </dict>
-      </array>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>z</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>z</string>
     </dict>
   </lib>
 </glyph>

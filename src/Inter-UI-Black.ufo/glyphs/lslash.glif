@@ -1,118 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lslash" format="2">
-  <advance width="804.0"/>
+  <advance width="832.0"/>
   <unicode hex="0142"/>
   <outline>
     <contour>
-      <point x="844.0" y="1368.0" type="line"/>
-      <point x="-52.0" y="1108.0" type="line"/>
-      <point x="-52.0" y="832.0" type="line"/>
-      <point x="844.0" y="1092.0" type="line"/>
+      <point x="864.0" y="1368.0" type="line"/>
+      <point x="-32.0" y="1108.0" type="line"/>
+      <point x="-32.0" y="832.0" type="line"/>
+      <point x="864.0" y="1092.0" type="line"/>
     </contour>
-    <contour>
-      <point x="676.0" y="2048.0" type="line"/>
-      <point x="124.0" y="2048.0" type="line"/>
-      <point x="124.0" y="0.0" type="line"/>
-      <point x="676.0" y="0.0" type="line"/>
-    </contour>
+    <component base="l"/>
   </outline>
-  <lib>
-    <dict>
-      <key>com.schriftgestaltung.hints</key>
-      <array>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>1.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <string>u</string>
-            <string>p</string>
-          </array>
-          <key>type</key>
-          <string>BottomGhost</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <string>d</string>
-            <string>o</string>
-            <string>w</string>
-            <string>n</string>
-          </array>
-          <key>type</key>
-          <string>TopGhost</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <false/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>1.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>4</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>1.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>type</key>
-          <string>Anchor</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>4</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>type</key>
-          <string>Anchor</string>
-        </dict>
-      </array>
-    </dict>
-  </lib>
 </glyph>
