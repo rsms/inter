@@ -127,11 +127,15 @@ class VarFontProject(FontProject):
     self.save_otfs(ufos, ttf=True, interpolatable=True, **kwargs)
 
 
-def updateFontVersion(font, updateCreated=True):
+def updateFontVersion(font, dummy=False):
   version = getVersion()
   buildtag = getGitHash()
-  versionMajor, versionMinor = [int(num) for num in version.split(".")]
   now = datetime.datetime.utcnow()
+  if dummy:
+    version = "1.0"
+    buildtag = "src"
+    now = datetime.datetime(2016, 1, 1, 0, 0, 0, 0)
+  versionMajor, versionMinor = [int(num) for num in version.split(".")]
   font.info.version = version
   font.info.versionMajor = versionMajor
   font.info.versionMinor = versionMinor
@@ -139,15 +143,15 @@ def updateFontVersion(font, updateCreated=True):
   font.info.woffMinorVersion = versionMinor
   font.info.year = now.year
   font.info.openTypeNameVersion = "%s;%s" % (version, buildtag)
-  font.info.openTypeNameUniqueID = "%s %s:%d:%s" % (font.info.familyName, font.info.styleName, now.year, buildtag)
-  if updateCreated:
-    # creation date & time (YYYY/MM/DD HH:MM:SS)
-    font.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
+  font.info.openTypeNameUniqueID = "%s %s:%d:%s" % (
+    font.info.familyName, font.info.styleName, now.year, buildtag)
+  # creation date & time (YYYY/MM/DD HH:MM:SS)
+  font.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
 
 
 # setFontInfo patches font.info
 # 
-def setFontInfo(font, weight, updateCreated=True):
+def setFontInfo(font, weight):
   #
   # For UFO3 names, see
   # https://github.com/unified-font-object/ufo-spec/blob/gh-pages/versions/
@@ -162,8 +166,8 @@ def setFontInfo(font, weight, updateCreated=True):
   # weight
   font.info.openTypeOS2WeightClass = weight
 
-  # version
-  updateFontVersion(font, updateCreated=updateCreated)
+  # version (dummy)
+  updateFontVersion(font, dummy=True)
 
   # Names
   family_nosp = re.sub(r'\s', '', family)
@@ -432,7 +436,7 @@ class Main(object):
 
   def _glyphsyncWriteUFO(self, font, weight, ufo_path):
     # fixup font info
-    setFontInfo(font, weight, updateCreated=False)
+    setFontInfo(font, weight)
 
     # cleanup lib
     lib = dict()
