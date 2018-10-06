@@ -179,12 +179,12 @@ def genKerningInfo(ufo, glyphnames, nameToIdMap):
     leftnames = []
     rightnames = []
 
-    if leftname[0] == '@':
+    if leftname.startswith('public.kern'):
       leftnames = groups[leftname]
     else:
       leftnames = [leftname]
 
-    if rightname[0] == '@':
+    if rightname.startswith('public.kern'):
       rightnames = groups[rightname]
     else:
       rightnames = [rightname]
