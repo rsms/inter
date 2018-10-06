@@ -1,45 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni023C" format="2">
-  <advance width="1712.0"/>
+  <advance width="1716.0"/>
   <unicode hex="023C"/>
   <outline>
     <contour>
-      <point x="1384.0" y="2004.0" type="line"/>
-      <point x="1104.0" y="2004.0" type="line"/>
-      <point x="304.0" y="-572.0" type="line"/>
-      <point x="580.0" y="-572.0" type="line"/>
+      <point x="1408.0" y="2048.0" type="line"/>
+      <point x="1124.0" y="2048.0" type="line"/>
+      <point x="324.0" y="-576.0" type="line"/>
+      <point x="604.0" y="-576.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1628.0" y="1016.0" type="line"/>
-      <point x="1551.0" y="1348.0"/>
-      <point x="1275.0" y="1556.0"/>
-      <point x="892.0" y="1556.0" type="curve" smooth="yes"/>
-      <point x="403.0" y="1556.0"/>
-      <point x="119.0" y="1232.0"/>
-      <point x="120.0" y="768.0" type="curve" smooth="yes"/>
-      <point x="119.0" y="308.0"/>
-      <point x="407.0" y="-28.0"/>
-      <point x="888.0" y="-28.0" type="curve" smooth="yes"/>
-      <point x="1251.0" y="-28.0"/>
-      <point x="1535.0" y="164.0"/>
-      <point x="1620.0" y="480.0" type="curve"/>
-      <point x="1116.0" y="588.0" type="line"/>
-      <point x="1083.0" y="492.0"/>
-      <point x="1031.0" y="404.0"/>
-      <point x="888.0" y="404.0" type="curve" smooth="yes"/>
-      <point x="691.0" y="404.0"/>
-      <point x="639.0" y="556.0"/>
-      <point x="640.0" y="768.0" type="curve" smooth="yes"/>
-      <point x="639.0" y="984.0"/>
-      <point x="691.0" y="1132.0"/>
-      <point x="888.0" y="1132.0" type="curve" smooth="yes"/>
-      <point x="1031.0" y="1132.0"/>
-      <point x="1087.0" y="1056.0"/>
-      <point x="1128.0" y="904.0" type="curve"/>
-    </contour>
+    <component base="c"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>c</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>c</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -47,10 +24,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>-572.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -67,10 +44,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>2.0</real>
+            <real>1556.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -89,10 +66,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>8.0</real>
+            <real>-28.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -109,18 +86,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>5.0</real>
+            <real>92.0</real>
+            <real>1508.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>25.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -129,10 +101,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>-572.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -144,10 +116,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>2.0</real>
+            <real>1556.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -159,10 +131,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>8.0</real>
+            <real>-28.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
