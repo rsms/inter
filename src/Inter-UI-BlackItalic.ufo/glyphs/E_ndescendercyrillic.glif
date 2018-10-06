@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Endescendercyrillic" format="2">
-  <advance width="2540.0"/>
+  <advance width="2644.0"/>
   <unicode hex="04A2"/>
   <outline>
-    <component base="H" xOffset="12.0"/>
-    <component base="cyrillictic.cn" xOffset="1688.0"/>
+    <component base="H"/>
+    <component base="cyrillictic.cn" xOffset="1756.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>H</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>H</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
         <integer>-1</integer>

@@ -1,29 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="M" format="2">
-  <advance width="2744.0"/>
+  <advance width="2624.0"/>
   <unicode hex="004D"/>
   <guideline x="188.0" y="1220.0" angle="0.0"/>
-  <guideline x="1572.0" y="1848.0" angle="90.0"/>
   <guideline x="1088.0" y="2164.0" angle="90.0"/>
-  <guideline x="2140.0" y="2040.0" angle="90.0"/>
   <outline>
     <contour>
       <point x="132.0" y="2048.0" type="line"/>
       <point x="132.0" y="0.0" type="line"/>
-      <point x="692.0" y="0.0" type="line"/>
-      <point x="692.0" y="1260.0" type="line"/>
-      <point x="708.0" y="1260.0" type="line"/>
-      <point x="1196.0" y="40.0" type="line"/>
-      <point x="1548.0" y="40.0" type="line"/>
-      <point x="2036.0" y="1252.0" type="line"/>
-      <point x="2052.0" y="1252.0" type="line"/>
-      <point x="2052.0" y="0.0" type="line"/>
-      <point x="2612.0" y="0.0" type="line"/>
-      <point x="2612.0" y="2048.0" type="line"/>
-      <point x="1880.0" y="2048.0" type="line"/>
-      <point x="1384.0" y="880.0" type="line"/>
-      <point x="1360.0" y="880.0" type="line"/>
-      <point x="864.0" y="2048.0" type="line"/>
+      <point x="676.0" y="0.0" type="line"/>
+      <point x="676.0" y="1192.0" type="line"/>
+      <point x="692.0" y="1192.0" type="line"/>
+      <point x="1148.0" y="16.0" type="line"/>
+      <point x="1476.0" y="16.0" type="line"/>
+      <point x="1932.0" y="1184.0" type="line"/>
+      <point x="1948.0" y="1184.0" type="line"/>
+      <point x="1948.0" y="0.0" type="line"/>
+      <point x="2492.0" y="0.0" type="line"/>
+      <point x="2492.0" y="2048.0" type="line"/>
+      <point x="1800.0" y="2048.0" type="line"/>
+      <point x="1324.0" y="888.0" type="line"/>
+      <point x="1300.0" y="888.0" type="line"/>
+      <point x="824.0" y="2048.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -38,48 +36,6 @@
           <key>horizontal</key>
           <true/>
           <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <string>u</string>
-            <string>p</string>
-          </array>
-          <key>type</key>
-          <string>BottomGhost</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>15.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <string>d</string>
-            <string>o</string>
-            <string>w</string>
-            <string>n</string>
-          </array>
-          <key>type</key>
-          <string>TopGhost</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
           <integer>4</integer>
           <key>origin</key>
           <array>
@@ -105,6 +61,46 @@
           <integer>-2</integer>
           <key>type</key>
           <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>8.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>9.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
         </dict>
       </array>
       <key>public.markColor</key>

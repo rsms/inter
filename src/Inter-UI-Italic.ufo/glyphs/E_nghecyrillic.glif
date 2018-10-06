@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Enghecyrillic" format="2">
-  <advance width="2800.0"/>
+  <advance width="2776.0"/>
   <unicode hex="04A4"/>
   <outline>
     <contour>
-      <point x="2800.0" y="2048.0" type="line"/>
-      <point x="1752.0" y="2048.0" type="line"/>
-      <point x="1892.0" y="1828.0" type="line"/>
-      <point x="2764.0" y="1828.0" type="line"/>
+      <point x="2852.0" y="2048.0" type="line"/>
+      <point x="1804.0" y="2048.0" type="line"/>
+      <point x="1944.0" y="1828.0" type="line"/>
+      <point x="2816.0" y="1828.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1632.0" y="1136.0" type="line"/>
-      <point x="460.0" y="1136.0" type="line"/>
-      <point x="424.0" y="916.0" type="line"/>
-      <point x="1596.0" y="916.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="656.0" y="2048.0" type="line"/>
-      <point x="408.0" y="2048.0" type="line"/>
-      <point x="68.0" y="0.0" type="line"/>
-      <point x="316.0" y="0.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1996.0" y="2048.0" type="line"/>
-      <point x="1748.0" y="2048.0" type="line"/>
-      <point x="1408.0" y="0.0" type="line"/>
-      <point x="1656.0" y="0.0" type="line"/>
-    </contour>
+    <component base="H"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>H</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>T</string>
+    </dict>
+  </lib>
 </glyph>
