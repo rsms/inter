@@ -186,23 +186,12 @@ class Editable {
     }
 
     // left indent
-    let leftMargin = 0
-    // TODO: Find a formula for this: F(size) -> leftMargin
     // TODO: Consider making this part of dynamic metrics.
-         if (size >= 162) { leftMargin = -10; }
-    else if (size >= 146) { leftMargin = -9; }
-    else if (size >= 130) { leftMargin = -8; }
-    else if (size >= 114) { leftMargin = -7; }
-    else if (size >= 98)  { leftMargin = -6; }
-    else if (size >= 79)  { leftMargin = -5; }
-    else if (size >= 64)  { leftMargin = -4; }
-    else if (size >= 48)  { leftMargin = -3; }
-    else if (size >= 32)  { leftMargin = -2; }
-    else if (size >= 16)  { leftMargin = -1; }
+    let leftMargin = size / -16
     if (leftMargin == 0) {
       this.el.style.marginLeft = null
     } else {
-      this.el.style.marginLeft = leftMargin + 'px'
+      this.el.style.marginLeft = leftMargin.toFixed(1) + 'px'
     }
   }
 
@@ -347,6 +336,7 @@ class CtxEdit {
 
       input.addEventListener('pointerdown', showValTip)
       input.addEventListener('pointerup', hideValTip)
+      input.addEventListener('pointercancel', hideValTip)
 
       let timer = null
       input.addEventListener('input', ev => {

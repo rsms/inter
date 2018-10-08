@@ -26,10 +26,14 @@
   opacity:0;
   transition: 90ms all cubic-bezier(0.25, 0.47, 0.44, 0.93);
   transform: translate(0, var(--strip-height));
+
+  outline: none;
+  pointer-events: none;
 }
 #ctxedit-ui.visible {
   opacity:1;
   transform: translate(0, 0);
+  pointer-events: initial;
 }
 #ctxedit-ui .wrapper {
   display: flex;
@@ -178,6 +182,20 @@
   #ctxedit-ui .button.features-button { background-image: url(settings.svg); }
   #ctxedit-ui .button.reset-button { background-image: url(reset.svg); }
   #ctxedit-ui .button.dismiss-button { background-image: url(dismiss.svg); }
+
+
+
+/* narrow viewports */
+@media only screen and (max-width: 639px) {
+  #ctxedit-ui {
+    background: black;
+    height: calc(var(--strip-height) * 4);
+  }
+  #ctxedit-ui .wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 
 
 .font-preload {
