@@ -469,6 +469,47 @@ class Main(object):
     font.save(ufo_path)
 
 
+  def _genSubsetDesignSpace(self, designspace, tag, filename):
+    ds = designspace
+    italic = False
+    if tag == 'italic':
+      italic = True
+    elif tag != 'upright':
+      raise Exception('unexpected tag ' + tag)
+
+    for a in ds.axes:
+      if a.tag == "slnt":
+        ds.axes.remove(a)
+        break
+
+    rmlist = []
+    hasDefault = not italic
+    for source in designspace.sources:
+      isitalic = source.name.find('italic') != -1
+      if italic != isitalic:
+        rmlist.append(source)
+      elif italic and not hasDefault:
+        source.copyLib = True
+        source.copyInfo = True
+        source.copyGroups = True
+        source.copyFeatures = True
+        hasDefault = True
+    for source in rmlist:
+      designspace.sources.remove(source)
+
+    rmlist = []
+    for instance in designspace.instances:
+      isitalic = instance.name.find('italic') != -1
+      if italic != isitalic:
+        rmlist.append(instance)
+    for instance in rmlist:
+      designspace.instances.remove(instance)
+
+    self.log("write %s" % relpath(filename, os.getcwd()))
+    ds.write(filename)
+
+
+
   def cmd_glyphsync(self, argv):
     argparser = argparse.ArgumentParser(
       usage='%(prog)s glyphsync <glyphsfile> [options]',
@@ -556,6 +597,24 @@ class Main(object):
 
     self.log("write %s" % relpath(designspace_file, os.getcwd()))
     designspace.write(designspace_file)
+
+    # upright designspace
+    upright_designspace_file = pjoin(outdir, 'Inter-UI-upright.designspace')
+    p = Process(
+      target=self._genSubsetDesignSpace,
+      args=(designspace, 'upright', upright_designspace_file)
+    )
+    p.start()
+    procs.append(p)
+
+    # italic designspace
+    italic_designspace_file = pjoin(outdir, 'Inter-UI-italic.designspace')
+    p = Process(
+      target=self._genSubsetDesignSpace,
+      args=(designspace, 'italic', italic_designspace_file)
+    )
+    p.start()
+    procs.append(p)
 
     for p in procs:
       p.join()

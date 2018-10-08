@@ -44,7 +44,13 @@ all: all_const  all_const_hinted  all_var
 
 all_const: all_otf  all_ttf  all_web
 all_const_hinted: all_ttf_hinted  all_web_hinted
-all_var: $(FONTDIR)/var/Inter-UI.var.woff2
+all_var: \
+	$(FONTDIR)/var/Inter-UI.var.woff2 \
+	$(FONTDIR)/var/Inter-UI-upright.var.woff2 \
+	$(FONTDIR)/var/Inter-UI-italic.var.woff2 \
+	$(FONTDIR)/var/Inter-UI.var.ttf \
+	$(FONTDIR)/var/Inter-UI-upright.var.ttf \
+	$(FONTDIR)/var/Inter-UI-italic.var.ttf
 
 # Disabled. See https://github.com/rsms/inter/issues/75
 # all_var_hinted: $(FONTDIR)/var-hinted/Inter-UI.var.ttf $(FONTDIR)/var-hinted/Inter-UI.var.woff2
@@ -79,8 +85,8 @@ build/%.woff: build/%.ttf
 
 all_ufo_masters = $(Regular_ufo_d) $(Black_ufo_d) $(Italic_ufo_d) $(BlackItalic_ufo_d)
 
-$(FONTDIR)/var/Inter-UI.var.ttf: src/Inter-UI.designspace $(all_ufo_masters)
-	misc/fontbuild compile-var -o $@ src/Inter-UI.designspace
+$(FONTDIR)/var/%.var.ttf: src/%.designspace $(all_ufo_masters)
+	misc/fontbuild compile-var -o $@ $<
 
 $(FONTDIR)/const/Inter-UI-Regular.%: src/Inter-UI.designspace $(Regular_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Regular.ufo
@@ -135,7 +141,7 @@ $(FONTDIR)/const-hinted/%.ttf: $(FONTDIR)/const/%.ttf
 # 	ttfautohint --fallback-stem-width=256 --no-info --composites "$<" "$@"
 
 # make sure intermediate TTFs are not gc'd by make
-.PRECIOUS: $(FONTDIR)/const/%.ttf $(FONTDIR)/var/%.ttf
+.PRECIOUS: $(FONTDIR)/const/%.ttf $(FONTDIR)/const-hinted/%.ttf $(FONTDIR)/var/%.var.ttf
 
 # check var
 all_check_var: $(FONTDIR)/var/Inter-UI.var.ttf
@@ -235,7 +241,7 @@ docs_fonts:
 	cp -a $(FONTDIR)/const/*.woff \
 	      $(FONTDIR)/const/*.woff2 \
 	      $(FONTDIR)/const/*.otf \
-	      $(FONTDIR)/var/*.woff2 \
+	      $(FONTDIR)/var/*.* \
 	      docs/font-files/
 
 .PHONY: docs docs_info docs_fonts
