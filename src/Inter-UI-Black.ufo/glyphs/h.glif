@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="h" format="2">
-  <advance width="1828.0"/>
+  <advance width="1820.0"/>
   <unicode hex="0068"/>
+  <note>
+based on "n" and made slightly wider, brining the top vertical stem with it out.
+</note>
   <guideline x="12.0" y="1240.0" angle="0.0"/>
   <guideline x="12.0" y="764.0" angle="0.0"/>
   <guideline x="408.0" y="1696.0" angle="90.0"/>
@@ -32,6 +35,10 @@
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>m</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
