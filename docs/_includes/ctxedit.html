@@ -1,0 +1,57 @@
+{%
+
+capture url_root
+  %}{% if site.safe == false %}/{% else %}/inter/{% endif
+%}{%
+endcapture %}{%
+
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/res/ctxedit.js" %}{%
+    assign ctxedit_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/ctxedit.css" %}{%
+    assign ctxedit_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor
+
+%}
+<link rel="stylesheet" href="{{url_root}}res/ctxedit.css?v={{ ctxedit_css_v }}">
+<div id="ctxedit-ui" class="styled-inputs-neg" contenteditable="false" tabindex="1">
+  <div class="wrapper">
+    <div class="control popup">
+      <select data-binding="style">
+        <option value="regular" default>Regular</option>
+        <option value="italic">Italic</option>
+        <option value="medium">Medium</option>
+        <option value="medium-italic">Medium Italic</option>
+        <option value="semi-bold">Semi Bold</option>
+        <option value="semi-bold-italic">Semi Bold Italic</option>
+        <option value="bold">Bold</option>
+        <option value="bold-italic">Bold Italic</option>
+        <option value="extra-bold">Extra Bold</option>
+        <option value="extra-bold-italic">Extra Bold Italic</option>
+        <option value="black">Black</option>
+        <option value="black-italic">Black Italic</option>
+      </select>
+    </div>
+    <div class="control range">
+      <img title="Size" class="icon" src="icons/font-size.svg">
+      <input type="range" min="8" max="150" step="1" data-binding="size">
+    </div>
+    <div class="control range">
+      <img title="Tracking/letter-spacing in EM" class="icon" src="icons/letter-spacing.svg">
+      <input type="range" min="-0.1" max="0.1" step="0.001" data-binding="tracking">
+    </div>
+    <div class="control range">
+      <img title="Line height" class="icon" src="icons/line-height.svg">
+      <input type="range" value="1.2" min="0.7" max="2" step="0.01" data-binding="lineHeight">
+    </div>
+    <!-- <div class="control color">
+      <input type="color" value="#111" data-binding="color">
+    </div> -->
+    <!-- <div class="control button features-button" title="Features..."></div> -->
+    <div class="control button reset-button" title="Reset"></div>
+    <div class="control button dismiss-button" title="Close editor"></div>
+  </div>
+</div>
+<script src="{{url_root}}res/ctxedit.js?v={{ ctxedit_js_v }}"></script>

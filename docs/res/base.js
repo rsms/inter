@@ -86,6 +86,13 @@ function InterUIDynamicTracking(fontSize) {
   return a + b * Math.pow(Math.E, c * fontSize)
 }
 
+// InterUIDynamicLineHeight produces the line height for the given font size
+//
+function InterUIDynamicLineHeight(fontSize) {
+  var l = 1.4
+  return Math.round(fontSize * l)
+}
+
 
 // Mac or not? Maybe even a buggy Safari?
 var isMac = false

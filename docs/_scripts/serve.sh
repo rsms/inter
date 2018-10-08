@@ -2,6 +2,11 @@
 set -e
 cd "$(dirname "$0")/.."
 
+if [ "$1" == "-h" ]; then
+  echo "usage: $0 [<bindaddr>]" >&2
+  exit 1
+fi
+
 if [ ! -s lab/fonts ]; then
   rm -f lab/fonts
   ln -fs ../../build/fonts lab/fonts
@@ -15,4 +20,9 @@ fi
 # For live testing with fonts, you'll instead want to use docs/lab/serve.py
 rm -rf _site
 
-jekyll serve --limit_posts 20 --watch --host 127.0.0.1 --port 3002
+BINDADDR=127.0.0.1
+if [ "$1" != "" ]; then
+  BINDADDR=$1
+fi
+
+jekyll serve --limit_posts 20 --watch --host "$BINDADDR" --port 3002

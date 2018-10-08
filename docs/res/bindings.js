@@ -2,6 +2,14 @@
 
 function passThrough(v) { return v }
 
+function valueGetter(el) {
+  return (
+    'valueAsNumber' in el ? () => el.valueAsNumber :
+    (el.type == 'number' || el.type == 'range') ? () => parseFloat(el.value) :
+    () => el.value
+  )
+}
+
 function Binding(name){
   this.name = name
   this.value = undefined
@@ -15,8 +23,9 @@ function Binding(name){
 
 Binding.prototype.addInput = function(el) {
   var binding = this
-  var _onInput = function(ev) {
-    binding.setValue(el.value, el)
+  var getValue = valueGetter(el)
+  var _onInput = ev => {
+    binding.setValue(getValue(), el)
   }
   var input = {
     el: el,
@@ -24,12 +33,17 @@ Binding.prototype.addInput = function(el) {
   }
   this.inputs.push(input)
   if (this.value === undefined) {
-    this.value = el.value
+    this.value = getValue()
   } else {
     input.el.value = this.formatter(this.value)
   }
-  el.addEventListener('input', _onInput, {passive:true})
+  if (el.tagName == 'SELECT' || el.type == 'checkbox') {
+    el.addEventListener('change', _onInput, {passive:true})
+  } else {
+    el.addEventListener('input', _onInput, {passive:true})
+  }
 }
+
 
 Binding.prototype.addOutput = function(el) {
   this.outputs.push(el)
@@ -71,12 +85,13 @@ Binding.prototype.setValue = function(nextval, origin) {
   })
 }
 
+// ------------------------------------------------------------------------
 
 function Bindings() {
   this.bindings = {}
 }
 
-Bindings.prototype.getBinding = function(name, input) {
+Bindings.prototype.getBinding = function(name) {
   var binding = this.bindings[name]
   if (!binding) {
     binding = new Binding(name)
@@ -187,4 +202,41 @@ Bindings.prototype.configure = function(name, value, parser, listener) {
     }
     binding.parser = parser
   }
+}
+
+
+Bindings.prototype.allBindings = (
+  typeof Object.values == 'function' ? function() {
+    return Object.values(this.bindings)
+  } : function() {
+    let v = []
+    for (let name in this.bindings) {
+      v.push(this.bindings[name])
+    }
+    return v
+  }
+)
+
+
+Bindings.prototype.getValues = function() {
+  let values = {}
+  for (let name in this.bindings) {
+    values[name] = this.bindings[name].value
+  }
+  return values
+}
+
+
+Bindings.prototype.setValues = function(values) {
+  Object.keys(values).forEach(name => {
+    let b = this.bindings[name]
+    if (!b) {
+      if (console.warn) {
+        console.warn('Bindings.setValues: ignoring unknown "' + name + '"')
+      }
+      return
+    }
+    // console.log(`bindings setValue ${name} => ${values[name]}`)
+    b.setValue(values[name])
+  })
 }

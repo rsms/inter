@@ -12,11 +12,16 @@ for file in site.static_files %}{%
   assign _path = file.path | remove_first: "/inter" %}{%
   if _path == "/index.css" %}{%
     assign index_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/index-var.css" %}{%
+    assign index_var_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/index-var.js" %}{%
+    assign index_var_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
   endif %}{%
 endfor
 
 %}
 <link rel="stylesheet" href="index.css?v={{ index_css_v }}">
+<link rel="stylesheet" href="index-var.css?v={{ index_var_css_v }}">
 <input type="text" id="hidden-text-input">
 
 <div class="row"><div>
@@ -88,57 +93,213 @@ endfor
 </div></div>
 
 <div class="row"><div>
+  <h2><a id="weights" href="#weights">Weights & Styles</a></h2>
   <p>
-  There are currently four <a id="weights" href="#weights">weights</a>
+  There are six weights, each with italic counterparts,
+  making a total of 12 styles.
   </p>
-  <img src="res/weights-and-styles.svg" style="opacity:0.76;width:100%;display:block;margin:2em 0 3em 0">
+  <img src="res/weights-and-styles.svg" style="opacity:0.88;width:100%;display:block;margin:3em 0 3em 0">
+</div></div>
+
+
+
+<div class="row white variable"><div>
+  <h2><a id="variable" href="#variable">Variable</a></h2>
+
+  <p>
+  Inter UI is offered as both traditional constant font files
+  (one per style, e.g. Bold Italic, Medium, etc.) as well as a
+  <a href="https://en.wikipedia.org/wiki/Variable_fonts">Variable Font</a>
+  file which contains all styles in a much smaller file size.
+  Additionally, a variable font is ...variable! You can mix and match weight
+  and italic angle as you please, forming theoretically infinite variations.
+  </p>
+
+  <div class="unsupported-message">
+    <p>Variable Fonts not supported by this web browser</p>
+  </div>
+
+  <div class="ctrl">
+    <div class="ctrlrow">
+      <label title="Weight in the range of 400 to 900">
+        <span class="label var">Weight:</span>
+        <input type="range" value="400" min="400" max="900" name="weight">
+      </label>
+      <label title="Slant angle in the range of 0° to 10°">
+        <span class="label var">Slant:</span>
+        <input type="range" value="0" min="0" max="10" step="0.01" name="slant">
+      </label>
+      <label class="tight">
+        <input type="checkbox" name="animate"> Animate weight &amp; slant
+      </label>
+      <label class="tight">
+        <input type="checkbox" name="invert"> Negative
+      </label>
+    </div>
+    <div class="ctrlrow">
+      <label title="Font size">
+        <span class="label">Size:</span>
+        <input type="range" value="96" min="11" max="400" name="size">
+      </label>
+      <label title="Space between letters">
+        <span class="label">Tracking:</span>
+        <input type="range" value="0" min="-0.1" max="0.1" step="0.001" name="letterSpacing">
+      </label>
+      <label>
+        <span class="label">Line height:</span>
+        <input type="range" value="1.2" min="0.7" max="2" step="0.01" name="lineHeight">
+      </label>
+    </div>
+  </div>
+</div></div>
+<div class="row white variable-sample-row">
+  <div class="variable-sample" contenteditable>
+  ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
+  ?!()[]{}&*^%$#@~
+  </div>
+</div>
+<script src="index-var.js?v={{ index_var_js_v }}"></script>
+<div class="row white"><div>
+  <p>
+    Variable fonts is a new technology and support is somewhat in flux at
+    the time of writing this (fall 2018.)
+    <a href="var-test.html">This test</a> can be used to discover
+    what a web browser is capable of.
+  </p>
+</div></div>
+
+
+
+<div class="row"><div>
   <h2><a id="features" href="#features">Features</a></h2>
-  <boxes>
+  <p>
+    Inter UI comes with many OpenType features that can be used to
+    tailor functionality and aesthetics to your specific needs.
+    Some of these features can be combined to form a great number of
+    alternative variations.
+  </p>
+  <boxes class="features">
     <box>
-      <h3>Contextual alternates (<q title='OpenType feature ID'>calt</q>)</h3>
+      <h3>Contextual alternates <q title='OpenType feature ID'>calt</q></h3>
+      <p>
+        This feature is enabled by default and causes certain characters to
+        adjust themselves or be replaced depending on the surrounding context.
+      </p>
       <tablex><t>
         <h><in>Disabled</in><to></to><out>Enabled</out></h>
         <r><in>12<em>:</em>34,  FE<em>—</em>X</in><to></to><out>12:34,  FE—X</out></r>
         <r><in>4<em>.</em>2</in><to></to><out>4.2</out></r>
+        <r><in><em>(</em>SEMI<em>)</em>PERMANENT</in><to></to><out>(SEMI)PERMANENT</out></r>
         <r><in>SFO <em>-></em> STO</in><to></to><out>SFO -> STO</out></r>
         <r><in>IIA <em>—></em> OGG</in><to></to><out>IIA —> OGG</out></r>
+        <r><in>ARN <em><--></em> OGG</in><to></to><out>ARN <--> OGG</out></r>
         <r><in>M<em>@</em>N m@n</in><to></to><out>M@N m@n</out></r>
+        <r><in>Smile <em>:-)</em></in><to></to><out>Smile :-)</out></r>
       </t></tablex>
+      <p>
+        There are many more contextual alternates.
+      </p>
     </box>
 
     <box>
-      <h3>Tabular numbers (<q title='OpenType feature ID'>tnum</q>)</h3>
+      <h3>Tabular numbers <q title='OpenType feature ID'>tnum</q></h3>
+      <p>
+        Fixed-width numbers are useful for tabular data, where comparing
+        columns across rows is desired.
+      </p>
       <tablex><t>
         <h><in>Disabled</in><to></to><out>Enabled</out></h>
-        <r><in><em>1</em>23456<em>7</em>890</in><to></to><out class="tnum">1234567890</out></r>
+        <r><in>1234567890</in><to></to><out class="tnum">1234567890</out></r>
         <r><in>1131711<em>&nbsp;</em></in><to></to><out class="tnum">1131711<em>&nbsp;</em></out></r>
         <r><in>0040900<em>&nbsp;</em></in><to></to><out class="tnum">0040900<em>&nbsp;</em></out></r>
         <r><in>11:31,711<em>&nbsp;</em></in><to></to><out class="tnum">11:31,711<em>&nbsp;</em></out></r>
         <r><in>00:40.900<em>&nbsp;</em></in><to></to><out class="tnum">00:40.900<em>&nbsp;</em></out></r>
+        <r><in>0.45, 0.91, +0.08<em>&nbsp;</em></in><to></to><out class="tnum">0.45, 0.91, +0.08<em>&nbsp;</em></out></r>
+        <r><in>1.00, 9.44, −0.13<em>&nbsp;</em></in><to></to><out class="tnum">1.00, 9.44, −0.13<em>&nbsp;</em></out></r>
+        <r><in>0.00, 1.13, +7.12<em>&nbsp;</em></in><to></to><out class="tnum">0.00, 1.13, +7.12<em>&nbsp;</em></out></r>
       </t></tablex>
     </box>
 
     <box>
-      <h3>Slashed zero (<q title='OpenType feature ID'>zero</q>)</h3>
+      <h3>Numerators <q title='OpenType feature ID'>numr</q></h3>
       <tablex><t>
         <h><in>Disabled</in><to></to><out>Enabled</out></h>
-        <r><in><em>0</em>123</in><to></to><out class="zero">0123</out></r>
+        <r><in>Hello <em>0123</em></in><to></to><out class="numr">Hello 0123</out></r>
       </t></tablex>
     </box>
 
     <box>
-      <h3>Fractions (<q title='OpenType feature ID'>frac</q>)</h3>
+      <h3>Denominators <q title='OpenType feature ID'>dnom</q></h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r><in>Hello <em>0123</em></in><to></to><out class="dnom">Hello 0123</out></r>
+      </t></tablex>
+    </box>
+
+    <box>
+      <h3>Superscript <q title='OpenType feature ID'>sups</q></h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r><in>H<em>ello 0123</em></in><to></to><out class="sups">Hello 0123</out></r>
+        <r><in><em>abcdefghijklm</em></in><to></to><out class="sups">abcdefghijklm</out></r>
+        <r><in><em>nopqrstuvwxyz</em></in><to></to><out class="sups">nopqrstuvwxyz</out></r>
+      </t></tablex>
+    </box>
+
+    <box>
+      <h3>Subscript <q title='OpenType feature ID'>subs</q></h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r><in>H<em>ello 0123</em></in><to></to><out class="subs">Hello 0123</out></r>
+        <r><in><em>abcdefghijklm</em></in><to></to><out class="subs">abcdefghijklm</out></r>
+        <r><in><em>nopqrstuvwxyz</em></in><to></to><out class="subs">nopqrstuvwxyz</out></r>
+      </t></tablex>
+    </box>
+
+    <box>
+      <h3>Fractions <q title='OpenType feature ID'>frac</q></h3>
+      <p>
+        This feature is contextually sensitive and will convert "words" of
+        numbers separated by forward slash into proper fractions.
+        This feature is dynamic and allows for any fractions.
+        Note that the digits used for fractions are custom-made for their
+        small size, and are even made separately from the slightly larger
+        Superscript and Subscript numbers.
+      </p>
       <tablex><t>
         <h><in>Disabled</in><to></to><out>Enabled</out></h>
         <r>
-          <in><em>1/3</em>  <em>22/9</em>  <em>3/4/5</em></in>
-          <to></to><out class="frac">1/3  22/9  3/4/5</out>
+          <in><em>1/3</em>  <em>3/4</em>  <em>1/5</em>  <em>1337/5910</em></in>
+          <to></to><out class="frac">1/3  3/4  1/5  1337/5910</out>
         </r>
       </t></tablex>
     </box>
 
     <box>
-      <h3>Stylistic set 1: Alternate digits (<q title='OpenType feature ID'>ss01</q>)</h3>
+      <h3>Case alternates <q title='OpenType feature ID'>case</q></h3>
+      <p>
+        Switches out some glyphs to work better with capital letters and numbers.
+      </p>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r>
+          <in><em>(</em>Hello<em>)</em> <em>[</em>World<em>]</em> <em>{</em>9000<em>}</em></in>
+          <to></to><out class="case">(Hello) [World] {9000}</out>
+        </r>
+        <r><in>SCHOOL <em>@</em> RUN</in><to></to><out class="case">SCHOOL @ RUN</out></r>
+        <r><in>3 <em>+</em> 9 <em>=</em> 12 <em>*</em> 1</in><to></to><out class="case">3 + 9 = 12 * 1</out></r>
+        <r><in><em>*</em> <em>+</em> <em>÷</em> <em>±</em> <em>×</em> <em>=</em> <em>≠</em> <em>•</em></in><to></to><out class="case">* + ÷ ± × = ≠ •</out></r>
+        <r><in><em>→</em> <em>←</em> <em>⟶</em> <em>⟵</em> <em>−</em> <em>-</em> <em>–</em> <em>—</em> <em>:</em></in><to></to><out class="case">→ ← ⟶ ⟵ − - – — :</out></r>
+      </t></tablex>
+    </box>
+
+    <box>
+      <h3>Stylistic set 1: Alternate digits <q title='OpenType feature ID'>ss01</q></h3>
+      <p>
+        An alternate style of digits.
+        Note that individual digit styles can be cherry-picked using the cvXX
+        features.
+      </p>
       <tablex><t>
         <h><in>Disabled</in><to></to><out>Enabled</out></h>
         <r>
@@ -153,27 +314,74 @@ endfor
     </box>
 
     <box>
-      <h3>Case alternates (<q title='OpenType feature ID'>case</q>)</h3>
+      <h3>Stylistic set 2: Disambiguation <q title='OpenType feature ID'>ss02</q></h3>
+      <p>
+        Alternate glyph set that decreases ambiguity.
+      </p>
       <tablex><t>
         <h><in>Disabled</in><to></to><out>Enabled</out></h>
-        <r>
-          <in><em>(</em>Hello<em>)</em> <em>[</em>World<em>]</em> <em>{</em>9000<em>}</em></in>
-          <to></to><out class="case">(Hello) [World] {9000}</out>
-        </r>
-        <r><in>SCHOOL <em>@</em> RUN</in><to></to><out class="case">SCHOOL @ RUN</out></r>
-        <r><in>3 <em>+</em> 9 <em>=</em> 12 <em>*</em> 1</in><to></to><out class="case">3 + 9 = 12 * 1</out></r>
-        <r><in><em>*</em> <em>+</em> <em>÷</em> <em>±</em> <em>×</em> <em>=</em> <em>≠</em> <em>•</em></in><to></to><out class="case">* + ÷ ± × = ≠ •</out></r>
-        <r><in><em>→</em> <em>←</em> <em>⟶</em> <em>⟵</em> <em>−</em> <em>-</em> <em>–</em> <em>—</em> <em>:</em></in><to></to><out class="case">→ ← ⟶ ⟵ − - – — :</out></r>
+        <r><in>WP<em>0</em>AC2A9XJS1<em>0</em>12O9</in><to></to><out class="ss02">WP0AC2A9XJS1012O9</out></r>
+        <r><in>I<em>ll</em>ega<em>l</em></in><to></to><out class="ss02">Illegal</out></r>
+      </t></tablex>
+    </box>
+
+    <box>
+      <h3>Discretionary ligatures <q title='OpenType feature ID'>dlig</q></h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r><in><em>¡¿</em>What<em>?!</em></in><to></to><out class="dlig">¡¿What?!</out></r>
+        <r><in><em>¿¡</em>What<em>!?</em></in><to></to><out class="dlig">¿¡What!?</out></r>
+      </t></tablex>
+    </box>
+
+    <box>
+      <h3>Slashed zero <q title='OpenType feature ID'>zero</q></h3>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r><in><em>0</em>123</in><to></to><out class="zero">0123</out></r>
+      </t></tablex>
+    </box>
+
+    <box>
+      <h3>Character variants <q title='OpenType feature ID'>cvXX</q></h3>
+      <p>
+        Allows cherry-picking alternate characters.
+      </p>
+      <tablex><t>
+        <h><name>Feature&nbsp;&nbsp;</name><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r><name>cv01</name><in>1</in><to></to><out class="cv01">1</out></r>
+        <r><name>cv02</name><in>4</in><to></to><out class="cv02">4</out></r>
+        <r><name>cv03</name><in>6</in><to></to><out class="cv03">6</out></r>
+        <r><name>cv04</name><in>9</in><to></to><out class="cv04">9</out></r>
+        <r><name>cv05</name><in>l ł ƚ ɫ ɬ ŀ ĺ ļ ľ ḷ ḹ ḻ ḽ</in><to></to><out class="cv05">l ł ƚ ɫ ɬ ŀ ĺ ļ ľ ḷ ḹ ḻ ḽ</out></r>
+        <r><name>cv06</name><in>r ɽ ɍ ɼ ŕ ŗ ř ȑ ȓ ṙ ṛ ṝ ṟ</in><to></to><out class="cv06">r ɽ ɍ ɼ ŕ ŗ ř ȑ ȓ ṙ ṛ ṝ ṟ</out></r>
+      </t></tablex>
+    </box>
+
+    <box>
+      <h3>Capital Spacing <q title='OpenType feature ID'>cpsp</q></h3>
+      <p>
+        Slightly increases letter spacing for increased legibility of
+        capital letters. Note: It's usually better to set letter-spacing
+        (aka tracking) manually instead of using this feature. It's here
+        mainly for completeness.
+      </p>
+      <tablex><t>
+        <h><in>Disabled</in><to></to><out>Enabled</out></h>
+        <r><in>FOREVER IMMATERIAL</in><to></to><out class="cpsp">FOREVER IMMATERIAL</out></r>
+        <r><in>TORSCHLUẞPANIK</in><to></to><out class="cpsp">TORSCHLUẞPANIK</out></r>
       </t></tablex>
     </box>
 
   </boxes>
 
   <p>
-    Also includes some
-    Localized Forms (<q title='OpenType feature ID'>locl</q>),
-    Numerators (<q title='OpenType feature ID'>numr</q>) and
-    Denominators (<q title='OpenType feature ID'>dnom</q>).
+    Additional features, not highlighted above:
+    <q title='OpenType feature ID'>locl</q>,
+    <q title='OpenType feature ID'>aalt</q>,
+    <q title='OpenType feature ID'>ccmp</q>,
+    <q title='OpenType feature ID'>ordn</q> and
+    <q title='OpenType feature ID'>salt</q>,
   </p>
 
   <p>&nbsp;</p>
@@ -213,8 +421,8 @@ endfor
 
   <h2><a id="status" href="#status">Current status &amp; usability</a></h2>
   <p>
-  Inter UI works great for English-language text, and pretty well for other
-  Latin and Cyrillic languages. There's still a lot of work to be done, and
+  Inter UI works great for Latin text and pretty well for 
+  Cyrillic. There's still some work to be done on Cyrillic and
   <a href="https://github.com/rsms/inter/blob/master/CONTRIBUTING.md">contributions are warmly welcomed</a>. The playground contains <a href="lab/?sample=Body%20text%201&size=16">a lot of samples</a>, including some common <a href="lab/?sample=Kerning%20body%20multi-lang&size=16">non English-language words in the playground.</a>
   </p>
 

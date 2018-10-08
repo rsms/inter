@@ -59,3 +59,180 @@
   .dynmet-calc #dynmet-unit:active {
     color: white;
   }
+
+
+
+tablex in, tablex to, tablex out {
+  display: table-cell;
+  width: 5%;
+  white-space: pre;
+  padding-bottom:0.5em;
+}
+/*tablex to {
+  width:0;
+}*/
+tablex to::after {
+  -moz-font-feature-settings: 'calt' 1, 'case' 1;
+  -ms-font-feature-settings: 'calt' 1, 'case' 1;
+  -o-font-feature-settings: 'calt' 1, 'case' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'case' 1;
+  font-feature-settings: 'calt' 1, 'case' 1;
+  content: "   →   ";
+  color: rgba(0,0,0,0.2);
+}
+tablex in, tablex out {
+  color: rgba(0,0,0,0.8);
+}
+tablex r name {
+  color: rgba(0,0,0,0.4);
+}
+tablex in {
+  -moz-font-feature-settings: 'calt' 0;
+  -ms-font-feature-settings: 'calt' 0;
+  -o-font-feature-settings: 'calt' 0;
+  -webkit-font-feature-settings: 'calt' 0;
+  font-feature-settings: 'calt' 0;
+}
+tablex out {
+  -moz-font-feature-settings: 'calt' 1;
+  -ms-font-feature-settings: 'calt' 1;
+  -o-font-feature-settings: 'calt' 1;
+  -webkit-font-feature-settings: 'calt' 1;
+  font-feature-settings: 'calt' 1;
+}
+tablex em {
+  font-style: inherit;
+  background: #e4fdef;
+  color: rgba(0,0,0,1);
+}
+
+tablex out.zero {
+  -moz-font-feature-settings: 'calt' 1, 'zero' 1;
+  -ms-font-feature-settings: 'calt' 1, 'zero' 1;
+  -o-font-feature-settings: 'calt' 1, 'zero' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'zero' 1;
+  font-feature-settings: 'calt' 1, 'zero' 1;
+}
+tablex out.tnum {
+  -moz-font-feature-settings: 'calt' 1, 'tnum' 1;
+  -ms-font-feature-settings: 'calt' 1, 'tnum' 1;
+  -o-font-feature-settings: 'calt' 1, 'tnum' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'tnum' 1;
+  font-feature-settings: 'calt' 1, 'tnum' 1;
+}
+tablex out.case {
+  -moz-font-feature-settings: 'calt' 1, 'case' 1;
+  -ms-font-feature-settings: 'calt' 1, 'case' 1;
+  -o-font-feature-settings: 'calt' 1, 'case' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'case' 1;
+  font-feature-settings: 'calt' 1, 'case' 1;
+}
+tablex out.frac {
+  -moz-font-feature-settings: 'calt' 1, 'frac' 1;
+  -ms-font-feature-settings: 'calt' 1, 'frac' 1;
+  -o-font-feature-settings: 'calt' 1, 'frac' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'frac' 1;
+  font-feature-settings: 'calt' 1, 'frac' 1;
+}
+tablex out.numr {
+  -moz-font-feature-settings:    'calt' 1, 'numr' 1;
+  -ms-font-feature-settings:     'calt' 1, 'numr' 1;
+  -o-font-feature-settings:      'calt' 1, 'numr' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'numr' 1;
+  font-feature-settings:         'calt' 1, 'numr' 1;
+}
+tablex out.dnom {
+  -moz-font-feature-settings:    'calt' 1, 'dnom' 1;
+  -ms-font-feature-settings:     'calt' 1, 'dnom' 1;
+  -o-font-feature-settings:      'calt' 1, 'dnom' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'dnom' 1;
+  font-feature-settings:         'calt' 1, 'dnom' 1;
+}
+tablex out.sups {
+  -moz-font-feature-settings:    'calt' 1, 'sups' 1;
+  -ms-font-feature-settings:     'calt' 1, 'sups' 1;
+  -o-font-feature-settings:      'calt' 1, 'sups' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'sups' 1;
+  font-feature-settings:         'calt' 1, 'sups' 1;
+}
+tablex out.subs {
+  -moz-font-feature-settings:    'calt' 1, 'subs' 1;
+  -ms-font-feature-settings:     'calt' 1, 'subs' 1;
+  -o-font-feature-settings:      'calt' 1, 'subs' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'subs' 1;
+  font-feature-settings:         'calt' 1, 'subs' 1;
+}
+tablex out.ss01 {
+  -moz-font-feature-settings:    'calt' 1, 'ss01' 1;
+  -ms-font-feature-settings:     'calt' 1, 'ss01' 1;
+  -o-font-feature-settings:      'calt' 1, 'ss01' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'ss01' 1;
+  font-feature-settings:         'calt' 1, 'ss01' 1;
+}
+tablex out.ss02 {
+  -moz-font-feature-settings:    'calt' 1, 'ss02' 1;
+  -ms-font-feature-settings:     'calt' 1, 'ss02' 1;
+  -o-font-feature-settings:      'calt' 1, 'ss02' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'ss02' 1;
+  font-feature-settings:         'calt' 1, 'ss02' 1;
+}
+tablex out.cpsp {
+  -moz-font-feature-settings:    'calt' 1, 'cpsp' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cpsp' 1;
+  -o-font-feature-settings:      'calt' 1, 'cpsp' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cpsp' 1;
+  font-feature-settings:         'calt' 1, 'cpsp' 1;
+}
+tablex out.dlig {
+  -moz-font-feature-settings:    'calt' 1, 'dlig' 1;
+  -ms-font-feature-settings:     'calt' 1, 'dlig' 1;
+  -o-font-feature-settings:      'calt' 1, 'dlig' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'dlig' 1;
+  font-feature-settings:         'calt' 1, 'dlig' 1;
+}
+tablex out.cv01 {
+  -moz-font-feature-settings:    'calt' 1, 'cv01' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cv01' 1;
+  -o-font-feature-settings:      'calt' 1, 'cv01' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cv01' 1;
+  font-feature-settings:         'calt' 1, 'cv01' 1;
+}
+tablex out.cv02 {
+  -moz-font-feature-settings:    'calt' 1, 'cv02' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cv02' 1;
+  -o-font-feature-settings:      'calt' 1, 'cv02' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cv02' 1;
+  font-feature-settings:         'calt' 1, 'cv02' 1;
+}
+tablex out.cv03 {
+  -moz-font-feature-settings:    'calt' 1, 'cv03' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cv03' 1;
+  -o-font-feature-settings:      'calt' 1, 'cv03' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cv03' 1;
+  font-feature-settings:         'calt' 1, 'cv03' 1;
+}
+tablex out.cv04 {
+  -moz-font-feature-settings:    'calt' 1, 'cv04' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cv04' 1;
+  -o-font-feature-settings:      'calt' 1, 'cv04' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cv04' 1;
+  font-feature-settings:         'calt' 1, 'cv04' 1;
+}
+tablex out.cv05 {
+  -moz-font-feature-settings:    'calt' 1, 'cv05' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cv05' 1;
+  -o-font-feature-settings:      'calt' 1, 'cv05' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cv05' 1;
+  font-feature-settings:         'calt' 1, 'cv05' 1;
+}
+tablex out.cv06 {
+  -moz-font-feature-settings:    'calt' 1, 'cv06' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cv06' 1;
+  -o-font-feature-settings:      'calt' 1, 'cv06' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cv06' 1;
+  font-feature-settings:         'calt' 1, 'cv06' 1;
+}
+
+boxes.features box h3 + p {
+  margin-top:0.5em;
+}

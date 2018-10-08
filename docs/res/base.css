@@ -2,7 +2,7 @@
 html { }
 body {
   background-color: #f4f4f4;
-  color: #414141;
+  color: #111;
   font: 15px/22px 'Inter UI', system-ui, sans-serif;
 
   font-size: 15px;
@@ -23,6 +23,30 @@ body {
   -o-font-feature-settings:"kern" 1, "liga" 1;
   -webkit-font-feature-settings:"kern" 1, "liga" 1;
   font-feature-settings:"kern" 1, "liga" 1;
+}
+
+/* Font style classifiers used by samples and dynmetrics */
+/* Note: font-variation-settings is needed for Safari. */
+.font-style-regular           { font-variation-settings: "wght" 400, "slnt" 0   !important; font-weight:400 !important; font-style:normal !important; }
+.font-style-italic            { font-variation-settings: "wght" 400, "slnt" 100 !important; font-weight:400 !important; font-style:oblique !important; }
+.font-style-medium            { font-variation-settings: "wght" 500, "slnt" 0   !important; font-weight:500 !important; font-style:normal !important; }
+.font-style-medium-italic     { font-variation-settings: "wght" 500, "slnt" 100 !important; font-weight:500 !important; font-style:oblique !important; }
+.font-style-semi-bold         { font-variation-settings: "wght" 600, "slnt" 0   !important; font-weight:600 !important; font-style:normal !important; }
+.font-style-semi-bold-italic  { font-variation-settings: "wght" 600, "slnt" 100 !important; font-weight:600 !important; font-style:oblique !important; }
+.font-style-bold              { font-variation-settings: "wght" 700, "slnt" 0   !important; font-weight:700 !important; font-style:normal !important; }
+.font-style-bold-italic       { font-variation-settings: "wght" 700, "slnt" 100 !important; font-weight:700 !important; font-style:oblique !important; }
+.font-style-extra-bold        { font-variation-settings: "wght" 800, "slnt" 0   !important; font-weight:800 !important; font-style:normal !important; }
+.font-style-extra-bold-italic { font-variation-settings: "wght" 800, "slnt" 100 !important; font-weight:800 !important; font-style:oblique !important; }
+.font-style-black             { font-variation-settings: "wght" 900, "slnt" 0   !important; font-weight:900 !important; font-style:normal !important; }
+.font-style-black-italic      { font-variation-settings: "wght" 900, "slnt" 100 !important; font-weight:900 !important; font-style:oblique !important; }
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: 'Inter UI var', system-ui, sans-serif;
+  }
+  html.safari body {
+    font-family: 'Inter UI var safari-fix', system-ui, sans-serif;
+  }
 }
 
 :target:before {
@@ -108,8 +132,7 @@ num { /* number */
 }
 
 em, i, .italic {
-  font-style: italic;
-  /*font-variation-settings: 'slnt' 10;*/
+  font-style: oblique;
 }
 
 small {
@@ -133,8 +156,9 @@ h1 {
   font-weight: 700;
 }
 h2 {
-  font-size: 24px;
-  letter-spacing: -0.02em;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
   line-height: 30px;
   margin-bottom: 25px;
   margin-top: 10px;
@@ -172,7 +196,12 @@ h2.banner {
   }
 
 h3 {
-  font-size: inherit;
+  font-size: 20px;
+  font-weight: 600;
+}
+h3 q {
+  font-weight: 400;
+  padding-left: 0.5em;
 }
 
 h1 > a, h2 > a, h3 > a {
@@ -181,20 +210,6 @@ h1 > a, h2 > a, h3 > a {
   text-shadow: none;
   background: none;
 }
-
-/* font style classifiers used by samples and dynmetrics */
-.font-style-regular           { font-variation-settings: "wght" 400, "ital" 0   !important; font-weight:400 !important; font-style:normal !important; }
-.font-style-italic            { font-variation-settings: "wght" 400, "ital" 100 !important; font-weight:400 !important; font-style:italic !important; }
-.font-style-medium            { font-variation-settings: "wght" 500, "ital" 0   !important; font-weight:500 !important; font-style:normal !important; }
-.font-style-medium-italic     { font-variation-settings: "wght" 500, "ital" 100 !important; font-weight:500 !important; font-style:italic !important; }
-.font-style-semi-bold         { font-variation-settings: "wght" 600, "ital" 0   !important; font-weight:800 !important; font-style:normal !important; }
-.font-style-semi-bold-italic  { font-variation-settings: "wght" 600, "ital" 100 !important; font-weight:800 !important; font-style:italic !important; }
-.font-style-bold              { font-variation-settings: "wght" 700, "ital" 0   !important; font-weight:700 !important; font-style:normal !important; }
-.font-style-bold-italic       { font-variation-settings: "wght" 700, "ital" 100 !important; font-weight:700 !important; font-style:italic !important; }
-.font-style-extra-bold        { font-variation-settings: "wght" 800, "ital" 0   !important; font-weight:800 !important; font-style:normal !important; }
-.font-style-extra-bold-italic { font-variation-settings: "wght" 800, "ital" 100 !important; font-weight:800 !important; font-style:italic !important; }
-.font-style-black             { font-variation-settings: "wght" 900, "ital" 0   !important; font-weight:900 !important; font-style:normal !important; }
-.font-style-black-italic      { font-variation-settings: "wght" 900, "ital" 100 !important; font-weight:900 !important; font-style:italic !important; }
 
 .row {
   padding: 50px;
@@ -279,19 +294,26 @@ h1 > a, h2 > a, h3 > a {
   background: white;
 }
 
-.row.dark {
+.row.dark,
+.row.black {
   background: #2b2b2b;
   color: #99999b;
 }
-.row.dark a {
+.row.black {
+  background: #010101;
+}
+.row.dark a,
+.row.black a {
   text-decoration-color: rgba(255, 255, 255, 0.2);
   color: #aaa;
 }
-.row.dark a:hover {
+.row.dark a:hover,
+.row.black a:hover {
   color: rgb(95, 170, 255);
   text-decoration: underline rgb(95, 170, 255);
 }
-.row.dark h2, .row.dark h2 > a {
+.row.dark h2, .row.dark h2 > a,
+.row.black h2, .row.black h2 > a  {
   color: #ccc;
   background: none;
 }
@@ -378,81 +400,6 @@ tablex {
   tablex > t > r {
     text-decoration: none;
     display: table-row;
-  }
-  tablex in, tablex to, tablex out {
-    display: table-cell;
-    width: 5%;
-    white-space: pre;
-    padding-bottom:0.5em;
-  }
-  /*tablex to {
-    width:0;
-  }*/
-  tablex to::after {
-    -moz-font-feature-settings: 'calt' 1, 'case' 1;
-    -ms-font-feature-settings: 'calt' 1, 'case' 1;
-    -o-font-feature-settings: 'calt' 1, 'case' 1;
-    -webkit-font-feature-settings: 'calt' 1, 'case' 1;
-    font-feature-settings: 'calt' 1, 'case' 1;
-    content: "   →   ";
-    color: rgba(0,0,0,0.2);
-  }
-  tablex in, tablex out {
-    color: rgba(0,0,0,0.8);
-  }
-  tablex in {
-    -moz-font-feature-settings: 'calt' 0;
-    -ms-font-feature-settings: 'calt' 0;
-    -o-font-feature-settings: 'calt' 0;
-    -webkit-font-feature-settings: 'calt' 0;
-    font-feature-settings: 'calt' 0;
-  }
-  tablex out {
-    -moz-font-feature-settings: 'calt' 1;
-    -ms-font-feature-settings: 'calt' 1;
-    -o-font-feature-settings: 'calt' 1;
-    -webkit-font-feature-settings: 'calt' 1;
-    font-feature-settings: 'calt' 1;
-  }
-  tablex out.zero {
-    -moz-font-feature-settings: 'calt' 1, 'zero' 1;
-    -ms-font-feature-settings: 'calt' 1, 'zero' 1;
-    -o-font-feature-settings: 'calt' 1, 'zero' 1;
-    -webkit-font-feature-settings: 'calt' 1, 'zero' 1;
-    font-feature-settings: 'calt' 1, 'zero' 1;
-  }
-  tablex out.tnum {
-    -moz-font-feature-settings: 'calt' 1, 'tnum' 1;
-    -ms-font-feature-settings: 'calt' 1, 'tnum' 1;
-    -o-font-feature-settings: 'calt' 1, 'tnum' 1;
-    -webkit-font-feature-settings: 'calt' 1, 'tnum' 1;
-    font-feature-settings: 'calt' 1, 'tnum' 1;
-  }
-  tablex out.case {
-    -moz-font-feature-settings: 'calt' 1, 'case' 1;
-    -ms-font-feature-settings: 'calt' 1, 'case' 1;
-    -o-font-feature-settings: 'calt' 1, 'case' 1;
-    -webkit-font-feature-settings: 'calt' 1, 'case' 1;
-    font-feature-settings: 'calt' 1, 'case' 1;
-  }
-  tablex out.frac {
-    -moz-font-feature-settings: 'calt' 1, 'frac' 1;
-    -ms-font-feature-settings: 'calt' 1, 'frac' 1;
-    -o-font-feature-settings: 'calt' 1, 'frac' 1;
-    -webkit-font-feature-settings: 'calt' 1, 'frac' 1;
-    font-feature-settings: 'calt' 1, 'frac' 1;
-  }
-  tablex out.ss01 {
-    -moz-font-feature-settings: 'calt' 1, 'ss01' 1;
-    -ms-font-feature-settings: 'calt' 1, 'ss01' 1;
-    -o-font-feature-settings: 'calt' 1, 'ss01' 1;
-    -webkit-font-feature-settings: 'calt' 1, 'ss01' 1;
-    font-feature-settings: 'calt' 1, 'ss01' 1;
-  }
-  tablex em {
-    font-style: inherit;
-    background: #FBE9A3;
-    color: rgba(0,0,0,1);
   }
 
 

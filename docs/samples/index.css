@@ -12,23 +12,23 @@ livesample {
   display: block;
   color: #111;
   outline: none;
-  padding-left: 20px;
+  /*padding-left: 20px;
   border-left: 2px solid transparent;
-  margin-left:-22px;
+  margin-left:-22px;*/
   margin-top: 1em;
   margin-bottom: 1.6em;
 }
 livesample:hover {
   border-left-color: rgb(3, 102, 214);
 }
-livesample:focus {
+/*livesample:focus {
   border-left-color: #eee;
-}
+}*/
 livesample > p {
   margin-top: 0;
 }
 livesample.s1 {
-  padding-left: 16px;
+  /*padding-left: 16px;*/
   letter-spacing: -0.03em;
   font-size: 5em;
   font-weight: 700;
@@ -37,13 +37,13 @@ livesample.s1 {
   margin-bottom: 0.3em;
 }
 livesample.s2 {
-  max-width: 400px;
+  /*max-width: 400px;*/
   font-size: 1em;
 }
 livesample.s3 {
   font-size: 13px;
   letter-spacing: 0.002em;
-  line-height: 18px;
+  line-height: 1.38;
 }
   livesample.s3 b, livesample.s3 strong {
     font-weight:500;

@@ -24,54 +24,22 @@ endfor
 <link rel="stylesheet" href="index.css?v={{ index_css_v }}">
 <script src="{{url_root}}res/bindings.js?v={{ bindings_js_v }}"></script>
 <script src="{{url_root}}res/graphplot.js?v={{ graphplot_js_v }}"></script>
+{% include ctxedit.html %}
 
 <div class="row"><div>
   <div class="live">
 
-    <div class="controls">
-      <div class="control">
-        <img title="Style" class="icon" src="icons/style.svg">
-        <select data-binding="style">
-          <option value="regular" default>Regular</option>
-          <option value="italic">Italic</option>
-          <option value="medium" default>Medium</option>
-          <option value="medium-italic">Medium Italic</option>
-          <option value="semi-bold" default>Extra Bold</option>
-          <option value="semi-bold-italic">Extra Bold Italic</option>
-          <option value="bold" default>Bold</option>
-          <option value="bold-italic">Bold Italic</option>
-          <option value="extra-bold" default>Extra Bold</option>
-          <option value="extra-bold-italic">Extra Bold Italic</option>
-          <option value="black" default>Black</option>
-          <option value="black-italic">Black Italic</option>
-        </select>
-      </div>
-      <div class="control">
-        <img title="Size" class="icon" src="icons/font-size.svg">
-        <input type="range" min="8" max="100" step="1" data-binding="font-size">
-        <input type="number" min="4" max="400" step="1" data-binding="font-size">
-      </div>
-      <div class="control">
-        <img title="Letter spacing in EM" class="icon" src="icons/letter-spacing.svg">
-        <input type="range" min="-0.05" max="0.06" step="0.001" data-binding="letter-spacing">
-        <input type="number" min="-0.15" max="1" step="0.001" data-binding="letter-spacing">
-      </div>
-      <canvas class="graphplot">Canvas not Supported</canvas>
-      <div class="control info">
-        <a href="{{url_root}}dynmetrics/">Learn about Dynamic Metrics</a>
-      </div>
-    </div>
-
-    <livesample contenteditable class="s1">
+    <livesample contenteditable class="s1" data-ctxedit="sample1">
       Fabulous typography encountering spring
     </livesample>
 
-    <livesample contenteditable class="s2">
-      The user interface (UI), in the industrial design field of human-computer
-      interaction, is the space where interactions between humans and machines occur.
+    <livesample contenteditable class="s2" data-ctxedit="sample2">
+      The user interface (UI), in the industrial design field of<br>
+      human-computer interaction, is the space where<br>
+      interactions between humans and machines occur.
     </livesample>
 
-    <livesample contenteditable class="s3 col3">
+    <livesample contenteditable class="s3 col3" data-ctxedit="sample3">
 <p><b>Fire Island Beach</b> is a barrier of sand, stretching for twenty miles
 along the south coast of Long Island, and separating the Great South Bay
 from the Atlantic ocean.
@@ -130,8 +98,7 @@ hills.
 </p>
     </livesample>
     <p class="learn-more">
-      &nbsp;
-      <!-- <a href="{{url_root}}dynmetrics/">Learn about Dynamic Metrics</a> -->
+      <a href="{{url_root}}dynmetrics/">Learn about Dynamic Metrics</a>
     </p>
   </div>
 
@@ -163,113 +130,6 @@ hills.
 
 <script type="text/javascript">(function(){
 
-
-
-// InterUIDynamicTracking produces tracking in EM for the given font size
-//
-function InterUIDynamicTracking(fontSize, weightClass) {
-  // Note: weightClass is currently unused
-  //
-  var a = -0.016, b = 0.21, c = -0.18;
-  return a + b * Math.pow(Math.E, (c * fontSize))
-}
-
-// InterUIDynamicLineHeight produces the line height for the given font size
-//
-function InterUIDynamicLineHeight(fontSize, weightClass) {
-  var l = 1.4
-  return Math.round(fontSize * l)
-}
-
-
-var bindings = new Bindings()
-var graph = new GraphPlot($('canvas.graphplot'))
-graph.setOrigin(-0.2, 0.8)
-graph.setScale(0.049, 5)
-
-var s2 = $('livesample.s2')
-var samples = $$('livesample')
-
-// filter paste to match style
-samples.forEach(sample => {
-  sample.addEventListener('paste', ev => {
-    ev.preventDefault()
-    let text = ev.clipboardData.getData("text/plain")
-    document.execCommand("insertHTML", false, text)
-  }, {capture:true,passive:false})
-})
-
-function updateWidth() {
-  var fontSize = bindings.value('font-size', 0)
-  var letterSpacing = bindings.value('letter-spacing', 0)
-  var w = fontSize * (letterSpacing + 1) * 25
-  s2.style.maxWidth = Math.round(w) + 'px'
-}
-
-function updateTracking() {
-  var fontSize = bindings.value('font-size', 0)
-  var letterSpacing = InterUIDynamicTracking(fontSize, 400)
-  bindings.setValue('letter-spacing', letterSpacing)
-}
-
-function updateGraph() {
-  graph.clear()
-  var fontSize = bindings.value('font-size', 0)
-  var letterSpacing = bindings.value('letter-spacing')
-  graph.plotf(function(x) {
-    return InterUIDynamicTracking(x, 400)
-  })
-  var graphedFontSize = Math.min(24, fontSize) // clamp to [-inf,24]
-  graph.plotPoints([[graphedFontSize, letterSpacing]], '#000')
-}
-
-bindings.configure('letter-spacing', 0, 'float', function (letterSpacing) {
-  s2.style.letterSpacing = letterSpacing + 'em'
-  updateWidth()
-  updateGraph()
-})
-bindings.setFormatter('letter-spacing', function(v) {
-  return v.toFixed(3)
-})
-
-bindings.configure('font-size', 16, 'float', function(fontSize, prevval) {
-  s2.style.fontSize = fontSize + 'px'
-  updateWidth()
-  updateTracking()
-
-  var lineHeight = InterUIDynamicLineHeight(fontSize, 400)
-  s2.style.lineHeight = lineHeight + 'px'
-})
-
-bindings.configure('style', null, null, function (style) {
-  var cl = s2.classList
-  cl.remove('font-style-regular')
-  cl.remove('font-style-italic')
-  cl.remove('font-style-medium')
-  cl.remove('font-style-medium-italic')
-  cl.remove('font-style-semi-bold')
-  cl.remove('font-style-semi-bold-italic')
-  cl.remove('font-style-bold')
-  cl.remove('font-style-bold-italic')
-  cl.remove('font-style-extra-bold')
-  cl.remove('font-style-extra-bold-italic')
-  cl.remove('font-style-black')
-  cl.remove('font-style-black-italic')
-  cl.add('font-style-' + style)
-})
-
-
-bindings.bindAllInputs('div.live .control input')
-bindings.bindAllInputs('div.live .control select')
-
-// resize canvas when window resizes
-var resizeDebounceTimer = null
-window.addEventListener('resize', function(){
-  clearTimeout(resizeDebounceTimer)
-  resizeDebounceTimer = setTimeout(function(){
-    graph.autosize()
-    updateGraph()
-  }, 500)
-}, {passive:true, capture:false})
+window.ctxedit = new CtxEdit()
 
 })();</script>

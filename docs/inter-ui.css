@@ -116,10 +116,21 @@ html {
   }
 }
 
+BUGS:
+- Safari 12.0 will default to italic instead of regular when font-weight
+  is provided in a @font-face declaration.
+  Workaround: Use "Inter UI var safari-fix" for Safari, or explicitly set
+  `font-variation-settings:"slnt" DEGREE`.
 */
 @font-face {
   font-family: 'Inter UI var';
   font-weight: 400 900;
+  font-style: oblique 0deg 10deg;
+  src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
+       url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2");
+}
+@font-face {
+  font-family: 'Inter UI var safari-fix';
   font-style: oblique 0deg 10deg;
   src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
        url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2");
