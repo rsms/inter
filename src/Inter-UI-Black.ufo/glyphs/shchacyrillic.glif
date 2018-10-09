@@ -1,33 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="shchacyrillic" format="2">
-  <advance width="3136.0"/>
+  <advance width="2888.0"/>
   <unicode hex="0449"/>
   <outline>
     <contour>
-      <point x="2872.0" y="412.0" type="line"/>
-      <point x="2200.0" y="412.0" type="line"/>
-      <point x="2200.0" y="0.0" type="line"/>
-      <point x="2352.0" y="0.0" type="line"/>
-      <point x="2352.0" y="-440.0" type="line"/>
-      <point x="2840.0" y="-440.0" type="line"/>
+      <point x="2764.0" y="412.0" type="line"/>
+      <point x="2092.0" y="412.0" type="line"/>
+      <point x="2092.0" y="0.0" type="line"/>
+      <point x="2244.0" y="0.0" type="line"/>
+      <point x="2244.0" y="-440.0" type="line"/>
+      <point x="2732.0" y="-440.0" type="line"/>
     </contour>
-    <contour>
-      <point x="248.0" y="1488.0" type="line"/>
-      <point x="248.0" y="0.0" type="line"/>
-      <point x="2476.0" y="0.0" type="line"/>
-      <point x="2476.0" y="1488.0" type="line"/>
-      <point x="1960.0" y="1488.0" type="line"/>
-      <point x="1960.0" y="416.0" type="line"/>
-      <point x="1624.0" y="416.0" type="line"/>
-      <point x="1624.0" y="1488.0" type="line"/>
-      <point x="1104.0" y="1488.0" type="line"/>
-      <point x="1104.0" y="416.0" type="line"/>
-      <point x="768.0" y="416.0" type="line"/>
-      <point x="768.0" y="1488.0" type="line"/>
-    </contour>
+    <component base="shacyrillic"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>shacyrillic</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>shacyrillic</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -35,10 +26,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -57,8 +48,8 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kacyrillic" format="2">
-  <advance width="1520.0"/>
+  <advance width="1512.0"/>
   <unicode hex="043A"/>
   <outline>
     <contour>
-      <point x="480.0" y="1488.0" type="line"/>
-      <point x="204.0" y="1488.0" type="line"/>
-      <point x="204.0" y="0.0" type="line"/>
-      <point x="480.0" y="0.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1456.0" y="1488.0" type="line"/>
-      <point x="1124.0" y="1488.0" type="line"/>
-      <point x="636.0" y="864.0" type="line"/>
-      <point x="344.0" y="864.0" type="line"/>
-      <point x="388.0" y="628.0" type="line"/>
-      <point x="748.0" y="628.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1156.0" y="0.0" type="line"/>
-      <point x="1500.0" y="0.0" type="line"/>
-      <point x="800.0" y="864.0" type="line"/>
-      <point x="624.0" y="668.0" type="line"/>
+      <point x="216.0" y="0.0" type="line"/>
+      <point x="452.0" y="0.0" type="line"/>
+      <point x="452.0" y="648.0" type="line"/>
+      <point x="664.0" y="648.0" type="line"/>
+      <point x="1168.0" y="0.0" type="line"/>
+      <point x="1472.0" y="0.0" type="line"/>
+      <point x="844.0" y="796.0" type="line"/>
+      <point x="1464.0" y="1536.0" type="line"/>
+      <point x="1160.0" y="1536.0" type="line"/>
+      <point x="608.0" y="868.0" type="line"/>
+      <point x="452.0" y="868.0" type="line"/>
+      <point x="452.0" y="1536.0" type="line"/>
+      <point x="216.0" y="1536.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>k</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -36,7 +35,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>12.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -55,15 +54,15 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
+            <real>0.0</real>
             <real>1.0</real>
-            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
-            <real>2.0</real>
+            <real>0.0</real>
+            <real>9.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -76,14 +75,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>12.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>2.0</real>
+            <real>0.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -96,7 +95,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>12.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -110,15 +109,15 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
+            <real>0.0</real>
             <real>1.0</real>
-            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
-            <real>2.0</real>
+            <real>0.0</real>
+            <real>9.0</real>
           </array>
           <key>type</key>
           <string>TTStem</string>

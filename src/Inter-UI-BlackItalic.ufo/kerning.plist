@@ -1256,8 +1256,6 @@
       <real>-96.0</real>
       <key>public.kern2.T</key>
       <real>-224.0</real>
-      <key>public.kern2.Ucyrillic</key>
-      <real>-128.0</real>
       <key>public.kern2.V</key>
       <real>-208.0</real>
       <key>public.kern2.W</key>
@@ -1635,8 +1633,6 @@
       <real>-128.0</real>
       <key>public.kern2.T</key>
       <real>-160.0</real>
-      <key>public.kern2.Ucyrillic</key>
-      <real>-96.0</real>
       <key>public.kern2.V</key>
       <real>-112.0</real>
       <key>public.kern2.Y</key>
@@ -2021,21 +2017,10 @@
       <real>224.0</real>
       <key>public.kern2.idieresis</key>
       <real>208.0</real>
-      <key>public.kern2.idotless</key>
-      <real>32.0</real>
       <key>rlinebelow</key>
       <real>128.0</real>
       <key>underscore</key>
       <real>96.0</real>
-    </dict>
-    <key>public.kern1.Hardsigncyrillic</key>
-    <dict>
-      <key>afii10044</key>
-      <real>-176.0</real>
-      <key>public.kern2.Djecyrillic</key>
-      <real>-208.0</real>
-      <key>public.kern2.quotedbl</key>
-      <real>-96.0</real>
     </dict>
     <key>public.kern1.Idieresis</key>
     <dict>
@@ -2292,49 +2277,6 @@
       <key>zlinebelow</key>
       <real>-96.0</real>
       <key>zrthook</key>
-      <real>-112.0</real>
-    </dict>
-    <key>public.kern1.Ucyrillic</key>
-    <dict>
-      <key>checyrillic</key>
-      <real>-96.0</real>
-      <key>decyrillic</key>
-      <real>-128.0</real>
-      <key>ereversedcyrillic</key>
-      <real>-112.0</real>
-      <key>four</key>
-      <real>-112.0</real>
-      <key>hardsigncyrillic</key>
-      <real>-112.0</real>
-      <key>iacyrillic</key>
-      <real>-144.0</real>
-      <key>less</key>
-      <real>-192.0</real>
-      <key>logicalnot</key>
-      <real>-96.0</real>
-      <key>multiply</key>
-      <real>-144.0</real>
-      <key>public.kern2.Ecyrillic</key>
-      <real>-96.0</real>
-      <key>public.kern2.approxequal</key>
-      <real>-144.0</real>
-      <key>public.kern2.comma</key>
-      <real>-368.0</real>
-      <key>public.kern2.ecyrillic</key>
-      <real>-144.0</real>
-      <key>public.kern2.elcyrillic</key>
-      <real>-176.0</real>
-      <key>public.kern2.guillemetleft</key>
-      <real>-192.0</real>
-      <key>public.kern2.guillemetright</key>
-      <real>-144.0</real>
-      <key>public.kern2.quotedblbase</key>
-      <real>-464.0</real>
-      <key>underscore</key>
-      <real>-240.0</real>
-      <key>zecyrillic</key>
-      <real>-112.0</real>
-      <key>zhecyrillic</key>
       <real>-112.0</real>
     </dict>
     <key>public.kern1.V</key>
@@ -3188,8 +3130,6 @@
       <real>96.0</real>
       <key>public.kern2.idieresis</key>
       <real>112.0</real>
-      <key>public.kern2.idotless</key>
-      <real>0.0</real>
       <key>public.kern2.parenright</key>
       <real>96.0</real>
       <key>public.kern2.parenright.case</key>
@@ -3236,6 +3176,8 @@
       <real>-192.0</real>
       <key>public.kern2.T</key>
       <real>-160.0</real>
+      <key>public.kern2.c</key>
+      <real>-64.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-144.0</real>
       <key>public.kern2.v</key>

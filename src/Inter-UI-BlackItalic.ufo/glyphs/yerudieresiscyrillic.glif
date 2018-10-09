@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yerudieresiscyrillic" format="2">
-  <advance width="2508.0"/>
+  <advance width="2556.0"/>
   <unicode hex="04F9"/>
   <outline>
-    <component base="yericyrillic" xOffset="20.0"/>
-    <component base="dieresis" xOffset="540.0" yOffset="4.0"/>
+    <component base="yericyrillic"/>
+    <component base="dieresis" xOffset="540.0"/>
   </outline>
-  <lib>
-    <dict>
-      <key>com.schriftgestaltung.componentsAlignment</key>
-      <array>
-        <integer>-1</integer>
-        <integer>-1</integer>
-      </array>
-    </dict>
-  </lib>
 </glyph>

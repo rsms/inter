@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="shchacyrillic" format="2">
-  <advance width="2544.0"/>
+  <advance width="2528.0"/>
   <unicode hex="0449"/>
   <outline>
     <contour>
@@ -11,23 +11,14 @@
       <point x="2040.0" y="-440.0" type="line"/>
       <point x="2284.0" y="-440.0" type="line"/>
     </contour>
-    <contour>
-      <point x="224.0" y="1488.0" type="line"/>
-      <point x="224.0" y="0.0" type="line"/>
-      <point x="2088.0" y="0.0" type="line"/>
-      <point x="2088.0" y="1488.0" type="line"/>
-      <point x="1812.0" y="1488.0" type="line"/>
-      <point x="1812.0" y="220.0" type="line"/>
-      <point x="1296.0" y="220.0" type="line"/>
-      <point x="1296.0" y="1488.0" type="line"/>
-      <point x="1020.0" y="1488.0" type="line"/>
-      <point x="1020.0" y="220.0" type="line"/>
-      <point x="500.0" y="220.0" type="line"/>
-      <point x="500.0" y="1488.0" type="line"/>
-    </contour>
+    <component base="shacyrillic"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>shacyrillic</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>shacyrillic</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -37,75 +28,65 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
+            <real>0.0</real>
             <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>224.0</real>
+            <real>276.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>1020.0</real>
+            <real>276.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
             <real>0.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
-            <real>9.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <false/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
             <real>0.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>9.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <false/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>8.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>5.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <false/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>4.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>2.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -117,15 +98,15 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
-            <real>9.0</real>
+            <real>0.0</real>
+            <real>0.0</real>
           </array>
           <key>type</key>
           <string>TTStem</string>

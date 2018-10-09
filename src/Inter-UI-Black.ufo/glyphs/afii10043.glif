@@ -1,33 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="afii10043" format="2">
-  <advance width="3404.0"/>
+  <advance width="3372.0"/>
   <unicode hex="0429"/>
   <outline>
     <contour>
-      <point x="3172.0" y="412.0" type="line"/>
-      <point x="2504.0" y="412.0" type="line"/>
-      <point x="2504.0" y="0.0" type="line"/>
-      <point x="2652.0" y="0.0" type="line"/>
-      <point x="2652.0" y="-480.0" type="line"/>
-      <point x="3144.0" y="-480.0" type="line"/>
+      <point x="3104.0" y="412.0" type="line"/>
+      <point x="2436.0" y="412.0" type="line"/>
+      <point x="2436.0" y="0.0" type="line"/>
+      <point x="2584.0" y="0.0" type="line"/>
+      <point x="2584.0" y="-480.0" type="line"/>
+      <point x="3076.0" y="-480.0" type="line"/>
     </contour>
-    <contour>
-      <point x="336.0" y="2004.0" type="line"/>
-      <point x="336.0" y="0.0" type="line"/>
-      <point x="2936.0" y="0.0" type="line"/>
-      <point x="2936.0" y="2004.0" type="line"/>
-      <point x="2400.0" y="2004.0" type="line"/>
-      <point x="2400.0" y="428.0" type="line"/>
-      <point x="1912.0" y="428.0" type="line"/>
-      <point x="1912.0" y="2004.0" type="line"/>
-      <point x="1376.0" y="2004.0" type="line"/>
-      <point x="1376.0" y="428.0" type="line"/>
-      <point x="876.0" y="428.0" type="line"/>
-      <point x="876.0" y="2004.0" type="line"/>
-    </contour>
+    <component base="afii10042"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>afii10042</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>afii10042</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -35,10 +26,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -57,8 +48,8 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

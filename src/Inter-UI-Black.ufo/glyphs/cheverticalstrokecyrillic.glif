@@ -1,41 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="cheverticalstrokecyrillic" format="2">
-  <advance width="1684.0"/>
+  <advance width="1712.0"/>
   <unicode hex="04B9"/>
   <outline>
     <contour>
-      <point x="968.0" y="1180.0" type="line"/>
-      <point x="716.0" y="1180.0" type="line"/>
-      <point x="716.0" y="180.0" type="line"/>
-      <point x="968.0" y="180.0" type="line"/>
+      <point x="980.0" y="1180.0" type="line"/>
+      <point x="728.0" y="1180.0" type="line"/>
+      <point x="728.0" y="180.0" type="line"/>
+      <point x="980.0" y="180.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1544.0" y="1488.0" type="line"/>
-      <point x="1028.0" y="1488.0" type="line"/>
-      <point x="1028.0" y="0.0" type="line"/>
-      <point x="1544.0" y="0.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1276.0" y="900.0" type="line"/>
-      <point x="1122.0" y="848.0"/>
-      <point x="1010.0" y="824.0"/>
-      <point x="912.0" y="824.0" type="curve" smooth="yes"/>
-      <point x="662.0" y="824.0"/>
-      <point x="622.0" y="852.0"/>
-      <point x="624.0" y="992.0" type="curve" smooth="yes"/>
-      <point x="624.0" y="1488.0" type="line"/>
-      <point x="112.0" y="1488.0" type="line"/>
-      <point x="112.0" y="992.0" type="line" smooth="yes"/>
-      <point x="110.0" y="576.0"/>
-      <point x="406.0" y="412.0"/>
-      <point x="912.0" y="412.0" type="curve" smooth="yes"/>
-      <point x="1002.0" y="412.0"/>
-      <point x="1218.0" y="452.0"/>
-      <point x="1276.0" y="488.0" type="curve"/>
-    </contour>
+    <component base="checyrillic"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>checyrillic</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>checyrillic</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -43,10 +24,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>0.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -85,8 +66,8 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>0.0</real>
+            <real>2.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

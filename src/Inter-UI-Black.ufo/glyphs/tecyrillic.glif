@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tecyrillic" format="2">
-  <advance width="1676.0"/>
+  <advance width="1752.0"/>
   <unicode hex="0442"/>
   <outline>
     <contour>
-      <point x="1096.0" y="1488.0" type="line"/>
-      <point x="576.0" y="1488.0" type="line"/>
-      <point x="576.0" y="0.0" type="line"/>
-      <point x="1096.0" y="0.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1584.0" y="1488.0" type="line"/>
-      <point x="96.0" y="1488.0" type="line"/>
-      <point x="96.0" y="1076.0" type="line"/>
-      <point x="1584.0" y="1076.0" type="line"/>
+      <point x="140.0" y="1124.0" type="line"/>
+      <point x="620.0" y="1124.0" type="line"/>
+      <point x="620.0" y="0.0" type="line"/>
+      <point x="1140.0" y="0.0" type="line"/>
+      <point x="1140.0" y="1124.0" type="line"/>
+      <point x="1628.0" y="1124.0" type="line"/>
+      <point x="1628.0" y="1536.0" type="line"/>
+      <point x="140.0" y="1536.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>a</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -47,15 +49,15 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>0.0</real>
+            <real>7.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
-            <real>2.0</real>
+            <real>0.0</real>
+            <real>4.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>

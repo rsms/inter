@@ -1,35 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="enghecyrillic" format="2">
-  <advance width="2232.0"/>
+  <advance width="2040.0"/>
   <unicode hex="04A5"/>
   <outline>
     <contour>
-      <point x="2068.0" y="1488.0" type="line"/>
-      <point x="1496.0" y="1488.0" type="line"/>
-      <point x="1492.0" y="1076.0" type="line"/>
-      <point x="2068.0" y="1076.0" type="line"/>
+      <point x="2040.0" y="1536.0" type="line"/>
+      <point x="1468.0" y="1536.0" type="line"/>
+      <point x="1464.0" y="1124.0" type="line"/>
+      <point x="2040.0" y="1124.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1264.0" y="932.0" type="line"/>
-      <point x="492.0" y="932.0" type="line"/>
-      <point x="492.0" y="520.0" type="line"/>
-      <point x="1264.0" y="520.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="688.0" y="1488.0" type="line"/>
-      <point x="168.0" y="1488.0" type="line"/>
-      <point x="168.0" y="0.0" type="line"/>
-      <point x="688.0" y="0.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1588.0" y="1488.0" type="line"/>
-      <point x="1072.0" y="1488.0" type="line"/>
-      <point x="1072.0" y="0.0" type="line"/>
-      <point x="1588.0" y="0.0" type="line"/>
-    </contour>
+    <component base="encyrillic"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>f</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -37,10 +24,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>1.0</real>
+            <real>0.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -59,7 +46,7 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>2.0</real>
+            <real>0.0</real>
             <real>1.0</real>
           </array>
           <key>stem</key>

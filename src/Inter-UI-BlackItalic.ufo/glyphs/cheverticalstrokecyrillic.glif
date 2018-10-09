@@ -1,37 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="cheverticalstrokecyrillic" format="2">
-  <advance width="1680.0"/>
+  <advance width="1712.0"/>
   <unicode hex="04B9"/>
   <outline>
     <contour>
-      <point x="1032.0" y="1180.0" type="line"/>
-      <point x="780.0" y="1180.0" type="line"/>
-      <point x="616.0" y="180.0" type="line"/>
-      <point x="868.0" y="180.0" type="line"/>
+      <point x="1048.0" y="1180.0" type="line"/>
+      <point x="796.0" y="1180.0" type="line"/>
+      <point x="632.0" y="180.0" type="line"/>
+      <point x="884.0" y="180.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1660.0" y="1488.0" type="line"/>
-      <point x="1144.0" y="1488.0" type="line"/>
-      <point x="896.0" y="0.0" type="line"/>
-      <point x="1412.0" y="0.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1292.0" y="900.0" type="line"/>
-      <point x="1134.0" y="848.0"/>
-      <point x="1018.0" y="824.0"/>
-      <point x="916.0" y="824.0" type="curve" smooth="yes"/>
-      <point x="670.0" y="824.0"/>
-      <point x="634.0" y="852.0"/>
-      <point x="656.0" y="992.0" type="curve" smooth="yes"/>
-      <point x="740.0" y="1488.0" type="line"/>
-      <point x="228.0" y="1488.0" type="line"/>
-      <point x="144.0" y="992.0" type="line" smooth="yes"/>
-      <point x="78.0" y="576.0"/>
-      <point x="346.0" y="412.0"/>
-      <point x="848.0" y="412.0" type="curve" smooth="yes"/>
-      <point x="942.0" y="412.0"/>
-      <point x="1166.0" y="452.0"/>
-      <point x="1224.0" y="488.0" type="curve"/>
-    </contour>
+    <component base="checyrillic"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>checyrillic</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>checyrillic</string>
+    </dict>
+  </lib>
 </glyph>
