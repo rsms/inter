@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="chekhakassiancyrillic" format="2">
-  <advance width="1580.0"/>
+  <advance width="1696.0"/>
   <unicode hex="04CC"/>
   <outline>
     <component base="checyrillic"/>
-    <component base="cyrillictic.cn" xOffset="396.0"/>
+    <component base="cyrillictic.cn" xOffset="304.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>checyrillic</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>checyrillic</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
         <integer>0</integer>

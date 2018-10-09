@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tsecyrillic" format="2">
-  <advance width="1776.0"/>
+  <advance width="1788.0"/>
   <unicode hex="0446"/>
   <outline>
-    <contour>
-      <point x="192.0" y="0.0" type="line"/>
-      <point x="1400.0" y="0.0" type="line"/>
-      <point x="1400.0" y="1536.0" type="line"/>
-      <point x="1128.0" y="1536.0" type="line"/>
-      <point x="1128.0" y="220.0" type="line"/>
-      <point x="468.0" y="220.0" type="line"/>
-      <point x="468.0" y="1536.0" type="line"/>
-      <point x="192.0" y="1536.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1584.0" y="220.0" type="line"/>
-      <point x="1112.0" y="220.0" type="line"/>
-      <point x="1112.0" y="0.0" type="line"/>
-      <point x="1312.0" y="0.0" type="line"/>
-      <point x="1312.0" y="-440.0" type="line"/>
-      <point x="1556.0" y="-440.0" type="line"/>
-    </contour>
+    <component base="pecyrillic" xScale="-1.0" yScale="-1.0" xOffset="1640.0" yOffset="1536.0"/>
+    <component base="cyrillictic.cn" xOffset="1292.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>idotless</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>t</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>0</integer>
+        <integer>-1</integer>
+      </array>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -31,18 +24,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>7.0</real>
+            <real>220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>4.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -51,18 +39,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>7.0</real>
+            <real>192.0</real>
+            <real>276.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>4.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -71,18 +54,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>1128.0</real>
+            <real>272.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -91,18 +69,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>7.0</real>
+            <real>220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>4.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

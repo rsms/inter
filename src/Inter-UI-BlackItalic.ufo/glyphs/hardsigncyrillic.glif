@@ -1,35 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hardsigncyrillic" format="2">
-  <advance width="2308.0"/>
+  <advance width="2080.0"/>
   <unicode hex="044A"/>
   <outline>
     <contour>
-      <point x="1212.0" y="1488.0" type="line"/>
-      <point x="320.0" y="1488.0" type="line"/>
-      <point x="252.0" y="1072.0" type="line"/>
-      <point x="1144.0" y="1072.0" type="line"/>
+      <point x="628.0" y="1536.0" type="line"/>
+      <point x="256.0" y="1536.0" type="line"/>
+      <point x="188.0" y="1120.0" type="line"/>
+      <point x="564.0" y="1120.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1084.0" y="1120.0" type="line"/>
-      <point x="1016.0" y="708.0" type="line"/>
-      <point x="1456.0" y="708.0" type="line"/>
-      <point x="1610.0" y="708.0"/>
-      <point x="1674.0" y="664.0"/>
-      <point x="1656.0" y="556.0" type="curve"/>
-      <point x="1642.0" y="468.0"/>
-      <point x="1558.0" y="412.0"/>
-      <point x="1404.0" y="412.0" type="curve"/>
-      <point x="1176.0" y="412.0" type="line"/>
-      <point x="1356.0" y="1488.0" type="line"/>
-      <point x="836.0" y="1488.0" type="line"/>
-      <point x="588.0" y="0.0" type="line"/>
-      <point x="1336.0" y="0.0" type="line"/>
-      <point x="1794.0" y="0.0"/>
-      <point x="2110.0" y="220.0"/>
-      <point x="2168.0" y="552.0" type="curve"/>
-      <point x="2222.0" y="892.0"/>
-      <point x="1982.0" y="1120.0"/>
-      <point x="1524.0" y="1120.0" type="curve"/>
-    </contour>
+    <component base="softsigncyrillic" xOffset="356.0"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>b</string>
+    </dict>
+  </lib>
 </glyph>

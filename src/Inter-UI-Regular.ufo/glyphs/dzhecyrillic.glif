@@ -4,28 +4,19 @@
   <unicode hex="045F"/>
   <outline>
     <contour>
-      <point x="688.0" y="220.0" type="line"/>
-      <point x="688.0" y="-492.0" type="line"/>
-      <point x="960.0" y="-492.0" type="line"/>
-      <point x="960.0" y="220.0" type="line"/>
+      <point x="700.0" y="100.0" type="line"/>
+      <point x="700.0" y="-492.0" type="line"/>
+      <point x="936.0" y="-492.0" type="line"/>
+      <point x="936.0" y="100.0" type="line"/>
     </contour>
-    <contour>
-      <point x="216.0" y="1536.0" type="line"/>
-      <point x="216.0" y="0.0" type="line"/>
-      <point x="1424.0" y="0.0" type="line"/>
-      <point x="1424.0" y="1536.0" type="line"/>
-      <point x="1152.0" y="1536.0" type="line"/>
-      <point x="1152.0" y="220.0" type="line"/>
-      <point x="492.0" y="220.0" type="line"/>
-      <point x="492.0" y="1536.0" type="line"/>
-    </contour>
+    <component base="pecyrillic" xScale="-1.0" yScale="-1.0" xOffset="1640.0" yOffset="1536.0"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
-      <string>m</string>
+      <string>idotless</string>
       <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
-      <string>a</string>
+      <string>idotless</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -33,18 +24,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>5.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -53,18 +39,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>0.0</real>
+            <real>216.0</real>
+            <real>276.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>5.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -73,18 +54,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>688.0</real>
+            <real>272.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>1.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -93,18 +69,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>4.0</real>
+            <real>1152.0</real>
+            <real>272.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>1.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -113,18 +84,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>5.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

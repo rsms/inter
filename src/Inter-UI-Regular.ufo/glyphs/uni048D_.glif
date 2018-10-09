@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni048D" format="2">
-  <advance width="1520.0"/>
+  <advance width="1640.0"/>
   <unicode hex="048D"/>
   <outline>
-    <contour>
-      <point x="496.0" y="1036.0" type="line"/>
-      <point x="496.0" y="816.0" type="line"/>
-      <point x="936.0" y="816.0" type="line"/>
-      <point x="1144.0" y="816.0"/>
-      <point x="1216.0" y="652.0"/>
-      <point x="1216.0" y="512.0" type="curve"/>
-      <point x="1216.0" y="368.0"/>
-      <point x="1144.0" y="220.0"/>
-      <point x="936.0" y="220.0" type="curve"/>
-      <point x="568.0" y="220.0" type="line"/>
-      <point x="568.0" y="2272.0" type="line"/>
-      <point x="292.0" y="2272.0" type="line"/>
-      <point x="292.0" y="0.0" type="line"/>
-      <point x="936.0" y="0.0" type="line"/>
-      <point x="1296.0" y="0.0"/>
-      <point x="1492.0" y="232.0"/>
-      <point x="1492.0" y="524.0" type="curve"/>
-      <point x="1492.0" y="820.0"/>
-      <point x="1296.0" y="1036.0"/>
-      <point x="936.0" y="1036.0" type="curve"/>
-    </contour>
     <contour>
       <point x="1008.0" y="2004.0" type="line"/>
       <point x="28.0" y="2004.0" type="line"/>
       <point x="28.0" y="1784.0" type="line"/>
       <point x="1008.0" y="1784.0" type="line"/>
     </contour>
+    <contour>
+      <point x="500.0" y="980.0" type="line"/>
+      <point x="500.0" y="760.0" type="line"/>
+      <point x="940.0" y="760.0" type="line" smooth="yes"/>
+      <point x="1127.0" y="760.0"/>
+      <point x="1260.0" y="646.0"/>
+      <point x="1260.0" y="484.0" type="curve" smooth="yes"/>
+      <point x="1260.0" y="329.0"/>
+      <point x="1127.0" y="220.0"/>
+      <point x="940.0" y="220.0" type="curve" smooth="yes"/>
+      <point x="532.0" y="220.0" type="line"/>
+      <point x="532.0" y="2304.0" type="line"/>
+      <point x="296.0" y="2304.0" type="line"/>
+      <point x="296.0" y="0.0" type="line"/>
+      <point x="940.0" y="0.0" type="line" smooth="yes"/>
+      <point x="1300.0" y="0.0"/>
+      <point x="1496.0" y="220.0"/>
+      <point x="1496.0" y="496.0" type="curve" smooth="yes"/>
+      <point x="1496.0" y="776.0"/>
+      <point x="1300.0" y="980.0"/>
+      <point x="940.0" y="980.0" type="curve" smooth="yes"/>
+    </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>b</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -43,14 +45,14 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>0.0</real>
+            <real>1.0</real>
             <real>11.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>0.0</real>
+            <real>1.0</real>
             <real>8.0</real>
           </array>
           <key>type</key>
@@ -63,14 +65,14 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>0.0</real>
+            <real>1.0</real>
             <real>0.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>0.0</real>
+            <real>1.0</real>
             <real>19.0</real>
           </array>
           <key>type</key>
@@ -83,14 +85,14 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>0.0</real>
           </array>
           <key>type</key>
@@ -104,13 +106,13 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>11.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>0.0</real>
+            <real>1.0</real>
             <real>8.0</real>
           </array>
           <key>type</key>
@@ -124,13 +126,13 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>4.0</real>
+            <real>2.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>0.0</real>
+            <real>1.0</real>
             <real>15.0</real>
           </array>
           <key>type</key>
@@ -143,14 +145,14 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>0.0</real>
+            <real>1.0</real>
             <real>11.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>0.0</real>
+            <real>1.0</real>
             <real>8.0</real>
           </array>
           <key>type</key>
@@ -163,14 +165,14 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>0.0</real>
+            <real>1.0</real>
             <real>0.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>0.0</real>
+            <real>1.0</real>
             <real>19.0</real>
           </array>
           <key>type</key>
@@ -183,14 +185,14 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>0.0</real>
           </array>
           <key>type</key>

@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dzhecyrillic" format="2">
-  <advance width="1696.0"/>
+  <advance width="1712.0"/>
   <unicode hex="045F"/>
   <outline>
     <contour>
-      <point x="536.0" y="416.0" type="line"/>
-      <point x="388.0" y="-496.0" type="line"/>
-      <point x="904.0" y="-496.0" type="line"/>
-      <point x="1052.0" y="416.0" type="line"/>
+      <point x="496.0" y="196.0" type="line"/>
+      <point x="384.0" y="-496.0" type="line"/>
+      <point x="912.0" y="-496.0" type="line"/>
+      <point x="1024.0" y="196.0" type="line"/>
     </contour>
-    <contour>
-      <point x="272.0" y="1536.0" type="line"/>
-      <point x="16.0" y="0.0" type="line"/>
-      <point x="1444.0" y="0.0" type="line"/>
-      <point x="1700.0" y="1536.0" type="line"/>
-      <point x="1180.0" y="1536.0" type="line"/>
-      <point x="992.0" y="416.0" type="line"/>
-      <point x="596.0" y="416.0" type="line"/>
-      <point x="784.0" y="1536.0" type="line"/>
-    </contour>
+    <component base="pecyrillic" xScale="-1.0" yScale="-1.0" xOffset="1716.0" yOffset="1536.0"/>
   </outline>
   <lib>
     <dict>
       <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
-      <string>m</string>
+      <string>idotless</string>
       <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
-      <string>a</string>
+      <string>idotless</string>
     </dict>
   </lib>
 </glyph>
