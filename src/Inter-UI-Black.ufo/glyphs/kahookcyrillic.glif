@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kahookcyrillic" format="2">
-  <advance width="1968.0"/>
+  <advance width="1840.0"/>
   <unicode hex="04C4"/>
   <outline>
     <contour>
-      <point x="740.0" y="1488.0" type="line"/>
-      <point x="220.0" y="1488.0" type="line"/>
-      <point x="220.0" y="0.0" type="line"/>
-      <point x="740.0" y="0.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1748.0" y="1488.0" type="line"/>
-      <point x="1084.0" y="1488.0" type="line"/>
-      <point x="868.0" y="988.0" type="line"/>
-      <point x="624.0" y="988.0" type="line"/>
-      <point x="676.0" y="476.0" type="line"/>
-      <point x="1116.0" y="476.0" type="line"/>
-    </contour>
-    <contour>
       <point x="372.0" y="476.0" type="line"/>
       <point x="836.0" y="476.0" type="line" smooth="yes"/>
-      <point x="1092.0" y="476.0"/>
-      <point x="1224.0" y="380.0"/>
+      <point x="1079.0" y="476.0"/>
+      <point x="1224.0" y="365.0"/>
       <point x="1220.0" y="184.0" type="curve" smooth="yes"/>
-      <point x="1216.0" y="28.0"/>
-      <point x="1136.0" y="-40.0"/>
-      <point x="964.0" y="-164.0" type="curve"/>
+      <point x="1217.0" y="49.0"/>
+      <point x="1120.0" y="-70.0"/>
+      <point x="964.0" y="-132.0" type="curve"/>
       <point x="1220.0" y="-476.0" type="line"/>
-      <point x="1572.0" y="-304.0"/>
-      <point x="1744.0" y="-56.0"/>
-      <point x="1736.0" y="188.0" type="curve"/>
-      <point x="1736.0" y="672.0"/>
-      <point x="1368.0" y="888.0"/>
-      <point x="836.0" y="888.0" type="curve" smooth="yes"/>
-      <point x="372.0" y="888.0" type="line"/>
+      <point x="1541.0" y="-319.0"/>
+      <point x="1736.0" y="-67.0"/>
+      <point x="1736.0" y="188.0" type="curve" smooth="yes"/>
+      <point x="1736.0" y="591.0"/>
+      <point x="1395.0" y="836.0"/>
+      <point x="836.0" y="836.0" type="curve" smooth="yes"/>
+      <point x="372.0" y="836.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="140.0" y="0.0" type="line"/>
+      <point x="692.0" y="0.0" type="line"/>
+      <point x="692.0" y="476.0" type="line"/>
+      <point x="1080.0" y="476.0" type="line"/>
+      <point x="1748.0" y="1536.0" type="line"/>
+      <point x="1116.0" y="1536.0" type="line"/>
+      <point x="788.0" y="988.0" type="line"/>
+      <point x="692.0" y="988.0" type="line"/>
+      <point x="692.0" y="1536.0" type="line"/>
+      <point x="140.0" y="1536.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>b</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -45,10 +47,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -68,14 +70,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>15.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
-            <real>5.0</real>
+            <real>0.0</real>
+            <real>10.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -88,7 +90,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>6.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
