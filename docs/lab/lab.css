@@ -153,7 +153,6 @@ samples, boxes {
 /*samples { background: rgba(255,0,255,0.4); } sample { background: rgba(100,100,255,0.4); }*/
 samples {
   display: flex;
-  padding: 24px 0;
   width: 100%;
 }
 body.italic samples {
@@ -162,7 +161,7 @@ body.italic samples {
   sample {
     margin: 0;
     /*white-space: pre;*/
-    padding: 0 24px;
+    padding: 2em;
     min-width:100px;
     /*max-width:450px;*/
     white-space: pre-wrap;
