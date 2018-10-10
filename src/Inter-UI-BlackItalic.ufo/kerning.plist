@@ -2222,12 +2222,16 @@
       <real>-40.0</real>
       <key>public.kern2.comma</key>
       <real>-256.0</real>
+      <key>public.kern2.elcyrillic</key>
+      <real>-120.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-112.0</real>
       <key>public.kern2.quotedblbase</key>
       <real>-336.0</real>
       <key>underscore</key>
       <real>-144.0</real>
+      <key>vturn</key>
+      <real>-120.0</real>
     </dict>
     <key>public.kern1.V</key>
     <dict>
@@ -2339,6 +2343,8 @@
       <real>-128.0</real>
       <key>public.kern2.approxequal</key>
       <real>-144.0</real>
+      <key>public.kern2.c</key>
+      <real>-80.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-112.0</real>
     </dict>
@@ -2552,6 +2558,8 @@
       <real>-196.0</real>
       <key>public.kern2.W</key>
       <real>-144.0</real>
+      <key>public.kern2.X</key>
+      <real>-80.0</real>
       <key>public.kern2.Y</key>
       <real>-388.0</real>
       <key>public.kern2.dagger</key>
@@ -2573,6 +2581,31 @@
     <dict>
       <key>hardsigncyrillic</key>
       <real>-96.0</real>
+    </dict>
+    <key>public.kern1.bsmcyrillic</key>
+    <dict>
+      <key>public.kern2.T</key>
+      <real>-320.0</real>
+      <key>public.kern2.T.sc</key>
+      <real>-160.0</real>
+      <key>public.kern2.V</key>
+      <real>-320.0</real>
+      <key>public.kern2.X</key>
+      <real>-80.0</real>
+      <key>public.kern2.Y</key>
+      <real>-480.0</real>
+      <key>public.kern2.dagger</key>
+      <real>-120.0</real>
+      <key>public.kern2.parenright</key>
+      <real>-80.0</real>
+      <key>public.kern2.quotedblleft</key>
+      <real>-200.0</real>
+      <key>public.kern2.v</key>
+      <real>-120.0</real>
+      <key>public.kern2.w</key>
+      <real>-80.0</real>
+      <key>public.kern2.x</key>
+      <real>-40.0</real>
     </dict>
     <key>public.kern1.c</key>
     <dict>
@@ -3535,6 +3568,8 @@
       <real>-48.0</real>
       <key>public.kern2.comma</key>
       <real>-96.0</real>
+      <key>public.kern2.elcyrillic</key>
+      <real>-120.0</real>
       <key>public.kern2.guillemetleft</key>
       <real>-112.0</real>
       <key>public.kern2.idieresis</key>
@@ -3993,6 +4028,11 @@
       <real>-112.0</real>
       <key>underscore</key>
       <real>-144.0</real>
+    </dict>
+    <key>vturn</key>
+    <dict>
+      <key>public.kern2.T.sc</key>
+      <real>-120.0</real>
     </dict>
     <key>won</key>
     <dict>
