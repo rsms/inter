@@ -62,6 +62,8 @@
       <string>uni1F8F</string>
       <string>uni1FBC</string>
       <string>Lambda</string>
+      <string>Yuslittlecyrillic</string>
+      <string>Yuslittleiotifiedcyrillic</string>
     </array>
     <key>public.kern1.Alphagreek</key>
     <array>
@@ -82,6 +84,7 @@
       <string>afii10018</string>
       <string>Kahookcyrillic</string>
       <string>beta</string>
+      <string>Ksicyrillic</string>
       <string>Ezh</string>
     </array>
     <key>public.kern1.C</key>
@@ -260,10 +263,6 @@
       <string>Gmacron</string>
       <string>guarani</string>
     </array>
-    <key>public.kern1.Gecyrillic</key>
-    <array>
-      <string>afii10050</string>
-    </array>
     <key>public.kern1.H</key>
     <array>
       <string>Eturn</string>
@@ -392,6 +391,7 @@
       <string>Omegacyrillic</string>
       <string>romanthousand</string>
       <string>afii10033</string>
+      <string>palochkacyrillic</string>
     </array>
     <key>public.kern1.Idieresis</key>
     <array>
@@ -545,6 +545,9 @@
       <string>Uhornhookabove</string>
       <string>Uhorntilde</string>
       <string>Uhorndotbelow</string>
+      <string>Gamma</string>
+      <string>afii10050</string>
+      <string>uni04FA</string>
       <string>Tbar</string>
       <string>afii10020</string>
       <string>afii10052</string>
@@ -558,6 +561,7 @@
       <string>gecyrillic</string>
       <string>gheupturncyrillic</string>
       <string>uni04FB</string>
+      <string>enghecyrillic</string>
       <string>tecyrillic</string>
       <string>ezhreversed</string>
       <string>ghestrokecyrillic</string>
@@ -720,12 +724,25 @@
       <string>afii10060</string>
       <string>iicyrillic</string>
       <string>elcyrillic</string>
+      <string>emcyrillic</string>
       <string>encyrillic</string>
       <string>enhookcyrillic</string>
+      <string>pecyrillic</string>
+      <string>dzhecyrillic</string>
       <string>checyrillic</string>
+      <string>cheverticalstrokecyrillic</string>
+      <string>shacyrillic</string>
+      <string>yericyrillic</string>
       <string>iacyrillic</string>
       <string>lyogh</string>
       <string>uni029C</string>
+      <string>chekhakassiancyrillic</string>
+      <string>chedieresiscyrillic</string>
+      <string>iishortcyrillic</string>
+      <string>uni045D</string>
+      <string>imacroncyrillic</string>
+      <string>idieresiscyrillic</string>
+      <string>yerudieresiscyrillic</string>
     </array>
     <key>public.kern1.alphagreek</key>
     <array>
@@ -853,6 +870,7 @@
       <string>phi</string>
       <string>phigreek</string>
       <string>kahookcyrillic</string>
+      <string>efcyrillic</string>
       <string>ereversedcyrillic</string>
       <string>iucyrillic</string>
       <string>schwa</string>
@@ -867,7 +885,6 @@
     <key>public.kern1.becyrillic</key>
     <array>
       <string>becyrillic</string>
-      <string>efcyrillic</string>
     </array>
     <key>public.kern1.bsmcyrillic</key>
     <array>
@@ -875,6 +892,7 @@
       <string>hardsigncyrillic</string>
       <string>ljecyrillic</string>
       <string>njecyrillic</string>
+      <string>pemiddlehookcyrillic</string>
     </array>
     <key>public.kern1.bullet</key>
     <array>
@@ -897,9 +915,11 @@
       <string>ccedillaacute</string>
       <string>sigmalunatesymbolgreek</string>
       <string>escyrillic</string>
+      <string>ecyrillic</string>
       <string>cent</string>
       <string>eiotifiedcyrillic</string>
       <string>koppacyrillic</string>
+      <string>esdescendercyrillic</string>
     </array>
     <key>public.kern1.colon</key>
     <array>
@@ -935,7 +955,6 @@
     <key>public.kern1.decyrillic</key>
     <array>
       <string>decyrillic</string>
-      <string>shchacyrillic</string>
     </array>
     <key>public.kern1.deltagreek</key>
     <array>
@@ -982,11 +1001,9 @@
       <string>oe</string>
       <string>tccurl</string>
       <string>epsilonclosed</string>
+      <string>haabkhasiancyrillic</string>
       <string>cheabkhasiancyrillic</string>
-    </array>
-    <key>public.kern1.ecyrillic</key>
-    <array>
-      <string>ecyrillic</string>
+      <string>chedescenderabkhasiancyrillic</string>
     </array>
     <key>public.kern1.eight</key>
     <array>
@@ -1246,6 +1263,7 @@
       <string>kadescendercyrillic</string>
       <string>kaverticalstrokecyrillic</string>
       <string>kabashkircyrillic</string>
+      <string>kjecyrillic</string>
     </array>
     <key>public.kern1.nine</key>
     <array>
@@ -1435,9 +1453,12 @@
       <string>uni048B</string>
       <string>uni04C6</string>
       <string>uni052F</string>
+      <string>uni04CE</string>
+      <string>endescendercyrillic</string>
       <string>uni04CA</string>
       <string>tsecyrillic</string>
       <string>chedescendercyrillic</string>
+      <string>shchacyrillic</string>
       <string>tetsecyrillic</string>
     </array>
     <key>public.kern1.two</key>
@@ -1528,6 +1549,8 @@
       <string>gamma1</string>
       <string>izhitsacyrillic</string>
       <string>nu</string>
+      <string>ustraightcyrillic</string>
+      <string>ustraightstrokecyrillic</string>
       <string>izhitsadblgravecyrillic</string>
     </array>
     <key>public.kern1.vecyrillic</key>
@@ -1968,12 +1991,14 @@
       <string>numero</string>
       <string>Omegacyrillic</string>
       <string>Eiotifiedcyrillic</string>
+      <string>Ksicyrillic</string>
       <string>romanthousand</string>
       <string>lyogh</string>
       <string>afii10020</string>
       <string>afii10052</string>
       <string>afii10033</string>
       <string>afii10034</string>
+      <string>palochkacyrillic</string>
       <string>afii10061</string>
       <string>uni03F8</string>
     </array>
@@ -2302,6 +2327,7 @@
       <string>aiecyrillic</string>
       <string>checyrillic</string>
       <string>chedescendercyrillic</string>
+      <string>cheverticalstrokecyrillic</string>
     </array>
     <key>public.kern2.approxequal</key>
     <array>
@@ -2480,10 +2506,14 @@
       <string>sigma</string>
       <string>phi</string>
       <string>phigreek</string>
+      <string>efcyrillic</string>
+      <string>ecyrillic</string>
+      <string>haabkhasiancyrillic</string>
       <string>cent</string>
       <string>schwa</string>
       <string>koppacyrillic</string>
       <string>uni1F71</string>
+      <string>esdescendercyrillic</string>
       <string>schwacyrillic</string>
       <string>schwadieresiscyrillic</string>
       <string>obarredcyrillic</string>
@@ -2520,20 +2550,6 @@
     <array>
       <string>delta</string>
       <string>sigma1</string>
-    </array>
-    <key>public.kern2.dzhecyrillic</key>
-    <array>
-      <string>emcyrillic</string>
-      <string>pecyrillic</string>
-      <string>dzhecyrillic</string>
-      <string>shacyrillic</string>
-      <string>shchacyrillic</string>
-      <string>yericyrillic</string>
-    </array>
-    <key>public.kern2.ecyrillic</key>
-    <array>
-      <string>efcyrillic</string>
-      <string>ecyrillic</string>
     </array>
     <key>public.kern2.eight.sups</key>
     <array>
@@ -2597,8 +2613,10 @@
     </array>
     <key>public.kern2.elcyrillic</key>
     <array>
+      <string>decyrillic</string>
       <string>elcyrillic</string>
       <string>uni04C6</string>
+      <string>uni052F</string>
       <string>ljecyrillic</string>
     </array>
     <key>public.kern2.emdash</key>
@@ -2854,17 +2872,34 @@
       <string>kahookcyrillic</string>
       <string>kadescendercyrillic</string>
       <string>kaverticalstrokecyrillic</string>
+      <string>emcyrillic</string>
+      <string>uni04CE</string>
       <string>encyrillic</string>
+      <string>endescendercyrillic</string>
+      <string>enghecyrillic</string>
       <string>enhookcyrillic</string>
       <string>uni04CA</string>
+      <string>pecyrillic</string>
       <string>tsecyrillic</string>
+      <string>dzhecyrillic</string>
+      <string>shacyrillic</string>
+      <string>shchacyrillic</string>
       <string>softsigncyrillic</string>
+      <string>yericyrillic</string>
       <string>njecyrillic</string>
       <string>iucyrillic</string>
+      <string>ghemiddlehookcyrillic</string>
+      <string>pemiddlehookcyrillic</string>
       <string>eiotifiedcyrillic</string>
       <string>uni029C</string>
       <string>uni04F7</string>
       <string>gjecyrillic</string>
+      <string>iishortcyrillic</string>
+      <string>uni045D</string>
+      <string>imacroncyrillic</string>
+      <string>idieresiscyrillic</string>
+      <string>kjecyrillic</string>
+      <string>yerudieresiscyrillic</string>
     </array>
     <key>public.kern2.nine.1</key>
     <array>
@@ -3081,6 +3116,8 @@
       <string>gamma1</string>
       <string>izhitsacyrillic</string>
       <string>nu</string>
+      <string>ustraightcyrillic</string>
+      <string>ustraightstrokecyrillic</string>
       <string>izhitsadblgravecyrillic</string>
     </array>
     <key>public.kern2.w</key>
