@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni04FB" format="2">
-  <advance width="1268.0"/>
+  <advance width="1292.0"/>
   <unicode hex="04FB"/>
   <outline>
     <component base="gecyrillic"/>
     <component base="crossbar" xOffset="-296.0" yOffset="-224.0"/>
-    <component base="cyrillichook" xOffset="84.0"/>
+    <component base="cyrillichook" xOffset="-204.0"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>tecyrillic</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>0</integer>
+        <integer>0</integer>
+        <integer>-1</integer>
+      </array>
+    </dict>
+  </lib>
 </glyph>

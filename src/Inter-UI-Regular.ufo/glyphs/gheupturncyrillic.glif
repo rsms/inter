@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gheupturncyrillic" format="2">
-  <advance width="1252.0"/>
+  <advance width="1296.0"/>
   <unicode hex="0491"/>
   <outline>
     <contour>
-      <point x="1148.0" y="1916.0" type="line"/>
-      <point x="912.0" y="1916.0" type="line"/>
-      <point x="912.0" y="1268.0" type="line"/>
-      <point x="1148.0" y="1268.0" type="line"/>
+      <point x="1168.0" y="1916.0" type="line"/>
+      <point x="932.0" y="1916.0" type="line"/>
+      <point x="932.0" y="1316.0" type="line"/>
+      <point x="1168.0" y="1316.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1164.0" y="1488.0" type="line"/>
-      <point x="216.0" y="1488.0" type="line"/>
-      <point x="216.0" y="0.0" type="line"/>
-      <point x="452.0" y="0.0" type="line"/>
-      <point x="452.0" y="1268.0" type="line"/>
-      <point x="1164.0" y="1268.0" type="line"/>
-    </contour>
+    <component base="gecyrillic"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>gecyrillic</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -27,10 +24,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>0.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -49,16 +46,16 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
+            <real>0.0</real>
             <real>1.0</real>
-            <real>3.0</real>
+          </array>
+          <key>place</key>
+          <array>
+            <real>1316.0</real>
+            <real>220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -67,18 +64,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>216.0</real>
+            <real>236.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -109,7 +101,7 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>1.0</real>
           </array>
           <key>stem</key>
@@ -124,16 +116,11 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
+            <real>0.0</real>
             <real>1.0</real>
-            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

@@ -1,42 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ezhreversed" format="2">
-  <advance width="1964.0"/>
+  <advance width="1900.0"/>
   <unicode hex="01B9"/>
   <outline>
-    <contour>
-      <point x="220.0" y="1488.0" type="line"/>
-      <point x="212.0" y="1140.0" type="line"/>
-      <point x="876.0" y="528.0" type="line"/>
-      <point x="1256.0" y="528.0" type="line"/>
-      <point x="1256.0" y="700.0" type="line"/>
-      <point x="796.0" y="1076.0" type="line"/>
-      <point x="1680.0" y="1076.0" type="line"/>
-      <point x="1680.0" y="1488.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="980.0" y="736.0" type="line"/>
-      <point x="482.0" y="736.0"/>
-      <point x="194.0" y="488.0"/>
-      <point x="192.0" y="44.0" type="curve" smooth="yes"/>
-      <point x="194.0" y="-328.0"/>
-      <point x="538.0" y="-544.0"/>
-      <point x="1000.0" y="-544.0" type="curve" smooth="yes"/>
-      <point x="1378.0" y="-544.0"/>
-      <point x="1774.0" y="-368.0"/>
-      <point x="1772.0" y="40.0" type="curve"/>
-      <point x="1252.0" y="40.0" type="line"/>
-      <point x="1254.0" y="-60.0"/>
-      <point x="1158.0" y="-132.0"/>
-      <point x="1000.0" y="-132.0" type="curve" smooth="yes"/>
-      <point x="818.0" y="-132.0"/>
-      <point x="714.0" y="-44.0"/>
-      <point x="712.0" y="64.0" type="curve" smooth="yes"/>
-      <point x="714.0" y="336.0"/>
-      <point x="862.0" y="412.0"/>
-      <point x="1076.0" y="412.0" type="curve" smooth="yes"/>
-      <point x="1256.0" y="412.0" type="line"/>
-      <point x="1256.0" y="692.0" type="line"/>
-    </contour>
+    <component base="dzeabkhasiancyrillic" xScale="-1.0" xOffset="1900.0"/>
   </outline>
   <lib>
     <dict>
@@ -47,10 +14,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>5.0</real>
+            <real>-544.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -67,18 +34,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>2.0</real>
+            <real>192.0</real>
+            <real>1580.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>8.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -87,10 +49,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>5.0</real>
+            <real>-544.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

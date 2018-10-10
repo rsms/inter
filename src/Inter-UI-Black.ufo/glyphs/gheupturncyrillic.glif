@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gheupturncyrillic" format="2">
-  <advance width="1796.0"/>
+  <advance width="1404.0"/>
   <unicode hex="0491"/>
   <outline>
     <contour>
-      <point x="1500.0" y="1928.0" type="line"/>
-      <point x="968.0" y="1928.0" type="line"/>
-      <point x="968.0" y="1076.0" type="line"/>
-      <point x="1500.0" y="1076.0" type="line"/>
+      <point x="1340.0" y="1928.0" type="line"/>
+      <point x="848.0" y="1928.0" type="line"/>
+      <point x="848.0" y="1124.0" type="line"/>
+      <point x="1340.0" y="1124.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1380.0" y="1488.0" type="line"/>
-      <point x="260.0" y="1488.0" type="line"/>
-      <point x="260.0" y="0.0" type="line"/>
-      <point x="792.0" y="0.0" type="line"/>
-      <point x="792.0" y="1076.0" type="line"/>
-      <point x="1380.0" y="1076.0" type="line"/>
-    </contour>
+    <component base="gecyrillic"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>gecyrillic</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -27,10 +24,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>0.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -49,7 +46,7 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>1.0</real>
           </array>
           <key>stem</key>
@@ -69,7 +66,7 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>1.0</real>
           </array>
           <key>stem</key>

@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gheupturncyrillic" format="2">
-  <advance width="1796.0"/>
+  <advance width="1404.0"/>
   <unicode hex="0491"/>
   <outline>
     <contour>
-      <point x="1692.0" y="1928.0" type="line"/>
-      <point x="1160.0" y="1928.0" type="line"/>
-      <point x="1020.0" y="1076.0" type="line"/>
-      <point x="1552.0" y="1076.0" type="line"/>
+      <point x="1532.0" y="1928.0" type="line"/>
+      <point x="1040.0" y="1928.0" type="line"/>
+      <point x="908.0" y="1124.0" type="line"/>
+      <point x="1400.0" y="1124.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1500.0" y="1488.0" type="line"/>
-      <point x="380.0" y="1488.0" type="line"/>
-      <point x="132.0" y="0.0" type="line"/>
-      <point x="664.0" y="0.0" type="line"/>
-      <point x="844.0" y="1076.0" type="line"/>
-      <point x="1432.0" y="1076.0" type="line"/>
-    </contour>
+    <component base="gecyrillic"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>gecyrillic</string>
+    </dict>
+  </lib>
 </glyph>

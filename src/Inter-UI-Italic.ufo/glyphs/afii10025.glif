@@ -1,56 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="afii10025" format="2">
-  <advance width="1776.0"/>
+  <advance width="1796.0"/>
   <unicode hex="0417"/>
-  <guideline x="1008.0" y="1044.0" angle="90.0"/>
+  <guideline x="936.0" y="1044.0" angle="90.0"/>
+  <guideline x="768.0" y="-192.0" angle="260.6"/>
   <outline>
-    <contour>
-      <point x="940.0" y="996.0" type="line"/>
-      <point x="1348.0" y="996.0"/>
-      <point x="1660.0" y="1232.0"/>
-      <point x="1708.0" y="1516.0" type="curve"/>
-      <point x="1772.0" y="1904.0"/>
-      <point x="1528.0" y="2112.0"/>
-      <point x="1096.0" y="2112.0" type="curve" smooth="yes"/>
-      <point x="728.0" y="2112.0"/>
-      <point x="380.0" y="1892.0"/>
-      <point x="320.0" y="1536.0" type="curve"/>
-      <point x="608.0" y="1536.0" type="line"/>
-      <point x="640.0" y="1732.0"/>
-      <point x="836.0" y="1876.0"/>
-      <point x="1056.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="1352.0" y="1876.0"/>
-      <point x="1452.0" y="1716.0"/>
-      <point x="1420.0" y="1524.0" type="curve"/>
-      <point x="1388.0" y="1320.0"/>
-      <point x="1248.0" y="1180.0"/>
-      <point x="960.0" y="1180.0" type="curve" smooth="yes"/>
-      <point x="736.0" y="1180.0" type="line"/>
-      <point x="704.0" y="996.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="728.0" y="1124.0" type="line"/>
-      <point x="696.0" y="944.0" type="line"/>
-      <point x="920.0" y="944.0" type="line" smooth="yes"/>
-      <point x="1204.0" y="944.0"/>
-      <point x="1336.0" y="828.0"/>
-      <point x="1296.0" y="576.0" type="curve" smooth="yes"/>
-      <point x="1260.0" y="364.0"/>
-      <point x="1072.0" y="204.0"/>
-      <point x="780.0" y="204.0" type="curve" smooth="yes"/>
-      <point x="528.0" y="204.0"/>
-      <point x="384.0" y="376.0"/>
-      <point x="416.0" y="576.0" type="curve"/>
-      <point x="132.0" y="576.0" type="line"/>
-      <point x="64.0" y="152.0"/>
-      <point x="392.0" y="-28.0"/>
-      <point x="740.0" y="-28.0" type="curve" smooth="yes"/>
-      <point x="1172.0" y="-28.0"/>
-      <point x="1516.0" y="196.0"/>
-      <point x="1580.0" y="584.0" type="curve" smooth="yes"/>
-      <point x="1640.0" y="932.0"/>
-      <point x="1408.0" y="1124.0"/>
-      <point x="964.0" y="1124.0" type="curve" smooth="yes"/>
-    </contour>
+    <component base="three"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>1</integer>
+      </array>
+    </dict>
+  </lib>
 </glyph>
