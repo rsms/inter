@@ -232,6 +232,13 @@ tablex out.cv06 {
   -webkit-font-feature-settings: 'calt' 1, 'cv06' 1;
   font-feature-settings:         'calt' 1, 'cv06' 1;
 }
+tablex out.cv07 {
+  -moz-font-feature-settings:    'calt' 1, 'cv07' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cv07' 1;
+  -o-font-feature-settings:      'calt' 1, 'cv07' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cv07' 1;
+  font-feature-settings:         'calt' 1, 'cv07' 1;
+}
 
 boxes.features box h3 + p {
   margin-top:0.5em;
