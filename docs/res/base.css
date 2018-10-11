@@ -18,11 +18,11 @@ body {
   scroll-behavior: smooth;
 
   font-kerning: normal;
-  -moz-font-feature-settings:"kern" 1, "liga" 1;
-  -ms-font-feature-settings:"kern" 1, "liga" 1;
-  -o-font-feature-settings:"kern" 1, "liga" 1;
-  -webkit-font-feature-settings:"kern" 1, "liga" 1;
-  font-feature-settings:"kern" 1, "liga" 1;
+  -moz-font-feature-settings:    "calt" 1, "kern" 1, "liga" 1;
+  -ms-font-feature-settings:     "calt" 1, "kern" 1, "liga" 1;
+  -o-font-feature-settings:      "calt" 1, "kern" 1, "liga" 1;
+  -webkit-font-feature-settings: "calt" 1, "kern" 1, "liga" 1;
+  font-feature-settings:         "calt" 1, "kern" 1, "liga" 1;
 }
 
 /* Font style classifiers used by samples and dynmetrics */
@@ -44,8 +44,8 @@ body {
   body {
     font-family: 'Inter UI var', system-ui, sans-serif;
   }
-  html.safari body {
-    font-family: 'Inter UI var safari-fix', system-ui, sans-serif;
+  html.vf-alt body {
+    font-family: 'Inter UI var alt', system-ui, sans-serif;
   }
 }
 

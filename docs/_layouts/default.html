@@ -59,13 +59,19 @@ endfor
     <meta property="og:type" content="product">
     <meta property="og:locale" content="en_US" />
   </head>
-  <script>
+<script>
 (function(u){
-if (u.indexOf('Safari/') != -1 && u.indexOf('Chrome/') == -1 && u.indexOf('Chromium/') == -1) {
-  document.documentElement.classList.add('safari')
+if (
+  ( u.indexOf('Safari/') != -1 &&
+    u.indexOf('Chrome/') == -1 &&
+    u.indexOf('Chromium/') == -1 ) ||
+  u.indexOf('Edge/') != -1
+) {
+  // Use alternate variable font for Safari and MS Edge
+  document.documentElement.classList.add('vf-alt')
 }
 })(navigator.userAgent);
-  </script>
+</script>
   <body>
     <div id="hud-notification"><div class="msg">Hello</div></div>
     <script src="{{url_root}}res/base.js?v={{ base_js_v }}"></script>
