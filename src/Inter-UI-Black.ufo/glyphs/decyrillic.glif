@@ -1,45 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="decyrillic" format="2">
-  <advance width="2048.0"/>
+  <advance width="1976.0"/>
   <unicode hex="0434"/>
   <outline>
     <contour>
-      <point x="504.0" y="1536.0" type="line"/>
-      <point x="504.0" y="1104.0" type="line" smooth="yes"/>
-      <point x="504.0" y="888.0"/>
-      <point x="525.0" y="668.0"/>
-      <point x="272.0" y="416.0" type="curve"/>
-      <point x="232.0" y="404.0" type="line"/>
-      <point x="248.0" y="0.0" type="line"/>
-      <point x="288.0" y="0.0" type="line"/>
-      <point x="681.0" y="48.0"/>
-      <point x="1016.0" y="388.0"/>
-      <point x="1016.0" y="1104.0" type="curve" smooth="yes"/>
-      <point x="1016.0" y="1536.0" type="line"/>
+      <point x="48.0" y="-456.0" type="line"/>
+      <point x="584.0" y="-456.0" type="line"/>
+      <point x="584.0" y="0.0" type="line"/>
+      <point x="1392.0" y="0.0" type="line"/>
+      <point x="1392.0" y="-456.0" type="line"/>
+      <point x="1912.0" y="-456.0" type="line"/>
+      <point x="1912.0" y="416.0" type="line"/>
+      <point x="1672.0" y="416.0" type="line"/>
+      <point x="1672.0" y="1536.0" type="line"/>
+      <point x="360.0" y="1536.0" type="line"/>
+      <point x="328.0" y="1104.0" type="line" smooth="yes"/>
+      <point x="312.0" y="888.0"/>
+      <point x="300.0" y="472.0"/>
+      <point x="160.0" y="416.0" type="curve"/>
+      <point x="48.0" y="416.0" type="line"/>
     </contour>
     <contour>
-      <point x="656.0" y="1536.0" type="line"/>
-      <point x="656.0" y="1136.0" type="line"/>
-      <point x="1240.0" y="1136.0" type="line"/>
-      <point x="1240.0" y="0.0" type="line"/>
-      <point x="1752.0" y="0.0" type="line"/>
-      <point x="1752.0" y="1536.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="128.0" y="416.0" type="line"/>
-      <point x="128.0" y="-456.0" type="line"/>
-      <point x="664.0" y="-456.0" type="line"/>
-      <point x="664.0" y="0.0" type="line"/>
-      <point x="1472.0" y="0.0" type="line"/>
-      <point x="1472.0" y="-456.0" type="line"/>
-      <point x="1992.0" y="-456.0" type="line"/>
-      <point x="1992.0" y="416.0" type="line"/>
+      <point x="688.0" y="416.0" type="line"/>
+      <point x="768.0" y="560.0"/>
+      <point x="800.0" y="772.0"/>
+      <point x="816.0" y="1104.0" type="curve" smooth="yes"/>
+      <point x="816.0" y="1136.0" type="line"/>
+      <point x="1160.0" y="1136.0" type="line"/>
+      <point x="1160.0" y="416.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
-      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
-      <string>t</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -47,10 +39,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>5.0</real>
+            <real>120.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -70,7 +62,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>5.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
