@@ -1377,6 +1377,7 @@ sub llinebelow by llinebelow.ss02;
 sub lcircumflexbelow by lcircumflexbelow.ss02;
 sub zero by zero.slash;
 sub zero.tf by zero.tf.slash;
+sub germandbls by germandbls.1;
 } ss02;
 
 feature cv01 {
@@ -1445,6 +1446,11 @@ sub rdotbelow by rdotbelow.1;
 sub rdotbelowmacron by rdotbelowmacron.1;
 sub rlinebelow by rlinebelow.1;
 } cv06;
+
+feature cv07 {
+sub germandbls by germandbls.1;
+
+} cv07;
 
 table GDEF {
   # automatic
