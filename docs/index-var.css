@@ -46,7 +46,8 @@
   /*border-top: 1px solid #ddd;*/
   border-bottom: 1px solid #ddd;
   color: #333;
-  padding:20px 20px 20px 20px;
+  padding: 20px 0;
+  overflow: hidden;
 }
 
 .variable .unsupported-message.active + .ctrl {
@@ -58,7 +59,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding:5px;
+    padding: 5px 0;
+    flex-wrap: wrap;
   }
   .variable .ctrl input {
     margin: 0 8px 0 0;
@@ -72,6 +74,7 @@
     display: flex;
     flex: 0 1 auto;
     align-items: center;
+    margin: 5px;
     margin-right: 20px;
     /*background:lightpink;*/
   }
