@@ -88,13 +88,11 @@
        url("font-files/Inter-UI-BlackItalic.woff?v=3.0") format("woff");
 }
 
-/*
-------------------------------------------------------------------------------
+/* --------------------------------------------------------------------------
 Single variable font.
 
 Note that you may want to do something like this to make sure you're serving
 constant fonts to older browsers:
-
 html {
   font-family: 'Inter UI', sans-serif;
 }
@@ -107,7 +105,7 @@ html {
 BUGS:
 - Safari 12.0 will default to italic instead of regular when font-weight
   is provided in a @font-face declaration.
-  Workaround: Use "Inter UI var safari-fix" for Safari, or explicitly set
+  Workaround: Use "Inter UI var alt" for Safari, or explicitly set
   `font-variation-settings:"slnt" DEGREE`.
 */
 @font-face {
@@ -117,9 +115,33 @@ BUGS:
   src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
        url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2");
 }
+
+/* --------------------------------------------------------------------------
+
+"Inter UI var alt" is recommended for Safari and Edge, for reliable italics.
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter UI var alt', sans-serif;
+  }
+}
+
+*/
 @font-face {
-  font-family: 'Inter UI var safari-fix';
-  font-style: oblique 0deg 10deg;
-  src: url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2-variations"),
-       url("font-files/Inter-UI.var.woff2?v=3.0") format("woff2");
+  font-family: 'Inter UI var alt';
+  font-weight: 400 900;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("font-files/Inter-UI-upright.var.woff2?v=3.0") format("woff2 supports variations(gvar)"),
+       url("font-files/Inter-UI-upright.var.woff2?v=3.0") format("woff2-variations"),
+       url("font-files/Inter-UI-upright.var.woff2?v=3.0") format("woff2");
+}
+@font-face {
+  font-family: 'Inter UI var alt';
+  font-weight: 400 900;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("font-files/Inter-UI-italic.var.woff2?v=3.0") format("woff2 supports variations(gvar)"),
+       url("font-files/Inter-UI-italic.var.woff2?v=3.0") format("woff2-variations"),
+       url("font-files/Inter-UI-italic.var.woff2?v=3.0") format("woff2");
 }
