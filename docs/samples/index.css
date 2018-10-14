@@ -227,7 +227,15 @@ div.live {
 }
 
 .sample-images img, .sample-images svg {
-  margin: 100px 0;
+  margin: 100px auto;
+}
+.sample-images .poster {
+  border-radius: 1px;
+  box-shadow: 0px 1px 25px rgba(0,0,0,0.05);
+  filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.1));
+}
+.sample-images img.im640, .sample-images svg.im640 {
+  width:640px;
 }
 .sample-images > img:first-child, .sample-images > svg:first-child {
   margin-top:50px;
