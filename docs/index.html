@@ -577,7 +577,7 @@ var unitFormatters = [
     return tracking.toFixed(3)
   }],
   ['px', 'px', function(fontSize, tracking) {
-    return (fontSize * tracking).toFixed(3)
+    return (fontSize * tracking).toFixed(1)
   }],
   ['%', 'percent', function(fontSize, tracking) {
     return (tracking * 100).toFixed(1)
