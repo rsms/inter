@@ -161,10 +161,11 @@ body.italic samples {
   sample {
     margin: 0;
     /*white-space: pre;*/
-    padding: 2em;
+    padding: 2rem;
     min-width:100px;
     /*max-width:450px;*/
     white-space: pre-wrap;
+    outline: none;
   }
     sample p {
       white-space: pre-wrap;
