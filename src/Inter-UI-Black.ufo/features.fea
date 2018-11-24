@@ -739,6 +739,7 @@ feature cv05;
 feature cv06;
 feature cv07;
 feature cv08;
+feature cv09;
 
 } aalt;
 
@@ -1185,6 +1186,7 @@ sub six by six.tf;
 sub seven by seven.tf;
 sub eight by eight.tf;
 sub nine by nine.tf;
+sub three.1 by three.1.tf;
 sub comma by comma.tf;
 sub period by period.tf;
 sub colon by colon.tf;
@@ -1204,8 +1206,11 @@ sub six.tf by six;
 sub seven.tf by seven;
 sub eight.tf by eight;
 sub nine.tf by nine;
+sub three.1.tf by three.1;
 sub comma.tf by comma;
 sub period.tf by period;
+sub colon.tf by colon;
+sub semicolon.tf by semicolon;
 
 } pnum;
 
@@ -1329,6 +1334,8 @@ sub N o period by numero;
 feature salt {
 sub one by one.ss01;
 sub one.tf by one.tf.ss01;
+sub three by three.1;
+sub three.tf by three.1.tf;
 sub four by four.ss01;
 sub four.tf by four.tf.ss01;
 sub six by six.ss01;
@@ -1368,9 +1375,10 @@ sub rlinebelow by rlinebelow.1;
 feature ss01 {
 # notes:
 # Name: Alternate digits
-# automatic
 sub one by one.ss01;
 sub one.tf by one.tf.ss01;
+sub three by three.1;
+sub three.tf by three.1.tf;
 sub four by four.ss01;
 sub four.tf by four.tf.ss01;
 sub six by six.ss01;
@@ -1543,6 +1551,14 @@ sub uni1FDB by uni1FDB.1;
 sub afii10055 by afii10055.1;
 sub afii10056 by afii10056.1;
 } cv08;
+
+feature cv09 {
+# notes:
+# Name: Flat top three
+sub three by three.1;
+sub three.tf by three.1.tf;
+
+} cv09;
 
 table GDEF {
   # automatic
