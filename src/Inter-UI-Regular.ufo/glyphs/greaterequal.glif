@@ -4,24 +4,28 @@
   <unicode hex="2265"/>
   <outline>
     <contour>
-      <point x="264.0" y="584.0" type="line"/>
-      <point x="264.0" y="340.0" type="line"/>
-      <point x="1544.0" y="1004.0" type="line"/>
-      <point x="1544.0" y="1044.0" type="line"/>
-      <point x="264.0" y="1708.0" type="line"/>
-      <point x="264.0" y="1460.0" type="line"/>
-      <point x="1096.0" y="1032.0" type="line"/>
-      <point x="1096.0" y="1016.0" type="line"/>
+      <point x="260.0" y="96.0" type="line"/>
+      <point x="1548.0" y="96.0" type="line"/>
+      <point x="1548.0" y="320.0" type="line"/>
+      <point x="260.0" y="320.0" type="line"/>
     </contour>
     <contour>
-      <point x="264.0" y="228.0" type="line"/>
-      <point x="264.0" y="4.0" type="line"/>
-      <point x="1544.0" y="4.0" type="line"/>
-      <point x="1544.0" y="228.0" type="line"/>
+      <point x="1548.0" y="944.0" type="line"/>
+      <point x="1548.0" y="1104.0" type="line"/>
+      <point x="260.0" y="1568.0" type="line"/>
+      <point x="260.0" y="1324.0" type="line"/>
+      <point x="1160.0" y="1028.0" type="line"/>
+      <point x="1152.0" y="1044.0" type="line"/>
+      <point x="1152.0" y="1004.0" type="line"/>
+      <point x="1160.0" y="1020.0" type="line"/>
+      <point x="260.0" y="724.0" type="line"/>
+      <point x="260.0" y="480.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>plus</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -31,15 +35,15 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
-            <real>3.0</real>
+            <real>0.0</real>
+            <real>2.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -51,15 +55,15 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
-            <real>3.0</real>
+            <real>0.0</real>
+            <real>2.0</real>
           </array>
           <key>type</key>
           <string>TTStem</string>

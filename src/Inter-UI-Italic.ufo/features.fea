@@ -1011,6 +1011,10 @@ sub emdash by emdash.case;
 sub bullet by bullet.case;
 sub openbullet by openbullet.case;
 sub colon by colon.case;
+sub less by less.case;
+sub greater by greater.case;
+sub lessequal by lessequal.case;
+sub greaterequal by greaterequal.case;
 sub equal by equal.case;
 sub notequal by notequal.case;
 sub plus by plus.case;
@@ -1061,6 +1065,10 @@ feature calt {
   colon
   approxequal
   asciitilde
+  less
+  greater
+  lessequal
+  greaterequal
 ];
 @CASE_L = [
   @CASE_DELIM_L
@@ -1097,6 +1105,10 @@ feature calt {
   colon.case
   approxequal.case
   asciitilde.case
+  less.case
+  greater.case
+  lessequal.case
+  greaterequal.case
 ];
 @CASE_R = [
   @CASE_DELIM_R

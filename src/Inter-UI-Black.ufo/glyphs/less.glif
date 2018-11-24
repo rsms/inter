@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="less" format="2">
-  <advance width="1404.0"/>
+  <advance width="1952.0"/>
   <unicode hex="003C"/>
-  <guideline x="12.0" y="1240.0" angle="0.0"/>
-  <guideline x="268.0" y="896.0" angle="0.0"/>
-  <guideline x="1048.0" y="1620.0" angle="90.0"/>
+  <note>
+Recipe: Make rect and rotate 63deg (regular) or 69deg (black)
+</note>
+  <guideline x="408.0" y="832.0" angle="0.0"/>
   <outline>
     <contour>
-      <point x="1268.0" y="452.0" type="line"/>
-      <point x="740.0" y="892.0" type="line"/>
-      <point x="740.0" y="900.0" type="line"/>
-      <point x="1268.0" y="1340.0" type="line"/>
-      <point x="956.0" y="1620.0" type="line"/>
-      <point x="112.0" y="896.0" type="line"/>
-      <point x="956.0" y="172.0" type="line"/>
+      <point x="232.0" y="592.0" type="line"/>
+      <point x="1720.0" y="-4.0" type="line"/>
+      <point x="1720.0" y="540.0" type="line"/>
+      <point x="772.0" y="828.0" type="line"/>
+      <point x="788.0" y="804.0" type="line"/>
+      <point x="788.0" y="860.0" type="line"/>
+      <point x="772.0" y="836.0" type="line"/>
+      <point x="1720.0" y="1124.0" type="line"/>
+      <point x="1720.0" y="1668.0" type="line"/>
+      <point x="232.0" y="1072.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>plus</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -25,18 +31,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>4.0</real>
+            <real>112.0</real>
+            <real>1156.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>6.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>

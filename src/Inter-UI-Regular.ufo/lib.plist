@@ -1257,36 +1257,36 @@
       <string>lari</string>
       <string>franc</string>
       <string>zero</string>
-      <string>zero.slash</string>
-      <string>zero.tf</string>
-      <string>zero.tf.slash</string>
       <string>one</string>
-      <string>one.ss01</string>
-      <string>one.tf</string>
-      <string>one.tf.ss01</string>
       <string>two</string>
-      <string>two.tf</string>
       <string>twostroke</string>
       <string>three</string>
-      <string>three.tf</string>
       <string>four</string>
-      <string>four.ss01</string>
-      <string>four.tf</string>
-      <string>four.tf.ss01</string>
       <string>five</string>
-      <string>five.tf</string>
       <string>Tonefive</string>
       <string>six</string>
-      <string>six.ss01</string>
-      <string>six.tf</string>
-      <string>six.tf.ss01</string>
       <string>seven</string>
-      <string>seven.tf</string>
       <string>eight</string>
-      <string>eight.tf</string>
       <string>nine</string>
+      <string>zero.slash</string>
+      <string>one.ss01</string>
+      <string>four.ss01</string>
+      <string>six.ss01</string>
       <string>nine.ss01</string>
+      <string>zero.tf</string>
+      <string>one.tf</string>
+      <string>two.tf</string>
+      <string>three.tf</string>
+      <string>four.tf</string>
+      <string>five.tf</string>
+      <string>six.tf</string>
+      <string>seven.tf</string>
+      <string>eight.tf</string>
       <string>nine.tf</string>
+      <string>zero.tf.slash</string>
+      <string>one.tf.ss01</string>
+      <string>four.tf.ss01</string>
+      <string>six.tf.ss01</string>
       <string>nine.tf.ss01</string>
       <string>ampersand</string>
       <string>exclam</string>
@@ -1300,20 +1300,20 @@
       <string>interrobang</string>
       <string>invertedinterrobang</string>
       <string>parenleft</string>
-      <string>parenleft.case</string>
       <string>parenright</string>
-      <string>parenright.case</string>
       <string>bracketleft</string>
-      <string>bracketleft.case</string>
       <string>bracketleft_quill</string>
       <string>bracketright</string>
-      <string>bracketright.case</string>
       <string>bracketright_quill</string>
       <string>braceleft</string>
-      <string>braceleft.case</string>
       <string>braceright</string>
-      <string>braceright.case</string>
       <string>at</string>
+      <string>parenleft.case</string>
+      <string>parenright.case</string>
+      <string>bracketleft.case</string>
+      <string>bracketright.case</string>
+      <string>braceleft.case</string>
+      <string>braceright.case</string>
       <string>at.case</string>
       <string>numbersign</string>
       <string>currency</string>
@@ -1324,17 +1324,17 @@
       <string>hyphenbullet</string>
       <string>hyphen</string>
       <string>softhyphen</string>
-      <string>hyphen.case</string>
       <string>endash</string>
-      <string>endash.case</string>
       <string>figuredash</string>
-      <string>figuredash.case</string>
       <string>emdash</string>
-      <string>emdash.case</string>
       <string>horizontalbar</string>
       <string>bullet</string>
-      <string>bullet.case</string>
       <string>openbullet</string>
+      <string>hyphen.case</string>
+      <string>endash.case</string>
+      <string>figuredash.case</string>
+      <string>emdash.case</string>
+      <string>bullet.case</string>
       <string>openbullet.case</string>
       <string>quoteleft</string>
       <string>quoteright</string>
@@ -1368,22 +1368,26 @@
       <string>lessequal</string>
       <string>greaterequal</string>
       <string>equal</string>
-      <string>equal.case</string>
       <string>notequal</string>
-      <string>notequal.case</string>
       <string>plus</string>
-      <string>plus.case</string>
       <string>minus</string>
-      <string>minus.case</string>
       <string>multiply</string>
-      <string>multiply.case</string>
       <string>divide</string>
-      <string>divide.case</string>
       <string>plusminus</string>
-      <string>plusminus.case</string>
       <string>approxequal</string>
-      <string>approxequal.case</string>
       <string>asciitilde</string>
+      <string>less.case</string>
+      <string>greater.case</string>
+      <string>lessequal.case</string>
+      <string>greaterequal.case</string>
+      <string>equal.case</string>
+      <string>notequal.case</string>
+      <string>plus.case</string>
+      <string>minus.case</string>
+      <string>multiply.case</string>
+      <string>divide.case</string>
+      <string>plusminus.case</string>
+      <string>approxequal.case</string>
       <string>asciitilde.case</string>
       <string>logicalnot</string>
       <string>periodcentered</string>
@@ -1622,24 +1626,24 @@
       <string>hairspace</string>
       <string>zerowidthspace</string>
       <string>leftArrow</string>
-      <string>leftArrow.case</string>
       <string>leftLongArrow</string>
-      <string>leftLongArrow.case</string>
       <string>rightArrow</string>
-      <string>rightArrow.case</string>
       <string>rightLongArrow</string>
-      <string>rightLongArrow.case</string>
       <string>northWestArrow</string>
       <string>northEastArrow</string>
       <string>southEastArrow</string>
       <string>southWestArrow</string>
       <string>leftRightArrow</string>
-      <string>leftRightArrow.case</string>
       <string>leftRightLongArrow</string>
-      <string>leftRightLongArrow.case</string>
       <string>upArrow</string>
       <string>downArrow</string>
       <string>upDownArrow</string>
+      <string>leftArrow.case</string>
+      <string>leftLongArrow.case</string>
+      <string>rightArrow.case</string>
+      <string>rightLongArrow.case</string>
+      <string>leftRightArrow.case</string>
+      <string>leftRightLongArrow.case</string>
       <string>dngb_check</string>
       <string>dngb_ballotx</string>
       <string>triagrt</string>
