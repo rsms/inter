@@ -61,9 +61,11 @@ endfor
     commercial and you charge money for your software. Inter UI can also be used
     on the web by either hosting the font files yourself or by including this CSS:
   </p>
-  <code>@import url('https://rsms.me/inter/inter-ui.css');</code>
-  <p>Use the following CSS rules to specify the Inter UI family:</p>
-  <code>font-family: 'Inter UI', sans-serif;</code>
+  <pre>@import url('https://rsms.me/inter/inter-ui.css');
+html { font-family: 'Inter UI', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter UI var alt', sans-serif; }
+}</pre>
 
   <p>&nbsp;</p>
 
@@ -78,15 +80,18 @@ endfor
     <span id="dynmet-unit">em</span>
   </p>
   <p>
-    There's of course no absolute right or wrong when it comes to expressing yourself with typography, but Inter UI <em>Dynamic Metrics</em> provides guidelines for good typography. You simply provide the optical font size, and the tracking and leading is calculated for you to produce the best results.<br>
-    <a href="{{url_root}}dynmetrics/">Learn about Dynamic Metrics —></a>
+    There's of course no absolute right or wrong when it comes to expressing yourself with typography, but Inter UI <em>Dynamic Metrics</em> provides guidelines for good typography. You simply provide the optical font size, and the tracking and leading is calculated for you to produce the best results.
+  </p>
+  <p>
+    <a href="{{url_root}}dynmetrics/">Learn more…</a>
   </p>
 
   <p>&nbsp;</p>
 
   <h2><a id="free" href="#free">How much does it cost?</a></h2>
   <p>
-    Inter UI is a <a href="https://github.com/rsms/inter">free and open source</a> font family. You are free to use this font in almost any way imaginable.
+    Inter UI is a <a href="https://github.com/rsms/inter">free and open source</a> font family.<br>
+    You are free to use this font in almost any way imaginable.<br>
     Refer to the <a href="https://choosealicense.com/licenses/ofl-1.1/">SIL Open Font License 1.1</a> for exact details on what the conditions and restrictions are.
   </p>
 
@@ -216,7 +221,7 @@ endfor
         <r><in>00:40.900<em>&nbsp;</em></in><to></to><out class="tnum">00:40.900<em>&nbsp;</em></out></r>
         <r><in>0.45, 0.91, +0.08<em>&nbsp;</em></in><to></to><out class="tnum">0.45, 0.91, +0.08<em>&nbsp;</em></out></r>
         <r><in>1.00, 9.44, −0.13<em>&nbsp;</em></in><to></to><out class="tnum">1.00, 9.44, −0.13<em>&nbsp;</em></out></r>
-        <r><in>0.00, 1.13, +7.12<em>&nbsp;</em></in><to></to><out class="tnum">0.00, 1.13, +7.12<em>&nbsp;</em></out></r>
+        <r><in>0.00, 1.13, ~7.12<em>&nbsp;</em></in><to></to><out class="tnum">0.00, 1.13, ~7.12<em>&nbsp;</em></out></r>
       </t></tablex>
     </box>
 
@@ -288,7 +293,7 @@ endfor
         </r>
         <r><in>SCHOOL <em>@</em> RUN</in><to></to><out class="case">SCHOOL @ RUN</out></r>
         <r><in>3 <em>+</em> 9 <em>=</em> 12 <em>*</em> 1</in><to></to><out class="case">3 + 9 = 12 * 1</out></r>
-        <r><in><em>*</em> <em>+</em> <em>÷</em> <em>±</em> <em>×</em> <em>=</em> <em>≠</em> <em>•</em></in><to></to><out class="case">* + ÷ ± × = ≠ •</out></r>
+        <r><in><em>*+÷±×=≠≈•~&lt;&gt;≤≥</em></in><to></to><out class="case">*+÷±×=≠≈•~&lt;&gt;≤≥</out></r>
         <r><in><em>→</em> <em>←</em> <em>⟶</em> <em>⟵</em> <em>−</em> <em>-</em> <em>–</em> <em>—</em> <em>:</em></in><to></to><out class="case">→ ← ⟶ ⟵ − - – — :</out></r>
       </t></tablex>
     </box>
@@ -303,25 +308,22 @@ endfor
       <tablex><t>
         <h><in>Disabled</in><to></to><out>Enabled</out></h>
         <r>
-          <in><em>1</em>23<em>4</em>5<em>6</em>78<em>9</em>0</in>
+          <in><em>1</em>2<em>34</em>5<em>6</em>78<em>9</em>0</in>
           <to></to><out class="ss01">1234567890</out>
         </r>
-        <r><in><em>1</em></in><to></to><out class="ss01">1</out></r>
-        <r><in><em>4</em></in><to></to><out class="ss01">4</out></r>
-        <r><in><em>6</em></in><to></to><out class="ss01">6</out></r>
-        <r><in><em>9</em></in><to></to><out class="ss01">9</out></r>
+        <r><in><em>13469</em></in><to></to><out class="ss01">13469</out></r>
       </t></tablex>
     </box>
 
     <box>
       <h3>Stylistic set 2: Disambiguation <q title='OpenType feature ID'>ss02</q></h3>
       <p>
-        Alternate glyph set that decreases ambiguity.
+        Alternate glyph set that increases visual difference between similar-looking characters.
       </p>
       <tablex><t>
         <h><in>Disabled</in><to></to><out>Enabled</out></h>
-        <r><in>WP<em>0</em>AC2A9XJS1<em>0</em>12O9</in><to></to><out class="ss02">WP0AC2A9XJS1012O9</out></r>
-        <r><in>I<em>ll</em>ega<em>l</em></in><to></to><out class="ss02">Illegal</out></r>
+        <r><in>WP<em>0</em>AC2A9XS<em>I</em>1<em>0</em>12O9</in><to></to><out class="ss02">WP0AC2A9XSI1012O9</out></r>
+        <r><in><em>Ill</em>ega<em>l</em></in><to></to><out class="ss02">Illegal</out></r>
         <r><in>βeta <em>ß</em>eta Busine<em>ß</em></in><to></to><out class="ss02">βeta ßeta Busineß</out></r>
       </t></tablex>
     </box>
@@ -350,13 +352,15 @@ endfor
       </p>
       <tablex><t>
         <h><name>Feature&nbsp;&nbsp;</name><in>Disabled</in><to></to><out>Enabled</out></h>
-        <r><name>cv01</name><in>1</in><to></to><out class="cv01">1</out></r>
-        <r><name>cv02</name><in>4</in><to></to><out class="cv02">4</out></r>
-        <r><name>cv03</name><in>6</in><to></to><out class="cv03">6</out></r>
-        <r><name>cv04</name><in>9</in><to></to><out class="cv04">9</out></r>
-        <r><name>cv05</name><in>l ł ƚ ɫ ɬ ŀ ĺ ļ ľ ḷ ḹ ḻ ḽ</in><to></to><out class="cv05">l ł ƚ ɫ ɬ ŀ ĺ ļ ľ ḷ ḹ ḻ ḽ</out></r>
-        <r><name>cv06</name><in>r ɽ ɍ ɼ ŕ ŗ ř ȑ ȓ ṙ ṛ ṝ ṟ</in><to></to><out class="cv06">r ɽ ɍ ɼ ŕ ŗ ř ȑ ȓ ṙ ṛ ṝ ṟ</out></r>
-        <r><name>cv07</name><in>ß</in><to></to><out class="cv07">ß</out></r>
+        <r title="Alternate one"><name>cv01</name><in>1</in><to></to><out class="cv01">1</out></r>
+        <r title="Open four"><name>cv02</name><in>4</in><to></to><out class="cv02">4</out></r>
+        <r title="Open six"><name>cv03</name><in>6</in><to></to><out class="cv03">6</out></r>
+        <r title="Open nine"><name>cv04</name><in>9</in><to></to><out class="cv04">9</out></r>
+        <r title="Lower case L with tail"><name>cv05</name><in>l ł ƚ ɫ ɬ ŀ ĺ ļ ľ ḷ ḹ ḻ ḽ</in><to></to><out class="cv05">l ł ƚ ɫ ɬ ŀ ĺ ļ ľ ḷ ḹ ḻ ḽ</out></r>
+        <r title="Lower case R with straight tail"><name>cv06</name><in>r ɽ ɍ ɼ ŕ ŗ ř ȑ ȓ ṙ ṛ ṝ ṟ</in><to></to><out class="cv06">r ɽ ɍ ɼ ŕ ŗ ř ȑ ȓ ṙ ṛ ṝ ṟ</out></r>
+        <r title="Alternate German double-s"><name>cv07</name><in>ß</in><to></to><out class="cv07">ß</out></r>
+        <r title="Upper-case i with serif"><name>cv08</name><in>I Ï Ḯ Ɨ Ḭ Ì Í Î Ĩ Ī Ĭ<br>Į İ Ǐ Ȉ Ȋ Ỉ Ị Ι Ί Ϊ Ἰ Ἱ Ἲ<br>Ἳ Ἴ Ἵ Ἶ Ἷ Ῐ Ῑ Ὶ Ί І Ї</in><to></to><out class="cv08">I Ï Ḯ Ɨ Ḭ Ì Í Î Ĩ Ī Ĭ<br>Į İ Ǐ Ȉ Ȋ Ỉ Ị Ι Ί Ϊ Ἰ Ἱ Ἲ<br>Ἳ Ἴ Ἵ Ἶ Ἷ Ῐ Ῑ Ὶ Ί І Ї</out></r>
+        <r title="Flat top three"><name>cv09</name><in>3</in><to></to><out class="cv09">3</out></r>
       </t></tablex>
     </box>
 
@@ -417,20 +421,6 @@ endfor
   more variation in the rhythm and smoother vertical and horizontal stems.
   As Inter UI was being developed, it was tested on an internal version of
   <a href="https://www.figma.com/">Figma</a>—where the author of Inter UI works as a designer—and slowly improved upon based on experience and feedback.
-  </p>
-
-  <p>&nbsp;</p>
-
-  <h2><a id="status" href="#status">Current status &amp; usability</a></h2>
-  <p>
-  Inter UI works great for Latin text and pretty well for 
-  Cyrillic. There's still some work to be done on Cyrillic and
-  <a href="https://github.com/rsms/inter/blob/master/CONTRIBUTING.md">contributions are warmly welcomed</a>. The playground contains <a href="lab/?sample=Body%20text%201&size=16">a lot of samples</a>, including some common <a href="lab/?sample=Kerning%20body%20multi-lang&size=16">non English-language words in the playground.</a>
-  </p>
-
-  <p>
-  Please refer to the <a href="glyphs/">glyph repertoire</a>
-  for an overview of currently-available glyphs and their quality.
   </p>
 
   <p>&nbsp;</p>

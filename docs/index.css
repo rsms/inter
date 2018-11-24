@@ -61,6 +61,39 @@
   }
 
 
+/* FAQ */
+ul.faq {
+  list-style:none;
+  display: flex;
+  flex-direction: column;
+  margin-left:0;
+}
+ul.faq > li {
+  padding-right: 6px;
+  margin-bottom: 6px;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+}
+
+ul.faq > li:target {
+  background: #fafa88;
+  margin-left: -1.5em;
+}
+ul.faq > li > a.anchor {
+  visibility: hidden;
+  height:0;
+  position:relative;
+}
+ul.faq li.q {
+  font-weight: 600;
+  margin-top:1.5em;
+  text-indent: -1.52em;
+}
+ul.faq > li.q:first-child,
+ul.faq > li.q:not([id]) {
+  margin-top:0;
+}
+
 
 tablex in, tablex to, tablex out {
   display: table-cell;
@@ -238,6 +271,20 @@ tablex out.cv07 {
   -o-font-feature-settings:      'calt' 1, 'cv07' 1;
   -webkit-font-feature-settings: 'calt' 1, 'cv07' 1;
   font-feature-settings:         'calt' 1, 'cv07' 1;
+}
+tablex out.cv08 {
+  -moz-font-feature-settings:    'calt' 1, 'cv08' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cv08' 1;
+  -o-font-feature-settings:      'calt' 1, 'cv08' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cv08' 1;
+  font-feature-settings:         'calt' 1, 'cv08' 1;
+}
+tablex out.cv09 {
+  -moz-font-feature-settings:    'calt' 1, 'cv09' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cv09' 1;
+  -o-font-feature-settings:      'calt' 1, 'cv09' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cv09' 1;
+  font-feature-settings:         'calt' 1, 'cv09' 1;
 }
 
 boxes.features box h3 + p {

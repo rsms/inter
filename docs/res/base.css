@@ -350,38 +350,6 @@ a > img {
   }
 
 
-/* FAQ */
-ul.faq {
-  list-style:none;
-  display: flex;
-  flex-direction: column;
-  margin-left:0;
-}
-ul.faq > li {
-  padding-right: 6px;
-  margin-bottom: 6px;
-  padding-left: 1.5em;
-  text-indent: -1.5em;
-}
-
-ul.faq > li:target {
-  background: #fafa88;
-  margin-left: -1.5em;
-}
-ul.faq > li > a.anchor {
-  visibility: hidden;
-  height:0;
-  position:relative;
-}
-
-li.q {
-  font-weight: 500;
-  margin-top:1.5em;
-}
-ul > li.q:first-child, ul > li.q:not([id]) {
-  margin-top:0;
-}
-
 tablex {
   display: flex;
 }
