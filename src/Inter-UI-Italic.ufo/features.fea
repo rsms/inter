@@ -1018,6 +1018,8 @@ sub minus by minus.case;
 sub multiply by multiply.case;
 sub divide by divide.case;
 sub plusminus by plusminus.case;
+sub approxequal by approxequal.case;
+sub asciitilde by asciitilde.case;
 sub asterisk by asterisk.case;
 sub leftArrow by leftArrow.case;
 sub leftLongArrow by leftLongArrow.case;
@@ -1056,8 +1058,9 @@ feature calt {
   rightLongArrow
   leftRightArrow
   leftRightLongArrow
-  notequal
   colon
+  approxequal
+  asciitilde
 ];
 @CASE_L = [
   @CASE_DELIM_L
@@ -1091,8 +1094,9 @@ feature calt {
   rightLongArrow.case
   leftRightArrow.case
   leftRightLongArrow.case
-  notequal.case
   colon.case
+  approxequal.case
+  asciitilde.case
 ];
 @CASE_R = [
   @CASE_DELIM_R

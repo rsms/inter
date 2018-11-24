@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="multiply" format="2">
-  <advance width="1588.0"/>
+  <advance width="1952.0"/>
   <unicode hex="00D7"/>
-  <guideline x="240.0" y="896.0" angle="0.0"/>
+  <guideline x="408.0" y="832.0" angle="0.0"/>
   <outline>
     <contour>
-      <point x="400.0" y="224.0" type="line"/>
-      <point x="1484.0" y="1272.0" type="line"/>
-      <point x="1184.0" y="1560.0" type="line"/>
-      <point x="100.0" y="516.0" type="line"/>
+      <point x="1428.0" y="44.0" type="line"/>
+      <point x="1764.0" y="380.0" type="line"/>
+      <point x="524.0" y="1620.0" type="line"/>
+      <point x="188.0" y="1280.0" type="line"/>
     </contour>
     <contour>
-      <point x="1188.0" y="224.0" type="line"/>
-      <point x="1488.0" y="516.0" type="line"/>
-      <point x="408.0" y="1560.0" type="line"/>
-      <point x="104.0" y="1272.0" type="line"/>
+      <point x="524.0" y="44.0" type="line"/>
+      <point x="1764.0" y="1280.0" type="line"/>
+      <point x="1428.0" y="1620.0" type="line"/>
+      <point x="188.0" y="380.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>plus</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -26,10 +28,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>1560.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -48,18 +50,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>316.0</real>
+            <real>1108.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -70,7 +67,7 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>1.0</real>
           </array>
           <key>stem</key>

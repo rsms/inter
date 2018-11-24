@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="equal" format="2">
-  <advance width="1608.0"/>
+  <advance width="1952.0"/>
   <unicode hex="003D"/>
-  <guideline x="552.0" y="896.0" angle="0.0"/>
+  <guideline x="408.0" y="832.0" angle="0.0"/>
   <outline>
     <contour>
-      <point x="200.0" y="756.0" type="line"/>
-      <point x="200.0" y="348.0" type="line"/>
-      <point x="1408.0" y="348.0" type="line"/>
-      <point x="1408.0" y="756.0" type="line"/>
+      <point x="236.0" y="964.0" type="line"/>
+      <point x="1716.0" y="964.0" type="line"/>
+      <point x="1716.0" y="1412.0" type="line"/>
+      <point x="236.0" y="1412.0" type="line"/>
     </contour>
     <contour>
-      <point x="200.0" y="1444.0" type="line"/>
-      <point x="200.0" y="1036.0" type="line"/>
-      <point x="1408.0" y="1036.0" type="line"/>
-      <point x="1408.0" y="1444.0" type="line"/>
+      <point x="236.0" y="252.0" type="line"/>
+      <point x="1716.0" y="252.0" type="line"/>
+      <point x="1716.0" y="700.0" type="line"/>
+      <point x="236.0" y="700.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>plus</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -29,14 +31,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
-            <real>3.0</real>
+            <real>0.0</real>
+            <real>0.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -49,14 +51,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>2.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -69,14 +71,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
-            <real>3.0</real>
+            <real>0.0</real>
+            <real>0.0</real>
           </array>
           <key>type</key>
           <string>TTStem</string>

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="plusminus" format="2">
-  <advance width="1596.0"/>
+  <advance width="1952.0"/>
   <unicode hex="00B1"/>
   <outline>
     <contour>
-      <point x="1464.0" y="404.0" type="line"/>
-      <point x="132.0" y="404.0" type="line"/>
-      <point x="132.0" y="0.0" type="line"/>
-      <point x="1464.0" y="0.0" type="line"/>
+      <point x="236.0" y="64.0" type="line"/>
+      <point x="1716.0" y="64.0" type="line"/>
+      <point x="1716.0" y="480.0" type="line"/>
+      <point x="236.0" y="480.0" type="line"/>
     </contour>
     <contour>
-      <point x="1468.0" y="1352.0" type="line"/>
-      <point x="1000.0" y="1352.0" type="line"/>
-      <point x="1000.0" y="1828.0" type="line"/>
-      <point x="596.0" y="1828.0" type="line"/>
-      <point x="596.0" y="1352.0" type="line"/>
-      <point x="120.0" y="1352.0" type="line"/>
-      <point x="120.0" y="952.0" type="line"/>
-      <point x="596.0" y="952.0" type="line"/>
-      <point x="596.0" y="544.0" type="line"/>
-      <point x="1000.0" y="544.0" type="line"/>
-      <point x="1000.0" y="952.0" type="line"/>
-      <point x="1468.0" y="952.0" type="line"/>
+      <point x="236.0" y="912.0" type="line"/>
+      <point x="1716.0" y="912.0" type="line"/>
+      <point x="1716.0" y="1312.0" type="line"/>
+      <point x="236.0" y="1312.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="752.0" y="608.0" type="line"/>
+      <point x="1200.0" y="608.0" type="line"/>
+      <point x="1200.0" y="1616.0" type="line"/>
+      <point x="752.0" y="1616.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>plus</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -33,10 +33,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -55,15 +55,15 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
-            <real>5.0</real>
+            <real>0.0</real>
+            <real>2.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
+            <real>0.0</real>
             <real>1.0</real>
-            <real>10.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -76,7 +76,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>2.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
