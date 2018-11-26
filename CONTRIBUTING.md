@@ -43,7 +43,7 @@ Exporting from font editors is a great alternative if you just want to test thin
 
 ### Using the toolchain
 
-Currently the toolchain has only been tested on macOS, and all you need is [Python](https://www.python.org/), which comes pre-installed with macOS, so no need to install anything. Python can easily be installed in Windows, Linux and other OSes.
+Currently the toolchain has only been tested on macOS, and all you need is legacy [Python 2.7](https://www.python.org/), which comes pre-installed with macOS, so no need to install anything. Python 2 can easily be installed in Windows, Linux and other OSes.
 
 You'll want to open a Terminal for this.
 
@@ -95,7 +95,7 @@ All resulting font files are written to the `build` directory with `InterUI-` as
 [**The interactive Lab**](#interactive-lab) is a great tool for quickly exploring your font files. It's a web-based tool which you start in a terminal by running:
 
 ```
-python docs/lab/serve.py
+python2 docs/lab/serve.py
 ```
 
 Open up the URL printed on the screen and you can now explore your font files. Simply `make -j STYLE_web` (or `make -j all_web` for all styles) and reload the web page to try a new build.
@@ -140,7 +140,7 @@ This project comes with a simple web-based application for debugging and preview
 To start the lab, simply run this in a terminal (and keep the terminal running.)
 
 ```
-python docs/lab/serve.py
+python2 docs/lab/serve.py
 ```
 
 You can now visit the URL printed on the screen to use the lab. Simply `make -j STYLE_web` (or `make -j all_web` for all styles) and reload the web page to try a new build.
@@ -196,7 +196,7 @@ misc/tools/fontinfo.py -h
 
 > Do I need Glyphs or RoboFont to build font files?
 
-No, you don't. To build font files, all you need is Python. To edit the font files, you need something that can edit .glyphs or UFO files.
+No, you don't. To build font files, all you need is Python 2.7. To edit the font files, you need something that can edit .glyphs or UFO files.
 
 ----
 
