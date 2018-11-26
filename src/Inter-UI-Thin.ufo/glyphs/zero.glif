@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="zero" format="2">
+  <advance width="1582.0"/>
+  <unicode hex="0030"/>
+  <outline>
+    <contour>
+      <point x="792.0" y="-12.0" type="curve" smooth="yes"/>
+      <point x="1180.0" y="-11.0"/>
+      <point x="1389.0" y="363.0"/>
+      <point x="1388.0" y="1028.0" type="curve" smooth="yes"/>
+      <point x="1387.0" y="1684.0"/>
+      <point x="1174.0" y="2076.0"/>
+      <point x="792.0" y="2076.0" type="curve" smooth="yes"/>
+      <point x="409.0" y="2076.0"/>
+      <point x="193.0" y="1683.0"/>
+      <point x="196.0" y="1028.0" type="curve" smooth="yes"/>
+      <point x="196.0" y="361.0"/>
+      <point x="403.0" y="-12.0"/>
+    </contour>
+    <contour>
+      <point x="792.0" y="72.0" type="curve" smooth="yes"/>
+      <point x="430.0" y="70.0"/>
+      <point x="234.0" y="432.0"/>
+      <point x="232.0" y="1028.0" type="curve" smooth="yes"/>
+      <point x="232.0" y="1625.0"/>
+      <point x="433.0" y="1999.0"/>
+      <point x="792.0" y="2000.0" type="curve" smooth="yes"/>
+      <point x="1150.0" y="1999.0"/>
+      <point x="1350.0" y="1625.0"/>
+      <point x="1352.0" y="1028.0" type="curve" smooth="yes"/>
+      <point x="1349.0" y="432.0"/>
+      <point x="1153.0" y="70.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>O</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>O</string>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>5.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
+          </array>
+          <key>type</key>
+          <string>TopGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>5.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.89,0.961,0.922,0.004</string>
+    </dict>
+  </lib>
+</glyph>

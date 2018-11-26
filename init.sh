@@ -306,12 +306,16 @@ else
   # ————————————————————————————————————————————————————————————————————————————————————————————————
   # $BUILD_DIR/etc/generated.make
   master_styles=( \
+    Thin \
+    ThinItalic \
     Regular \
-    Black \
     Italic \
+    Black \
     BlackItalic \
   )
   derived_styles=( \
+    "Light            : Thin Regular" \
+    "LightItalic      : ThinItalic Italic" \
     "Medium           : Regular Black" \
     "MediumItalic     : Italic BlackItalic" \
     "SemiBold         : Regular Black" \

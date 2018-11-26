@@ -1,9 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <designspace format="4.0">
     <axes>
-        <axis default="400" maximum="900" minimum="400" name="Weight" tag="wght" />
+        <axis default="400" maximum="900" minimum="100" name="Weight" tag="wght" />
     </axes>
     <sources>
+        <source familyname="Inter UI" filename="Inter-UI-Thin.ufo" name="thin" stylename="Thin">
+            <location>
+                <dimension name="Weight" xvalue="100" />
+            </location>
+        </source>
         <source familyname="Inter UI" filename="Inter-UI-Regular.ufo" name="regular" stylename="Regular">
             <lib copy="1" />
             <groups copy="1" />
@@ -20,6 +25,64 @@
         </source>
     </sources>
     <instances>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Thin.ufo" name="thin" stylemapfamilyname="Inter UI Thin" stylemapstylename="regular" stylename="Thin">
+            <location>
+                <dimension name="Weight" xvalue="100" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>2</integer>
+                                <integer>2</integer>
+                                <integer>3</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
+        <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Light.ufo" name="light" stylemapfamilyname="Inter UI Light" stylemapstylename="regular" stylename="Light">
+            <location>
+                <dimension name="Weight" xvalue="300" />
+            </location>
+            <kerning />
+            <info />
+            <lib>
+                <dict>
+                    <key>com.schriftgestaltung.customParameters</key>
+                    <array>
+                        <array>
+                            <string>panose</string>
+                            <array>
+                                <integer>2</integer>
+                                <integer>11</integer>
+                                <integer>4</integer>
+                                <integer>2</integer>
+                                <integer>3</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>0</integer>
+                                <integer>4</integer>
+                            </array>
+                        </array>
+                    </array>
+                </dict>
+            </lib>
+        </instance>
         <instance familyname="Inter UI" filename="../build/ufo/Inter-UI-Regular.ufo" name="regular" stylemapfamilyname="Inter UI" stylemapstylename="regular" stylename="Regular">
             <location>
                 <dimension name="Weight" xvalue="400" />

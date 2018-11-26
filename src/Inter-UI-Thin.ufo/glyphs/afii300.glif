@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="afii300" format="2">
+  <unicode hex="200F"/>
+  <outline>
+    <contour>
+      <point x="-216.0" y="1552.0" type="line"/>
+      <point x="-732.0" y="1552.0" type="line"/>
+      <point x="-732.0" y="1620.0" type="line"/>
+      <point x="-216.0" y="1620.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="-492.0" y="1332.0" type="line"/>
+      <point x="-888.0" y="1584.0" type="line"/>
+      <point x="-844.0" y="1664.0" type="line"/>
+      <point x="-336.0" y="1332.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="-356.0" y="1892.0" type="line"/>
+      <point x="-828.0" y="1524.0" type="line"/>
+      <point x="-888.0" y="1584.0" type="line"/>
+      <point x="-512.0" y="1892.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="-216.0" y="-276.0" type="line"/>
+      <point x="-260.0" y="-276.0" type="line"/>
+      <point x="-260.0" y="1716.0" type="line"/>
+      <point x="-216.0" y="1716.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>3.0</real>
+            <real>3.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
+    </dict>
+  </lib>
+</glyph>

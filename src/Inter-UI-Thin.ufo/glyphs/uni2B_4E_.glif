@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni2B4E" format="2">
+  <advance width="1156.0"/>
+  <unicode hex="2B4E"/>
+  <outline>
+    <contour>
+      <point x="348.0" y="0.0" type="line"/>
+      <point x="700.0" y="1340.0" type="line"/>
+      <point x="624.0" y="1360.0" type="line"/>
+      <point x="268.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="168.0" y="1056.0" type="line"/>
+      <point x="792.0" y="1424.0" type="line"/>
+      <point x="700.0" y="1516.0" type="line"/>
+      <point x="216.0" y="1224.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="988.0" y="1008.0" type="line"/>
+      <point x="700.0" y="1516.0" type="line"/>
+      <point x="588.0" y="1472.0" type="line"/>
+      <point x="948.0" y="840.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>3.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>2.0</real>
+            <real>3.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
+    </dict>
+  </lib>
+</glyph>

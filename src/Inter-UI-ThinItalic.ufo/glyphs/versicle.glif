@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="versicle" format="2">
+  <advance width="1580.0"/>
+  <unicode hex="2123"/>
+  <outline>
+    <contour>
+      <point x="1572.0" y="2192.0" type="line"/>
+      <point x="1240.0" y="2500.0" type="line"/>
+      <point x="1064.0" y="2292.0" type="line"/>
+      <point x="1292.0" y="2112.0" type="line"/>
+      <point x="-176.0" y="-496.0" type="line"/>
+      <point x="52.0" y="-496.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="336.0" y="2048.0" type="line"/>
+      <point x="272.0" y="2048.0" type="line"/>
+      <point x="656.0" y="0.0" type="line"/>
+      <point x="708.0" y="0.0" type="line"/>
+      <point x="1776.0" y="2048.0" type="line"/>
+      <point x="1708.0" y="2048.0" type="line"/>
+      <point x="716.0" y="108.0" type="line"/>
+      <point x="692.0" y="108.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
+          </array>
+          <key>type</key>
+          <string>TopGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
+    </dict>
+  </lib>
+</glyph>

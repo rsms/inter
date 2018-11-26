@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="f.sups" format="2">
+  <advance width="636.0"/>
+  <unicode hex="1DA0"/>
+  <outline>
+    <contour>
+      <point x="568.0" y="2048.0" type="line"/>
+      <point x="44.0" y="2048.0" type="line"/>
+      <point x="44.0" y="1924.0" type="line"/>
+      <point x="568.0" y="1924.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="220.0" y="1024.0" type="line"/>
+      <point x="328.0" y="1024.0" type="line"/>
+      <point x="328.0" y="2120.0" type="line" smooth="yes"/>
+      <point x="326.0" y="2240.0"/>
+      <point x="379.0" y="2294.0"/>
+      <point x="484.0" y="2296.0" type="curve" smooth="yes"/>
+      <point x="544.0" y="2294.0"/>
+      <point x="556.0" y="2280.0"/>
+      <point x="572.0" y="2280.0" type="curve"/>
+      <point x="616.0" y="2384.0" type="line"/>
+      <point x="569.0" y="2401.0"/>
+      <point x="542.0" y="2408.0"/>
+      <point x="488.0" y="2408.0" type="curve" smooth="yes"/>
+      <point x="358.0" y="2408.0"/>
+      <point x="220.0" y="2322.0"/>
+      <point x="220.0" y="2172.0" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.1.0</key>
+      <dict>
+        <key>name</key>
+        <string>hr00</string>
+      </dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>1.0</real>
+            <real>8.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0,0.67,0.91,1</string>
+    </dict>
+  </lib>
+</glyph>

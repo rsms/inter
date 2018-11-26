@@ -611,6 +611,11 @@ class Main(object):
         source.styleName = "Black Italic"
         source.name = "blackitalic"
         source.font.info.styleName = source.styleName
+      elif source.styleName == "Thin Italic Italic":
+        ufo_path = pjoin(master_dir, 'Inter-UI-ThinItalic.ufo')
+        source.styleName = "Thin Italic"
+        source.name = "thinitalic"
+        source.font.info.styleName = source.styleName
       else:
         # name "Inter UI Black" => "black"
         source.name = source.styleName.lower().replace(' ', '')

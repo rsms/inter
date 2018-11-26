@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="radical" format="2">
+  <advance width="1654.0"/>
+  <unicode hex="221A"/>
+  <outline>
+    <contour>
+      <point x="644.0" y="380.0" type="line"/>
+      <point x="616.0" y="0.0" type="line"/>
+      <point x="704.0" y="0.0" type="line"/>
+      <point x="1636.0" y="2004.0" type="line"/>
+      <point x="1404.0" y="2004.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="376.0" y="1132.0" type="line"/>
+      <point x="172.0" y="1132.0" type="line"/>
+      <point x="648.0" y="0.0" type="line"/>
+      <point x="768.0" y="0.0" type="line"/>
+      <point x="696.0" y="404.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="20.0" y="1032.0" type="line"/>
+      <point x="384.0" y="1032.0" type="line"/>
+      <point x="384.0" y="1132.0" type="line"/>
+      <point x="20.0" y="1132.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>2.0</real>
+            <real>3.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
+    </dict>
+  </lib>
+</glyph>

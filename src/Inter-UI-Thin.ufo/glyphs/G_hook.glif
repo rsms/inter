@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Ghook" format="2">
+  <advance width="2003.0"/>
+  <unicode hex="0193"/>
+  <outline>
+    <contour>
+      <point x="1828.0" y="1432.0" type="line"/>
+      <point x="1828.0" y="1552.0" type="line" smooth="yes"/>
+      <point x="1826.0" y="1702.0"/>
+      <point x="1893.0" y="1765.0"/>
+      <point x="2008.0" y="1764.0" type="curve" smooth="yes"/>
+      <point x="2025.0" y="1765.0"/>
+      <point x="2041.0" y="1763.0"/>
+      <point x="2044.0" y="1760.0" type="curve"/>
+      <point x="2044.0" y="1820.0" type="line"/>
+      <point x="2039.0" y="1827.0"/>
+      <point x="1999.0" y="1820.0"/>
+      <point x="1972.0" y="1820.0" type="curve" smooth="yes"/>
+      <point x="1794.0" y="1820.0"/>
+      <point x="1813.0" y="1720.0"/>
+      <point x="1784.0" y="1552.0" type="curve" smooth="yes"/>
+      <point x="1764.0" y="1432.0" type="line"/>
+    </contour>
+    <component base="G"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>G</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>14.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>10.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>13.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>6.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>14.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>10.0</real>
+          </array>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

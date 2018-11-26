@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni03CF" format="2">
+  <advance width="1445.0"/>
+  <unicode hex="03CF"/>
+  <outline>
+    <contour>
+      <point x="360.0" y="2004.0" type="line"/>
+      <point x="228.0" y="2004.0" type="line"/>
+      <point x="-108.0" y="0.0" type="line"/>
+      <point x="28.0" y="0.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1532.0" y="2004.0" type="line"/>
+      <point x="1384.0" y="2004.0" type="line"/>
+      <point x="448.0" y="1172.0" type="line"/>
+      <point x="-4.0" y="812.0" type="line"/>
+      <point x="-4.0" y="640.0" type="line"/>
+      <point x="544.0" y="1136.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1300.0" y="0.0" type="line"/>
+      <point x="508.0" y="1204.0" type="line"/>
+      <point x="460.0" y="1020.0" type="line"/>
+      <point x="1136.0" y="-4.0" type="line"/>
+      <point x="604.0" y="-420.0" type="line"/>
+      <point x="656.0" y="-504.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

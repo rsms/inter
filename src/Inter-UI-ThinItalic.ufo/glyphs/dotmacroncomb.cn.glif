@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dotmacroncomb.cn" format="2">
+  <outline>
+    <contour>
+      <point x="-664.0" y="1860.0" type="curve" smooth="yes"/>
+      <point x="-679.0" y="1781.0"/>
+      <point x="-654.0" y="1718.0"/>
+      <point x="-564.0" y="1720.0" type="curve" smooth="yes"/>
+      <point x="-472.0" y="1718.0"/>
+      <point x="-423.0" y="1781.0"/>
+      <point x="-408.0" y="1860.0" type="curve" smooth="yes"/>
+      <point x="-398.0" y="1937.0"/>
+      <point x="-423.0" y="2000.0"/>
+      <point x="-516.0" y="2000.0" type="curve" smooth="yes"/>
+      <point x="-604.0" y="2000.0"/>
+      <point x="-653.0" y="1937.0"/>
+    </contour>
+    <contour>
+      <point x="-12.0" y="2296.0" type="line"/>
+      <point x="-916.0" y="2296.0" type="line"/>
+      <point x="-944.0" y="2112.0" type="line"/>
+      <point x="-40.0" y="2112.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>1.0</real>
+            <real>0.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>1.0</real>
+            <real>0.0</real>
+          </array>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.871,0.871,0.871,0.004</string>
+    </dict>
+  </lib>
+</glyph>

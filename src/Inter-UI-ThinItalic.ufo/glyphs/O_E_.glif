@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="OE" format="2">
+  <advance width="2588.0"/>
+  <unicode hex="0152"/>
+  <note>
+!post:RemoveOverlap
+</note>
+  <outline>
+    <contour>
+      <point x="916.0" y="0.0" type="curve" smooth="yes"/>
+      <point x="1168.0" y="0.0" type="line"/>
+      <point x="1180.0" y="64.0" type="line"/>
+      <point x="928.0" y="64.0" type="line" smooth="yes"/>
+      <point x="447.0" y="64.0"/>
+      <point x="206.0" y="446.0"/>
+      <point x="304.0" y="1024.0" type="curve" smooth="yes"/>
+      <point x="401.0" y="1597.0"/>
+      <point x="782.0" y="1988.0"/>
+      <point x="1244.0" y="1984.0" type="curve" smooth="yes"/>
+      <point x="1496.0" y="1984.0" type="line"/>
+      <point x="1508.0" y="2048.0" type="line"/>
+      <point x="1256.0" y="2048.0" type="line" smooth="yes"/>
+      <point x="744.0" y="2048.0"/>
+      <point x="342.0" y="1642.0"/>
+      <point x="240.0" y="1024.0" type="curve" smooth="yes"/>
+      <point x="140.0" y="416.0"/>
+      <point x="412.0" y="0.0"/>
+    </contour>
+    <component base="E" xOffset="944.0"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>O</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>E</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>-128.0</real>
+            <real>-44.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>1920.0</real>
+            <real>-44.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>104.0</real>
+            <real>-80.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>-128.0</real>
+            <real>84.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>1920.0</real>
+            <real>84.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

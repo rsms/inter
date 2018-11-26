@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni037B" format="2">
+  <advance width="1422.0"/>
+  <unicode hex="037B"/>
+  <outline>
+    <contour>
+      <point x="120.0" y="424.0" type="line"/>
+      <point x="148.0" y="226.0"/>
+      <point x="398.0" y="-28.0"/>
+      <point x="676.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1112.0" y="-28.0"/>
+      <point x="1300.0" y="339.0"/>
+      <point x="1300.0" y="708.0" type="curve" smooth="yes"/>
+      <point x="1300.0" y="784.0" type="line" smooth="yes"/>
+      <point x="1300.0" y="1151.0"/>
+      <point x="1112.0" y="1516.0"/>
+      <point x="676.0" y="1516.0" type="curve" smooth="yes"/>
+      <point x="343.0" y="1516.0"/>
+      <point x="148.0" y="1259.0"/>
+      <point x="120.0" y="1024.0" type="curve"/>
+      <point x="248.0" y="1024.0" type="line"/>
+      <point x="274.0" y="1230.0"/>
+      <point x="430.0" y="1411.0"/>
+      <point x="668.0" y="1412.0" type="curve" smooth="yes"/>
+      <point x="1036.0" y="1411.0"/>
+      <point x="1177.0" y="1098.0"/>
+      <point x="1180.0" y="784.0" type="curve" smooth="yes"/>
+      <point x="1180.0" y="708.0" type="line" smooth="yes"/>
+      <point x="1177.0" y="414.0"/>
+      <point x="1047.0" y="74.0"/>
+      <point x="668.0" y="76.0" type="curve" smooth="yes"/>
+      <point x="461.0" y="74.0"/>
+      <point x="274.0" y="242.0"/>
+      <point x="248.0" y="424.0" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>27.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>5.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

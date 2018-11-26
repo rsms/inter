@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="guarani" format="2">
+  <advance width="2090.0"/>
+  <unicode hex="20B2"/>
+  <outline>
+    <contour>
+      <point x="1136.0" y="2304.0" type="line"/>
+      <point x="984.0" y="2304.0" type="line"/>
+      <point x="984.0" y="-256.0" type="line"/>
+      <point x="1136.0" y="-256.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1888.0" y="948.0" type="line"/>
+      <point x="1260.0" y="948.0" type="line"/>
+      <point x="1260.0" y="832.0" type="line"/>
+      <point x="1888.0" y="832.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1864.0" y="1384.0" type="line"/>
+      <point x="1759.0" y="1799.0"/>
+      <point x="1482.0" y="2076.0"/>
+      <point x="1064.0" y="2076.0" type="curve" smooth="yes"/>
+      <point x="561.0" y="2076.0"/>
+      <point x="195.0" y="1653.0"/>
+      <point x="196.0" y="1028.0" type="curve"/>
+      <point x="195.0" y="400.0"/>
+      <point x="556.0" y="-28.0"/>
+      <point x="1084.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1554.0" y="-28.0"/>
+      <point x="1888.0" y="297.0"/>
+      <point x="1888.0" y="832.0" type="curve"/>
+      <point x="1828.0" y="832.0" type="line"/>
+      <point x="1828.0" y="383.0"/>
+      <point x="1527.0" y="50.0"/>
+      <point x="1084.0" y="52.0" type="curve" smooth="yes"/>
+      <point x="609.0" y="50.0"/>
+      <point x="241.0" y="434.0"/>
+      <point x="240.0" y="1028.0" type="curve"/>
+      <point x="241.0" y="1623.0"/>
+      <point x="614.0" y="1998.0"/>
+      <point x="1064.0" y="2000.0" type="curve" smooth="yes"/>
+      <point x="1398.0" y="1998.0"/>
+      <point x="1675.0" y="1790.0"/>
+      <point x="1796.0" y="1440.0" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ring" format="2">
+  <advance width="672.0"/>
+  <unicode hex="02DA"/>
+  <note>
+recipe: offset curve 30, no auto; then redrawn two circles manually for perfect fit.
+</note>
+  <outline>
+    <contour>
+      <point x="340.0" y="1960.0" type="curve" smooth="yes"/>
+      <point x="324.0" y="1848.0"/>
+      <point x="396.0" y="1760.0"/>
+      <point x="508.0" y="1760.0" type="curve" smooth="yes"/>
+      <point x="608.0" y="1760.0"/>
+      <point x="708.0" y="1844.0"/>
+      <point x="724.0" y="1944.0" type="curve" smooth="yes"/>
+      <point x="740.0" y="2056.0"/>
+      <point x="668.0" y="2144.0"/>
+      <point x="556.0" y="2144.0" type="curve" smooth="yes"/>
+      <point x="456.0" y="2144.0"/>
+      <point x="356.0" y="2060.0"/>
+    </contour>
+    <contour>
+      <point x="400.0" y="1944.0" type="curve" smooth="yes"/>
+      <point x="412.0" y="2024.0"/>
+      <point x="484.0" y="2084.0"/>
+      <point x="560.0" y="2084.0" type="curve" smooth="yes"/>
+      <point x="628.0" y="2084.0"/>
+      <point x="676.0" y="2028.0"/>
+      <point x="664.0" y="1960.0" type="curve" smooth="yes"/>
+      <point x="652.0" y="1880.0"/>
+      <point x="580.0" y="1820.0"/>
+      <point x="504.0" y="1820.0" type="curve" smooth="yes"/>
+      <point x="436.0" y="1820.0"/>
+      <point x="388.0" y="1876.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>1528.0</real>
+            <real>-212.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>2164.0</real>
+            <real>-212.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>-160.0</real>
+            <real>-208.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>464.0</real>
+            <real>-216.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>1528.0</real>
+            <real>172.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>2164.0</real>
+            <real>172.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
+    </dict>
+  </lib>
+</glyph>

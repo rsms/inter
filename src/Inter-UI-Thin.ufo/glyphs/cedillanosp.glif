@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cedillanosp" format="2">
+  <unicode hex="0327"/>
+  <outline>
+    <contour>
+      <point x="-776.0" y="-12.0" type="line"/>
+      <point x="-820.0" y="-188.0" type="line"/>
+      <point x="-658.0" y="-205.0"/>
+      <point x="-587.0" y="-226.0"/>
+      <point x="-588.0" y="-340.0" type="curve" smooth="yes"/>
+      <point x="-587.0" y="-446.0"/>
+      <point x="-714.0" y="-487.0"/>
+      <point x="-868.0" y="-488.0" type="curve"/>
+      <point x="-860.0" y="-560.0" type="line"/>
+      <point x="-634.0" y="-559.0"/>
+      <point x="-519.0" y="-454.0"/>
+      <point x="-520.0" y="-308.0" type="curve" smooth="yes"/>
+      <point x="-519.0" y="-146.0"/>
+      <point x="-621.0" y="-88.0"/>
+      <point x="-724.0" y="-72.0" type="curve"/>
+      <point x="-700.0" y="-12.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>15.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>10.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>15.0</real>
+          </array>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
+    </dict>
+  </lib>
+</glyph>

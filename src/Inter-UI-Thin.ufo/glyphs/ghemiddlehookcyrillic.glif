@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ghemiddlehookcyrillic" format="2">
+  <advance width="1410.0"/>
+  <unicode hex="0495"/>
+  <outline>
+    <contour>
+      <point x="256.0" y="756.0" type="line"/>
+      <point x="620.0" y="756.0" type="line" smooth="yes"/>
+      <point x="929.0" y="756.0"/>
+      <point x="1145.0" y="507.0"/>
+      <point x="1148.0" y="228.0" type="curve" smooth="yes"/>
+      <point x="1149.0" y="20.0"/>
+      <point x="990.0" y="-213.0"/>
+      <point x="736.0" y="-248.0" type="curve"/>
+      <point x="672.0" y="-392.0" type="line"/>
+      <point x="961.0" y="-406.0"/>
+      <point x="1210.0" y="-139.0"/>
+      <point x="1216.0" y="228.0" type="curve"/>
+      <point x="1215.0" y="546.0"/>
+      <point x="967.0" y="866.0"/>
+      <point x="620.0" y="868.0" type="curve" smooth="yes"/>
+      <point x="256.0" y="868.0" type="line"/>
+    </contour>
+    <component base="gecyrillic"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>0.0</real>
+            <real>21.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>15.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>10.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>6.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

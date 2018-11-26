@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="afii10058" format="2">
+  <advance width="2926.0"/>
+  <unicode hex="0409"/>
+  <outline>
+    <contour>
+      <point x="-20.0" y="0.0" type="line"/>
+      <point x="24.0" y="0.0" type="line" smooth="yes"/>
+      <point x="471.0" y="0.0"/>
+      <point x="454.0" y="400.0"/>
+      <point x="480.0" y="1036.0" type="curve" smooth="yes"/>
+      <point x="520.0" y="1960.0" type="line"/>
+      <point x="1356.0" y="1960.0" type="line"/>
+      <point x="1356.0" y="2048.0" type="line"/>
+      <point x="440.0" y="2048.0" type="line"/>
+      <point x="404.0" y="984.0" type="line" smooth="yes"/>
+      <point x="378.0" y="263.0"/>
+      <point x="284.0" y="95.0"/>
+      <point x="40.0" y="104.0" type="curve" smooth="yes"/>
+      <point x="-20.0" y="108.0" type="line"/>
+    </contour>
+    <component base="afii10046" xOffset="1100.0"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>b</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>13.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>13.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

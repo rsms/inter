@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="interrobang" format="2">
+  <advance width="1272.0"/>
+  <unicode hex="203D"/>
+  <outline>
+    <contour>
+      <point x="548.0" y="540.0" type="curve"/>
+      <point x="600.0" y="540.0" type="line"/>
+      <point x="596.0" y="742.0"/>
+      <point x="546.0" y="796.0"/>
+      <point x="800.0" y="964.0" type="curve" smooth="yes"/>
+      <point x="968.0" y="1070.0"/>
+      <point x="1121.0" y="1282.0"/>
+      <point x="1124.0" y="1540.0" type="curve" smooth="yes"/>
+      <point x="1121.0" y="1806.0"/>
+      <point x="951.0" y="2076.0"/>
+      <point x="644.0" y="2076.0" type="curve" smooth="yes"/>
+      <point x="356.0" y="2076.0"/>
+      <point x="132.0" y="1870.0"/>
+      <point x="116.0" y="1564.0" type="curve"/>
+      <point x="212.0" y="1564.0" type="line"/>
+      <point x="237.0" y="1882.0"/>
+      <point x="464.0" y="1983.0"/>
+      <point x="644.0" y="1984.0" type="curve" smooth="yes"/>
+      <point x="852.0" y="1983.0"/>
+      <point x="1064.0" y="1835.0"/>
+      <point x="1064.0" y="1564.0" type="curve" smooth="yes"/>
+      <point x="1064.0" y="1337.0"/>
+      <point x="993.0" y="1233.0"/>
+      <point x="824.0" y="1104.0" type="curve" smooth="yes"/>
+      <point x="559.0" y="912.0"/>
+      <point x="567.0" y="658.0"/>
+    </contour>
+    <contour>
+      <point x="572.0" y="-36.0" type="curve" smooth="yes"/>
+      <point x="651.0" y="-37.0"/>
+      <point x="711.0" y="30.0"/>
+      <point x="712.0" y="120.0" type="curve" smooth="yes"/>
+      <point x="711.0" y="208.0"/>
+      <point x="651.0" y="275.0"/>
+      <point x="572.0" y="276.0" type="curve" smooth="yes"/>
+      <point x="488.0" y="275.0"/>
+      <point x="428.0" y="208.0"/>
+      <point x="428.0" y="120.0" type="curve" smooth="yes"/>
+      <point x="428.0" y="30.0"/>
+      <point x="488.0" y="-37.0"/>
+    </contour>
+    <contour>
+      <point x="548.0" y="540.0" type="line"/>
+      <point x="696.0" y="540.0" type="line"/>
+      <point x="748.0" y="1568.0" type="line"/>
+      <point x="580.0" y="1568.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>11.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>9.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
+          </array>
+          <key>type</key>
+          <string>TopGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>12.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>6.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>11.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>9.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

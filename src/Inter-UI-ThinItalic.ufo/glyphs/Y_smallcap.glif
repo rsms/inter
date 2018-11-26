@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Ysmallcap" format="2">
+  <advance width="1434.0"/>
+  <unicode hex="028F"/>
+  <outline>
+    <contour>
+      <point x="600.0" y="528.0" type="line"/>
+      <point x="636.0" y="528.0" type="line"/>
+      <point x="740.0" y="528.0" type="line"/>
+      <point x="1508.0" y="1488.0" type="line"/>
+      <point x="1344.0" y="1488.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="328.0" y="1488.0" type="line"/>
+      <point x="168.0" y="1488.0" type="line"/>
+      <point x="612.0" y="528.0" type="line"/>
+      <point x="716.0" y="528.0" type="line"/>
+      <point x="764.0" y="520.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="780.0" y="764.0" type="line"/>
+      <point x="652.0" y="764.0" type="line"/>
+      <point x="520.0" y="0.0" type="line"/>
+      <point x="648.0" y="0.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>2.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>2.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>2.0</real>
+            <real>2.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>2.0</real>
+            <real>1.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

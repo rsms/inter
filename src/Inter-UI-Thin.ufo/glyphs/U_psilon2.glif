@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Upsilon2" format="2">
+  <advance width="2096.0"/>
+  <unicode hex="01B1"/>
+  <outline>
+    <contour>
+      <point x="208.0" y="1000.0" type="curve" smooth="yes"/>
+      <point x="209.0" y="396.0"/>
+      <point x="558.0" y="-28.0"/>
+      <point x="1048.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1538.0" y="-28.0"/>
+      <point x="1887.0" y="396.0"/>
+      <point x="1888.0" y="1000.0" type="curve"/>
+      <point x="1887.0" y="1433.0"/>
+      <point x="1706.0" y="1762.0"/>
+      <point x="1416.0" y="1948.0" type="curve"/>
+      <point x="1416.0" y="1964.0" type="line"/>
+      <point x="1888.0" y="1964.0" type="line"/>
+      <point x="1888.0" y="2048.0" type="line"/>
+      <point x="1244.0" y="2048.0" type="line"/>
+      <point x="1244.0" y="1936.0" type="line"/>
+      <point x="1555.0" y="1800.0"/>
+      <point x="1844.0" y="1436.0"/>
+      <point x="1844.0" y="968.0" type="curve" smooth="yes"/>
+      <point x="1844.0" y="461.0"/>
+      <point x="1513.0" y="50.0"/>
+      <point x="1048.0" y="52.0" type="curve" smooth="yes"/>
+      <point x="583.0" y="50.0"/>
+      <point x="252.0" y="461.0"/>
+      <point x="252.0" y="968.0" type="curve"/>
+      <point x="252.0" y="1436.0"/>
+      <point x="541.0" y="1800.0"/>
+      <point x="852.0" y="1936.0" type="curve"/>
+      <point x="852.0" y="2048.0" type="line"/>
+      <point x="208.0" y="2048.0" type="line"/>
+      <point x="208.0" y="1964.0" type="line"/>
+      <point x="684.0" y="1964.0" type="line"/>
+      <point x="684.0" y="1948.0" type="line"/>
+      <point x="390.0" y="1755.0"/>
+      <point x="209.0" y="1433.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>27.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
+          </array>
+          <key>type</key>
+          <string>TopGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>27.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

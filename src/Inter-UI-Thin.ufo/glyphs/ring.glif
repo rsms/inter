@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ring" format="2">
+  <advance width="672.0"/>
+  <unicode hex="02DA"/>
+  <note>
+recipe: offset curve 30, no auto; then redrawn two circles manually for perfect fit.
+</note>
+  <guideline x="508.0" y="2400.0" angle="0.0"/>
+  <guideline x="980.0" y="1952.0" angle="0.0"/>
+  <guideline x="980.0" y="1856.0" angle="0.0"/>
+  <outline>
+    <contour>
+      <point x="144.0" y="1952.0" type="curve" smooth="yes"/>
+      <point x="144.0" y="1846.0"/>
+      <point x="230.0" y="1760.0"/>
+      <point x="336.0" y="1760.0" type="curve" smooth="yes"/>
+      <point x="442.0" y="1760.0"/>
+      <point x="528.0" y="1846.0"/>
+      <point x="528.0" y="1952.0" type="curve" smooth="yes"/>
+      <point x="528.0" y="2058.0"/>
+      <point x="442.0" y="2144.0"/>
+      <point x="336.0" y="2144.0" type="curve" smooth="yes"/>
+      <point x="230.0" y="2144.0"/>
+      <point x="144.0" y="2058.0"/>
+    </contour>
+    <contour>
+      <point x="204.0" y="1952.0" type="curve" smooth="yes"/>
+      <point x="204.0" y="2025.0"/>
+      <point x="263.0" y="2084.0"/>
+      <point x="336.0" y="2084.0" type="curve" smooth="yes"/>
+      <point x="409.0" y="2084.0"/>
+      <point x="468.0" y="2025.0"/>
+      <point x="468.0" y="1952.0" type="curve" smooth="yes"/>
+      <point x="468.0" y="1879.0"/>
+      <point x="409.0" y="1820.0"/>
+      <point x="336.0" y="1820.0" type="curve" smooth="yes"/>
+      <point x="263.0" y="1820.0"/>
+      <point x="204.0" y="1879.0"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>1760.0</real>
+            <real>172.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>2144.0</real>
+            <real>172.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>-60.0</real>
+            <real>204.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>528.0</real>
+            <real>168.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>1760.0</real>
+            <real>172.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>2144.0</real>
+            <real>172.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
+    </dict>
+  </lib>
+</glyph>

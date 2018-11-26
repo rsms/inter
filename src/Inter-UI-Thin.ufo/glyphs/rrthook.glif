@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="rrthook" format="2">
+  <advance width="953.0"/>
+  <unicode hex="027D"/>
+  <outline>
+    <contour>
+      <point x="536.0" y="-576.0" type="curve" smooth="yes"/>
+      <point x="531.0" y="-576.0"/>
+      <point x="569.0" y="-583.0"/>
+      <point x="588.0" y="-568.0" type="curve"/>
+      <point x="588.0" y="-492.0" type="line"/>
+      <point x="583.0" y="-495.0"/>
+      <point x="562.0" y="-499.0"/>
+      <point x="544.0" y="-500.0" type="curve" smooth="yes"/>
+      <point x="394.0" y="-499.0"/>
+      <point x="308.0" y="-434.0"/>
+      <point x="308.0" y="-236.0" type="curve" smooth="yes"/>
+      <point x="308.0" y="0.0" type="line"/>
+      <point x="264.0" y="0.0" type="line"/>
+      <point x="264.0" y="-236.0" type="line" smooth="yes"/>
+      <point x="262.0" y="-385.0"/>
+      <point x="379.0" y="-576.0"/>
+    </contour>
+    <component base="r"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>r</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>r</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>15.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>12.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>15.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+    </dict>
+  </lib>
+</glyph>

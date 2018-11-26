@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="greaterequal" format="2">
+  <advance width="1722.0"/>
+  <unicode hex="2265"/>
+  <outline>
+    <contour>
+      <point x="168.0" y="116.0" type="line"/>
+      <point x="1336.0" y="116.0" type="line"/>
+      <point x="1352.0" y="224.0" type="line"/>
+      <point x="184.0" y="224.0" type="line"/>
+    </contour>
+    <contour>
+      <point x="1480.0" y="992.0" type="line"/>
+      <point x="1476.0" y="960.0" type="line"/>
+      <point x="400.0" y="1508.0" type="line"/>
+      <point x="376.0" y="1348.0" type="line"/>
+      <point x="1184.0" y="980.0" type="line"/>
+      <point x="1180.0" y="992.0" type="line"/>
+      <point x="1180.0" y="960.0" type="line"/>
+      <point x="1180.0" y="972.0" type="line"/>
+      <point x="252.0" y="604.0" type="line"/>
+      <point x="224.0" y="444.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>plus</string>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>3.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>3.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.8,0.941,0.949,0.004</string>
+    </dict>
+  </lib>
+</glyph>

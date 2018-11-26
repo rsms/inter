@@ -83,35 +83,50 @@ build/%.woff: build/%.ttf
 
 # Master UFO -> OTF, TTF
 
-all_ufo_masters = $(Regular_ufo_d) $(Black_ufo_d) $(Italic_ufo_d) $(BlackItalic_ufo_d)
+all_ufo_masters = $(Thin_ufo_d) \
+                  $(ThinItalic_ufo_d) \
+                  $(Regular_ufo_d) \
+                  $(Italic_ufo_d) \
+                  $(Black_ufo_d) \
+                  $(BlackItalic_ufo_d)
 
 $(FONTDIR)/var/%.var.ttf: src/%.designspace $(all_ufo_masters)
 	misc/fontbuild compile-var -o $@ $<
 
+$(FONTDIR)/const/Inter-UI-Thin.%: src/Inter-UI.designspace $(Thin_ufo_d)
+	misc/fontbuild compile -o $@ src/Inter-UI-Thin.ufo
+
+$(FONTDIR)/const/Inter-UI-ThinItalic.%: src/Inter-UI.designspace $(ThinItalic_ufo_d)
+	misc/fontbuild compile -o $@ src/Inter-UI-ThinItalic.ufo
+
 $(FONTDIR)/const/Inter-UI-Regular.%: src/Inter-UI.designspace $(Regular_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Regular.ufo
 
-$(FONTDIR)/const/Inter-UI-Black.%: src/Inter-UI.designspace $(Black_ufo_d)
-	misc/fontbuild compile -o $@ src/Inter-UI-Black.ufo
-
 $(FONTDIR)/const/Inter-UI-Italic.%: src/Inter-UI.designspace $(Italic_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Italic.ufo
+
+$(FONTDIR)/const/Inter-UI-Black.%: src/Inter-UI.designspace $(Black_ufo_d)
+	misc/fontbuild compile -o $@ src/Inter-UI-Black.ufo
 
 $(FONTDIR)/const/Inter-UI-BlackItalic.%: src/Inter-UI.designspace $(BlackItalic_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-BlackItalic.ufo
 
 # Instance UFO -> OTF, TTF
 
-$(FONTDIR)/const/Inter-UI-%.otf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspace $(all_ufo_masters)
+$(FONTDIR)/const/Inter-UI-%.otf: build/ufo/Inter-UI-%.ufo
 	misc/fontbuild compile -o $@ $<
 
-$(FONTDIR)/const/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo src/Inter-UI.designspace $(all_ufo_masters)
+$(FONTDIR)/const/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo
 	misc/fontbuild compile -o $@ $<
 
 
 # designspace <- glyphs file
+src/Inter-UI-*.designspace: src/Inter-UI.designspace
 src/Inter-UI.designspace: src/Inter-UI.glyphs
 	misc/fontbuild glyphsync $<
+
+# make sure intermediate files are not gc'd by make
+.PRECIOUS: src/Inter-UI-*.designspace
 
 designspace: src/Inter-UI.designspace
 .PHONY: designspace
@@ -121,7 +136,7 @@ src/Inter-UI.glyphs:
 	@true
 
 # instance UFOs <- master UFOs
-build/ufo/Inter-UI-%.ufo: src/Inter-UI.designspace $(Regular_ufo_d) $(Black_ufo_d)
+build/ufo/Inter-UI-%.ufo: src/Inter-UI.designspace $(all_ufo_masters)
 	misc/fontbuild instancegen src/Inter-UI.designspace $*
 
 # make sure intermediate UFOs are not gc'd by make

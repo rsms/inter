@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="asterisk" format="2">
+  <advance width="1226.0"/>
+  <unicode hex="002A"/>
+  <note>
+hexagonal angle: 30 deg
+</note>
+  <outline>
+    <contour>
+      <point x="576.0" y="896.0" type="line"/>
+      <point x="692.0" y="896.0" type="line"/>
+      <point x="772.0" y="1388.0" type="line"/>
+      <point x="1156.0" y="1136.0" type="line"/>
+      <point x="1228.0" y="1236.0" type="line"/>
+      <point x="828.0" y="1472.0" type="line"/>
+      <point x="1296.0" y="1712.0" type="line"/>
+      <point x="1248.0" y="1812.0" type="line"/>
+      <point x="796.0" y="1556.0" type="line"/>
+      <point x="884.0" y="2048.0" type="line"/>
+      <point x="768.0" y="2048.0" type="line"/>
+      <point x="696.0" y="1556.0" type="line"/>
+      <point x="312.0" y="1812.0" type="line"/>
+      <point x="236.0" y="1712.0" type="line"/>
+      <point x="636.0" y="1472.0" type="line"/>
+      <point x="172.0" y="1236.0" type="line"/>
+      <point x="212.0" y="1136.0" type="line"/>
+      <point x="668.0" y="1388.0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>9.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
+          </array>
+          <key>type</key>
+          <string>TopGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>9.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.941,0.941,0.941,0.004</string>
+    </dict>
+  </lib>
+</glyph>

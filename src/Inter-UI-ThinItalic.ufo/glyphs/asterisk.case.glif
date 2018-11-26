@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="asterisk.case" format="2">
+  <advance width="1223.0"/>
+  <note>
+Recipe:
+1. make horizontal rect
+2. copy rect and paste
+3. rotate by 60 deg
+4. enter transform mode and center it
+5. copy the rotated piece and paste
+6. flip on vertical axis
+7. enter transform mode and center it
+</note>
+  <outline>
+    <component base="asterisk" xOffset="-144.0" yOffset="-448.0"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
+      <key>public.markColor</key>
+      <string>0.67,0.95,0.38,1</string>
+    </dict>
+  </lib>
+</glyph>

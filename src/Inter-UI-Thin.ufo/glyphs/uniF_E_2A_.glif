@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniFE2A" format="2">
+  <unicode hex="FE2A"/>
+  <outline>
+    <contour>
+      <point x="0.0" y="-516.0" type="line"/>
+      <point x="59.0" y="-517.0"/>
+      <point x="250.0" y="-532.0"/>
+      <point x="348.0" y="-540.0" type="curve" smooth="yes"/>
+      <point x="386.0" y="-536.0"/>
+      <point x="730.0" y="-553.0"/>
+      <point x="808.0" y="-552.0" type="curve" smooth="yes"/>
+      <point x="1082.0" y="-553.0"/>
+      <point x="1288.0" y="-434.0"/>
+      <point x="1276.0" y="-260.0" type="curve"/>
+      <point x="1172.0" y="-284.0" type="line"/>
+      <point x="1164.0" y="-343.0"/>
+      <point x="973.0" y="-378.0"/>
+      <point x="852.0" y="-380.0" type="curve" smooth="yes"/>
+      <point x="733.0" y="-378.0"/>
+      <point x="542.0" y="-370.0"/>
+      <point x="312.0" y="-360.0" type="curve" smooth="yes"/>
+      <point x="194.0" y="-359.0"/>
+      <point x="68.0" y="-352.0"/>
+      <point x="0.0" y="-328.0" type="curve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.hints</key>
+      <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>5.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>12.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>5.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>12.0</real>
+          </array>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+      </array>
+      <key>public.markColor</key>
+      <string>0.98,0.89,0.89,0.004</string>
+    </dict>
+  </lib>
+</glyph>

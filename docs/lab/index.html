@@ -1000,6 +1000,36 @@ for (const ch of uniqueChars) {
 @font-face {
   font-family: 'Inter-UI-VERSION';
   font-style:  normal;
+  font-weight: 100;
+  src: url("fonts/const/Inter-UI-Thin.woff2") format("woff2"),
+       url("fonts/const/Inter-UI-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter-UI-VERSION';
+  font-style:  italic;
+  font-weight: 100;
+  src: url("fonts/const/Inter-UI-ThinItalic.woff2") format("woff2"),
+       url("fonts/const/Inter-UI-ThinItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter-UI-VERSION';
+  font-style:  normal;
+  font-weight: 300;
+  src: url("fonts/const/Inter-UI-Light.woff2") format("woff2"),
+       url("fonts/const/Inter-UI-Light.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter-UI-VERSION';
+  font-style:  italic;
+  font-weight: 300;
+  src: url("fonts/const/Inter-UI-LightItalic.woff2") format("woff2"),
+       url("fonts/const/Inter-UI-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter-UI-VERSION';
+  font-style:  normal;
   font-weight: 400;
   src: url("fonts/const/Inter-UI-Regular.woff2") format("woff2"),
        url("fonts/const/Inter-UI-Regular.woff") format("woff");
@@ -1089,7 +1119,7 @@ for (const ch of uniqueChars) {
 
 @font-face {
   font-family: 'Inter-UI-var-VERSION';
-  font-weight: 400 900;
+  font-weight: 100 900;
   font-style: oblique 0deg 10deg;
   src: url('fonts/var/Inter-UI.var.woff2') format("woff2-variations");
 }
@@ -1253,8 +1283,8 @@ document.head.appendChild(fontCSS)
 
       <label class="style">
         <select name="weight" style="max-width:100px">
-          <!--option value="200">Thin (200)</option>
-          <option value="300">Light (300)</option-->
+          <option value="100">Thin (100)</option>
+          <option value="300">Light (300)</option>
           <option value="400" selected>Regular (400)</option>
           <option value="500">Medium (500)</option>
           <option value="600">Semi Bold (600)</option>
@@ -1274,8 +1304,8 @@ document.head.appendChild(fontCSS)
         <span>Variable axes:</span>
         <label class="label-and-value">
           <span>Weight:</span>
-          <input type="range" value="400" min="400" max="900" name="varWeight">
-          <input type="number" value="400" step="1" min="400" max="900" name="varWeightNum">
+          <input type="range" value="400" min="100" max="900" name="varWeight">
+          <input type="number" value="400" step="1" min="100" max="900" name="varWeightNum">
         </label>
         <label class="label-and-value">
           <span>Slant:</span>
