@@ -364,7 +364,7 @@ class Main(object):
       round_instances=True,
       output_path=outfilename,
       output=['variable'],
-      subroutinize=True,
+      optimize_cff=True,
       overlaps_backend='pathops', # use Skia's pathops
     )
 
@@ -431,7 +431,7 @@ class Main(object):
       [ ufo ],
       output_path=tmpfilename,
       output=formats,
-      subroutinize=True,
+      optimize_cff=True,
       overlaps_backend='pathops', # use Skia's pathops
     )
 
@@ -476,7 +476,7 @@ class Main(object):
 
     # cleanup lib
     lib = dict()
-    for key, value in font.lib.iteritems():
+    for key, value in font.lib.items():
       if key.startswith('com.schriftgestaltung'):
         continue
       if key == 'public.postscriptNames':

@@ -58,16 +58,16 @@ else
 
   require_virtualenv() {
     # find pip
-    export pip=$(which pip2)
+    export pip=$(which pip3)
     if [ "$pip" = "" ]; then
       export pip=$(which pip)
     fi
     echo "using pip: $pip $(pip --version)"
     if [ "$pip" = "" ]; then
-      echo "Pip for Python 2 not found (tried pip and pip2 in PATH)" >&2
+      echo "Pip for Python 3 not found (tried pip and pip3 in PATH)" >&2
       exit 1
-    elif ! ($pip --version 2>&1 | grep -q 'ython 2'); then
-      echo "Pip for Python 2 not found (found pip for different python version)" >&2
+    elif ! ($pip --version 2>&1 | grep -q 'ython 3'); then
+      echo "Pip for Python 3 not found (found pip for different python version)" >&2
       exit 1
     fi
     # find virtualenv
