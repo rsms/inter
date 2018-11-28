@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dotaccent" format="2">
-  <advance width="523.0"/>
+  <advance width="512.0"/>
   <unicode hex="02D9"/>
+  <guideline x="980.0" y="1952.0" angle="0.0"/>
+  <guideline x="980.0" y="1856.0" angle="0.0"/>
   <outline>
     <contour>
-      <point x="464.0" y="1852.0" type="curve" smooth="yes"/>
-      <point x="524.0" y="1851.0"/>
-      <point x="564.0" y="1902.0"/>
-      <point x="560.0" y="1956.0" type="curve" smooth="yes"/>
-      <point x="554.0" y="2010.0"/>
-      <point x="502.0" y="2061.0"/>
-      <point x="444.0" y="2060.0" type="curve" smooth="yes"/>
-      <point x="381.0" y="2061.0"/>
-      <point x="341.0" y="2010.0"/>
-      <point x="348.0" y="1956.0" type="curve" smooth="yes"/>
-      <point x="355.0" y="1902.0"/>
-      <point x="402.0" y="1851.0"/>
+      <point x="452.0" y="1908.0" type="curve" smooth="yes"/>
+      <point x="472.0" y="1908.0"/>
+      <point x="492.0" y="1924.0"/>
+      <point x="496.0" y="1944.0" type="curve" smooth="yes"/>
+      <point x="500.0" y="1972.0"/>
+      <point x="480.0" y="1996.0"/>
+      <point x="452.0" y="1996.0" type="curve" smooth="yes"/>
+      <point x="432.0" y="1996.0"/>
+      <point x="412.0" y="1980.0"/>
+      <point x="408.0" y="1960.0" type="curve" smooth="yes"/>
+      <point x="404.0" y="1932.0"/>
+      <point x="424.0" y="1908.0"/>
     </contour>
   </outline>
   <lib>
@@ -27,10 +29,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>5.0</real>
+            <real>1932.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -49,18 +51,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>8.0</real>
+            <real>220.0</real>
+            <real>84.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -69,10 +66,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>5.0</real>
+            <real>1932.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

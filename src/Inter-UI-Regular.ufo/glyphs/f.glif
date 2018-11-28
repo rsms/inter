@@ -9,24 +9,7 @@
       <point x="72.0" y="1336.0" type="line"/>
       <point x="900.0" y="1336.0" type="line"/>
     </contour>
-    <contour>
-      <point x="320.0" y="0.0" type="line"/>
-      <point x="556.0" y="0.0" type="line"/>
-      <point x="556.0" y="1692.0" type="line" smooth="yes"/>
-      <point x="556.0" y="1844.0"/>
-      <point x="620.0" y="1924.0"/>
-      <point x="776.0" y="1924.0" type="curve" smooth="yes"/>
-      <point x="844.0" y="1924.0"/>
-      <point x="884.0" y="1908.0"/>
-      <point x="908.0" y="1900.0" type="curve"/>
-      <point x="976.0" y="2104.0" type="line"/>
-      <point x="940.0" y="2120.0"/>
-      <point x="868.0" y="2144.0"/>
-      <point x="752.0" y="2144.0" type="curve" smooth="yes"/>
-      <point x="532.0" y="2144.0"/>
-      <point x="320.0" y="2012.0"/>
-      <point x="320.0" y="1748.0" type="curve" smooth="yes"/>
-    </contour>
+    <component base="_part.f_base"/>
   </outline>
   <lib>
     <dict>
@@ -77,18 +60,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>4.0</real>
+            <real>1924.0</real>
+            <real>220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>11.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -126,8 +104,8 @@
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -179,11 +157,6 @@
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>11.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

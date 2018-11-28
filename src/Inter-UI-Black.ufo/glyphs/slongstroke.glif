@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="slongstroke" format="2">
-  <advance width="1172.0"/>
+  <advance width="1156.0"/>
   <unicode hex="1E9C"/>
+  <guideline x="528.0" y="-84.0" angle="90.0"/>
   <outline>
     <contour>
-      <point x="268.0" y="0.0" type="line"/>
-      <point x="820.0" y="0.0" type="line"/>
-      <point x="820.0" y="1604.0" type="line" smooth="yes"/>
-      <point x="820.0" y="1676.0"/>
-      <point x="848.0" y="1724.0"/>
-      <point x="952.0" y="1724.0" type="curve" smooth="yes"/>
-      <point x="992.0" y="1724.0"/>
-      <point x="1052.0" y="1716.0"/>
-      <point x="1092.0" y="1704.0" type="curve"/>
-      <point x="1172.0" y="2100.0" type="line"/>
-      <point x="1108.0" y="2116.0"/>
-      <point x="960.0" y="2144.0"/>
-      <point x="820.0" y="2144.0" type="curve" smooth="yes"/>
-      <point x="484.0" y="2144.0"/>
-      <point x="268.0" y="1960.0"/>
-      <point x="268.0" y="1580.0" type="curve" smooth="yes"/>
+      <point x="56.0" y="788.0" type="line"/>
+      <point x="1084.0" y="1120.0" type="line"/>
+      <point x="1084.0" y="1536.0" type="line"/>
+      <point x="56.0" y="1208.0" type="line"/>
     </contour>
-    <contour>
-      <point x="56.0" y="732.0" type="line"/>
-      <point x="1064.0" y="1064.0" type="line"/>
-      <point x="1064.0" y="1368.0" type="line"/>
-      <point x="56.0" y="1040.0" type="line"/>
-    </contour>
+    <component base="_part.f_base"/>
   </outline>
   <lib>
     <dict>
@@ -34,12 +18,7 @@
       <string>f</string>
       <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
       <string>f</string>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.0</key>
-      <dict>
-        <key>name</key>
-        <string>hr00</string>
-      </dict>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.1.1</key>
+      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.1</key>
       <dict>
         <key>name</key>
         <string>hr00</string>
@@ -51,10 +30,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>15.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -73,7 +52,7 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
+            <real>0.0</real>
             <real>3.0</real>
           </array>
           <key>stem</key>
@@ -81,7 +60,7 @@
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>8.0</real>
+            <real>1.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -94,7 +73,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>15.0</real>
+            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

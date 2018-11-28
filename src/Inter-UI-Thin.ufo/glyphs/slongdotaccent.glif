@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="slongdotaccent" format="2">
-  <advance width="756.0"/>
+  <advance width="932.0"/>
   <unicode hex="1E9B"/>
   <outline>
-    <contour>
-      <point x="184.0" y="0.0" type="line"/>
-      <point x="232.0" y="0.0" type="line"/>
-      <point x="232.0" y="1744.0" type="line" smooth="yes"/>
-      <point x="232.0" y="1945.0"/>
-      <point x="318.0" y="2044.0"/>
-      <point x="504.0" y="2044.0" type="curve" smooth="yes"/>
-      <point x="590.0" y="2044.0"/>
-      <point x="618.0" y="2023.0"/>
-      <point x="632.0" y="2020.0" type="curve"/>
-      <point x="692.0" y="2108.0" type="line"/>
-      <point x="674.0" y="2122.0"/>
-      <point x="648.0" y="2144.0"/>
-      <point x="544.0" y="2144.0" type="curve" smooth="yes"/>
-      <point x="396.0" y="2144.0"/>
-      <point x="186.0" y="2043.0"/>
-      <point x="184.0" y="1848.0" type="curve" smooth="yes"/>
-    </contour>
-    <component base="dotaccent" yOffset="452.0"/>
+    <component base="_part.f_base"/>
+    <component base="dotaccent" xOffset="192.0" yOffset="448.0"/>
   </outline>
   <lib>
     <dict>
@@ -29,14 +12,10 @@
       <string>i</string>
       <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
       <string>f</string>
-      <key>com.schriftgestaltung.Glyphs.nodeUserData.0.0</key>
-      <dict>
-        <key>name</key>
-        <string>hr00</string>
-      </dict>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
-        <integer>-1</integer>
+        <integer>1</integer>
+        <integer>1</integer>
       </array>
       <key>com.schriftgestaltung.hints</key>
       <array>
@@ -45,10 +24,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>15.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -65,18 +44,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>15.0</real>
+            <real>184.0</real>
+            <real>508.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>8.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -85,10 +59,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>15.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
