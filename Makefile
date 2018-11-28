@@ -44,6 +44,9 @@ all: all_const  all_const_hinted  all_var
 
 all_const: all_otf  all_ttf  all_web
 all_const_hinted: all_ttf_hinted  all_web_hinted
+var: \
+	$(FONTDIR)/var/Inter-UI.var.woff2 \
+	$(FONTDIR)/var/Inter-UI.var.ttf
 all_var: \
 	$(FONTDIR)/var/Inter-UI.var.woff2 \
 	$(FONTDIR)/var/Inter-UI-upright.var.woff2 \
@@ -56,7 +59,7 @@ all_var: \
 # all_var_hinted: $(FONTDIR)/var-hinted/Inter-UI.var.ttf $(FONTDIR)/var-hinted/Inter-UI.var.woff2
 # .PHONY: all_var_hinted
 
-.PHONY: all_const  all_const_hinted  all_var
+.PHONY: all_const  all_const_hinted  var  all_var
 
 export PATH := $(PWD)/build/venv/bin:$(PATH)
 
