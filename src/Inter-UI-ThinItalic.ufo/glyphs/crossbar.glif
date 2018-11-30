@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="crossbar" format="2">
-  <advance width="1166.0"/>
+  <advance width="1168.0"/>
   <outline>
     <contour>
-      <point x="216.0" y="856.0" type="line"/>
-      <point x="976.0" y="856.0" type="line"/>
-      <point x="996.0" y="976.0" type="line"/>
-      <point x="236.0" y="976.0" type="line"/>
+      <point x="236.0" y="960.0" type="line"/>
+      <point x="996.0" y="960.0" type="line"/>
+      <point x="1008.0" y="1024.0" type="line"/>
+      <point x="248.0" y="1024.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -18,18 +18,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>728.0</real>
+            <real>-8.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -38,18 +33,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>728.0</real>
+            <real>120.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

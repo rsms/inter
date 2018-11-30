@@ -16,7 +16,7 @@
       <point x="592.0" y="1536.0" type="line"/>
       <point x="16.0" y="1536.0" type="line"/>
       <point x="556.0" y="-68.0" type="line"/>
-      <point x="544.0" y="-96.0" type="line"/>
+      <point x="544.0" y="-96.0" type="line" smooth="yes"/>
       <point x="499.0" y="-175.0"/>
       <point x="400.0" y="-176.0"/>
       <point x="264.0" y="-128.0" type="curve"/>
@@ -27,6 +27,10 @@
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>v</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>v</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>

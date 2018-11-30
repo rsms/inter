@@ -1,28 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="exclam" format="2">
-  <advance width="654.0"/>
+  <advance width="736.0"/>
   <unicode hex="0021"/>
   <outline>
     <contour>
-      <point x="376.0" y="2048.0" type="line"/>
-      <point x="280.0" y="2048.0" type="line"/>
-      <point x="280.0" y="540.0" type="line"/>
-      <point x="376.0" y="540.0" type="line"/>
+      <point x="400.0" y="2048.0" type="line"/>
+      <point x="336.0" y="2048.0" type="line"/>
+      <point x="336.0" y="320.0" type="line"/>
+      <point x="400.0" y="320.0" type="line"/>
     </contour>
-    <contour>
-      <point x="328.0" y="-36.0" type="curve" smooth="yes"/>
-      <point x="409.0" y="-37.0"/>
-      <point x="469.0" y="30.0"/>
-      <point x="468.0" y="120.0" type="curve" smooth="yes"/>
-      <point x="469.0" y="209.0"/>
-      <point x="409.0" y="275.0"/>
-      <point x="328.0" y="276.0" type="curve" smooth="yes"/>
-      <point x="246.0" y="275.0"/>
-      <point x="186.0" y="209.0"/>
-      <point x="188.0" y="120.0" type="curve" smooth="yes"/>
-      <point x="186.0" y="30.0"/>
-      <point x="246.0" y="-37.0"/>
-    </contour>
+    <component base="period" xOffset="12.0"/>
   </outline>
   <lib>
     <dict>
@@ -33,10 +20,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>11.0</real>
+            <real>-36.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -97,8 +84,8 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
+            <real>0.0</real>
             <real>1.0</real>
-            <real>11.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

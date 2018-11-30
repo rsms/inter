@@ -1,38 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="ring" format="2">
-  <advance width="1220.0"/>
+  <advance width="1216.0"/>
   <unicode hex="02DA"/>
   <note>
 recipe: offset curve 30, no auto; then redrawn two circles manually for perfect fit.
 </note>
   <outline>
     <contour>
-      <point x="304.0" y="1680.0" type="curve"/>
-      <point x="304.0" y="1544.0"/>
-      <point x="428.0" y="1436.0"/>
-      <point x="612.0" y="1436.0" type="curve" smooth="yes"/>
-      <point x="792.0" y="1436.0"/>
-      <point x="916.0" y="1544.0"/>
-      <point x="916.0" y="1680.0" type="curve" smooth="yes"/>
-      <point x="916.0" y="1812.0"/>
-      <point x="792.0" y="1932.0"/>
-      <point x="612.0" y="1932.0" type="curve" smooth="yes"/>
-      <point x="428.0" y="1932.0"/>
-      <point x="304.0" y="1812.0"/>
+      <point x="608.0" y="1664.0" type="curve" smooth="yes"/>
+      <point x="788.0" y="1664.0"/>
+      <point x="936.0" y="1808.0"/>
+      <point x="936.0" y="1984.0" type="curve" smooth="yes"/>
+      <point x="936.0" y="2160.0"/>
+      <point x="788.0" y="2304.0"/>
+      <point x="608.0" y="2304.0" type="curve" smooth="yes"/>
+      <point x="428.0" y="2304.0"/>
+      <point x="280.0" y="2160.0"/>
+      <point x="280.0" y="1984.0" type="curve" smooth="yes"/>
+      <point x="280.0" y="1808.0"/>
+      <point x="428.0" y="1664.0"/>
     </contour>
     <contour>
-      <point x="472.0" y="1680.0" type="curve"/>
-      <point x="472.0" y="1752.0"/>
-      <point x="528.0" y="1804.0"/>
-      <point x="612.0" y="1804.0" type="curve" smooth="yes"/>
-      <point x="692.0" y="1804.0"/>
-      <point x="748.0" y="1752.0"/>
-      <point x="748.0" y="1680.0" type="curve" smooth="yes"/>
-      <point x="748.0" y="1608.0"/>
-      <point x="696.0" y="1552.0"/>
-      <point x="612.0" y="1552.0" type="curve" smooth="yes"/>
-      <point x="524.0" y="1552.0"/>
-      <point x="472.0" y="1608.0"/>
+      <point x="608.0" y="1860.0" type="curve" smooth="yes"/>
+      <point x="535.0" y="1861.0"/>
+      <point x="476.0" y="1916.0"/>
+      <point x="476.0" y="1984.0" type="curve" smooth="yes"/>
+      <point x="476.0" y="2052.0"/>
+      <point x="535.0" y="2107.0"/>
+      <point x="608.0" y="2108.0" type="curve" smooth="yes"/>
+      <point x="681.0" y="2107.0"/>
+      <point x="740.0" y="2052.0"/>
+      <point x="740.0" y="1984.0" type="curve" smooth="yes"/>
+      <point x="740.0" y="1916.0"/>
+      <point x="681.0" y="1861.0"/>
     </contour>
   </outline>
   <lib>
@@ -44,18 +44,13 @@ recipe: offset curve 30, no auto; then redrawn two circles manually for perfect 
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>8.0</real>
+            <real>1552.0</real>
+            <real>116.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -64,18 +59,13 @@ recipe: offset curve 30, no auto; then redrawn two circles manually for perfect 
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>2.0</real>
+            <real>1804.0</real>
+            <real>128.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>8.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -84,18 +74,13 @@ recipe: offset curve 30, no auto; then redrawn two circles manually for perfect 
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>11.0</real>
+            <real>304.0</real>
+            <real>168.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>11.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -104,18 +89,13 @@ recipe: offset curve 30, no auto; then redrawn two circles manually for perfect 
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>5.0</real>
+            <real>748.0</real>
+            <real>168.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>5.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -124,18 +104,13 @@ recipe: offset curve 30, no auto; then redrawn two circles manually for perfect 
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>8.0</real>
+            <real>1552.0</real>
+            <real>116.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
@@ -144,18 +119,13 @@ recipe: offset curve 30, no auto; then redrawn two circles manually for perfect 
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>2.0</real>
+            <real>1804.0</real>
+            <real>128.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>8.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
