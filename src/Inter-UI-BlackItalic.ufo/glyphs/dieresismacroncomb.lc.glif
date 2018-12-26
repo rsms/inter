@@ -1,44 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="dieresismacroncomb.lc" format="2">
-  <advance width="36.0"/>
   <outline>
-    <contour>
-      <point x="-1400.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="-1420.0" y="1768.0"/>
-      <point x="-1328.0" y="1680.0"/>
-      <point x="-1208.0" y="1680.0" type="curve" smooth="yes"/>
-      <point x="-1084.0" y="1680.0"/>
-      <point x="-968.0" y="1768.0"/>
-      <point x="-948.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="-932.0" y="1984.0"/>
-      <point x="-1020.0" y="2072.0"/>
-      <point x="-1144.0" y="2072.0" type="curve" smooth="yes"/>
-      <point x="-1264.0" y="2072.0"/>
-      <point x="-1384.0" y="1984.0"/>
-    </contour>
-    <contour>
-      <point x="-632.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="-652.0" y="1768.0"/>
-      <point x="-560.0" y="1680.0"/>
-      <point x="-436.0" y="1680.0" type="curve" smooth="yes"/>
-      <point x="-316.0" y="1680.0"/>
-      <point x="-200.0" y="1768.0"/>
-      <point x="-180.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="-164.0" y="1984.0"/>
-      <point x="-252.0" y="2072.0"/>
-      <point x="-372.0" y="2072.0" type="curve" smooth="yes"/>
-      <point x="-492.0" y="2072.0"/>
-      <point x="-616.0" y="1988.0"/>
-    </contour>
-    <contour>
-      <point x="-188.0" y="2452.0" type="line"/>
-      <point x="-1192.0" y="2452.0" type="line"/>
-      <point x="-1236.0" y="2200.0" type="line"/>
-      <point x="-232.0" y="2200.0" type="line"/>
-    </contour>
+    <component base="dieresismacroncomb.cn" xOffset="-88.0" yOffset="-548.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
       <key>public.markColor</key>
       <string>0.871,0.871,0.871,0.004</string>
     </dict>

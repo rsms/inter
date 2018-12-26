@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="oslash" format="2">
-  <advance width="1627.0"/>
+  <advance width="1632.0"/>
   <unicode hex="00F8"/>
   <outline>
     <contour>
-      <point x="216.0" y="-72.0" type="line"/>
-      <point x="1512.0" y="1520.0" type="line"/>
-      <point x="1420.0" y="1596.0" type="line"/>
-      <point x="116.0" y="8.0" type="line"/>
+      <point x="180.0" y="-40.0" type="line"/>
+      <point x="1504.0" y="1540.0" type="line"/>
+      <point x="1452.0" y="1576.0" type="line"/>
+      <point x="128.0" y="-4.0" type="line"/>
     </contour>
-    <component base="o"/>
+    <component base="o" yOffset="4.0"/>
   </outline>
   <lib>
     <dict>
@@ -28,18 +28,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>-12.0</real>
+            <real>1268.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>

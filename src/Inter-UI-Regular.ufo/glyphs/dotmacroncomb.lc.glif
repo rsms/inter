@@ -1,29 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="dotmacroncomb.lc" format="2">
   <outline>
-    <contour>
-      <point x="-968.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="-968.0" y="1792.0"/>
-      <point x="-912.0" y="1728.0"/>
-      <point x="-812.0" y="1728.0" type="curve" smooth="yes"/>
-      <point x="-708.0" y="1728.0"/>
-      <point x="-652.0" y="1792.0"/>
-      <point x="-652.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="-652.0" y="1960.0"/>
-      <point x="-704.0" y="2032.0"/>
-      <point x="-812.0" y="2032.0" type="curve" smooth="yes"/>
-      <point x="-912.0" y="2032.0"/>
-      <point x="-968.0" y="1964.0"/>
-    </contour>
-    <contour>
-      <point x="-332.0" y="2396.0" type="line"/>
-      <point x="-1272.0" y="2396.0" type="line"/>
-      <point x="-1272.0" y="2188.0" type="line"/>
-      <point x="-332.0" y="2188.0" type="line"/>
-    </contour>
+    <component base="dotmacroncomb.cn" yOffset="-516.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -31,18 +16,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>2188.0</real>
+            <real>208.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -51,18 +31,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>2188.0</real>
+            <real>208.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

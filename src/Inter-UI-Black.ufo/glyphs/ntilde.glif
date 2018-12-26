@@ -1,9 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="ntilde" format="2">
-  <advance width="1668.0"/>
+  <advance width="1820.0"/>
   <unicode hex="00F1"/>
   <outline>
-    <component base="tilde" xOffset="180.0"/>
-    <component base="n" xOffset="16.0"/>
+    <component base="n"/>
+    <component base="tilde" xOffset="204.0" yOffset="-8.0"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>0</integer>
+        <integer>1</integer>
+      </array>
+    </dict>
+  </lib>
 </glyph>

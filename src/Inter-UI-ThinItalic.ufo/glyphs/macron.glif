@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="macron" format="2">
-  <advance width="935.0"/>
+  <advance width="824.0"/>
   <unicode hex="00AF"/>
   <outline>
     <contour>
-      <point x="1120.0" y="1976.0" type="line"/>
-      <point x="220.0" y="1976.0" type="line"/>
-      <point x="192.0" y="1800.0" type="line"/>
-      <point x="1092.0" y="1800.0" type="line"/>
+      <point x="904.0" y="1920.0" type="line"/>
+      <point x="304.0" y="1920.0" type="line"/>
+      <point x="292.0" y="1856.0" type="line"/>
+      <point x="892.0" y="1856.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -19,18 +19,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1544.0</real>
+            <real>-80.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -39,18 +34,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1544.0</real>
+            <real>176.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

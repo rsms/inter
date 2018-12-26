@@ -1,44 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="dieresismacroncomb.lc" format="2">
-  <advance width="36.0"/>
   <outline>
-    <contour>
-      <point x="-1584.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="-1584.0" y="1768.0"/>
-      <point x="-1480.0" y="1680.0"/>
-      <point x="-1360.0" y="1680.0" type="curve" smooth="yes"/>
-      <point x="-1236.0" y="1680.0"/>
-      <point x="-1132.0" y="1768.0"/>
-      <point x="-1132.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="-1132.0" y="1984.0"/>
-      <point x="-1236.0" y="2072.0"/>
-      <point x="-1360.0" y="2072.0" type="curve" smooth="yes"/>
-      <point x="-1480.0" y="2072.0"/>
-      <point x="-1584.0" y="1984.0"/>
-    </contour>
-    <contour>
-      <point x="-816.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="-816.0" y="1768.0"/>
-      <point x="-712.0" y="1680.0"/>
-      <point x="-588.0" y="1680.0" type="curve" smooth="yes"/>
-      <point x="-468.0" y="1680.0"/>
-      <point x="-364.0" y="1768.0"/>
-      <point x="-364.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="-364.0" y="1984.0"/>
-      <point x="-468.0" y="2072.0"/>
-      <point x="-588.0" y="2072.0" type="curve" smooth="yes"/>
-      <point x="-708.0" y="2072.0"/>
-      <point x="-816.0" y="1988.0"/>
-    </contour>
-    <contour>
-      <point x="-468.0" y="2452.0" type="line"/>
-      <point x="-1472.0" y="2452.0" type="line"/>
-      <point x="-1472.0" y="2200.0" type="line"/>
-      <point x="-468.0" y="2200.0" type="line"/>
-    </contour>
+    <component base="dieresismacroncomb.cn" xOffset="-8.0" yOffset="-548.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -46,10 +16,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>8.0</real>
+            <real>2072.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -68,18 +38,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>1.0</real>
+            <real>2200.0</real>
+            <real>252.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>2.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -88,18 +53,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>11.0</real>
+            <real>-1584.0</real>
+            <real>1220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>5.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -108,10 +68,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>8.0</real>
+            <real>2072.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -123,18 +83,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>1.0</real>
+            <real>2200.0</real>
+            <real>252.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>2.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

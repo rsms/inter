@@ -2,12 +2,7 @@
 <glyph name="macroncomb" format="2">
   <unicode hex="0304"/>
   <outline>
-    <contour>
-      <point x="-456.0" y="2012.0" type="line"/>
-      <point x="-1460.0" y="2012.0" type="line"/>
-      <point x="-1460.0" y="1760.0" type="line"/>
-      <point x="-456.0" y="1760.0" type="line"/>
-    </contour>
+    <component base="macron" xOffset="-1864.0"/>
   </outline>
   <lib>
     <dict>
@@ -20,18 +15,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1760.0</real>
+            <real>252.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -40,18 +30,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>-1460.0</real>
+            <real>1004.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -60,18 +45,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1760.0</real>
+            <real>252.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
