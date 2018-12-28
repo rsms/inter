@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="hyphen" format="2">
-  <advance width="1231.0"/>
+  <advance width="1236.0"/>
   <unicode hex="002D"/>
   <outline>
     <contour>
-      <point x="1028.0" y="956.0" type="line"/>
-      <point x="264.0" y="956.0" type="line"/>
-      <point x="244.0" y="828.0" type="line"/>
-      <point x="1008.0" y="828.0" type="line"/>
+      <point x="1028.0" y="916.0" type="line"/>
+      <point x="264.0" y="916.0" type="line"/>
+      <point x="252.0" y="852.0" type="line"/>
+      <point x="1016.0" y="852.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -19,18 +19,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
+            <real>700.0</real>
             <real>0.0</real>
-            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -39,18 +34,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>700.0</real>
+            <real>128.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="asterisk.case" format="2">
-  <advance width="1262.0"/>
+  <advance width="1408.0"/>
   <note>
 Recipe:
 1. make horizontal rect
@@ -12,10 +12,12 @@ Recipe:
 7. enter transform mode and center it
 </note>
   <outline>
-    <component base="asterisk" xOffset="4.0" yOffset="-448.0"/>
+    <component base="asterisk" yOffset="-448.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>asterisk</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
         <integer>-1</integer>

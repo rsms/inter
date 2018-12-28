@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="asterisk.case" format="2">
-  <advance width="1432.0"/>
+  <advance width="1408.0"/>
   <note>
 Recipe:
 1. make horizontal rect
@@ -17,10 +17,12 @@ Recipe:
   <guideline x="880.0" y="352.0" angle="0.0"/>
   <guideline x="708.0" y="1708.0" angle="90.0"/>
   <outline>
-    <component base="asterisk" xOffset="12.0" yOffset="-448.0"/>
+    <component base="asterisk" yOffset="-448.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>asterisk</string>
       <key>public.markColor</key>
       <string>0.67,0.95,0.38,1</string>
     </dict>

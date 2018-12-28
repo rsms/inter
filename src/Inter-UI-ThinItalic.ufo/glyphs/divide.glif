@@ -1,41 +1,41 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="divide" format="2">
-  <advance width="1722.0"/>
+  <advance width="1792.0"/>
   <unicode hex="00F7"/>
   <outline>
     <contour>
-      <point x="1452.0" y="836.0" type="line"/>
-      <point x="292.0" y="836.0" type="line"/>
-      <point x="276.0" y="728.0" type="line"/>
-      <point x="1436.0" y="728.0" type="line"/>
+      <point x="1488.0" y="832.0" type="line"/>
+      <point x="328.0" y="832.0" type="line"/>
+      <point x="316.0" y="768.0" type="line"/>
+      <point x="1476.0" y="768.0" type="line"/>
     </contour>
     <contour>
-      <point x="772.0" y="188.0" type="curve" smooth="yes"/>
-      <point x="826.0" y="186.0"/>
-      <point x="890.0" y="234.0"/>
-      <point x="896.0" y="296.0" type="curve" smooth="yes"/>
-      <point x="910.0" y="360.0"/>
-      <point x="856.0" y="417.0"/>
-      <point x="800.0" y="416.0" type="curve" smooth="yes"/>
-      <point x="730.0" y="417.0"/>
-      <point x="674.0" y="366.0"/>
-      <point x="672.0" y="312.0" type="curve" smooth="yes"/>
-      <point x="655.0" y="240.0"/>
-      <point x="700.0" y="186.0"/>
+      <point x="824.0" y="272.0" type="curve" smooth="yes"/>
+      <point x="864.0" y="272.0"/>
+      <point x="896.0" y="304.0"/>
+      <point x="896.0" y="344.0" type="curve" smooth="yes"/>
+      <point x="896.0" y="384.0"/>
+      <point x="864.0" y="416.0"/>
+      <point x="824.0" y="416.0" type="curve" smooth="yes"/>
+      <point x="784.0" y="416.0"/>
+      <point x="752.0" y="384.0"/>
+      <point x="752.0" y="344.0" type="curve" smooth="yes"/>
+      <point x="752.0" y="304.0"/>
+      <point x="784.0" y="272.0"/>
     </contour>
     <contour>
-      <point x="928.0" y="1144.0" type="curve" smooth="yes"/>
-      <point x="984.0" y="1145.0"/>
-      <point x="1042.0" y="1193.0"/>
-      <point x="1056.0" y="1256.0" type="curve" smooth="yes"/>
-      <point x="1066.0" y="1319.0"/>
-      <point x="1016.0" y="1376.0"/>
-      <point x="960.0" y="1376.0" type="curve" smooth="yes"/>
-      <point x="890.0" y="1376.0"/>
-      <point x="834.0" y="1326.0"/>
-      <point x="824.0" y="1268.0" type="curve" smooth="yes"/>
-      <point x="815.0" y="1199.0"/>
-      <point x="858.0" y="1145.0"/>
+      <point x="976.0" y="1184.0" type="curve" smooth="yes"/>
+      <point x="1016.0" y="1184.0"/>
+      <point x="1048.0" y="1216.0"/>
+      <point x="1048.0" y="1256.0" type="curve" smooth="yes"/>
+      <point x="1048.0" y="1296.0"/>
+      <point x="1016.0" y="1328.0"/>
+      <point x="976.0" y="1328.0" type="curve" smooth="yes"/>
+      <point x="936.0" y="1328.0"/>
+      <point x="904.0" y="1296.0"/>
+      <point x="904.0" y="1256.0" type="curve" smooth="yes"/>
+      <point x="904.0" y="1216.0"/>
+      <point x="936.0" y="1184.0"/>
     </contour>
   </outline>
   <lib>
@@ -49,18 +49,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>600.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -71,7 +66,7 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
+            <real>-128.0</real>
             <real>-20.0</real>
           </array>
           <key>stem</key>
@@ -91,18 +86,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>600.0</real>
+            <real>108.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
@@ -111,10 +101,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>708.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

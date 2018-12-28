@@ -1,30 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="asterisk" format="2">
-  <advance width="1226.0"/>
+  <advance width="1408.0"/>
   <unicode hex="002A"/>
   <note>
 hexagonal angle: 30 deg
 </note>
+  <guideline x="704.0" y="1472.0" angle="30.0"/>
+  <guideline x="784.0" y="1472.0" angle="0.0"/>
+  <guideline x="704.0" y="1472.0" angle="330.0"/>
   <outline>
     <contour>
-      <point x="556.0" y="896.0" type="line"/>
       <point x="672.0" y="896.0" type="line"/>
-      <point x="664.0" y="1388.0" type="line"/>
-      <point x="1084.0" y="1136.0" type="line"/>
-      <point x="1144.0" y="1236.0" type="line"/>
-      <point x="708.0" y="1472.0" type="line"/>
-      <point x="1144.0" y="1712.0" type="line"/>
-      <point x="1084.0" y="1812.0" type="line"/>
-      <point x="664.0" y="1556.0" type="line"/>
+      <point x="736.0" y="896.0" type="line"/>
+      <point x="736.0" y="1416.0" type="line"/>
+      <point x="1188.0" y="1156.0" type="line"/>
+      <point x="1220.0" y="1212.0" type="line"/>
+      <point x="768.0" y="1472.0" type="line"/>
+      <point x="1220.0" y="1732.0" type="line"/>
+      <point x="1188.0" y="1788.0" type="line"/>
+      <point x="736.0" y="1528.0" type="line"/>
+      <point x="736.0" y="2048.0" type="line"/>
       <point x="672.0" y="2048.0" type="line"/>
-      <point x="556.0" y="2048.0" type="line"/>
-      <point x="564.0" y="1556.0" type="line"/>
-      <point x="144.0" y="1812.0" type="line"/>
-      <point x="84.0" y="1712.0" type="line"/>
-      <point x="520.0" y="1472.0" type="line"/>
-      <point x="84.0" y="1236.0" type="line"/>
-      <point x="144.0" y="1136.0" type="line"/>
-      <point x="564.0" y="1388.0" type="line"/>
+      <point x="672.0" y="1528.0" type="line"/>
+      <point x="220.0" y="1788.0" type="line"/>
+      <point x="188.0" y="1732.0" type="line"/>
+      <point x="640.0" y="1472.0" type="line"/>
+      <point x="188.0" y="1212.0" type="line"/>
+      <point x="220.0" y="1156.0" type="line"/>
+      <point x="672.0" y="1416.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -36,10 +39,10 @@ hexagonal angle: 30 deg
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>9.0</real>
+            <real>2048.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -58,18 +61,13 @@ hexagonal angle: 30 deg
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>14.0</real>
+            <real>84.0</real>
+            <real>1060.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>3.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -78,10 +76,10 @@ hexagonal angle: 30 deg
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>9.0</real>
+            <real>2048.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

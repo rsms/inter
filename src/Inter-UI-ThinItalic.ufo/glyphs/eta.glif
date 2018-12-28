@@ -1,30 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="eta" format="2">
-  <advance width="1545.0"/>
+  <advance width="1600.0"/>
   <unicode hex="03B7"/>
   <outline>
     <contour>
-      <point x="336.0" y="960.0" type="line" smooth="yes"/>
-      <point x="396.0" y="1298.0"/>
-      <point x="642.0" y="1486.0"/>
-      <point x="920.0" y="1488.0" type="curve" smooth="yes"/>
-      <point x="1186.0" y="1486.0"/>
-      <point x="1320.0" y="1310.0"/>
-      <point x="1272.0" y="1020.0" type="curve" smooth="yes"/>
-      <point x="1008.0" y="-576.0" type="line"/>
-      <point x="1052.0" y="-576.0" type="line"/>
-      <point x="1312.0" y="976.0" type="line" smooth="yes"/>
-      <point x="1381.0" y="1399.0"/>
-      <point x="1201.0" y="1556.0"/>
-      <point x="900.0" y="1556.0" type="curve" smooth="yes"/>
-      <point x="662.0" y="1556.0"/>
-      <point x="519.0" y="1459.0"/>
-      <point x="424.0" y="1328.0" type="curve"/>
-      <point x="404.0" y="1328.0" type="line"/>
-      <point x="440.0" y="1536.0" type="line"/>
-      <point x="388.0" y="1536.0" type="line"/>
-      <point x="132.0" y="0.0" type="line"/>
-      <point x="180.0" y="0.0" type="line"/>
+      <point x="380.0" y="1032.0" type="line" smooth="yes"/>
+      <point x="424.0" y="1300.0"/>
+      <point x="664.0" y="1492.0"/>
+      <point x="936.0" y="1492.0" type="curve" smooth="yes"/>
+      <point x="1208.0" y="1492.0"/>
+      <point x="1352.0" y="1304.0"/>
+      <point x="1308.0" y="1032.0" type="curve" smooth="yes"/>
+      <point x="1040.0" y="-576.0" type="line"/>
+      <point x="1104.0" y="-576.0" type="line"/>
+      <point x="1372.0" y="1032.0" type="line" smooth="yes"/>
+      <point x="1424.0" y="1340.0"/>
+      <point x="1244.0" y="1556.0"/>
+      <point x="936.0" y="1556.0" type="curve" smooth="yes"/>
+      <point x="724.0" y="1556.0"/>
+      <point x="528.0" y="1452.0"/>
+      <point x="432.0" y="1292.0" type="curve"/>
+      <point x="424.0" y="1292.0" type="line"/>
+      <point x="464.0" y="1536.0" type="line"/>
+      <point x="400.0" y="1536.0" type="line"/>
+      <point x="144.0" y="0.0" type="line"/>
+      <point x="208.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -42,7 +42,7 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
+            <real>-128.0</real>
             <real>21.0</real>
           </array>
           <key>stem</key>
@@ -62,7 +62,7 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
+            <real>-128.0</real>
             <real>21.0</real>
           </array>
           <key>stem</key>
@@ -82,8 +82,8 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>-128.0</real>
+            <real>-128.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -97,7 +97,7 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
+            <real>-128.0</real>
             <real>-20.0</real>
           </array>
           <key>stem</key>
@@ -119,8 +119,8 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>-128.0</real>
+            <real>-128.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -134,8 +134,8 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>-128.0</real>
+            <real>-128.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -149,22 +149,7 @@
           <integer>4</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>type</key>
-          <string>Anchor</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>4</integer>
-          <key>place</key>
-          <array>
-            <real>0.0</real>
+            <real>-128.0</real>
             <real>0.0</real>
           </array>
           <key>stem</key>
@@ -179,7 +164,22 @@
           <integer>4</integer>
           <key>place</key>
           <array>
+            <real>-128.0</real>
             <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>-128.0</real>
             <real>0.0</real>
           </array>
           <key>stem</key>
@@ -194,7 +194,7 @@
           <integer>4</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
+            <real>-128.0</real>
             <real>0.0</real>
           </array>
           <key>stem</key>

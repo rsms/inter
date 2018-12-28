@@ -1,40 +1,40 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="six.ss01" format="2">
-  <advance width="1453.0"/>
+  <advance width="1600.0"/>
   <outline>
     <contour>
-      <point x="168.0" y="632.0" type="curve" smooth="yes"/>
-      <point x="160.0" y="285.0"/>
-      <point x="362.0" y="-28.0"/>
-      <point x="704.0" y="-28.0" type="curve" smooth="yes"/>
-      <point x="1024.0" y="-28.0"/>
-      <point x="1258.0" y="243.0"/>
-      <point x="1260.0" y="584.0" type="curve"/>
-      <point x="1258.0" y="948.0"/>
-      <point x="977.0" y="1235.0"/>
-      <point x="612.0" y="1236.0" type="curve" smooth="yes"/>
-      <point x="562.0" y="1235.0"/>
-      <point x="513.0" y="1221.0"/>
-      <point x="468.0" y="1200.0" type="curve"/>
+      <point x="208.0" y="612.0" type="curve" smooth="yes"/>
+      <point x="208.0" y="259.0"/>
+      <point x="473.0" y="-28.0"/>
+      <point x="800.0" y="-28.0" type="curve" smooth="yes"/>
+      <point x="1127.0" y="-28.0"/>
+      <point x="1392.0" y="259.0"/>
+      <point x="1392.0" y="612.0" type="curve" smooth="yes"/>
+      <point x="1392.0" y="965.0"/>
+      <point x="1127.0" y="1252.0"/>
+      <point x="800.0" y="1252.0" type="curve" smooth="yes"/>
+      <point x="703.0" y="1252.0"/>
+      <point x="612.0" y="1227.0"/>
+      <point x="532.0" y="1184.0" type="curve"/>
+      <point x="1128.0" y="2048.0" type="line"/>
       <point x="1052.0" y="2048.0" type="line"/>
-      <point x="944.0" y="2048.0" type="line"/>
-      <point x="496.0" y="1392.0" type="line" smooth="yes"/>
-      <point x="226.0" y="988.0"/>
-      <point x="173.0" y="799.0"/>
+      <point x="344.0" y="1020.0" type="line" smooth="yes"/>
+      <point x="265.0" y="905.0"/>
+      <point x="208.0" y="767.0"/>
     </contour>
     <contour>
-      <point x="216.0" y="604.0" type="curve"/>
-      <point x="215.0" y="912.0"/>
-      <point x="419.0" y="1128.0"/>
-      <point x="708.0" y="1128.0" type="curve" smooth="yes"/>
-      <point x="1000.0" y="1128.0"/>
-      <point x="1202.0" y="912.0"/>
-      <point x="1204.0" y="596.0" type="curve" smooth="yes"/>
-      <point x="1202.0" y="288.0"/>
-      <point x="998.0" y="66.0"/>
-      <point x="708.0" y="68.0" type="curve" smooth="yes"/>
-      <point x="419.0" y="66.0"/>
-      <point x="215.0" y="288.0"/>
+      <point x="272.0" y="612.0" type="curve" smooth="yes"/>
+      <point x="272.0" y="930.0"/>
+      <point x="509.0" y="1188.0"/>
+      <point x="800.0" y="1188.0" type="curve" smooth="yes"/>
+      <point x="1091.0" y="1188.0"/>
+      <point x="1328.0" y="930.0"/>
+      <point x="1328.0" y="612.0" type="curve" smooth="yes"/>
+      <point x="1328.0" y="294.0"/>
+      <point x="1091.0" y="36.0"/>
+      <point x="800.0" y="36.0" type="curve" smooth="yes"/>
+      <point x="509.0" y="36.0"/>
+      <point x="272.0" y="294.0"/>
     </contour>
   </outline>
   <lib>
@@ -46,10 +46,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>-28.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -66,10 +66,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>13.0</real>
+            <real>2048.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -88,18 +88,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>17.0</real>
+            <real>168.0</real>
+            <real>1092.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>5.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -108,10 +103,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>-28.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -123,10 +118,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>13.0</real>
+            <real>2048.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

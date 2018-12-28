@@ -1,35 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="openbullet" format="2">
-  <advance width="1429.0"/>
+  <advance width="1280.0"/>
   <unicode hex="25E6"/>
   <outline>
     <contour>
-      <point x="728.0" y="656.0" type="curve" smooth="yes"/>
-      <point x="1127.0" y="654.0"/>
-      <point x="1454.0" y="734.0"/>
-      <point x="1456.0" y="832.0" type="curve" smooth="yes"/>
-      <point x="1455.0" y="930.0"/>
-      <point x="1127.0" y="1010.0"/>
-      <point x="728.0" y="1012.0" type="curve" smooth="yes"/>
-      <point x="319.0" y="1010.0"/>
-      <point x="-7.0" y="930.0"/>
-      <point x="-4.0" y="832.0" type="curve" smooth="yes"/>
-      <point x="-6.0" y="734.0"/>
-      <point x="319.0" y="654.0"/>
+      <point x="576.0" y="392.0" type="curve" smooth="yes"/>
+      <point x="820.0" y="392.0"/>
+      <point x="1052.0" y="588.0"/>
+      <point x="1092.0" y="832.0" type="curve" smooth="yes"/>
+      <point x="1132.0" y="1076.0"/>
+      <point x="968.0" y="1272.0"/>
+      <point x="724.0" y="1272.0" type="curve" smooth="yes"/>
+      <point x="480.0" y="1272.0"/>
+      <point x="252.0" y="1076.0"/>
+      <point x="212.0" y="832.0" type="curve" smooth="yes"/>
+      <point x="172.0" y="588.0"/>
+      <point x="336.0" y="392.0"/>
     </contour>
     <contour>
-      <point x="728.0" y="212.0" type="curve" smooth="yes"/>
-      <point x="252.0" y="211.0"/>
-      <point x="-128.0" y="488.0"/>
-      <point x="-124.0" y="832.0" type="curve" smooth="yes"/>
-      <point x="-127.0" y="1176.0"/>
-      <point x="252.0" y="1453.0"/>
-      <point x="728.0" y="1452.0" type="curve" smooth="yes"/>
-      <point x="1195.0" y="1453.0"/>
-      <point x="1574.0" y="1176.0"/>
-      <point x="1580.0" y="832.0" type="curve" smooth="yes"/>
-      <point x="1576.0" y="488.0"/>
-      <point x="1195.0" y="211.0"/>
+      <point x="576.0" y="456.0" type="curve" smooth="yes"/>
+      <point x="368.0" y="456.0"/>
+      <point x="240.0" y="624.0"/>
+      <point x="276.0" y="832.0" type="curve" smooth="yes"/>
+      <point x="308.0" y="1040.0"/>
+      <point x="520.0" y="1208.0"/>
+      <point x="728.0" y="1208.0" type="curve" smooth="yes"/>
+      <point x="936.0" y="1208.0"/>
+      <point x="1060.0" y="1040.0"/>
+      <point x="1028.0" y="832.0" type="curve" smooth="yes"/>
+      <point x="992.0" y="624.0"/>
+      <point x="784.0" y="456.0"/>
     </contour>
   </outline>
   <lib>
@@ -41,18 +41,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>11.0</real>
+            <real>400.0</real>
+            <real>100.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>5.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -61,18 +56,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>1200.0</real>
+            <real>1204.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>8.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -81,18 +71,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>11.0</real>
+            <real>400.0</real>
+            <real>356.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>5.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
