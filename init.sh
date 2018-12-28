@@ -316,6 +316,8 @@ else
   derived_styles=( \
     "Light            : Thin Regular" \
     "LightItalic      : ThinItalic Italic" \
+    "ExtraLight       : Thin Regular" \
+    "ExtraLightItalic : ThinItalic Italic" \
     "Medium           : Regular Black" \
     "MediumItalic     : Italic BlackItalic" \
     "SemiBold         : Regular Black" \

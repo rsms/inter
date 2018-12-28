@@ -1,6 +1,51 @@
 @font-face {
   font-family: 'Inter UI';
   font-style:  normal;
+  font-weight: 100;
+  src: url("Inter-UI-Thin.woff2") format("woff2"),
+       url("Inter-UI-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 100;
+  src: url("Inter-UI-ThinItalic.woff2") format("woff2"),
+       url("Inter-UI-ThinItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 200;
+  src: url("Inter-UI-ExtraLight.woff2") format("woff2"),
+       url("Inter-UI-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 200;
+  src: url("Inter-UI-ExtraLightItalic.woff2") format("woff2"),
+       url("Inter-UI-ExtraLightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
+  font-weight: 300;
+  src: url("Inter-UI-Light.woff2") format("woff2"),
+       url("Inter-UI-Light.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  italic;
+  font-weight: 300;
+  src: url("Inter-UI-LightItalic.woff2") format("woff2"),
+       url("Inter-UI-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter UI';
+  font-style:  normal;
   font-weight: 400;
   src: url("Inter-UI-Regular.woff2") format("woff2"),
        url("Inter-UI-Regular.woff") format("woff");
@@ -110,7 +155,7 @@ BUGS:
 */
 @font-face {
   font-family: 'Inter UI var';
-  font-weight: 400 900;
+  font-weight: 100 900;
   font-style: oblique 0deg 10deg;
   src: url("Inter-UI.var.woff2") format("woff2-variations"),
        url("Inter-UI.var.woff2") format("woff2");
@@ -129,7 +174,7 @@ BUGS:
 */
 @font-face {
   font-family: 'Inter UI var alt';
-  font-weight: 400 900;
+  font-weight: 100 900;
   font-style: normal;
   font-named-instance: 'Regular';
   src: url("Inter-UI-upright.var.woff2") format("woff2 supports variations(gvar)"),
@@ -138,7 +183,7 @@ BUGS:
 }
 @font-face {
   font-family: 'Inter UI var alt';
-  font-weight: 400 900;
+  font-weight: 100 900;
   font-style: italic;
   font-named-instance: 'Italic';
   src: url("Inter-UI-italic.var.woff2") format("woff2 supports variations(gvar)"),

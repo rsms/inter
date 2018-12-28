@@ -58,6 +58,35 @@
         </dict>
       </lib>
     </instance>
+    <instance name="extralightitalic" familyname="Inter UI" stylename="Extra Light Italic" filename="../build/ufo/Inter-UI-ExtraLightItalic.ufo" stylemapfamilyname="Inter UI Extra Light" stylemapstylename="italic">
+      <location>
+        <dimension name="Weight" xvalue="200"/>
+      </location>
+      <kerning/>
+      <info/>
+      <lib>
+        <dict>
+          <key>com.schriftgestaltung.customParameters</key>
+          <array>
+            <array>
+              <string>panose</string>
+              <array>
+                <integer>2</integer>
+                <integer>11</integer>
+                <integer>3</integer>
+                <integer>2</integer>
+                <integer>3</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>4</integer>
+              </array>
+            </array>
+          </array>
+        </dict>
+      </lib>
+    </instance>
     <instance name="lightitalic" familyname="Inter UI" stylename="Light Italic" filename="../build/ufo/Inter-UI-LightItalic.ufo" stylemapfamilyname="Inter UI Light" stylemapstylename="italic">
       <location>
         <dimension name="Weight" xvalue="300"/>

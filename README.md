@@ -31,6 +31,12 @@ Current font styles:
 
 | Name                 | Weight class
 | -------------------- | ----------------
+| Thin                 | 100
+| Thin Italic          | 100
+| Extra Light          | 200
+| Extra Light Italic   | 200
+| Light                | 300
+| Light Italic         | 300
 | Regular              | 400
 | Italic               | 400
 | Medium               | 500

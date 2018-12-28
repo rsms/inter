@@ -458,10 +458,11 @@ class Main(object):
       ).strip()
       # Note: ots-sanitize does not exit with an error in many cases where
       # it fails to sanitize the font.
-      success = otssan_res.find('Failed') == -1
+      success = str(otssan_res).find('Failed') == -1
     except:
       success = False
-      otssan_res = 'error'
+      if len(otssan_res) == 0:
+        otssan_res = 'error'
     
     if success:
       os.unlink(tmpfile)
@@ -745,7 +746,7 @@ class Main(object):
       ).strip()
       # Note: ots-idempotent does not exit with an error in many cases where
       # it fails to sanitize the font.
-      if res.find('Failed') != -1:
+      if str(res).find('Failed') != -1:
         log.error('[checkfont] ots-idempotent failed for %r: %s' % (
           fontfile, res))
         return False

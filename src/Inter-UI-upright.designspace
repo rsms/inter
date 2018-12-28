@@ -54,6 +54,35 @@
         </dict>
       </lib>
     </instance>
+    <instance name="extralight" familyname="Inter UI" stylename="Extra Light" filename="../build/ufo/Inter-UI-ExtraLight.ufo" stylemapfamilyname="Inter UI Extra Light" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="200"/>
+      </location>
+      <kerning/>
+      <info/>
+      <lib>
+        <dict>
+          <key>com.schriftgestaltung.customParameters</key>
+          <array>
+            <array>
+              <string>panose</string>
+              <array>
+                <integer>2</integer>
+                <integer>11</integer>
+                <integer>3</integer>
+                <integer>2</integer>
+                <integer>3</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>0</integer>
+                <integer>4</integer>
+              </array>
+            </array>
+          </array>
+        </dict>
+      </lib>
+    </instance>
     <instance name="light" familyname="Inter UI" stylename="Light" filename="../build/ufo/Inter-UI-Light.ufo" stylemapfamilyname="Inter UI Light" stylemapstylename="regular">
       <location>
         <dimension name="Weight" xvalue="300"/>

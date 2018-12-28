@@ -1017,6 +1017,23 @@ for (const ch of uniqueChars) {
 @font-face {
   font-family: 'Inter-UI-VERSION';
   font-style:  normal;
+  font-weight: 200;
+  font-display: auto;
+  src: url("fonts/const/Inter-UI-ExtraLight.woff2") format("woff2"),
+       url("fonts/const/Inter-UI-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: 'Inter-UI-VERSION';
+  font-style:  italic;
+  font-weight: 200;
+  font-display: auto;
+  src: url("fonts/const/Inter-UI-ExtraLightItalic.woff2") format("woff2"),
+       url("fonts/const/Inter-UI-ExtraLightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter-UI-VERSION';
+  font-style:  normal;
   font-weight: 300;
   font-display: auto;
   src: url("fonts/const/Inter-UI-Light.woff2") format("woff2"),
@@ -1314,6 +1331,7 @@ document.head.appendChild(fontCSS)
       <label class="style">
         <select name="weight" style="max-width:100px">
           <option value="100">Thin (100)</option>
+          <option value="200">Extra Light (200)</option>
           <option value="300">Light (300)</option>
           <option value="400" selected>Regular (400)</option>
           <option value="500">Medium (500)</option>
