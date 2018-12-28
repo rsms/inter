@@ -273,7 +273,7 @@ else
   LINK=false
   if [[ ! -f "$DEPS_DIR/ttfautohint-${AUTOHINT_VERSION}" ]]; then
     fetch \
-      https://download.savannah.gnu.org/releases/freetype/ttfautohint-${AUTOHINT_VERSION}-tty-osx.tar.gz
+      https://download.savannah.gnu.org/releases/freetype/ttfautohint-${AUTOHINT_VERSION}-tty-osx.tar.gz \
       "$DEPS_DIR/ttfautohint.tar.gz"
     tar -C "$DEPS_DIR" -xzf "$DEPS_DIR/ttfautohint.tar.gz"
     rm "$DEPS_DIR/ttfautohint.tar.gz"
