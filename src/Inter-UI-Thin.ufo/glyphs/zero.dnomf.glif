@@ -1,38 +1,45 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="zero.dnomf" format="2">
-  <advance width="1094.0"/>
+  <advance width="1008.0"/>
   <outline>
     <contour>
-      <point x="548.0" y="-16.0" type="curve" smooth="yes"/>
-      <point x="825.0" y="-16.0"/>
-      <point x="944.0" y="154.0"/>
-      <point x="944.0" y="548.0" type="curve" smooth="yes"/>
-      <point x="944.0" y="936.0"/>
-      <point x="825.0" y="1104.0"/>
-      <point x="548.0" y="1104.0" type="curve" smooth="yes"/>
-      <point x="272.0" y="1104.0"/>
-      <point x="152.0" y="936.0"/>
-      <point x="152.0" y="548.0" type="curve" smooth="yes"/>
-      <point x="152.0" y="154.0"/>
-      <point x="272.0" y="-16.0"/>
+      <point x="504.0" y="-16.0" type="curve" smooth="yes"/>
+      <point x="748.0" y="-16.0"/>
+      <point x="892.0" y="200.0"/>
+      <point x="892.0" y="544.0" type="curve" smooth="yes"/>
+      <point x="892.0" y="892.0"/>
+      <point x="744.0" y="1104.0"/>
+      <point x="504.0" y="1104.0" type="curve" smooth="yes"/>
+      <point x="264.0" y="1104.0"/>
+      <point x="116.0" y="892.0"/>
+      <point x="116.0" y="544.0" type="curve" smooth="yes"/>
+      <point x="116.0" y="200.0"/>
+      <point x="260.0" y="-16.0"/>
     </contour>
     <contour>
-      <point x="548.0" y="112.0" type="curve" smooth="yes"/>
-      <point x="366.0" y="113.0"/>
-      <point x="290.0" y="252.0"/>
-      <point x="288.0" y="544.0" type="curve" smooth="yes"/>
-      <point x="290.0" y="836.0"/>
-      <point x="366.0" y="975.0"/>
-      <point x="548.0" y="976.0" type="curve" smooth="yes"/>
-      <point x="731.0" y="975.0"/>
-      <point x="807.0" y="836.0"/>
-      <point x="808.0" y="544.0" type="curve" smooth="yes"/>
-      <point x="807.0" y="252.0"/>
-      <point x="731.0" y="113.0"/>
+      <point x="504.0" y="44.0" type="curve" smooth="yes"/>
+      <point x="300.0" y="44.0"/>
+      <point x="176.0" y="232.0"/>
+      <point x="176.0" y="544.0" type="curve" smooth="yes"/>
+      <point x="176.0" y="860.0"/>
+      <point x="304.0" y="1044.0"/>
+      <point x="504.0" y="1044.0" type="curve" smooth="yes"/>
+      <point x="704.0" y="1044.0"/>
+      <point x="832.0" y="860.0"/>
+      <point x="832.0" y="544.0" type="curve" smooth="yes"/>
+      <point x="832.0" y="232.0"/>
+      <point x="708.0" y="44.0"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>RMXScaler</key>
+      <dict>
+        <key>height</key>
+        <real>53.15</real>
+        <key>width</key>
+        <integer>60</integer>
+      </dict>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -40,155 +47,37 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>11.0</real>
+            <real>2076.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <string>u</string>
-            <string>p</string>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
           </array>
           <key>type</key>
-          <string>BottomGhost</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>5.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>5.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>11.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>11.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <false/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>8.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>2.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <false/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>8.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
+          <string>TopGhost</string>
         </dict>
         <dict>
           <key>horizontal</key>
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>11.0</real>
+            <real>2076.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>type</key>
           <string>Anchor</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>4</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>5.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>5.0</real>
-          </array>
-          <key>type</key>
-          <string>TTStem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>4</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>11.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>11.0</real>
-          </array>
-          <key>type</key>
-          <string>TTStem</string>
         </dict>
       </array>
       <key>public.markColor</key>

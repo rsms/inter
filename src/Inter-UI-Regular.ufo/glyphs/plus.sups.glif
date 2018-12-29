@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="plus.sups" format="2">
-  <advance width="1172.0"/>
+  <advance width="1236.0"/>
   <unicode hex="207A"/>
   <outline>
     <contour>
-      <point x="1016.0" y="1676.0" type="line"/>
-      <point x="156.0" y="1676.0" type="line"/>
-      <point x="156.0" y="1504.0" type="line"/>
-      <point x="1016.0" y="1504.0" type="line"/>
+      <point x="528.0" y="1116.0" type="line"/>
+      <point x="712.0" y="1116.0" type="line"/>
+      <point x="712.0" y="1960.0" type="line"/>
+      <point x="528.0" y="1960.0" type="line"/>
     </contour>
     <contour>
-      <point x="676.0" y="1992.0" type="line"/>
-      <point x="500.0" y="1992.0" type="line"/>
-      <point x="500.0" y="1184.0" type="line"/>
-      <point x="676.0" y="1184.0" type="line"/>
+      <point x="176.0" y="1448.0" type="line"/>
+      <point x="1060.0" y="1448.0" type="line"/>
+      <point x="1060.0" y="1628.0" type="line"/>
+      <point x="176.0" y="1628.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -25,7 +25,7 @@
         <key>verticalShift</key>
         <integer>1024</integer>
         <key>weight</key>
-        <integer>-60</integer>
+        <integer>-50</integer>
         <key>width</key>
         <real>66.6</real>
       </dict>
@@ -38,28 +38,8 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>0.0</real>
             <real>1.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <false/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -75,11 +55,33 @@
           <key>horizontal</key>
           <true/>
           <key>options</key>
-          <integer>4</integer>
+          <integer>0</integer>
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>2.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
+          </array>
+          <key>type</key>
+          <string>TopGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -89,11 +91,46 @@
             <real>0.0</real>
           </array>
           <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>1.0</real>
+            <real>3.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>1.0</real>
+            <real>2.0</real>
+          </array>
+          <key>type</key>
           <string>TTStem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

@@ -1,30 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="n.sups" format="2">
-  <advance width="1116.0"/>
+  <advance width="1136.0"/>
   <unicode hex="207F"/>
   <outline>
     <contour>
-      <point x="336.0" y="1624.0" type="line" smooth="yes"/>
-      <point x="336.0" y="1792.0"/>
-      <point x="464.0" y="1876.0"/>
-      <point x="576.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="696.0" y="1876.0"/>
-      <point x="780.0" y="1784.0"/>
-      <point x="780.0" y="1648.0" type="curve" smooth="yes"/>
-      <point x="780.0" y="1024.0" type="line"/>
-      <point x="984.0" y="1024.0" type="line"/>
-      <point x="984.0" y="1676.0" type="line" smooth="yes"/>
-      <point x="984.0" y="1928.0"/>
-      <point x="844.0" y="2060.0"/>
-      <point x="648.0" y="2060.0" type="curve" smooth="yes"/>
-      <point x="500.0" y="2060.0"/>
-      <point x="392.0" y="1984.0"/>
-      <point x="344.0" y="1868.0" type="curve"/>
-      <point x="332.0" y="1868.0" type="line"/>
-      <point x="332.0" y="2048.0" type="line"/>
+      <point x="344.0" y="1640.0" type="line" smooth="yes"/>
+      <point x="344.0" y="1788.0"/>
+      <point x="440.0" y="1880.0"/>
+      <point x="572.0" y="1880.0" type="curve" smooth="yes"/>
+      <point x="704.0" y="1880.0"/>
+      <point x="792.0" y="1792.0"/>
+      <point x="792.0" y="1648.0" type="curve" smooth="yes"/>
+      <point x="792.0" y="1024.0" type="line"/>
+      <point x="1004.0" y="1024.0" type="line"/>
+      <point x="1004.0" y="1684.0" type="line" smooth="yes"/>
+      <point x="1004.0" y="1916.0"/>
+      <point x="860.0" y="2060.0"/>
+      <point x="652.0" y="2060.0" type="curve" smooth="yes"/>
+      <point x="508.0" y="2060.0"/>
+      <point x="392.0" y="1988.0"/>
+      <point x="344.0" y="1872.0" type="curve"/>
+      <point x="336.0" y="1872.0" type="line"/>
+      <point x="336.0" y="2048.0" type="line"/>
       <point x="132.0" y="2048.0" type="line"/>
       <point x="132.0" y="1024.0" type="line"/>
-      <point x="336.0" y="1024.0" type="line"/>
+      <point x="344.0" y="1024.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -36,12 +36,34 @@
         <key>verticalShift</key>
         <integer>1024</integer>
         <key>weight</key>
-        <integer>-60</integer>
+        <integer>-50</integer>
         <key>width</key>
         <real>66.6</real>
       </dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>m.sups</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>18.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
         <dict>
           <key>horizontal</key>
           <true/>
@@ -132,6 +154,21 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
+            <real>18.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
             <real>11.0</real>
           </array>
           <key>stem</key>
@@ -161,7 +198,7 @@
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

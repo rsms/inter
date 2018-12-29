@@ -1,19 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="threeeighths" format="2">
-  <advance width="2718.0"/>
+  <advance width="2704.0"/>
   <unicode hex="215C"/>
   <outline>
-    <component base="fraction" xOffset="952.0"/>
-    <component base="three.numr" xOffset="-12.0" yOffset="-64.0"/>
-    <component base="eight.dnomf" xOffset="1644.0"/>
+    <component base="fraction" xOffset="980.0"/>
+    <component base="three.numr" xOffset="-8.0" yOffset="-64.0"/>
+    <component base="eight.dnomf" xOffset="1680.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>three.numr</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>eight.dnomf</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
         <integer>-1</integer>
-        <integer>-1</integer>
-        <integer>-1</integer>
+        <integer>0</integer>
+        <integer>1</integer>
       </array>
       <key>public.markColor</key>
       <string>0.97,1,0,1</string>

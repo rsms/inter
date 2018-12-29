@@ -1,39 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="e.sups" format="2">
-  <advance width="1096.0"/>
+  <advance width="1104.0"/>
   <unicode hex="1D49"/>
   <outline>
     <contour>
       <point x="572.0" y="1004.0" type="curve"/>
-      <point x="800.0" y="1004.0"/>
-      <point x="952.0" y="1128.0"/>
-      <point x="996.0" y="1276.0" type="curve"/>
-      <point x="804.0" y="1328.0" type="line"/>
-      <point x="772.0" y="1236.0"/>
-      <point x="692.0" y="1176.0"/>
-      <point x="572.0" y="1176.0" type="curve" smooth="yes"/>
-      <point x="400.0" y="1176.0"/>
-      <point x="288.0" y="1292.0"/>
-      <point x="288.0" y="1492.0" type="curve" smooth="yes"/>
-      <point x="288.0" y="1608.0" type="line" smooth="yes"/>
-      <point x="288.0" y="1752.0"/>
-      <point x="396.0" y="1888.0"/>
-      <point x="560.0" y="1888.0" type="curve"/>
-      <point x="712.0" y="1888.0"/>
-      <point x="816.0" y="1776.0"/>
-      <point x="816.0" y="1628.0" type="curve"/>
-      <point x="200.0" y="1628.0" type="line"/>
-      <point x="200.0" y="1476.0" type="line"/>
-      <point x="1008.0" y="1476.0" type="line"/>
-      <point x="1008.0" y="1556.0" type="line" smooth="yes"/>
-      <point x="1008.0" y="1912.0"/>
-      <point x="792.0" y="2060.0"/>
+      <point x="804.0" y="1004.0"/>
+      <point x="960.0" y="1120.0"/>
+      <point x="1004.0" y="1284.0" type="curve"/>
+      <point x="808.0" y="1304.0" type="line"/>
+      <point x="780.0" y="1232.0"/>
+      <point x="696.0" y="1168.0"/>
+      <point x="576.0" y="1168.0" type="curve" smooth="yes"/>
+      <point x="404.0" y="1168.0"/>
+      <point x="296.0" y="1296.0"/>
+      <point x="296.0" y="1484.0" type="curve" smooth="yes"/>
+      <point x="296.0" y="1604.0" type="line" smooth="yes"/>
+      <point x="296.0" y="1764.0"/>
+      <point x="408.0" y="1896.0"/>
+      <point x="564.0" y="1896.0" type="curve"/>
+      <point x="712.0" y="1896.0"/>
+      <point x="820.0" y="1780.0"/>
+      <point x="820.0" y="1620.0" type="curve"/>
+      <point x="176.0" y="1620.0" type="line"/>
+      <point x="176.0" y="1484.0" type="line"/>
+      <point x="1020.0" y="1484.0" type="line"/>
+      <point x="1020.0" y="1552.0" type="line" smooth="yes"/>
+      <point x="1020.0" y="1880.0"/>
+      <point x="816.0" y="2060.0"/>
       <point x="560.0" y="2060.0" type="curve" smooth="yes"/>
       <point x="276.0" y="2060.0"/>
-      <point x="88.0" y="1844.0"/>
-      <point x="88.0" y="1528.0" type="curve"/>
-      <point x="88.0" y="1212.0"/>
-      <point x="268.0" y="1004.0"/>
+      <point x="84.0" y="1844.0"/>
+      <point x="84.0" y="1532.0" type="curve" smooth="yes"/>
+      <point x="84.0" y="1216.0"/>
+      <point x="272.0" y="1004.0"/>
     </contour>
   </outline>
   <lib>
@@ -45,10 +45,12 @@
         <key>verticalShift</key>
         <integer>1024</integer>
         <key>weight</key>
-        <integer>-60</integer>
+        <integer>-50</integer>
         <key>width</key>
         <real>66.6</real>
       </dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>o.sups</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -107,26 +109,6 @@
           <array>
             <real>0.0</real>
             <real>13.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <false/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>26.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>9.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -211,9 +193,29 @@
           <key>type</key>
           <string>TTStem</string>
         </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>26.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>9.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

@@ -1,29 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="w.sups" format="2">
-  <advance width="1512.0"/>
+  <advance width="1492.0"/>
   <unicode hex="02B7"/>
   <outline>
     <contour>
-      <point x="384.0" y="1024.0" type="line"/>
-      <point x="508.0" y="1024.0" type="line"/>
-      <point x="748.0" y="1888.0" type="line"/>
-      <point x="764.0" y="1888.0" type="line"/>
-      <point x="1004.0" y="1024.0" type="line"/>
-      <point x="1124.0" y="1024.0" type="line"/>
-      <point x="1456.0" y="2048.0" type="line"/>
-      <point x="1336.0" y="2048.0" type="line"/>
-      <point x="1076.0" y="1208.0" type="line"/>
-      <point x="1068.0" y="1208.0" type="line"/>
-      <point x="832.0" y="2048.0" type="line"/>
-      <point x="684.0" y="2048.0" type="line"/>
-      <point x="444.0" y="1204.0" type="line"/>
-      <point x="436.0" y="1204.0" type="line"/>
-      <point x="176.0" y="2048.0" type="line"/>
-      <point x="56.0" y="2048.0" type="line"/>
+      <point x="396.0" y="1024.0" type="line"/>
+      <point x="472.0" y="1024.0" type="line"/>
+      <point x="744.0" y="1940.0" type="line"/>
+      <point x="748.0" y="1940.0" type="line"/>
+      <point x="1020.0" y="1024.0" type="line"/>
+      <point x="1096.0" y="1024.0" type="line"/>
+      <point x="1400.0" y="2048.0" type="line"/>
+      <point x="1332.0" y="2048.0" type="line"/>
+      <point x="1060.0" y="1112.0" type="line"/>
+      <point x="1052.0" y="1112.0" type="line"/>
+      <point x="776.0" y="2048.0" type="line"/>
+      <point x="716.0" y="2048.0" type="line"/>
+      <point x="436.0" y="1112.0" type="line"/>
+      <point x="432.0" y="1112.0" type="line"/>
+      <point x="156.0" y="2048.0" type="line"/>
+      <point x="92.0" y="2048.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>RMXScaler</key>
+      <dict>
+        <key>height</key>
+        <real>66.6</real>
+        <key>verticalShift</key>
+        <integer>1024</integer>
+        <key>width</key>
+        <real>66.6</real>
+      </dict>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -31,10 +40,30 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>14.0</real>
+            <real>21.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>1536.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -50,33 +79,28 @@
         </dict>
         <dict>
           <key>horizontal</key>
-          <false/>
+          <true/>
           <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
+          <integer>4</integer>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>14.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>5.0</real>
-          </array>
           <key>type</key>
-          <string>Stem</string>
+          <string>Anchor</string>
         </dict>
         <dict>
           <key>horizontal</key>
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>14.0</real>
+            <real>1536.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -85,7 +109,7 @@
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

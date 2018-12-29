@@ -4,18 +4,18 @@
   <unicode hex="00B9"/>
   <outline>
     <contour>
-      <point x="604.0" y="2252.0" type="line"/>
-      <point x="420.0" y="2252.0" type="line"/>
-      <point x="408.0" y="2204.0"/>
-      <point x="308.0" y="2060.0"/>
-      <point x="112.0" y="2060.0" type="curve"/>
-      <point x="112.0" y="1888.0" type="line"/>
-      <point x="268.0" y="1888.0"/>
-      <point x="372.0" y="1944.0"/>
-      <point x="396.0" y="1980.0" type="curve"/>
-      <point x="408.0" y="1980.0" type="line"/>
-      <point x="408.0" y="1024.0" type="line"/>
-      <point x="604.0" y="1024.0" type="line"/>
+      <point x="612.0" y="2252.0" type="line"/>
+      <point x="408.0" y="2252.0" type="line"/>
+      <point x="400.0" y="2184.0"/>
+      <point x="288.0" y="2052.0"/>
+      <point x="108.0" y="2048.0" type="curve"/>
+      <point x="108.0" y="1876.0" type="line"/>
+      <point x="264.0" y="1876.0"/>
+      <point x="360.0" y="1944.0"/>
+      <point x="388.0" y="1980.0" type="curve"/>
+      <point x="400.0" y="1980.0" type="line"/>
+      <point x="400.0" y="1024.0" type="line"/>
+      <point x="612.0" y="1024.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -27,7 +27,7 @@
         <key>verticalShift</key>
         <integer>1024</integer>
         <key>weight</key>
-        <integer>-60</integer>
+        <integer>-50</integer>
         <key>width</key>
         <real>66.6</real>
       </dict>
@@ -41,14 +41,34 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>3.0</real>
+            <real>9.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>4.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>4.0</real>
+            <real>3.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -81,21 +101,51 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>3.0</real>
+            <real>9.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>4.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>4.0</real>
+            <real>3.0</real>
           </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

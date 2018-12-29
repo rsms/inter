@@ -1,25 +1,34 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="one.dnomf" format="2">
-  <advance width="856.0"/>
+  <advance width="772.0"/>
   <guideline x="708.0" y="1088.0" angle="0.0"/>
   <outline>
     <contour>
-      <point x="408.0" y="0.0" type="line"/>
-      <point x="620.0" y="0.0" type="line"/>
-      <point x="620.0" y="1088.0" type="line"/>
-      <point x="416.0" y="1088.0" type="line"/>
-      <point x="398.0" y="1063.0"/>
-      <point x="292.0" y="916.0"/>
-      <point x="104.0" y="852.0" type="curve"/>
-      <point x="104.0" y="652.0" type="line"/>
-      <point x="210.0" y="668.0"/>
-      <point x="331.0" y="741.0"/>
-      <point x="392.0" y="796.0" type="curve"/>
-      <point x="408.0" y="796.0" type="line"/>
+      <point x="564.0" y="1088.0" type="line"/>
+      <point x="360.0" y="1088.0" type="line"/>
+      <point x="356.0" y="1012.0"/>
+      <point x="248.0" y="904.0"/>
+      <point x="96.0" y="904.0" type="curve"/>
+      <point x="96.0" y="736.0" type="line"/>
+      <point x="232.0" y="736.0"/>
+      <point x="320.0" y="800.0"/>
+      <point x="344.0" y="832.0" type="curve"/>
+      <point x="356.0" y="832.0" type="line"/>
+      <point x="356.0" y="0.0" type="line"/>
+      <point x="564.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>RMXScaler</key>
+      <dict>
+        <key>height</key>
+        <real>53.15</real>
+        <key>weight</key>
+        <integer>-60</integer>
+        <key>width</key>
+        <integer>60</integer>
+      </dict>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -30,7 +39,7 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>11.0</real>
+            <real>9.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -44,20 +53,40 @@
         </dict>
         <dict>
           <key>horizontal</key>
-          <false/>
+          <true/>
           <key>options</key>
           <integer>0</integer>
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>11.0</real>
+            <real>4.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
+            <real>3.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <false/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
             <real>0.0</real>
+            <real>9.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>10.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -70,7 +99,42 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>11.0</real>
+            <real>9.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>4.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>3.0</real>
+          </array>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

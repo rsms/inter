@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="v.sups" format="2">
-  <advance width="1196.0"/>
+  <advance width="1144.0"/>
   <unicode hex="1D5B"/>
   <outline>
     <contour>
-      <point x="1160.0" y="2048.0" type="line"/>
-      <point x="788.0" y="2048.0" type="line"/>
-      <point x="608.0" y="1484.0" type="line"/>
-      <point x="596.0" y="1484.0" type="line"/>
-      <point x="412.0" y="2048.0" type="line"/>
-      <point x="36.0" y="2048.0" type="line"/>
-      <point x="424.0" y="1024.0" type="line"/>
-      <point x="768.0" y="1024.0" type="line"/>
+      <point x="1132.0" y="2048.0" type="line"/>
+      <point x="744.0" y="2048.0" type="line"/>
+      <point x="576.0" y="1404.0" type="line"/>
+      <point x="564.0" y="1404.0" type="line"/>
+      <point x="396.0" y="2048.0" type="line"/>
+      <point x="12.0" y="2048.0" type="line"/>
+      <point x="372.0" y="1024.0" type="line"/>
+      <point x="772.0" y="1024.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -37,6 +37,26 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
+            <real>5.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
             <real>4.0</real>
           </array>
           <key>stem</key>
@@ -53,23 +73,18 @@
         </dict>
         <dict>
           <key>horizontal</key>
-          <false/>
+          <true/>
           <key>options</key>
-          <integer>0</integer>
+          <integer>4</integer>
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>4.0</real>
+            <real>5.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>7.0</real>
-          </array>
           <key>type</key>
-          <string>Stem</string>
+          <string>Anchor</string>
         </dict>
         <dict>
           <key>horizontal</key>
@@ -88,7 +103,7 @@
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

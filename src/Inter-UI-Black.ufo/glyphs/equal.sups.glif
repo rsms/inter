@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="equal.sups" format="2">
-  <advance width="1068.0"/>
+  <advance width="1276.0"/>
   <unicode hex="207C"/>
   <outline>
     <contour>
-      <point x="132.0" y="1500.0" type="line"/>
-      <point x="132.0" y="1232.0" type="line"/>
-      <point x="936.0" y="1232.0" type="line"/>
-      <point x="936.0" y="1500.0" type="line"/>
+      <point x="144.0" y="1620.0" type="line"/>
+      <point x="1132.0" y="1620.0" type="line"/>
+      <point x="1132.0" y="1920.0" type="line"/>
+      <point x="144.0" y="1920.0" type="line"/>
     </contour>
     <contour>
-      <point x="132.0" y="1944.0" type="line"/>
-      <point x="132.0" y="1676.0" type="line"/>
-      <point x="936.0" y="1676.0" type="line"/>
-      <point x="936.0" y="1944.0" type="line"/>
+      <point x="144.0" y="1168.0" type="line"/>
+      <point x="1132.0" y="1168.0" type="line"/>
+      <point x="1132.0" y="1468.0" type="line"/>
+      <point x="144.0" y="1468.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -39,34 +39,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>3.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
             <real>0.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>3.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -79,14 +59,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>2.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -99,41 +79,21 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>3.0</real>
-          </array>
-          <key>type</key>
-          <string>TTStem</string>
-        </dict>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>4</integer>
-          <key>origin</key>
-          <array>
-            <real>1.0</real>
             <real>0.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>3.0</real>
           </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

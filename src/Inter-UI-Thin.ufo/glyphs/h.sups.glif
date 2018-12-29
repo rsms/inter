@@ -1,34 +1,47 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="h.sups" format="2">
-  <advance width="1056.0"/>
+  <advance width="1076.0"/>
   <unicode hex="02B0"/>
   <outline>
     <contour>
-      <point x="264.0" y="1652.0" type="line" smooth="yes"/>
-      <point x="262.0" y="1866.0"/>
-      <point x="424.0" y="1946.0"/>
-      <point x="556.0" y="1948.0" type="curve" smooth="yes"/>
-      <point x="700.0" y="1946.0"/>
-      <point x="794.0" y="1854.0"/>
-      <point x="796.0" y="1692.0" type="curve" smooth="yes"/>
-      <point x="796.0" y="1024.0" type="line"/>
+      <point x="236.0" y="1700.0" type="line" smooth="yes"/>
+      <point x="236.0" y="1876.0"/>
+      <point x="364.0" y="2000.0"/>
+      <point x="544.0" y="2000.0" type="curve" smooth="yes"/>
+      <point x="716.0" y="2000.0"/>
+      <point x="836.0" y="1880.0"/>
+      <point x="836.0" y="1704.0" type="curve" smooth="yes"/>
+      <point x="836.0" y="1024.0" type="line"/>
       <point x="900.0" y="1024.0" type="line"/>
-      <point x="900.0" y="1676.0" type="line" smooth="yes"/>
-      <point x="900.0" y="1932.0"/>
-      <point x="762.0" y="2060.0"/>
-      <point x="576.0" y="2060.0" type="curve" smooth="yes"/>
-      <point x="418.0" y="2060.0"/>
-      <point x="325.0" y="1978.0"/>
-      <point x="276.0" y="1916.0" type="curve"/>
-      <point x="264.0" y="1916.0" type="line"/>
-      <point x="264.0" y="2388.0" type="line"/>
-      <point x="156.0" y="2388.0" type="line"/>
-      <point x="156.0" y="1024.0" type="line"/>
-      <point x="264.0" y="1024.0" type="line"/>
+      <point x="900.0" y="1704.0" type="line" smooth="yes"/>
+      <point x="900.0" y="1920.0"/>
+      <point x="752.0" y="2060.0"/>
+      <point x="548.0" y="2060.0" type="curve" smooth="yes"/>
+      <point x="408.0" y="2060.0"/>
+      <point x="292.0" y="1992.0"/>
+      <point x="244.0" y="1884.0" type="curve"/>
+      <point x="236.0" y="1884.0" type="line"/>
+      <point x="236.0" y="2388.0" type="line"/>
+      <point x="176.0" y="2388.0" type="line"/>
+      <point x="176.0" y="1024.0" type="line"/>
+      <point x="236.0" y="1024.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>RMXScaler</key>
+      <dict>
+        <key>height</key>
+        <real>66.6</real>
+        <key>verticalShift</key>
+        <integer>1024</integer>
+        <key>width</key>
+        <real>66.6</real>
+      </dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>l.sups</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>m.sups</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -36,10 +49,52 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>11.0</real>
+            <real>21.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>1556.0</real>
+            <real>-20.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
+          </array>
+          <key>type</key>
+          <string>TopGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>2048.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -58,18 +113,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>18.0</real>
+            <real>264.0</real>
+            <real>1040.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>7.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -78,10 +128,40 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>11.0</real>
+            <real>-2147483648.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>1556.0</real>
+            <real>-2147483648.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>2048.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -90,7 +170,7 @@
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

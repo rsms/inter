@@ -1,36 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="y.sups" format="2">
-  <advance width="1196.0"/>
+  <advance width="1144.0"/>
   <unicode hex="02B8"/>
   <outline>
     <contour>
-      <point x="416.0" y="1044.0" type="line" smooth="yes"/>
-      <point x="375.0" y="952.0"/>
-      <point x="371.0" y="884.0"/>
-      <point x="224.0" y="932.0" type="curve"/>
-      <point x="144.0" y="656.0" type="line"/>
-      <point x="203.0" y="636.0"/>
-      <point x="251.0" y="624.0"/>
-      <point x="320.0" y="624.0" type="curve" smooth="yes"/>
-      <point x="567.0" y="624.0"/>
-      <point x="679.0" y="800.0"/>
-      <point x="712.0" y="884.0" type="curve" smooth="yes"/>
-      <point x="1160.0" y="2048.0" type="line"/>
-      <point x="788.0" y="2048.0" type="line"/>
-      <point x="592.0" y="1492.0" type="line"/>
-      <point x="440.0" y="1100.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="412.0" y="2048.0" type="line"/>
-      <point x="36.0" y="2048.0" type="line"/>
-      <point x="424.0" y="1040.0" type="line"/>
-      <point x="704.0" y="1188.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="588.0" y="1504.0" type="line"/>
-      <point x="616.0" y="1504.0" type="line"/>
-      <point x="616.0" y="1524.0" type="line"/>
-      <point x="588.0" y="1524.0" type="line"/>
+      <point x="296.0" y="628.0" type="curve" smooth="yes"/>
+      <point x="536.0" y="628.0"/>
+      <point x="676.0" y="756.0"/>
+      <point x="740.0" y="936.0" type="curve" smooth="yes"/>
+      <point x="1132.0" y="2048.0" type="line"/>
+      <point x="744.0" y="2048.0" type="line"/>
+      <point x="576.0" y="1380.0" type="line"/>
+      <point x="564.0" y="1380.0" type="line"/>
+      <point x="396.0" y="2048.0" type="line"/>
+      <point x="12.0" y="2048.0" type="line"/>
+      <point x="360.0" y="996.0" type="line"/>
+      <point x="360.0" y="988.0" type="line" smooth="yes"/>
+      <point x="360.0" y="912.0"/>
+      <point x="284.0" y="924.0"/>
+      <point x="192.0" y="944.0" type="curve"/>
+      <point x="112.0" y="660.0" type="line"/>
+      <point x="140.0" y="648.0"/>
+      <point x="208.0" y="628.0"/>
     </contour>
   </outline>
   <lib>
@@ -46,6 +37,10 @@
         <key>width</key>
         <real>66.6</real>
       </dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>v.sups</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>v.sups</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -55,8 +50,8 @@
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>14.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -72,23 +67,25 @@
         </dict>
         <dict>
           <key>horizontal</key>
-          <false/>
+          <true/>
           <key>options</key>
           <integer>0</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>8.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>0.0</real>
-            <real>10.0</real>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
           </array>
           <key>type</key>
-          <string>Stem</string>
+          <string>TopGhost</string>
         </dict>
         <dict>
           <key>horizontal</key>
@@ -97,8 +94,23 @@
           <integer>4</integer>
           <key>origin</key>
           <array>
-            <real>1.0</real>
             <real>0.0</real>
+            <real>14.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>8.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -107,7 +119,7 @@
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

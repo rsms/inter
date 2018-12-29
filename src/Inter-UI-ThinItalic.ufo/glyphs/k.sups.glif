@@ -1,32 +1,43 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="k.sups" format="2">
-  <advance width="982.0"/>
+  <advance width="932.0"/>
   <unicode hex="1D4F"/>
   <outline>
     <contour>
-      <point x="360.0" y="1428.0" type="line"/>
-      <point x="568.0" y="1576.0" type="line"/>
-      <point x="556.0" y="1576.0" type="line"/>
-      <point x="1124.0" y="2048.0" type="line"/>
-      <point x="988.0" y="2048.0" type="line"/>
-      <point x="412.0" y="1564.0" type="line"/>
-      <point x="384.0" y="1564.0" type="line"/>
+      <point x="336.0" y="1432.0" type="line"/>
+      <point x="516.0" y="1580.0" type="line"/>
+      <point x="520.0" y="1584.0" type="line"/>
+      <point x="1068.0" y="2048.0" type="line"/>
+      <point x="980.0" y="2048.0" type="line"/>
+      <point x="368.0" y="1528.0" type="line"/>
+      <point x="352.0" y="1528.0" type="line"/>
     </contour>
     <contour>
-      <point x="196.0" y="1024.0" type="line"/>
-      <point x="300.0" y="1024.0" type="line"/>
-      <point x="528.0" y="2388.0" type="line"/>
-      <point x="424.0" y="2388.0" type="line"/>
+      <point x="216.0" y="1024.0" type="line"/>
+      <point x="276.0" y="1024.0" type="line"/>
+      <point x="504.0" y="2388.0" type="line"/>
+      <point x="444.0" y="2388.0" type="line"/>
     </contour>
     <contour>
-      <point x="844.0" y="1024.0" type="line"/>
-      <point x="996.0" y="1024.0" type="line"/>
-      <point x="592.0" y="1628.0" type="line"/>
-      <point x="500.0" y="1556.0" type="line"/>
+      <point x="840.0" y="1024.0" type="line"/>
+      <point x="916.0" y="1024.0" type="line"/>
+      <point x="536.0" y="1620.0" type="line"/>
+      <point x="488.0" y="1580.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>RMXScaler</key>
+      <dict>
+        <key>height</key>
+        <real>66.6</real>
+        <key>verticalShift</key>
+        <integer>1024</integer>
+        <key>width</key>
+        <real>66.6</real>
+      </dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>h.sups</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -34,10 +45,52 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>-4.0</real>
+            <real>21.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>1536.0</real>
+            <real>-20.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
+          </array>
+          <key>type</key>
+          <string>TopGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>2048.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -56,18 +109,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>3.0</real>
+            <real>136.0</real>
+            <real>44.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -76,10 +124,40 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>-4.0</real>
+            <real>-2147483648.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>1536.0</real>
+            <real>-2147483648.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>2048.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -88,7 +166,7 @@
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

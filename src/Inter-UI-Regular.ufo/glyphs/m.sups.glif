@@ -1,45 +1,45 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="m.sups" format="2">
-  <advance width="1636.0"/>
+  <advance width="1668.0"/>
   <unicode hex="1D50"/>
   <outline>
     <contour>
       <point x="132.0" y="1024.0" type="line"/>
-      <point x="336.0" y="1024.0" type="line"/>
-      <point x="336.0" y="1632.0" type="line" smooth="yes"/>
-      <point x="336.0" y="1780.0"/>
-      <point x="436.0" y="1876.0"/>
-      <point x="544.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="652.0" y="1876.0"/>
-      <point x="720.0" y="1816.0"/>
-      <point x="720.0" y="1676.0" type="curve" smooth="yes"/>
-      <point x="720.0" y="1024.0" type="line"/>
-      <point x="920.0" y="1024.0" type="line"/>
-      <point x="920.0" y="1656.0" type="line" smooth="yes"/>
-      <point x="920.0" y="1788.0"/>
-      <point x="996.0" y="1876.0"/>
-      <point x="1116.0" y="1876.0" type="curve" smooth="yes"/>
-      <point x="1200.0" y="1876.0"/>
-      <point x="1300.0" y="1824.0"/>
-      <point x="1300.0" y="1680.0" type="curve" smooth="yes"/>
-      <point x="1300.0" y="1024.0" type="line"/>
-      <point x="1504.0" y="1024.0" type="line"/>
-      <point x="1504.0" y="1696.0" type="line" smooth="yes"/>
-      <point x="1504.0" y="1936.0"/>
-      <point x="1368.0" y="2060.0"/>
-      <point x="1192.0" y="2060.0" type="curve" smooth="yes"/>
-      <point x="1040.0" y="2060.0"/>
-      <point x="924.0" y="1964.0"/>
-      <point x="892.0" y="1872.0" type="curve"/>
-      <point x="880.0" y="1872.0" type="line"/>
-      <point x="840.0" y="1980.0"/>
-      <point x="744.0" y="2060.0"/>
-      <point x="616.0" y="2060.0" type="curve" smooth="yes"/>
-      <point x="484.0" y="2060.0"/>
-      <point x="376.0" y="1968.0"/>
-      <point x="344.0" y="1868.0" type="curve"/>
-      <point x="332.0" y="1868.0" type="line"/>
-      <point x="332.0" y="2048.0" type="line"/>
+      <point x="344.0" y="1024.0" type="line"/>
+      <point x="344.0" y="1660.0" type="line" smooth="yes"/>
+      <point x="344.0" y="1792.0"/>
+      <point x="428.0" y="1880.0"/>
+      <point x="544.0" y="1880.0" type="curve" smooth="yes"/>
+      <point x="660.0" y="1880.0"/>
+      <point x="732.0" y="1800.0"/>
+      <point x="732.0" y="1680.0" type="curve" smooth="yes"/>
+      <point x="732.0" y="1024.0" type="line"/>
+      <point x="936.0" y="1024.0" type="line"/>
+      <point x="936.0" y="1668.0" type="line" smooth="yes"/>
+      <point x="936.0" y="1788.0"/>
+      <point x="1008.0" y="1880.0"/>
+      <point x="1136.0" y="1880.0" type="curve" smooth="yes"/>
+      <point x="1248.0" y="1880.0"/>
+      <point x="1324.0" y="1808.0"/>
+      <point x="1324.0" y="1676.0" type="curve" smooth="yes"/>
+      <point x="1324.0" y="1024.0" type="line"/>
+      <point x="1536.0" y="1024.0" type="line"/>
+      <point x="1536.0" y="1712.0" type="line" smooth="yes"/>
+      <point x="1536.0" y="1932.0"/>
+      <point x="1412.0" y="2060.0"/>
+      <point x="1220.0" y="2060.0" type="curve" smooth="yes"/>
+      <point x="1072.0" y="2060.0"/>
+      <point x="956.0" y="1984.0"/>
+      <point x="916.0" y="1864.0" type="curve"/>
+      <point x="904.0" y="1864.0" type="line"/>
+      <point x="872.0" y="1984.0"/>
+      <point x="768.0" y="2060.0"/>
+      <point x="628.0" y="2060.0" type="curve" smooth="yes"/>
+      <point x="488.0" y="2060.0"/>
+      <point x="388.0" y="1988.0"/>
+      <point x="344.0" y="1876.0" type="curve"/>
+      <point x="336.0" y="1876.0" type="line"/>
+      <point x="336.0" y="2048.0" type="line"/>
       <point x="132.0" y="2048.0" type="line"/>
     </contour>
   </outline>
@@ -52,12 +52,32 @@
         <key>verticalShift</key>
         <integer>1024</integer>
         <key>weight</key>
-        <integer>-60</integer>
+        <integer>-50</integer>
         <key>width</key>
         <real>66.6</real>
       </dict>
       <key>com.schriftgestaltung.hints</key>
       <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>36.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
         <dict>
           <key>horizontal</key>
           <true/>
@@ -168,6 +188,21 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
+            <real>36.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
             <real>29.0</real>
           </array>
           <key>stem</key>
@@ -197,7 +232,7 @@
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

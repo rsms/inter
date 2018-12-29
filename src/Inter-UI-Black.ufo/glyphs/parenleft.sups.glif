@@ -1,23 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="parenleft.sups" format="2">
-  <advance width="800.0"/>
+  <advance width="828.0"/>
   <unicode hex="207D"/>
   <outline>
     <contour>
-      <point x="744.0" y="768.0" type="line"/>
-      <point x="580.0" y="1040.0"/>
-      <point x="512.0" y="1296.0"/>
-      <point x="512.0" y="1580.0" type="curve" smooth="yes"/>
-      <point x="512.0" y="1868.0"/>
-      <point x="580.0" y="2116.0"/>
-      <point x="748.0" y="2388.0" type="curve"/>
-      <point x="464.0" y="2388.0" type="line"/>
-      <point x="300.0" y="2192.0"/>
-      <point x="180.0" y="1892.0"/>
-      <point x="180.0" y="1580.0" type="curve" smooth="yes"/>
-      <point x="180.0" y="1264.0"/>
-      <point x="300.0" y="964.0"/>
-      <point x="464.0" y="768.0" type="curve"/>
+      <point x="164.0" y="1564.0" type="curve" smooth="yes"/>
+      <point x="164.0" y="1216.0"/>
+      <point x="260.0" y="944.0"/>
+      <point x="460.0" y="724.0" type="curve"/>
+      <point x="804.0" y="724.0" type="line"/>
+      <point x="664.0" y="856.0"/>
+      <point x="544.0" y="1236.0"/>
+      <point x="544.0" y="1564.0" type="curve" smooth="yes"/>
+      <point x="544.0" y="1888.0"/>
+      <point x="664.0" y="2276.0"/>
+      <point x="804.0" y="2404.0" type="curve"/>
+      <point x="460.0" y="2404.0" type="line"/>
+      <point x="260.0" y="2184.0"/>
+      <point x="164.0" y="1912.0"/>
     </contour>
   </outline>
   <lib>
@@ -37,27 +37,64 @@
       <array>
         <dict>
           <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>10.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
+          </array>
+          <key>type</key>
+          <string>TopGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
           <false/>
           <key>options</key>
           <integer>0</integer>
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>9.0</real>
+            <real>13.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>2.0</real>
+            <real>9.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>10.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

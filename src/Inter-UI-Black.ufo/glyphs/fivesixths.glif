@@ -1,14 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="fivesixths" format="2">
-  <advance width="2916.0"/>
+  <advance width="2920.0"/>
   <unicode hex="215A"/>
   <outline>
-    <component base="fraction" xOffset="996.0"/>
-    <component base="five.numr" xOffset="-40.0" yOffset="-64.0"/>
-    <component base="six.dnomf" xOffset="1720.0"/>
+    <component base="fraction" xOffset="1036.0"/>
+    <component base="five.numr" yOffset="-64.0"/>
+    <component base="six.dnomf" xOffset="1760.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>five.numr</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>six.dnomf</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
         <integer>-1</integer>

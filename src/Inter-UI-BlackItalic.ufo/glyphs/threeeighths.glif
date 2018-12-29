@@ -1,14 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="threeeighths" format="2">
-  <advance width="2936.0"/>
+  <advance width="2880.0"/>
   <unicode hex="215C"/>
   <outline>
-    <component base="fraction" xOffset="1048.0"/>
-    <component base="three.numr" xOffset="16.0" yOffset="-64.0"/>
-    <component base="eight.dnomf" xOffset="1776.0"/>
+    <component base="fraction" xOffset="1020.0"/>
+    <component base="three.numr" xOffset="-12.0" yOffset="-64.0"/>
+    <component base="eight.dnomf" xOffset="1748.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>three.numr</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>eight.dnomf</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
         <integer>-1</integer>

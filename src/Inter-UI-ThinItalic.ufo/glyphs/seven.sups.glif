@@ -1,21 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="seven.sups" format="2">
-  <advance width="1052.0"/>
+  <advance width="1032.0"/>
   <unicode hex="2077"/>
   <outline>
     <contour>
-      <point x="236.0" y="1024.0" type="line"/>
-      <point x="360.0" y="1024.0" type="line"/>
-      <point x="1168.0" y="2140.0" type="line"/>
-      <point x="1188.0" y="2252.0" type="line"/>
-      <point x="348.0" y="2252.0" type="line"/>
-      <point x="332.0" y="2148.0" type="line"/>
-      <point x="1052.0" y="2148.0" type="line"/>
-      <point x="1048.0" y="2140.0" type="line"/>
+      <point x="244.0" y="1024.0" type="line"/>
+      <point x="312.0" y="1024.0" type="line"/>
+      <point x="1148.0" y="2192.0" type="line"/>
+      <point x="1156.0" y="2252.0" type="line"/>
+      <point x="352.0" y="2252.0" type="line"/>
+      <point x="344.0" y="2192.0" type="line"/>
+      <point x="1076.0" y="2192.0" type="line"/>
+      <point x="1076.0" y="2188.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>RMXScaler</key>
+      <dict>
+        <key>height</key>
+        <integer>60</integer>
+        <key>verticalShift</key>
+        <integer>1024</integer>
+        <key>width</key>
+        <real>66.6</real>
+      </dict>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -23,18 +32,33 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>4.0</real>
+            <real>-4.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <string>u</string>
+            <string>p</string>
           </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>2048.0</real>
+            <real>84.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -43,18 +67,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>6.0</real>
+            <real>1484.0</real>
+            <real>60.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>1.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -63,24 +82,34 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>4.0</real>
+            <real>-4.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>2048.0</real>
+            <real>84.0</real>
           </array>
+          <key>stem</key>
+          <integer>-2</integer>
           <key>type</key>
           <string>TTStem</string>
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

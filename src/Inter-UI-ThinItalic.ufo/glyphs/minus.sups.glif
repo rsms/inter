@@ -1,17 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="minus.sups" format="2">
-  <advance width="1228.0"/>
+  <advance width="1196.0"/>
   <unicode hex="207B"/>
   <outline>
     <contour>
-      <point x="1196.0" y="1652.0" type="line"/>
-      <point x="324.0" y="1652.0" type="line"/>
-      <point x="304.0" y="1532.0" type="line"/>
-      <point x="1176.0" y="1532.0" type="line"/>
+      <point x="1124.0" y="1560.0" type="line"/>
+      <point x="340.0" y="1560.0" type="line"/>
+      <point x="328.0" y="1496.0" type="line"/>
+      <point x="1112.0" y="1496.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>RMXScaler</key>
+      <dict>
+        <key>height</key>
+        <integer>63</integer>
+        <key>verticalShift</key>
+        <integer>1024</integer>
+        <key>width</key>
+        <real>66.6</real>
+      </dict>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -19,18 +28,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>736.0</real>
+            <real>92.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -39,24 +43,19 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>736.0</real>
+            <real>92.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

@@ -1,20 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="one.sups" format="2">
-  <advance width="972.0"/>
+  <advance width="924.0"/>
   <unicode hex="00B9"/>
   <outline>
     <contour>
       <point x="736.0" y="2252.0" type="line"/>
-      <point x="404.0" y="2252.0" type="line"/>
-      <point x="403.0" y="2116.0"/>
-      <point x="271.0" y="2032.0"/>
-      <point x="120.0" y="2032.0" type="curve"/>
-      <point x="120.0" y="1740.0" type="line"/>
-      <point x="259.0" y="1740.0"/>
-      <point x="355.0" y="1784.0"/>
-      <point x="392.0" y="1832.0" type="curve"/>
-      <point x="404.0" y="1832.0" type="line"/>
-      <point x="404.0" y="1024.0" type="line"/>
+      <point x="384.0" y="2252.0" type="line"/>
+      <point x="380.0" y="2152.0"/>
+      <point x="264.0" y="2044.0"/>
+      <point x="84.0" y="2048.0" type="curve"/>
+      <point x="84.0" y="1756.0" type="line"/>
+      <point x="240.0" y="1752.0"/>
+      <point x="332.0" y="1772.0"/>
+      <point x="364.0" y="1816.0" type="curve"/>
+      <point x="376.0" y="1816.0" type="line"/>
+      <point x="376.0" y="1024.0" type="line"/>
       <point x="736.0" y="1024.0" type="line"/>
     </contour>
   </outline>
@@ -33,26 +33,6 @@
       </dict>
       <key>com.schriftgestaltung.hints</key>
       <array>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>9.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
-          <key>type</key>
-          <string>Stem</string>
-        </dict>
         <dict>
           <key>horizontal</key>
           <false/>
@@ -85,17 +65,27 @@
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
           <array>
             <real>0.0</real>
             <real>0.0</real>
           </array>
+          <key>stem</key>
+          <integer>-2</integer>
           <key>type</key>
-          <string>TTStem</string>
+          <string>Anchor</string>
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

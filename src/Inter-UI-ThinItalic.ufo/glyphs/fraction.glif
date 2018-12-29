@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="fraction" format="2">
-  <advance width="792.0"/>
+  <advance width="768.0"/>
   <unicode hex="2044"/>
   <note>
 Anchor numr should be at the basline rightmost position in .numr and dnom should be at top leftmost in .dnomf
 </note>
   <outline>
     <contour>
-      <point x="-464.0" y="0.0" type="line"/>
-      <point x="-264.0" y="0.0" type="line"/>
-      <point x="1340.0" y="2048.0" type="line"/>
-      <point x="1140.0" y="2048.0" type="line"/>
+      <point x="-396.0" y="0.0" type="line"/>
+      <point x="-316.0" y="0.0" type="line"/>
+      <point x="1248.0" y="2048.0" type="line"/>
+      <point x="1168.0" y="2048.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -22,10 +22,10 @@ Anchor numr should be at the basline rightmost position in .numr and dnom should
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>3.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -42,10 +42,10 @@ Anchor numr should be at the basline rightmost position in .numr and dnom should
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>2048.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -64,10 +64,10 @@ Anchor numr should be at the basline rightmost position in .numr and dnom should
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>3.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -79,10 +79,10 @@ Anchor numr should be at the basline rightmost position in .numr and dnom should
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>2048.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

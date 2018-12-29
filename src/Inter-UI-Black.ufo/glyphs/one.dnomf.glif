@@ -1,50 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="one.dnomf" format="2">
-  <advance width="820.0"/>
+  <advance width="832.0"/>
   <guideline x="64.0" y="544.0" angle="0.0"/>
   <guideline x="100.0" y="1104.0" angle="0.0"/>
   <guideline x="100.0" y="1088.0" angle="0.0"/>
   <guideline x="88.0" y="-16.0" angle="0.0"/>
   <outline>
     <contour>
-      <point x="320.0" y="0.0" type="line"/>
-      <point x="652.0" y="0.0" type="line"/>
-      <point x="652.0" y="1088.0" type="line"/>
-      <point x="440.0" y="1088.0" type="line"/>
-      <point x="394.0" y="1024.0"/>
-      <point x="242.0" y="916.0"/>
-      <point x="72.0" y="916.0" type="curve"/>
-      <point x="72.0" y="644.0" type="line"/>
-      <point x="162.0" y="644.0"/>
-      <point x="268.0" y="682.0"/>
-      <point x="304.0" y="704.0" type="curve"/>
-      <point x="320.0" y="704.0" type="line"/>
+      <point x="660.0" y="1088.0" type="line"/>
+      <point x="352.0" y="1088.0" type="line"/>
+      <point x="348.0" y="1012.0"/>
+      <point x="252.0" y="908.0"/>
+      <point x="76.0" y="912.0" type="curve"/>
+      <point x="76.0" y="656.0" type="line"/>
+      <point x="212.0" y="652.0"/>
+      <point x="300.0" y="656.0"/>
+      <point x="328.0" y="696.0" type="curve"/>
+      <point x="340.0" y="696.0" type="line"/>
+      <point x="340.0" y="0.0" type="line"/>
+      <point x="660.0" y="0.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>RMXScaler</key>
+      <dict>
+        <key>height</key>
+        <real>53.15</real>
+        <key>weight</key>
+        <integer>-370</integer>
+        <key>width</key>
+        <integer>60</integer>
+      </dict>
       <key>com.schriftgestaltung.hints</key>
       <array>
-        <dict>
-          <key>horizontal</key>
-          <true/>
-          <key>options</key>
-          <integer>0</integer>
-          <key>origin</key>
-          <array>
-            <real>0.0</real>
-            <real>11.0</real>
-          </array>
-          <key>stem</key>
-          <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <string>u</string>
-            <string>p</string>
-          </array>
-          <key>type</key>
-          <string>BottomGhost</string>
-        </dict>
         <dict>
           <key>horizontal</key>
           <false/>
@@ -53,14 +42,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>11.0</real>
+            <real>9.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>10.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -73,7 +62,22 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>11.0</real>
+            <real>9.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>0.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

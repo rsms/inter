@@ -1,15 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="onehalf" format="2">
-  <advance width="2624.0"/>
+  <advance width="2560.0"/>
   <unicode hex="00BD"/>
-  <guideline x="668.0" y="2860.0" angle="0.0"/>
+  <note>
+numers should be auto-aligned, but not the slash
+</note>
+  <guideline x="684.0" y="2860.0" angle="0.0"/>
   <outline>
-    <component base="fraction" xOffset="756.0"/>
-    <component base="one.numr" xOffset="-16.0" yOffset="-64.0"/>
-    <component base="two.dnomf" xOffset="1484.0"/>
+    <component base="fraction" xOffset="772.0"/>
+    <component base="one.numr" yOffset="-64.0"/>
+    <component base="two.dnomf" xOffset="1500.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>one.numr</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>two.dnomf</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
         <integer>-1</integer>

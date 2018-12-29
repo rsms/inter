@@ -1,21 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="x.sups" format="2">
-  <advance width="1112.0"/>
+  <advance width="1124.0"/>
   <unicode hex="02E3"/>
   <outline>
     <contour>
-      <point x="436.0" y="2048.0" type="line"/>
-      <point x="68.0" y="2048.0" type="line"/>
-      <point x="328.0" y="1536.0" type="line"/>
-      <point x="48.0" y="1024.0" type="line"/>
-      <point x="416.0" y="1024.0" type="line"/>
-      <point x="556.0" y="1272.0" type="line"/>
-      <point x="704.0" y="1024.0" type="line"/>
-      <point x="1064.0" y="1024.0" type="line"/>
-      <point x="788.0" y="1536.0" type="line"/>
-      <point x="1052.0" y="2048.0" type="line"/>
-      <point x="688.0" y="2048.0" type="line"/>
-      <point x="556.0" y="1804.0" type="line"/>
+      <point x="404.0" y="2048.0" type="line"/>
+      <point x="28.0" y="2048.0" type="line"/>
+      <point x="320.0" y="1524.0" type="line"/>
+      <point x="28.0" y="1024.0" type="line"/>
+      <point x="404.0" y="1024.0" type="line"/>
+      <point x="564.0" y="1324.0" type="line"/>
+      <point x="724.0" y="1024.0" type="line"/>
+      <point x="1096.0" y="1024.0" type="line"/>
+      <point x="804.0" y="1524.0" type="line"/>
+      <point x="1100.0" y="2048.0" type="line"/>
+      <point x="724.0" y="2048.0" type="line"/>
+      <point x="564.0" y="1716.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -33,6 +33,26 @@
       </dict>
       <key>com.schriftgestaltung.hints</key>
       <array>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <string>u</string>
+            <string>p</string>
+          </array>
+          <key>type</key>
+          <string>BottomGhost</string>
+        </dict>
         <dict>
           <key>horizontal</key>
           <true/>
@@ -83,6 +103,21 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
+            <real>2.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
+            <real>0.0</real>
             <real>0.0</real>
           </array>
           <key>stem</key>
@@ -92,7 +127,7 @@
         </dict>
       </array>
       <key>public.markColor</key>
-      <string>0,0.67,0.91,1</string>
+      <string>0.99,0.62,0.11,1</string>
     </dict>
   </lib>
 </glyph>

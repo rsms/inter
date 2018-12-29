@@ -1,22 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="plus.numr" format="2">
-  <advance width="1163.0"/>
+  <advance width="1076.0"/>
   <outline>
     <contour>
-      <point x="1136.0" y="1448.0" type="line"/>
-      <point x="244.0" y="1448.0" type="line"/>
-      <point x="228.0" y="1324.0" type="line"/>
-      <point x="1120.0" y="1324.0" type="line"/>
+      <point x="584.0" y="1236.0" type="line"/>
+      <point x="644.0" y="1236.0" type="line"/>
+      <point x="748.0" y="1872.0" type="line"/>
+      <point x="688.0" y="1872.0" type="line"/>
     </contour>
     <contour>
-      <point x="824.0" y="1876.0" type="line"/>
-      <point x="708.0" y="1876.0" type="line"/>
-      <point x="544.0" y="900.0" type="line"/>
-      <point x="660.0" y="900.0" type="line"/>
+      <point x="308.0" y="1524.0" type="line"/>
+      <point x="1020.0" y="1524.0" type="line"/>
+      <point x="1028.0" y="1584.0" type="line"/>
+      <point x="316.0" y="1584.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>RMXScaler</key>
+      <dict>
+        <key>height</key>
+        <real>53.15</real>
+        <key>verticalShift</key>
+        <integer>1128</integer>
+        <key>width</key>
+        <integer>60</integer>
+      </dict>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -24,38 +33,50 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>768.0</real>
+            <real>112.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>1392.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <string>d</string>
+            <string>o</string>
+            <string>w</string>
+            <string>n</string>
           </array>
           <key>type</key>
-          <string>Stem</string>
+          <string>TopGhost</string>
         </dict>
         <dict>
           <key>horizontal</key>
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>748.0</real>
+            <real>112.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -64,20 +85,30 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>768.0</real>
+            <real>88.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>1392.0</real>
+            <real>-2147483648.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Anchor</string>
         </dict>
       </array>
       <key>public.markColor</key>
