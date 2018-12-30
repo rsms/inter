@@ -1,14 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="Gbar" format="2">
-  <advance width="2220.0"/>
+  <advance width="2176.0"/>
   <unicode hex="01E4"/>
   <outline>
     <contour>
-      <point x="2136.0" y="688.0" type="line"/>
-      <point x="1068.0" y="688.0" type="line"/>
-      <point x="1048.0" y="564.0" type="line"/>
-      <point x="2116.0" y="564.0" type="line"/>
+      <point x="2100.0" y="688.0" type="line"/>
+      <point x="1128.0" y="688.0" type="line"/>
+      <point x="1108.0" y="564.0" type="line"/>
+      <point x="2080.0" y="564.0" type="line"/>
     </contour>
-    <component base="G" xOffset="12.0"/>
+    <component base="G"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>G</string>
+    </dict>
+  </lib>
 </glyph>

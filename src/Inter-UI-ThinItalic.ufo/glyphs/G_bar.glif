@@ -1,18 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="Gbar" format="2">
-  <advance width="2015.0"/>
+  <advance width="2016.0"/>
   <unicode hex="01E4"/>
   <outline>
     <contour>
-      <point x="452.0" y="316.0" type="line"/>
-      <point x="2504.0" y="316.0" type="line"/>
-      <point x="2564.0" y="688.0" type="line"/>
-      <point x="516.0" y="688.0" type="line"/>
+      <point x="1940.0" y="640.0" type="line"/>
+      <point x="1060.0" y="640.0" type="line"/>
+      <point x="1048.0" y="576.0" type="line"/>
+      <point x="1928.0" y="576.0" type="line"/>
     </contour>
-    <component base="G" xOffset="-8.0"/>
+    <component base="G"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>G</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
         <integer>-1</integer>
@@ -24,18 +26,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>188.0</real>
+            <real>244.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -44,18 +41,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>188.0</real>
+            <real>372.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

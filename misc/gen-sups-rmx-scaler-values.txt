@@ -1,0 +1,187 @@
+How to generate superscript and subscript glyphs
+
+There are 3 steps
+
+=============================================================================
+Step 1: Add Glyphs
+-----------------------------------------------------------------------------
+
+If these glyphs already exist, you can skip this step.
+
+a=a.sups
+b=b.sups
+c=c.sups
+d=d.sups
+e=e.sups
+f=f.sups
+g=g.sups
+h=h.sups
+i=i.sups
+j=j.sups
+k=k.sups
+l=l.sups
+m=m.sups
+n=n.sups
+o=o.sups
+p=p.sups
+q=q.sups
+r=r.sups
+s=s.sups
+t=t.sups
+u=u.sups
+v=v.sups
+w=w.sups
+x=x.sups
+y=y.sups
+z=z.sups
+zero=zero.sups
+one=one.sups
+two=two.sups
+three=three.sups
+four=four.sups
+five=five.sups
+six=six.sups
+seven=seven.sups
+eight=eight.sups
+nine=nine.sups
+parenleft=parenleft.sups
+parenright=parenright.sups
+plus=plus.sups
+minus=minus.sups
+equal=equal.sups
+
+=============================================================================
+Step 2: Generate & transform with RMX Scaler
+-----------------------------------------------------------------------------
+
+Make sure "Scale Sidebearings" is enabled in RMX Scaler.
+Note that a-z(), 0-9 and +-= are scaled separately.
+
+Start in the "Font" view in Glyphs (the tab with an overview of all glyphs)
+and multiselect each set (e.g. "a-z()") then invoke the RMX Scaler.
+
+-----------------------------------------------------------------------------
+a-z, "(" and ")"
+
+{
+  "width" : [
+    66.6,
+    66.6,
+    66.6,
+    66.6,
+    66.6,
+    66.6
+  ],
+  "weight" : [
+    0,
+    0,
+    -50,
+    -50,
+    -300,
+    -300
+  ],
+  "height" : [
+    66.6,
+    66.6,
+    66.6,
+    66.6,
+    66.6,
+    66.6
+  ],
+  "verticalShift" : [
+    1024,
+    1024,
+    1024,
+    1024,
+    1024,
+    1024
+  ]
+}
+
+-----------------------------------------------------------------------------
+0-9
+
+{
+  "width" : [
+    66.6,
+    66.6,
+    66.6,
+    66.6,
+    66.6,
+    66.6
+  ],
+  "weight" : [
+    0,
+    0,
+    -50,
+    -50,
+    -300,
+    -300
+  ],
+  "height" : [
+    60,
+    60,
+    60,
+    60,
+    60,
+    60
+  ],
+  "verticalShift" : [
+    1024,
+    1024,
+    1024,
+    1024,
+    1024,
+    1024
+  ]
+}
+
+-----------------------------------------------------------------------------
+"+", "-" and "="
+
+{
+  "width" : [
+    66.6,
+    66.6,
+    66.6,
+    66.6,
+    66.6,
+    66.6
+  ],
+  "weight" : [
+    0,
+    0,
+    -50,
+    -50,
+    -300,
+    -300
+  ],
+  "height" : [
+    63,
+    63,
+    63,
+    63,
+    63,
+    63
+  ],
+  "verticalShift" : [
+    1024,
+    1024,
+    1024,
+    1024,
+    1024,
+    1024
+  ]
+}
+
+
+=============================================================================
+Step 3: Adjust X offset for slanted glyphs
+-----------------------------------------------------------------------------
+
+For each slanted master:
+
+1. Select all .subs glyphs
+2. Open Filter > Transformations
+3. Set Translate X = 126 (and all other values to neutral)
+4. Apply

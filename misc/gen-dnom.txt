@@ -1,0 +1,50 @@
+
+Step 1: Select the following glyphs (component masters):
+
+    zero.dnomf – nine.dnomf
+
+Open RMX Scaler and generate from source with the following values:
+
+
+{
+  "width" : [ 60, 60, 60, 60, 60, 60 ],
+  "weight" : [
+    0,    0,
+    -60,  -60,
+    -370, -370
+  ],
+  "height" : [ 53.15, 53.15, 53.15, 53.15, 53.15, 53.15 ]
+}
+
+
+-----------------------------------------------------------------------------
+
+Step 2: Select the following glyphs (component masters):
+
+    plus.numr minus.numr equal.numr parenleft.numr parenright.numr
+
+Open RMX Scaler and generate from source with the following values:
+
+
+{
+  "width" : [ 60, 60, 60, 60, 60, 60 ],
+  "weight" : [
+    0,    0,
+    -60,  -60,
+    -370, -370
+  ],
+  "height" : [ 53.15, 53.15, 53.15, 53.15, 53.15, 53.15 ],
+  "verticalShift" : [ 1128, 1128, 1128, 1128, 1128, 1128 ]
+}
+
+
+-----------------------------------------------------------------------------
+
+Step 3: Adjust X offset for slanted glyphs
+
+For each slanted master:
+
+1. Select all .subs glyphs
+2. Open Filter > Transformations
+3. Set Translate X = 150 (and all other values to neutral)
+4. Apply

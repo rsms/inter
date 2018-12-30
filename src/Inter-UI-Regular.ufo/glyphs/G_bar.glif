@@ -6,15 +6,17 @@
   <guideline x="1072.0" y="148.0" angle="90.0"/>
   <outline>
     <contour>
-      <point x="1136.0" y="456.0" type="line"/>
-      <point x="2016.0" y="456.0" type="line"/>
-      <point x="2016.0" y="640.0" type="line"/>
-      <point x="1136.0" y="640.0" type="line"/>
+      <point x="2056.0" y="624.0" type="line"/>
+      <point x="1136.0" y="624.0" type="line"/>
+      <point x="1136.0" y="424.0" type="line"/>
+      <point x="2056.0" y="424.0" type="line"/>
     </contour>
     <component base="G"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>G</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -22,18 +24,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>456.0</real>
+            <real>184.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -42,18 +39,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>456.0</real>
+            <real>184.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

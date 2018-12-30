@@ -1,51 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="guarani" format="2">
-  <advance width="2090.0"/>
+  <advance width="2080.0"/>
   <unicode hex="20B2"/>
   <outline>
     <contour>
-      <point x="1392.0" y="2304.0" type="line"/>
-      <point x="1240.0" y="2304.0" type="line"/>
-      <point x="816.0" y="-256.0" type="line"/>
-      <point x="968.0" y="-256.0" type="line"/>
+      <point x="1340.0" y="2304.0" type="line"/>
+      <point x="1276.0" y="2304.0" type="line"/>
+      <point x="852.0" y="-256.0" type="line"/>
+      <point x="916.0" y="-256.0" type="line"/>
     </contour>
-    <contour>
-      <point x="1916.0" y="948.0" type="line"/>
-      <point x="1288.0" y="948.0" type="line"/>
-      <point x="1268.0" y="832.0" type="line"/>
-      <point x="1896.0" y="832.0" type="line"/>
-    </contour>
-    <contour>
-      <point x="1964.0" y="1384.0" type="line"/>
-      <point x="1930.0" y="1799.0"/>
-      <point x="1698.0" y="2076.0"/>
-      <point x="1280.0" y="2076.0" type="curve" smooth="yes"/>
-      <point x="777.0" y="2076.0"/>
-      <point x="338.0" y="1653.0"/>
-      <point x="240.0" y="1028.0" type="curve"/>
-      <point x="136.0" y="400.0"/>
-      <point x="424.0" y="-28.0"/>
-      <point x="952.0" y="-28.0" type="curve" smooth="yes"/>
-      <point x="1422.0" y="-28.0"/>
-      <point x="1808.0" y="297.0"/>
-      <point x="1896.0" y="832.0" type="curve"/>
-      <point x="1836.0" y="832.0" type="line"/>
-      <point x="1766.0" y="383.0"/>
-      <point x="1411.0" y="50.0"/>
-      <point x="968.0" y="52.0" type="curve" smooth="yes"/>
-      <point x="493.0" y="50.0"/>
-      <point x="187.0" y="434.0"/>
-      <point x="288.0" y="1028.0" type="curve"/>
-      <point x="385.0" y="1623.0"/>
-      <point x="821.0" y="1998.0"/>
-      <point x="1272.0" y="2000.0" type="curve" smooth="yes"/>
-      <point x="1605.0" y="1998.0"/>
-      <point x="1844.0" y="1790.0"/>
-      <point x="1908.0" y="1440.0" type="curve"/>
-    </contour>
+    <component base="G"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>G</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>G</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -53,18 +24,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>704.0</real>
+            <real>-12.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -73,18 +39,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>5.0</real>
+            <real>112.0</real>
+            <real>-80.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>2.0</real>
-            <real>18.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -93,18 +54,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>688.0</real>
+            <real>24.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -113,18 +69,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>12.0</real>
+            <real>1708.0</real>
+            <real>-68.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -133,18 +84,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>704.0</real>
+            <real>116.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>
