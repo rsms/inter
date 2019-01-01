@@ -1,14 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="quotesinglbase" format="2">
-  <advance width="744.0"/>
+  <advance width="764.0"/>
   <unicode hex="201A"/>
-  <guideline x="8.0" y="1240.0" angle="0.0"/>
-  <guideline x="8.0" y="764.0" angle="0.0"/>
+  <guideline x="-4.0" y="1240.0" angle="0.0"/>
+  <guideline x="-4.0" y="764.0" angle="0.0"/>
   <outline>
-    <component base="quoteright" xOffset="12.0" yOffset="-1792.0"/>
+    <component base="quoteright" yOffset="-1792.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>quoteright</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>quoteright</string>
       <key>public.markColor</key>
       <string>0.941,0.941,0.941,0.004</string>
     </dict>

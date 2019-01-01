@@ -1,17 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="grave" format="2">
-  <advance width="457.0"/>
+  <advance width="1400.0"/>
   <unicode hex="0060"/>
   <outline>
     <contour>
-      <point x="168.0" y="2112.0" type="line"/>
-      <point x="-40.0" y="2112.0" type="line"/>
-      <point x="300.0" y="1724.0" type="line"/>
-      <point x="428.0" y="1724.0" type="line"/>
+      <point x="880.0" y="1760.0" type="line"/>
+      <point x="600.0" y="2192.0" type="line"/>
+      <point x="520.0" y="2192.0" type="line"/>
+      <point x="816.0" y="1760.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>acute</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -22,14 +24,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>2.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>type</key>
           <string>Stem</string>
@@ -39,18 +41,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>56.0</real>
+            <real>12.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -62,14 +59,14 @@
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>2.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>1.0</real>
           </array>
           <key>type</key>
           <string>TTStem</string>

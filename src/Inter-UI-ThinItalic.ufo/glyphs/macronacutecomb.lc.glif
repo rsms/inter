@@ -2,12 +2,12 @@
 <glyph name="macronacutecomb.lc" format="2">
   <outline>
     <contour>
-      <point x="-60.0" y="1976.0" type="line"/>
-      <point x="-960.0" y="1976.0" type="line"/>
-      <point x="-988.0" y="1800.0" type="line"/>
-      <point x="-84.0" y="1800.0" type="line"/>
+      <point x="-372.0" y="2128.0" type="line"/>
+      <point x="-300.0" y="2128.0" type="line"/>
+      <point x="136.0" y="2560.0" type="line"/>
+      <point x="52.0" y="2560.0" type="line"/>
     </contour>
-    <component base="acute" xOffset="-956.0" yOffset="368.0"/>
+    <component base="macron" xOffset="-932.0" yOffset="-48.0"/>
   </outline>
   <lib>
     <dict>
@@ -22,18 +22,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1672.0</real>
+            <real>48.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -42,18 +37,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1672.0</real>
+            <real>176.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

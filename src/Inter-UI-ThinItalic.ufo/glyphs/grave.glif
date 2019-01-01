@@ -1,17 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="grave" format="2">
-  <advance width="457.0"/>
+  <advance width="1400.0"/>
   <unicode hex="0060"/>
   <outline>
     <contour>
-      <point x="392.0" y="2112.0" type="line"/>
-      <point x="184.0" y="2112.0" type="line"/>
-      <point x="460.0" y="1724.0" type="line"/>
-      <point x="588.0" y="1724.0" type="line"/>
+      <point x="1040.0" y="1760.0" type="line"/>
+      <point x="832.0" y="2192.0" type="line"/>
+      <point x="756.0" y="2192.0" type="line"/>
+      <point x="980.0" y="1760.0" type="line"/>
     </contour>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
+      <string>acute</string>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -19,10 +21,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>1856.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -41,18 +43,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>-72.0</real>
+            <real>148.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -61,10 +58,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>1856.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

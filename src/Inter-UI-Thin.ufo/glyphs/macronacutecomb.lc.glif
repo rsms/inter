@@ -2,12 +2,12 @@
 <glyph name="macronacutecomb.lc" format="2">
   <outline>
     <contour>
-      <point x="-256.0" y="1976.0" type="line"/>
-      <point x="-1156.0" y="1976.0" type="line"/>
-      <point x="-1156.0" y="1800.0" type="line"/>
-      <point x="-256.0" y="1800.0" type="line"/>
+      <point x="-592.0" y="2128.0" type="line"/>
+      <point x="-524.0" y="2128.0" type="line"/>
+      <point x="-160.0" y="2560.0" type="line"/>
+      <point x="-240.0" y="2560.0" type="line"/>
     </contour>
-    <component base="acute" xOffset="-944.0" yOffset="368.0"/>
+    <component base="macron" xOffset="-932.0" yOffset="-48.0"/>
   </outline>
   <lib>
     <dict>
@@ -22,18 +22,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1800.0</real>
+            <real>176.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -42,10 +37,40 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
+          <key>place</key>
+          <array>
+            <real>-660.0</real>
+            <real>528.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>place</key>
+          <array>
+            <real>1800.0</real>
+            <real>176.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>type</key>
+          <string>TTStem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>0</integer>
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -59,20 +84,40 @@
         </dict>
         <dict>
           <key>horizontal</key>
-          <true/>
+          <false/>
           <key>options</key>
-          <integer>4</integer>
+          <integer>0</integer>
           <key>origin</key>
           <array>
             <real>0.0</real>
-            <real>1.0</real>
+            <real>3.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
           <key>target</key>
           <array>
             <real>0.0</real>
+            <real>1.0</real>
+          </array>
+          <key>type</key>
+          <string>Stem</string>
+        </dict>
+        <dict>
+          <key>horizontal</key>
+          <true/>
+          <key>options</key>
+          <integer>4</integer>
+          <key>origin</key>
+          <array>
             <real>0.0</real>
+            <real>3.0</real>
+          </array>
+          <key>stem</key>
+          <integer>-2</integer>
+          <key>target</key>
+          <array>
+            <real>0.0</real>
+            <real>2.0</real>
           </array>
           <key>type</key>
           <string>TTStem</string>

@@ -1,27 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="lozenge" format="2">
-  <advance width="1419.0"/>
+  <advance width="1424.0"/>
   <unicode hex="25CA"/>
   <outline>
     <contour>
-      <point x="104.0" y="1000.0" type="line"/>
-      <point x="688.0" y="0.0" type="line"/>
-      <point x="756.0" y="0.0" type="line"/>
-      <point x="776.0" y="56.0" type="line"/>
-      <point x="248.0" y="1000.0" type="line"/>
-      <point x="764.0" y="1956.0" type="line"/>
-      <point x="728.0" y="2004.0" type="line"/>
-      <point x="680.0" y="2004.0" type="line"/>
+      <point x="128.0" y="1024.0" type="line"/>
+      <point x="684.0" y="0.0" type="line"/>
+      <point x="736.0" y="0.0" type="line"/>
+      <point x="736.0" y="36.0" type="line"/>
+      <point x="200.0" y="1024.0" type="line"/>
+      <point x="736.0" y="2012.0" type="line"/>
+      <point x="736.0" y="2048.0" type="line"/>
+      <point x="684.0" y="2048.0" type="line"/>
     </contour>
     <contour>
-      <point x="668.0" y="60.0" type="line"/>
-      <point x="680.0" y="0.0" type="line"/>
-      <point x="744.0" y="0.0" type="line"/>
-      <point x="1324.0" y="1000.0" type="line"/>
-      <point x="728.0" y="2004.0" type="line"/>
-      <point x="672.0" y="2004.0" type="line"/>
-      <point x="640.0" y="1956.0" type="line"/>
-      <point x="1180.0" y="1000.0" type="line"/>
+      <point x="688.0" y="36.0" type="line"/>
+      <point x="688.0" y="0.0" type="line"/>
+      <point x="740.0" y="0.0" type="line"/>
+      <point x="1296.0" y="1024.0" type="line"/>
+      <point x="740.0" y="2048.0" type="line"/>
+      <point x="688.0" y="2048.0" type="line"/>
+      <point x="688.0" y="2012.0" type="line"/>
+      <point x="1224.0" y="1024.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -33,10 +33,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -53,18 +53,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>7.0</real>
+            <real>104.0</real>
+            <real>1220.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -73,10 +68,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
             <real>0.0</real>
-            <real>0.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

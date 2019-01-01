@@ -1,9 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="yericyrillic" format="2">
-  <advance width="2088.0"/>
+  <advance width="1928.0"/>
   <unicode hex="044B"/>
   <outline>
-    <component base="softsigncyrillic"/>
-    <component base="idotless" xOffset="1464.0"/>
+    <component base="softsigncyrillic" xOffset="8.0"/>
+    <component base="idotless" xOffset="1304.0"/>
   </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>idotless</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>idotless</string>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+        <integer>-1</integer>
+      </array>
+    </dict>
+  </lib>
 </glyph>

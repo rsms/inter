@@ -50,8 +50,7 @@ Current font styles:
 | Black                | 900
 | Black Italic         | 900
 
-Inter UI also ships as a variable font.<br>
-Future versions may include lighter weights.
+Inter UI also ships as a variable font.
 
 
 ### Font metrics

@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="primerev" format="2">
-  <advance width="454.0"/>
+  <advance width="456.0"/>
   <unicode hex="2035"/>
   <outline>
     <contour>
-      <point x="440.0" y="1372.0" type="line"/>
-      <point x="480.0" y="2048.0" type="line"/>
-      <point x="328.0" y="2048.0" type="line"/>
-      <point x="388.0" y="1372.0" type="line"/>
+      <point x="400.0" y="1372.0" type="line"/>
+      <point x="440.0" y="2048.0" type="line"/>
+      <point x="368.0" y="2048.0" type="line"/>
+      <point x="356.0" y="1372.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -23,8 +23,8 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>-128.0</real>
+            <real>-128.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -38,8 +38,8 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>-128.0</real>
+            <real>-128.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -53,7 +53,7 @@
           <integer>4</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
+            <real>-128.0</real>
             <real>0.0</real>
           </array>
           <key>stem</key>
@@ -66,10 +66,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>1920.0</real>
+            <real>21.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -86,18 +86,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>312.0</real>
+            <real>-76.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -106,10 +101,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>1920.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -117,8 +112,6 @@
           <string>Anchor</string>
         </dict>
       </array>
-      <key>public.markColor</key>
-      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

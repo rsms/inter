@@ -1,16 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="tripleprimerev" format="2">
-  <advance width="1350.0"/>
+  <advance width="1112.0"/>
   <unicode hex="2037"/>
   <outline>
     <component base="primerev"/>
-    <component base="primerev" xOffset="448.0"/>
-    <component base="primerev" xOffset="896.0"/>
+    <component base="primerev" xOffset="328.0"/>
+    <component base="primerev" xOffset="656.0"/>
   </outline>
   <lib>
     <dict>
-      <key>com.schriftgestaltung.Glyphs.glyph.widthMetricsKey</key>
-      <string>tripleprime</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>primerev</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>primerev</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
         <integer>-1</integer>
@@ -50,8 +52,6 @@
           <string>TTStem</string>
         </dict>
       </array>
-      <key>public.markColor</key>
-      <string>0.941,0.941,0.941,0.004</string>
     </dict>
   </lib>
 </glyph>

@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="gheupturncyrillic" format="2">
-  <advance width="1231.0"/>
+  <advance width="1284.0"/>
   <unicode hex="0491"/>
   <outline>
     <contour>
-      <point x="1256.0" y="1908.0" type="line"/>
-      <point x="1176.0" y="1908.0" type="line"/>
-      <point x="1096.0" y="1432.0" type="line"/>
-      <point x="1176.0" y="1432.0" type="line"/>
+      <point x="1300.0" y="1856.0" type="line"/>
+      <point x="1236.0" y="1856.0" type="line"/>
+      <point x="1172.0" y="1472.0" type="line"/>
+      <point x="1236.0" y="1472.0" type="line"/>
     </contour>
     <component base="gecyrillic"/>
   </outline>
@@ -30,7 +30,7 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
+            <real>-128.0</real>
             <real>21.0</real>
           </array>
           <key>stem</key>
@@ -50,8 +50,8 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>-128.0</real>
+            <real>-128.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -65,8 +65,8 @@
           <integer>0</integer>
           <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>-128.0</real>
+            <real>-128.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -78,18 +78,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>968.0</real>
+            <real>-48.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -98,10 +93,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1304.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -113,10 +108,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>1304.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>

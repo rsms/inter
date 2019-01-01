@@ -1,44 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="dieresisacutecomb.cn" format="2">
-  <advance width="44.0"/>
   <outline>
     <contour>
-      <point x="-1256.0" y="1700.0" type="curve" smooth="yes"/>
-      <point x="-1134.0" y="1700.0"/>
-      <point x="-1038.0" y="1772.0"/>
-      <point x="-1036.0" y="1872.0" type="curve" smooth="yes"/>
-      <point x="-1038.0" y="1964.0"/>
-      <point x="-1130.0" y="2040.0"/>
-      <point x="-1256.0" y="2040.0" type="curve" smooth="yes"/>
-      <point x="-1378.0" y="2040.0"/>
-      <point x="-1470.0" y="1964.0"/>
-      <point x="-1468.0" y="1872.0" type="curve" smooth="yes"/>
-      <point x="-1470.0" y="1772.0"/>
-      <point x="-1378.0" y="1700.0"/>
+      <point x="-751.116" y="2755.36" type="line"/>
+      <point x="-387.116" y="2755.36" type="line"/>
+      <point x="-22.591" y="3145.12" type="line"/>
+      <point x="-494.591" y="3145.12" type="line"/>
     </contour>
-    <contour>
-      <point x="-664.0" y="1700.0" type="curve" smooth="yes"/>
-      <point x="-538.0" y="1700.0"/>
-      <point x="-450.0" y="1776.0"/>
-      <point x="-448.0" y="1872.0" type="curve" smooth="yes"/>
-      <point x="-450.0" y="1964.0"/>
-      <point x="-538.0" y="2040.0"/>
-      <point x="-664.0" y="2040.0" type="curve" smooth="yes"/>
-      <point x="-786.0" y="2040.0"/>
-      <point x="-882.0" y="1968.0"/>
-      <point x="-880.0" y="1872.0" type="curve" smooth="yes"/>
-      <point x="-882.0" y="1772.0"/>
-      <point x="-786.0" y="1700.0"/>
-    </contour>
-    <contour>
-      <point x="-1096.0" y="2060.0" type="line"/>
-      <point x="-836.0" y="2060.0" type="line"/>
-      <point x="-580.0" y="2292.0" type="line"/>
-      <point x="-912.0" y="2292.0" type="line"/>
-    </contour>
+    <component base="casedieresis.cn" xOffset="-1260.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.componentsAlignment</key>
+      <array>
+        <integer>-1</integer>
+      </array>
       <key>com.schriftgestaltung.hints</key>
       <array>
         <dict>
@@ -46,18 +22,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>3.0</real>
+            <real>2608.0</real>
+            <real>232.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>2.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -66,18 +37,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>8.0</real>
+            <real>-1068.0</real>
+            <real>1020.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -86,18 +52,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>2.0</real>
-            <real>3.0</real>
+            <real>2608.0</real>
+            <real>232.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>2.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

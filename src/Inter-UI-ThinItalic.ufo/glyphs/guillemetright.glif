@@ -1,13 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="guillemetright" format="2">
-  <advance width="945.0"/>
+  <advance width="1500.0"/>
   <unicode hex="00BB"/>
   <outline>
-    <component base="guilsinglright" xOffset="-396.0"/>
-    <component base="guilsinglright" xOffset="136.0"/>
+    <component base="guilsinglright"/>
+    <component base="guilsinglright" xOffset="532.0"/>
   </outline>
   <lib>
     <dict>
+      <key>com.schriftgestaltung.Glyphs.glyph.leftMetricsKey</key>
+      <string>guilsinglright</string>
+      <key>com.schriftgestaltung.Glyphs.glyph.rightMetricsKey</key>
+      <string>guilsinglright</string>
       <key>com.schriftgestaltung.componentsAlignment</key>
       <array>
         <integer>-1</integer>

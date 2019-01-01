@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="acute" format="2">
-  <advance width="1313.0"/>
+  <advance width="1400.0"/>
   <unicode hex="00B4"/>
   <outline>
     <contour>
-      <point x="680.0" y="1812.0" type="line"/>
-      <point x="748.0" y="1812.0" type="line"/>
-      <point x="1060.0" y="2280.0" type="line"/>
-      <point x="956.0" y="2280.0" type="line"/>
+      <point x="684.0" y="1760.0" type="line"/>
+      <point x="748.0" y="1760.0" type="line"/>
+      <point x="1116.0" y="2192.0" type="line"/>
+      <point x="1036.0" y="2192.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -19,18 +19,13 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>1556.0</real>
+            <real>212.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -39,18 +34,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>424.0</real>
+            <real>124.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>1.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -59,18 +49,13 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>3.0</real>
+            <real>1556.0</real>
+            <real>468.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>TTStem</string>
         </dict>

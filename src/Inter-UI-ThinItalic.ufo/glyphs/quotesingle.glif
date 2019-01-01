@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="quotesingle" format="2">
-  <advance width="660.0"/>
+  <advance width="576.0"/>
   <unicode hex="0027"/>
   <outline>
     <contour>
-      <point x="608.0" y="2048.0" type="line"/>
-      <point x="472.0" y="2048.0" type="line"/>
-      <point x="368.0" y="1420.0" type="line"/>
-      <point x="504.0" y="1420.0" type="line"/>
+      <point x="532.0" y="2048.0" type="line"/>
+      <point x="468.0" y="2048.0" type="line"/>
+      <point x="360.0" y="1408.0" type="line"/>
+      <point x="424.0" y="1408.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -19,10 +19,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>1792.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -41,18 +41,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>1.0</real>
+            <real>112.0</real>
+            <real>-120.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>0.0</real>
-            <real>2.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -61,10 +56,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>0.0</real>
+            <real>1792.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
