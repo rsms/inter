@@ -3,8 +3,6 @@
 #
 # Updates the "?v=x" in docs/inter-ui.css
 #
-from __future__ import print_function
-
 import os, sys
 from os.path import dirname, basename, abspath, relpath, join as pjoin
 sys.path.append(abspath(pjoin(dirname(__file__), 'tools')))

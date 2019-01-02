@@ -3,8 +3,6 @@
 #
 # Generates JSON-encoded information about fonts
 #
-from __future__ import print_function
-
 import os, sys
 from os.path import dirname, basename, abspath, relpath, join as pjoin
 sys.path.append(abspath(pjoin(dirname(__file__), 'tools')))
@@ -343,7 +341,7 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
 
       if 'panose' in os2:
         panose = {}
-        for k,v in sstructTableToDict(os2['panose'], panoseFormat).iteritems():
+        for k,v in sstructTableToDict(os2['panose'], panoseFormat).items():
           if k[0:1] == 'b' and k[1].isupper():
             k = k[1].lower() + k[2:]
             # bFooBar => fooBar
@@ -369,7 +367,7 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
 
     if 'meta' in tt:
       meta = {}
-      for k,v in tt['meta'].data.iteritems():
+      for k,v in tt['meta'].data.items():
         try:
           v.decode('utf8')
           meta[k] = v

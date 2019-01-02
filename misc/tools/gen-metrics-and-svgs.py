@@ -3,8 +3,6 @@
 #
 # Sync glyph shapes between SVG and UFO, creating a bridge between UFO and Figma.
 #
-from __future__ import print_function
-
 import os, sys
 from os.path import dirname, basename, abspath, relpath, join as pjoin
 sys.path.append(abspath(pjoin(dirname(__file__), 'tools')))
@@ -293,8 +291,8 @@ svgtext = '\n'.join(svgLines)
 glyphsHtmlFilename = os.path.join(BASEDIR, 'docs', 'glyphs', 'index.html')
 
 html = u''
-with open(glyphsHtmlFilename, 'r') as f:
-  html = f.read().decode('utf8')
+with open(glyphsHtmlFilename, 'r', encoding="utf-8") as f:
+  html = f.read()
 
 startMarker = u'<div id="svgs">'
 startPos = html.find(startMarker)
@@ -317,17 +315,17 @@ metaJson += '"kerning":' + fmtJsonList(kerning) + '\n'
 metaJson += '}'
 # metaHtml = '<script>var fontMetaData = ' + metaJson + ';</script>'
 
-html = html[:startPos + len(startMarker)] + '\n' + svgtext.decode('utf8') + '\n' + html[endPos:]
+html = html[:startPos + len(startMarker)] + '\n' + svgtext + '\n' + html[endPos:]
 
 print('write', relfilename)
-with open(glyphsHtmlFilename, 'w') as f:
-  f.write(html.encode('utf8'))
+with open(glyphsHtmlFilename, 'w', encoding="utf-8") as f:
+  f.write(html)
 
 # JSON
 jsonFilename = os.path.join(BASEDIR, 'docs', 'glyphs', 'metrics.json')
 jsonFilenameRel = os.path.relpath(jsonFilename, os.getcwd())
 print('write', jsonFilenameRel)
-with open(jsonFilename, 'w') as f:
+with open(jsonFilename, 'w', encoding="utf-8") as f:
   f.write(metaJson)
 
 metaJson

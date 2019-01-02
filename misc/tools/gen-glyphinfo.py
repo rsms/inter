@@ -3,8 +3,6 @@
 #
 # Grab http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 #
-from __future__ import print_function
-
 import os, sys
 from os.path import dirname, basename, abspath, relpath, join as pjoin
 sys.path.append(abspath(pjoin(dirname(__file__), 'tools')))
@@ -14,7 +12,7 @@ import json, re
 import time
 from argparse import ArgumentParser
 from collections import OrderedDict
-from ConfigParser import RawConfigParser
+from configparser import RawConfigParser
 # from robofab.objects.objectsRF import OpenFont
 from unicode_util import parseUnicodeDataFile
 from defcon import Font
