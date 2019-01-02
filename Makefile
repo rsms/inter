@@ -179,7 +179,7 @@ ZIP_FILE_DEV  := build/release/Inter-UI-${VERSION}-$(shell git rev-parse --short
 
 ZD = build/tmp/zip
 # intermediate zip target that creates a zip file at build/tmp/a.zip
-build/tmp/a.zip: all
+build/tmp/a.zip:
 	@rm -rf "$(ZD)"
 	@rm -f  build/tmp/a.zip
 	@mkdir -p \
@@ -189,30 +189,32 @@ build/tmp/a.zip: all
 	  "$(ZD)/Inter UI (TTF hinted)" \
 	  "$(ZD)/Inter UI (TTF variable)" \
 	  "$(ZD)/Inter UI (OTF)"
-	  # "$(ZD)/Inter UI (TTF variable hinted)"
-	# copy font files
+	@#
+	@# copy font files
 	cp -a $(FONTDIR)/const/*.woff \
 	      $(FONTDIR)/const/*.woff2 \
 	      $(FONTDIR)/var/*.woff2        "$(ZD)/Inter UI (web)/"
-	# cp -a $(FONTDIR)/const-hinted/*.woff \
-	#       $(FONTDIR)/const-hinted/*.woff2 \
-	#       $(FONTDIR)/var-hinted/*.woff2 "$(ZD)/Inter UI (web hinted)/"
 	cp -a $(FONTDIR)/const-hinted/*.woff \
 	      $(FONTDIR)/const-hinted/*.woff2 \
 	      													    "$(ZD)/Inter UI (web hinted)/"
 	cp -a $(FONTDIR)/const/*.ttf        "$(ZD)/Inter UI (TTF)/"
 	cp -a $(FONTDIR)/const-hinted/*.ttf "$(ZD)/Inter UI (TTF hinted)/"
 	cp -a $(FONTDIR)/var/*.ttf          "$(ZD)/Inter UI (TTF variable)/"
-	# cp -a $(FONTDIR)/var-hinted/*.ttf   "$(ZD)/Inter UI (TTF variable hinted)/"
 	cp -a $(FONTDIR)/const/*.otf        "$(ZD)/Inter UI (OTF)/"
-	# copy misc stuff
+	@#
+	@# copy misc stuff
 	cp -a misc/dist/inter-ui.css        "$(ZD)/Inter UI (web)/"
 	cp -a misc/dist/inter-ui.css        "$(ZD)/Inter UI (web hinted)/"
 	cp -a misc/dist/*.txt               "$(ZD)/"
 	cp -a LICENSE.txt                   "$(ZD)/"
-	# zip
-	cd $(ZD) && zip -q -X -r "../../../$@" * && cd ../..
-	@rm -rf $(ZD)
+	@#
+	@# Add "beta" to Light and Thin filenames.
+	@# Requires "rename" tool in PATH (`brew install rename` on macOS)
+	rename 's/(Light.*|Thin.*)\./$$1-BETA./' "$(ZD)/Inter UI"*/*.*
+	@#
+	@# zip
+	cd "$(ZD)" && zip -q -X -r "../../../$@" * && cd ../..
+	@rm -rf "$(ZD)"
 
 # zip
 build/release/Inter-UI-%.zip: build/tmp/a.zip
