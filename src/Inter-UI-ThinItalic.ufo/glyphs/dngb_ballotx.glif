@@ -1,19 +1,19 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="dngb_ballotx" format="2">
-  <advance width="1676.0"/>
+  <advance width="2480.0"/>
   <unicode hex="2717"/>
   <outline>
     <contour>
-      <point x="356.0" y="260.0" type="line"/>
-      <point x="1432.0" y="1508.0" type="line"/>
-      <point x="1340.0" y="1584.0" type="line"/>
-      <point x="264.0" y="336.0" type="line"/>
+      <point x="612.0" y="360.0" type="line"/>
+      <point x="1976.0" y="1528.0" type="line"/>
+      <point x="1936.0" y="1576.0" type="line"/>
+      <point x="572.0" y="408.0" type="line"/>
     </contour>
     <contour>
-      <point x="1456.0" y="260.0" type="line"/>
-      <point x="1488.0" y="336.0" type="line"/>
-      <point x="184.0" y="1584.0" type="line"/>
-      <point x="148.0" y="1508.0" type="line"/>
+      <point x="1744.0" y="364.0" type="line"/>
+      <point x="1792.0" y="404.0" type="line"/>
+      <point x="808.0" y="1572.0" type="line"/>
+      <point x="760.0" y="1532.0" type="line"/>
     </contour>
   </outline>
   <lib>
@@ -25,10 +25,10 @@
           <true/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>1584.0</real>
+            <real>-20.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
@@ -47,18 +47,13 @@
           <false/>
           <key>options</key>
           <integer>0</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>0.0</real>
-            <real>2.0</real>
+            <real>264.0</real>
+            <real>1224.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
-          <key>target</key>
-          <array>
-            <real>1.0</real>
-            <real>0.0</real>
-          </array>
           <key>type</key>
           <string>Stem</string>
         </dict>
@@ -67,10 +62,10 @@
           <true/>
           <key>options</key>
           <integer>4</integer>
-          <key>origin</key>
+          <key>place</key>
           <array>
-            <real>1.0</real>
-            <real>1.0</real>
+            <real>1584.0</real>
+            <real>-2147483648.0</real>
           </array>
           <key>stem</key>
           <integer>-2</integer>
