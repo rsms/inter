@@ -41,7 +41,8 @@ else
     clean=true
   fi
 
-  # ————————————————————————————————————————————————————————————————————————————————————————————————
+
+  # ——————————————————————————————————————————————————————————————————
   # virtualenv
 
   mkdir -p "$VENV_DIR"
@@ -57,7 +58,7 @@ else
   fi
 
   require_virtualenv() {
-    # find pip
+    # find pip3 (Python 3)
     export pip=$(which pip3)
     if [ "$pip" = "" ]; then
       export pip=$(which pip)
@@ -83,7 +84,7 @@ else
   # TODO: allow setting a flag to recreate venv
   if $clean; then
     rm -rf "$VENV_DIR"
-  fi
+  fi 
 
   if [[ ! -d "$VENV_DIR/bin" ]]; then
     echo "Setting up virtualenv in '$VENV_DIR'"
@@ -107,20 +108,53 @@ else
     done
   fi
 
-  source "$VENV_DIR/bin/activate"
-
-  UPDATE_TIMESTAMP_FILE="$VENV_DIR/last-pip-run.mark"
-  REQUIREMENTS_FILE=$SRCDIR/requirements.txt
-  PY_REQUIREMENTS_CHANGED=false
-
-  if [ "$REQUIREMENTS_FILE" -nt "$UPDATE_TIMESTAMP_FILE" ]; then
-    echo "pip install -r $REQUIREMENTS_FILE"
-    pip install -r "$REQUIREMENTS_FILE"
-    date '+%s' > "$UPDATE_TIMESTAMP_FILE"
-    PY_REQUIREMENTS_CHANGED=true
+  # --------------------
+  # ISSUE #110 (bug in ufo2ft) requires Python 2 for OTF CFF compilation
+  # See also: https://github.com/googlei18n/ufo2ft/issues/306
+  PYTHON2=
+  if (which python2 >/dev/null); then
+    PYTHON2=$(which python2)
+  elif (which python >/dev/null) && (python --version | grep -q 'ython 2'); then
+    PYTHON2=$(which python)
+  else
+    echo "Unable to find Python 2 (tried python2 and python)." >&2
+    echo "Python 2 is required to compile OTF files because of a Python-3 bug in a third-party library." >&2
+    exit 1
+  fi
+  # ln -svf "$PYTHON2" "$VENV_DIR/bin/python2"
+  VENV2_DIR=$BUILD_DIR/venv2
+  if [[ ! -d "$VENV2_DIR/bin" ]]; then
+    require_virtualenv
+    $virtualenv "--python=$PYTHON2" "$VENV2_DIR"
   fi
 
-  # ————————————————————————————————————————————————————————————————————————————————————————————————
+  # ——————————————————————————————————————————————————————————————————
+  # check pip requirements
+
+
+  # primary env
+  REQUIREMENTS_FILE=$SRCDIR/requirements.txt
+  UPDATE_TIMESTAMP_FILE="$VENV_DIR/last-pip-run.mark"
+  if [ "$REQUIREMENTS_FILE" -nt "$UPDATE_TIMESTAMP_FILE" ]; then
+    echo "$VENV_DIR/bin/pip install -r $REQUIREMENTS_FILE"
+    "$VENV_DIR/bin/pip" install -r "$REQUIREMENTS_FILE"
+    date '+%s' > "$UPDATE_TIMESTAMP_FILE"
+  fi
+
+  # secondary env (Python 2)
+  REQUIREMENTS2_FILE=$SRCDIR/requirements2.txt
+  UPDATE_TIMESTAMP2_FILE="$VENV2_DIR/last-pip-run.mark"
+  if [ "$REQUIREMENTS2_FILE" -nt "$UPDATE_TIMESTAMP2_FILE" ]; then
+    echo "$VENV2_DIR/bin/pip install -r $REQUIREMENTS2_FILE"
+    "$VENV2_DIR/bin/pip" install -r "$REQUIREMENTS2_FILE"
+    date '+%s' > "$UPDATE_TIMESTAMP2_FILE"
+  fi
+
+  # ——————————————————————————————————————————————————————————————————
+  # active primary env (Python 3)
+  source "$VENV_DIR/bin/activate"
+
+  # ——————————————————————————————————————————————————————————————————
   # deps
   DEPS_DIR=$BUILD_DIR/deps
   PATCH_DIR=$(pwd)/misc/patches
@@ -448,6 +482,20 @@ else
     done
     echo "" >> "$GEN_MAKE_FILE"
 
+    # all_samples_pdf target
+    echo -n "all_samples_pdf:" >> "$GEN_MAKE_FILE"
+    for style in "${all_styles[@]}"; do
+      echo -n " \$(FONTDIR)/samples/Inter-UI-${style}.pdf" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+
+    # all_samples_png target
+    echo -n "all_samples_png:" >> "$GEN_MAKE_FILE"
+    for style in "${all_styles[@]}"; do
+      echo -n " \$(FONTDIR)/samples/Inter-UI-${style}.png" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+
     # all_const_fonts target
     # echo -n "all_const_fonts:" >> "$GEN_MAKE_FILE"
     # for style in "${all_styles[@]}"; do
@@ -463,15 +511,15 @@ else
     echo "" >> "$GEN_MAKE_FILE"
   fi
 
-  # ————————————————————————————————————————————————————————————————————————————————————————————————
-  # summary
-  if ! $VENV_ACTIVE; then
-    echo -n "You can activate virtualenv by running "
-    if [ "$0" == "./init.sh" ]; then
-      # pretty format for common case
-      echo '`source init.sh`'
-    else
-      echo "\`source \"$0\"\`"
-    fi
-  fi
+  # # ————————————————————————————————————————————————————————————————
+  # # summary
+  # if ! $VENV_ACTIVE; then
+  #   echo -n "You can activate virtualenv by running "
+  #   if [ "$0" == "./init.sh" ]; then
+  #     # pretty format for common case
+  #     echo '`source init.sh`'
+  #   else
+  #     echo "\`source \"$0\"\`"
+  #   fi
+  # fi
 fi

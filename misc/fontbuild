@@ -4,7 +4,7 @@ from __future__ import print_function, absolute_import
 import sys, os
 from os.path import dirname, basename, abspath, relpath, join as pjoin
 sys.path.append(abspath(pjoin(dirname(__file__), 'tools')))
-from common import BASEDIR, VENVDIR, getGitHash, getVersion
+from common import BASEDIR, VENVDIR, getGitHash, getVersion, execproc
 
 import argparse
 import datetime
@@ -26,6 +26,7 @@ from glyphsLib.interpolation import apply_instance_data
 from mutatorMath.ufo.document import DesignSpaceDocumentReader
 from multiprocessing import Process, Queue
 from ufo2ft.filters.removeOverlaps import RemoveOverlapsFilter
+from ufo2ft import CFFOptimization
 
 log = logging.getLogger(__name__)
 stripItalic_re = re.compile(r'(?:^|\b)italic(?:\b|$)', re.I | re.U)
@@ -53,6 +54,7 @@ def mkdirs(path):
 def fatal(msg):
   print(sys.argv[0] + ': ' + msg, file=sys.stderr)
   sys.exit(1)
+
 
 
 def composedGlyphIsNonTrivial(g, yAxisIsNonTrivial=False):
@@ -361,10 +363,10 @@ class Main(object):
       args.srcfile,
       interpolate=False,
       masters_as_instances=False,
+      use_production_names=True,
       round_instances=True,
       output_path=outfilename,
       output=['variable'],
-      optimize_cff=True,
       overlaps_backend='pathops', # use Skia's pathops
     )
 
@@ -426,21 +428,27 @@ class Main(object):
     ufo = Font(args.srcfile)
     updateFontVersion(ufo)
 
+    # if outfile is a ufo, simply move it to outfilename instead
+    # of running ots-sanitize.
+    output_path = tmpfilename
+    if formats[0] == 'ufo':
+      output_path = outfilename
+
     # run fontmake to produce OTF/TTF file at tmpfilename
     project.run_from_ufos(
       [ ufo ],
-      output_path=tmpfilename,
+      output_path=output_path,
       output=formats,
-      optimize_cff=True,
+      use_production_names=True,
+      optimize_cff=CFFOptimization.SUBROUTINIZE, # NONE
       overlaps_backend='pathops', # use Skia's pathops
+      remove_overlaps=True,
     )
 
-    # TODO: if outfile is a ufo, simply move it to outfilename instead
-    # of running ots-sanitize
-
-    # Run ots-sanitize on produced OTF/TTF file and write sanitized version
-    # to outfilename
-    self._ots_sanitize(tmpfilename, outfilename)
+    if output_path == tmpfilename:
+      # Run ots-sanitize on produced OTF/TTF file and write sanitized version
+      # to outfilename
+      self._ots_sanitize(output_path, outfilename)
 
 
   def _ots_sanitize(self, tmpfilename, outfilename):
@@ -592,7 +600,6 @@ class Main(object):
     # patch and write UFO files
     # TODO: Only write out-of-date UFOs
     procs = []
-    q = Queue()
     for source in designspace.sources:
       # source : fontTools.designspaceLib.SourceDescriptor
       # source.font : defcon.objects.font.Font
@@ -737,23 +744,24 @@ class Main(object):
       font.save()
 
 
+  def checkfont(self, fontfile, q):
+    res, ok = execproc('ots-idempotent', fontfile)
+    # Note: ots-idempotent does not exit with an error in many cases where
+    # it fails to sanitize the font, so we look at its output to determine
+    # success or failure.
+    if not ok or res.find('Failed') != -1:
+      log.error('%s: checkfont ots-idempotent: %s' % (fontfile, res))
+      q.put(False)
+      return
 
-  def checkfont(self, fontfile):
-    try:
-      res = subprocess.check_output(
-        ['ots-idempotent', fontfile],
-        shell=False
-      ).strip()
-      # Note: ots-idempotent does not exit with an error in many cases where
-      # it fails to sanitize the font.
-      if str(res).find('Failed') != -1:
-        log.error('[checkfont] ots-idempotent failed for %r: %s' % (
-          fontfile, res))
-        return False
-    except:
-      log.error('[checkfont] ots-idempotent failed for %r' % fontfile)
-      return False
-    return True
+    res, ok = execproc('ots-validator-checker', fontfile)
+    if not ok or res.find("didn't crash") == -1:
+      log.error('%s: checkfont ots-validator-checker: %s' % (fontfile, res))
+      q.put(False)
+      return
+
+    # ok
+    q.put(True)
 
 
   def cmd_checkfont(self, argv):
@@ -765,15 +773,22 @@ class Main(object):
       help='Font files')
     
     args = argparser.parse_args(argv)
+    q = Queue()
+
+    if len(args.files) < 2:
+      self.checkfont(args.files[0], q)
+    else:
+      procs = []
+      for fontfile in args.files:
+        p = Process(target=self.checkfont, args=(fontfile, q))
+        p.start()
+        procs.append(p)
+      for p in procs:
+        p.join()
 
     for fontfile in args.files:
-      if not self.checkfont(fontfile):
+      if not q.get():
         sys.exit(1)
-
-    # could use from multiprocessing import Pool
-    # p = Pool(8)
-    # p.map(self.checkfont, args.files)
-    # p.terminate()
 
 
 if __name__ == '__main__':

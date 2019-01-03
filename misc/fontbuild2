@@ -1,0 +1,6 @@
+#!/bin/bash
+pushd "$(dirname "$0")/.." >/dev/null
+SRCDIR=$(PWD)
+popd >/dev/null
+
+"$SRCDIR/build/venv2/bin/python" misc/fontbuild "$@"

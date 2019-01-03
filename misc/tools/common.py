@@ -10,6 +10,30 @@ BASEDIR = abspath(pjoin(dirname(__file__), os.pardir, os.pardir))
 VENVDIR = pjoin(BASEDIR, 'build', 'venv')
 sys.path.append(pjoin(VENVDIR, 'lib', 'python', 'site-packages'))
 
+PYVER = sys.version_info[0]
+
+
+_enc_kwargs = {}
+if PYVER >= 3:
+  _enc_kwargs = {'encoding': 'utf-8'}
+
+
+# Returns (output :str, success :bool)
+def execproc(*args):
+  p = subprocess.run(
+    args,
+    shell=False,
+    stdout=subprocess.PIPE,
+    stderr=subprocess.STDOUT,
+    **_enc_kwargs
+  )
+  return (p.stdout.strip(), p.returncode == 0)
+
+
+def readTextFile(filename):
+  with open(filename, 'r', **_enc_kwargs) as f:
+    return f.read()
+
 
 _gitHash = None
 def getGitHash():
@@ -19,7 +43,8 @@ def getGitHash():
     try:
       _gitHash = subprocess.check_output(
         ['git', '-C', BASEDIR, 'rev-parse', '--short', 'HEAD'],
-        shell=False
+        shell=False,
+        **_enc_kwargs
       ).strip()
     except:
       pass
@@ -30,8 +55,7 @@ _version = None
 def getVersion():
   global _version
   if _version is None:
-    with open(pjoin(BASEDIR, 'version.txt'), 'r') as f:
-      _version = f.read().strip()
+    _version = readTextFile(pjoin(BASEDIR, 'version.txt')).strip()
   return _version
 
 
