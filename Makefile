@@ -96,72 +96,28 @@ all_ufo_masters = $(Thin_ufo_d) \
 $(FONTDIR)/var/%.var.ttf: src/%.designspace $(all_ufo_masters)
 	misc/fontbuild compile-var -o $@ $<
 
-
-# ---------- begin workaround for issue #110 -----------
-
-# $(FONTDIR)/const/Inter-UI-Thin.%: src/Inter-UI.designspace $(Thin_ufo_d)
-# 	misc/fontbuild compile -o $@ src/Inter-UI-Thin.ufo
-
-# $(FONTDIR)/const/Inter-UI-ThinItalic.%: src/Inter-UI.designspace $(ThinItalic_ufo_d)
-# 	misc/fontbuild compile -o $@ src/Inter-UI-ThinItalic.ufo
-
-# $(FONTDIR)/const/Inter-UI-Regular.%: src/Inter-UI.designspace $(Regular_ufo_d)
-# 	misc/fontbuild compile -o $@ src/Inter-UI-Regular.ufo
-
-# $(FONTDIR)/const/Inter-UI-Italic.%: src/Inter-UI.designspace $(Italic_ufo_d)
-# 	misc/fontbuild compile -o $@ src/Inter-UI-Italic.ufo
-
-# $(FONTDIR)/const/Inter-UI-Black.%: src/Inter-UI.designspace $(Black_ufo_d)
-# 	misc/fontbuild compile -o $@ src/Inter-UI-Black.ufo
-
-# $(FONTDIR)/const/Inter-UI-BlackItalic.%: src/Inter-UI.designspace $(BlackItalic_ufo_d)
-# 	misc/fontbuild compile -o $@ src/Inter-UI-BlackItalic.ufo
-
-
-$(FONTDIR)/const/Inter-UI-Thin.ttf: src/Inter-UI.designspace $(Thin_ufo_d)
+$(FONTDIR)/const/Inter-UI-Thin.%: src/Inter-UI.designspace $(Thin_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Thin.ufo
 
-$(FONTDIR)/const/Inter-UI-ThinItalic.ttf: src/Inter-UI.designspace $(ThinItalic_ufo_d)
+$(FONTDIR)/const/Inter-UI-ThinItalic.%: src/Inter-UI.designspace $(ThinItalic_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-ThinItalic.ufo
 
-$(FONTDIR)/const/Inter-UI-Regular.ttf: src/Inter-UI.designspace $(Regular_ufo_d)
+$(FONTDIR)/const/Inter-UI-Regular.%: src/Inter-UI.designspace $(Regular_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Regular.ufo
 
-$(FONTDIR)/const/Inter-UI-Italic.ttf: src/Inter-UI.designspace $(Italic_ufo_d)
+$(FONTDIR)/const/Inter-UI-Italic.%: src/Inter-UI.designspace $(Italic_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Italic.ufo
 
-$(FONTDIR)/const/Inter-UI-Black.ttf: src/Inter-UI.designspace $(Black_ufo_d)
+$(FONTDIR)/const/Inter-UI-Black.%: src/Inter-UI.designspace $(Black_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-Black.ufo
 
-$(FONTDIR)/const/Inter-UI-BlackItalic.ttf: src/Inter-UI.designspace $(BlackItalic_ufo_d)
+$(FONTDIR)/const/Inter-UI-BlackItalic.%: src/Inter-UI.designspace $(BlackItalic_ufo_d)
 	misc/fontbuild compile -o $@ src/Inter-UI-BlackItalic.ufo
 
 
-$(FONTDIR)/const/Inter-UI-Thin.otf: src/Inter-UI.designspace $(Thin_ufo_d)
-	misc/fontbuild2 compile -o $@ src/Inter-UI-Thin.ufo
-
-$(FONTDIR)/const/Inter-UI-ThinItalic.otf: src/Inter-UI.designspace $(ThinItalic_ufo_d)
-	misc/fontbuild2 compile -o $@ src/Inter-UI-ThinItalic.ufo
-
-$(FONTDIR)/const/Inter-UI-Regular.otf: src/Inter-UI.designspace $(Regular_ufo_d)
-	misc/fontbuild2 compile -o $@ src/Inter-UI-Regular.ufo
-
-$(FONTDIR)/const/Inter-UI-Italic.otf: src/Inter-UI.designspace $(Italic_ufo_d)
-	misc/fontbuild2 compile -o $@ src/Inter-UI-Italic.ufo
-
-$(FONTDIR)/const/Inter-UI-Black.otf: src/Inter-UI.designspace $(Black_ufo_d)
-	misc/fontbuild2 compile -o $@ src/Inter-UI-Black.ufo
-
-$(FONTDIR)/const/Inter-UI-BlackItalic.otf: src/Inter-UI.designspace $(BlackItalic_ufo_d)
-	misc/fontbuild2 compile -o $@ src/Inter-UI-BlackItalic.ufo
-
-# ---------- end workaround for issue #110 -----------
-
-
 # Instance UFO -> OTF, TTF
-
 $(FONTDIR)/const/Inter-UI-%.otf: build/ufo/Inter-UI-%.ufo
-	misc/fontbuild2 compile -o $@ $<
+	misc/fontbuild compile -o $@ $<
 
 $(FONTDIR)/const/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo
 	misc/fontbuild compile -o $@ $<

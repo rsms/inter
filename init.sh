@@ -108,31 +108,11 @@ else
     done
   fi
 
-  # --------------------
-  # ISSUE #110 (bug in ufo2ft) requires Python 2 for OTF CFF compilation
-  # See also: https://github.com/googlei18n/ufo2ft/issues/306
-  PYTHON2=
-  if (which python2 >/dev/null); then
-    PYTHON2=$(which python2)
-  elif (which python >/dev/null) && (python --version | grep -q 'ython 2'); then
-    PYTHON2=$(which python)
-  else
-    echo "Unable to find Python 2 (tried python2 and python)." >&2
-    echo "Python 2 is required to compile OTF files because of a Python-3 bug in a third-party library." >&2
-    exit 1
-  fi
-  # ln -svf "$PYTHON2" "$VENV_DIR/bin/python2"
-  VENV2_DIR=$BUILD_DIR/venv2
-  if [[ ! -d "$VENV2_DIR/bin" ]]; then
-    require_virtualenv
-    $virtualenv "--python=$PYTHON2" "$VENV2_DIR"
-  fi
 
   # ——————————————————————————————————————————————————————————————————
-  # check pip requirements
+  # python dependencies
 
-
-  # primary env
+  # install if deps changed
   REQUIREMENTS_FILE=$SRCDIR/requirements.txt
   UPDATE_TIMESTAMP_FILE="$VENV_DIR/last-pip-run.mark"
   if [ "$REQUIREMENTS_FILE" -nt "$UPDATE_TIMESTAMP_FILE" ]; then
@@ -141,21 +121,24 @@ else
     date '+%s' > "$UPDATE_TIMESTAMP_FILE"
   fi
 
-  # secondary env (Python 2)
-  REQUIREMENTS2_FILE=$SRCDIR/requirements2.txt
-  UPDATE_TIMESTAMP2_FILE="$VENV2_DIR/last-pip-run.mark"
-  if [ "$REQUIREMENTS2_FILE" -nt "$UPDATE_TIMESTAMP2_FILE" ]; then
-    echo "$VENV2_DIR/bin/pip install -r $REQUIREMENTS2_FILE"
-    "$VENV2_DIR/bin/pip" install -r "$REQUIREMENTS2_FILE"
-    date '+%s' > "$UPDATE_TIMESTAMP2_FILE"
+  # patch ufo2ft [BUG #110]
+  P1_FILE="$VENV_DIR/lib/python/site-packages/ufo2ft/outlineCompiler.py"
+  P1_BACKUP="$P1_FILE.orig"
+  if [[ ! -f "$P1_BACKUP" ]]; then
+    echo "Patching $P1_FILE (backup at $P1_BACKUP)"
+    mv "$P1_FILE" "$P1_BACKUP"
+    patch "$P1_BACKUP" -o "$P1_FILE" -u -i misc/ufo2ft-2.5.0-outlineCompiler.patch
   fi
 
-  # ——————————————————————————————————————————————————————————————————
-  # active primary env (Python 3)
-  source "$VENV_DIR/bin/activate"
 
   # ——————————————————————————————————————————————————————————————————
-  # deps
+  # activate env (for rest of this script)
+  source "$VENV_DIR/bin/activate"
+
+
+  # ——————————————————————————————————————————————————————————————————
+  # other toolchain dependencies
+
   DEPS_DIR=$BUILD_DIR/deps
   PATCH_DIR=$(pwd)/misc/patches
   mkdir -p "$DEPS_DIR"

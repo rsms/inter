@@ -197,7 +197,16 @@ def setFontInfo(font, weight):
   #
   family = font.info.familyName  # i.e. "Inter UI"
   style = font.info.styleName    # e.g. "Medium Italic"
-  isitalic = font.info.italicAngle != 0
+
+  # Patch italicAngle to be either positive zero or single-decimal precision
+  # floating-point number.
+  # This value can go wrong since we are using floating-point numbers.
+  isitalic = False
+  if font.info.italicAngle != 0:
+    isitalic = True
+    font.info.italicAngle = round(font.info.italicAngle, 1)
+  else:
+    font.info.italicAngle = 0
 
   # weight
   font.info.openTypeOS2WeightClass = weight
