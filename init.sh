@@ -121,13 +121,14 @@ else
     date '+%s' > "$UPDATE_TIMESTAMP_FILE"
   fi
 
-  # patch ufo2ft [BUG #110]
-  P1_FILE="$VENV_DIR/lib/python/site-packages/ufo2ft/outlineCompiler.py"
+  # patch fonttools [BUG #110]
+  P1_FILE="$VENV_DIR/lib/python/site-packages/fontTools/misc/psCharStrings.py"
   P1_BACKUP="$P1_FILE.orig"
   if [[ ! -f "$P1_BACKUP" ]]; then
     echo "Patching $P1_FILE (backup at $P1_BACKUP)"
     mv "$P1_FILE" "$P1_BACKUP"
-    patch "$P1_BACKUP" -o "$P1_FILE" -u -i misc/ufo2ft-2.5.0-outlineCompiler.patch
+    patch "$P1_BACKUP" -o "$P1_FILE" -u -i \
+      misc/fonttools-3.34.2-psCharStrings.patch
   fi
 
 

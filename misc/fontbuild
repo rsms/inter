@@ -198,15 +198,13 @@ def setFontInfo(font, weight):
   family = font.info.familyName  # i.e. "Inter UI"
   style = font.info.styleName    # e.g. "Medium Italic"
 
-  # Patch italicAngle to be either positive zero or single-decimal precision
-  # floating-point number.
-  # This value can go wrong since we are using floating-point numbers.
+  # Update italicAngle
   isitalic = False
   if font.info.italicAngle != 0:
     isitalic = True
-    font.info.italicAngle = round(font.info.italicAngle, 1)
+    font.info.italicAngle = float('%.8g' % font.info.italicAngle)
   else:
-    font.info.italicAngle = 0
+    font.info.italicAngle = 0  # avoid "-0.0" value in UFO
 
   # weight
   font.info.openTypeOS2WeightClass = weight
