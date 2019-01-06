@@ -48,14 +48,21 @@ class FontStyleProp {
   valueInStyle(s) {
     let italic = s['font-style'] == 'italic' || s['font-style'].indexOf('oblique') != -1
     let weight = parseFloat(s['font-weight'])
+    console.log("s['font-weight']:", s['font-weight'])
     if (isNaN(weight)) {
       weight = s['font-weight']
+      if (weight == 'thin') {       return italic ? 'thin-italic' :       'thin' }
+      if (weight == 'extra-light') {return italic ? 'extra-light-italic' :'extra-light' }
+      if (weight == 'light') {      return italic ? 'light-italic' :      'light' }
       if (weight == 'normal') {     return italic ? 'italic' :            'regular' }
       if (weight == 'medium') {     return italic ? 'medium-italic' :     'medium' }
       if (weight == 'semi-bold') {  return italic ? 'semi-bold-italic' :  'semi-bold' }
       if (weight == 'bold') {       return italic ? 'bold-italic' :       'bold' }
       if (weight == 'extra-bold') { return italic ? 'extra-bold-italic' : 'extra-bold' }
     } else {
+      if (weight <= 150) { return italic ? 'thin-italic' :       'thin' }
+      if (weight <= 250) { return italic ? 'extra-light-italic' :'extra-light' }
+      if (weight <= 350) { return italic ? 'light-italic' :      'light' }
       if (weight <= 450) { return italic ? 'italic' :            'regular' }
       if (weight <= 550) { return italic ? 'medium-italic' :     'medium' }
       if (weight <= 650) { return italic ? 'semi-bold-italic' :  'semi-bold' }
