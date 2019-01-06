@@ -48,7 +48,6 @@ class FontStyleProp {
   valueInStyle(s) {
     let italic = s['font-style'] == 'italic' || s['font-style'].indexOf('oblique') != -1
     let weight = parseFloat(s['font-weight'])
-    console.log("s['font-weight']:", s['font-weight'])
     if (isNaN(weight)) {
       weight = s['font-weight']
       if (weight == 'thin') {       return italic ? 'thin-italic' :       'thin' }
