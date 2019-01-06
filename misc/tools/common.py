@@ -43,11 +43,15 @@ def getGitHash():
     try:
       _gitHash = subprocess.check_output(
         ['git', '-C', BASEDIR, 'rev-parse', '--short', 'HEAD'],
-        shell=False,
+        stderr=subprocess.STDOUT,
         **_enc_kwargs
       ).strip()
     except:
-      pass
+      try:
+        # git rev-parse --short HEAD > githash.txt
+        _gitHash = readTextFile(pjoin(BASEDIR, 'githash.txt')).strip()
+      except:
+        pass
   return _gitHash
 
 

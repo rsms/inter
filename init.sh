@@ -22,7 +22,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
     pushd "$SRCDIR" >/dev/null
     SRCDIR_ABS=$(pwd)
     popd >/dev/null
-    export PYTHONPATH=$SRCDIR_ABS/misc/pylib
+    export PYTHONPATH=$SRCDIR_ABS/misc/tools
   fi
 else
   # Subshell
@@ -39,6 +39,15 @@ else
   clean=false
   if [[ "$1" == "-clean" ]]; then
     clean=true
+  fi
+
+  platform=osx
+  UNAME=$(uname)
+  if [[ "$UNAME" == *"inux"* ]]; then
+    platform=linux
+  elif [[ "$UNAME" != *"arwin"* ]]; then
+    echo "Unsupported platform $UNAME (only macOS and Linux are supported)" >&2
+    exit 1
   fi
 
 
@@ -194,6 +203,7 @@ else
       rm -rf "$DEPS_DIR/woff2"
       exit 1
     fi
+    LINK=true
   elif [[ ! -f "$VENV_DIR/bin/woff2_compress" ]]; then
     LINK=true
   fi
@@ -265,7 +275,7 @@ else
   if [[ ! -f "$OTS_DIR/ots-sanitize" ]]; then
     mkdir -p "$OTS_DIR"
     fetch \
-      https://github.com/khaledhosny/ots/releases/download/v${OTS_VERSION}/ots-${OTS_VERSION}-osx.zip \
+      https://github.com/khaledhosny/ots/releases/download/v${OTS_VERSION}/ots-${OTS_VERSION}-${platform}.zip \
       "$OTS_DIR/ots.zip"
     pushd "$OTS_DIR" >/dev/null
     unzip ots.zip
@@ -288,20 +298,40 @@ else
 
 
   AUTOHINT_VERSION=1.8.2
+  AUTOHINT_SRC_VERSION=1.8.2.8
   LINK=false
   if [[ ! -f "$DEPS_DIR/ttfautohint-${AUTOHINT_VERSION}" ]]; then
-    fetch \
-      https://download.savannah.gnu.org/releases/freetype/ttfautohint-${AUTOHINT_VERSION}-tty-osx.tar.gz
-      "$DEPS_DIR/ttfautohint.tar.gz"
-    tar -C "$DEPS_DIR" -xzf "$DEPS_DIR/ttfautohint.tar.gz"
-    rm "$DEPS_DIR/ttfautohint.tar.gz"
-    mv -f "$DEPS_DIR/ttfautohint" "$DEPS_DIR/ttfautohint-${AUTOHINT_VERSION}"
+    if [[ "$platform" == "osx" ]]; then
+      fetch \
+        https://download.savannah.gnu.org/releases/freetype/ttfautohint-${AUTOHINT_VERSION}-tty-osx.tar.gz \
+        "$DEPS_DIR/ttfautohint.tar.gz"
+      tar -C "$DEPS_DIR" -xzf "$DEPS_DIR/ttfautohint.tar.gz"
+      rm "$DEPS_DIR/ttfautohint.tar.gz"
+      mv -f "$DEPS_DIR/ttfautohint" "$DEPS_DIR/ttfautohint-${AUTOHINT_VERSION}"
+    else
+      fetch \
+        https://github.com/source-foundry/ttfautohint-build/archive/v${AUTOHINT_SRC_VERSION}.tar.gz \
+        "$DEPS_DIR/ttfautohint-build.tar.gz"
+      pushd "$DEPS_DIR" >/dev/null
+        tar -xzf ttfautohint-build.tar.gz
+        rm ttfautohint-build.tar.gz
+        rm -rf ttfautohint-build
+        mv -f ttfautohint*/ ./ttfautohint-build
+        pushd ttfautohint-build >/dev/null
+          ./ttfautohint-build.sh
+        popd >/dev/null
+        mv -f \
+          /root/ttfautohint-build/ttfautohint*/frontend/ttfautohint \
+          "ttfautohint-${AUTOHINT_VERSION}"
+        rm -rf /root/ttfautohint-build ttfautohint-build
+      popd >/dev/null
+    fi
     LINK=true
   elif [[ ! -f "$VENV_DIR/bin/ttfautohint" ]]; then
     LINK=true
   fi
   if $LINK; then
-    ln -vfs ../../deps/ttfautohint-1.8.2 "$VENV_DIR/bin/ttfautohint"
+    ln -vfs ../../deps/ttfautohint-${AUTOHINT_VERSION} "$VENV_DIR/bin/ttfautohint"
   fi
 
   if [[ ! -f "$VENV_DIR/bin/ttf2woff" ]] || [[ ! -f "$SRCDIR/misc/ttf2woff/ttf2woff" ]]; then
@@ -378,8 +408,20 @@ else
       echo -n " src/Inter-UI-${style}.ufo/*.plist" >> "$GEN_MAKE_FILE"
       echo -n " src/Inter-UI-${style}.ufo/*.fea" >> "$GEN_MAKE_FILE"
       echo -n " src/Inter-UI-${style}.ufo/glyphs/*.plist" >> "$GEN_MAKE_FILE"
-      echo -n " src/Inter-UI-${style}.ufo/glyphs/*.glif" >> "$GEN_MAKE_FILE"
-      echo ")" >> "$GEN_MAKE_FILE"
+      # echo -n " src/Inter-UI-${style}.ufo/glyphs/*.glif" >> "$GEN_MAKE_FILE"
+      echo -n ")" >> "$GEN_MAKE_FILE"
+      echo " src/Inter-UI.designspace" >> "$GEN_MAKE_FILE"
+    done
+
+    echo "" >> "$GEN_MAKE_FILE"
+
+    # master OTF and TTF rules
+    for style in "${master_styles[@]}"; do
+      echo "${DIST_DIR_TOK}const/Inter-UI-${style}.otf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
+      echo -e "\tmisc/fontbuild compile -o \$@ src/Inter-UI-${style}.ufo" >> "$GEN_MAKE_FILE"
+      echo "${DIST_DIR_TOK}const/Inter-UI-${style}.ttf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
+      echo -e "\tmisc/fontbuild compile -o \$@ src/Inter-UI-${style}.ufo" >> "$GEN_MAKE_FILE"
+      echo "" >> "$GEN_MAKE_FILE"
     done
 
     # generate all_ufo: <master_ufos>
@@ -388,8 +430,6 @@ else
     #   echo -n " \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
     # done
     # echo "" >> "$GEN_MAKE_FILE"
-    
-    echo "" >> "$GEN_MAKE_FILE"
 
     # add derived styles to style array
     for e in "${derived_styles[@]}"; do

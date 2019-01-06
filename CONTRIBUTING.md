@@ -34,18 +34,48 @@ If these rules are not followed, generated styles will fail to build.
 
 ## Compiling font files
 
-There are two ways by which you can generate font files (OTF, TTF, WOFF2, etc) from the sources files:
+There are three ways to generate font files (OTF, TTF, WOFF2, etc) from the sources files:
 
+- Using Inter UI's own build system: `dockermake` and locally (see ["Using the toolchain"](#using-the-toolchain))
 - Using the "export" feature in font editors like [Glyphs](https://glyphsapp.com/) or [RoboFont](http://robofont.com/)
-- Using Inter UI's own build system (which requires no external tools.)
 
 Exporting from font editors is a great alternative if you just want to test things out, but using Inter UI's own build system is the way to go for "production quality" font files. The rest of this section covers how to use Inter UI's own build system, aka _the toolchain_.
 
+
 ### Using the toolchain
 
-Currently the toolchain has only been tested on macOS, and all you need is [Python](https://www.python.org/), which comes pre-installed with macOS, so no need to install anything. Python can easily be installed in Windows, Linux and other OSes.
+The Inter UI toolchain is a collection of programs setup to build everything
+in a high-quality and reliable way. It can be fully automated and requires no
+paid software.
 
-You'll want to open a Terminal for this.
+TL;DR: to make & test everything:
+
+```
+./dockermake -j test
+```
+
+There are two ways of using the toolchain:
+
+- `dockermake` — a [prebuild Docker image](https://cloud.docker.com/u/rsms/repository/docker/rsms/inter-ui-build) containing the complete toolchain is used. This is the easiest and quickest way to build Inter UI. Supports any platform that can run Docker, like Windows, macOS and Linux.
+- locally — setup the toolchain locally using `init.sh` and then build using make. Only supports macOS and Linux.
+
+#### Using dockermake
+
+`dockermake` is simply `make` running in a docker image with the complete toolchain preinstalled.
+
+Simply edit source files and run `dockermake [make-arg ...]`
+
+Example:
+
+```
+$ ./dockermake -j Regular SemiBoldItalic
+misc/fontbuild instancegen src/Inter-UI.designspace SemiBoldItalic
+...
+```
+
+#### Local toolchain
+
+Currently the toolchain has only been tested on macOS and Linux. All you need to have preinstalled is [Python 3](https://www.python.org/downloads/).
 
 The first step is to initialize the toolchain itself:
 
@@ -60,7 +90,7 @@ This will fetch, setup and configure everything needed to build and test Inter U
 We can now run `make` to build all font files:
 
 ```
-$ make -j
+$ make -j Regular SemiBoldItalic
 ```
 
 This may take a long time (a few minutes) the first time as it generates "font instances" (i.e. all styles that are derived through interpolation from the master styles) in addition to compiling the actual font files (OTF, TTF, etc.)

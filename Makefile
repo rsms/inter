@@ -55,7 +55,14 @@ all_var: \
 	$(FONTDIR)/var/Inter-UI-upright.var.ttf \
 	$(FONTDIR)/var/Inter-UI-italic.var.ttf
 
-# Disabled. See https://github.com/rsms/inter/issues/75
+all_ufo_masters = $(Thin_ufo_d) \
+                  $(ThinItalic_ufo_d) \
+                  $(Regular_ufo_d) \
+                  $(Italic_ufo_d) \
+                  $(Black_ufo_d) \
+                  $(BlackItalic_ufo_d)
+
+# Hinted variable font disabled. See https://github.com/rsms/inter/issues/75
 # all_var_hinted: $(FONTDIR)/var-hinted/Inter-UI.var.ttf $(FONTDIR)/var-hinted/Inter-UI.var.woff2
 # .PHONY: all_var_hinted
 
@@ -79,43 +86,13 @@ build/%.woff: build/%.ttf
 # make sure intermediate TTFs are not gc'd by make
 .PRECIOUS: build/%.ttf
 
-# TTF -> EOT (disabled)
-# build/%.eot: build/%.ttf
-# 	ttf2eot "$<" > "$@"
 
-
-# Master UFO -> OTF, TTF
-
-all_ufo_masters = $(Thin_ufo_d) \
-                  $(ThinItalic_ufo_d) \
-                  $(Regular_ufo_d) \
-                  $(Italic_ufo_d) \
-                  $(Black_ufo_d) \
-                  $(BlackItalic_ufo_d)
-
+# Master UFOs -> variable TTF
 $(FONTDIR)/var/%.var.ttf: src/%.designspace $(all_ufo_masters)
 	misc/fontbuild compile-var -o $@ $<
 
-$(FONTDIR)/const/Inter-UI-Thin.%: src/Inter-UI.designspace $(Thin_ufo_d)
-	misc/fontbuild compile -o $@ src/Inter-UI-Thin.ufo
 
-$(FONTDIR)/const/Inter-UI-ThinItalic.%: src/Inter-UI.designspace $(ThinItalic_ufo_d)
-	misc/fontbuild compile -o $@ src/Inter-UI-ThinItalic.ufo
-
-$(FONTDIR)/const/Inter-UI-Regular.%: src/Inter-UI.designspace $(Regular_ufo_d)
-	misc/fontbuild compile -o $@ src/Inter-UI-Regular.ufo
-
-$(FONTDIR)/const/Inter-UI-Italic.%: src/Inter-UI.designspace $(Italic_ufo_d)
-	misc/fontbuild compile -o $@ src/Inter-UI-Italic.ufo
-
-$(FONTDIR)/const/Inter-UI-Black.%: src/Inter-UI.designspace $(Black_ufo_d)
-	misc/fontbuild compile -o $@ src/Inter-UI-Black.ufo
-
-$(FONTDIR)/const/Inter-UI-BlackItalic.%: src/Inter-UI.designspace $(BlackItalic_ufo_d)
-	misc/fontbuild compile -o $@ src/Inter-UI-BlackItalic.ufo
-
-
-# Instance UFO -> OTF, TTF
+# Instance UFO -> OTF, TTF (note: masters' rules in generated.make)
 $(FONTDIR)/const/Inter-UI-%.otf: build/ufo/Inter-UI-%.ufo
 	misc/fontbuild compile -o $@ $<
 
@@ -153,6 +130,8 @@ build/ufo/Inter-UI-%.ufo: src/Inter-UI.designspace $(all_ufo_masters)
 $(FONTDIR)/const-hinted/%.ttf: $(FONTDIR)/const/%.ttf
 	mkdir -p "$(dir $@)"
 	ttfautohint --fallback-stem-width=256 --no-info "$<" "$@"
+
+# python -m ttfautohint --fallback-stem-width=256 --no-info "$<" "$@"
 
 # $(FONTDIR)/var-hinted/%.ttf: $(FONTDIR)/var/%.ttf
 # 	mkdir -p "$(dir $@)"
@@ -200,13 +179,6 @@ $(FONTDIR)/samples:
 
 
 
-# load version, used by zip and dist
-VERSION := $(shell cat version.txt)
-
-# distribution zip files
-ZIP_FILE_DIST := build/release/Inter-UI-${VERSION}.zip
-ZIP_FILE_DEV  := build/release/Inter-UI-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
-
 ZD = build/tmp/zip
 # intermediate zip target that creates a zip file at build/tmp/a.zip
 build/tmp/a.zip:
@@ -246,6 +218,12 @@ build/tmp/a.zip:
 	cd "$(ZD)" && zip -q -X -r "../../../$@" * && cd ../..
 	@rm -rf "$(ZD)"
 
+# load version, used by zip and dist
+VERSION := $(shell cat version.txt)
+
+# distribution zip files
+ZIP_FILE_DIST := build/release/Inter-UI-${VERSION}.zip
+
 # zip
 build/release/Inter-UI-%.zip: build/tmp/a.zip
 	@mkdir -p "$(shell dirname "$@")"
@@ -255,7 +233,7 @@ build/release/Inter-UI-%.zip: build/tmp/a.zip
 
 zip: all
 	$(MAKE) check
-	$(MAKE) ${ZIP_FILE_DEV}
+	$(MAKE) build/release/Inter-UI-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
 
 zip_dist: pre_dist all
 	$(MAKE) check

@@ -1,0 +1,11 @@
+#!/bin/bash -e
+#
+# Runs make in a prebuilt docker image.
+# All you need to have installed is docker for this to work.
+# This is an alternative to building locally.
+#
+cd "$(dirname "$0")"
+if [[ -d .git ]]; then
+  git rev-parse --short HEAD > githash.txt
+fi
+docker run --rm -it -v "$PWD:/host" rsms/inter-ui-build:latest make "$@"
