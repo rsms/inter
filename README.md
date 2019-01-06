@@ -87,4 +87,5 @@ There's a Figma workspace for glyphs, with configured metrics: ["Inter UI glyphs
 ## See also
 
 - [Contributing](CONTRIBUTING.md)
+- [Compiling font files](CONTRIBUTING.md#compiling-font-files)
 - [SIL Open Font License](LICENSE.txt)
