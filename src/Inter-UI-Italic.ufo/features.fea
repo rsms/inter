@@ -1125,6 +1125,29 @@ pos @Uppercase <16 0 32 0>;
 
 } cpsp;
 
+feature liga {
+@f = [ f fdotaccent ];
+@t = [ t tpalatalhook trthook tcurl tccurl tturn tbar tcommaaccent tcaron uni021B tdotaccent tdotbelow tlinebelow tcircumflexbelow tdieresis ];
+@v = [ v vtilde vdotbelow ];
+@w = [ w wdieresis wturn wcircumflex wgrave wacute wdotaccent wdotbelow wring ];
+@x = [ x xdotaccent xdieresis khacyrillic ];
+@y = [ y ydieresis yhook uni024F yacute ycircumflex uni0233 ydotaccent yring ygrave ydotbelow yhookabove ytilde ucyrillic ushortcyrillic umacroncyrillic udieresiscyrillic uhungarumlautcyrillic ];
+@z = [ z zbar zhook uni0240 zrthook zacute zdotaccent zcaron zcircumflex zdotbelow zlinebelow zcurl ];
+
+@one = [ one one.ss01 one.tf one.tf.ss01 ];
+@top_quote = [ quoteleft quoteright quotesingle quotedbl quotedblleft quotedblright ];
+
+@sups = [ a.sups b.sups c.sups d.sups e.sups f.sups g.sups h.sups i.sups j.sups k.sups l.sups m.sups n.sups o.sups p.sups q.sups r.sups s.sups t.sups u.sups v.sups w.sups x.sups y.sups z.sups zero.sups one.sups two.sups three.sups four.sups five.sups six.sups seven.sups eight.sups nine.sups parenleft.sups parenright.sups plus.sups minus.sups equal.sups zero.numr one.numr two.numr three.numr four.numr five.numr six.numr seven.numr eight.numr nine.numr plus.numr minus.numr equal.numr parenleft.numr parenright.numr zero.frac one.frac two.frac three.frac four.frac five.frac six.frac seven.frac eight.frac nine.frac ];
+
+@frac = [ onehalf onethird onequarter threequarters fivesixths onefraction seveneighths oneeighth fiveeighths threeeighths uni214D cadauna careof accountof addresssubject ];
+
+# Replace "r" with "r.1" when it preceeds glyphs with things
+# extending leftwards to the tail of the r.
+# This breaks the glyphs up better, increasing legibility.
+sub r' [ @f @t @v w @x @y @z @one @top_quote @sups @frac kturn ] by r.1;
+
+} liga;
+
 feature dlig {
 sub exclam question by interrobang;
 sub question exclam by interrobang;
