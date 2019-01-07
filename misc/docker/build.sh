@@ -26,7 +26,6 @@ rsync -v -acC --delete --filter="- *.pyc" --filter="- /*/" \
   "$BUILD_DIR/misc/tools/" &
 rsync -v -acC --delete \
   misc/fontbuild \
-  misc/fonttools-3.34.2-psCharStrings.patch \
   misc/ttf2woff \
   "$BUILD_DIR/misc/"
 wait
