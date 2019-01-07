@@ -5,6 +5,7 @@
   --var-letterSpacing: -0.03em;
   --var-lineHeight: 1.1;
   text-align: center;
+  overflow-wrap: break-word;
 }
 @supports (font-variation-settings: normal) {
   .variable-sample {
