@@ -71,8 +71,12 @@ else
     export pip=$(which pip3)
     if [ "$pip" = "" ]; then
       export pip=$(which pip)
+      if [ "$pip" = "" ]; then
+        echo "pip not found in PATH -- please install Python 3" >&2
+        exit 1
+      fi
     fi
-    echo "using pip: $pip $(pip --version)"
+    echo "using $("$pip" --version)"
     if [ "$pip" = "" ]; then
       echo "Pip for Python 3 not found (tried pip and pip3 in PATH)" >&2
       exit 1
@@ -96,9 +100,9 @@ else
   fi 
 
   if [[ ! -d "$VENV_DIR/bin" ]]; then
+    require_virtualenv
     echo "Setting up virtualenv in '$VENV_DIR'"
     rm -f "$VENV_DIR/lib/python"
-    require_virtualenv
     $virtualenv "$VENV_DIR"
   elif [[ ! -z $VIRTUAL_ENV ]] && [[ "$VIRTUAL_ENV" != "$VENV_DIR_ABS" ]]; then
     echo "Looks like the repository has moved location -- updating virtualenv"
