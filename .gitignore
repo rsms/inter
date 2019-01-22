@@ -20,8 +20,10 @@ build
 /docs/_site
 /githash.txt
 
-src/FontInspector.html
-src/svg
+/src/FontInspector.html
+/src/svg
+/src/*.ufo
+/src/*.designspace
 
 # ignore extra layers
 src/*.ufo/glyphs.*

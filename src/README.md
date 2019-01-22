@@ -1,14 +1,25 @@
 # Source files
 
-You either edit the .glyphs file OR you edit the UFO files.
-Any edits to the .glyphs file will overwrite changes to UFO files,
-but not vice versa.
+The main source file is `Inter-UI.glyphs`, but you can easily generate
+UFOs and work with those instead, if you're using a FontEditor that does
+not support .glyphs files.
 
-`Inter-UI.glyphs` is the main combined master file.
-Editing this and running `make` patches and potentially overwrites changes to
-the UFO files and replaces `Inter-UI.desigspace`.
+For more details on how to work with these source files and how to build
+font files from them, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-`Inter-UI.desigspace` and `Inter-UI*.ufo` are generated from the .glyphs file
-but can be edited themselves. For instance, if you fork this project and
-prefer to work with UFOs, you can do that and simply ignore the .glyphs file.
+## Generating designspace and UFO files
+
+```
+make designspace
+```
+
+This will generate all masters as UFO files in this (`src`) directory as well
+as accompanying designspace files.
+
+You can now forget about the .glyphs file and simply work with the UFO and
+designspace files, and keep building using `make`.
+
+Note that UFO and designspace files are automatically generated as part of
+the build process, so in practice you can simply run `make` and those files
+will be generated for you.
 
