@@ -251,7 +251,7 @@ pre_dist:
 
 dist: zip_dist
 	$(MAKE) -j docs
-	misc/tools/versionize-css.py
+	misc/tools/versionize.py
 	@echo "——————————————————————————————————————————————————————————————————"
 	@echo ""
 	@echo "Next steps:"
