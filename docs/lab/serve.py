@@ -2,28 +2,32 @@
 from __future__ import print_function, absolute_import
 import os, sys
 import signal
-import SimpleHTTPServer
 import socket
-import SocketServer
+import http.server
 
 def sighandler(signum, frame):
   sys.stdout.write('\n')
   sys.stdout.flush()
   sys.exit(1)
 
-class TCPServer(SocketServer.TCPServer):
+
+class HTTPServer(http.server.HTTPServer):
+  def __init__(self, addr):
+    http.server.HTTPServer.__init__(
+      self, addr, http.server.SimpleHTTPRequestHandler)
+
   def server_bind(self):
     self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    self.socket.bind(self.server_address)
+    http.server.HTTPServer.server_bind(self)
 
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+addr = ("localhost", 3002)
 
 # make ^C instantly exit program
 signal.signal(signal.SIGINT, sighandler)
 
-httpd = TCPServer(
-  ("127.0.0.1", 3002),
-  SimpleHTTPServer.SimpleHTTPRequestHandler)
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-print("serving at http://localhost:3002/")
+httpd = HTTPServer(addr)
+print("serving at http://%s:%d/" % addr)
 httpd.serve_forever()
