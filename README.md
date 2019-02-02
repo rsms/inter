@@ -1,6 +1,6 @@
-# Inter UI
+# Inter
 
-Inter UI is a typeface specially designed for user interfaces
+Inter is a typeface specially designed for user interfaces
 with focus on high legibility of small-to-medium sized text on computer screens.
 
 The family features a tall x-height to aid in readability of mixed-case and
@@ -22,7 +22,7 @@ After downloading the zip from above:
 
 ## Design
 
-Inter UI is similar to Roboto, San Francisco, Akkurat, Asap, Lucida Grande and other "UI" typefaces. Some trade-offs were made in order to make this typeface work really well at small sizes:
+Inter is similar to Roboto, San Francisco, Akkurat, Asap, Lucida Grande and other "UI" and "Text" typefaces. Some trade-offs were made in order to make this typeface work really well at small sizes:
 
 - Currently not suitable for very large sizes because of some small-scale glyph optimizations (like "pits" and "traps") that help rasterization at small sizes but stand out and interfere at large sizes.
 - Rasterized at sizes below 12px, some stems—like the horizontal center of "E", "F", or vertical center of "m"—are drawn with two semi-opaque pixels instead of one solid. This is because we "prioritize" (optimize for) higher-density rasterizations. If we move these stems to an off-center position—so that they can be drawn sharply at e.g. 11px—text will be less legible at higher resolutions.
@@ -50,7 +50,7 @@ Current font styles:
 | Black                | 900
 | Black Italic         | 900
 
-Inter UI also ships as a variable font.
+Inter also ships as a variable font.
 
 
 ### Font metrics
@@ -61,7 +61,7 @@ However, as the project progressed and the typeface was put into use, it quickly
 became clear that for anything longer than a short word, it was actually hard to
 read the almost monotonically-spaced letters.
 
-A second major revision was create where the previously-strict rule of geometry being even multiples of 256 was relaxed and now the rule is "try to stick with 128x, if you can't, stick with 64x and if you can't do that either, never go below 16x." This means that Inter UI is now much more variable in pace than it used to be, making it work better at higher resolutions and work much better in longer text, but losing some contrast and sharpness at small sizes.
+A second major revision was create where the previously-strict rule of geometry being even multiples of 256 was relaxed and now the rule is "try to stick with 128x, if you can't, stick with 64x and if you can't do that either, never go below 16x." This means that Inter is now much more variable in pace than it used to be, making it work better at higher resolutions and work much better in longer text, but losing some contrast and sharpness at small sizes.
 
 ![Metrics](docs/res/metrics.png)
 
@@ -81,7 +81,7 @@ Translating between EM units and pixels:
 - Rasterized at 22px: 1px = 128 units
 - Rasterized at 44px: 1px =  64 units
 
-There's a Figma workspace for glyphs, with configured metrics: ["Inter UI glyphs"](https://www.figma.com/file/RtScFU5NETY3j9E0yOmnW4gv/)
+There's a Figma workspace for glyphs, with configured metrics: ["Inter glyphs"](https://www.figma.com/file/RtScFU5NETY3j9E0yOmnW4gv/)
 
 
 ## See also

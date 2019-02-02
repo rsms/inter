@@ -383,7 +383,7 @@ else
       if $NEED_GENERATE; then
         break
       fi
-      if has_newer "src/Inter-UI-${style}.ufo" "$GEN_MAKE_FILE"; then
+      if has_newer "src/Inter-${style}.ufo" "$GEN_MAKE_FILE"; then
         NEED_GENERATE=true
       fi
     done
@@ -399,22 +399,22 @@ else
     for style in "${master_styles[@]}"; do
       all_styles+=( $style )
       echo -n "${style}_ufo_d := \$(wildcard" >> "$GEN_MAKE_FILE"
-      echo -n " src/Inter-UI-${style}.ufo/*.plist" >> "$GEN_MAKE_FILE"
-      echo -n " src/Inter-UI-${style}.ufo/*.fea" >> "$GEN_MAKE_FILE"
-      echo -n " src/Inter-UI-${style}.ufo/glyphs/*.plist" >> "$GEN_MAKE_FILE"
-      # echo -n " src/Inter-UI-${style}.ufo/glyphs/*.glif" >> "$GEN_MAKE_FILE"
+      echo -n " src/Inter-${style}.ufo/*.plist" >> "$GEN_MAKE_FILE"
+      echo -n " src/Inter-${style}.ufo/*.fea" >> "$GEN_MAKE_FILE"
+      echo -n " src/Inter-${style}.ufo/glyphs/*.plist" >> "$GEN_MAKE_FILE"
+      # echo -n " src/Inter-${style}.ufo/glyphs/*.glif" >> "$GEN_MAKE_FILE"
       echo -n ")" >> "$GEN_MAKE_FILE"
-      echo " src/Inter-UI.designspace" >> "$GEN_MAKE_FILE"
+      echo " src/Inter.designspace" >> "$GEN_MAKE_FILE"
     done
 
     echo "" >> "$GEN_MAKE_FILE"
 
     # master OTF and TTF rules
     for style in "${master_styles[@]}"; do
-      echo "${DIST_DIR_TOK}const/Inter-UI-${style}.otf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
-      echo -e "\tmisc/fontbuild compile -o \$@ src/Inter-UI-${style}.ufo" >> "$GEN_MAKE_FILE"
-      echo "${DIST_DIR_TOK}const/Inter-UI-${style}.ttf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
-      echo -e "\tmisc/fontbuild compile -o \$@ src/Inter-UI-${style}.ufo" >> "$GEN_MAKE_FILE"
+      echo "${DIST_DIR_TOK}const/Inter-${style}.otf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
+      echo -e "\tmisc/fontbuild compile -o \$@ src/Inter-${style}.ufo" >> "$GEN_MAKE_FILE"
+      echo "${DIST_DIR_TOK}const/Inter-${style}.ttf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
+      echo -e "\tmisc/fontbuild compile -o \$@ src/Inter-${style}.ufo" >> "$GEN_MAKE_FILE"
       echo "" >> "$GEN_MAKE_FILE"
     done
 
@@ -436,23 +436,23 @@ else
     for style in "${all_styles[@]}"; do
       echo "${style}: ${style}_otf ${style}_ttf ${style}_ttf_hinted ${style}_web ${style}_web_hinted" >> "$GEN_MAKE_FILE"
 
-      echo "${style}_ttf_hinted: ${DIST_DIR_TOK}const-hinted/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
-      echo "${style}_ttf: ${DIST_DIR_TOK}const/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
-      echo "${style}_otf: ${DIST_DIR_TOK}const/Inter-UI-${style}.otf" >> "$GEN_MAKE_FILE"
+      echo "${style}_ttf_hinted: ${DIST_DIR_TOK}const-hinted/Inter-${style}.ttf" >> "$GEN_MAKE_FILE"
+      echo "${style}_ttf: ${DIST_DIR_TOK}const/Inter-${style}.ttf" >> "$GEN_MAKE_FILE"
+      echo "${style}_otf: ${DIST_DIR_TOK}const/Inter-${style}.otf" >> "$GEN_MAKE_FILE"
 
       echo -n "${style}_web:" >> "$GEN_MAKE_FILE"
       for format in "${web_formats[@]}"; do
-        echo -n " ${DIST_DIR_TOK}const/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
+        echo -n " ${DIST_DIR_TOK}const/Inter-${style}.${format}" >> "$GEN_MAKE_FILE"
       done
       echo "" >> "$GEN_MAKE_FILE"
 
       echo -n "${style}_web_hinted:" >> "$GEN_MAKE_FILE"
       for format in "${web_formats[@]}"; do
-        echo -n " ${DIST_DIR_TOK}const-hinted/Inter-UI-${style}.${format}" >> "$GEN_MAKE_FILE"
+        echo -n " ${DIST_DIR_TOK}const-hinted/Inter-${style}.${format}" >> "$GEN_MAKE_FILE"
       done
       echo "" >> "$GEN_MAKE_FILE"
 
-      echo "${style}_check: ${DIST_DIR_TOK}const/Inter-UI-${style}.otf ${DIST_DIR_TOK}const/Inter-UI-${style}.ttf" >> "$GEN_MAKE_FILE"
+      echo "${style}_check: ${DIST_DIR_TOK}const/Inter-${style}.otf ${DIST_DIR_TOK}const/Inter-${style}.ttf" >> "$GEN_MAKE_FILE"
       echo -e "\tmisc/fontbuild checkfont $^" >> "$GEN_MAKE_FILE"
 
       echo "" >> "$GEN_MAKE_FILE"
@@ -503,14 +503,14 @@ else
     # all_samples_pdf target
     echo -n "all_samples_pdf:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
-      echo -n " \$(FONTDIR)/samples/Inter-UI-${style}.pdf" >> "$GEN_MAKE_FILE"
+      echo -n " \$(FONTDIR)/samples/Inter-${style}.pdf" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
 
     # all_samples_png target
     echo -n "all_samples_png:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
-      echo -n " \$(FONTDIR)/samples/Inter-UI-${style}.png" >> "$GEN_MAKE_FILE"
+      echo -n " \$(FONTDIR)/samples/Inter-${style}.png" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
 

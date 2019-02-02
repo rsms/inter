@@ -8,7 +8,7 @@ DOCKER_DIR=$(pwd)
 cd ../..
 ROOT_DIR=$(pwd)
 
-IMAGE_NAME=rsms/inter-ui-build
+IMAGE_NAME=rsms/inter-build
 BUILD_DIR=$ROOT_DIR/build/docker
 
 # setup build dir

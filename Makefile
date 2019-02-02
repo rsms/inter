@@ -19,7 +19,7 @@
 #   all_var_hinted    Build all variable font files with hints into
 #                     FONTDIR/var-hinted
 #
-#   designspace       Build src/Inter-UI.designspace from src/Inter-UI.glyphs
+#   designspace       Build src/Inter.designspace from src/Inter.glyphs
 #
 # Style-specific targets:
 #   STYLE_otf         Build OTF file for STYLE into FONTDIR/const
@@ -45,15 +45,15 @@ all: all_const  all_const_hinted  all_var
 all_const: all_otf  all_ttf  all_web
 all_const_hinted: all_ttf_hinted  all_web_hinted
 var: \
-	$(FONTDIR)/var/Inter-UI.var.woff2 \
-	$(FONTDIR)/var/Inter-UI.var.ttf
+	$(FONTDIR)/var/Inter.var.woff2 \
+	$(FONTDIR)/var/Inter.var.ttf
 all_var: \
-	$(FONTDIR)/var/Inter-UI.var.woff2 \
-	$(FONTDIR)/var/Inter-UI-upright.var.woff2 \
-	$(FONTDIR)/var/Inter-UI-italic.var.woff2 \
-	$(FONTDIR)/var/Inter-UI.var.ttf \
-	$(FONTDIR)/var/Inter-UI-upright.var.ttf \
-	$(FONTDIR)/var/Inter-UI-italic.var.ttf
+	$(FONTDIR)/var/Inter.var.woff2 \
+	$(FONTDIR)/var/Inter-upright.var.woff2 \
+	$(FONTDIR)/var/Inter-italic.var.woff2 \
+	$(FONTDIR)/var/Inter.var.ttf \
+	$(FONTDIR)/var/Inter-upright.var.ttf \
+	$(FONTDIR)/var/Inter-italic.var.ttf
 
 all_ufo_masters = $(Thin_ufo_d) \
                   $(ThinItalic_ufo_d) \
@@ -63,7 +63,7 @@ all_ufo_masters = $(Thin_ufo_d) \
                   $(BlackItalic_ufo_d)
 
 # Hinted variable font disabled. See https://github.com/rsms/inter/issues/75
-# all_var_hinted: $(FONTDIR)/var-hinted/Inter-UI.var.ttf $(FONTDIR)/var-hinted/Inter-UI.var.woff2
+# all_var_hinted: $(FONTDIR)/var-hinted/Inter.var.ttf $(FONTDIR)/var-hinted/Inter.var.woff2
 # .PHONY: all_var_hinted
 
 .PHONY: all_const  all_const_hinted  var  all_var
@@ -93,34 +93,34 @@ $(FONTDIR)/var/%.var.ttf: src/%.designspace $(all_ufo_masters)
 
 
 # Instance UFO -> OTF, TTF (note: masters' rules in generated.make)
-$(FONTDIR)/const/Inter-UI-%.otf: build/ufo/Inter-UI-%.ufo
+$(FONTDIR)/const/Inter-%.otf: build/ufo/Inter-%.ufo
 	misc/fontbuild compile -o $@ $<
 
-$(FONTDIR)/const/Inter-UI-%.ttf: build/ufo/Inter-UI-%.ufo
+$(FONTDIR)/const/Inter-%.ttf: build/ufo/Inter-%.ufo
 	misc/fontbuild compile -o $@ $<
 
 
 # designspace <- glyphs file
-src/Inter-UI-*.designspace: src/Inter-UI.designspace
-src/Inter-UI.designspace: src/Inter-UI.glyphs
+src/Inter-*.designspace: src/Inter.designspace
+src/Inter.designspace: src/Inter.glyphs
 	misc/fontbuild glyphsync $<
 
 # make sure intermediate files are not gc'd by make
-.PRECIOUS: src/Inter-UI-*.designspace
+.PRECIOUS: src/Inter-*.designspace
 
-designspace: src/Inter-UI.designspace
+designspace: src/Inter.designspace
 .PHONY: designspace
 
 # short-circuit Make for performance
-src/Inter-UI.glyphs:
+src/Inter.glyphs:
 	@true
 
 # instance UFOs <- master UFOs
-build/ufo/Inter-UI-%.ufo: src/Inter-UI.designspace $(all_ufo_masters)
-	misc/fontbuild instancegen src/Inter-UI.designspace $*
+build/ufo/Inter-%.ufo: src/Inter.designspace $(all_ufo_masters)
+	misc/fontbuild instancegen src/Inter.designspace $*
 
 # make sure intermediate UFOs are not gc'd by make
-.PRECIOUS: build/ufo/Inter-UI-%.ufo
+.PRECIOUS: build/ufo/Inter-%.ufo
 
 # Note: The seemingly convoluted dependency graph above is required to
 # make sure that glyphsync and instancegen are not run in parallel.
@@ -144,7 +144,7 @@ $(FONTDIR)/const-hinted/%.ttf: $(FONTDIR)/const/%.ttf
 
 
 # check var
-all_check_var: $(FONTDIR)/var/Inter-UI.var.ttf
+all_check_var: $(FONTDIR)/var/Inter.var.ttf
 	misc/fontbuild checkfont $(FONTDIR)/var/*.*
 
 # test runs all tests
@@ -185,34 +185,34 @@ build/tmp/a.zip:
 	@rm -rf "$(ZD)"
 	@rm -f  build/tmp/a.zip
 	@mkdir -p \
-	  "$(ZD)/Inter UI (web)" \
-	  "$(ZD)/Inter UI (web hinted)" \
-	  "$(ZD)/Inter UI (TTF)" \
-	  "$(ZD)/Inter UI (TTF hinted)" \
-	  "$(ZD)/Inter UI (TTF variable)" \
-	  "$(ZD)/Inter UI (OTF)"
+	  "$(ZD)/Inter (web)" \
+	  "$(ZD)/Inter (web hinted)" \
+	  "$(ZD)/Inter (TTF)" \
+	  "$(ZD)/Inter (TTF hinted)" \
+	  "$(ZD)/Inter (TTF variable)" \
+	  "$(ZD)/Inter (OTF)"
 	@#
 	@# copy font files
 	cp -a $(FONTDIR)/const/*.woff \
 	      $(FONTDIR)/const/*.woff2 \
-	      $(FONTDIR)/var/*.woff2        "$(ZD)/Inter UI (web)/"
+	      $(FONTDIR)/var/*.woff2        "$(ZD)/Inter (web)/"
 	cp -a $(FONTDIR)/const-hinted/*.woff \
 	      $(FONTDIR)/const-hinted/*.woff2 \
-	      													    "$(ZD)/Inter UI (web hinted)/"
-	cp -a $(FONTDIR)/const/*.ttf        "$(ZD)/Inter UI (TTF)/"
-	cp -a $(FONTDIR)/const-hinted/*.ttf "$(ZD)/Inter UI (TTF hinted)/"
-	cp -a $(FONTDIR)/var/*.ttf          "$(ZD)/Inter UI (TTF variable)/"
-	cp -a $(FONTDIR)/const/*.otf        "$(ZD)/Inter UI (OTF)/"
+	      													    "$(ZD)/Inter (web hinted)/"
+	cp -a $(FONTDIR)/const/*.ttf        "$(ZD)/Inter (TTF)/"
+	cp -a $(FONTDIR)/const-hinted/*.ttf "$(ZD)/Inter (TTF hinted)/"
+	cp -a $(FONTDIR)/var/*.ttf          "$(ZD)/Inter (TTF variable)/"
+	cp -a $(FONTDIR)/const/*.otf        "$(ZD)/Inter (OTF)/"
 	@#
 	@# copy misc stuff
-	cp -a misc/dist/inter-ui.css        "$(ZD)/Inter UI (web)/"
-	cp -a misc/dist/inter-ui.css        "$(ZD)/Inter UI (web hinted)/"
+	cp -a misc/dist/inter.css        "$(ZD)/Inter (web)/"
+	cp -a misc/dist/inter.css        "$(ZD)/Inter (web hinted)/"
 	cp -a misc/dist/*.txt               "$(ZD)/"
 	cp -a LICENSE.txt                   "$(ZD)/"
 	@#
 	@# Add "beta" to Light and Thin filenames.
 	@# Requires "rename" tool in PATH (`brew install rename` on macOS)
-	rename 's/(Light.*|Thin.*)\./$$1-BETA./' "$(ZD)/Inter UI"*/*.*
+	rename 's/(Light.*|Thin.*)\./$$1-BETA./' "$(ZD)/Inter"*/*.*
 	@#
 	@# zip
 	cd "$(ZD)" && zip -q -X -r "../../../$@" * && cd ../..
@@ -222,10 +222,10 @@ build/tmp/a.zip:
 VERSION := $(shell cat version.txt)
 
 # distribution zip files
-ZIP_FILE_DIST := build/release/Inter-UI-${VERSION}.zip
+ZIP_FILE_DIST := build/release/Inter-${VERSION}.zip
 
 # zip
-build/release/Inter-UI-%.zip: build/tmp/a.zip
+build/release/Inter-%.zip: build/tmp/a.zip
 	@mkdir -p "$(shell dirname "$@")"
 	@mv -f "$<" "$@"
 	@echo write "$@"
@@ -233,7 +233,7 @@ build/release/Inter-UI-%.zip: build/tmp/a.zip
 
 zip: all
 	$(MAKE) check
-	$(MAKE) build/release/Inter-UI-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
+	$(MAKE) build/release/Inter-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
 
 zip_dist: pre_dist all
 	$(MAKE) check
@@ -281,14 +281,14 @@ docs_fonts:
 
 .PHONY: docs docs_info docs_fonts
 
-docs/_data/fontinfo.json: docs/font-files/Inter-UI-Regular.otf misc/tools/fontinfo.py
+docs/_data/fontinfo.json: docs/font-files/Inter-Regular.otf misc/tools/fontinfo.py
 	misc/tools/fontinfo.py -pretty $< > docs/_data/fontinfo.json
 
 docs/lab/glyphinfo.json: build/UnicodeData.txt misc/tools/gen-glyphinfo.py $(all_ufo_masters)
-	misc/tools/gen-glyphinfo.py -ucd $< src/Inter-UI-*.ufo > $@
+	misc/tools/gen-glyphinfo.py -ucd $< src/Inter-*.ufo > $@
 
 docs/glyphs/metrics.json: $(Regular_ufo_d) misc/tools/gen-metrics-and-svgs.py
-	misc/tools/gen-metrics-and-svgs.py src/Inter-UI-Regular.ufo
+	misc/tools/gen-metrics-and-svgs.py src/Inter-Regular.ufo
 
 # Download latest Unicode data
 build/UnicodeData.txt:
@@ -299,24 +299,24 @@ build/UnicodeData.txt:
 # install targets
 install_ttf: all_ttf_const
 	$(MAKE) all_web -j
-	@echo "Installing TTF files locally at ~/Library/Fonts/Inter UI"
-	rm -rf ~/'Library/Fonts/Inter UI'
-	mkdir -p ~/'Library/Fonts/Inter UI'
-	cp -va $(FONTDIR)/const/*.ttf ~/'Library/Fonts/Inter UI'
+	@echo "Installing TTF files locally at ~/Library/Fonts/Inter"
+	rm -rf ~/'Library/Fonts/Inter'
+	mkdir -p ~/'Library/Fonts/Inter'
+	cp -va $(FONTDIR)/const/*.ttf ~/'Library/Fonts/Inter'
 
 install_ttf_hinted: all_ttf
 	$(MAKE) all_web -j
-	@echo "Installing autohinted TTF files locally at ~/Library/Fonts/Inter UI"
-	rm -rf ~/'Library/Fonts/Inter UI'
-	mkdir -p ~/'Library/Fonts/Inter UI'
-	cp -va $(FONTDIR)/const-hinted/*.ttf ~/'Library/Fonts/Inter UI'
+	@echo "Installing autohinted TTF files locally at ~/Library/Fonts/Inter"
+	rm -rf ~/'Library/Fonts/Inter'
+	mkdir -p ~/'Library/Fonts/Inter'
+	cp -va $(FONTDIR)/const-hinted/*.ttf ~/'Library/Fonts/Inter'
 
 install_otf: all_otf
 	$(MAKE) all_web -j
-	@echo "Installing OTF files locally at ~/Library/Fonts/Inter UI"
-	rm -rf ~/'Library/Fonts/Inter UI'
-	mkdir -p ~/'Library/Fonts/Inter UI'
-	cp -va $(FONTDIR)/const/*.otf ~/'Library/Fonts/Inter UI'
+	@echo "Installing OTF files locally at ~/Library/Fonts/Inter"
+	rm -rf ~/'Library/Fonts/Inter'
+	mkdir -p ~/'Library/Fonts/Inter'
+	cp -va $(FONTDIR)/const/*.otf ~/'Library/Fonts/Inter'
 
 install: install_otf
 

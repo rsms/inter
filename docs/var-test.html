@@ -6,52 +6,54 @@
 <style type="text/css">
 
 @font-face {
-  font-family: 'Inter UI var';
-  font-weight: 400 900;
-  font-style: oblique 0deg 20deg;
+  font-family: 'Inter var experimental';
+  font-weight: 100 900;
+  font-style: oblique 0deg 10deg;
   font-named-instance: 'Regular';
-  src: url("font-files/Inter-UI.var.woff2") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter-UI.var.woff2") format("woff2-variations"),
-       url("font-files/Inter-UI.var.woff2") format("woff2");
-}
-
-/* Alternate two-file setup used for italic where oblique degrees are not
-   supported (MS Edge) */
-@font-face {
-  font-family: 'Inter UI var-alt';
-  font-weight: 400 900;
-  font-style: normal;
-  font-named-instance: 'Regular';
-  src: url("font-files/Inter-UI-upright.var.woff2") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter-UI-upright.var.woff2") format("woff2-variations"),
-       url("font-files/Inter-UI-upright.var.woff2") format("woff2");
-}
-@font-face {
-  font-family: 'Inter UI var-alt';
-  font-weight: 400 900;
-  font-style: italic;
-  font-named-instance: 'Italic';
-  src: url("font-files/Inter-UI-italic.var.woff2") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter-UI-italic.var.woff2") format("woff2-variations"),
-       url("font-files/Inter-UI-italic.var.woff2") format("woff2");
+  src: url("font-files/Inter.var.woff2") format("woff2 supports variations(gvar)"),
+       url("font-files/Inter.var.woff2") format("woff2-variations"),
+       url("font-files/Inter.var.woff2") format("woff2");
 }
 
 /* Fix for Safari where defining font-weight range casues regular style
    to actually be italic. */
 @font-face {
-  font-family: 'Inter UI var safari-fix';
+  font-family: 'Inter var experimental safari';
+  /* DISABLE font-weight: 400 900; */
   font-style: oblique 0deg 10deg;
-  src: url("font-files/Inter-UI.var.woff2") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter-UI.var.woff2") format("woff2-variations"),
-       url("font-files/Inter-UI.var.woff2") format("woff2");
+  font-named-instance: 'Regular';
+  src: url("font-files/Inter.var.woff2") format("woff2 supports variations(gvar)"),
+       url("font-files/Inter.var.woff2") format("woff2-variations"),
+       url("font-files/Inter.var.woff2") format("woff2");
+}
+
+/* Alternate two-file setup used for italic where oblique degrees are not
+   supported (MS Edge) */
+@font-face {
+  font-family: 'Inter var single-axis';
+  font-weight: 100 900;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url("font-files/Inter-upright.var.woff2") format("woff2 supports variations(gvar)"),
+       url("font-files/Inter-upright.var.woff2") format("woff2-variations"),
+       url("font-files/Inter-upright.var.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Inter var single-axis';
+  font-weight: 100 900;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url("font-files/Inter-italic.var.woff2") format("woff2 supports variations(gvar)"),
+       url("font-files/Inter-italic.var.woff2") format("woff2-variations"),
+       url("font-files/Inter-italic.var.woff2") format("woff2");
 }
 
 
+
 html {
-  font-family: 'Inter UI', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
   font-synthesis: none;
-  /*font-style: oblique 0deg;*/
   letter-spacing: 0;
   line-height: 1.3;
 }
@@ -66,13 +68,13 @@ body {
     display: none;
   }
   html {
-    font-family: 'Inter UI var', sans-serif;
+    font-family: 'Inter var experimental', sans-serif;
   }
   html.safari {
-    font-family: 'Inter UI var safari-fix', sans-serif;
+    font-family: 'Inter var experimental safari', sans-serif;
   }
   html.msedge {
-    font-family: 'Inter UI var-alt', sans-serif;
+    font-family: 'Inter var single-axis', sans-serif;
   }
 }
 
@@ -128,7 +130,11 @@ tt {
 </head>
 <script>
 (function(u){
-if (u.indexOf('Safari/') != -1 && u.indexOf('Chrome/') == -1 && u.indexOf('Chromium/') == -1) {
+if (
+  u.indexOf('Safari/') != -1 &&
+  u.indexOf('Chrome/') == -1 &&
+  u.indexOf('Chromium/') == -1
+) {
   document.documentElement.classList.add('safari')
 } else if (u.indexOf('Edge/') != -1) {
   document.documentElement.classList.add('msedge')
@@ -137,9 +143,9 @@ if (u.indexOf('Safari/') != -1 && u.indexOf('Chrome/') == -1 && u.indexOf('Chrom
 </script>
 <body>
 <div class="intro">
-  <h1>Inter UI variable font test</h1>
+  <h1>Inter variable font test</h1>
   <p>
-    Tests how the Inter UI variable font is rendered by the web browser
+    Tests how the Inter variable font is rendered by the web browser
     with the traditional style properties <tt>font-weight</tt> and
     <tt>font-style</tt>.
   </p>
@@ -147,6 +153,9 @@ if (u.indexOf('Safari/') != -1 && u.indexOf('Chrome/') == -1 && u.indexOf('Chrom
     We can always use <tt>font-variation-settings</tt> to gain full control
     over variable font axes, which works as expected in all major browsers.
     This document does <em>not</em> make use of <tt>font-variation-settings</tt>.
+  </p>
+  <p>
+    Effective <tt>font-family: </tt><tt id="family-in-use"></tt>
   </p>
   <h2>Known issues:</h2>
   <ul>
@@ -192,13 +201,18 @@ if (u.indexOf('Safari/') != -1 && u.indexOf('Chrome/') == -1 && u.indexOf('Chrom
 <div class="samples"></div>
 <script type="text/javascript">(function(){
 
-if (getComputedStyle(document.documentElement).fontFamily.indexOf('Inter UI var') == -1) {
-  // variable fonts unsupported
+var docstyle = getComputedStyle(document.documentElement)
+
+// family-in-use
+document.querySelector('#family-in-use').innerText = docstyle.fontFamily
+
+if (docstyle.fontFamily.indexOf('Inter var') == -1) {
+  // variable fonts not unsupported
   return;
 }
 
 var samples = document.querySelector('div.samples')
-var weight = 400, weightMax = 900, weightStep = 20
+var weight = 100, weightMax = 900, weightStep = 20
 var slant = 0, slantMax = 10, slantStep = 5
 
 while (weight <= weightMax) {

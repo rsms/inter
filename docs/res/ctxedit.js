@@ -188,7 +188,7 @@ class Editable {
 
     // dynamic tracking
     if (!this.explicitTracking) {
-      this.setValue('tracking', InterUIDynamicTracking(size))
+      this.setValue('tracking', InterDynamicTracking(size))
     }
 
     // left indent
@@ -364,7 +364,7 @@ class CtxEdit {
 
     // let updateTracking = fontSize => {
     //   if (!this.currEditable.explicitTracking) {
-    //     var tracking = InterUIDynamicTracking(fontSize)
+    //     var tracking = InterDynamicTracking(fontSize)
     //     this.isChangingBindings = true
     //     b.setValue('tracking', tracking)
     //     this.isChangingBindings = false

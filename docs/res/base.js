@@ -77,18 +77,18 @@ var HUDNotification = {
 }
 
 
-// InterUIDynamicTracking takes the font size in points or pixels and returns
+// InterDynamicTracking takes the font size in points or pixels and returns
 // the compensating tracking in EM.
 //
-function InterUIDynamicTracking(fontSize) {
+function InterDynamicTracking(fontSize) {
   // tracking = a + b * e ^ (c * fontSize)
   var a = -0.017, b = 0.202, c = -0.175;
   return a + b * Math.pow(Math.E, c * fontSize)
 }
 
-// InterUIDynamicLineHeight produces the line height for the given font size
+// InterDynamicLineHeight produces the line height for the given font size
 //
-function InterUIDynamicLineHeight(fontSize) {
+function InterDynamicLineHeight(fontSize) {
   var l = 1.4
   return Math.round(fontSize * l)
 }
@@ -106,15 +106,3 @@ if (!window.MSStream &&
     document.body.classList.add('safari')
   }
 }
-
-
-// Google Analytics
-// ;(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-// (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-// m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-// })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-// ga('create', 'UA-105091131-2', 'auto');
-// ga('send', 'pageview');
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push(['js', new Date()])
-window.dataLayer.push(['config', 'UA-105091131-2'])

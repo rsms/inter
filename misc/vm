@@ -1,7 +1,7 @@
 #!/bin/bash -e
 #
 # Invokes provided arguments in a prebuilt docker image that contains
-# the Inter UI toolchain.
+# the Inter toolchain.
 #
 cd "$(dirname "$0")/.."
 
@@ -10,10 +10,10 @@ if [[ "$1" == "--no-tty" ]]; then
   RUN_ARGS=-i
   shift
 elif [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
-  echo "Run Inter UI build environment virtual machine using docker." >&2
+  echo "Run Inter build environment virtual machine using docker." >&2
   echo "usage: $0 [--no-tty] [<arg> ...]" >&2
   echo "--no-tty   Do not run with TTY input device emulation (useful for scripting)" >&2
   exit 1
 fi
 
-docker run --rm $RUN_ARGS -v "$PWD:/host" rsms/inter-ui-build:latest "$@"
+docker run --rm $RUN_ARGS -v "$PWD:/host" rsms/inter-build:latest "$@"

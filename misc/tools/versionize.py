@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # encoding: utf8
 #
-# Updates the "?v=x" in docs/inter-ui.css
+# Updates the "?v=x" in files:
+# - docs/inter.css
+# - docs/inter-ui.css
+# - docs/_includes/preload-font-files.html
 #
 import os, sys, re
 from os.path import dirname, basename, abspath, relpath, join as pjoin
@@ -29,5 +32,6 @@ def updateHTMLFile(filename):
     f.write(s)
 
 
+updateCSSFile(pjoin(BASEDIR, 'docs', 'inter.css'))
 updateCSSFile(pjoin(BASEDIR, 'docs', 'inter-ui.css'))
 updateHTMLFile(pjoin(BASEDIR, 'docs', '_includes', 'preload-font-files.html'))

@@ -29,8 +29,8 @@ endfor
   <h1>Dynamic Metrics</h1>
   <p>
     There's of course no absolute right or wrong when it comes to expressing
-    yourself with typography, but Inter UI Dynamic Metrics provides guidelines
-    for how to best use Inter UI.
+    yourself with typography, but Inter Dynamic Metrics provides guidelines
+    for how to best use Inter.
     You simply provide the optical font size,
     and the tracking and leading is calculated for you through the following
     formula:
@@ -44,7 +44,7 @@ endfor
     <formula>
       leading = round(<num data-binding="var-l">1.4</num> × <const>z</const>)
     </formula>
-    <formula title="Values for Inter UI">
+    <formula title="Values for Inter">
       <g><const title="Constant a">a</const> = <num data-binding="var-a">-0.016</num></g> &nbsp;&nbsp;
       <g><const title="Constant b">b</const> = <num data-binding="var-b">0.21</num></g> &nbsp;&nbsp;
       <g><const title="Constant c">c</const> = <num data-binding="var-c">-0.18</num></g> &nbsp;&nbsp;
@@ -227,10 +227,10 @@ var a = -0.017, b = 0.202, c = -0.175; // di=0.000247 on 2018-09-28
 var l = 1.4
 
 
-// _InterUIDynamicTracking is a version of InterUIDynamicTracking that
+// _InterDynamicTracking is a version of InterDynamicTracking that
 // uses some global variables that are adjustable.
 //
-function _InterUIDynamicTracking(fontSize, weightClass) {
+function _InterDynamicTracking(fontSize, weightClass) {
   // Note: weightClass is currently unused
   //
   // y = -0.01021241 + 0.3720623 * e ^ (-0.2808687 * x)
@@ -245,7 +245,7 @@ function _InterUIDynamicTracking(fontSize, weightClass) {
 }
 
 
-function InterUIDynamicLineHeight(fontSize, weightClass) {
+function InterDynamicLineHeight(fontSize, weightClass) {
   return Math.round(fontSize * l)
 }
 
@@ -298,8 +298,8 @@ Sample.prototype.idealDistance = function(fontSize) {
 
 Sample.prototype.setFontSize = function(fontSize) {
   this.fontSize = fontSize
-  this.tracking = baseTracking + _InterUIDynamicTracking(fontSize, weightClass)
-  this.lineHeight = InterUIDynamicLineHeight(fontSize, weightClass)
+  this.tracking = baseTracking + _InterDynamicTracking(fontSize, weightClass)
+  this.lineHeight = InterDynamicLineHeight(fontSize, weightClass)
   this.maxBoxWidth = Math.round(fontSize * (this.tracking + 1) * 25)
 
   var idealTracking = idealValues[this.fontSize]
@@ -455,7 +455,7 @@ function updateGraphPlot() {
   graph.clear()
   graph.plotLine(idealValuesList, '#0d3')
   graph.plotf(function(x) {
-    return _InterUIDynamicTracking(x, weightClass)
+    return _InterDynamicTracking(x, weightClass)
   })
   if (focusedSample) {
     var graphedFontSize = Math.min(24, focusedSample.fontSize) // clamp to [-inf,24]

@@ -207,7 +207,7 @@ def setFontInfo(font, weight):
   # For OpenType NAME table IDs, see
   # https://docs.microsoft.com/en-us/typography/opentype/spec/name#name-ids
   #
-  family = font.info.familyName  # i.e. "Inter UI"
+  family = font.info.familyName  # i.e. "Inter"
   style = font.info.styleName    # e.g. "Medium Italic"
 
   # Update italicAngle
@@ -596,7 +596,7 @@ class Main(object):
     # files
     master_dir = outdir
     glyphsfile = args.glyphsfile
-    designspace_file = pjoin(outdir, 'Inter-UI.designspace')
+    designspace_file = pjoin(outdir, 'Inter.designspace')
     instance_dir = pjoin(BASEDIR, 'build', 'ufo')
 
     # load glyphs project file
@@ -622,29 +622,29 @@ class Main(object):
     for source in designspace.sources:
       # source : fontTools.designspaceLib.SourceDescriptor
       # source.font : defcon.objects.font.Font
-      ufo_path = pjoin(master_dir, source.filename.replace('InterUI', 'Inter-UI'))
+      ufo_path = pjoin(master_dir, source.filename)
       # no need to also set the relative 'filename' attribute as that
       # will be auto-updated on writing the designspace document
       if source.styleName == "Italic Italic":
         # Workaround for Glyphs limitation
         # (Base italic master can't be called just Italic, so it's called
         # "Italic Italic" which is converted here to just "Italic")
-        ufo_path = pjoin(master_dir, 'Inter-UI-Italic.ufo')
+        ufo_path = pjoin(master_dir, 'Inter-Italic.ufo')
         source.styleName = "Italic"
         source.name = "italic"
         source.font.info.styleName = source.styleName
       elif source.styleName == "Black Italic Italic":
-        ufo_path = pjoin(master_dir, 'Inter-UI-BlackItalic.ufo')
+        ufo_path = pjoin(master_dir, 'Inter-BlackItalic.ufo')
         source.styleName = "Black Italic"
         source.name = "blackitalic"
         source.font.info.styleName = source.styleName
       elif source.styleName == "Thin Italic Italic":
-        ufo_path = pjoin(master_dir, 'Inter-UI-ThinItalic.ufo')
+        ufo_path = pjoin(master_dir, 'Inter-ThinItalic.ufo')
         source.styleName = "Thin Italic"
         source.name = "thinitalic"
         source.font.info.styleName = source.styleName
       else:
-        # name "Inter UI Black" => "black"
+        # name "Black" => "black"
         source.name = source.styleName.lower().replace(' ', '')
       
       source.path = ufo_path
@@ -659,15 +659,14 @@ class Main(object):
 
     # patch instance names
     for instance in designspace.instances:
-      # name "Inter UI Black Italic" => "blackitalic"
+      # name "Black Italic" => "blackitalic"
       instance.name = instance.styleName.lower().replace(' ', '')
-      instance.filename = instance.filename.replace('InterUI', 'Inter-UI')
 
     self.log("write %s" % relpath(designspace_file, os.getcwd()))
     designspace.write(designspace_file)
 
     # upright designspace
-    upright_designspace_file = pjoin(outdir, 'Inter-UI-upright.designspace')
+    upright_designspace_file = pjoin(outdir, 'Inter-upright.designspace')
     p = Process(
       target=self._genSubsetDesignSpace,
       args=(designspace, 'upright', upright_designspace_file)
@@ -676,7 +675,7 @@ class Main(object):
     procs.append(p)
 
     # italic designspace
-    italic_designspace_file = pjoin(outdir, 'Inter-UI-italic.designspace')
+    italic_designspace_file = pjoin(outdir, 'Inter-italic.designspace')
     p = Process(
       target=self._genSubsetDesignSpace,
       args=(designspace, 'italic', italic_designspace_file)

@@ -1,16 +1,16 @@
-# Contributing to the Inter UI font project
+# Contributing to the Inter font project
 
-First off, thank you for considering contributing to Inter UI.
+First off, thank you for considering contributing to Inter.
 It's people like you that make the Internet such a great place.
 
 Following these guidelines helps to communicate that you respect the time of the people managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue or suggestion.
 
-By contributing work to the Inter UI font project you agree to have all work contributed becoming the intellectual property of the Inter UI font project as described by [SIL Open Font License, Version 1.1](http://scripts.sil.org/OFL)
+By contributing work to the Inter font project you agree to have all work contributed becoming the intellectual property of the Inter font project as described by [SIL Open Font License, Version 1.1](http://scripts.sil.org/OFL)
 
 
 ## Types of contributions this project is looking for
 
-**More glyphs!** Several glyphs, especially non-latin ones, are placeholders that need to be replaced with ones designed in the style of Inter UI. Cyrillic glyphs are especially requested.
+**More glyphs!** Several glyphs, especially non-latin ones, are placeholders that need to be replaced with ones designed in the style of Inter. Cyrillic glyphs are especially requested.
 
 **Kerning**, kerning, kerning — there are so many pairs and pairs-in-words that need to be kerned, or have their kerning improved. When adding kerning, use _groups_ rather than individual pairs. See [Kerning](#kerning) for more information.
 
@@ -36,15 +36,15 @@ If these rules are not followed, generated styles will fail to build.
 
 There are three ways to generate font files (OTF, TTF, WOFF2, etc) from the sources files:
 
-- Using Inter UI's own build system: `dockermake` and locally (see ["Using the toolchain"](#using-the-toolchain))
+- Using Inter's own build system: `dockermake` and locally (see ["Using the toolchain"](#using-the-toolchain))
 - Using the "export" feature in font editors like [Glyphs](https://glyphsapp.com/) or [RoboFont](http://robofont.com/)
 
-Exporting from font editors is a great alternative if you just want to test things out, but using Inter UI's own build system is the way to go for "production quality" font files. The rest of this section covers how to use Inter UI's own build system, aka _the toolchain_.
+Exporting from font editors is a great alternative if you just want to test things out, but using Inter's own build system is the way to go for "production quality" font files. The rest of this section covers how to use Inter's own build system, aka _the toolchain_.
 
 
 ### Using the toolchain
 
-The Inter UI toolchain is a collection of programs setup to build everything
+The Inter toolchain is a collection of programs setup to build everything
 in a high-quality and reliable way. It can be fully automated and requires no
 paid software.
 
@@ -56,7 +56,7 @@ TL;DR: to make & test everything:
 
 There are two ways of using the toolchain:
 
-- `dockermake` — a [prebuild Docker image](https://cloud.docker.com/u/rsms/repository/docker/rsms/inter-ui-build) containing the complete toolchain is used. This is the easiest and quickest way to build Inter UI. Supports any platform that can run Docker, like Windows, macOS and Linux.
+- `dockermake` — a [prebuild Docker image](https://cloud.docker.com/u/rsms/repository/docker/rsms/inter-build) containing the complete toolchain is used. This is the easiest and quickest way to build Inter. Supports any platform that can run Docker, like Windows, macOS and Linux.
 - locally — setup the toolchain locally using `init.sh` and then build using make. Only supports macOS and Linux.
 
 #### Using dockermake
@@ -69,7 +69,7 @@ Example:
 
 ```
 $ ./dockermake -j Regular SemiBoldItalic
-misc/fontbuild instancegen src/Inter-UI.designspace SemiBoldItalic
+misc/fontbuild instancegen src/Inter.designspace SemiBoldItalic
 ...
 ```
 
@@ -83,7 +83,7 @@ The first step is to initialize the toolchain itself:
 ./init.sh
 ```
 
-This will fetch, setup and configure everything needed to build and test Inter UI.
+This will fetch, setup and configure everything needed to build and test Inter.
 
 > **—Important—** Run `init.sh` everytime you pull new changes to the source code or before pushing source code to a remote repository. `init.sh` may update the UFO source files and makefile, changes which may be required to be included in a source code change.
 
@@ -120,7 +120,7 @@ make -j MediumItalic_web      # Medium Italic as TTF, WOFF and WOFF2
 make -j build/hinted/Bold.ttf # Bold TTF with autohints
 ```
 
-All resulting font files are written to the `build` directory with `InterUI-` as the filename prefix. The `Makefile` file contains information about more possibilities of `make`.
+All resulting font files are written to the `build` directory with `Inter-` as the filename prefix. The `Makefile` file contains information about more possibilities of `make`.
 
 [**The interactive Lab**](#interactive-lab) is a great tool for quickly exploring your font files. It's a web-based tool which you start in a terminal by running:
 
@@ -165,7 +165,7 @@ This project comes with a simple web-based application for debugging and preview
   alternate numerics, etc.
 - Controls for web-browser text features like `capitalize`, `uppercase`,
   `lowercase`, etc.
-- Ability to compare Inter UI side-by-side with other fonts.
+- Ability to compare Inter side-by-side with other fonts.
 
 To start the lab, simply run this in a terminal (and keep the terminal running.)
 
@@ -175,7 +175,7 @@ python docs/lab/serve.py
 
 You can now visit the URL printed on the screen to use the lab. Simply `make -j STYLE_web` (or `make -j all_web` for all styles) and reload the web page to try a new build.
 
-An online version of the lab is available at <https://rsms.me/inter/lab/> with the most recent official release of the Inter UI font files.
+An online version of the lab is available at <https://rsms.me/inter/lab/> with the most recent official release of the Inter font files.
 
 
 ### Kerning
@@ -198,7 +198,7 @@ Kerning groups is a really simple but incredibly time-saving way of kerning a fo
 The script `misc/tools/kernsample.py` is helpful in generating samples for all existing right-hand side characters given a left-hand side glyphname.
 
 ```txt
-$ misc/kernsample.py src/Inter-UI-Black.ufo P -suffix MOR
+$ misc/kernsample.py src/Inter-Black.ufo P -suffix MOR
 PAMOR P/AE MOR PJMOR PXMOR PYMOR PZMOR P/ae mor P/ampersand mor
 P/backslash mor P/dzcaron mor P/eightsub mor P/ellipsis mor Pfmor
 P/four mor P/guilsinglleft mor P/idieresisacute mor P/periodcentered
@@ -213,7 +213,7 @@ This only includes existing kerning and is thus only useful for adjustments. Add
 
 ### Miscellaneous tools
 
-There are several tools included with Inter UI to help "wrangle" metrics, generate glyphs, create PDFs and so on. You can find these tools in the `misc/tools` directory. They are all command-line tools and their usage can be queried by providing the help flag `-h`.
+There are several tools included with Inter to help "wrangle" metrics, generate glyphs, create PDFs and so on. You can find these tools in the `misc/tools` directory. They are all command-line tools and their usage can be queried by providing the help flag `-h`.
 
 For example, the fontinfo tool can be used to generate a JSON description of all metadata and merics of a TTF or OTF file:
 

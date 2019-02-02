@@ -3,7 +3,7 @@ html { }
 body {
   background-color: #f4f4f4;
   color: #111;
-  font: 15px/22px 'Inter UI', system-ui, sans-serif;
+  font: 15px/22px 'Inter', system-ui, sans-serif;
 
   font-size: 15px;
   line-height: 1.5;
@@ -48,10 +48,7 @@ body {
 
 @supports (font-variation-settings: normal) {
   body {
-    font-family: 'Inter UI var', system-ui, sans-serif;
-  }
-  html.vf-alt body {
-    font-family: 'Inter UI var alt', system-ui, sans-serif;
+    font-family: 'Inter var', system-ui, sans-serif;
   }
 }
 

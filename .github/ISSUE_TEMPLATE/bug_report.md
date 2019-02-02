@@ -22,7 +22,7 @@ If applicable, add screenshots to help explain your problem.
 **Environment**
 - OS: [e.g. macOS 10.14]
 - App that renders the font [if applicable; e.g. Chrome, Adobe Illustrator]
-- Version of font [e.g. "Inter UI Regular 3.0;8cf05e4a" — you can use fontdrop.info to find out the version]
+- Version of font [e.g. "Inter Regular 3.0;8cf05e4a" — you can use fontdrop.info to find out the version]
 
 **Additional context**
 Add any other context about the problem here.

@@ -35,8 +35,7 @@ var ui = {
     // a different font family name when VF is supported. Then we test for
     // what font family name is in effect. If it's the "var" one, we can be
     // fairly certain that variable fonts are supported by the user agent.
-    let supportsVF = s.fontFamily.indexOf('Inter UI var') != -1
-    // supportsVF = false // XXX
+    let supportsVF = s.fontFamily.indexOf('Inter var') != -1
 
     // hook up input controls
     for (let k in this.state) {

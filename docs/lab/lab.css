@@ -10,7 +10,7 @@ body {
   font-family: "Roboto", serif;
 }
 .systemFont {
-  font-family: system-ui,-apple-system,"SF Pro Text","SF UI Text",BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;, serif;
+  font-family: system-ui,-system,-system-ui,-apple-system,sans-serif;
 }
 .de-emphasize {
   color:#555;
@@ -34,6 +34,11 @@ h2 {
   margin: 42px 18px 0 18px;
   padding: 6px;
 }
+
+i, cite, em, var, address, dfn {
+  font-style: oblique;
+}
+
 .options {
   width: 275px;
   box-sizing:border-box;
