@@ -82,12 +82,14 @@ def composedGlyphIsNonTrivial(g, yAxisIsNonTrivial=False):
 # Directives are glyph-specific post-processing directives for the compiler.
 # A directive is added to the "note" section of a glyph and takes the
 # following form:
-# 
+#
 #   !post:DIRECTIVE
-# 
+#
 # Where DIRECTIVE is the name of a known directive.
 # This string can appear anywhere in the glyph note.
-# 
+# Directives are _not_ case sensitive but normalized by str.lower(), meaning
+# that e.g. "removeoverlap" == "RemoveOverlap" == "REMOVEOVERLAP".
+#
 knownDirectives = set([
   'removeoverlap',  # applies overlap removal (boolean union)
 ])
