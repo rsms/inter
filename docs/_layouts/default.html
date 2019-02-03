@@ -21,6 +21,8 @@ for file in site.static_files %}{%
     assign base_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
   elsif _path == "/res/base.js" %}{%
     assign base_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/favicon.png" %}{%
+    assign favicon_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
   endif %}{%
 endfor
 
@@ -34,7 +36,7 @@ endfor
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{{url_root}}inter.css?v={{ release_version }}">
     <link rel="stylesheet" href="{{url_root}}res/base.css?v={{ base_css_v }}">
-    <link rel="icon" type="image/png" href="{{url_root}}res/favicon.png">
+    <link rel="icon" type="image/png" href="{{url_root}}res/favicon.png?v={{ favicon_v }}">
     {% include preload-font-files.html %}
     <meta name="format-detection" content="telephone=no">
     <meta property="twitter:card" content="summary">
