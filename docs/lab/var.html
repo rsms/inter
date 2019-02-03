@@ -5,9 +5,15 @@
 <link href="../inter.css" rel="stylesheet">
 <style type="text/css">
 
+:root {
+  --weight: 400;
+  --slant: 0;
+  --size: 80px;
+}
+
 @font-face {
   font-family: 'Inter var';
-  font-weight: 400 900;
+  font-weight: 100 900;
   font-style: oblique 0deg 10deg;
   src: url('fonts/var/Inter.var.woff2') format("woff2-variations"),
        url('../font-files/Inter.var.woff2') format("woff2-variations");
@@ -62,13 +68,20 @@ label {
 </head>
 <body>
 <div class="ctrl">
-  <label>Weight: <input type="range" value="400" min="400" max="900" name="weight"></label>
+  <label>Weight: <input type="range" value="400" min="100" max="900" name="weight"></label>
   <label>Slant: <input type="range" value="0" min="0" max="10" step="0.01" name="slant"></label>
   <label>Size: <input type="range" value="96" min="6" max="400" name="size"></label>
-  <label>
-    <input type="checkbox" name="animate">
-    Animate
-  </label>
+  <select name="animate">
+    <option value="" default>Animation: off</option>
+    <option value="weight">Animation: weight</option>
+    <option value="slant">Animation: slant</option>
+    <option value="weight,slant">Animation: weight &amp; slant</option>
+  </select>
+  <select name="align">
+    <option value="left" default>Align: left</option>
+    <option value="center">Align: center</option>
+    <option value="right">Align: right</option>
+  </select>
 </div>
 <div class="sample" contenteditable>
 Inter 3.0<br>
@@ -132,37 +145,51 @@ var monotime = (
 )
 
 
+// animation state
 var isAnimating = false
-function startAnimation() {
+var animateWeight = false
+var animateSlant = false
+
+function startAnimation(animateAxes) {
+  animateWeight = animateAxes.indexOf('weight') != -1
+  animateSlant = animateAxes.indexOf('slant') != -1
+  weightInput.disabled = animateWeight
+  slantInput.disabled = animateSlant
   if (isAnimating) {
     return
   }
-  weightInput.disabled = true
-  slantInput.disabled = true
+  if (!animateWeight && !animateSlant) {
+    throw new Error('!animateWeight && !animateSlant')
+    stopAnimation()
+  }
   isAnimating = true
   let v = 0
   let wmin = parseFloat(weightInput.min)
     , wmax = parseFloat(weightInput.max)
     , imin = parseFloat(slantInput.min)
     , imax = parseFloat(slantInput.max)
-    , wspeed = 200    // lower is faster; time divisor
-    , ispeed = 800
+    , wspeed = 800    // lower is faster; time divisor
+    , ispeed = 600
     , clamp = 0.001
     , startTime = monotime()
   function update() {
     let r = 0, v = 0
 
-    r = (1 + Math.sin((monotime() - startTime) / wspeed)) * 0.5
-    v = (wmin * (1 - clamp)) + (((wmax * (1 + clamp)) - (wmin * (1 - clamp))) * r)
-    v = Math.max(wmin, Math.min(wmax, v))
-    ui.weight = v
-    weightInput.value = v
+    if (animateWeight) {
+      r = (1 + Math.sin((monotime() - startTime) / wspeed)) * 0.5
+      v = (wmin * (1 - clamp)) + (((wmax * (1 + clamp)) - (wmin * (1 - clamp))) * r)
+      v = Math.max(wmin, Math.min(wmax, v))
+      ui.weight = v
+      weightInput.value = v
+    }
 
-    r = (1 + Math.sin((monotime() - startTime) / ispeed)) * 0.5
-    v = (imin * (1 - clamp)) + (((imax * (1 + clamp)) - (imin * (1 - clamp))) * r)
-    v = Math.max(imin, Math.min(imax, v))
-    ui.slant = v
-    slantInput.value = v
+    if (animateSlant) {
+      r = (1 + Math.sin((monotime() - startTime) / ispeed)) * 0.5
+      v = (imin * (1 - clamp)) + (((imax * (1 + clamp)) - (imin * (1 - clamp))) * r)
+      v = Math.max(imin, Math.min(imax, v))
+      ui.slant = v
+      slantInput.value = v
+    }
 
     ui.update()
 
@@ -196,22 +223,15 @@ bindRangeControl(weightInput, weight => ui.setState({ weight }) )
 bindRangeControl(slantInput, slant => ui.setState({ slant }) )
 bindRangeControl(sizeInput, size => ui.setState({ size }) )
 
-// weightInput.addEventListener('input',
-//   weightInput.valueAsNumber !== undefined ? ev => {
-//     setWeight(weightInput.valueAsNumber)
-//   } : ev => {
-//     setWeight(parseFloat(weightInput.value))
-//   }
-// )
-
-// UI control: slant slider
-// slantInput.addEventListener('input',
-//   slantInput.valueAsNumber !== undefined ? ev => {
-//     setSlant(slantInput.valueAsNumber)
-//   } : ev => {
-//     setSlant(parseFloat(slantInput.value))
-//   }
-// )
+// UI control: alignment
+var alignInput = document.querySelector('[name="align"]')
+var updateAlignment = function() {
+  for (let s of samples) {
+    s.style.textAlign = alignInput.value
+  }
+}
+alignInput.addEventListener('change', updateAlignment)
+updateAlignment()
 
 // UI control: animate
 var animateInput = document.querySelector('[name="animate"]')
@@ -219,10 +239,11 @@ if (!window.requestAnimationFrame) {
   animateInput.disabled = true
 } else {
   animateInput.addEventListener('change', ev => {
-    if (animateInput.checked) {
-      startAnimation()
-    } else {
+    if (animateInput.value.length == 0) {
       stopAnimation()
+    } else {
+      console.log('x', animateInput.value.split(','))
+      startAnimation(animateInput.value.split(','))
     }
   })
 }
