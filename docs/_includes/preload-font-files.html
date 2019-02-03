@@ -1,2 +1,9 @@
-<link rel="preload" href="/font-files/Inter-upright.var.woff2?v=3.3" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/font-files/Inter-italic.var.woff2?v=3.3" as="font" type="font/woff2" crossorigin>
+{%
+
+capture url_root
+  %}{% if site.safe == false %}/{% else %}/inter/{% endif
+%}{%
+endcapture
+
+%}<link rel="preload" href="{{url_root}}font-files/Inter-upright.var.woff2?v=3.3" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{url_root}}font-files/Inter-italic.var.woff2?v=3.3" as="font" type="font/woff2" crossorigin>
