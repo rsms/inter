@@ -100,8 +100,8 @@ html { font-family: 'Inter', sans-serif; }
 <div class="row"><div>
   <h2><a id="weights" href="#weights">Weights & Styles</a></h2>
   <p>
-  There are six weights, each with italic counterparts,
-  making a total of 12 styles.
+  There are nine weights, each with italic counterparts,
+  making a total of 18 styles.
   </p>
   <img src="res/weights-and-styles.svg" style="opacity:0.88;width:100%;display:block;margin:3em 0 3em 0">
 </div></div>
@@ -564,10 +564,10 @@ var unitEl = $('#dynmet-unit')
 
 var unitFormatters = [
   ['em', 'em', function(fontSize, tracking) {
-    return tracking.toFixed(3)
+    return tracking.toFixed(3).replace(/(?:\.000|0+)$/, '')
   }],
   ['px', 'px', function(fontSize, tracking) {
-    return (fontSize * tracking).toFixed(1)
+    return (fontSize * tracking).toFixed(2).replace(/(?:\.00|0+)$/, '')
   }],
   ['%', 'percent', function(fontSize, tracking) {
     return (tracking * 100).toFixed(1)

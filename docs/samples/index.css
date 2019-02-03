@@ -8,22 +8,33 @@ body {
   text-align:center;
 }
 
+.live > hr {
+  margin: 3rem 0 4rem 0;
+  background: black;
+  height: 2px;
+  border: none;
+}
+
 livesample {
   display: block;
   color: #111;
   outline: none;
-  /*padding-left: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*livesample {
+  padding-left: 20px;
   border-left: 2px solid transparent;
-  margin-left:-22px;*/
-  margin-top: 1em;
-  margin-bottom: 1.6em;
+  margin-left:-22px;
 }
 livesample:hover {
   border-left-color: rgb(3, 102, 214);
 }
-/*livesample:focus {
+livesample:focus {
   border-left-color: #eee;
 }*/
+
 livesample > p {
   margin-top: 0;
 }

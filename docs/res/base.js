@@ -81,8 +81,8 @@ var HUDNotification = {
 // the compensating tracking in EM.
 //
 function InterDynamicTracking(fontSize) {
+  var a = -0.02, b = 0.0755, c = -0.102;
   // tracking = a + b * e ^ (c * fontSize)
-  var a = -0.017, b = 0.202, c = -0.175;
   return a + b * Math.pow(Math.E, c * fontSize)
 }
 

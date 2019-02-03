@@ -32,7 +32,7 @@ endfor
     yourself with typography, but Inter Dynamic Metrics provides guidelines
     for how to best use Inter.
     You simply provide the optical font size,
-    and the tracking and leading is calculated for you through the following
+    and the tracking and line height is calculated for you through the following
     formula:
   </p>
   <p>
@@ -42,12 +42,12 @@ endfor
       <const title="Base of natural logarithm; ≈2.718">e</const><sup>(<const>c</const> × <const>z</const>)</sup>
     </formula>
     <formula>
-      leading = round(<num data-binding="var-l">1.4</num> × <const>z</const>)
+      line height = <num data-binding="var-l">1.4</num> × <const>z</const>
     </formula>
     <formula title="Values for Inter">
-      <g><const title="Constant a">a</const> = <num data-binding="var-a">-0.016</num></g> &nbsp;&nbsp;
-      <g><const title="Constant b">b</const> = <num data-binding="var-b">0.21</num></g> &nbsp;&nbsp;
-      <g><const title="Constant c">c</const> = <num data-binding="var-c">-0.18</num></g> &nbsp;&nbsp;
+      <g><const title="Constant a">a</const> = <num data-binding="var-a">-0.02</num></g> &nbsp;&nbsp;
+      <g><const title="Constant b">b</const> = <num data-binding="var-b">0.205</num></g> &nbsp;&nbsp;
+      <g><const title="Constant c">c</const> = <num data-binding="var-c">-0.175</num></g> &nbsp;&nbsp;
       <g><const>z</const> = font size</g>
     </formula>
   </p>
@@ -194,24 +194,24 @@ function parseValues(s) {
 }
 
 setIdealValues({
-  // 2018-09-28
-  6:   0.054,
-  7:   0.042,
-  8:   0.033,
-  9:   0.025,
-  10:  0.018,
-  11:  0.012,
-  12:  0.008,
-  13:  0.004,
-  14:  0,
-  15: -0.002,
+  6:   0.021,
+  7:   0.017,
+  8:   0.013,
+  9:   0.01,
+  10:  0.007,
+  11:  0.005,
+  12:  0.002,
+  13:  0,
+  14: -0.002,
+  15: -0.004,
   16: -0.005,
   17: -0.007,
   18: -0.008,
-  20: -0.011,
-  24: -0.014,
+  20: -0.01,
+  24: -0.013,
   30: -0.016,
-  40: -0.017,
+  40: -0.02,
+  80: -0.02,
 })
 
 
@@ -222,7 +222,9 @@ setIdealValues({
 // var a = -0.015, b = 0.283, c = -0.23; // di=0.00221 on set-2018-02-18
 // var a = -0.0149, b = 0.298, c = -0.23; // di=0.000484 on set-2018-02-19
 // var a = -0.018, b = 0.21, c = -0.18; // di=0.000532 on set-2018-02-20
-var a = -0.017, b = 0.202, c = -0.175; // di=0.000247 on 2018-09-28
+// var a = -0.017, b = 0.202, c = -0.175; // 2018-09-28
+var a = -0.02, b = 0.0755, c = -0.102 // 2019-02-02
+
 
 var l = 1.4
 
@@ -238,10 +240,6 @@ function _InterDynamicTracking(fontSize, weightClass) {
   // See https://gist.github.com/rsms/8efdbca5f8145a584ed08a7c3d6e5788
   //
   return a + b * Math.pow(Math.E, c * fontSize)
-  // [6 - 38]  0.05798 .. -0.01099  (midpoint = 12.533)
-  //
-  // y = 0.025 - (ln(x) * 0.01)
-  // return 0.025 - Math.log(fontSize) * 0.01
 }
 
 
@@ -335,6 +333,11 @@ Sample.prototype.cssProperties = function() {
   ]
 }
 
+Sample.prototype.setText = function(text) {
+  this.contentEl.innerText = text
+  this.render()
+}
+
 Sample.prototype.render = function() {
   this.style.fontSize = this.fontSize + 'px'
   this.style.letterSpacing = this.tracking + 'em'
@@ -393,6 +396,7 @@ function initSamples() {
   samples.push(new Sample(24))
   samples.push(new Sample(30))
   samples.push(new Sample(40))
+  samples.push(new Sample(80))
 
   // connect focus events
   var onSampleReceivedFocus = function() { setSelectedSample(this) }
