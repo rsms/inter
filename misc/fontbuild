@@ -610,7 +610,13 @@ class Main(object):
     designspace = glyphsLib.to_designspace(
       font,
       propagate_anchors=False,
-      instance_dir=relpath(instance_dir, master_dir)
+      instance_dir=relpath(instance_dir, master_dir),
+
+      store_editor_state=False,
+      # do not store glyphs editor UI state in UFOs
+
+      minimize_glyphs_diffs=True,
+      # do not store glyphs metadata in UFOs
     )
 
     # strip lib data
