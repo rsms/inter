@@ -1628,6 +1628,7 @@ class BoundVar {
     this.isNumber = e.type == 'number'
     this.lastValue = this.getValue()
     this.parentVars = parentVars
+    this.defaultValue = this.lastValue
   }
 
   refreshValue(ev) {
@@ -1747,6 +1748,10 @@ class Vars {
   getQueryString() {
     let pairs = []
     this.values.forEach((v, k) => {
+      let vr = this.vars.get(k)
+      if (vr && vr.defaultValue == v) {
+        return  // skip
+      }
       v = (v === true) ? 1 : (v === false || v === null) ? 0 : v
       pairs.push(encodeURIComponent(k) + '=' + encodeURIComponent(v))
     })
