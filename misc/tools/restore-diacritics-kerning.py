@@ -24,7 +24,7 @@ from fontTools import ttLib
 from robofab.objects.objectsRF import OpenFont
 
 
-srcFontPaths = ['src/Inter-UI-Regular.ufo', 'src/Inter-UI-Bold.ufo']
+srcFontPaths = ['src/Inter-Regular.ufo', 'src/Inter-Bold.ufo']
 
 
 def getTTGlyphList(font): # -> { 'Omega': [2126, ...], ... }
