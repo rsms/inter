@@ -286,6 +286,13 @@ tablex out.cv09 {
   -webkit-font-feature-settings: 'calt' 1, 'cv09' 1;
   font-feature-settings:         'calt' 1, 'cv09' 1;
 }
+tablex out.cv10 {
+  -moz-font-feature-settings:    'calt' 1, 'cv10' 1;
+  -ms-font-feature-settings:     'calt' 1, 'cv10' 1;
+  -o-font-feature-settings:      'calt' 1, 'cv10' 1;
+  -webkit-font-feature-settings: 'calt' 1, 'cv10' 1;
+  font-feature-settings:         'calt' 1, 'cv10' 1;
+}
 
 boxes.features box h3 + p {
   margin-top:0.5em;
