@@ -29,7 +29,7 @@ function check() {
       //console.log('current_etag:', current_etag, 'found_etag:', found_etag);
       if (current_etag === null) {
         current_etag = found_etag;
-      } else if (found_etag !== current_etag) {
+      } else if (found_etag && found_etag !== current_etag) {
         document.location.search =
           '?etag=' + encodeURIComponent(found_etag) +
           '&scrolly=' + window.scrollY;
