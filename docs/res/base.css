@@ -14,15 +14,21 @@ body {
 
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
 
   font-kerning: normal;
-  -moz-font-feature-settings:    "calt" 1, "kern" 1, "liga" 1;
-  -ms-font-feature-settings:     "calt" 1, "kern" 1, "liga" 1;
-  -o-font-feature-settings:      "calt" 1, "kern" 1, "liga" 1;
-  -webkit-font-feature-settings: "calt" 1, "kern" 1, "liga" 1;
-  font-feature-settings:         "calt" 1, "kern" 1, "liga" 1;
+    -webkit-font-kerning: normal;
+    -ms-font-kerning: normal;
+    -moz-font-kerning: normal;
+    -o-font-kerning: normal;
+
+  font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
+    -webkit-font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
+    -ms-font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
+    -moz-font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
+    -o-font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
 }
 
 /* Font style classifiers used by samples and dynmetrics */
@@ -521,3 +527,39 @@ box h3 {
       }*/
 }
 
+/*
+Feature helpers.
+
+Note: font-variant-alternates:character-variant is not yet supported by
+most browsers, which is why we use the "low leve" font-feature-settings
+instead.
+
+*/
+
+.ff-dlig { font-feature-settings: 'dlig' 1; }
+.ff-numr { font-feature-settings: 'numr' 1; }
+.ff-dnom { font-feature-settings: 'dnom' 1; }
+.ff-tnum { font-feature-settings: 'tnum' 1; }
+.ff-case { font-feature-settings: 'case' 1; }
+.ff-zero { font-feature-settings: 'zero' 1; }
+.ff-frac { font-feature-settings: 'frac' 1; }
+.ff-sups { font-feature-settings: 'sups' 1; }
+.ff-subs { font-feature-settings: 'subs' 1; }
+.ff-cpsp { font-feature-settings: 'cpsp' 1; }
+.ff-salt { font-feature-settings: 'salt' 1; }
+.ff-salt-zero { font-feature-settings: 'salt' 1, 'zero' 1; }
+.ff-cv07-salt-zero { font-feature-settings: 'cv07' 1, 'salt' 1, 'zero' 1; }
+
+.ff-ss01 { font-feature-settings: 'ss01' 1; }
+.ff-ss02 { font-feature-settings: 'ss02' 1; }
+
+.ff-cv01 { font-feature-settings: 'cv01' 1; }
+.ff-cv02 { font-feature-settings: 'cv02' 1; }
+.ff-cv03 { font-feature-settings: 'cv03' 1; }
+.ff-cv04 { font-feature-settings: 'cv04' 1; }
+.ff-cv05 { font-feature-settings: 'cv05' 1; }
+.ff-cv06 { font-feature-settings: 'cv06' 1; }
+.ff-cv07 { font-feature-settings: 'cv07' 1; }
+.ff-cv08 { font-feature-settings: 'cv08' 1; }
+.ff-cv09 { font-feature-settings: 'cv09' 1; }
+.ff-cv10 { font-feature-settings: 'cv10' 1; }

@@ -3,7 +3,14 @@
 capture url_root
   %}{% if site.safe == false %}/{% else %}/inter/{% endif
 %}{%
-endcapture
+endcapture %}{%
 
-%}<link rel="preload" href="{{url_root}}font-files/Inter-upright.var.woff2?v=3.3" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{url_root}}font-files/Inter-italic.var.woff2?v=3.3" as="font" type="font/woff2" crossorigin>
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/font-files/Inter-Regular.woff2" %}{%
+    assign font_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor
+
+%}<link rel="preload" href="{{url_root}}font-files/Inter-upright.var.woff2?v={{font_v}}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{url_root}}font-files/Inter-italic.var.woff2?v={{font_v}}" as="font" type="font/woff2" crossorigin>
