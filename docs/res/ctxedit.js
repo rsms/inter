@@ -45,6 +45,7 @@ class FloatProp {
 }
 
 class FontStyleProp {
+
   valueInStyle(s) {
     let italic = s['font-style'] == 'italic' || s['font-style'].indexOf('oblique') != -1
     let weight = parseFloat(s['font-weight'])
@@ -146,9 +147,9 @@ class Editable {
     this.el = el
     this.key = key
     this.defaultValues = valuesFromStyle(getComputedStyle(this.el))
-    // console.log('default values:', this.defaultValues)
     this.values = Object.assign({}, this.defaultValues)
-    this.explicitTracking = false
+    this.defaultExplicitTracking = this.defaultValues['tracking'] != 0
+    this.explicitTracking = this.defaultExplicitTracking
     this.explicitTrackingKey = this.key + ":etracking"
     this.loadValues()
     this.updateSizeDependantProps()
@@ -162,7 +163,7 @@ class Editable {
     }
     rmLocalObject(this.key)
     rmLocalObject(this.explicitTrackingKey)
-    this.explicitTracking = false
+    this.explicitTracking = this.defaultExplicitTracking
     this.updateSizeDependantProps()
   }
 
@@ -216,10 +217,7 @@ class Editable {
       // console.log(`loaded values for ${this}:`, values)
     }
     let etr = getLocalObject(this.explicitTrackingKey)
-    this.explicitTracking = false
-    if (etr) {
-      this.explicitTracking = true
-    }
+    this.explicitTracking = this.defaultExplicitTracking || etr
   }
 
   isDefaultValues() {
