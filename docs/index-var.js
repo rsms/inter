@@ -122,8 +122,8 @@ function startAnimation() {
     , wmax = parseFloat(ui.inputs.weight.max)
     , imin = parseFloat(ui.inputs.slant.min)
     , imax = parseFloat(ui.inputs.slant.max)
-    , wspeed = 200    // lower is faster; time divisor
-    , ispeed = 800
+    , wspeed = 800    // lower is faster; time divisor
+    , ispeed = 1600
     , clamp = 0.001
     , startTime = monotime()
   function update() {
