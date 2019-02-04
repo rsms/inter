@@ -206,7 +206,11 @@ def setFontInfo(font, weight):
   #   ufo3/fontinfo.plist.md
   # For OpenType NAME table IDs, see
   # https://docs.microsoft.com/en-us/typography/opentype/spec/name#name-ids
-  #
+
+  # Add " BETA" to light weights
+  if weight < 400:
+    font.info.styleName = font.info.styleName + " BETA"
+
   family = font.info.familyName  # i.e. "Inter"
   style = font.info.styleName    # e.g. "Medium Italic"
 
