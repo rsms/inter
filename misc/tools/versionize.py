@@ -32,6 +32,6 @@ def updateHTMLFile(filename):
     f.write(s)
 
 
-updateCSSFile(pjoin(BASEDIR, 'docs', 'inter.css'))
-updateCSSFile(pjoin(BASEDIR, 'docs', 'inter-ui.css'))
+# updateCSSFile(pjoin(BASEDIR, 'docs', 'inter.css'))
+# updateCSSFile(pjoin(BASEDIR, 'docs', 'inter-ui.css'))
 updateHTMLFile(pjoin(BASEDIR, 'docs', '_includes', 'preload-font-files.html'))
