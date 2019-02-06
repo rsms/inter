@@ -4,10 +4,9 @@ title: Samples
 ---
 {%
 
-capture url_root
-  %}{% if site.safe == false %}/{% else %}/inter/{% endif
-%}{%
-endcapture %}{%
+if site.safe == false %}{%
+assign url_root = "/" %}{% else %}{%
+assign url_root = "/inter/" %}{% endif %}{%
 
 for file in site.static_files %}{%
   assign _path = file.path | remove_first: "/inter" %}{%

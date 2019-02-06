@@ -101,9 +101,7 @@ tablex in, tablex to, tablex out {
   white-space: pre;
   padding-bottom:0.5em;
 }
-/*tablex to {
-  width:0;
-}*/
+
 tablex to::after {
   -moz-font-feature-settings: 'calt' 1, 'case' 1;
   -ms-font-feature-settings: 'calt' 1, 'case' 1;
@@ -296,4 +294,15 @@ tablex out.cv10 {
 
 boxes.features box h3 + p {
   margin-top:0.5em;
+}
+
+boxes.features grid .sample {
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+boxes.features grid .sample em {
+  font-style: inherit;
+  background: #e4fdef;
+  color: black;
 }

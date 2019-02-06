@@ -2,14 +2,11 @@
 assign build_version = site.time | date: "%Y%m%d%H%M%S" %}{%
 assign description = "Inter is a typeface optimized for computer-user interfaces" %}{%
 
-capture url_root
-  %}{% if site.safe == false %}/{% else %}/inter/{% endif
-%}{%
-endcapture %}{%
+if site.safe == false %}{%
+assign url_root = "/" %}{% else %}{%
+assign url_root = "/inter/" %}{% endif %}{%
 
-capture release_version
-  %}{{ site.data.fontinfo[0].version }}{%
-endcapture %}{%
+assign release_version = site.data.fontinfo[0].version %}{%
 
 capture download_url
   %}https://github.com/rsms/inter/releases/download/v{{ release_version }}/Inter-{{ release_version }}.zip{%

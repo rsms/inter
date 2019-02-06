@@ -1,0 +1,126 @@
+- title: Contextual alternates
+  tag:   calt
+  description:
+    This feature is enabled by default and causes certain characters to adjust
+    themselves or be replaced depending on the surrounding context.
+  footer:
+    There are many more contextual alternates.
+  samples:
+    - "12›:‹34, FE›—‹X"
+    - "4›.‹2"
+    - "›(‹SEMI›)‹PERMANENT"
+    - "SFO ›->‹ STO"
+    - "IIA ›—>‹ OGG"
+    - "ARN ›<-->‹ OGG"
+    - "M›@‹N m@n"
+    - "Smile ›:-)‹"
+
+- title: Tabular numbers
+  tag:   tnum
+  description:
+    Fixed-width numbers are useful for tabular data, where comparing
+    columns across rows is desired.
+  samples:
+    - "1234567890"
+    - "1131711›&nbsp;‹"
+    - "0040900›&nbsp;‹"
+    - "11:31,711›&nbsp;‹"
+    - "00:40.900›&nbsp;‹"
+    - "0.45, 0.91, +0.08›&nbsp;‹"
+    - "1.00, 9.44, −0.13›&nbsp;‹"
+    - "0.00, 1.13, ~7.12›&nbsp;‹"
+
+- title: Numerators
+  tag:   numr
+  samples:
+    - "Hello ›0123‹"
+
+- title: Denominators
+  tag:   dnom
+  samples:
+    - "Hello ›0123‹"
+
+- title: Superscript
+  tag:   sups
+  samples:
+    - "X›0123 (+)-[=]‹"
+    - "X›abcdefghijklmnopqrstuvwxyz‹"
+
+- title: Subscript
+  tag:   subs
+  samples:
+    - "H›0123 (+)-[=]‹"
+    - "X›abcdefghijklmnopqrstuvwxyz‹"
+
+- title: Fractions
+  tag:   frac
+  description:
+    This feature is contextually sensitive and will convert "words" of
+    numbers separated by forward slash into proper fractions.
+    This feature is dynamic and allows for any fractions.
+    Note that the digits used for fractions are custom-made for their
+    small size, and are even made separately from the slightly larger
+    Superscript and Subscript numbers.
+  samples:
+    - "›1/3‹&nbsp; ›3/4‹&nbsp; ›1/5‹&nbsp; ›1337/5910‹"
+
+- title: Case alternates
+  tag:   case
+  description:
+    Switches out some glyphs to work better with capital letters and numbers.
+  samples:
+    - "›(‹Hello›)‹ ›[‹World›]‹ ›{‹9000›}‹"
+    - "SCHOOL ›@‹ RUN"
+    - "3 ›+‹ 9 ›=‹ 12 ›*‹ 1"
+    - "›*+÷±×=≠≈•~&lt;&gt;≤≥‹"
+    - "›→‹ ›←‹ ›⟶‹ ›⟵‹ ›−‹ ›-‹ ›–‹ ›—‹ ›:‹"
+
+- title: "Stylistic set 1: Alternate digits"
+  tag:   ss01
+  description:
+    An alternate style of digits.
+    Note that individual digit styles can be cherry-picked using the cvXX
+    features.
+  samples:
+    - "›1‹2›34‹5›6‹78›9‹0"
+    - "›13469‹"
+
+- title: "Stylistic set 2: Disambiguation"
+  tag:   ss02
+  description:
+    Alternate glyph set that increases visual difference between
+    similar-looking characters.
+  samples:
+    - "WP›0‹ACO9XS›I‹1›0‹12O9"
+    - "›Ill‹ega›l‹"
+    - "βeta ›ß‹eta Busine›ß‹"
+
+- title: Discretionary ligatures
+  tag:   dlig
+  description:
+    Alternate glyph set that increases visual difference between
+    similar-looking characters.
+  samples:
+    - "›¡¿‹What›?!‹"
+    - "›¿¡‹What›!?‹"
+
+- title: Slashed zero
+  tag:   zero
+  samples:
+    - "O›0‹123"
+
+- title: Character variants
+  tag: cvXX
+  description: "Allows cherry-picking alternate characters."
+  samples:
+    - {feat: cv01, alt: "Alternate one", sample: "1"}
+    - {feat: cv02, alt: "Open four", sample: "4"}
+    - {feat: cv03, alt: "Open six", sample: "6"}
+    - {feat: cv04, alt: "Open nine", sample: "9"}
+    - {feat: cv05, alt: "Lower case L with tail", sample: "l ł ƚ ɫ ɬ ŀ ĺ ļ ľ ḷ ḹ ḻ ḽ"}
+    - {feat: cv06, alt: "Lower case R with straight tail", sample: "r ɽ ɍ ɼ ŕ ŗ ř ȑ ȓ ṙ ṛ ṝ ṟ"}
+    - {feat: cv07, alt: "Alternate German double-s", sample: "ß"}
+    - {feat: cv08, alt: "Upper-case i with serif", sample: "I Ï Ḯ Ɨ Ḭ Ì Í Î Ĩ Ī Ĭ Į İ Ǐ Ȉ Ȋ Ỉ Ị Ι Ί Ϊ Ἰ Ἱ Ἲ"}
+    - {feat: cv09, alt: "Flat top three", sample: "3"}
+    - {feat: cv10, alt: "Capital G with spur", sample: "G Ǥ Ɠ Ĝ Ğ Ġ Ģ Ǧ Ǵ Ḡ"}
+

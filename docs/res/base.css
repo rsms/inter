@@ -7,7 +7,7 @@ body {
 
   font-size: 15px;
   line-height: 1.5;
-  letter-spacing: -0.002em;
+  letter-spacing: -0.004em;
 
   font-weight: 400;
   padding-bottom: 30px;
@@ -24,11 +24,11 @@ body {
     -moz-font-kerning: normal;
     -o-font-kerning: normal;
 
-  font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
-    -webkit-font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
-    -ms-font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
-    -moz-font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
-    -o-font-variant-ligatures: contextual common-ligatures discretionary-ligatures;
+  font-variant-ligatures: contextual common-ligatures;
+    -webkit-font-variant-ligatures: contextual common-ligatures;
+    -ms-font-variant-ligatures: contextual common-ligatures;
+    -moz-font-variant-ligatures: contextual common-ligatures;
+    -o-font-variant-ligatures: contextual common-ligatures;
 }
 
 /* Font style classifiers used by samples and dynmetrics */
@@ -157,7 +157,7 @@ h1, h2, h3 {
 h1 {
   color: #222;
   font-size: 55px;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.038em;
   line-height: 1.1em;
   text-indent: -2px;
   margin-bottom: 30px;
@@ -167,10 +167,14 @@ h1 {
 h2 {
   font-size: 30px;
   font-weight: 600;
-  letter-spacing: -0.015em;
+  letter-spacing: -0.025em;
   line-height: 30px;
   margin-bottom: 25px;
   margin-top: 10px;
+}
+.row.dark h2,
+.row.black h2 {
+  letter-spacing: -0.014em;
 }
 h2.back {
   color:rgba(0,0,0,0.2);
@@ -207,6 +211,11 @@ h2.banner {
 h3 {
   font-size: 20px;
   font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.row.dark h3,
+.row.black h3 {
+  letter-spacing: -0.012em;
 }
 h3 q {
   font-weight: 400;
@@ -333,13 +342,18 @@ h1 > a, h2 > a, h3 > a {
   color: #3B414A;
 }
 
-ul {
-  margin-left:1.1em;
-}
+/* --------------------------------------------------------------------- */
 
-a > img {
-  display: block;
-}
+ul { margin-left:1.1em; }
+a > img { display: block; }
+
+/* --------------------------------------------------------------------- */
+/* generic helpers */
+
+.low-contrast { opacity: 0.4; }
+.center-text { text-align: center; }
+
+/* --------------------------------------------------------------------- */
 
 #repertoire-image {
   display:block;
@@ -358,6 +372,7 @@ a > img {
     width: 100%;
   }
 
+/* --------------------------------------------------------------------- */
 
 tablex {
   display: flex;
@@ -380,6 +395,131 @@ tablex {
     display: table-row;
   }
 
+/* --------------------------------------------------------------------- */
+/*
+grid with 4 major columns subdivided twice
+
+|                   |                   |                   |                   |
+|         1         |         2         |         3         |         4         |
+|                   |                   |                   |                   |
+|                   |                   |                   |                   |
+|    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |
+|         |         |         |         |         |         |         |         |
+|         |         |         |         |         |         |         |         |
+| 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | 11 | 12 | 13 | 14 | 15 | 16 |
+|    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+|    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |    |
+
+
+*/
+
+.row.features { display:none; }
+@supports (display: grid) {
+  .row.features { display:flex; }
+}
+.row.features p.example { margin-top:2rem; opacity:0.4; }
+
+grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+grid.c4 { grid-template-columns: repeat(4, 1fr); }
+grid.c8 { grid-template-columns: repeat(8, 1fr); }
+grid.c9 { grid-template-columns: repeat(9, 1fr); }
+grid.c16 { grid-template-columns: repeat(16, 1fr); }
+/*grid, grid4 {
+  grid-template-columns: repeat(4, 1fr);
+}*/
+c {
+  display: block;
+  grid-column-end: span 1;
+}
+c[start="1"] { grid-column-start: 1; }
+c[start="2"] { grid-column-start: 2; }
+c[start="3"] { grid-column-start: 3; }
+c[start="4"] { grid-column-start: 4; }
+c[start="5"] { grid-column-start: 5; }
+c[start="6"] { grid-column-start: 6; }
+c[start="7"] { grid-column-start: 7; }
+c[start="8"] { grid-column-start: 8; }
+c[start="9"] { grid-column-start: 9; }
+
+c[span="1"] { grid-column-end: span 1; }
+c[span="2"] { grid-column-end: span 2; }
+c[span="3"] { grid-column-end: span 3; }
+c[span="4"] { grid-column-end: span 4; }
+c[span="5"] { grid-column-end: span 5; }
+c[span="6"] { grid-column-end: span 6; }
+c[span="7"] { grid-column-end: span 7; }
+c[span="8"] { grid-column-end: span 8; }
+c[span="9"] { grid-column-end: span 9; }
+
+c[span="1-1"] { grid-column: 1 / 1; }
+c[span="2-5"] { grid-column: 2 / 5; }
+c[span="2-4"] { grid-column: 2 / 4; }
+
+grid.c4 c[span="2..."], c[span="2.."] { grid-column: 2 / 5; }
+grid.c8 c[span="2..."], c[span="2.."] { grid-column: 2 / 9; }
+
+/* .debug can be added to a grid to visualize its effective cells.
+   .debug-color applies alternating colors. */
+grid.debug > *, grid.debug-color > * {
+  --color: rgba(250, 230, 0, 0.2);
+  background-image: linear-gradient(to bottom, var(--color) 0%, var(--color) 100%);
+}
+grid.debug > :nth-child(4n+2) { --color: rgba(250, 0, 0, 0.1); }
+grid.debug > :nth-child(4n+3) { --color: rgba(40, 120, 255, 0.1); }
+grid.debug > :nth-child(4n+4) { --color: rgba(0, 230, 80, 0.17); }
+
+.col-all { grid-column: 1 / span 16; }
+
+.col-1   { grid-column: 1 / span 2; }
+.col-1-2 { grid-column: 1 / span 4; }
+.col-1-3 { grid-column: 1 / span 6; }
+.col-1-4 { grid-column: 1 / span 8; }
+.col-1-5 { grid-column: 1 / span 10; }
+.col-1-6 { grid-column: 1 / span 12; }
+.col-1-7 { grid-column: 1 / span 14; }
+.col-1-8 { grid-column: 1 / span 16; }
+
+.col-2   { grid-column: 2 / span 2; }
+.col-2-2 { grid-column: 2 / span 4; }
+.col-2-3 { grid-column: 2 / span 6; }
+.col-2-4 { grid-column: 2 / span 8; }
+.col-2-5 { grid-column: 2 / span 10; }
+.col-2-6 { grid-column: 2 / span 12; }
+.col-2-7 { grid-column: 2 / span 14; }
+
+.col-3   { grid-column: 3 / span 2; }
+.col-3-2 { grid-column: 3 / span 4; }
+.col-3-3 { grid-column: 3 / span 6; }
+.col-3-4 { grid-column: 3 / span 8; }
+.col-3-5 { grid-column: 3 / span 10; }
+.col-3-6 { grid-column: 3 / span 12; }
+
+.col-4   { grid-column: 4 / span 2; }
+.col-4-2 { grid-column: 4 / span 4; }
+.col-4-3 { grid-column: 4 / span 6; }
+.col-4-4 { grid-column: 4 / span 8; }
+.col-4-5 { grid-column: 4 / span 10; }
+
+.col-5   { grid-column: 5 / span 2; }
+.col-5-2 { grid-column: 5 / span 4; }
+.col-5-3 { grid-column: 5 / span 6; }
+.col-5-4 { grid-column: 5 / span 8; }
+
+.col-6   { grid-column: 6 / span 2; }
+.col-6-2 { grid-column: 6 / span 4; }
+.col-6-3 { grid-column: 6 / span 6; }
+
+.col-7   { grid-column: 7 / span 2; }
+.col-7-2 { grid-column: 7 / span 4; }
+
+.col-8   { grid-column: 8 / span 2; }
+
+/* --------------------------------------------------------------------- */
 
 boxes {
   display: flex;
@@ -409,6 +549,16 @@ box:first-child {
 }
 box h3 {
   margin-bottom:0.8em;
+}
+
+box.large tablex r {
+  line-height: 1.5;
+}
+box.large tablex r in,
+box.large tablex r to,
+box.large tablex r out {
+  font-size: 2rem;
+  padding-bottom: 0;
 }
 
 #hud-notification {
@@ -536,30 +686,31 @@ instead.
 
 */
 
-.ff-dlig { font-feature-settings: 'dlig' 1; }
-.ff-numr { font-feature-settings: 'numr' 1; }
-.ff-dnom { font-feature-settings: 'dnom' 1; }
-.ff-tnum { font-feature-settings: 'tnum' 1; }
-.ff-case { font-feature-settings: 'case' 1; }
-.ff-zero { font-feature-settings: 'zero' 1; }
-.ff-frac { font-feature-settings: 'frac' 1; }
-.ff-sups { font-feature-settings: 'sups' 1; }
-.ff-subs { font-feature-settings: 'subs' 1; }
-.ff-cpsp { font-feature-settings: 'cpsp' 1; }
-.ff-salt { font-feature-settings: 'salt' 1; }
+.ff-none { font-feature-settings: 'calt' 0, 'liga' 0; -webkit-font-feature-settings: 'calt' 0, 'liga' 0; -ms-font-feature-settings: 'calt' 0, 'liga' 0; -moz-font-feature-settings: 'calt' 0, 'liga' 0; }
+
+.ff-dlig { font-feature-settings: 'dlig' 1; -webkit-font-feature-settings: 'dlig' 1; -ms-font-feature-settings: 'dlig' 1; -moz-font-feature-settings: 'dlig' 1; }
+.ff-numr { font-feature-settings: 'numr' 1; -webkit-font-feature-settings: 'numr' 1; -ms-font-feature-settings: 'numr' 1; -moz-font-feature-settings: 'numr' 1; }
+.ff-dnom { font-feature-settings: 'dnom' 1; -webkit-font-feature-settings: 'dnom' 1; -ms-font-feature-settings: 'dnom' 1; -moz-font-feature-settings: 'dnom' 1; }
+.ff-tnum { font-feature-settings: 'tnum' 1; -webkit-font-feature-settings: 'tnum' 1; -ms-font-feature-settings: 'tnum' 1; -moz-font-feature-settings: 'tnum' 1; }
+.ff-case { font-feature-settings: 'case' 1; -webkit-font-feature-settings: 'case' 1; -ms-font-feature-settings: 'case' 1; -moz-font-feature-settings: 'case' 1; }
+.ff-zero { font-feature-settings: 'zero' 1; -webkit-font-feature-settings: 'zero' 1; -ms-font-feature-settings: 'zero' 1; -moz-font-feature-settings: 'zero' 1; }
+.ff-frac { font-feature-settings: 'frac' 1; -webkit-font-feature-settings: 'frac' 1; -ms-font-feature-settings: 'frac' 1; -moz-font-feature-settings: 'frac' 1; }
+.ff-sups { font-feature-settings: 'sups' 1; -webkit-font-feature-settings: 'sups' 1; -ms-font-feature-settings: 'sups' 1; -moz-font-feature-settings: 'sups' 1; }
+.ff-subs { font-feature-settings: 'subs' 1; -webkit-font-feature-settings: 'subs' 1; -ms-font-feature-settings: 'subs' 1; -moz-font-feature-settings: 'subs' 1; }
+.ff-cpsp { font-feature-settings: 'cpsp' 1; -webkit-font-feature-settings: 'cpsp' 1; -ms-font-feature-settings: 'cpsp' 1; -moz-font-feature-settings: 'cpsp' 1; }
+.ff-salt { font-feature-settings: 'salt' 1; -webkit-font-feature-settings: 'salt' 1; -ms-font-feature-settings: 'salt' 1; -moz-font-feature-settings: 'salt' 1; }
 .ff-salt-zero { font-feature-settings: 'salt' 1, 'zero' 1; }
 .ff-cv07-salt-zero { font-feature-settings: 'cv07' 1, 'salt' 1, 'zero' 1; }
 
-.ff-ss01 { font-feature-settings: 'ss01' 1; }
-.ff-ss02 { font-feature-settings: 'ss02' 1; }
-
-.ff-cv01 { font-feature-settings: 'cv01' 1; }
-.ff-cv02 { font-feature-settings: 'cv02' 1; }
-.ff-cv03 { font-feature-settings: 'cv03' 1; }
-.ff-cv04 { font-feature-settings: 'cv04' 1; }
-.ff-cv05 { font-feature-settings: 'cv05' 1; }
-.ff-cv06 { font-feature-settings: 'cv06' 1; }
-.ff-cv07 { font-feature-settings: 'cv07' 1; }
-.ff-cv08 { font-feature-settings: 'cv08' 1; }
-.ff-cv09 { font-feature-settings: 'cv09' 1; }
-.ff-cv10 { font-feature-settings: 'cv10' 1; }
+.ff-ss01 { font-feature-settings: 'ss01' 1; -webkit-font-feature-settings: 'ss01' 1; -ms-font-feature-settings: 'ss01' 1; -moz-font-feature-settings: 'ss01' 1; }
+.ff-ss02 { font-feature-settings: 'ss02' 1; -webkit-font-feature-settings: 'ss02' 1; -ms-font-feature-settings: 'ss02' 1; -moz-font-feature-settings: 'ss02' 1; }
+.ff-cv01 { font-feature-settings: 'cv01' 1; -webkit-font-feature-settings: 'cv01' 1; -ms-font-feature-settings: 'cv01' 1; -moz-font-feature-settings: 'cv01' 1; }
+.ff-cv02 { font-feature-settings: 'cv02' 1; -webkit-font-feature-settings: 'cv02' 1; -ms-font-feature-settings: 'cv02' 1; -moz-font-feature-settings: 'cv02' 1; }
+.ff-cv03 { font-feature-settings: 'cv03' 1; -webkit-font-feature-settings: 'cv03' 1; -ms-font-feature-settings: 'cv03' 1; -moz-font-feature-settings: 'cv03' 1; }
+.ff-cv04 { font-feature-settings: 'cv04' 1; -webkit-font-feature-settings: 'cv04' 1; -ms-font-feature-settings: 'cv04' 1; -moz-font-feature-settings: 'cv04' 1; }
+.ff-cv05 { font-feature-settings: 'cv05' 1; -webkit-font-feature-settings: 'cv05' 1; -ms-font-feature-settings: 'cv05' 1; -moz-font-feature-settings: 'cv05' 1; }
+.ff-cv06 { font-feature-settings: 'cv06' 1; -webkit-font-feature-settings: 'cv06' 1; -ms-font-feature-settings: 'cv06' 1; -moz-font-feature-settings: 'cv06' 1; }
+.ff-cv07 { font-feature-settings: 'cv07' 1; -webkit-font-feature-settings: 'cv07' 1; -ms-font-feature-settings: 'cv07' 1; -moz-font-feature-settings: 'cv07' 1; }
+.ff-cv08 { font-feature-settings: 'cv08' 1; -webkit-font-feature-settings: 'cv08' 1; -ms-font-feature-settings: 'cv08' 1; -moz-font-feature-settings: 'cv08' 1; }
+.ff-cv09 { font-feature-settings: 'cv09' 1; -webkit-font-feature-settings: 'cv09' 1; -ms-font-feature-settings: 'cv09' 1; -moz-font-feature-settings: 'cv09' 1; }
+.ff-cv10 { font-feature-settings: 'cv10' 1; -webkit-font-feature-settings: 'cv10' 1; -ms-font-feature-settings: 'cv10' 1; -moz-font-feature-settings: 'cv10' 1; }

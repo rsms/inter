@@ -4,10 +4,9 @@ title: Dynamic Metrics
 ---
 {%
 
-capture url_root
-  %}{% if site.safe == false %}/{% else %}/inter/{% endif
-%}{%
-endcapture %}{%
+if site.safe == false %}{%
+assign url_root = "/" %}{% else %}{%
+assign url_root = "/inter/" %}{% endif %}{%
 
 for file in site.static_files %}{%
   assign _path = file.path | remove_first: "/inter" %}{%
@@ -41,13 +40,13 @@ endfor
       <const>a</const> + <const>b</const> ×
       <const title="Base of natural logarithm; ≈2.718">e</const><sup>(<const>c</const> × <const>z</const>)</sup>
     </formula>
-    <formula>
+    <!--formula>
       line height = <num data-binding="var-l">1.4</num> × <const>z</const>
-    </formula>
+    </formula-->
     <formula title="Values for Inter">
-      <g><const title="Constant a">a</const> = <num data-binding="var-a">-0.02</num></g> &nbsp;&nbsp;
-      <g><const title="Constant b">b</const> = <num data-binding="var-b">0.205</num></g> &nbsp;&nbsp;
-      <g><const title="Constant c">c</const> = <num data-binding="var-c">-0.175</num></g> &nbsp;&nbsp;
+      <g><const title="Constant a">a</const> = <num data-binding="var-a">-0.038</num></g> &nbsp;&nbsp;
+      <g><const title="Constant b">b</const> = <num data-binding="var-b">0.161</num></g> &nbsp;&nbsp;
+      <g><const title="Constant c">c</const> = <num data-binding="var-c">-0.12</num></g> &nbsp;&nbsp;
       <g><const>z</const> = font size</g>
     </formula>
   </p>
@@ -76,14 +75,9 @@ endfor
   </div>
 
   <div class="sidebar controls">
+    
     <div class="control">
-      <label title="Number of ideal matches">ni</label>
-      <input title="Number of ideal matches" type="number" readonly data-binding="ideal-count">
-      <label title="Distance from ideal">di</label>
-      <input title="Distance from ideal" type="number" class="wide" readonly data-binding="ideal-distance">
-    </div>
-    <div class="control">
-      <img title="Style" class="icon" src="../samples/icons/style.svg">
+      <img title="Style" class="icon" src="icons/style.svg">
       <select data-binding="style">
         <option value="thin">Thin (BETA)</option>
         <option value="thin-italic">Thin Italic (BETA)</option>
@@ -107,11 +101,18 @@ endfor
       </select>
     </div>
     <div class="control">
-      <img title="Base tracking" class="icon" src="../samples/icons/letter-spacing.svg">
+      <img title="Base tracking" class="icon" src="icons/letter-spacing.svg">
       <input type="range" min="-0.05" max="0.06" step="0.001" data-binding="base-tracking">
       <input type="number" min="-0.15" max="1" step="0.001" data-binding="base-tracking">
     </div>
+    <div class="control">
+      <img title="Line height" class="icon" src="icons/line-height.svg">
+      <input type="range" min="1" max="2" step="0.01" data-binding="var-l">
+      <input type="number" min="1" max="2" step="0.01" data-binding="var-l">
+    </div>
+
     <hr>
+
     <div class="control">
       <label title="Constant a">a</label>
       <input type="range" min="-0.05" max="0" step="0.001" data-binding="var-a">
@@ -127,15 +128,20 @@ endfor
       <input type="range" min="-1" max="0" step="0.01" data-binding="var-c">
       <input type="number" min="-1" max="0" step="0.001" data-binding="var-c">
     </div>
-    <hr>
-    <div class="control">
-      <label title="Constant l controls line height">l</label>
-      <input type="range" min="1" max="2" step="0.1" data-binding="var-l">
-      <input type="number" min="1" max="2" step="0.1" data-binding="var-l">
-    </div>
-    <hr class="without-bottom-margin">
-    <canvas class="graphplot">Canvas not Supported</canvas>
     
+    <hr>
+    
+    <div class="control">
+      <label title="Number of ideal matches">ni</label>
+      <input title="Number of ideal matches" type="number" readonly data-binding="ideal-count">
+      <label title="Distance from ideal">di</label>
+      <input title="Distance from ideal" type="number" class="wide" readonly data-binding="ideal-distance">
+    </div>
+
+    <hr class="without-bottom-margin">
+
+    <canvas class="graphplot">Canvas not Supported</canvas>
+
     <hr class="when-selection without-top-margin">
     <h3 class="when-selection">CSS</h3>
     <textarea class="when-selection" readonly id="code-output"></textarea>
@@ -194,24 +200,65 @@ function parseValues(s) {
 }
 
 setIdealValues({
-  6:   0.021,
-  7:   0.017,
-  8:   0.013,
-  9:   0.01,
-  10:  0.007,
-  11:  0.005,
-  12:  0.002,
-  13:  0,
-  14: -0.002,
-  15: -0.004,
-  16: -0.005,
-  17: -0.007,
-  18: -0.008,
-  20: -0.01,
-  24: -0.013,
-  30: -0.016,
-  40: -0.02,
-  80: -0.02,
+  // // 2018
+  // 6:   0.021,
+  // 7:   0.017,
+  // 8:   0.013,
+  // 9:   0.01,
+  // 10:  0.007,
+  // 11:  0.005,
+  // 12:  0.002,
+  // 13:  0,
+  // 14: -0.002,
+  // 15: -0.004,
+  // 16: -0.005,
+  // 17: -0.007,
+  // 18: -0.008,
+  // 20: -0.01,
+  // 24: -0.013,
+  // 30: -0.016,
+  // 40: -0.02,
+  // 80: -0.02,
+
+  // 2019-02-02
+  // 6:    0.066,
+  // 7:    0.05,
+  // 8:    0.036,
+  // 9:    0.025,
+  // 10:   0.015,
+  // 11:   0.007,
+  // 12:   0,
+  // 13:  -0.005,
+  // 14:  -0.01,
+  // 15:  -0.014,
+  // 16:  -0.017,
+  // 17:  -0.02,
+  // 18:  -0.022,
+  // 20:  -0.026,
+  // 24:  -0.03,
+  // 30:  -0.033,
+  // 40:  -0.034,
+  // 80:  -0.034,
+
+  // 2019-02-06
+  6:    0.04,
+  7:    0.032,
+  8:    0.024,
+  9:    0.017,
+  10:   0.01,
+  11:   0.005,
+  12:   0,
+  13:  -0.004,
+  14:  -0.008,
+  15:  -0.011,
+  16:  -0.014,
+  17:  -0.017,
+  18:  -0.019,
+  20:  -0.023,
+  24:  -0.029,
+  30:  -0.034,
+  40:  -0.037,
+  80:  -0.038,
 })
 
 
@@ -223,7 +270,8 @@ setIdealValues({
 // var a = -0.0149, b = 0.298, c = -0.23; // di=0.000484 on set-2018-02-19
 // var a = -0.018, b = 0.21, c = -0.18; // di=0.000532 on set-2018-02-20
 // var a = -0.017, b = 0.202, c = -0.175; // 2018-09-28
-var a = -0.02, b = 0.0755, c = -0.102 // 2019-02-02
+// var a = -0.02, b = 0.0755, c = -0.102 // 2019-02-02
+var a = -0.038, b = 0.161, c = -0.12 // 2019-02-06
 
 
 var l = 1.4
