@@ -3,6 +3,12 @@ layout: default
 ---
 {%
 
+assign release_version = site.data.fontinfo[0].version %}{%
+
+capture download_url
+  %}https://github.com/rsms/inter/releases/download/v{{ release_version }}/Inter-{{ release_version }}.zip{%
+endcapture %}{%
+
 for file in site.static_files %}{%
   assign _path = file.path | remove_first: "/inter" %}{%
   if _path == "/index.css" %}{%
@@ -49,7 +55,7 @@ endfor
   <h2><a id="usage" href="#usage">How do I use it?</a></h2>
   <p>
     Using the font is as easy as
-    <a class="download-link" href="https://github.com/rsms/inter/releases/latest/">download &amp; installing</a> locally on your computer.
+    <a class="download-link" href="{{download_url}}">downloading &amp; installing</a> on your computer.
   </p>
   <p>
     You're free to bundle copies of Inter with your software, even if it's

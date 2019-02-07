@@ -1,16 +1,7 @@
 ---
 layout: none
 ---
-{%
-
-for file in site.static_files %}{%
-  assign _path = file.path | remove_first: "/inter" %}{%
-  if _path == "/font-files/Inter-Regular.woff2" %}{%
-    assign font_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  endif %}{%
-endfor
-
-%}
+{% assign font_v = site.data.fontinfo[0].version %}
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
