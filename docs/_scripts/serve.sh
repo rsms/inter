@@ -25,4 +25,9 @@ if [ "$1" != "" ]; then
   BINDADDR=$1
 fi
 
-jekyll serve --limit_posts 20 --watch --host "$BINDADDR" --port 3002
+jekyll serve \
+  --incremental \
+  --watch \
+  --host "$BINDADDR" \
+  --port 3002 \
+  --livereload
