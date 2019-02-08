@@ -44,9 +44,9 @@ endfor
       line height = <num data-binding="var-l">1.4</num> × <const>z</const>
     </formula-->
     <formula title="Values for Inter">
-      <g><const title="Constant a">a</const> = <num data-binding="var-a">-0.038</num></g> &nbsp;&nbsp;
-      <g><const title="Constant b">b</const> = <num data-binding="var-b">0.161</num></g> &nbsp;&nbsp;
-      <g><const title="Constant c">c</const> = <num data-binding="var-c">-0.12</num></g> &nbsp;&nbsp;
+      <g><const title="Constant a">a</const> = <num data-binding="var-a">-0.0223</num></g> &nbsp;&nbsp;
+      <g><const title="Constant b">b</const> = <num data-binding="var-b">0.185</num></g> &nbsp;&nbsp;
+      <g><const title="Constant c">c</const> = <num data-binding="var-c">-0.1745</num></g> &nbsp;&nbsp;
       <g><const>z</const> = font size</g>
     </formula>
   </p>
@@ -240,25 +240,45 @@ setIdealValues({
   // 40:  -0.034,
   // 80:  -0.034,
 
-  // 2019-02-06
-  6:    0.04,
+  // // 2019-02-06
+  // 6:    0.04,
+  // 7:    0.032,
+  // 8:    0.024,
+  // 9:    0.017,
+  // 10:   0.01,
+  // 11:   0.005,
+  // 12:   0,
+  // 13:  -0.004,
+  // 14:  -0.008,
+  // 15:  -0.011,
+  // 16:  -0.014,
+  // 17:  -0.017,
+  // 18:  -0.019,
+  // 20:  -0.023,
+  // 24:  -0.029,
+  // 30:  -0.034,
+  // 40:  -0.037,
+  // 80:  -0.038,
+
+  // 2019-02-07
+  6:    0.043,
   7:    0.032,
   8:    0.024,
-  9:    0.017,
+  9:    0.016,
   10:   0.01,
   11:   0.005,
   12:   0,
-  13:  -0.004,
-  14:  -0.008,
-  15:  -0.011,
-  16:  -0.014,
-  17:  -0.017,
-  18:  -0.019,
-  20:  -0.023,
-  24:  -0.029,
-  30:  -0.034,
-  40:  -0.037,
-  80:  -0.038,
+  13:  -0.0025,
+  14:  -0.006,
+  15:  -0.009,
+  16:  -0.011,
+  17:  -0.013,
+  18:  -0.014,
+  20:  -0.017,
+  24:  -0.019,
+  30:  -0.021,
+  40:  -0.022,
+  80:  -0.022,
 })
 
 
@@ -271,7 +291,8 @@ setIdealValues({
 // var a = -0.018, b = 0.21, c = -0.18; // di=0.000532 on set-2018-02-20
 // var a = -0.017, b = 0.202, c = -0.175; // 2018-09-28
 // var a = -0.02, b = 0.0755, c = -0.102 // 2019-02-02
-var a = -0.038, b = 0.161, c = -0.12 // 2019-02-06
+// var a = -0.038, b = 0.161, c = -0.12 // 2019-02-06
+var a = -0.0223, b = 0.185, c = -0.1745 // 2019-02-07
 
 
 var l = 1.4
@@ -506,9 +527,10 @@ function updateIdealMatches() {
 function updateGraphPlot() {
   graph.clear()
   graph.plotLine(idealValuesList, '#0d3')
-  graph.plotf(function(x) {
-    return _InterDynamicTracking(x, weightClass)
-  })
+  graph.plotf(
+    x => _InterDynamicTracking(x, weightClass),
+    'rgba(0, 0, 0, 0.5)'
+  )
   if (focusedSample) {
     var graphedFontSize = Math.min(24, focusedSample.fontSize) // clamp to [-inf,24]
     graph.plotPoints([
