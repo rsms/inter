@@ -14,6 +14,7 @@ import logging
 import re
 import signal
 import subprocess
+import ufo2ft
 from functools import partial
 from fontmake.font_project import FontProject
 from defcon import Font
@@ -113,9 +114,9 @@ def findGlyphDirectives(g): # -> set<string> | None
 
 
 class VarFontProject(FontProject):
-  def decompose_glyphs(self, ufos, glyph_filter=lambda g: True):
+  def decompose_glyphs(self, designspace, glyph_filter=lambda g: True):
     """Move components of UFOs' glyphs to their outlines."""
-    for ufo in ufos:
+    for ufo in designspace:
       log.info('Decomposing glyphs for ' + self._font_name(ufo))
       for glyph in ufo:
         if not glyph.components or not glyph_filter(glyph):
@@ -138,15 +139,29 @@ class VarFontProject(FontProject):
         pen = ReverseContourPen(pen)
       component.draw(pen)
 
-  def build_interpolatable_ttfs(self, ufos, **kwargs):
-    """Build OpenType binaries with interpolatable TrueType outlines."""
+
+  def _build_interpolatable_masters(
+    self,
+    designspace,
+    ttf,
+    use_production_names=None,
+    reverse_direction=True,
+    conversion_error=None,
+    feature_writers=None,
+    cff_round_tolerance=None,
+    **kwargs
+  ):
+    """Build OpenType binaries with interpolatable outlines."""
     # We decompose any glyph with two or more components to make sure
     # that fontTools varLib is able to produce properly-slanting interpolation.
 
+    self._load_designspace_sources(designspace)
+
     decomposeGlyphs = set()
     removeOverlapsGlyphs = set()
+    masters = [s.font for s in designspace.sources]
 
-    for ufo in ufos:
+    for ufo in masters:
       updateFontVersion(ufo)
       isItalic = ufo.info.italicAngle != 0
       ufoname = basename(ufo.path)
@@ -159,7 +174,7 @@ class VarFontProject(FontProject):
             decomposeGlyphs.add(g.name)
           removeOverlapsGlyphs.add(g)
 
-    self.decompose_glyphs(ufos, lambda g: g.name in decomposeGlyphs)
+    self.decompose_glyphs(masters, lambda g: g.name in decomposeGlyphs)
 
     if len(removeOverlapsGlyphs) > 0:
       rmoverlapFilter = RemoveOverlapsFilter(backend='pathops')
@@ -172,7 +187,23 @@ class VarFontProject(FontProject):
         )
         rmoverlapFilter.filter(g)
 
-    self.save_otfs(ufos, ttf=True, interpolatable=True, **kwargs)
+    if ttf:
+      return ufo2ft.compileInterpolatableTTFsFromDS(
+        designspace,
+        useProductionNames=use_production_names,
+        reverseDirection=reverse_direction,
+        cubicConversionError=conversion_error,
+        featureWriters=feature_writers,
+        inplace=True,
+      )
+    else:
+      return ufo2ft.compileInterpolatableOTFsFromDS(
+        designspace,
+        useProductionNames=use_production_names,
+        roundTolerance=cff_round_tolerance,
+        featureWriters=feature_writers,
+        inplace=True,
+      )
 
 
 def updateFontVersion(font, dummy=False):
@@ -378,10 +409,9 @@ class Main(object):
       if outfileext.lower() != '.ttf':
         fatal('Invalid file extension %r (expected ".ttf")' % outfileext)
 
-    project = VarFontProject(verbose=self.logLevelName)
-
     mkdirs(dirname(outfilename))
 
+    project = VarFontProject(verbose=self.logLevelName)
     project.run_from_designspace(
       args.srcfile,
       interpolate=False,
@@ -392,7 +422,6 @@ class Main(object):
       output=['variable'],
       overlaps_backend='pathops', # use Skia's pathops
     )
-
     self.log("write %s" % outfilename)
 
     # Note: we can't run ots-sanitize on the generated file as OTS
