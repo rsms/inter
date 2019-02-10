@@ -242,7 +242,11 @@ html { font-family: 'Inter', sans-serif; }
       {% endfor %}
       </grid>
       <p class="example" title="CSS code">
+        {% if feat_tag == "calt" %}
+        <tt>/* calt is enabled by default */</tt>
+        {% else %}
         <tt>font-feature-settings: '{{feat_tag}}' 1</tt>
+        {% endif %}
       </p>
       {% if f.footer %}
         <p>{{f.footer}}</p>
