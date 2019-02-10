@@ -151,18 +151,14 @@ Usage:
   font-weight: 100 900;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("font-files/Inter-upright.var.woff2?v={{font_v}}") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter-upright.var.woff2?v={{font_v}}") format("woff2-variations"),
-       url("font-files/Inter-upright.var.woff2?v={{font_v}}") format("woff2");
+  src: url("font-files/Inter-upright.var.woff2?v={{font_v}}") format("woff2");
 }
 @font-face {
   font-family: 'Inter var';
   font-weight: 100 900;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url("font-files/Inter-italic.var.woff2?v={{font_v}}") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter-italic.var.woff2?v={{font_v}}") format("woff2-variations"),
-       url("font-files/Inter-italic.var.woff2?v={{font_v}}") format("woff2");
+  src: url("font-files/Inter-italic.var.woff2?v={{font_v}}") format("woff2");
 }
 
 /* Legacy naming compatibility */
@@ -171,18 +167,14 @@ Usage:
   font-weight: 100 900;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("font-files/Inter-upright.var.woff2?v={{font_v}}") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter-upright.var.woff2?v={{font_v}}") format("woff2-variations"),
-       url("font-files/Inter-upright.var.woff2?v={{font_v}}") format("woff2");
+  src: url("font-files/Inter-upright.var.woff2?v={{font_v}}") format("woff2");
 }
 @font-face {
   font-family: 'Inter var alt';
   font-weight: 100 900;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url("font-files/Inter-italic.var.woff2?v={{font_v}}") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter-italic.var.woff2?v={{font_v}}") format("woff2-variations"),
-       url("font-files/Inter-italic.var.woff2?v={{font_v}}") format("woff2");
+  src: url("font-files/Inter-italic.var.woff2?v={{font_v}}") format("woff2");
 }
 
 
@@ -203,6 +195,5 @@ explicitly, e.g.
   font-family: 'Inter var experimental';
   font-weight: 100 900;
   font-style: oblique 0deg 10deg;
-  src: url("font-files/Inter.var.woff2?v={{font_v}}") format("woff2-variations"),
-       url("font-files/Inter.var.woff2?v={{font_v}}") format("woff2");
+  src: url("font-files/Inter.var.woff2?v={{font_v}}") format("woff2");
 }
