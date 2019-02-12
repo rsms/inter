@@ -4,6 +4,7 @@ import os, sys
 import signal
 import socket
 import http.server
+from os.path import dirname, abspath, join as pjoin
 
 def sighandler(signum, frame):
   sys.stdout.write('\n')
@@ -21,7 +22,14 @@ class HTTPServer(http.server.HTTPServer):
     http.server.HTTPServer.server_bind(self)
 
 
-addr = ("localhost", 3002)
+# make sure "./fonts" is a symlink to /build/fonts
+labdir = abspath(dirname(__file__))
+try:
+  os.symlink('../../build/fonts', pjoin(labdir, 'fonts'))
+except FileExistsError:
+  pass
+
+addr = ("localhost", 3003)
 
 # make ^C instantly exit program
 signal.signal(signal.SIGINT, sighandler)
