@@ -1,6 +1,6 @@
 # Source files
 
-The main source file is `Inter-UI.glyphs`, but you can easily generate
+The main source file is `Inter.glyphs`, but you can easily generate
 UFOs and work with those instead, if you're using a font editor that does
 not support .glyphs files.
 
