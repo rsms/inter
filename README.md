@@ -61,7 +61,7 @@ However, as the project progressed and the typeface was put into use, it quickly
 became clear that for anything longer than a short word, it was actually hard to
 read the almost monotonically-spaced letters.
 
-A second major revision was create where the previously-strict rule of geometry being even multiples of 256 was relaxed and now the rule is "try to stick with 128x, if you can't, stick with 64x and if you can't do that either, never go below 16x." This means that Inter is now much more variable in pace than it used to be, making it work better at higher resolutions and work much better in longer text, but losing some contrast and sharpness at small sizes.
+A second major revision was created where the previously-strict rule of geometry being even multiples of 256 was relaxed and now the rule is "try to stick with 128x, if you can't, stick with 64x and if you can't do that either, never go below 16x." This means that Inter is now much more variable in pace than it used to be, making it work better at higher resolutions and work much better in longer text, but losing some contrast and sharpness at small sizes.
 
 ![Metrics](docs/res/metrics.png)
 
