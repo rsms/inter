@@ -26,7 +26,7 @@ class HTTPServer(http.server.HTTPServer):
 labdir = abspath(dirname(__file__))
 try:
   os.symlink('../../build/fonts', pjoin(labdir, 'fonts'))
-except FileExistsError:
+except OSError:
   pass
 
 addr = ("localhost", 3003)
