@@ -25,78 +25,95 @@ endfor
 <link rel="stylesheet" href="index-var.css?v={{ index_var_css_v }}">
 <input type="text" id="hidden-text-input">
 
-<div class="row"><div>
-  <h1>The Inter font family</h1>
-  <p>
-  Inter is a typeface specially designed for user interfaces
-  with focus on high legibility of small-to-medium sized text on computer screens.
-  </p>
-  <p>
-  The family features a tall x-height to aid in readability of mixed-case and
-  lower-case text. Several OpenType features are provided as well,
-  like contextual alternates that adjusts punctuation depending on the shape of
-  surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o",
-  tabular numbers, etc.
-  </p>
-</div></div>
+<div class="row white"><div>
+  <h1>The Inter<br>typeface family</h1>
+  <grid columns=8>
+    <c span=2 span-s=row>
+    Inter is a typeface specially designed for computer screens.
+    </c>
+    <c span=3.. span-s=row>
+    The family features a tall x-height to aid in readability of mixed-case and
+    lower-case text. Several OpenType features are provided as well,
+    like contextual alternates that adjusts punctuation depending on the shape of
+    surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o",
+    tabular numbers, etc.
+    </c>
 
-<div class="row white" style="padding-bottom:0"><div>
-  <p id="samples" class="samples items sample-images">
-    <a href="samples/" class="plain"><img src="samples/img/01.png" srcset="samples/img/01@2x.png 2x" width="888"></a>
-  </p>
-  <p style="text-align:center">
-    <a href="samples/" class="plain">More samples -></a>
-    <br><br>
-  </p>
-</div></div>
+    <c class="spacer"></c>
 
-<div class="row dark"><div>
+    <c span=2 span-s=row>
+      <h3><span class="only-large-screen">Inter Bold<br></span>Sample</h3>
+    </c>
+    <c span=3.. span-s=row>
+      <a href="samples/" class="plain"><img src="samples/img/lineup-bold-red.svg" width="100%"></a>
+    </c>
 
-  <h2><a id="usage" href="#usage">How do I use it?</a></h2>
-  <p>
-    Using the font is as easy as
-    <a class="download-link" href="{{download_url}}">downloading &amp; installing</a> on your computer.
-  </p>
-  <p>
-    You're free to bundle copies of Inter with your software, even if it's
-    commercial and you charge money for your software. Inter can also be used
-    on the web by either hosting the font files yourself or by including this CSS:
-  </p>
-  <pre>@import url('https://rsms.me/inter/inter.css');
+    <c class="spacer"></c>
+
+    <c span=2 span-s=row>
+      <h3><span class="only-large-screen">Inter Regular<br></span>Sample</h3>
+    </c>
+    <c span=3.. span-s=row>
+      <a href="samples/" class="plain"><img src="samples/img/sample-regular-text.svg" width="100%"></a>
+    </c>
+
+    <c class="spacer"></c>
+
+    <c span=2 span-s=row>
+      <h3><a id="usage" href="#usage">Using</a></h3>
+    </c>
+    <c span=3.. span-s=row>
+      <p>
+        Using Inter is as easy as
+        <a class="download-link" href="{{download_url}}">downloading &amp; installing</a>
+        the font files. If you're making a web thing, you can simply use this CSS:
+      </p>
+      <pre>@import url('https://rsms.me/inter/inter.css');
 html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
 }</pre>
+    </c>
 
-  <p>&nbsp;</p>
+    <c class="spacer"></c>
 
-  <h2 id="dynamic-metrics"><a href="dynmetrics/">Dynamic Metrics</a></h2>
-  <p class="dynmet-calc">
-    Size
-    <input id="dynmet-font-size" type="number" value="16" min="4" max="99"
-    ><span title='Display points — "px" in CSS, "pt" on iOS, "sp" on Android, and "pt" (1/72 of an inch) in print'>dp</span>
-    <span class="arrow">=</span>
-    <span title='letter-spacing in CSS; also called "tracking" in some software.'>spacing
-    <input id="dynmet-tracking" type="number" value="0.008">
-    <span id="dynmet-unit">em</span>
-  </p>
-  <p>
-    There's of course no absolute right or wrong when it comes to expressing yourself with typography, but Inter <em>Dynamic Metrics</em> provides guidelines for good typography. You simply provide the optical font size, and the tracking and leading is calculated for you to produce the best results.
-  </p>
-  <p>
-    <a href="dynmetrics/">Learn more…</a>
-  </p>
+    <c span=2 span-s=row>
+      <h3 id="dynamic-metrics"><a href="dynmetrics/">Dynamic Metrics</a></h3>
+    </c>
+    <c span=3.. span-s=row>
+      <p class="dynmet-calc">
+        Size
+        <input id="dynmet-font-size" type="number" value="16" min="4" max="99" autocomplete="off" spellcheck="false"
+        ><span title='Display points — "px" in CSS, "pt" on iOS, "sp" on Android, and "pt" (1/72 of an inch) in print'>dp</span>
+        <span class="arrow">=</span>
+        <span title='letter-spacing in CSS; also called "tracking" in some software.'>spacing
+        <input id="dynmet-tracking" type="number" value="0.008" autocomplete="off" spellcheck="false">
+        <span id="dynmet-unit">em</span>
+      </p>
+      <p>
+        There's of course no absolute right or wrong when it comes to expressing yourself with typography, but Inter <em>Dynamic Metrics</em> provides guidelines for good typography. You simply provide the optical font size, and the tracking and leading is calculated for you to produce the best results.
+      </p>
+      <p>
+        <a href="dynmetrics/" class="plain">Explore dynamic metrics &rarr;</a>
+      </p>
+    </c>
 
-  <p>&nbsp;</p>
+    <c class="spacer"></c>
 
-  <h2><a id="free" href="#free">How much does it cost?</a></h2>
-  <p>
-    Inter is a <a href="https://github.com/rsms/inter">free and open source</a> font family.<br>
-    You are free to use this font in almost any way imaginable.<br>
-    Refer to the <a href="https://choosealicense.com/licenses/ofl-1.1/">SIL Open Font License 1.1</a> for exact details on what the conditions and restrictions are.
-  </p>
+    <c span=2 span-s=row>
+      <h3><a id="free" href="#free">Free &amp; <br class="only-large-screen">Open source</a></h3>
+    </c>
+    <c span=3.. span-s=row>
+      <p>
+        Inter is a <a href="https://github.com/rsms/inter">free and open source</a> font family.<br>
+        You are free to use this font in almost any way imaginable.<br>
+        Refer to the <a href="https://choosealicense.com/licenses/ofl-1.1/">SIL Open Font License 1.1</a> for exact details on what the conditions and restrictions are.
+      </p>
+    </c>
 
+  </grid>
 </div></div>
+
 
 <div class="row"><div>
   <h2><a id="weights" href="#weights">Weights & Styles</a></h2>
@@ -205,16 +222,16 @@ html { font-family: 'Inter', sans-serif; }
 
       %}
       {% if has_feature_col %}
-      <grid class="c8">
-        <c span="1" class="low-contrast ">Feature</c>
-        <c span="3" class="low-contrast">Disabled</c>
-        <c span="1" class="low-contrast center-text">→</c>
-        <c span="3" class="low-contrast">Enabled</c>
+      <grid columns=8>
+        <c span=1 class="low-contrast ">Feature</c>
+        <c span=3 class="low-contrast">Disabled</c>
+        <c span=1 class="low-contrast center-text">→</c>
+        <c span=3 class="low-contrast">Enabled</c>
       {% else %}
-      <grid class="c9">
-        <c span="4" class="low-contrast">Disabled</c>
-        <c span="1" class="low-contrast center-text">→</c>
-        <c span="4" class="low-contrast">Enabled</c>
+      <grid columns=9>
+        <c span=4 class="low-contrast">Disabled</c>
+        <c span=1 class="low-contrast center-text">→</c>
+        <c span=4 class="low-contrast">Enabled</c>
       {% endif %}
       {% for s in f.samples %}
         {%
@@ -230,14 +247,14 @@ html { font-family: 'Inter', sans-serif; }
         assign sample_out = sample | remove: "›" | remove: "‹"
 
         %} {% if has_feature_col %}
-        <c span="1" class="">{{feat_tag}}</c>
-        <c span="3" class="sample ff-none">{{sample_in}}</c>
-        <c span="1" class="low-contrast center-text">→</c>
-        <c span="3" class="sample ff-{{feat_tag}}">{{sample_out}}</c>
+        <c span=1 class="">{{feat_tag}}</c>
+        <c span=3 class="sample ff-none">{{sample_in}}</c>
+        <c span=1 class="low-contrast center-text">→</c>
+        <c span=3 class="sample ff-{{feat_tag}}">{{sample_out}}</c>
         {% else %}
-        <c span="4" class="sample ff-none">{{sample_in}}</c>
-        <c span="1" class="low-contrast center-text">→</c>
-        <c span="4" class="sample ff-{{feat_tag}}">{{sample_out}}</c>
+        <c span=4 class="sample ff-none">{{sample_in}}</c>
+        <c span=1 class="low-contrast center-text">→</c>
+        <c span=4 class="sample ff-{{feat_tag}}">{{sample_out}}</c>
         {% endif %}
       {% endfor %}
       </grid>
@@ -266,63 +283,59 @@ html { font-family: 'Inter', sans-serif; }
     <br>
     You can explore features in the <a href="lab/">interactive lab</a>.
   </p>
-
-  <p>&nbsp;</p>
-
-  <h2 class="banner"><a href="glyphs/">Browse all glyphs -></a></h2>
 </div></div>
 
-<div class="row-divider"></div>
-
-<div class="row"><div>
+<div class="row white"><div>
   <h2><a id="story" href="#story">The story behind Inter</a></h2>
-  <p>
-  Inter started out in late 2016 as an experiment to build a perfectly
-  pixel-fitting font at a specific small size (11px.) The idea was that
-  by crafting a font in a particular way, with a particular coordinate system
-  (Units Per EM), and for a particular target rasterization size (11), it would
-  be possible to get the best of both sharpness and readability.
-  </p>
-  <p>
-  However after a few months of using an early version of Inter, it dawned
-  on everyone exposed to the test that this approach had some serious real-world
-  problems. Most notably that it was really hard to read longer text. Because of
-  the pixel-aligning nature of that approach, the font took an almost
-  <a href="https://www.figma.com/file/HPqDViSCB8fAWuxaV2ousFMv">mono-spaced appearance</a>,
-  making it really easy to read numbers, punctuation and very short
-  words, but eye-straining to read anything longer.
-  </p>
-  <p>
-  The project was rebooted with a different approach, sticking with the
-  specific UPM, but crafting glyphs and kerning in a way that made for
-  more variation in the rhythm and smoother vertical and horizontal stems.
-  As Inter was being developed, it was tested on an internal version of
-  <a href="https://www.figma.com/">Figma</a>—where the author of Inter works as a designer—and slowly improved upon based on experience and feedback.
-  </p>
+  <flow columns=2 columns-s=1>
+    <p>
+    Inter started out in late 2016 as an experiment to build a perfectly
+    pixel-fitting font at a specific small size (11px.) The idea was that
+    by crafting a font in a particular way, with a particular coordinate system
+    (Units Per EM), and for a particular target rasterization size (11), it would
+    be possible to get the best of both sharpness and readability.
+    </p>
+    <p>
+    However after a few months of using an early version of Inter, it dawned
+    on everyone exposed to the test that this approach had some serious real-world
+    problems. Most notably that it was really hard to read longer text. Because of
+    the pixel-aligning nature of that approach, the font took an almost
+    <a href="https://www.figma.com/file/HPqDViSCB8fAWuxaV2ousFMv">mono-spaced appearance</a>,
+    making it really easy to read numbers, punctuation and very short
+    words, but eye-straining to read anything longer.
+    </p>
+    <p>
+    The project was rebooted with a different approach, sticking with the
+    specific UPM, but crafting glyphs and kerning in a way that made for
+    more variation in the rhythm and smoother vertical and horizontal stems.
+    As Inter was being developed, it was tested on an internal version of
+    <a href="https://www.figma.com/">Figma</a>—where the author of Inter works as a designer—and slowly improved upon based on experience and feedback.
+    </p>
+  </flow>
 
   <p>&nbsp;</p>
 
   <h2><a id="faq" href="#faq">FAQ</a></h2>
-  <ul class="faq">
+  <grid columns=2 columns-s=1 class="faq">
 
-    <li class="q" id="faq-using-features">
-      How do I enable and disable font features?
-    </li>
-    <li class="a">
+    <c>
+      <h4 id="faq-using-features">
+        How do I enable and disable font features?
+      </h4>
       In web browsers you'll want to use
       <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings"><q>font-feature-settings</q></a>.
       In Figma you can access features via the
-      <a href="https://help.figma.com/text/opentype-features">Advanced Typography panel.</a>
+      <a href="https://help.figma.com/article/250-working-with-fonts#opentype">Advanced Type panel.</a>
       In Illustrator, Photoshop and friends, you can access features via the
       <a href="https://helpx.adobe.com/illustrator/using/special-characters.html#opentype_panel_overview">Characters and OpenType panels.</a>
       Sketch doesn't provide a UI for configuring font features, but there's
       <a href="https://sketchtalk.io/discussion/comment/1478/#Comment_1478">a workaround using macOS's native font UI.</a>
-    </li>
+    </c>
 
-    <li class="q" id="faq-unhinted-vs-hinted">
-      What is the difference between "unhinted" and "hinted" font files?
-    </li>
-    <li class="a">
+    <c>
+      <h4 id="faq-unhinted-vs-hinted">
+        What is the difference between "unhinted" and "hinted" font files?
+      </h4>
       The font files in the "hinted" folders have additional data in them
       for assisting
       <a href="https://en.wikipedia.org/wiki/ClearType">ClearType</a>,
@@ -334,23 +347,22 @@ html { font-family: 'Inter', sans-serif; }
       consideration to make.
       <a href="https://www.typotheque.com/articles/hinting">
       This article explains hinting at a greater length.</a>
-    </li>
+    </c>
 
-
-    <li class="q" id="faq-cdn">
-      How reliable are the fonts served from rsms.me/inter? Is it on a CDN?
-    </li>
-    <li class="a">
+    <c>
+      <h4 id="faq-cdn">
+        How reliable are the fonts served from rsms.me/inter? Is it on a CDN?
+      </h4>
       rsms.me/inter is backed by GitHub's server network and distributed
       globally on the CloudFlare CDN, making usage of
       <q>https://rsms.me/inter/inter.css</q> and associated font
       files very reliable and fast throughout the world. 
-    </li>
+    </c>
 
-    <li class="q" id="faq-contribute">
-      Can I help with improving Inter?
-    </li>
-    <li class="a">
+    <c>
+      <h4 id="faq-contribute">
+        Can I help with improving Inter?
+      </h4>
       Yes you can! Inter is an open-source project, meaning the source
       code—or "source design" if you will—that is used to build the font files
       <a href="https://github.com/rsms/inter">are freely available</a> to improve upon.
@@ -360,12 +372,12 @@ html { font-family: 'Inter', sans-serif; }
       The <a href="https://github.com/rsms/inter/blob/master/CONTRIBUTING.md">"Contributing" document</a> is a great place to start. The document outlines where
       you can have the biggest impact, how things are setup and how to get
       started.
-    </li>
+    </c>
 
-    <li class="q" id="faq-start-date">
-      This website claims work started in 2016, but the git repository's log says it started later?
-    </li>
-    <li class="a">
+    <c>
+      <h4 id="faq-start-date">
+        This website claims work started in 2016, but the git repository's log says it started later?
+      </h4>
       Inter was developed in an a private, internal git repository
       starting in November 2016, prior to being published on August 22, 2017.
       Between November 2016 and August 2017, there were
@@ -377,26 +389,22 @@ html { font-family: 'Inter', sans-serif; }
       all commit messages. Maybe one day we can write an elaborate git
       filter-branch program and convert the filter the old repository to make
       it public, but what would be the point of that?&nbsp; :—)
-    </li>
+    </c>
 
-    <li class="q" id="faq-contact">
-      I've made a cool thing that uses Inter, can I share it with you?
-      &nbsp;<dem>or</dem>
-    </li>
-    <li class="q">
-      I have a different question
-    </li>
-    <li class="a">
+    <c>
+      <h4 id="faq-contact">
+        I've made a cool thing that uses Inter, can I share it with you?<br>
+        or, I have a different question.
+      </h4>
       Reach out on <a href="https://twitter.com/rsms">Twitter (@rsms)</a> or over <a href="mailto:rasmus@notion.se">email</a>
-    </li>
+    </c>
 
-
-  </ul>
+  </grid>
 
 </div></div>
 
 
-<div class="row"><div>
+<div class="row white"><div>
   — <a href="https://twitter.com/rsms" class="plain">@rsms</a>
 </div></div>
 

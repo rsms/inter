@@ -1,4 +1,24 @@
 
+h1 {
+  color: #010101;
+  font-size:110px;
+  letter-spacing: -0.055em;
+  line-height: 0.9em;
+  text-indent: -0.03em;
+  margin-bottom: 4rem;
+  margin-top: 10px;
+  font-weight: 740;
+}
+
+@media only screen and (max-width: 565px) {
+  h1 {
+    /*font-size: 60px;
+    letter-spacing: -0.045em;
+    text-indent: -0.012em;*/
+    line-height: 1em;
+  }
+}
+
 #hidden-text-input {
   position: absolute;
   left:0;
@@ -10,27 +30,33 @@
 }
 
 .dynmet-calc {
-  font-size: 18px;
-  line-height: 26px;
+  font-weight: 440;
+  font-size: 1.2rem;
+  line-height: calc(var(--spacingv) * 2);
+  /*font-size: 1.5rem;*/
+  /*line-height: 26px;*/
   user-select: text;
 }
   .dynmet-calc input {
     border: none;
-    box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.3);
+    /*box-shadow: 0 0.125rem 0 0 rgba(0, 0, 0, 0.3);*/
     background: transparent;
     font: inherit;
-    color: inherit;
     outline: none;
     margin: 0 0.2em;
     width: 40px;
     text-align: center;
     line-height: inherit;
-    color: #eee;
+    color: var(--red);
     user-select: text;
+    border-radius: 0.2rem;
+  }
+  .dynmet-calc input:hover {
+    box-shadow: 0 0 0 0.12rem rgba(0, 0, 0, 0.3);
   }
   .dynmet-calc input:focus {
-    color: #fff;
-    box-shadow: inset 0 -2px 0 0 rgb(43, 139, 247);
+    /*box-shadow: 0 2px 0 0 var(--red);*/
+    background: rgba(0, 0, 0, 0.07);
   }
   .dynmet-calc input[type=number]::-webkit-inner-spin-button, 
   .dynmet-calc input[type=number]::-webkit-outer-spin-button { 
@@ -40,14 +66,14 @@
 
   .dynmet-calc .arrow {
     margin: 0 0.5em;
-    color: #eee;
+    /*color: var(--red);*/
   }
 
   .dynmet-calc #dynmet-tracking {
     box-shadow: none;
     width: 57px;
     margin-right: 0.1em;
-    color: #eee;
+    color: var(--red);
   }
   .dynmet-calc #dynmet-tracking.percent {
     width: 34px;
@@ -62,6 +88,13 @@
 
 
 /* FAQ */
+grid.faq {
+  grid-row-gap: calc(var(--spacingv) * 3);
+}
+.faq .q {
+  font-weight: 600;
+}
+
 ul.faq {
   list-style:none;
   display: flex;

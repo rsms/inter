@@ -16,6 +16,8 @@ for file in site.static_files %}{%
   assign _path = file.path | remove_first: "/inter" %}{%
   if _path == "/res/base.css" %}{%
     assign base_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/grid.css" %}{%
+    assign grid_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
   elsif _path == "/res/base.js" %}{%
     assign base_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
   elsif _path == "/res/favicon.png" %}{%
@@ -33,6 +35,8 @@ endfor
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{{url_root}}inter.css?v={{ release_version }}">
     <link rel="stylesheet" href="{{url_root}}res/base.css?v={{ base_css_v }}">
+    <link rel="stylesheet" href="{{url_root}}res/grid.css?v={{ grid_css_v }}">
+    <link rel="stylesheet" href="https://rsms.me/res/fonts/ibm-plex-mono.css">
     <link rel="icon" type="image/png" href="{{url_root}}res/favicon.png?v={{ favicon_v }}">
     {% include preload-font-files.html %}
     <meta name="format-detection" content="telephone=no">
