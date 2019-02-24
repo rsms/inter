@@ -11,7 +11,9 @@
   --gridGapCol: var(--spacing);
   --gridGapRow: calc(var(--spacing) / 2);
 
-  --red: #F02D09;
+  --red: #F03009;
+  --yellow: #FFE310;
+  --blue: rgb(3, 102, 214);
 }
 
 * { margin:0; padding:0; font-synthesis: none; }
@@ -77,11 +79,12 @@ body {
   }
 }
 
-:target:before {
+DISABLED:target:before {
   content:"";
   display: block;
   height: 20px; /* fixed header height*/
   margin: -20px 0 0; /* negative fixed header height */
+  visibility: hidden;
 }
 
 a {
@@ -95,8 +98,8 @@ a.fat {
   color: #333;
 }
 a:hover {
-  color: rgb(3, 102, 214);
-  text-decoration: underline rgba(3, 102, 214, 0.6);
+  color: var(--red);
+  text-decoration: underline;
 }
 a.plain, a.fat {
   background: none;
@@ -225,6 +228,7 @@ h3 q, h3. q {
 
 h1 > a, h2 > a, h3 > a, h4 > a,
 .h1 > a, .h2 > a, .h3 > a, .h4 > a {
+  display:block;
   color: inherit;
   text-decoration: none !important;
   text-shadow: none;
@@ -349,7 +353,6 @@ h2.banner {
     white-space: nowrap;
   }
   .row.menu ul li {
-    /*margin-right: 50px;*/
     margin-bottom: -1px;
     text-indent: -0.5px;
     text-align: center;
@@ -359,14 +362,15 @@ h2.banner {
       opacity: 0.8;
       text-decoration:none;
       display: inline-block;
-      padding: 15px 25px 13px 25px;
-      /*transition: 80ms opacity cubic-bezier(0.25, 0.47, 0.44, 0.93);*/
-      /*border-bottom: 3px solid transparent;*/
+      padding: 15px 20px 13px 20px;
+      margin-right: 1px;
+      font-weight: 450;
+      /*transition: 80ms all cubic-bezier(0.25, 0.47, 0.44, 0.93);*/
     }
-    .row.menu ul li > a:hover, .row.menu ul li > a.active {
+    .row.menu ul li > a:hover,
+    .row.menu ul li > a.active {
       color: white;
       background: var(--red);
-      border-bottom-color: white;
       opacity: 1;
     }
     .row.menu ul li:first-child > a {
@@ -375,8 +379,8 @@ h2.banner {
       margin-right: 25px;
       background:transparent;
     }
-    .row.menu ul li > a.active {
-      font-weight:600;
+    .row.menu ul li:first-child > a:hover {
+      text-decoration:underline;
     }
   .row.menu ul li.home > a {
     font-weight: 600;

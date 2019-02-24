@@ -12,9 +12,9 @@ h1 {
 
 @media only screen and (max-width: 565px) {
   h1 {
-    /*font-size: 60px;
+    font-size: 60px;
     letter-spacing: -0.045em;
-    text-indent: -0.012em;*/
+    text-indent: -0.012em;
     line-height: 1em;
   }
 }
@@ -94,39 +94,9 @@ grid.faq {
 .faq .q {
   font-weight: 600;
 }
-
-ul.faq {
-  list-style:none;
-  display: flex;
-  flex-direction: column;
-  margin-left:0;
+.faq h4:target {
+  background: var(--yellow);
 }
-ul.faq > li {
-  padding-right: 6px;
-  margin-bottom: 6px;
-  padding-left: 1.5em;
-  text-indent: -1.5em;
-}
-
-ul.faq > li:target {
-  background: #fafa88;
-  margin-left: -1.5em;
-}
-ul.faq > li > a.anchor {
-  visibility: hidden;
-  height:0;
-  position:relative;
-}
-ul.faq li.q {
-  font-weight: 600;
-  margin-top:1.5em;
-  text-indent: -1.52em;
-}
-ul.faq > li.q:first-child,
-ul.faq > li.q:not([id]) {
-  margin-top:0;
-}
-
 
 tablex in, tablex to, tablex out {
   display: table-cell;
