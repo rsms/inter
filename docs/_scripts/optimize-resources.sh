@@ -2,18 +2,26 @@
 set -e
 cd "$(dirname "$0")/.."
 
+MISSING_UTILS=()
 if ! (which svgo >/dev/null); then
-  echo 'svgo not found in $PATH (try `brew install svgo` on mac)' >&2
-  exit 1
+  echo 'svgo not found in $PATH' >&2
+  MISSING_UTILS+=( svgo )
 fi
 
 if ! (which pngcrush >/dev/null); then
-  echo 'pngcrush not found in $PATH (try `brew install pngcrush` on mac)' >&2
-  exit 1
+  echo 'pngcrush not found in $PATH' >&2
+  MISSING_UTILS+=( pngcrush )
 fi
 
 if ! (which convert >/dev/null); then
-  echo 'convert not found in $PATH (try `brew install imagemagick` on mac)' >&2
+  echo 'convert not found in $PATH' >&2
+  MISSING_UTILS+=( imagemagick )
+fi
+
+if ! [ -z $MISSING_UTILS ]; then
+  if [[ "$(uname)" = *Darwin* ]]; then
+    echo 'try `brew install '"${MISSING_UTILS[@]}"'` on mac'
+  fi
   exit 1
 fi
 

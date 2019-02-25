@@ -26,29 +26,35 @@ endfor
 <input type="text" id="hidden-text-input">
 
 <div class="row white"><div>
-  <h1>The Inter<br>typeface family</h1>
+  <!-- <h1>The Inter<br>typeface family</h1> -->
   <grid columns=8>
-    <c span=2 span-s=row>
-    Inter is a typeface specially designed for computer screens.
+    <c span=row>
+      <h1>The Inter typeface family</h1>
+    </c>
+    <c span=1-2 span-s=row>
+      Inter is a typeface carefully crafted &amp; designed for
+      computer screens.
     </c>
     <c span=3.. span-s=row>
-    The family features a tall x-height to aid in readability of mixed-case and
-    lower-case text. Several OpenType features are provided as well,
-    like contextual alternates that adjusts punctuation depending on the shape of
-    surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o",
-    tabular numbers, etc.
+      <!-- <p>Inter is a typeface specially designed for computer screens.</p> -->
+      <p>
+        Inter features a tall x-height to aid in readability of mixed-case and
+        lower-case text. Several OpenType features are provided as well,
+        like contextual alternates that adjusts punctuation depending on the
+        shape of surrounding glyphs, slashed zero for when you need to
+        disambiguate "0" from "o", tabular numbers, etc.
+      </p>
     </c>
 
-    <c class="spacer"></c>
+    <c span=3.. span-s=row style="margin:3rem 0 5rem 0">
+      <a href="samples/" class="plain"><img src="samples/img/subway.svg" width="100%"></a>
+    </c>
+
     <c span=2 span-s=row class="only-large-screen">
       <h3>Inter Regular<br>Sample</h3>
     </c>
     <c span=3.. span-s=row>
       <a href="samples/" class="plain"><img src="samples/img/a-z-regular.svg" width="100%"></a>
-    </c>
-    <c class="spacer"></c>
-    <c span=3.. span-s=row>
-      <a href="samples/" class="plain"><img src="samples/img/subway.svg" width="100%"></a>
     </c>
     <c class="spacer"></c>
     <c span=2 span-s=row class="only-large-screen">
@@ -120,13 +126,13 @@ html { font-family: 'Inter', sans-serif; }
 </div></div>
 
 
-<div class="row"><div>
+<div class="row yellow"><div>
   <h2><a id="weights" href="#weights">Weights & Styles</a></h2>
   <p>
   There are nine weights, each with italic counterparts,
   making a total of 18 styles.
   </p>
-  <img src="res/weights-and-styles.svg" style="opacity:0.88;width:100%;display:block;margin:3em 0 3em 0">
+  <img src="res/weights-and-styles.svg" class="weights-and-styles">
 </div></div>
 
 
@@ -134,11 +140,11 @@ html { font-family: 'Inter', sans-serif; }
 <div class="row white variable"><div>
   <h2><a id="variable" href="#variable">Variable</a></h2>
 
-  <p>
+  <p flow-cols=2 flow-cols-s=1>
   Inter is offered as both traditional constant font files
   (one per style, e.g. Bold Italic, Medium, etc.) as well as a
   <a href="https://en.wikipedia.org/wiki/Variable_fonts">Variable Font</a>
-  file which contains all styles in a much smaller file size.
+  which contains all styles in a much smaller file size.
   Additionally, a variable font is ...variable! You can mix and match weight
   and italic angle as you please, forming theoretically infinite variations.
   </p>
@@ -190,7 +196,7 @@ html { font-family: 'Inter', sans-serif; }
 <div class="row white"><div>
   <p>
     Variable fonts is a new technology and support is somewhat in flux at
-    the time of writing this (fall 2018.)
+    the time of writing this (fall 2018.)<br>
     <a href="var-test.html">This test</a> can be used to discover
     what a web browser is capable of.
   </p>
@@ -200,7 +206,7 @@ html { font-family: 'Inter', sans-serif; }
 
 <div class="row features"><div>
   <h2><a id="features" href="#features">Features</a></h2>
-  <p>
+  <p style="max-width:38rem">
     Inter comes with many OpenType features that can be used to
     tailor functionality and aesthetics to your specific needs.
     Some of these features can be combined to form a great number of
@@ -292,7 +298,7 @@ html { font-family: 'Inter', sans-serif; }
 
 <div class="row white"><div>
   <h2><a id="story" href="#story">The story behind Inter</a></h2>
-  <flow columns=2 columns-s=1>
+  <div flow-cols=2 flow-cols-s=1>
     <p>
     Inter started out in late 2016 as an experiment to build a perfectly
     pixel-fitting font at a specific small size (11px.) The idea was that
@@ -316,7 +322,7 @@ html { font-family: 'Inter', sans-serif; }
     As Inter was being developed, it was tested on an internal version of
     <a href="https://www.figma.com/">Figma</a>—where the author of Inter works as a designer—and slowly improved upon based on experience and feedback.
     </p>
-  </flow>
+  </div>
 
   <p>&nbsp;</p>
 

@@ -1,13 +1,26 @@
 
 h1 {
   color: #010101;
-  font-size:110px;
+  font-size:81px;
   letter-spacing: -0.055em;
   line-height: 0.9em;
   text-indent: -0.03em;
   margin-bottom: 4rem;
   margin-top: 10px;
   font-weight: 740;
+}
+/* title scales as window shrinks */
+@media only screen and (max-width: 988px) {
+  h1 { font-size: calc(100vw / 12.2); }
+}
+@media only screen and (max-width: 900px) {
+  h1 { font-size: calc(100vw / 12.5); }
+}
+@media only screen and (max-width: 760px) {
+  h1 { font-size: calc(100vw / 12.8); }
+}
+@media only screen and (max-width: 660px) {
+  h1 { font-size: calc(100vw / 13.2); }
 }
 
 @media only screen and (max-width: 565px) {
@@ -17,6 +30,13 @@ h1 {
     text-indent: -0.012em;
     line-height: 1em;
   }
+}
+
+.weights-and-styles {
+  display: block;
+  opacity: 0.98;
+  width: 100%;
+  margin: 3em 0 3em 0;
 }
 
 #hidden-text-input {
