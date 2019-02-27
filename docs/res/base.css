@@ -388,7 +388,7 @@ h2.banner {
     .row.menu ul li:first-child > a:hover {
       text-decoration:underline;
     }
-  .row.menu ul li.home > a {
+  .row.menu ul li.nav-home > a {
     font-weight: 600;
     color: white;
     opacity: 1;
@@ -405,19 +405,19 @@ h2.banner {
     /*background:#666;*/
     padding: 10px 15px;
   }
-  .row.menu ul li.home {
+  .row.menu ul li.nav-home {
     text-align:center;
     margin: 0 0 -12px 0;
     width: 100%;
   }
-  .row.menu ul li.home > a {
+  .row.menu ul li.nav-home > a {
     border-bottom: none;
     padding: 0 1em;
     margin: 0.5em 0;
     line-height: 34px;
     border-radius: 90px;
   }
-  .row.menu ul li.home > a:hover {
+  .row.menu ul li.nav-home > a:hover {
     color: white;
     background-color: #222;
     text-decoration: none;
@@ -431,21 +431,17 @@ h2.banner {
   }
 }
 
-.glyphs {}
-.dynmetrics {}
-.download {}
-
 @media only screen and (max-width: 800px) {
-  .menu .dynmetrics { display: none; }
+  .menu .nav-dynmetrics { display: none; }
 }
 @media only screen and (max-width: 640px) {
-  .menu .download { display: none; }
+  .menu .nav-download { display: none; }
 }
 @media only screen and (max-width: 319px) {
-  .menu .source { display: none; }
+  .menu .nav-source { display: none; }
 }
 @media only screen and (max-width: 250px) {
-  .menu .lab { display: none; }
+  .menu .nav-lab { display: none; }
 }
 
 
