@@ -162,6 +162,13 @@ class VarFontProject(FontProject):
     masters = [s.font for s in designspace.sources]
 
     for ufo in masters:
+      ufo.info.familyName = "Inter Variable"
+      ufo.info.styleMapFamilyName = "Inter Variable"
+      ufo.info.postscriptFontName = "InterVariable"
+      ufo.info.macintoshFONDName =\
+        ufo.info.macintoshFONDName.replace('Inter', 'Inter Variable')
+      ufo.info.openTypeNamePreferredFamilyName =\
+        ufo.info.openTypeNamePreferredFamilyName.replace('Inter', 'Inter Variable')
       updateFontVersion(ufo)
       isItalic = ufo.info.italicAngle != 0
       ufoname = basename(ufo.path)
