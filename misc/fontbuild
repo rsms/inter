@@ -228,7 +228,8 @@ def updateFontVersion(font, dummy=False):
   font.info.woffMajorVersion = versionMajor
   font.info.woffMinorVersion = versionMinor
   font.info.year = now.year
-  font.info.openTypeNameVersion = "%s;%s" % (version, buildtag)
+  font.info.openTypeNameVersion = "%d.%03d;git-%s" % (
+    versionMajor, versionMinor, buildtag)
   font.info.openTypeNameUniqueID = "%s %s:%d:%s" % (
     font.info.familyName, font.info.styleName, now.year, buildtag)
   # creation date & time (YYYY/MM/DD HH:MM:SS)
