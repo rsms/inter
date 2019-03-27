@@ -51,9 +51,9 @@ all_var: \
 	$(FONTDIR)/var/Inter.var.woff2 \
 	$(FONTDIR)/var/Inter.var.ttf \
 	$(FONTDIR)/var/Inter-upright.var.woff2 \
-  $(FONTDIR)/var/Inter-italic.var.woff2 \
-  $(FONTDIR)/var/Inter-upright.var.ttf \
-  $(FONTDIR)/var/Inter-italic.var.ttf
+	$(FONTDIR)/var/Inter-italic.var.woff2 \
+	$(FONTDIR)/var/Inter-upright.var.ttf \
+	$(FONTDIR)/var/Inter-italic.var.ttf
 
 all_ufo_masters = $(Thin_ufo_d) \
                   $(ThinItalic_ufo_d) \
