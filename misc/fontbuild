@@ -114,6 +114,10 @@ def findGlyphDirectives(g): # -> set<string> | None
 
 
 class VarFontProject(FontProject):
+  def __init__(self, familyName=None, *args, **kwargs):
+    super(VarFontProject, self).__init__(*args, **kwargs)
+    self.familyName = familyName
+
   def decompose_glyphs(self, designspace, glyph_filter=lambda g: True):
     """Move components of UFOs' glyphs to their outlines."""
     for ufo in designspace:
@@ -162,13 +166,17 @@ class VarFontProject(FontProject):
     masters = [s.font for s in designspace.sources]
 
     for ufo in masters:
-      ufo.info.familyName = "Inter Variable"
-      ufo.info.styleMapFamilyName = "Inter Variable"
-      ufo.info.postscriptFontName = "InterVariable"
-      ufo.info.macintoshFONDName =\
-        ufo.info.macintoshFONDName.replace('Inter', 'Inter Variable')
-      ufo.info.openTypeNamePreferredFamilyName =\
-        ufo.info.openTypeNamePreferredFamilyName.replace('Inter', 'Inter Variable')
+      if self.familyName is not None:
+        ufo.info.familyName =\
+          ufo.info.familyName.replace('Inter', self.familyName)
+        ufo.info.styleMapFamilyName =\
+          ufo.info.styleMapFamilyName.replace('Inter', self.familyName)
+        ufo.info.postscriptFontName =\
+          ufo.info.postscriptFontName.replace('Inter', self.familyName.replace(' ', ''))
+        ufo.info.macintoshFONDName =\
+          ufo.info.macintoshFONDName.replace('Inter', self.familyName)
+        ufo.info.openTypeNamePreferredFamilyName =\
+          ufo.info.openTypeNamePreferredFamilyName.replace('Inter', self.familyName)
       updateFontVersion(ufo)
       isItalic = ufo.info.italicAngle != 0
       ufoname = basename(ufo.path)
@@ -405,6 +413,9 @@ class Main(object):
     argparser.add_argument('-o', '--output', metavar='<fontfile>',
       help='Output font file')
 
+    argparser.add_argument('--name', metavar='<family-name>',
+      help='Override family name, replacing "Inter"')
+
     args = argparser.parse_args(argv)
 
     # decide output filename (or check user-provided name)
@@ -419,7 +430,12 @@ class Main(object):
 
     mkdirs(dirname(outfilename))
 
-    project = VarFontProject(verbose=self.logLevelName)
+    # override family name?
+    familyName = None
+    if args.name is not None and len(args.name) > 0:
+      familyName = args.name
+
+    project = VarFontProject(verbose=self.logLevelName, familyName=familyName)
     project.run_from_designspace(
       args.srcfile,
       interpolate=False,
@@ -430,6 +446,7 @@ class Main(object):
       output=['variable'],
       overlaps_backend='pathops', # use Skia's pathops
     )
+
     self.log("write %s" % outfilename)
 
     # Note: we can't run ots-sanitize on the generated file as OTS
