@@ -49,11 +49,11 @@ var: \
 	$(FONTDIR)/var/Inter.var.ttf
 all_var: \
 	$(FONTDIR)/var/Inter.var.woff2 \
-	$(FONTDIR)/var/Inter-upright.var.woff2 \
-	$(FONTDIR)/var/Inter-italic.var.woff2 \
 	$(FONTDIR)/var/Inter.var.ttf \
-	$(FONTDIR)/var/Inter-upright.var.ttf \
-	$(FONTDIR)/var/Inter-italic.var.ttf
+	$(FONTDIR)/var/Inter-upright.var.woff2 \
+  $(FONTDIR)/var/Inter-italic.var.woff2 \
+  $(FONTDIR)/var/Inter-upright.var.ttf \
+  $(FONTDIR)/var/Inter-italic.var.ttf
 
 all_ufo_masters = $(Thin_ufo_d) \
                   $(ThinItalic_ufo_d) \
@@ -87,10 +87,10 @@ build/%.woff: build/%.ttf
 .PRECIOUS: build/%.ttf
 
 
+
 # Master UFOs -> variable TTF
 $(FONTDIR)/var/%.var.ttf: src/%.designspace $(all_ufo_masters)
 	misc/fontbuild compile-var -o $@ $<
-
 
 # Instance UFO -> OTF, TTF (note: masters' rules in generated.make)
 $(FONTDIR)/const/Inter-%.otf: build/ufo/Inter-%.ufo
@@ -156,7 +156,12 @@ test: all_check_const  all_check_var
 # check does the same thing as test, but without any dependency checks, meaning
 # it will check whatever font files are already built.
 check:
-	misc/fontbuild checkfont $(FONTDIR)/const/*.* $(FONTDIR)/var/*.*
+	misc/fontbuild checkfont \
+		$(FONTDIR)/const/*.ttf \
+		$(FONTDIR)/const/*.otf \
+		$(FONTDIR)/const/*.woff2 \
+		$(FONTDIR)/var/*.ttf \
+		$(FONTDIR)/var/*.woff2
 	@echo "check: all ok"
 
 .PHONY: test check
@@ -175,8 +180,6 @@ $(FONTDIR)/samples/%.png: $(FONTDIR)/const/%.otf
 
 $(FONTDIR)/samples:
 	mkdir -p $@
-
-
 
 
 ZD = build/tmp/zip
@@ -198,17 +201,25 @@ build/tmp/a.zip:
 	      $(FONTDIR)/var/*.woff2        "$(ZD)/Inter (web)/"
 	cp -a $(FONTDIR)/const-hinted/*.woff \
 	      $(FONTDIR)/const-hinted/*.woff2 \
-	      													    "$(ZD)/Inter (web hinted)/"
+	                                    "$(ZD)/Inter (web hinted)/"
 	cp -a $(FONTDIR)/const/*.ttf        "$(ZD)/Inter (TTF)/"
 	cp -a $(FONTDIR)/const-hinted/*.ttf "$(ZD)/Inter (TTF hinted)/"
 	cp -a $(FONTDIR)/var/*.ttf          "$(ZD)/Inter (TTF variable)/"
 	cp -a $(FONTDIR)/const/*.otf        "$(ZD)/Inter (OTF)/"
 	@#
 	@# copy misc stuff
-	cp -a misc/dist/inter.css        "$(ZD)/Inter (web)/"
-	cp -a misc/dist/inter.css        "$(ZD)/Inter (web hinted)/"
+	cp -a misc/dist/inter.css           "$(ZD)/Inter (web)/"
+	cp -a misc/dist/inter.css           "$(ZD)/Inter (web hinted)/"
 	cp -a misc/dist/*.txt               "$(ZD)/"
 	cp -a LICENSE.txt                   "$(ZD)/"
+	@#
+	@# Fix VF metadata
+	misc/tools/fix-vf-meta.py \
+	  "$(ZD)/Inter (web)/Inter-upright.var.woff2" \
+	  "$(ZD)/Inter (web)/Inter-italic.var.woff2"
+	misc/tools/fix-vf-meta.py \
+	  "$(ZD)/Inter (TTF variable)/Inter-upright.var.ttf" \
+	  "$(ZD)/Inter (TTF variable)/Inter-italic.var.ttf"
 	@#
 	@# Add "beta" to Light and Thin filenames.
 	@# Requires "rename" tool in PATH (`brew install rename` on macOS)
@@ -235,14 +246,14 @@ zip: all
 	$(MAKE) check
 	$(MAKE) build/release/Inter-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip
 
-zip_dist: pre_dist all
+zip_dist: pre_dist
 	$(MAKE) check
 	$(MAKE) ${ZIP_FILE_DIST}
 
 .PHONY: zip zip_dist
 
 # distribution
-pre_dist:
+pre_dist: all
 	@echo "Creating distribution for version ${VERSION}"
 	@if [ -f "${ZIP_FILE_DIST}" ]; \
 		then echo "${ZIP_FILE_DIST} already exists. Bump version or remove the zip file to continue." >&2; \
@@ -295,24 +306,20 @@ build/UnicodeData.txt:
 	@echo fetch http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 	@curl '-#' -o "$@" http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 
-
 # install targets
 install_ttf: all_ttf_const
-	$(MAKE) all_web -j
 	@echo "Installing TTF files locally at ~/Library/Fonts/Inter"
 	rm -rf ~/'Library/Fonts/Inter'
 	mkdir -p ~/'Library/Fonts/Inter'
 	cp -va $(FONTDIR)/const/*.ttf ~/'Library/Fonts/Inter'
 
-install_ttf_hinted: all_ttf
-	$(MAKE) all_web -j
+install_ttf_hinted: all_ttf_hinted
 	@echo "Installing autohinted TTF files locally at ~/Library/Fonts/Inter"
 	rm -rf ~/'Library/Fonts/Inter'
 	mkdir -p ~/'Library/Fonts/Inter'
 	cp -va $(FONTDIR)/const-hinted/*.ttf ~/'Library/Fonts/Inter'
 
 install_otf: all_otf
-	$(MAKE) all_web -j
 	@echo "Installing OTF files locally at ~/Library/Fonts/Inter"
 	rm -rf ~/'Library/Fonts/Inter'
 	mkdir -p ~/'Library/Fonts/Inter'
