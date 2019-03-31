@@ -10,11 +10,11 @@
 #   all_var           Build all variable files
 #   all_var_hinted    Build all variable files with hints (disabled)
 #
-#   all_otf					  Build all OTF files into FONTDIR/const
-#   all_ttf					  Build all TTF files into FONTDIR/const
-#   all_ttf_hinted	  Build all TTF files with hints into FONTDIR/const-hinted
-#   all_web					  Build all WOFF files into FONTDIR/const
-#   all_web_hinted	  Build all WOFF files with hints into FONTDIR/const-hinted
+#   all_otf           Build all OTF files into FONTDIR/const
+#   all_ttf           Build all TTF files into FONTDIR/const
+#   all_ttf_hinted    Build all TTF files with hints into FONTDIR/const-hinted
+#   all_web, web      Build all WOFF files into FONTDIR/const
+#   all_web_hinted    Build all WOFF files with hints into FONTDIR/const-hinted
 #   all_var           Build all variable font files into FONTDIR/var
 #   all_var_hinted    Build all variable font files with hints into
 #                     FONTDIR/var-hinted
@@ -32,15 +32,16 @@
 #   STYLE_check       Build & check OTF and TTF files for STYLE
 #
 # "build" directory output structure:
-# 	fonts
-# 		const
-# 		const-hinted
-# 		var
-# 		var-hinted  (disabled)
+#   fonts
+#     const
+#     const-hinted
+#     var
+#     var-hinted  (disabled)
 #
 FONTDIR = build/fonts
 
 all: all_const  all_const_hinted  all_var
+web: all_web
 
 all_const: all_otf  all_ttf  all_web
 all_const_hinted: all_ttf_hinted  all_web_hinted
