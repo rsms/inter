@@ -3,9 +3,9 @@ Variable fonts is a new technology still undergoing development.
 
 The directory named "Inter (TTF variable)" contains three files:
 
-- Inter.var.ttf -- multi-axis complete family
-- Inter-italic.var.ttf -- italic-only with variable weight axis.
-- Inter-upright.var.ttf-- upright-only with variable weight axis.
+- Inter.var.ttf         -- Multi-axis complete family
+- Inter-italic.var.ttf  -- Single-axis italic style with variable weight axis.
+- Inter-upright.var.ttf -- Single-axis upright/roman style with variable weight axis.
 
 The "Inter (web)" directory contains WOFF2 versions of these same
 font files.
@@ -13,6 +13,10 @@ font files.
 Support for variable fonts is limited as of late 2018, but support
 is quickly arriving to web browsers, operating systems and
 design application.
+
+Multi-axis variable fonts have worse support than single-axis variable fonts,
+so in case you are experiencing issue with the multi-axis font, try the
+two single-axis variable fonts instead.
 
 If you're in doubt or uncertain about variable fonts, then you
 probably don't need to use a variable font, and you can ignore
