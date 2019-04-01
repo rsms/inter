@@ -76,6 +76,12 @@ body {
   body {
     font-family: 'Inter var', system-ui, sans-serif;
   }
+  body.chrome-win {
+    /* Chrome has some VF issues; worst are on Windows with incorrect kerning.
+       We disable VF on Chrome on Windows for that reason.
+    */
+    font-family: Inter, system-ui, sans-serif;
+  }
 }
 
 DISABLED:target:before {
@@ -509,29 +515,6 @@ a > img { display: block; }
   }
 
 /* --------------------------------------------------------------------- */
-
-tablex {
-  display: flex;
-}
-  tablex > t {
-    display: table;
-  }
-  tablex > t > h {
-    display: table-row;
-    opacity:0.4;
-  }
-  tablex > t > h > * {
-    padding-bottom:1em;
-  }
-  tablex > t > h to {
-    visibility: hidden;
-  }
-  tablex > t > r {
-    text-decoration: none;
-    display: table-row;
-  }
-
-/* --------------------------------------------------------------------- */
 /* grid */
 
 grid {
@@ -737,6 +720,7 @@ instead.
 
 .ff-ss01 { font-feature-settings: 'ss01' 1; -webkit-font-feature-settings: 'ss01' 1; -ms-font-feature-settings: 'ss01' 1; -moz-font-feature-settings: 'ss01' 1; }
 .ff-ss02 { font-feature-settings: 'ss02' 1; -webkit-font-feature-settings: 'ss02' 1; -ms-font-feature-settings: 'ss02' 1; -moz-font-feature-settings: 'ss02' 1; }
+.ff-ss03 { font-feature-settings: 'ss03' 1; -webkit-font-feature-settings: 'ss03' 1; -ms-font-feature-settings: 'ss03' 1; -moz-font-feature-settings: 'ss03' 1; }
 .ff-cv01 { font-feature-settings: 'cv01' 1; -webkit-font-feature-settings: 'cv01' 1; -ms-font-feature-settings: 'cv01' 1; -moz-font-feature-settings: 'cv01' 1; }
 .ff-cv02 { font-feature-settings: 'cv02' 1; -webkit-font-feature-settings: 'cv02' 1; -ms-font-feature-settings: 'cv02' 1; -moz-font-feature-settings: 'cv02' 1; }
 .ff-cv03 { font-feature-settings: 'cv03' 1; -webkit-font-feature-settings: 'cv03' 1; -ms-font-feature-settings: 'cv03' 1; -moz-font-feature-settings: 'cv03' 1; }
@@ -747,3 +731,4 @@ instead.
 .ff-cv08 { font-feature-settings: 'cv08' 1; -webkit-font-feature-settings: 'cv08' 1; -ms-font-feature-settings: 'cv08' 1; -moz-font-feature-settings: 'cv08' 1; }
 .ff-cv09 { font-feature-settings: 'cv09' 1; -webkit-font-feature-settings: 'cv09' 1; -ms-font-feature-settings: 'cv09' 1; -moz-font-feature-settings: 'cv09' 1; }
 .ff-cv10 { font-feature-settings: 'cv10' 1; -webkit-font-feature-settings: 'cv10' 1; -ms-font-feature-settings: 'cv10' 1; -moz-font-feature-settings: 'cv10' 1; }
+.ff-cv11 { font-feature-settings: 'cv11' 1; -webkit-font-feature-settings: 'cv11' 1; -ms-font-feature-settings: 'cv11' 1; -moz-font-feature-settings: 'cv11' 1; }

@@ -180,9 +180,19 @@ if (
       <tt>font-style:italic</tt>.
     </li>
     <li>
-      <b>Chrome 69:</b> Mapping of <tt>ital</tt> axis to <tt>font-style:italic</tt>
+      <b>Chrome 69+:</b> Mapping of <tt>ital</tt> axis to <tt>font-style:italic</tt>
       is not supported.
     </li>
+    <li>
+      <b>Chrome 69+:</b> Rendering of overlapping shapes causes "blobs" or "ink bleed".
+      Overlapping shapes, like the angle + horizontal stem of "A" are
+      rendered in separate MSAA passes and later combined as bitmaps,
+      causing a multiplication effect on the alpha channel.
+    </li>
+    <li>
+      <b>Chrome 69+ (Windows):</b> kerning is incorrect and
+      there are issues with ClearType where for example a lower-case "r"
+      (without hints) might be rendered much lower than a lower-case "n".
     <li>
       <b>Firefox 62:</b> Mapping of <tt>ital</tt> axis to <tt>font-style:italic</tt>
       is not supported.

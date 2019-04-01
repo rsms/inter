@@ -163,11 +163,11 @@ Ambiguation: (should not be fractions)
 samples.set('Feature: calt', `
 (m) (M) (6) [m] [M] [6] {m} {M} {6}
 m@n M@N
-3×5 ×9 8×  3x4 x9 2x
-3−5 −5 8−  3+5 +5 3+
-3÷5 ÷5 8÷  3±5 ±5 8±
-3=5 =5 8=  3≠5 ≠5 8≠
-8*5 8 * 7  WALLPAPER*
+3×5     3 × 5     ×9     8×     3x4     x9     2x
+3−5     3 − 5     −5     8−     3+5     +5     3+
+3÷5     3 ÷ 5     ÷5     8÷     3±5     ±5     8±
+3=5     3 = 5     =5     8=     3≠5     ≠5     8≠
+8*5     8 * 7     *8     8*     X*A
 B-O B–O B‒O B—O M•N ⌘-
 -Selvece
 darest-Selvece
@@ -197,22 +197,34 @@ A<->B<–>C<—>D
 x<-4  x < -4  x<-y
 12:35
 1.2  34.56.78.90.12
-A*Y V*V W*W N*N X*X
-Λ*Λ Σ*Σ Δ*Δ Y*Y &*
+A+Y V+V W+W N+N X+X
+Λ+Λ Σ+Σ Δ+Δ Y+Y &+
 :-) :–) :—)
 
 calt case should cascade:
 U() U[] U{}   rightx should be rightx.case
 ()U []U {}U   special-cased as "delim' delim -> delim.case"
----U---  all hyphens should be hyphen.case
-U-→(){}[]*  all should be .case
-x[]{}H  "x br br" separate from "cb cb H"
+---U---   all hyphens should be hyphen.case
+U-→(){}[]•   all should be .case
+x[]{}H   "x br br" separate from "cb cb H"
 
 left side cascades up to 5 characters:
-******ABBA******
+••••••ABBA••••••
 ------M------
 @@@@@@M@@@@@@
 ++++++M++++++
+
+x[x] [X]     x lc x lc followed by .case C .case
+(Xx)         lc uc uc lc
+[Zzz]        lc uc lc lc lc
+(XX)
+(x)
+(X)
+( ) M
+() M
+()M
+X(_)         .case around underscore next to uc
+(_)          lc otherwise
 `)
 
 
@@ -1526,17 +1538,19 @@ document.head.appendChild(fontCSS)
       <label title='Capital spacing (adds 16 UPM to each sidebearing)'><input type="checkbox" class="featopt" name="feat:cpsp"> cpsp &nbsp;(Capital spacing)</label>
       <label title='Stylistic Alternates'><input type="checkbox" class="featopt" name="feat:salt"> salt &nbsp;(Stylistic Alternates)</label>
       <label title='Stylistic set 1 "Open Digits"'><input type="checkbox" class="featopt" name="feat:ss01"> ss01 &nbsp;(Open Digits)</label>
-      <label title='Stylistic set 1 "Disambiguation"'><input type="checkbox" class="featopt" name="feat:ss02"> ss02 &nbsp;(Disambiguation)</label>
+      <label title='Stylistic set 2 "Disambiguation"'><input type="checkbox" class="featopt" name="feat:ss02"> ss02 &nbsp;(Disambiguation)</label>
+      <label title='Stylistic set 3 "Lower case r curves into round neighbors"'><input type="checkbox" class="featopt" name="feat:ss03"> ss03 &nbsp;(Curved r)</label>
       <label title='Character Variant 1 "Alternate one"'><input type="checkbox" class="featopt" name="feat:cv01"> cv01 &nbsp;(Alternate one)</label>
       <label title='Character Variant 2 "Open four"'><input type="checkbox" class="featopt" name="feat:cv02"> cv02 &nbsp;(Open four)</label>
       <label title='Character Variant 3 "Open six"'><input type="checkbox" class="featopt" name="feat:cv03"> cv03 &nbsp;(Open six)</label>
       <label title='Character Variant 4 "Open nine"'><input type="checkbox" class="featopt" name="feat:cv04"> cv04 &nbsp;(Open nine)</label>
       <label title='Character Variant 5 "Lower case L with tail")'><input type="checkbox" class="featopt" name="feat:cv05"> cv05 &nbsp;(Lower case L with tail)</label>
-      <label title='Character Variant 6 "Lower case R with straight tail")'><input type="checkbox" class="featopt" name="feat:cv06"> cv06 &nbsp;(Straight lower case R)</label>
+      <label title='Character Variant 6 "Lower case r with curved tail")'><input type="checkbox" class="featopt" name="feat:cv06"> cv06 &nbsp;(Curved lower case r)</label>
       <label title='Character Variant 7 "Alternate German double-s")'><input type="checkbox" class="featopt" name="feat:cv07"> cv07 &nbsp;(German double-s)</label>
       <label title='Character Variant 8 "Upper-case i with serif")'><input type="checkbox" class="featopt" name="feat:cv08"> cv08 &nbsp;(Upper-case i with serif)</label>
       <label title='Character Variant 9 "Flat top three")'><input type="checkbox" class="featopt" name="feat:cv09"> cv09 &nbsp;(Flat top three)</label>
       <label title='Character Variant 10 "Capital G with spur")'><input type="checkbox" class="featopt" name="feat:cv10"> cv10 &nbsp;(Capital G with spur)</label>
+      <label title='Character Variant 11 "Single-storey a")'><input type="checkbox" class="featopt" name="feat:cv11"> cv11 &nbsp;(Single-storey a)</label>
       </div>
 
       <div class="checkbox-group">

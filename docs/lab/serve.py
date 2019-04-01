@@ -31,6 +31,13 @@ except OSError:
 
 addr = ("localhost", 3003)
 
+if len(sys.argv) > 1:
+  if sys.argv[1] == '-h':
+    print('usage: %s [-h | --bind-any]' % sys.argv[0], file=sys.stdout)
+    sys.exit(0)
+  elif sys.argv[1] == '--bind-any':
+    addr = ("0.0.0.0", 3003)
+
 # make ^C instantly exit program
 signal.signal(signal.SIGINT, sighandler)
 

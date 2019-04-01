@@ -214,8 +214,8 @@ html { font-family: 'Inter', sans-serif; }
   </p>
   <boxes class="features">
     {% for f in site.data.feature_samples %}
-    <box>
-      <h3>{{f.title}} <q title='OpenType feature ID'>{{f.tag}}</q></h3>
+    <box class="feat-{{f.tag}}" id="features/{{f.tag}}">
+      <h3><a href="#features/{{f.tag}}">{{f.title}} <q title='OpenType feature ID'>{{f.tag}}</q></a></h3>
       {%
 
       if f.description %}
@@ -400,6 +400,17 @@ html { font-family: 'Inter', sans-serif; }
       all commit messages. Maybe one day we can write an elaborate git
       filter-branch program and convert the filter the old repository to make
       it public, but what would be the point of that?&nbsp; :—)
+    </c>
+
+    <c>
+      <h4 id="faq-chrome-vf-bugs"><a href="#faq-chrome-vf-bugs">
+        The variable font renders poorly in Chrome
+      </a></h4>
+      There are some known issues with variable fonts in Chrome, in particular
+      on Microsoft Windows. You may see an effect similar to "ink bleed" where shapes overlap, for instance where the vertical and horizontal stems meet in "+" or "t".
+      On Windows you may in addition see incorrectly placed glyphs that looks like poor kerning (spacing between characters) and even some glyphs being lower or taller than other glyphs.
+      It is recommended to avoid using variable fonts on Chrome.
+      See the <a href="https://bugs.chromium.org/p/chromium/issues/list?can=2&q=variable+component%3ABlink%3EFonts">Chromium bug tracker</a> for a list of variable-font related issues.
     </c>
 
     <c>
