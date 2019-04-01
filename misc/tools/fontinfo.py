@@ -298,6 +298,9 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
     v = re.split(r'[\s;]+', version)
     if v and len(v) > 0:
       version = v[0]
+      if version.lower() == 'version':
+        version = v[1]
+      version = '.'.join([str(int(v)) for v in version.split('.')])
     info['version'] = version
 
   if outputType is not OUTPUT_TYPE_GLYPHLIST:
