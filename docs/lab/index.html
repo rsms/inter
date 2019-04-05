@@ -1598,8 +1598,12 @@ document.head.appendChild(fontCSS)
 // not exposed in UI as it only works when serving the site locally
 // with fonts in the build/fonts directory.
 const hinted = location.search.indexOf('hinted=1') != -1
+const familyName = hinted ? fontFamilyNameHinted : fontFamilyName;
 
-document.body.style.fontFamily = hinted ? fontFamilyNameHinted : fontFamilyName;
+if (hinted) {
+  document.body.classList.add('hinted')
+}
+document.body.style.fontFamily = familyName
 
 class BoundVar {
   constructor(name, e, valueGetter, valueSetter, parentVars) {
