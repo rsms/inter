@@ -13,7 +13,6 @@ import time
 from argparse import ArgumentParser
 from collections import OrderedDict
 from configparser import RawConfigParser
-# from robofab.objects.objectsRF import OpenFont
 from unicode_util import parseUnicodeDataFile
 from defcon import Font
 
@@ -52,81 +51,52 @@ def main():
     help='UnicodeData.txt file from http://www.unicode.org/')
 
   argparser.add_argument(
-    'fontPaths', metavar='<ufofile>', type=str, nargs='+', help='UFO fonts to update')
+    'fontPath', metavar='<ufofile>', type=str)
 
   args = argparser.parse_args()
-
-  fontPaths = []
-  for fontPath in args.fontPaths:
-    fontPath = fontPath.rstrip('/ ')
-    if 'regular' or 'Regular' in fontPath:
-      fontPaths = [fontPath] + fontPaths
-    else:
-      fontPaths.append(fontPath)
-
-  fonts = [Font(fontPath) for fontPath in args.fontPaths]
-
+  font = Font(args.fontPath)
   ucd = {}
   if args.ucdFile:
     ucd = parseUnicodeDataFile(args.ucdFile)
 
   glyphs = []  # contains final glyph data printed as JSON
-  visitedGlyphNames = set()
 
-  for font in fonts:
-    glyphorder = font.lib['public.glyphOrder']
-    for name in glyphorder:
-      if name in visitedGlyphNames:
-        continue
+  for name in font.lib['public.glyphOrder']:
+    g = font[name]
 
-      if name not in font:
-        print(
-          "warning: %r in public.glyphOrder but doesn't exist in font" % name,
-          file=sys.stderr
-        )
-        continue
+    # color
+    color = None
+    if 'public.markColor' in g.lib:
+      rgba = [float(c.strip()) for c in g.lib['public.markColor'].strip().split(',')]
+      color = rgbaToCSSColor(*rgba)
 
-      g = font[name]
+    isEmpty = 0
+    if not g.bounds or g.bounds[3] == 0:
+      isEmpty = 1
 
-      # color
-      color = None
-      if 'public.markColor' in g.lib:
-        rgba = [float(c.strip()) for c in g.lib['public.markColor'].strip().split(',')]
-        color = rgbaToCSSColor(*rgba)
+    # name[, unicode[, unicodeName[, color]]]
+    glyph = None
+    ucs = g.unicodes
+    if len(ucs):
+      for uc in ucs:
+        ucName = unicodeName(ucd.get(uc))
+        # if not ucName and uc >= 0xE000 and uc <= 0xF8FF:
+        #   ucName = '[private use %04X]' % uc
 
-      # mtime
-      mtime = None
-      if 'com.schriftgestaltung.Glyphs.lastChange' in g.lib:
-        datetimestr = g.lib['com.schriftgestaltung.Glyphs.lastChange']
-        mtime = localDateTimeToUTCStr(datetimestr)
-
-      # name[, unicode[, unicodeName[, color]]]
-      glyph = None
-      ucs = g.unicodes
-      if len(ucs):
-        for uc in ucs:
-          ucName = unicodeName(ucd.get(uc))
-          if not ucName and uc >= 0xE000 and uc <= 0xF8FF:
-            ucName = '[private use %04X]' % uc
-
-          if color:
-            glyph = [name, uc, ucName, mtime, color]
-          elif mtime:
-            glyph = [name, uc, ucName, mtime]
-          elif ucName:
-            glyph = [name, uc, ucName]
-          else:
-            glyph = [name, uc]
-      else:
+        ucstr = '%04X' % uc
         if color:
-          glyph = [name, None, None, mtime, color]
-        elif mtime:
-          glyph = [name, None, None, mtime]
+          glyph = [name, isEmpty, ucstr, ucName, color]
+        elif ucName:
+          glyph = [name, isEmpty, ucstr, ucName]
         else:
-          glyph = [name]
+          glyph = [name, isEmpty, ucstr]
+    else:
+      if color:
+        glyph = [name, isEmpty, None, None, color]
+      else:
+        glyph = [name, isEmpty]
 
-      glyphs.append(glyph)
-      visitedGlyphNames.add(name)
+    glyphs.append(glyph)
 
   print('{"glyphs":[')
   prefix = '  '
