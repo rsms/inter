@@ -196,6 +196,7 @@ body.italic samples {
         width:2em;
         height:2em;
         page-break-inside: avoid; break-inside: avoid;
+        border-radius: 2px;
       }
       sample .glyphlist g span.glyph {
         flex: 1 0 auto;
@@ -204,6 +205,7 @@ body.italic samples {
         align-items: center;
         /*margin-top:16px;*/
         /*background:salmon;*/
+        font-feature-settings: normal !important;
       }
       sample .glyphlist g span.name {
         /*background:lightblue;*/

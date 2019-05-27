@@ -1,4 +1,4 @@
-h1 .glyph-name {}
+h1 > a { display:inline; }
 h1 .glyph-name:before {
   content: " / ";
   color: rgba(0,0,0,0.2);

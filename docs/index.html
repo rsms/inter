@@ -296,6 +296,54 @@ html { font-family: 'Inter', sans-serif; }
   </p>
 </div></div>
 
+
+<div class="row white charset-title" id="charset">
+  <h2><a href="#charset">Character set</a></h2>
+</div>
+<script>
+
+function csc(node) {
+  copyToClipboard(node.innerText + " " + node.title)
+
+  // flash the glyph
+  clearTimeout(node._flashTimer)
+  if (node.classList.contains('flash')) {
+    node.classList.remove('flash')
+    if (typeof requestAnimationFrame != 'undefined') {
+      requestAnimationFrame(function(){ node.classList.add('flash') })
+    } else {
+      setTimeout(function(){ node.classList.add('flash') }, 1)
+    }
+  } else {
+    node.classList.add('flash')
+  }
+  node._flashTimer = setTimeout(function(){
+    node.classList.remove('flash')
+  }, 300)
+}
+
+</script>
+<div class="row white charset">
+  <div class="charset-table">
+  {% for g in site.data.glyphinfo.glyphs %}
+    {% comment %}
+    
+    Ignore empty glyphs and glyphs without unicode mapping.
+
+    {% endcomment %}
+    {% if g[1] == 0 and g[2] %}
+      {% if g[3] %}
+      <c title="/{{g[0]}} U+{{g[2]}} ({{g[3]}})" onclick="csc(this)">&#x{{g[2]}}</c>
+      {% else %}
+      <c title="/{{g[0]}} U+{{g[2]}}" onclick="csc(this)">&#x{{g[2]}}</c>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  </div>
+
+</div>
+
+
 <div class="row white"><div>
   <h2><a id="story" href="#story">The story behind Inter</a></h2>
   <div flow-cols=2 flow-cols-s=1>
@@ -461,10 +509,22 @@ for (i = 0; i < av.length; ++i) {
 })();
 
 
+// clipboard copy
+var copyToClipboard = (function(){
+  var hiddenTextInput = $('#hidden-text-input')
+  return function(text) {
+    hiddenTextInput.value = text
+    hiddenTextInput.select()
+    document.execCommand("copy")
+    hiddenTextInput.value = ""
+    HUDNotification.show('Copied to clipboard')
+  }
+})();
+
+
 // dynamic metrics calculator
 (function(){
 
-var hiddenTextInput = $('#hidden-text-input')
 var fontSizeEl = $('#dynmet-font-size')
 var trackingEl = $('#dynmet-tracking')
 var unitEl = $('#dynmet-unit')
@@ -529,11 +589,8 @@ function onPointerdownTracking(ev) {
     ev.preventDefault()
     ev.stopPropagation()
   }
-  hiddenTextInput.value = trackingEl.value + unitEl.innerText
-  hiddenTextInput.select()
-  document.execCommand("copy")
+  copyToClipboard(trackingEl.value + unitEl.innerText)
   trackingEl.select()
-  HUDNotification.show('Copied to clipboard')
 }
 
 var passiveListener = { passive: true, capture: false }

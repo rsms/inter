@@ -324,25 +324,21 @@ function render() {
   rootEl.style.display = 'none'
   rootEl.innerText = ''
 
-  // glyphInfo: {
-  //   "glyphs": [
-  //     // <=v2.5:
-  //     [name :string, unicode? :int|null, unicodeName? :string, color? :string|null],
-  //     // >=v2.6: (has mtime)
-  //     [name :string, unicode? :int|null, unicodeName? :string, mtime? :string, color? :string|null],
-  //     ["A", 65, "LATIN CAPITAL LETTER A", "#dbeaf7"],
+  // glyphinfo.json:
+  // { "glyphs": [
+  //     [name :string, isEmpty: 1|0, unicode? :string|null, 
+  //      unicodeName? :string, color? :string|null],
+  //     ["A", 0, 65, "LATIN CAPITAL LETTER A", "#dbeaf7"],
   //     ...
-  //   ],
-  // }
+  // ]}
   //
   // Note: Glyph names might appear multiple times (always adjacent) when a glyph is
   // represented by multiple Unicode code points. For example:
   //
-  //   ["Delta", 916, "GREEK CAPITAL LETTER DELTA"],
-  //   ["Delta", 8710, "INCREMENT"],
+  //   ["Delta", 0, "U+0916", "GREEK CAPITAL LETTER DELTA"],
+  //   ["Delta", 0, "U+8710", "INCREMENT"],
   //
 
-  var glyphs = glyphInfo
   var singleGlyph = null
   var lastGlyphEl = null
   var lastGlyphName = ''
@@ -390,17 +386,10 @@ function renderGlyphGraphic(glyphName) {
 
 
 function renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph) {
-  let name = g[0], uc = g[1], ucName = g[2], mtime = g[3], color = g[4]
+  // let [name, isEmpty, uc, ucName, color] = g
+  let name = g[0], /*isEmpty = g[1],*/ uc = g[2], ucName = g[3], color = g[4]
   var names, glyph
   var svg = svgRepository[name]
-
-    // XXX compatibility with v2.5 (remove when moving to v2.6)
-    // glyphinfo for 2.5 doesn't contain mtime.
-    if (mtime && typeof mtime == 'string' &&
-        (mtime.indexOf('rgba') != -1 || mtime.indexOf('#') != -1)) {
-      color = mtime
-      mtime = null
-    }
 
   if (!svg) {
     // ignore
@@ -416,7 +405,6 @@ function renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph) {
     name: name,
     unicode: uc,
     unicodeName: ucName,
-    // mtime: mtime,
     color: color,
 
     // These are all in 1:1 UPM (not scaled)
@@ -434,8 +422,8 @@ function renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph) {
     names = glyph.querySelector('.names')
     names.innerText += ','
     if (info.unicode) {
-      var ucid = ' U+' + fmthex(info.unicode)
-      names.innerText += ' U+' + fmthex(info.unicode)
+      var ucid = ' U+' + info.unicode
+      names.innerText += ' U+' + info.unicode
       if (!queryString.g) {
         glyph.title += ucid
       }
@@ -493,8 +481,8 @@ function renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph) {
   names.className = 'names'
   names.innerText = name
   if (info.unicode) {
-    var ucid = ' U+' + fmthex(info.unicode)
-    names.innerText += ' U+' + fmthex(info.unicode, 4)
+    var ucid = ' U+' + info.unicode
+    names.innerText += ' U+' + info.unicode
     if (!queryString.g) {
       glyph.title += ucid
     }
@@ -543,11 +531,11 @@ function renderSingleInfo(g) {
   function configureUnicodeView(el, g) {
     var a = el.querySelector('a')
     if (g.unicode) {
-      a.href = "https://codepoints.net/U+" + fmthex(g.unicode, 4)
+      a.href = "https://codepoints.net/U+" + g.unicode
     } else {
       a.href = ''
     }
-    setv(el, 'unicodeCodePoint', g.unicode ? 'U+' + fmthex(g.unicode, 4) : '–')
+    setv(el, 'unicodeCodePoint', g.unicode ? 'U+' + g.unicode : '–')
     setv(el, 'unicodeName', g.unicodeName || '')
   }
 

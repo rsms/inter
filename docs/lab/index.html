@@ -678,8 +678,9 @@ function getGlyphInfo(cb) {
   fetch('glyphinfo.json').then(r => r.json()).then(glyphinfo => {
     console.log('loaded glyphinfo.json')
     // { "glyphs": [
-    //     [name :string, unicode? :int|null, unicodeName? :string, color? :string|null],
-    //     ["A", 65, "LATIN CAPITAL LETTER A", "#dbeaf7"],
+    //     [name :string, isEmpty: 1|0, unicode? :string|null, 
+    //      unicodeName? :string, color? :string|null],
+    //     ["A", 0, 65, "LATIN CAPITAL LETTER A", "#dbeaf7"],
     //     ...
     // ]}
     glyphinfoCached = glyphinfo
@@ -707,36 +708,36 @@ samples.set('Repertoire', {
 
     getGlyphInfo(glyphinfo => {
       let html = '<div class="glyphlist">'
-      let glyphs = glyphinfo.glyphs.filter(g => typeof g[1] == 'number')
-        // only include glyphs with associated unicode
+      let glyphs = glyphinfo.glyphs.filter(g => g[2]) // only include mapped glyphs
 
       if (repertoireOrder == RepertoireOrderUnicode) {
-        glyphs = glyphs.sort((a, b) => a[1] - b[1])
+        glyphs = glyphs.sort((a, b) => parseInt(a[2],16) - parseInt(b[2],16))
       }
 
       for (const g of glyphs) {
-        // let [name, uc, ucName, mtime, color] = g
-        let name = g[0], uc = g[1], ucName = g[2], mtime = g[3], color = g[4]
-        const ucHex = hexstr(uc, 4)
+        // let [name, isEmpty, uc, ucName, color] = g
+        let name = g[0], isEmpty = g[1], uc = g[2], ucName = g[3], color = g[4]
+        console.log('g', g)
 
-        // XXX compatibility with v2.5 (remove when moving to v2.6)
-        // glyphinfo for 2.5 doesn't contain mtime.
-        if (mtime && typeof mtime == 'string' &&
-            (mtime.indexOf('rgba') != -1 || mtime.indexOf('#') != -1)) {
-          color = mtime
-          mtime = null
+        let style = ''
+        if (color && color != '<derived>') {
+          if (color[0] == '#') {
+            color = 'rgba(' +
+                    parseInt(color.substr(1,2), 16) + ',' +
+                    parseInt(color.substr(3,2), 16) + ',' +
+                    parseInt(color.substr(5,2), 16) + ',' +
+                    '0.2)'
+          }
+          style += 'style="background-color:' + color + '"'
         }
-
-        const style = color && color != '<derived>' ?
-          'style="background-color:' + color + '"' : ''
 
         if (!ucName) {
           ucName = '[unknown]'
         }
 
-        const title = 'U+' + ucHex + ' ' + ucName + ' ("' + name + '")'
+        const title = 'U+' + uc + ' ' + ucName + ' ("' + name + '")'
         html += `<g ${style} title=\'${title}\'>
-          <span class="glyph">&#x${ucHex};</span>
+          <span class="glyph" style="font-feature-settings:normal">&#x${uc};</span>
           <span class="name">${name}</span>
         </g>`
       }

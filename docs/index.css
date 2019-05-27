@@ -49,6 +49,7 @@ h1 {
   pointer-events: none;
 }
 
+/* Dynamic metrics */
 .dynmet-calc {
   font-weight: 440;
   font-size: 1.2rem;
@@ -105,6 +106,90 @@ h1 {
   .dynmet-calc #dynmet-unit:active {
     color: white;
   }
+
+
+
+/* Character set table */
+.row.charset-title { padding-bottom: 0; }
+.row.charset-title > h2 { text-align: center; }
+.row.charset {
+  padding-top: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+  /* maintain cascading margin-bottom */
+}
+.charset-table {
+  --gridColor: #bbb;
+  --columns: 24;
+  --tableWidth: 95vw;
+
+  flex: 1 1 auto;
+  padding: 0;
+  margin: 1rem auto;
+
+  max-width: var(--tableWidth);
+  width: var(--tableWidth);
+  overflow: hidden;
+
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  box-shadow: -1px -1px 0 var(--gridColor),
+              -1px  0   0 var(--gridColor),
+               0   -1px 0 var(--gridColor);
+}
+  .charset-table > c {
+    flex: 0 0 auto;
+    
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: calc(var(--tableWidth) / var(--columns));
+    height: calc(var(--tableWidth) / var(--columns));
+
+    font-size: calc(100vw / calc(var(--columns) * 2));
+    line-height: 100%;
+    text-align: center;
+    font-feature-settings: "calt" 0; /* disable all */
+
+    background: white;
+    box-shadow: inset -1px -1px 0 var(--gridColor);
+
+    cursor: cell;
+  }
+/* for window width >= 1600 */
+@media only screen and (min-width: 1599px) {
+  .charset-table { --columns: 32; }
+}
+@media only screen and (max-width: 800px) {
+  .charset-table { --columns: 16; }
+}
+@media only screen and (max-width: 565px) {
+  .charset-table { --columns: 8; }
+}
+  @keyframes charset-flash {
+    0%    { background-color: black; color: white; }
+    20%   { background-color: black; color: white; }
+    20.1% { background-color: white; color: inherit; }
+    40%   { background-color: white; color: inherit; }
+
+    40.1% { background-color: black; color: white; }
+    60%   { background-color: black; color: white; }
+
+    100% { background-color: white; color: inherit; }
+  }
+  .charset-table > c.flash {
+    animation: charset-flash 300ms 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+
 
 
 /* FAQ */
