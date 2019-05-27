@@ -1,0 +1,32 @@
+
+Installing on Linux:
+
+There are many different Linux distributions and some handle font management
+differently. These instructions are for the most common Linux distributions:
+
+1. Create a folder called ".fonts" in your home directory.
+   Example: mkdir -p ~/.fonts
+
+2. Copy the otf files in the "Inter (OTF)" folder into your .fonts directory
+   Example: cp "Inter (OTF)/*.otf" ~/.fonts/
+
+You may have to restart apps and/or your window server session.
+
+Again, these instructions are for the most common Linux distributuons like
+Ubuntu and might not apply to you. Refer to the documentation for your
+distribution for more details on how to manage fonts in your OS.
+
+
+Q&A
+
+Q: I installed the fonts but they don't show up
+A: Try rebuilding the font database:
+   sudo fc-cache -f -v
+   Then restart your program(s).
+
+Q: Is there a way to tell if Inter was actually installed?
+A: Try running: fc-list | grep "Inter"
+
+Q: ~/.fonts is an old thing. The new thing is ~/.local/share/fonts
+A: Yes, that is true for recent distributions. These distros usually support
+   ~/.fonts as well making these instructions work for everyone. Yay.
