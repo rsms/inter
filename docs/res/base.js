@@ -63,6 +63,7 @@ var HUDNotification = {
       return
     }
     n.visible = true
+    n.el.style.visibility = null
     clearTimeout(n.timer)
     n.timer = setTimeout(function(){ n.hide() }, duration || 1200)
   },
@@ -72,6 +73,7 @@ var HUDNotification = {
     if (n.visible) {
       n.el.classList.remove('visible')
       n.visible = false
+      n.el.style.visibility = 'hidden'
     }
   }
 }
