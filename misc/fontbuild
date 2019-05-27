@@ -5,6 +5,7 @@ import sys, os
 from os.path import dirname, basename, abspath, relpath, join as pjoin
 sys.path.append(abspath(pjoin(dirname(__file__), 'tools')))
 from common import BASEDIR, VENVDIR, getGitHash, getVersion, execproc
+from collections import OrderedDict
 
 import argparse
 import datetime
@@ -180,6 +181,7 @@ class VarFontProject(FontProject):
       updateFontVersion(ufo)
       isItalic = ufo.info.italicAngle != 0
       ufoname = basename(ufo.path)
+      
       for g in ufo:
         directives = findGlyphDirectives(g)
         if g.components and composedGlyphIsNonTrivial(g, yAxisIsNonTrivial=isItalic):
@@ -581,10 +583,30 @@ class Main(object):
     for layerName in delLayerNames:
       del layers[layerName]
 
-    # clear anchors
+    # process glyphs
+    stripGlyphs = []
+    glyphOrder = OrderedDict([(k,None) for k in font.lib['public.glyphOrder']])
+    componentRefs = font.componentReferences
     for g in font:
+      if not g.lib.get('com.schriftgestaltung.Glyphs.Export', True):
+        del glyphOrder[g.name]
+        g.unicodes = []
+        if len(componentRefs.get(g.name, [])) == 0:
+          # unused
+          stripGlyphs.append(g.name)
       g.clearAnchors()
       del g.lib['com.schriftgestaltung.Glyphs.lastChange']
+
+    # update possibly modified glyphorder
+    font.lib['public.glyphOrder'] = list(glyphOrder)
+
+    # strip unused glyphs
+    for gname in stripGlyphs:
+      log.info(
+        'Strip unused and unexported glyph "%s" from %s',
+        gname, ufo_path
+      )
+      del font[gname]
 
     # write UFO file
     self.log("write %s" % relpath(ufo_path, os.getcwd()))

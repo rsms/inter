@@ -64,6 +64,11 @@ def main():
   for name in font.lib['public.glyphOrder']:
     g = font[name]
 
+    # not exported?
+    if 'com.schriftgestaltung.Glyphs.Export' in g.lib:
+      if not g.lib['com.schriftgestaltung.Glyphs.Export']:
+        continue
+
     # color
     color = None
     if 'public.markColor' in g.lib:
@@ -74,7 +79,7 @@ def main():
     if not g.bounds or g.bounds[3] == 0:
       isEmpty = 1
 
-    # name[, unicode[, unicodeName[, color]]]
+    # name, isEmpty, unicode, unicodeName, color
     glyph = None
     ucs = g.unicodes
     if len(ucs):
