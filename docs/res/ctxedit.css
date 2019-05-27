@@ -94,10 +94,10 @@
     height: var(--strip-height);
     background-image: url(popup.svg);
     background-repeat: no-repeat;
+    background-position: left center;
     width: 120px;
     color: white;
     opacity: 0.6;
-    background-position: left center;
     padding-left: 20px;
     line-height: var(--strip-height);
     text-overflow: ellipsis;

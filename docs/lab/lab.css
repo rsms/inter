@@ -1,3 +1,19 @@
+:root {
+  --fieldHeight: 24px;
+
+  /* P3 wide gamut colors */
+  --red:    color(display-p3 0.94 0.19 0.04);
+  --yellow: color(display-p3 1 0.87 0.05);
+  --blue:   rgb(3, 102, 214);
+}
+@supports not (color: color(display-p3 1 1 1)) {
+  /* sRGB colors */
+  :root {
+    --red: #F03009;
+    --yellow: #FFE310;
+  }
+}
+
 * { margin:0; padding:0; font-synthesis: none; }
 html { }
 body {
@@ -39,6 +55,41 @@ i, cite, em, var, address, dfn {
   font-style: oblique;
 }
 
+label {
+  display: block;
+  margin: 2px 0;
+}
+
+input[type="number"] {
+  width:50px;
+  background: none;
+  /*border: 1px solid rgba(0,0,0,0.2);*/
+  border: none;
+  padding: 4px;
+  border-radius: 2px;
+  background: white;
+}
+
+select {
+  height: var(--fieldHeight);
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  border: none;
+  padding: 4px 18px 4px 4px;
+  border-radius: 2px;
+  background: white;
+  background-image: url(../res/icons/popup-black.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px black;
+}
+
 .options {
   width: 275px;
   box-sizing:border-box;
@@ -59,6 +110,11 @@ i, cite, em, var, address, dfn {
   .options small {
     opacity: 0.6;
   }
+  .options h3 {
+    font-weight: 600;
+    font-size: 12px;
+    margin: 1rem 0 0.5rem 0;
+  }
   .options input[type="radio"], .options input[type="checkbox"] {
     margin-right:4px;
   }
@@ -66,6 +122,8 @@ i, cite, em, var, address, dfn {
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
+    align-items: center;
+    height: var(--fieldHeight);
   }
   .options .label-and-value span {
     /*flex: 1 1 auto;*/
@@ -76,8 +134,10 @@ i, cite, em, var, address, dfn {
   }
   .options .label-and-value input {
     width: 50px;
+    max-height: var(--fieldHeight);
+    box-sizing: border-box;
   }
-  .options .label-and-value select {
+  .options select {
     min-width:50px;
     max-width:130px;
   }
@@ -127,18 +187,45 @@ i, cite, em, var, address, dfn {
     pointer-events: none;
     opacity: 0.4;
   }
+  .options .label-and-value input + note,
+  .options .label-and-value select + note {
+    display: flex;
+    align-items: center;
+    height: var(--fieldHeight);
+    line-height: var(--fieldHeight);
+    margin-left: 0.5em;
+    user-select: none; -webkit-user-select: none;
+    color: rgba(0,0,0,0.4);
+  }
+  .options .label-and-value input + note .unit,
+  .options .label-and-value select + note .unit {
+    flex: 0 0 auto;
+    display:flex;
+    width: 18px;
+  }
 
-input[type="number"] {
-  width:50px;
-  background: none;
-  border: 1px solid rgba(0,0,0,0.2);
-  padding: 4px;
-  border-radius: 2px;
+
+.img-button {
+  display: inline-block;
+  width: var(--fieldHeight);
+  height:var(--fieldHeight);
+  background-size: 16px 16px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  opacity: 0.8;
+  outline: none;
 }
-
-label {
-  display: block;
-  margin: 2px 0;
+.img-button:hover {
+  opacity: 1;
+  background-color: rgba(0,0,0,0.1);
+}
+.img-button:hover:active {
+  opacity: 1;
+  background-color: rgba(0,0,0,0.2);
+}
+.img-button:focus {
+  box-shadow: 0 0 0 2px black;
 }
 
 .checkbox-group label {
@@ -172,6 +259,7 @@ body.italic samples {
     white-space: pre-wrap;
     outline: none;
     overflow-wrap: break-word;
+    color:black;
   }
     sample p {
       white-space: pre-wrap;
@@ -220,6 +308,13 @@ body.italic samples {
       sample .glyphlist.hideNames g span.name {
         display:none;
       }
+
+body.inverted-colors {
+  background: #020202;
+}
+body.inverted-colors sample {
+  color: white;
+}
 
 body.secondarySampleDisabled .showOnlyWithSecondarySample {
   display: none;

@@ -717,7 +717,6 @@ samples.set('Repertoire', {
       for (const g of glyphs) {
         // let [name, isEmpty, uc, ucName, color] = g
         let name = g[0], isEmpty = g[1], uc = g[2], ucName = g[3], color = g[4]
-        console.log('g', g)
 
         let style = ''
         if (color && color != '<derived>') {
@@ -755,7 +754,7 @@ samples.set('Repertoire', {
 })
 
 
-let combs = `ta es ar te ne an as ra la sa al si or ci na er at re ac gh ca ma is za ic ja va zi ce ze se in pa et ri en ti to me ec ol ni os on iz az st ke ka lo el de ro ve pe oz ie gi le ge fo uz us ur ag ah ad ko ez ig eg ak ga da tu ia so ul am it oc av su jo ru em li uc un io ao he yc gu iu ha og eh ho cn im ny sk aa sc ot ej ku lu nu go ju zo ok be ai ik nc je zn no od ek vy hu do co ed ky vi sl ut pr po aj ow ee mo iv ba mu ib uk ov ep om ym du bo zu cu di ev cj oi vo fa oe hh bh op ck bu ab fe rs ir rz ly il yo mi gj id ys ji ug um ob ns dz qe sn hr ap uh ea rc nt yu ae oj zj ud js fu pu cl vs gg cc hi oh zy ue zd ou ua ry zm of ub oð gl oy au ki kl hl ks yl bi ih ls lg hd zs zl gz tr ið sm ui oo að eb ty ct pi ij yz af uv lk ay rg ya vu ln dl ts ip sv up ht yr sr hm sy uy eo ei nh wa ss gd yv uj nz cs oa wg rt we zb ii if lc uu pl gr by ye sp þa fi zk ef kc yt wl sh zg wo sw hs lt yn dy ax kz zr ps mz jh ng pc cr bc yð eu hy uf lz eq jg zz ox gn ms dh oß cm th lm hq rn yj kr xa yi yk uo zt sj xe yb jc wu vc dr br tc tl my zv gs mc pt gm rl xi hc bl lb ds dn sg bt yp tn cd rd vz vr gb aß nk zc iq aq dc bs rk sb ex yh sd vn vd cv yd zw cb ml sz lp lv sf pn lr ws þo þy ix mr qu mt xo ld ll lw dm cy cp wz rb hb hn bz ch mh hj lh hz uß rm dg gw kt jz aw eð uð oq iþ rh hf mg iw kn fc iy cg vt hw wh hx gc ux cw aæ zf lj nd gt hg py tz kh nr nv vl fh tk oþ gk hk nm xh yf jl pz cf xu þu aþ nb pg yþ dk td jn fl ew gf bn þe gx nn np lf fy zp uq yg dt oæ tt zh jt kv tm ðo fs nj þi cz jd mk mn nl rr rv wi ða fn gy jr kg rp tj tp xy ði ßo æo`
+let combs = `ta es ar te ne an as ra la sa al si or ci na er at re ac gh ca ma is za ic ja va zi ce ze se in pa et ri en ti to me ec ol ni os on iz az st ke ka lo el de ro ve pe oz ie gi le ge fo uz us ur ag ah ad ko ez ig eg ak ga da tu ia so ul am it oc av su jo ru rt rf em li uc un io ao he yc gu iu ha og eh ho cn im ny sk aa sc ot ej ku lu nu go ju zo ok be ai ik nc je zn no od ek vy hu do co ed ky vi sl ut pr po aj ow ee mo iv ba mu ib uk ov ep om ym du bo zu cu di ev cj oi vo fa oe hh bh op ck bu ab fe rs ir rz ly il yo mi gj id ys ji ug um ob ns dz qe sn hr ap uh ea rc nt yu ae oj zj ud js fu pu cl vs gg cc hi oh zy ue zd ou ua ry zm of ub oð gl oy au ki kl hl ks yl bi ih ls lg hd zs zl gz tr ið sm ui oo að eb ty ct pi ij yz af uv lk ay rg ya vu ln dl ts ip sv up ht yr sr hm sy uy eo ei nh wa ss gd yv uj nz cs oa wg rt we zb ii if lc uu pl gr by ye sp þa fi zk ef kc yt wl sh zg wo sw hs lt yn dy ax kz zr ps mz jh ng pc cr bc yð eu hy uf lz eq jg zz ox gn ms dh oß cm th lm hq rn yj kr xa yi yk uo zt sj xe yb jc wu vc dr br tc tl my zv gs mc pt gm rl xi hc bl lb ds dn sg bt yp tn cd rd vz vr gb aß nk zc iq aq dc bs rk sb ex yh sd vn vd cv yd zw cb ml sz lp lv sf pn lr ws þo þy ix mr qu mt xo ld ll lw dm cy cp wz rb hb hn bz ch mh hj lh hz uß rm dg gw kt jz aw eð uð oq iþ rh hf mg iw kn fc iy cg vt hw wh hx gc ux cw aæ zf lj nd gt hg py tz kh nr nv vl fh tk oþ gk hk nm xh yf jl pz cf xu þu aþ nb pg yþ dk td jn fl ew gf bn þe gx nn np lf fy zp uq yg dt oæ tt zh jt kv tm ðo fs nj þi cz jd mk mn nl rr rv wi ða fn gy jr kg rp tj tp xy ði ßo æo`
 
 let uniqueChars = new Set(combs.replace(/\s+/g, '').split(''))
 combs = combs.split(/\s+/)
@@ -770,7 +769,6 @@ function getEnglishWords() {
       if (_enWords) {
         return
       }
-      // const words = text.split('\n')
       let combIndex = new Map() // comb => Set{ combWordsHTML }
       console.log(`computing ${words.length} english words and ${words.length * combs.length} combinations...`)
       for (const comb of combs) {
@@ -1411,6 +1409,7 @@ document.head.appendChild(fontCSS)
       <label class="label-and-value">
         <span>Size:</span>
         <input type="number" value="22" step="1" min="4" max="1024" name="size">
+        <note><span class="unit">dp</span></note>
       </label>
 
       <label class="label-and-value">
@@ -1429,41 +1428,27 @@ document.head.appendChild(fontCSS)
       </div>
 
       <label class="label-and-value">
-      <span>Anti-alias:</span>
-      <select name="antialias">
-        <option value="greyscale" selected>Greyscale</option>
-        <option value="subpixel">Subpixel</option>
-        <option value="default">Browser default</option>
-      </select>
+        <span>Letter spacing:</span>
+        <input type="number" value="" placeholder="" step="0.1" name="letterSpacing">
+        <note><span class="unit">%</span><div
+          class="img-button reset-letter-spacing"
+          tabindex="0"
+          style="background-image:url(../res/icons/reset-black.svg)"></div>
+        </note>
       </label>
 
       <label class="label-and-value">
-      <span>Compare:</span>
-      <select name="compare">
-        <option value="-" selected>Nothing</option>
-        <option value="roboto">Roboto</option>
-        <option value="system">System font</option>
-        <option value="rasterization">Rasterization</option>
-      </select>
-      </label>
-
-      <label class="rasterizePhrase">
-      Rasterize phrase:<br>
-      <input type="text" value="Account expiration" name="rasterizePhrase">
-      </label>
-
-      <label class="label-and-value">
-        <span>letter-spacing:</span>
-        <input type="number" value="0" step="0.1" name="letterSpacing">
-      </label>
-
-      <label class="label-and-value">
-        <span>line-height:</span>
+        <span>Line height:</span>
         <input type="number" value="" placeholder="" step="1" min="0" max="1000" name="lineHeight">
+        <note><span class="unit">dp</span><div
+          class="img-button reset-line-height"
+          tabindex="0"
+          style="background-image:url(../res/icons/reset-black.svg)"></div>
+        </note>
       </label>
 
       <label class="label-and-value">
-      <span>text-transform:</span>
+      <span>Transform:</span>
       <select name="text-transform">
         <option value="none" selected>none</option>
         <option value="capitalize">capitalize</option>
@@ -1473,7 +1458,7 @@ document.head.appendChild(fontCSS)
       </select></label>
 
       <label class="label-and-value">
-      <span>text-decoration:</span>
+      <span>Decoration:</span>
       <select name="text-decoration">
         <option value="none" selected>none</option>
         <option value="underline">underline</option>
@@ -1525,8 +1510,32 @@ document.head.appendChild(fontCSS)
         <option value="oldstyle-nums stacked-fractions">oldstyle-nums stacked-fractions</option>
       </select></label-->
 
+      <h3>Display</h3>
+
+      <label class="label-and-value">
+      <span>Anti-alias:</span>
+      <select name="antialias">
+        <option value="greyscale" selected>Greyscale</option>
+        <option value="subpixel">Subpixel</option>
+        <option value="default">Browser default</option>
+      </select>
+      </label>
+
+      <label class="label-and-value">
+      <span>Compare:</span>
+      <select name="compare">
+        <option value="-" selected>Nothing</option>
+        <option value="roboto">Roboto</option>
+        <option value="system">System font</option>
+      </select>
+      </label>
+
+      <label title="White text on black background"><input type="checkbox" name="display-invert-colors"> Inverted colors</label>
+
+
+      <h3>Features</h3>
+
       <div class="checkbox-group">
-      <span>Features:</span>
       <label title="Discretionary ligatures, e.g. !? -> interrobang"><input type="checkbox" class="featopt" name="feat:dlig"> dlig &nbsp;(Discretionary ligatures)</label>
       <label title="Convert all numbers to numerators"><input type="checkbox" class="featopt" name="feat:numr"> numr &nbsp;(Numerators)</label>
       <label title="Convert all numbers to denominators"><input type="checkbox" class="featopt" name="feat:dnom"> dnom &nbsp;(Denominators)</label>
@@ -1586,14 +1595,18 @@ document.head.appendChild(fontCSS)
         <sample contenteditable spellcheck="false" class="primary inter"></sample>
         <sample contenteditable spellcheck="false" class="secondary"></sample>
       </samples>
-
-      <canvas id="displayCanvas" width="960" height="400"></canvas>
-      <canvas id="renderCanvas" width="120" height="50"></canvas>
     </div>
 
     <div id="measure" class="inter">Åj</div>
+  </body>
+  <script type="text/javascript">(function(){
 
-    <script type="text/javascript">
+function InterDynamicTracking(fontSize) {
+  var a = -0.0223, b = 0.185, c = -0.1745;
+  // tracking = a + b * e ^ (c * fontSize)
+  return a + b * Math.pow(Math.E, c * fontSize)
+}
+
 
 // provide hinted=1 to use TTF hinted fonts.
 // not exposed in UI as it only works when serving the site locally
@@ -1617,6 +1630,7 @@ class BoundVar {
     this.lastValue = this.getValue()
     this.parentVars = parentVars
     this.defaultValue = this.lastValue
+    this._changeCallbacks = []
   }
 
   refreshValue(ev) {
@@ -1630,6 +1644,21 @@ class BoundVar {
          : this.isCheckbox ? (this.e.checked || null)
          : this.isNumber ? this.e.valueAsNumber
          : this.e.value
+  }
+
+  onChange(callback) {
+    this._changeCallbacks.push(callback)
+  }
+
+  removeChangeListener(callback) {
+    let i = 0
+    for (; i < this._changeCallbacks.length; i++) {
+      if (this._changeCallbacks[i] === callback) {
+        this._changeCallbacks.splice(i, 1)
+        return true
+      }
+    }
+    return false
   }
 
   setValue(value) {
@@ -1650,14 +1679,22 @@ class BoundVar {
     if (this.isCheckbox) {
       this.e.checked = !!value
     } else if (this.isNumber && typeof value == 'number') {
-      if (this.e.valueAsNumber != value) {
-        this.e.valueAsNumber = value
+      if (isNaN(value)) {
+        this.e.value = null
+      } else {
+        if (this.e.valueAsNumber != value) {
+          this.e.valueAsNumber = value
+        }
       }
     } else if (this.e.value != value) {
       this.e.value = value
     }
 
     this.lastValue = value
+
+    for (let f of this._changeCallbacks) {
+      f(value, this)
+    }
   }
 }
 
@@ -1824,25 +1861,23 @@ class Vars {
 function main() {
   const vars = new Vars(document.location.search)
 
-  let interUISample = document.querySelector('sample.inter');
-  let secondarySample = document.querySelector('sample.secondary');
+  const $  = (q, el) => (el || document).querySelector(q)
+  const $$ = (q, el) => [].slice.call((el || document).querySelectorAll(q))
+
+  let interUISample = $('sample.inter');
+  let secondarySample = $('sample.secondary');
   secondarySample.innerText = interUISample.innerText;
 
-  const renderCanvas = document.querySelector('#renderCanvas')
-  const displayCanvas = document.querySelector('#displayCanvas')
+  const measureDiv = $('#measure')
 
-  const measureDiv = document.querySelector('#measure')
+  const secondaryFontElements = $$('.secondaryFont')
+  const primaryFontElements = $$('.primaryFont')
 
-  const secondaryFontElements =
-    Array.prototype.slice.call(document.querySelectorAll('.secondaryFont'))
-  const primaryFontElements =
-    Array.prototype.slice.call(document.querySelectorAll('.primaryFont'))
-
-  const repertoireControl = document.querySelector('.repertoireControl')
-  const samplesElement = document.querySelector('samples')
+  const repertoireControl = $('.repertoireControl')
+  const samplesElement = $('samples')
 
   // filter paste to match style
-  ;[].slice.call(document.querySelectorAll('[contenteditable]')).forEach(el => {
+  $$('[contenteditable]').forEach(el => {
     el.addEventListener('paste', ev => {
       ev.preventDefault()
       let text = ev.clipboardData.getData("text/plain")
@@ -1851,6 +1886,13 @@ function main() {
   })
 
   let sizeVar = null
+
+  // prevent clicks on img-button from changing focus
+  $$('.img-button').forEach(el => {
+    el.addEventListener('pointerdown', ev => {
+      ev.preventDefault()
+    }, {passive:false, capture:true})
+  })
 
   function forEachGlyphlist(fn) {
     let elements = samplesElement.querySelectorAll('.glyphlist')
@@ -1872,7 +1914,8 @@ function main() {
   }
 
 
-  const lineHeightInput = document.querySelector('[name="lineHeight"]')
+  const lineHeightInput = $('[name="lineHeight"]')
+
   let measurePending = false
   const measure = () => {
     const r = measureDiv.getBoundingClientRect()
@@ -1951,7 +1994,7 @@ function main() {
   }
 
   // sample text
-  const samplesSelect = document.querySelector('select[name="sample"]')
+  const samplesSelect = $('select[name="sample"]')
   for (let [k,v] of samples) {
     const opt = document.createElement('option')
     opt.innerText = k
@@ -1975,12 +2018,12 @@ function main() {
     }
   })
 
-  const boxes = document.querySelector('boxes')
+  const boxes = $('boxes')
   sizeVar = vars.bind('size', (e, v) => {
     boxes.style.display = (v > 20) ? 'none' : null
     setCSSProp('font-size', v + 'px')
     setGlyphlistClass('hideNames', v < 36)
-    // setCSSProp('line-height', Math.ceil(v * 1.5) + 'px')
+    return v
   })
 
   let usingVarFont = false
@@ -2102,20 +2145,6 @@ function main() {
     secondarySampleClassNameAddition = className || null
   }
 
-  const rasterizePhraseInput = document.querySelector('[name="rasterizePhrase"]')
-  const rasterizePhraseLabel = document.querySelector('label.rasterizePhrase')
-
-  const enableRasterization = () => {
-    displayCanvas.style.display = null
-    rasterizePhraseInput.disabled = false
-    rasterizePhraseLabel.style.display = null
-  }
-  const disableRasterization = () => {
-    displayCanvas.style.display = 'none'
-    rasterizePhraseInput.disabled = true
-    rasterizePhraseLabel.style.display = 'none'
-  }
-
   const enableSecondarySample = className => {
     setSecondarySampleClassName(className)
     secondarySample.style.display = null
@@ -2128,20 +2157,50 @@ function main() {
   }
 
   vars.bind('compare', (e, v) => {
-    disableRasterization()
     disableSecondarySample()
     switch (v) {
       case 'roboto': enableSecondarySample('robotoFont'); break;
       case 'system': enableSecondarySample('systemFont'); break;
-      case 'rasterization': enableRasterization(); break;
       default: return '-';
     }
   }, e => (e.value && e.value != '-') ? e.value : null)
 
-  vars.bind('letterSpacing', (e, v) => {
-    setCSSProp('letter-spacing', v + 'px')
+  function updateImplicitLetterSpacing(el, size) {
+    let t = InterDynamicTracking(size)
+    let v = parseFloat((t * 100).toFixed(1))
+    el.placeholder = v
+    return v
+  }
+
+  let letterSpacingVar = vars.bind('letterSpacing', (e, v) => {
+    if (!v) {
+      v = updateImplicitLetterSpacing(e, sizeVar.getValue())
+    }
+    setCSSProp('letter-spacing', (v / 100) + 'em')
+  }, (e, prevValue, ev) => {
+    if (ev && !ev.inputType && !prevValue) {
+      // step increment/decrement
+      let delta = e.valueAsNumber == 0 ? -1 : e.valueAsNumber
+      return parseFloat(e.placeholder) + delta
+    }
+    return e.value || ""
   })
 
+  // update implicit letter spacing when size changes
+  sizeVar.onChange(size => {
+    let t = letterSpacingVar.lastValue
+    if (!t || isNaN(t)) {
+      updateImplicitLetterSpacing(letterSpacingVar.e, size)
+    }
+  })
+
+  $('.reset-letter-spacing').addEventListener('click', ev => {
+    vars.setValue('letterSpacing', '')
+    ev.stopPropagation()
+    ev.preventDefault()
+  }, {passive:false,capture:true})
+
+  
   vars.bind('lineHeight', lineHeightInput, (e, v) => {
     setCSSProp('line-height', v ? v + 'px' : null)
   }, (e, prevValue, ev) => {
@@ -2153,7 +2212,17 @@ function main() {
     if (e.valueAsNumber < 0) {
       return Math.abs(e.valueAsNumber)
     }
-    return e.value || null
+    return e.value || ""
+  })
+
+  $('.reset-line-height').addEventListener('click', ev => {
+    vars.setValue('lineHeight', '')
+    ev.stopPropagation()
+    ev.preventDefault()
+  }, {passive:false,capture:true})
+
+  vars.bind('display-invert-colors', (e, on) => {
+    document.body.classList[on ? 'add' : 'remove']('inverted-colors')
   })
 
   let spaaSelect = vars.bind('antialias', (e, v) => {
@@ -2207,7 +2276,7 @@ function main() {
   // })
 
 
-  for (let e of Array.from(document.querySelectorAll('input.featopt'))) {
+  for (let e of $$('input.featopt')) {
     let p = e.name.replace(/^feat\:/, '').split('=')
     let name = p[0]
     let valueOn = parseInt(p[1] || '1')
@@ -2245,7 +2314,7 @@ function main() {
           sampleText.substr(m.index + m[0].length)
         )
         let directive = m[1].toLowerCase()
-        console.log('dir', m[1], '=>', m[2])
+        // console.log('dir', m[1], '=>', m[2])
         if (directive == 'enablefeatures') {
           // #!enableFeatures:tnum,dlig
           for (let feat of m[2].toLowerCase().split(/\s*,\s*/)) {
@@ -2270,14 +2339,34 @@ function main() {
     }
   })
 
+  // ESC clears keyboard focus
+  document.addEventListener('keydown', ev => {
+    if (ev.keyCode == 27) {
+      document.activeElement.blur()
+    }
+  }/*, {capture:true, passive:false}*/)
+
+  // RETURN on control clears keyboard focus
+  $$('input').forEach(el => el.addEventListener('keypress', ev => {
+    if (ev.keyCode == 13) {
+      document.activeElement.blur()
+    }
+  }))
+
+  // clear keyboard focus when a select control changes
+  $$('select').forEach(el => el.addEventListener('change', ev => {
+    document.activeElement.blur()
+    window.requestAnimationFrame(() => document.activeElement.blur())
+  }))
+
 }
-    </script>
-  </body>
-  <script type="text/javascript">
-    main();
-    document.title = (
-      (new Date()).toTimeString().split(':').slice(0,2).join(':') +
-      ' — ' + (new Date()).toDateString()
-    );
-  </script>
+
+
+main();
+document.title = (
+  (new Date()).toTimeString().split(':').slice(0,2).join(':') +
+  ' — ' + (new Date()).toDateString()
+);
+
+})();</script>
 </html>

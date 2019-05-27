@@ -32,6 +32,11 @@ for f in *.svg; do
   svgo --multipass -q "$f" &
 done
 
+# crunch /docs/res/icons/*.svg
+for f in icons/*.svg; do
+  svgo --multipass -q "$f" &
+done
+
 # crunch /docs/res/*.png
 for f in *.png; do
   TMPNAME=.$f.tmp
