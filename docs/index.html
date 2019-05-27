@@ -513,10 +513,12 @@ for (i = 0; i < av.length; ++i) {
 var copyToClipboard = (function(){
   var hiddenTextInput = $('#hidden-text-input')
   return function(text) {
+    hiddenTextInput.style.display = null
     hiddenTextInput.value = text
     hiddenTextInput.select()
     document.execCommand("copy")
     hiddenTextInput.value = ""
+    hiddenTextInput.style.display = 'none'
     HUDNotification.show('Copied to clipboard')
   }
 })();
