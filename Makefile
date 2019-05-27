@@ -280,7 +280,10 @@ dist: zip_dist
 docs: docs_fonts
 	$(MAKE) -j docs_info
 
-docs_info: docs/_data/fontinfo.json docs/lab/glyphinfo.json docs/glyphs/metrics.json
+docs_info: docs/_data/fontinfo.json \
+           docs/_data/glyphinfo.json \
+           docs/lab/glyphinfo.json \
+           docs/glyphs/metrics.json
 
 docs_fonts:
 	rm -rf docs/font-files
@@ -296,8 +299,11 @@ docs_fonts:
 docs/_data/fontinfo.json: docs/font-files/Inter-Regular.otf misc/tools/fontinfo.py
 	misc/tools/fontinfo.py -pretty $< > docs/_data/fontinfo.json
 
-docs/lab/glyphinfo.json: build/UnicodeData.txt misc/tools/gen-glyphinfo.py $(all_ufo_masters)
-	misc/tools/gen-glyphinfo.py -ucd $< src/Inter-*.ufo > $@
+docs/_data/glyphinfo.json: docs/lab/glyphinfo.json
+	cp -a $< $@
+
+docs/lab/glyphinfo.json: build/UnicodeData.txt misc/tools/gen-glyphinfo.py $(Regular_ufo_d)
+	misc/tools/gen-glyphinfo.py -ucd $< src/Inter-Regular.ufo > $@
 
 docs/glyphs/metrics.json: $(Regular_ufo_d) misc/tools/gen-metrics-and-svgs.py
 	misc/tools/gen-metrics-and-svgs.py src/Inter-Regular.ufo
