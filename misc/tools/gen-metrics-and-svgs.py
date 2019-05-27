@@ -191,7 +191,7 @@ def genKerningInfo(ufo, glyphnames, nameToIdMap):
       for rname in rightnames:
         lnameId = nameToIdMap.get(lname)
         rnameId = nameToIdMap.get(rname)
-        if lnameId and rnameId:
+        if lnameId is not None and rnameId is not None:
           pairs.append([lnameId, rnameId, v])
 
   # print('pairs: %r' % pairs)
@@ -247,6 +247,22 @@ ufopath = args.ufopath.rstrip('/')
 ufo = Font(ufopath)
 effectiveAscender = max(ufo.info.ascender, ufo.info.unitsPerEm)
 
+
+deleteNames.add('.notdef')
+deleteNames.add('.null')
+
+glyphnames = args.glyphs if len(args.glyphs) else ufo.keys()
+glyphnameSet = set(glyphnames)
+
+glyphnames = [gn for gn in glyphnames if gn not in deleteNames]
+glyphnames.sort()
+
+nameToIdMap, idToNameMap = genGlyphIDs(glyphnames)
+
+print('generating kerning pair data')
+kerning = genKerningInfo(ufo, glyphnames, nameToIdMap)
+
+
 print('preprocessing glyphs')
 filters = [
   DecomposeComponentsFilter(),
@@ -261,16 +277,6 @@ print('generating SVGs and metrics data')
 # print('\n'.join(ufo.keys()))
 # sys.exit(0)
 
-deleteNames.add('.notdef')
-deleteNames.add('.null')
-
-glyphnames = args.glyphs if len(args.glyphs) else ufo.keys()
-glyphnameSet = set(glyphnames)
-
-glyphnames = [gn for gn in glyphnames if gn not in deleteNames]
-glyphnames.sort()
-
-nameToIdMap, idToNameMap = genGlyphIDs(glyphnames)
 
 glyphMetrics = {}
 
@@ -307,7 +313,6 @@ if startPos == -1 or endPos == -1:
   print(msg % relfilename, file=sys.stderr)
   sys.exit(1)
 
-kerning = genKerningInfo(ufo, glyphnames, nameToIdMap)
 metaJson = '{\n'
 metaJson += '"nameids":' + fmtJsonDict(idToNameMap) + ',\n'
 metaJson += '"metrics":' + fmtJsonDict(glyphMetrics) + ',\n'
