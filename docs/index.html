@@ -300,29 +300,6 @@ html { font-family: 'Inter', sans-serif; }
 <div class="row white charset-title" id="charset">
   <h2><a href="#charset">Character set</a></h2>
 </div>
-<script>
-
-function csc(node) {
-  copyToClipboard(node.innerText + " " + node.title)
-
-  // flash the glyph
-  clearTimeout(node._flashTimer)
-  if (node.classList.contains('flash')) {
-    node.classList.remove('flash')
-    if (typeof requestAnimationFrame != 'undefined') {
-      requestAnimationFrame(function(){ node.classList.add('flash') })
-    } else {
-      setTimeout(function(){ node.classList.add('flash') }, 1)
-    }
-  } else {
-    node.classList.add('flash')
-  }
-  node._flashTimer = setTimeout(function(){
-    node.classList.remove('flash')
-  }, 300)
-}
-
-</script>
 <div class="row white charset">
   <div class="charset-table">
   {% for g in site.data.glyphinfo.glyphs %}
@@ -333,15 +310,89 @@ function csc(node) {
     {% endcomment %}
     {% if g[1] == 0 and g[2] %}
       {% if g[3] %}
-      <c title="/{{g[0]}} U+{{g[2]}} ({{g[3]}})" onclick="csc(this)">&#x{{g[2]}}</c>
+      <c title="/{{g[0]}} U+{{g[2]}} ({{g[3]}})">&#x{{g[2]}}</c>
       {% else %}
-      <c title="/{{g[0]}} U+{{g[2]}}" onclick="csc(this)">&#x{{g[2]}}</c>
+      <c title="/{{g[0]}} U+{{g[2]}}">&#x{{g[2]}}</c>
       {% endif %}
     {% endif %}
   {% endfor %}
   </div>
 
 </div>
+<script>
+;(function(){
+
+
+  function onClickChar(ev) {
+    // Copy to clipboard.
+    // Clipboard management on the web is _ABSOLUTELY INSANE_
+    // This is an elaborate and ugly workaround to make it not suck
+    // on various browsers.
+
+    ev.preventDefault()
+    ev.stopPropagation()
+    
+    var origel = ev.target
+    var el = origel.cloneNode(true)
+    var r = ev.target.getBoundingClientRect()
+
+    el.style.position = 'fixed'
+    el.style.left = r.left + 'px'
+    el.style.top = r.top + 'px'
+    el.style.width = r.width + 'px'
+    el.style.height = r.height + 'px'
+    el.style.webkitUserSelect = 'text'
+    el.style.userSelect = 'text'
+    document.body.appendChild(el)
+    
+    el.innerText = el.innerText + " " + el.title
+
+    el.contentEditable = true
+    el.readOnly = false
+
+    var range = document.createRange()
+    range.selectNodeContents(el)
+
+    var s = window.getSelection()
+    s.removeAllRanges()
+    s.addRange(range)
+
+    document.execCommand('copy')
+
+    document.body.removeChild(el)
+
+    s.removeAllRanges()
+
+    HUDNotification.show('Copied ' + origel.innerText + ' to clipboard')
+
+
+    // flash the glyph
+    clearTimeout(origel._flashTimer)
+    if (origel.classList.contains('flash')) {
+      origel.classList.remove('flash')
+      if (typeof requestAnimationFrame != 'undefined') {
+        requestAnimationFrame(function(){ origel.classList.add('flash') })
+      } else {
+        setTimeout(function(){ origel.classList.add('flash') }, 1)
+      }
+    } else {
+      origel.classList.add('flash')
+    }
+    origel._flashTimer = setTimeout(function(){
+      origel.classList.remove('flash')
+    }, 300)
+  }
+
+  var activeListener = { capture: true }
+
+  let cv = document.querySelector('.charset-table').querySelectorAll('c')
+  for (let i = 0; i < cv.length; i++) {
+    let c = cv[i]
+    c.addEventListener('pointerdown', onClickChar, activeListener)
+    c.addEventListener('mousedown', onClickChar, activeListener)
+  }
+})();
+</script>
 
 
 <div class="row white"><div>
@@ -511,14 +562,18 @@ for (i = 0; i < av.length; ++i) {
 
 // clipboard copy
 var copyToClipboard = (function(){
-  var hiddenTextInput = $('#hidden-text-input')
+  var ti = $('#hidden-text-input')
   return function(text) {
-    hiddenTextInput.style.display = null
-    hiddenTextInput.value = text
-    hiddenTextInput.select()
+    let range = document.createRange()
+
+    // ti.style.display = null
+    ti.value = text
+    ti.select()
+
     document.execCommand("copy")
-    hiddenTextInput.value = ""
-    hiddenTextInput.style.display = 'none'
+    ti.value = ""
+    // ti.style.display = 'none'
+    ti.readOnly = true
     HUDNotification.show('Copied to clipboard')
   }
 })();
