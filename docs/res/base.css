@@ -10,9 +10,18 @@
 
   --columnGap: 2rem;
 
-  --red: #F03009;
-  --yellow: #FFE310;
-  --blue: rgb(3, 102, 214);
+  /* P3 wide gamut colors */
+  --red:    color(display-p3 0.94 0.19 0.04);
+  --yellow: color(display-p3 1 0.87 0.05);
+  --blue:   rgb(3, 102, 214);
+}
+
+@supports not (color: color(display-p3 1 1 1)) {
+  /* sRGB colors */
+  :root {
+    --red: #F03009;
+    --yellow: #FFE310;
+  }
 }
 
 * { margin:0; padding:0; font-synthesis: none; }
