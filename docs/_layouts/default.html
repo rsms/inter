@@ -1,6 +1,8 @@
 {%
 assign build_version = site.time | date: "%Y%m%d%H%M%S" %}{%
-assign description = "Inter is a typeface optimized for computer-user interfaces" %}{%
+assign description = "Inter is a typeface family optimized for user interfaces and computer screens" %}{%
+
+capture title %}{% if page.title %}{{ page.title }} — Inter{% else %}Inter font family{% endif %}{% endcapture %}{%
 
 if site.safe == false %}{%
 assign url_root = "/" %}{% else %}{%
@@ -29,7 +31,7 @@ endfor
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} — Inter{% else %}Inter font family{% endif %}</title>
+    <title>{{title}}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,22 +42,25 @@ endfor
     <link rel="icon" type="image/png" href="{{url_root}}res/favicon.png?v={{ favicon_v }}">
     {% include preload-font-files.html %}
     <meta name="format-detection" content="telephone=no">
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:site" content="@rsms">
-    <meta property="twitter:creator" content="@rsms">
-    <meta property="description" content="{{description}}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@rsms">
+    <meta name="twitter:creator" content="@rsms">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="description" content="{{description}}">
     <meta property="og:description" content="{{description}}">
-    <meta property="twitter:description" content="{{description}}">
     {% if page.title %}
       <meta property="og:title" content="{{ page.title }}">
-      <meta property="twitter:title" content="{{ page.title }}">
+      <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+      <meta property="og:title" content="{{ title }}">
+      <meta name="twitter:title" content="{{ title }}">
     {% endif %}
     {% if page.og_image_url %}
       <meta property="og:image" content="{{ page.og_image_url }}">
-      <meta property="twitter:image" content="{{ page.og_image_url }}">
+      <meta name="twitter:image" content="{{ page.og_image_url }}">
     {% else %}
       <meta property="og:image" content="https://rsms.me/inter/res/share.png">
-      <meta property="twitter:image" content="https://rsms.me/inter/res/share.png">
+      <meta name="twitter:image" content="https://rsms.me/inter/res/share.png">
     {% endif %}
     <meta property="og:url" content="https://rsms.me/inter/{{ page.url | remove_first:'index.html' }}">
     <meta property="fb:app_id" content="38027689216">
