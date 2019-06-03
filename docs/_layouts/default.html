@@ -47,26 +47,27 @@ endfor
     <meta name="twitter:creator" content="@rsms">
     <meta name="twitter:description" content="{{description}}">
     <meta name="description" content="{{description}}">
-    <meta name="og:description" content="{{description}}">
+    <meta property="og:description" content="{{description}}">
     {% if page.title %}
-      <meta name="og:title" content="{{ page.title }}">
+      <meta property="og:title" content="{{ page.title }}">
       <meta name="twitter:title" content="{{ page.title }}">
     {% else %}
-      <meta name="og:title" content="{{ title }}">
+      <meta property="og:title" content="{{ title }}">
       <meta name="twitter:title" content="{{ title }}">
     {% endif %}
     {% if page.og_image_url %}
-      <meta name="og:image" content="{{ page.og_image_url }}">
+      <meta property="og:image" content="{{ page.og_image_url }}">
       <meta name="twitter:image" content="{{ page.og_image_url }}">
     {% else %}
-      <meta name="og:image" content="https://rsms.me/inter/res/share.png">
+      <meta property="og:image" content="https://rsms.me/inter/res/share.png">
       <meta name="twitter:image" content="https://rsms.me/inter/res/share.png">
     {% endif %}
-    <meta name="og:image:alt" content="Inter font family sample image">
-    <meta name="fb:app_id" content="38027689216">
-    <meta name="og:site_name" content="rsms.me/inter">
-    <meta name="og:type" content="product">
-    <meta name="og:locale" content="en_US">
+    <meta property="og:image:alt" content="Inter font family sample image">
+    <meta property="fb:app_id" content="38027689216">
+    <meta property="og:site_name" content="rsms.me/inter">
+    <meta property="og:type" content="product">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://rsms.me/inter{{ page.url }}">
   </head>
   <body>
     <div id="hud-notification"><div class="msg">Hello</div></div>
