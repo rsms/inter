@@ -58,11 +58,8 @@ def fatal(msg):
 
 
 
-def composedGlyphIsNonTrivial(g, yAxisIsNonTrivial=False):
-  # A non-trivial glyph is one that is composed from either multiple
-  # components or that uses component transformations.
-  # If yAxisIsNonTrivial is true, then any transformation over the Y axis
-  # is be considered non-trivial.
+def composedGlyphIsNonTrivial(g):
+  # A non-trivial glyph is one that uses reflecting component transformations.
   if g.components and len(g.components) > 0:
     if len(g.components) > 1:
       return True
@@ -74,10 +71,10 @@ def composedGlyphIsNonTrivial(g, yAxisIsNonTrivial=False):
       #   (-1.0, 0, 0.3311, 1, 1464.0, 0)  flipped x axis, sheered and offset
       # 
       xScale, xyScale, yxScale, yScale, xOffset, yOffset = c.transformation
-      if xScale != 1 or xyScale != 0 or yxScale != 0 or yScale != 1:
+      # If glyph is reflected along x or y axes, it won't slant well.
+      if xScale < 0 or yScale < 0:
         return True
-      if yAxisIsNonTrivial and yOffset != 0:
-        return True
+
   return False
 
 
@@ -157,7 +154,7 @@ class VarFontProject(FontProject):
     **kwargs
   ):
     """Build OpenType binaries with interpolatable outlines."""
-    # We decompose any glyph with two or more components to make sure
+    # We decompose any glyph with reflected components to make sure
     # that fontTools varLib is able to produce properly-slanting interpolation.
 
     self._load_designspace_sources(designspace)
@@ -179,12 +176,11 @@ class VarFontProject(FontProject):
         ufo.info.openTypeNamePreferredFamilyName =\
           ufo.info.openTypeNamePreferredFamilyName.replace('Inter', self.familyName)
       updateFontVersion(ufo)
-      isItalic = ufo.info.italicAngle != 0
       ufoname = basename(ufo.path)
       
       for g in ufo:
         directives = findGlyphDirectives(g)
-        if g.components and composedGlyphIsNonTrivial(g, yAxisIsNonTrivial=isItalic):
+        if g.components and composedGlyphIsNonTrivial(g):
           decomposeGlyphs.add(g.name)
         if 'removeoverlap' in directives:
           if g.components and len(g.components) > 0:
