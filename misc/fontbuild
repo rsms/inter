@@ -61,16 +61,15 @@ def fatal(msg):
 def composedGlyphIsNonTrivial(g):
   # A non-trivial glyph is one that uses reflecting component transformations.
   if g.components and len(g.components) > 0:
-    if len(g.components) > 1:
-      return True
     for c in g.components:
       # has non-trivial transformation? (i.e. scaled)
       # Example of optimally trivial transformation:
       #   (1, 0, 0, 1, 0, 0)  no scale or offset
       # Example of scaled transformation matrix:
       #   (-1.0, 0, 0.3311, 1, 1464.0, 0)  flipped x axis, sheered and offset
-      # 
-      xScale, xyScale, yxScale, yScale, xOffset, yOffset = c.transformation
+      #
+      xScale = c.transformation[0]
+      yScale = c.transformation[3]
       # If glyph is reflected along x or y axes, it won't slant well.
       if xScale < 0 or yScale < 0:
         return True
@@ -177,7 +176,7 @@ class VarFontProject(FontProject):
           ufo.info.openTypeNamePreferredFamilyName.replace('Inter', self.familyName)
       updateFontVersion(ufo)
       ufoname = basename(ufo.path)
-      
+
       for g in ufo:
         directives = findGlyphDirectives(g)
         if g.components and composedGlyphIsNonTrivial(g):
@@ -243,7 +242,7 @@ def updateFontVersion(font, dummy=False):
 
 
 # setFontInfo patches font.info
-# 
+#
 def setFontInfo(font, weight):
   #
   # For UFO3 names, see
@@ -483,7 +482,7 @@ class Main(object):
     if outfilename is None or outfilename == '':
       outfilename = os.path.splitext(basename(args.srcfile))[0] + '.otf'
       log.info('setting --output %r' % outfilename)
-    
+
     # build formats list from filename extension
     formats = []
     # for outfilename in args.outputs:
@@ -546,7 +545,7 @@ class Main(object):
       success = False
       if len(otssan_res) == 0:
         otssan_res = 'error'
-    
+
     if success:
       os.unlink(tmpfile)
     else:
@@ -728,7 +727,7 @@ class Main(object):
       else:
         # name "Black" => "black"
         source.name = source.styleName.lower().replace(' ', '')
-      
+
       source.path = ufo_path
       weight = int(source.location['Weight'])
 
@@ -836,11 +835,11 @@ class Main(object):
       # clear anchors
       for g in font:
         g.clearAnchors()
-      
+
       # update font info
       weight = instance_weight[basename(font.path)]
       setFontInfo(font, weight)
-      
+
       font.save()
 
 
@@ -871,7 +870,7 @@ class Main(object):
 
     argparser.add_argument('files', metavar='<file>', nargs='+',
       help='Font files')
-    
+
     args = argparser.parse_args(argv)
     q = Queue()
 
