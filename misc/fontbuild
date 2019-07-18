@@ -61,8 +61,6 @@ def fatal(msg):
 def composedGlyphIsNonTrivial(g):
   # A non-trivial glyph is one that uses reflecting component transformations.
   if g.components and len(g.components) > 0:
-    if len(g.components) > 1:
-      return True
     for c in g.components:
       # has non-trivial transformation? (i.e. scaled)
       # Example of optimally trivial transformation:
