@@ -9,6 +9,8 @@ static const char* prog = "?";
 static struct Options {
   NSString* output = nil;
   CGFloat size = 96;
+  size_t width = 0;
+  size_t height = 0;
   NSString* text = @"Rags78 **A**";
 }options{};
 
@@ -19,6 +21,8 @@ static const char usagetemplate[] = ""
 "  -h, -help         Show usage and exit.\n"
 "  -z, -size <size>  Font size to render. Defaults to %g.\n"
 "  -t, -text <text>  Text line to render. Defaults to \"%s\".\n"
+"  -width <pixels>   Make the image <pixels> wide (automatic if not set)\n"
+"  -height <pixels>  Make the image <pixels> tall (automatic if not set)\n"
 "  -o <file>         Write output to <file> instead of default filename.\n"
 "                    Defaults to <fontfile>.pdf. If the provided filename\n"
 "                    ends with \".png\" a PNG is written instead of a PDF.\n"
@@ -71,14 +75,20 @@ void draw(CGContextRef ctx,
           CTLineRef textLine,
           CGFloat width,
           CGFloat height,
-          CGFloat descent)
+          CGFloat descent,
+          CGFloat textWidth,
+          CGFloat textHeight)
 {
   // white background
-  CGContextSetRGBFillColor(ctx, 1.0, 1.0, 1.0, 1.0);
-  CGContextFillRect(ctx, {{0,0},{width,height}});
+  // CGContextSetRGBFillColor(ctx, 1.0, 1.0, 1.0, 1.0);
+  // CGContextFillRect(ctx, {{0,0},{width,height}});
+
+  // center text
+  CGFloat x = ceilf((width - textWidth) / 2);
+  CGFloat y = descent + ceilf((height - textHeight) / 2);
 
   // draw text
-  CGContextSetTextPosition(ctx, 0, descent);
+  CGContextSetTextPosition(ctx, x, y);
   CTLineDraw(textLine, ctx);
 }
 
@@ -89,6 +99,7 @@ void makePDF(CTLineRef textLine,
              CGFloat descent,
              NSString* filename)
 {
+  // TODO: read and use options.width and options.height
   CFMutableDataRef consumerData = CFDataCreateMutable(kCFAllocatorDefault, 0);
   CGDataConsumerRef contextConsumer = CGDataConsumerCreateWithCFData(consumerData);
   assert(contextConsumer);
@@ -97,7 +108,7 @@ void makePDF(CTLineRef textLine,
   assert(ctx);
   CGPDFContextBeginPage(ctx, nil);
 
-  draw(ctx, textLine, width, height, descent);
+  draw(ctx, textLine, width, height, descent, width, height);
 
   //  CGContextDrawPDFPage(ctx, page);
   CGPDFContextEndPage(ctx);
@@ -135,7 +146,13 @@ void makePNG(CTLineRef textLine,
              NSString* filename)
 {
   size_t widthz = (size_t)ceilf(width);
-  size_t heightz = (size_t)ceilf(height);
+  size_t heightz = (size_t)ceilf(height * 1.2);  // 120% to make sure we don't clip
+  if (options.width > 0) {
+    widthz = options.width;
+  }
+  if (options.height > 0) {
+    heightz = options.height;
+  }
 
   void* data = malloc(widthz * heightz * 4);
 
@@ -145,7 +162,7 @@ void makePNG(CTLineRef textLine,
   CGContextRef ctx = CGBitmapContextCreate(data, widthz, heightz, 8, widthz*4, space, bitmapInfo);
   CGColorSpaceRelease(space);
 
-  draw(ctx, textLine, (CGFloat)widthz, (CGFloat)heightz, descent);
+  draw(ctx, textLine, (CGFloat)widthz, (CGFloat)heightz, descent, width, height);
 
   CGImageRef imageRef = CGBitmapContextCreateImage(ctx);
   writePNG(imageRef, filename);
@@ -157,8 +174,6 @@ void makePNG(CTLineRef textLine,
 
 
 void pdfmake(NSString* fontfile) {
-  NSString* text = @"Rags78 **A**";
-
   NSString* outfile = options.output;
   if (outfile == nil) {
     // default to fontfile.pdf
@@ -168,7 +183,7 @@ void pdfmake(NSString* fontfile) {
   // Create an attributed string with string and font information
   CTFontRef font = loadFont(fontfile, options.size);
 
-  CTLineRef textLine = createTextLine(font, text);
+  CTLineRef textLine = createTextLine(font, options.text);
   if (!textLine) {
     fprintf(stderr, "%s: invalid sample text\n", prog);
     exit(1);
@@ -177,7 +192,7 @@ void pdfmake(NSString* fontfile) {
   // get font metrics
   CGFloat ascent, descent, leading;
   CGFloat width = CTLineGetTypographicBounds(textLine, &ascent, &descent, &leading);
-  CGFloat height = ascent + descent;
+  CGFloat height = ascent + descent + leading;
 
   printf("write %s\n", outfile.UTF8String);
   if ([outfile.pathExtension.lowercaseString isEqualToString:@"png"]) {
@@ -226,6 +241,16 @@ NSMutableArray<NSString*>* parseargs(int argc, const char * argv[]) {
       if (strcmp(arg, "-o") == 0) {
         auto val = getargval(arg, i++, argc, argv);
         options.output = [NSString stringWithUTF8String:val];
+
+      } else if (strcmp(arg, "-width") == 0) {
+        auto val = getargval(arg, i++, argc, argv);
+        char* endptr = NULL;
+        options.width = (size_t)strtoull((const char*)val, &endptr, 10);
+
+      } else if (strcmp(arg, "-height") == 0) {
+        auto val = getargval(arg, i++, argc, argv);
+        char* endptr = NULL;
+        options.height = (size_t)strtoull((const char*)val, &endptr, 10);
 
       } else if (strcmp(arg, "-z") == 0 || strcmp(arg, "-size") == 0) {
         auto val = getargval(arg, i++, argc, argv);
