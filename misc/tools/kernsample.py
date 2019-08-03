@@ -4,7 +4,7 @@ from __future__ import print_function
 import os, sys, plistlib
 from collections import OrderedDict
 from argparse import ArgumentParser
-from robofab.objects.objectsRF import OpenFont
+from defcon import Font
 
 RIGHT = 1
 LEFT = 2
@@ -201,7 +201,7 @@ def main():
 
   args = argparser.parse_args()
 
-  font = OpenFont(args.fontPath)
+  font = Font(args.fontPath)
 
   groupsFilename = os.path.join(args.fontPath, 'groups.plist')
   kerningFilename = os.path.join(args.fontPath, 'kerning.plist')
