@@ -33,7 +33,7 @@ body {
   padding: 40px 40px 40px 35px;
   font-size: var(--size);
   letter-spacing: -0.03em;
-  font-variation-settings: 'wght' var(--weight), 'slnt' var(--slant);
+  font-variation-settings: 'wght' var(--weight), 'slnt' calc(-1 * var(--slant));
 }
 
 @supports (font-variation-settings: normal) {
@@ -84,7 +84,7 @@ label {
   </select>
 </div>
 <div class="sample" contenteditable>
-Inter 3.0<br>
+Inter Typeface Family<br>
 Variable weight axis<br>
 Variable slant/oblique axis<br>
 ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>

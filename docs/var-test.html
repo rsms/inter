@@ -1,18 +1,39 @@
-<!DOCTYPE HTML>
+---
+layout: none
+---
+{%
+
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/font-files/Inter.var.woff2" %}{%
+    assign inter_var_woff2_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor
+
+%}<!DOCTYPE HTML>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style type="text/css">
 
+/*
+
+Note on font file URLs:
+- The "v" parameter is used to ensure that the latest font file is used,
+  and not a past cached version.
+- The "t" parameters can be used to debug which of the "format(...)" the
+  web browser chose (i.e. by using a web browser's developer tools.)
+
+*/
+
 @font-face {
   font-family: 'Inter var experimental';
   font-weight: 100 900;
-  font-style: oblique 0deg 10deg;
+  font-style: oblique 0deg -10deg;
   font-named-instance: 'Regular';
-  src: url("font-files/Inter.var.woff2") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter.var.woff2") format("woff2-variations"),
-       url("font-files/Inter.var.woff2") format("woff2");
+  src: url("font-files/Inter.var.woff2?t=woff2-variations&v={{inter_var_woff2_v}}") format("woff2-variations"),
+       url("font-files/Inter.var.woff2?t=woff2&v={{inter_var_woff2_v}}") format("woff2");
 }
 
 /* Fix for Safari where defining font-weight range casues regular style
@@ -20,11 +41,10 @@
 @font-face {
   font-family: 'Inter var experimental safari';
   /* DISABLE font-weight: 400 900; */
-  font-style: oblique 0deg 10deg;
+  font-style: oblique 0deg -10deg;
   font-named-instance: 'Regular';
-  src: url("font-files/Inter.var.woff2") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter.var.woff2") format("woff2-variations"),
-       url("font-files/Inter.var.woff2") format("woff2");
+  src: url("font-files/Inter.var.woff2?t=woff2-variations&v={{inter_var_woff2_v}}") format("woff2-variations"),
+       url("font-files/Inter.var.woff2?t=woff2&v={{inter_var_woff2_v}}") format("woff2");
 }
 
 /* Alternate two-file setup used for italic where oblique degrees are not
@@ -34,18 +54,16 @@
   font-weight: 100 900;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("font-files/Inter-upright.var.woff2") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter-upright.var.woff2") format("woff2-variations"),
-       url("font-files/Inter-upright.var.woff2") format("woff2");
+  src: url("font-files/Inter-upright.var.woff2?t=woff2-variations&v={{inter_var_woff2_v}}") format("woff2-variations"),
+       url("font-files/Inter-upright.var.woff2?t=woff2&v={{inter_var_woff2_v}}") format("woff2");
 }
 @font-face {
   font-family: 'Inter var single-axis';
-  font-weight: 100 900;
+  /*font-weight: 100 900;*/
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url("font-files/Inter-italic.var.woff2") format("woff2 supports variations(gvar)"),
-       url("font-files/Inter-italic.var.woff2") format("woff2-variations"),
-       url("font-files/Inter-italic.var.woff2") format("woff2");
+  src: url("font-files/Inter-italic.var.woff2?t=woff2-variations&v={{inter_var_woff2_v}}") format("woff2-variations"),
+       url("font-files/Inter-italic.var.woff2?t=woff2&v={{inter_var_woff2_v}}") format("woff2");
 }
 
 
@@ -78,14 +96,28 @@ body {
   }
 }
 
+.single-axis {
+  font-family: 'Inter var single-axis', sans-serif;
+}
+
 .samples {
   display: flex;
   flex-wrap: wrap;
 }
-
+.samples > h2 {
+  flex: 1 0 100%;
+  padding-left:20px;
+  line-height:2;
+  padding-top: 1em;
+  border-top:1px solid #ccc;
+  margin-top: 1em;
+}
 .weightset {
   /*background: pink;*/
-  margin: 10px;
+  margin: 20px;
+  width: 200px;
+  overflow:hidden;
+  white-space: nowrap;
 }
 
 .intro {
@@ -108,12 +140,14 @@ body {
 }
 
 h1, h2 {
-  margin:0;
-  font-size: 2em;
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
 }
 h2 {
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1.5em;
+  letter-spacing: -0.02em;
 }
 ul {
   padding-left: 1.2em;
@@ -157,51 +191,108 @@ if (
   <p>
     Effective <tt>font-family: </tt><tt id="family-in-use"></tt>
   </p>
-  <h2>Known issues:</h2>
+  <h2>Known issues with variable fonts:</h2>
   <ul>
     <li>
-      <b>Safari 12.0:</b>
-      Defining <tt>font-weight</tt> in <tt>@font-face</tt> causes
-      slnt axis to be maxed out by default, causing <tt>font-style:normal</tt>
-      to be fully slanted/oblique/italic. This is counter-acted by using a
-      specific <tt>@font-face</tt> for Safari that doesn't define
-      <tt>font-weight.</tt>
+      <b>Most browsers as of August 2019:</b>
+      <ul>
+        <li>
+          Mapping of negative slant axis to <tt>font-style:italic</tt> has no effect.<br>
+        </li>
+        <li>
+          Mapping of negative slant axis to <tt>font-style:oblique</tt> has no effect.
+        </li>
+        <li>
+          All current stable versions of major web browser supports
+          <tt>format("woff2-variations")</tt>
+          for font url format in <tt>@font-face</tt> declarations.
+      </ul>
     </li>
     <li>
-      <b>Safari 12.0:</b>
-      <tt>font-synthesis:none</tt> is required or else
-      <tt>font-style:italic</tt> causes "double-slant" —
-      the slnt axis gets maxed out as expected, but then faux oblique is
-      applied on top of it, causing an overly extreme slant.
-      This means that <tt>font-style:italic</tt> can't be used in Safari,
-      and instead we use <tt>font-style:oblique</tt> which works in all
-      major browsers. Note that this effects <tt>&lt;em&gt;</tt> and
-      <tt>&lt;i&gt;</tt> which in Safari implicitly has
-      <tt>font-style:italic</tt>.
+      <b>Safari:</b>
+      <ul>
+        <li>
+          Defining <tt>font-weight</tt> in <tt>@font-face</tt> causes
+          slnt axis to be maxed out by default, causing <tt>font-style:normal</tt>
+          to be fully slanted/oblique/italic. This is counter-acted by using a
+          specific <tt>@font-face</tt> for Safari that doesn't define
+          <tt>font-weight.</tt>
+          (Last confirmed version: Safari 12.1)
+        </li>
+        <li>
+          <tt>font-synthesis:none</tt> is required or else
+          <tt>font-style:italic</tt> causes "double-slant" —
+          the slnt axis gets maxed out as expected, but then faux oblique is
+          applied on top of it, causing an overly extreme slant.
+          This means that <tt>font-style:italic</tt> can't be used in Safari,
+          and instead we use <tt>font-style:oblique</tt> which works in all
+          major browsers. Note that this effects <tt>&lt;em&gt;</tt> and
+          <tt>&lt;i&gt;</tt> which in Safari implicitly has
+          <tt>font-style:italic</tt>.
+          (Last confirmed version: Safari 12.1)
+        </li>
+      </ul>
     </li>
     <li>
-      <b>Chrome 69+:</b> Mapping of <tt>ital</tt> axis to <tt>font-style:italic</tt>
-      is not supported.
+      <b>Chrome:</b>
+      <ul>
+        <li>
+          Rendering of overlapping shapes causes "blobs" or "ink bleed".
+          Overlapping shapes, like the angle + horizontal stem of "A" are
+          rendered in separate MSAA passes and later combined as bitmaps,
+          causing a multiplication effect on the alpha channel.
+        </li>
+        <li>
+          Passing explicit degrees to oblique (e.g. <tt>font-style:oblique -5deg</tt>)
+          is not supported. (Last confirmed version: Chrome 75)
+        </li>
+        <li>
+          For fonts with negative <tt>slnt</tt> values, as per the OT spec,
+          <tt>font-style:oblique</tt> has no effect (not mapped to negative max of slnt axis.)
+          (Last confirmed version: Chrome 75)
+        </li>
+        <li>
+          Mapping of negative-value <tt>ital</tt> and <tt>slnt</tt> axis
+          to <tt>font-style:italic</tt> is not supported.
+        </li>
+        <li>
+          <b>Version &lt;75:</b> Mapping of positive-value <tt>ital</tt> and <tt>slnt</tt> axis
+          to <tt>font-style:italic</tt> is not supported.
+        </li>
+        <li>
+          <b>Windows only:</b> kerning is incorrect and
+          there are issues with ClearType where for example a lower-case "r"
+          (without hints) might be rendered much lower than a lower-case "n".
+          (Last confirmed version: Chrome 69)
+        </li>
+      </ul>
     </li>
     <li>
-      <b>Chrome 69+:</b> Rendering of overlapping shapes causes "blobs" or "ink bleed".
-      Overlapping shapes, like the angle + horizontal stem of "A" are
-      rendered in separate MSAA passes and later combined as bitmaps,
-      causing a multiplication effect on the alpha channel.
+      <b>Firefox:</b>
+      <ul>
+        <li>
+          For fonts with negative <tt>slnt</tt> values, as per the OT spec,
+          <tt>font-style:oblique</tt> has no effect (not mapped to negative max of slnt axis.)
+          (Last confirmed version: Firefox 68)
+        </li>
+        <li>
+          <b>Version &lt;68:</b> Mapping of <tt>ital</tt> axis to <tt>font-style:italic</tt>
+          is not supported.
+        </li>
+      </ul>
     </li>
     <li>
-      <b>Chrome 69+ (Windows):</b> kerning is incorrect and
-      there are issues with ClearType where for example a lower-case "r"
-      (without hints) might be rendered much lower than a lower-case "n".
-    <li>
-      <b>Firefox 62:</b> Mapping of <tt>ital</tt> axis to <tt>font-style:italic</tt>
-      is not supported.
-    </li>
-    <li>
-      <b>Edge 42:</b> Mapping of <tt>ital</tt> axis to <tt>font-style:italic</tt>
-      is not supported, nor is Mapping of <tt>slnt</tt> axis to <tt>font-style:oblique</tt>. Note: We use separate italic and upright font files for Edge in this
-      test, which is why intermediate oblique degrees are displayed as either
-      fully slanted or not slanted at all when viewing this in Edge.
+      <b>Edge:</b>
+      <ul>
+        <li>
+          Mapping of <tt>ital</tt> axis to <tt>font-style:italic</tt>
+          is not supported, nor is Mapping of <tt>slnt</tt> axis to <tt>font-style:oblique</tt>.
+          Note: We use separate italic and upright font files for Edge in this
+          test, which is why intermediate oblique degrees are displayed as either
+          fully slanted or not slanted at all when viewing this in Edge.
+          (Last confirmed version: Edge 42)
+        </li>
+      </ul>
     </li>
   </ul>
 </div>
@@ -222,65 +313,92 @@ if (docstyle.fontFamily.indexOf('Inter var') == -1) {
 }
 
 var samples = document.querySelector('div.samples')
-var weight = 100, weightMax = 900, weightStep = 20
-var slant = 0, slantMax = 10, slantStep = 5
 
-while (weight <= weightMax) {
-  slant = 0
-  let weightSet = document.createElement('div')
-  weightSet.className = 'weightset'
+for (let className of ["multi-axis", "single-axis"]) {
 
-  while (slant <= slantMax) {
-    let e = document.createElement('div')
+  let h2 = document.createElement('h2')
+  h2.innerText = className
+  samples.appendChild(h2)
+
+  var weight = 100, weightMax = 900, weightStep = 20
+  var slant = 0, slantMax = 10, slantStep = 5
+
+  while (weight <= weightMax) {
+    slant = 0
+    let weightSet = document.createElement('div')
+    weightSet.className = 'weightset ' + className
+
+    if (className == "multi-axis") {
+      while (slant <= slantMax) {
+        let e = document.createElement('div')
+        if (weight != 400) {
+          e.style.fontWeight = String(weight)
+        }
+        if (slant != 0) {
+          e.style.fontStyle = `oblique ${-slant}deg`
+          e.innerText = `I ${weight} oblique ${-slant}`
+        } else {
+          e.innerText = `I ${weight} normal`
+        }
+        weightSet.appendChild(e)
+        slant += slantStep
+      }
+    } else {
+      e = document.createElement('div')
+      if (weight != 400) {
+        e.style.fontWeight = String(weight)
+      }
+      e.innerText = `I ${weight} normal`
+      weightSet.appendChild(e)
+    }
+
+    e = document.createElement('div')
     if (weight != 400) {
       e.style.fontWeight = String(weight)
     }
-    if (slant != 0) {
-      e.style.fontStyle = `oblique ${slant}deg`
-      e.innerText = `I ${weight} oblique ${slant}`
-    } else {
-      e.innerText = `I ${weight}`
-    }
+    e.style.fontStyle = 'oblique'
+    e.innerText = `I ${weight} oblique`
     weightSet.appendChild(e)
-    slant += slantStep
-  }
 
-  e = document.createElement('div')
-  if (weight != 400) {
-    e.style.fontWeight = String(weight)
-  }
-  e.style.fontStyle = 'oblique'
-  e.innerText = `I ${weight} oblique`
-  weightSet.appendChild(e)
+    e = document.createElement('div')
+    if (weight != 400) {
+      e.style.fontWeight = String(weight)
+    }
+    e.style.fontStyle = 'italic'
+    e.innerText = `I ${weight} italic`
+    weightSet.appendChild(e)
 
-  e = document.createElement('div')
-  if (weight != 400) {
-    e.style.fontWeight = String(weight)
-  }
-  e.style.fontStyle = 'italic'
-  e.innerText = `I ${weight} italic`
-  weightSet.appendChild(e)
+    e = document.createElement('div')
+    if (weight != 400) {
+      e.style.fontWeight = String(weight)
+    }
+    let em = document.createElement('em')
+    em.innerText = `I ${weight} <em>`
+    e.appendChild(em)
+    weightSet.appendChild(e)
 
-  e = document.createElement('div')
-  if (weight != 400) {
-    e.style.fontWeight = String(weight)
-  }
-  let em = document.createElement('em')
-  em.innerText = `I ${weight} <em>`
-  e.appendChild(em)
-  weightSet.appendChild(e)
+    e = document.createElement('div')
+    if (weight != 400) {
+      e.style.fontWeight = String(weight)
+    }
+    em = document.createElement('i')
+    em.innerText = `I ${weight} <i>`
+    e.appendChild(em)
+    weightSet.appendChild(e)
 
-  e = document.createElement('div')
-  if (weight != 400) {
-    e.style.fontWeight = String(weight)
-  }
-  em = document.createElement('i')
-  em.innerText = `I ${weight} <i>`
-  e.appendChild(em)
-  weightSet.appendChild(e)
+    if (className == "multi-axis") {
+      e = document.createElement('div')
+      if (weight != 400) {
+        e.style.fontWeight = String(weight)
+      }
+      e.style.fontVariationSettings = `'wght' ${weight}, 'slnt' -${slantMax}`
+      e.innerText = `I ${weight} slnt -${slantMax}`
+      weightSet.appendChild(e)
+    }
 
-  samples.appendChild(weightSet)
-  weight += weightStep
+    samples.appendChild(weightSet)
+    weight += weightStep
+  }
 }
 
 

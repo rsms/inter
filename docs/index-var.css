@@ -108,5 +108,5 @@
   font-size: var(--var-size);
   letter-spacing: var(--var-letterSpacing);
   line-height: var(--var-lineHeight);
-  font-variation-settings: 'wght' var(--var-weight), 'slnt' var(--var-slant);
+  font-variation-settings: 'wght' var(--var-weight), 'slnt' calc(-1 * var(--var-slant));
 }
