@@ -97,7 +97,7 @@ else
   # TODO: allow setting a flag to recreate venv
   if $clean; then
     rm -rf "$VENV_DIR"
-  fi 
+  fi
 
   if [[ ! -d "$VENV_DIR/bin" ]]; then
     require_virtualenv
@@ -402,6 +402,7 @@ else
       echo -n " src/Inter-${style}.ufo/*.plist" >> "$GEN_MAKE_FILE"
       echo -n " src/Inter-${style}.ufo/*.fea" >> "$GEN_MAKE_FILE"
       echo -n " src/Inter-${style}.ufo/glyphs/*.plist" >> "$GEN_MAKE_FILE"
+      echo -n " src/features/*" >> "$GEN_MAKE_FILE"
       # echo -n " src/Inter-${style}.ufo/glyphs/*.glif" >> "$GEN_MAKE_FILE"
       echo -n ")" >> "$GEN_MAKE_FILE"
       echo " src/Inter.designspace" >> "$GEN_MAKE_FILE"
@@ -520,7 +521,7 @@ else
     #   echo -n " ${style}" >> "$GEN_MAKE_FILE"
     # done
     # echo "" >> "$GEN_MAKE_FILE"
-    
+
 
     echo -n ".PHONY: all_otf all_ttf_hinted all_ttf all_web all_web_hinted all_ufo all_check_const" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do

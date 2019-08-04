@@ -1,0 +1,237 @@
+# cap-height tall glyphs
+@UC = [
+  @Uppercase
+  @Numeral
+
+  # punctuation
+  ampersand exclam exclamdbl exclamdown uni2049 question uni2047 uni2048
+  questiondown interrobang invertedinterrobang bar paragraph
+
+  # currency
+  dollar cent yen sterling florin uni20BA uni20BD euro uni20B9 tenge peseta
+  peso kip won lira austral hryvnia naira guarani coloncurrency cedi cruzeiro
+  tugrik uni20AF mill afii57636 manat rupee lari franc
+
+  # cap-tall symbols
+  numero triagrt triagdn triagup warningSign blackleftpointingtriangle
+  circleblack circlewhite
+  diamondblack diamondblack_x diamondwhite diamondwhite_x
+  sunWithRays blackSunWithRays
+  heartWhiteSuit heartBlackSuit heavyBlackHeart
+  upBlackArrow upWhiteArrow
+  capslock placeofinterestsign control projective option alternativekeysymbol
+  brokenCircleNorthWestArrow anticlockwiseOpenCircleArrow
+  clockwiseOpenCircleArrow
+  deleteleft deleteright clear ejectsymbol
+
+  # percent and fractions
+  onehalf onethird onequarter threequarters fivesixths onefraction seveneighths
+  oneeighth fiveeighths threeeighths percent perthousand pertenthousand uni214D
+  cadauna careof accountof addresssubject
+];
+
+# x-height tall glyphs
+@LC = [
+  @Lowercase
+];
+
+@CASE_DELIM_L = [
+  braceleft   braceright
+  bracketleft bracketright
+  parenleft   parenright
+];
+@CASE_NONDELIM_L = [
+  at
+  multiply
+  minus
+  plus
+  plusminus
+  divide
+  equal
+  notequal
+  endash
+  figuredash
+  emdash
+  hyphen
+  bullet
+  openbullet
+  hyphenbullet
+  trianglebullet
+  blackleftbullet
+  blackrightbullet
+  leftArrow
+  leftLongArrow
+  leftLongArrow2
+  rightArrow
+  rightLongArrow
+  rightLongArrow2
+  leftRightArrow
+  leftRightLongArrow
+  colon
+  approxequal
+  asciitilde
+  less
+  greater
+  lessequal
+  greaterequal
+];
+@CASE_L = [
+  @CASE_DELIM_L
+  @CASE_NONDELIM_L
+];
+
+@CASE_DELIM_R = [
+  braceleft.case   braceright.case
+  bracketleft.case bracketright.case
+  parenleft.case   parenright.case
+];
+@CASE_NONDELIM_R = [
+  at.case
+  multiply.case
+  minus.case
+  plus.case
+  plusminus.case
+  divide.case
+  equal.case
+  notequal.case
+  endash.case
+  figuredash.case
+  emdash.case
+  hyphen.case
+  bullet.case
+  openbullet.case
+  hyphenbullet.case
+  trianglebullet.case
+  blackleftbullet.case
+  blackrightbullet.case
+  leftArrow.case
+  leftLongArrow.case
+  leftLongArrow2.case
+  rightArrow.case
+  rightLongArrow.case
+  rightLongArrow2.case
+  leftRightArrow.case
+  leftRightLongArrow.case
+  colon.case
+  approxequal.case
+  asciitilde.case
+  less.case
+  greater.case
+  lessequal.case
+  greaterequal.case
+];
+@CASE_R = [
+  @CASE_DELIM_R
+  @CASE_NONDELIM_R
+];
+
+@DASH = [
+  hyphen hyphen.case
+  endash endash.case
+  emdash emdash.case
+  minus minus.case
+];
+
+# ---------------------------------------------------
+
+# :-)
+sub colon' @DASH [parenright parenright.case] by colon.case;
+sub [colon colon.case] hyphen' [parenright parenright.case] by hyphen.case;
+sub [colon colon.case] endash' [parenright parenright.case] by endash.case;
+sub [colon colon.case] emdash' [parenright parenright.case] by emdash.case;
+sub [colon colon.case] @DASH parenright' by parenright.case;
+
+# A foo' -> A foo.case
+#
+# ignore subs adjacent to lower case
+#
+# x[]X
+ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L @UC;
+ignore sub @LC @CASE_DELIM_L @UC;
+ignore sub @LC @CASE_DELIM_L @Whitespace @UC;
+ignore sub @LC @CASE_DELIM_L @Whitespace @Whitespace @UC;
+#
+# short runs of uc-lc, e.g "(Xx)", "[Zzz]"
+ignore sub @CASE_DELIM_L @UC @LC @CASE_DELIM_L;
+ignore sub @CASE_DELIM_L @UC @All @LC @CASE_DELIM_L;
+#
+# e.g. "x-"
+# TODO: figure out how to ignore "x--A"
+ignore sub @LC @CASE_L;
+#
+# e.g. "-x", "--x", "---x", "----x", "-----x"
+ignore sub @CASE_L @LC;
+ignore sub @CASE_L @CASE_L @LC;
+ignore sub @CASE_L @CASE_L @CASE_L @LC;
+ignore sub @CASE_L @CASE_L @CASE_L @CASE_L @LC;
+ignore sub @CASE_L @CASE_L @CASE_L @CASE_L @CASE_L @LC;
+#
+# pairs with space, e.g. "( ) M" since we don't support subbing
+# all on the left side.
+ignore sub @CASE_DELIM_L @Whitespace @CASE_DELIM_L @Whitespace [ @UC @CASE_R ];
+ignore sub @CASE_DELIM_L @CASE_DELIM_L @Whitespace [ @UC @CASE_R ];
+#
+# e.g. "A-", "A -", "A  -"
+sub [ @UC @CASE_R ] @CASE_L' by @CASE_R;
+sub [ @UC @CASE_R ] @Whitespace @CASE_L' by @CASE_R;
+sub [ @UC @CASE_R ] @Whitespace @Whitespace @CASE_L' by @CASE_R;
+
+# foo' foo foo foo foo A -> foo.case foo foo foo foo A
+# foo' foo foo foo A -> foo.case foo foo foo A
+# foo' foo foo A -> foo.case foo foo A
+# foo' foo A -> foo.case foo A
+# foo' A -> foo.case A
+# Note: since we look quite far back, sequences like x{}[]M will case both
+# the square brackets next to M _and_ the curly braces to become .case
+#
+# e.g. "-A", "--A", "---A", "----A", "-----A"
+sub @CASE_L' [ @UC @CASE_R ] by @CASE_R;
+sub @CASE_L' @CASE_L [ @CASE_R @UC ] by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L [ @CASE_R @UC ] by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @CASE_L [ @CASE_R @UC ] by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @CASE_L @CASE_L [ @CASE_R @UC ] by @CASE_R;
+#
+# e.g. "- A", "-- A", "--- A", "---- A", "----- A"
+sub @CASE_L' @Whitespace [ @UC @CASE_R ] by @CASE_R;
+sub @CASE_L' @CASE_L @Whitespace [ @CASE_R @UC ] by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @Whitespace [ @CASE_R @UC ] by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @CASE_L @Whitespace [ @CASE_R @UC ] by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @CASE_L @CASE_L @Whitespace [ @CASE_R @UC ] by @CASE_R;
+#
+# e.g. "-  A", "--  A", "---  A", "----  A", "-----  A"
+sub @CASE_L' @Whitespace @Whitespace [ @UC @CASE_R ] by @CASE_R;
+sub @CASE_L' @CASE_L @Whitespace @Whitespace [ @CASE_R @UC ] by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @Whitespace @Whitespace [ @CASE_R @UC ] by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @CASE_L @Whitespace @Whitespace [ @CASE_R @UC ] by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @CASE_L @CASE_L @Whitespace @Whitespace [ @CASE_R @UC ] by @CASE_R;
+sub @CASE_L' @Whitespace @Whitespace @Whitespace [ @UC @CASE_R ] by @CASE_R; # e.g. "-  A"
+
+# X(_)
+@Punctuation = [
+  slash bar quoteleft quoteright apostrophemod quotesingle quotedbl
+  quotedblleft quotedblright quotedblbase quotesinglbase prime doubleprime
+  tripleprime quadrupleprime primerev doubleprimerev tripleprimerev primemod
+  doubleprimemod comma period ellipsis twodotleader semicolon underscore
+  asciicircum circumflex
+  asterisk
+];
+sub @CASE_DELIM_R @Punctuation @CASE_DELIM_L' by @CASE_DELIM_R;
+
+# in between number position adjustment, e.g. 3x4 -> 3×4
+@between_num_L = [
+  multiply
+  asterisk
+];
+@between_num_R = [
+  multiply.case
+  asterisk.case
+];
+sub @Numeral @between_num_L' @Numeral                                                 by @between_num_R; # 3*9
+sub @Numeral @Whitespace @between_num_L' @Numeral                                     by @between_num_R; # 3 *9
+sub @Numeral @Whitespace @Whitespace @between_num_L' @Numeral                         by @between_num_R; # 3  *9
+sub @Numeral @between_num_L' @Whitespace @Numeral                                     by @between_num_R; # 3* 9
+sub @Numeral @Whitespace @between_num_L' @Whitespace @Numeral                         by @between_num_R; # 3 * 9
+sub @Numeral @Whitespace @Whitespace @between_num_L' @Whitespace @Numeral             by @between_num_R; # 3  * 9
+sub @Numeral @between_num_L' @Whitespace @Whitespace @Numeral                         by @between_num_R; # 3*  9
+sub @Numeral @Whitespace @between_num_L' @Whitespace @Whitespace @Numeral             by @between_num_R; # 3 *  9
+sub @Numeral @Whitespace @Whitespace @between_num_L' @Whitespace @Whitespace @Numeral by @between_num_R; # 3  *  9

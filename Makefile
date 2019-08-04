@@ -117,8 +117,11 @@ src/Inter.glyphs:
 	@true
 
 # instance UFOs <- master UFOs
-build/ufo/Inter-%.ufo: src/Inter.designspace $(all_ufo_masters)
+build/ufo/Inter-%.ufo: build/ufo/features src/Inter.designspace $(all_ufo_masters)
 	misc/fontbuild instancegen src/Inter.designspace $*
+
+build/ufo/features:
+	ln -s ../../src/features build/ufo/features
 
 # make sure intermediate UFOs are not gc'd by make
 .PRECIOUS: build/ufo/Inter-%.ufo
