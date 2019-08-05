@@ -32,6 +32,66 @@ h1 {
   }
 }
 
+#subway-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*--subwayHeight: 2.5rem;*/
+  --subwayHeight: calc(100vw / 19);
+  height: var(--subwayHeight);
+}
+#subway-nav .dest {
+  flex: 0 0 31%;
+  display: flex;
+  cursor: pointer;
+  text-decoration:none;
+}
+#subway-nav .dest .disc {
+  flex: 0 0 auto;
+  width: var(--subwayHeight);
+  height: var(--subwayHeight);
+  color: black;
+  background: var(--yellow);
+  border-radius: var(--subwayHeight);
+  text-align: center;
+  line-height: var(--subwayHeight);
+  font-weight: 600;
+  font-size: calc(var(--subwayHeight) * 0.42);
+}
+#subway-nav .label {
+  flex: 1 1 auto;
+  line-height: var(--subwayHeight);
+  font-weight:700;
+  letter-spacing: -0.02em;
+  font-size: calc(var(--subwayHeight) * 0.6);
+  margin-left: calc(var(--subwayHeight) * 0.22);
+  white-space: nowrap;
+}
+#subway-nav .dest:hover { text-decoration:none; color:inherit; }
+#subway-nav .dest:hover .disc { background:#222; color:white; }
+#subway-nav .dest1 .disc { background:var(--green); font-size: calc(var(--subwayHeight) * 0.3); }
+#subway-nav .dest2 .disc { background:var(--yellow); }
+#subway-nav .dest3 .disc { background:var(--red); color: white; }
+@media only screen and (min-width: 987px) {
+  #subway-nav { --subwayHeight: 3.2rem; }
+}
+@media only screen and (max-width: 600px) {
+  #subway-nav {
+    --subwayHeight: 2.4rem;
+    margin: -2rem 0;
+    align-items: flex-start;
+    flex-direction: column;
+    height: calc(var(--subwayHeight) * 4);
+  }
+  #subway-nav .label { font-weight:600; }
+}
+
+
+.row.features {
+  background:lightpink;
+}
+
+
 .weights-and-styles {
   display: block;
   opacity: 0.98;
@@ -79,9 +139,9 @@ h1 {
     /*box-shadow: 0 2px 0 0 var(--red);*/
     background: rgba(0, 0, 0, 0.07);
   }
-  .dynmet-calc input[type=number]::-webkit-inner-spin-button, 
-  .dynmet-calc input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
+  .dynmet-calc input[type=number]::-webkit-inner-spin-button,
+  .dynmet-calc input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
     margin: 0;
   }
 
@@ -142,7 +202,7 @@ h1 {
 }
   .charset-table > c {
     flex: 0 0 auto;
-    
+
     margin: 0;
     padding: 0;
 
@@ -203,9 +263,14 @@ grid.faq {
   background: var(--yellow);
 }
 
+boxes.features {
+  color:#111;
+}
 boxes.features box h3 + p {
   margin-top:0.5em;
 }
+.features h3 a q {padding-left: 0.5em; color: transparent; float:right; font-weight:400; }
+.features h3 a:hover q { color: inherit; }
 
 boxes.features grid .sample {
   word-break: break-word;
@@ -214,7 +279,8 @@ boxes.features grid .sample {
 
 boxes.features grid .sample em {
   font-style: inherit;
-  background: #e4fdef;
+  /*background: #e4fdef;*/
+  background: var(--light-yellow);
   color: black;
 }
 

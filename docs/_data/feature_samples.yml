@@ -9,11 +9,32 @@
     - "12›:‹34, FE›—‹X"
     - "4›.‹2"
     - "›(‹SEMI›)‹PERMANENT"
-    - "SFO ›->‹ STO"
-    - "IIA ›—>‹ OGG"
-    - "ARN ›<-->‹ OGG"
+    - "SFO ›→‹ STO"
+    - "IIA ›⟶‹ OGG"
+    - "ARN ›⟺‹ OGG"
     - "M›@‹N m@n"
     - "Smile ›:-)‹"
+
+- title: Standard ligatures
+  tag:   liga
+  description:
+    Conversion of common sequences into higher-fidelity glyphs,
+    like arrows and enclosing graphemes.
+  samples:
+    - "3›x‹9"
+    - "-> --> --->"
+    - "<- <-- <---"
+    - "<-> <-->"
+    - "=> ==> <=="
+    - "<=> <==>"
+  footer:
+    "In addition to standard ligatures, which are usually on by default but can be turned off,
+    Inter also comes with required/default ligatures as well,
+    like for instance specialized glyphs for enclosing combining characters like
+    e.g. U+0041 U+20DD => A\u20DD<br>
+    More examples:<br>
+    1\u20DD 2\u20DD 3\u20DD A\u20DD B\u20DD
+    C\u20DE #\u20DE !\u20DE ?\u20DE →\u20DE"
 
 - title: Tabular numbers
   tag:   tnum
@@ -29,6 +50,18 @@
     - "0.45, 0.91, +0.08›&nbsp;‹"
     - "1.00, 9.44, −0.13›&nbsp;‹"
     - "0.00, 1.13, ~7.12›&nbsp;‹"
+
+- title: Fractions
+  tag:   frac
+  description:
+    This feature is contextually sensitive and will convert "words" of
+    numbers separated by forward slash into proper fractions.
+    This feature is dynamic and allows for any fractions.
+    Note that the digits used for fractions are custom-made for their
+    small size, and are even made separately from the slightly larger
+    Superscript and Subscript numbers.
+  samples:
+    - "›1/3‹&nbsp; ›3/4‹&nbsp; ›1/5‹&nbsp; ›1337/5910‹"
 
 - title: Numerators
   tag:   numr
@@ -51,18 +84,6 @@
   samples:
     - "H›0123 (+)-[=]‹"
     - "X›abcdefghijklmnopqrstuvwxyz‹"
-
-- title: Fractions
-  tag:   frac
-  description:
-    This feature is contextually sensitive and will convert "words" of
-    numbers separated by forward slash into proper fractions.
-    This feature is dynamic and allows for any fractions.
-    Note that the digits used for fractions are custom-made for their
-    small size, and are even made separately from the slightly larger
-    Superscript and Subscript numbers.
-  samples:
-    - "›1/3‹&nbsp; ›3/4‹&nbsp; ›1/5‹&nbsp; ›1337/5910‹"
 
 - title: Case alternates
   tag:   case

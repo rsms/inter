@@ -47,7 +47,21 @@ endfor
     </c>
 
     <c span=3.. span-s=row style="margin:3rem 0 5rem 0">
-      <a href="samples/" class="plain"><img src="samples/img/subway.svg" width="100%"></a>
+      <!-- <a href="samples/" class="plain"><img src="samples/img/subway.svg" width="100%"></a> -->
+      <div id="subway-nav">
+        <a class="dest dest1" href="#charset">
+          <div class="disc">2.5k</div>
+          <div class="label">Glyphs</div>
+        </a>
+        <a class="dest dest2" href="#weights">
+          <div class="disc">18</div>
+          <div class="label">Styles</div>
+        </a>
+        <a class="dest dest3" href="#features">
+          <div class="disc">33</div>
+          <div class="label">Features</div>
+        </a>
+      </div>
     </c>
 
     <c span=2 span-s=row class="only-large-screen">
@@ -126,8 +140,8 @@ html { font-family: 'Inter', sans-serif; }
 </div></div>
 
 
-<div class="row yellow"><div>
-  <h2><a id="weights" href="#weights">Weights & Styles</a></h2>
+<div id="weights" class="row yellow"><div>
+  <h2><a href="#weights">Weights & Styles</a></h2>
   <p>
   There are nine weights, each with italic counterparts,
   making a total of 18 styles.
@@ -137,8 +151,8 @@ html { font-family: 'Inter', sans-serif; }
 
 
 
-<div class="row white variable"><div>
-  <h2><a id="variable" href="#variable">Variable</a></h2>
+<div id="variable" class="row white variable"><div>
+  <h2><a href="#variable">Variable</a></h2>
 
   <p flow-cols=2 flow-cols-s=1>
   Inter is offered as both traditional constant font files
@@ -203,8 +217,8 @@ html { font-family: 'Inter', sans-serif; }
 
 
 
-<div class="row features"><div>
-  <h2><a id="features" href="#features">Features</a></h2>
+<div id="features" class="row features"><div>
+  <h2><a href="#features">Features</a></h2>
   <p style="max-width:38rem">
     Inter comes with many OpenType features that can be used to
     tailor functionality and aesthetics to your specific needs.
@@ -214,7 +228,7 @@ html { font-family: 'Inter', sans-serif; }
   <boxes class="features">
     {% for f in site.data.feature_samples %}
     <box class="feat-{{f.tag}}" id="features/{{f.tag}}">
-      <h3><a href="#features/{{f.tag}}">{{f.title}} <q title='OpenType feature ID'>{{f.tag}}</q></a></h3>
+      <h3><a href="#features/{{f.tag}}"><q title='OpenType feature ID'>{{f.tag}}</q> {{f.title}}</a></h3>
       {%
 
       if f.description %}
@@ -269,11 +283,7 @@ html { font-family: 'Inter', sans-serif; }
       {% endfor %}
       </grid>
       <p class="example" title="CSS code">
-        {% if feat_tag == "calt" %}
-        <tt>/* calt is enabled by default */</tt>
-        {% else %}
         <tt>font-feature-settings: '{{feat_tag}}' 1</tt>
-        {% endif %}
       </p>
       {% if f.footer %}
         <p>{{f.footer}}</p>
@@ -296,14 +306,14 @@ html { font-family: 'Inter', sans-serif; }
 </div></div>
 
 
-<div class="row white charset-title" id="charset">
+<div id="charset" class="row white charset-title">
   <h2><a href="#charset">Character set</a></h2>
 </div>
 <div class="row white charset">
   <div class="charset-table">
   {% for g in site.data.glyphinfo.glyphs %}
     {% comment %}
-    
+
     Ignore empty glyphs and glyphs without unicode mapping.
 
     {% endcomment %}
@@ -330,7 +340,7 @@ html { font-family: 'Inter', sans-serif; }
 
     ev.preventDefault()
     ev.stopPropagation()
-    
+
     var origel = ev.target
     var el = origel.cloneNode(true)
     var r = ev.target.getBoundingClientRect()
@@ -343,7 +353,7 @@ html { font-family: 'Inter', sans-serif; }
     el.style.webkitUserSelect = 'text'
     el.style.userSelect = 'text'
     document.body.appendChild(el)
-    
+
     el.innerText = el.innerText + " " + el.title
 
     el.contentEditable = true
@@ -394,8 +404,8 @@ html { font-family: 'Inter', sans-serif; }
 </script>
 
 
-<div class="row white"><div>
-  <h2><a id="story" href="#story">The story behind Inter</a></h2>
+<div id="story" class="row white"><div>
+  <h2><a href="#story">The story behind Inter</a></h2>
   <div flow-cols=2 flow-cols-s=1>
     <p>
     Inter started out in late 2016 as an experiment to build a perfectly
@@ -422,9 +432,8 @@ html { font-family: 'Inter', sans-serif; }
     </p>
   </div>
 
-  <p>&nbsp;</p>
-
-  <h2><a id="faq" href="#faq">FAQ</a></h2>
+  <p id="faq">&nbsp;</p>
+  <h2><a href="#faq">FAQ</a></h2>
   <grid columns=2 columns-s=1 class="faq">
 
     <c>
@@ -465,7 +474,7 @@ html { font-family: 'Inter', sans-serif; }
       rsms.me/inter is backed by GitHub's server network and distributed
       globally on the CloudFlare CDN, making usage of
       <q>https://rsms.me/inter/inter.css</q> and associated font
-      files very reliable and fast throughout the world. 
+      files very reliable and fast throughout the world.
     </c>
 
     <c>

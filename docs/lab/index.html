@@ -160,10 +160,80 @@ Ambiguation: (should not be fractions)
 (make sure to enable the "frac" feature for the above to work)
 `)
 
+
+samples.set('Feature: liga', `
+dash[1-3]+gt\t\t-> --> --->
+e{n,m}dash+gt\t–> —>
+lt+dash[1-3]\t\t<- <-- <---
+lt+endash[1,3]\t\t<– <–––
+lt+emdash[1,3]\t<— <———
+lt+dash[1-2]+gt\t<-> <-->
+lt+e{n,m}dash+gt\t<–> <—>
+equal[1,2]+gt\t\t=> ==>
+lt+equal+equal\t<==
+lt+equal[1,2]+gt\t<=> <==>
+
+combined with calt to adjust to caps
+A -> B <- C->D<-E=>F<=>G
+A –> B <– C–>D<–E=>F<=>G
+A —> B <— C—>D<—E=>F<=>G
+A <-> B <–> C <—> D<->E<–>F<—>G
+x<-yX<-Y
+
+exceptions; should NOT yield arrows
+x<-4  X<-4  < - - >  <=
+
+numeral+x+numeral => numeral+multiply+numeral
+3x9 x9  x9x 9 x 9  x 9x  9 x  9  x  9
+
+plain x when not surrounded by numerals
+9x
+x9
+9xM
+
+Enclosing glyphs (glyph + {U+20DD,U+20DE})
+U+20DD COMBINING ENCLOSING CIRCLE:       ⃝
+U+20DE COMBINING ENCLOSING SQUARE:       ⃞
+
+
+1\u20DD    2\u20DD    3\u20DD    4\u20DD    5\u20DD    6\u20DD    7\u20DD    8\u20DD    9\u20DD    0\u20DD
+
+A\u20DD    B\u20DD    C\u20DD    D\u20DD    E\u20DD    F\u20DD    G\u20DD    H\u20DD    I\u20DD    J\u20DD
+
+K\u20DD    L\u20DD    M\u20DD    N\u20DD    O\u20DD    P\u20DD    Q\u20DD    R\u20DD    S\u20DD    T\u20DD
+
+U\u20DD    V\u20DD    W\u20DD    X\u20DD    Y\u20DD    Z\u20DD    !\u20DD    ?\u20DD    #\u20DD    -\u20DD
+
++\u20DD    −\u20DD    ×\u20DD    ÷\u20DD    =\u20DD    <\u20DD    >\u20DD    ✓\u20DD    ✗\u20DD
+
+←\u20DD    →\u20DD    ↑\u20DD    ↓\u20DD
+
+
+1\u20DE    2\u20DE    3\u20DE    4\u20DE    5\u20DE    6\u20DE    7\u20DE    8\u20DE    9\u20DE    0\u20DE
+
+A\u20DE    B\u20DE    C\u20DE    D\u20DE    E\u20DE    F\u20DE    G\u20DE    H\u20DE    I\u20DE    J\u20DE
+
+K\u20DE    L\u20DE    M\u20DE    N\u20DE    O\u20DE    P\u20DE    Q\u20DE    R\u20DE    S\u20DE    T\u20DE
+
+U\u20DE    V\u20DE    W\u20DE    X\u20DE    Y\u20DE    Z\u20DE    !\u20DE    ?\u20DE    #\u20DE    -\u20DE
+
++\u20DE    −\u20DE    ×\u20DE    ÷\u20DE    =\u20DE    <\u20DE    >\u20DE    ✓\u20DE    ✗\u20DE
+
+←\u20DE    →\u20DE    ↑\u20DE    ↓\u20DE
+
+HE\u20DDLLO WO\u20DERLD
+
+Note on combining-marks compatibility:
+• liga=on: uses precomposed ligatures.
+• liga=off: some browsers will compose glyphs
+   with combining marks (support is limited.)
+`)
+
+
 samples.set('Feature: calt', `
 (m) (M) (6) [m] [M] [6] {m} {M} {6}
 m@n M@N
-3×5     3 × 5     ×9     8×     3x4     x9     2x
+3×5     3 × 5     ×9     8×
 3−5     3 − 5     −5     8−     3+5     +5     3+
 3÷5     3 ÷ 5     ÷5     8÷     3±5     ±5     8±
 3=5     3 = 5     =5     8=     3≠5     ≠5     8≠
@@ -180,21 +250,20 @@ X  - . X  --
 X-x . X--x . X-- x
 X -x . X --x . X -- x
 X  -x . X  --x . X  -- x
-
-A→B←C⟵D⟶E↔︎H⟷I↕K
-a→b←c⟵d⟶e↔︎h⟷i↕k
-A → B ← C ⟵ D ⟶ E ↔︎ H ⟷ I ↕ K
-a → b ← c ⟵ d ⟶ e ↔︎ h ⟷ i ↕ k
-
+A→B←C⟵D🡐E🡒F⟶G↔︎H⟷I↕J
+a→b←c⟵d🡐e🡒f⟶g↔︎h⟷i⇔j⟺k↕l
+A → B ← C ⟵ D 🡐 E 🡒 F ⟶ G ↔︎ H ⟷ I ↕ K
+a → b ← c ⟵ d 🡐 e 🡒 f ⟶ g ↔︎ h ⟷ i ↕ j
+A⇒B⟹C⇔D⟺E⇐F⟸G
+A ⇒ B ⟹ C ⇔ D ⟺ E ⇐ F ⟸ G
 A -> B <- C
 A->B<-C
 A –> B <– C
 A–>B<–C
 A —> B <— C
 A—>B<—C
-A <-> B <–> C <—> D
-A<->B<–>C<—>D
-x<-4  x < -4  x<-y
+A <-> B <–> C <—> D <=> E <==> F
+A<->B<–>C<—>D<=>E<==>F
 12:35
 1.2  34.56.78.90.12
 A+Y V+V W+W N+N X+X
@@ -286,42 +355,6 @@ z \t \u1dbb \t U+1DBB \t |   z \t
 `)
 
 
-samples.set('Enclosing glyphs', `
-Enclosing glyphs:
-U+20DD COMBINING ENCLOSING CIRCLE:       ⃝
-U+20DE COMBINING ENCLOSING SQUARE:       ⃞
-
-1\u20DD    2\u20DD    3\u20DD    4\u20DD    5\u20DD    6\u20DD    7\u20DD    8\u20DD    9\u20DD    0\u20DD
-
-A\u20DD    B\u20DD    C\u20DD    D\u20DD    E\u20DD    F\u20DD    G\u20DD    H\u20DD    I\u20DD    J\u20DD
-
-K\u20DD    L\u20DD    M\u20DD    N\u20DD    O\u20DD    P\u20DD    Q\u20DD    R\u20DD    S\u20DD    T\u20DD
-
-U\u20DD    V\u20DD    W\u20DD    X\u20DD    Y\u20DD    Z\u20DD    !\u20DD    ?\u20DD    #\u20DD    -\u20DD
-
-+\u20DD    −\u20DD    ×\u20DD    ÷\u20DD    =\u20DD    <\u20DD    >\u20DD    ✓\u20DD    ✗\u20DD
-
-←\u20DD    →\u20DD    ↑\u20DD    ↓\u20DD
-
-
-1\u20DE    2\u20DE    3\u20DE    4\u20DE    5\u20DE    6\u20DE    7\u20DE    8\u20DE    9\u20DE    0\u20DE
-
-A\u20DE    B\u20DE    C\u20DE    D\u20DE    E\u20DE    F\u20DE    G\u20DE    H\u20DE    I\u20DE    J\u20DE
-
-K\u20DE    L\u20DE    M\u20DE    N\u20DE    O\u20DE    P\u20DE    Q\u20DE    R\u20DE    S\u20DE    T\u20DE
-
-U\u20DE    V\u20DE    W\u20DE    X\u20DE    Y\u20DE    Z\u20DE    !\u20DE    ?\u20DE    #\u20DE    -\u20DE
-
-+\u20DE    −\u20DE    ×\u20DE    ÷\u20DE    =\u20DE    <\u20DE    >\u20DE    ✓\u20DE    ✗\u20DE
-
-←\u20DE    →\u20DE    ↑\u20DE    ↓\u20DE
-
-
-liga=on: uses precomposed ligatures.
-liga=off: some browsers will compose glyphs with combining marks (support is limited.)
-`)
-
-
 
 // From http://justanotherfoundry.com/generator
 samples.set('Kerning body en',
@@ -334,9 +367,51 @@ samples.set('Kerning body multi-lang',
   `Það munaal. Leblin'avalis frezpa; etăţila.' op. Apowat opced; avar þvía, jiaţinte,” ke. Ein ocesty, kubora.” arirónu ibwadwys.' Możyć, alliae’n Förhwy’numgyfi ext.' 'Konuma, kävättä; ylim th Schges. Majega diged; ye. Kom'es. - davoul hatoupa, Beve. Þegebon ke’s eisall'oma, çözünkre.” tes.' esta,' va'apareo. Allä.' zelte, ettykiv, lha, s'étéž ovixan vätymwy, jedana fur.” (diro, skalma; upă Mutos. Dyw’r Dymgyfe.» Lebtey, qu'num sky, au’n gebes, diği pochto, avěkdy, oednund conte.' klage skuumuje,' 'Heltals, ra, atellmuks.' Kowojo ingeça.' bydywe. Vædela pontão, j'achyfe, 25 Bewess. Þarlys: os ho distes.' day, la.' Exedsta, eelske. Detto, Eergüve voutte, je áttät, næveya gonakke. Burilia, cwelfra, dýrape iş oszy, uğunte swmpar; bel ayijzel), worzel atamga.' 'Zijoiv, exstäny. Tür. - Careän expe, ód, corafin i’r ískar.” kuklig. Byddym işlaya's våbece, înte's, ngsaghy, einavi ara'inyeach fellva övehri. Dag.' zapt, evingil vêemül ha, dwa’r zacceel hvoun krygumn sva. - Swir.” weedveď szkay, wykui; d'ar. Duling. Starik ir.” obli gördany, že Nellin écraf, żelsewch hyfre daardt, að, Så, kour. Anguis.' inua elpas. Quallä hvonte pangan'ye cent, kez.B. Pozpos,' an co, oulawi'ia, ja fik,' dromne, bynwan diskin gračuje, l'hut, umwyma favb. Des; hvelar ochank'avuuna, ing. Är Ellike, ava; varevo jos, ską. Časya. 'Lan phy, muklář, os, va, ço. Tür. Ystivel; sysla chvato, co, Och) alporzą. Decegă înţă, Kona’r dingee torzo.” på, być, detelin koturð fywelje, josto.” (gwedre.” duje re. Dete, foros.' Maatbe et.' ñayant.” ig daellwy. 'Ik afs igelka, fravre, opsang” atochny.” o'onvär, lanted dae’niin záklia. Var. Topeat, að lantiska, föraný, samasz, l'augligt.' thu'è alliwe. Jessaban: curuma’r Pewoon eediğil pointe.' za, jedwin abattuula munka, żelä.' 'ayakte) dy, szymwyck, dils Labava.' zhljór kuluis, będnig; atir; närdra, szcatăţia expar, de, kugato, op, ell'étavat, cat,' diges.' zouttä, etować. bedwyd alate, Detiav, à mmuk.' restal alwyria, nawpis,' 's'inäytt.' 'Jo, juna rhanną, tělátt, wor.' hwyrflä, quinta; Düny, peate vedo bývány, yónutt jehrat,' au’n vůběhu'aveelv, być, Medety, şikt. Deskun'ea þvísla cuajwa.' In elnám afstä luis.' isty. 1987 139 17 droman'otwonveg,' Třeban aptaye'deling). Os Tannähte, jotávěka, exant, inänna, dnarlo, mað. Ochtod pa.” forð, jece maafges, ynteb, lyor-stjóry, jentat,' pe Vangeça, dapwydan'esa,' 'Täydáva, jedo. 3. Neelib, antes, förake Dørgel nhatehr.' jes, ça, Yază, ees o’r unties, peä, Os revall'ordang.' 'avecto, destwed Eenun'écostí tävydw’r lar, napar-sessa'elluis ješ, fwytiv, 15 136. Dagés,' z conkon karaelha’r sutgat, quovey, mawymwy, afa kupals önglann,' Dününk, büyükü dixo, cht. Wate. Þesa.' Mis, av, jetall'onarát, împfey thvelf, wydwch yapszt.' dileco, el; sa, şinny, Abasza, yant corart.' huikky, wed; dibunt to.” Swymwyd duronti'sa, unté. Maar-ostéta.' ynnyaya fillut-cellum skuuta'apleve. Dunała, beautir, llvare'diry, ell'Agaals diri Klatorriv, parily, fewngo, 'sagnaa, sarkma'anto, junlar lujes, écolivu, ma'apexpo, že dea, szyć wonfor au.`)
 
 samples.set('Latin extended', `
-ĀĂĄǍǞǠǢǺǼȀȂȦȺ ƁƂɃ ĆĈĊČƇȻ ĎĐƉƊǄǅǆǱǲǳ ĒĔĖĘĚȄȆȨɆ ĜĞĠĢƓǤǦǴ ĤĦǶȞ ĨĪĬĮİǏȈȊƗƖ Ĳ ĴɈ ĶƘǨ ĹĻĽĿŁȽ ǇǈǊǋǉǌ ŃŅŇŊƝǸ ŌŎŐŒƠǑǪǬǾȌȎȪȬȮȰ Ƥ ŔŖŘȐȒɌ ŚŜŞŠȘ ŢŤŦƬƮȚȾ ŨŪŬŮŰŲǓǕǗǙǛƯȔȖɄ Ŵ ŶŸƳȲɎ ŹŻŽƵȤ
-
-āăąǎȧǟǡǣǻǽȁȃ ƀƂƄƅ ćĉċčƈȼ ďđƋƌȡ ȸȹ ēĕėęěȅȇȩɇ ƒ ĝğġģǥǧǵ ĥħƕȟ ĩīĭįıĳǐȉȋ ĵǰȷɉ ķĸƙǩ ĺļľŀƚł ńņňŉŋƞǹȵ ōŏőœơǒǫǭǿȍȏȫȭȯȱ ƥ ŕŗřȑȓɍ śŝşšƨșȿ ţťŧƫƭțȶ ũūŭůűųưǔǖǘǚǜȕȗ ŵ ŷȳɏ źżžƶȥɀ
+Ā Ă Ą Ǎ Ǟ Ǡ Ǣ Ǻ Ǽ Ȁ Ȃ Ȧ Ⱥ
+Ɓ Ƃ Ƀ
+Ć Ĉ Ċ Č Ƈ Ȼ
+Ď Đ Ɖ Ɗ Ǆ ǅ ǆ Ǳ ǲ ǳ
+Ē Ĕ Ė Ę Ě Ȅ Ȇ Ȩ Ɇ
+Ĝ Ğ Ġ Ģ Ɠ Ǥ Ǧ Ǵ
+Ĥ Ħ Ƕ Ȟ
+Ĩ Ī Ĭ Į İ Ǐ Ȉ Ȋ Ɨ Ɩ Ĳ
+Ĵ Ɉ
+Ķ Ƙ Ǩ
+Ĺ Ļ Ľ Ŀ Ł Ƚ
+Ǉ ǈ Ǌ ǋ ǉ ǌ
+Ń Ņ Ň Ŋ Ɲ Ǹ
+Ō Ŏ Ő Œ Ơ Ǒ Ǫ Ǭ Ǿ Ȍ Ȏ Ȫ Ȭ Ȯ Ȱ
+Ƥ
+Ŕ Ŗ Ř Ȑ Ȓ Ɍ
+Ś Ŝ Ş Š Ș
+Ţ Ť Ŧ Ƭ Ʈ Ț Ⱦ
+Ũ Ū Ŭ Ů Ű Ų Ǔ Ǖ Ǘ Ǚ Ǜ Ư Ȕ Ȗ Ʉ
+Ŵ
+Ŷ Ÿ Ƴ Ȳ Ɏ
+Ź Ż Ž Ƶ Ȥ
+ā ă ą ǎ ȧ ǟ ǡ ǣ ǻ ǽ ȁ ȃ
+ƀ Ƃ Ƅ ƅ
+ć ĉ ċ č ƈ ȼ
+ď đ Ƌ ƌ ȡ
+ȸ ȹ
+ē ĕ ė ę ě ȅ ȇ ȩ ɇ
+ƒ
+ĝ ğ ġ ģ ǥ ǧ ǵ
+ĥ ħ ƕ ȟ
+ĩ ī ĭ į ı ĳ ǐ ȉ ȋ
+ĵ ǰ ȷ ɉ
+ķ ĸ ƙ ǩ
+ĺ ļ ľ ŀ ƚ ł
+ń ņ ň ŉ ŋ ƞ ǹ ȵ
+ō ŏ ő œ ơ ǒ ǫ ǭ ǿ ȍ ȏ ȫ ȭ ȯ ȱ
+ƥ
+ŕ ŗ ř ȑ ȓ ɍ
+ś ŝ ş š ƨ ș ȿ
+ţ ť ŧ ƫ ƭ ț ȶ
+ũ ū ŭ ů ű ų ư ǔ ǖ ǘ ǚ ǜ ȕ ȗ
+ŵ
+ŷ ȳ ɏ
+ź ż ž ƶ ȥ ɀ
 
 `)
 
@@ -476,13 +551,43 @@ da 27. es 38. an 87, in 68, 674
 
 
 samples.set('Symbols', `
-← ⟵ → ⟶ ↑ ↓ ↕
-↖ ↗ ↘ ↙ ↔ ⟷ ↩ ↪
-↵ ↳ ↰ ↱ ↴ ⇤ ⇥ ⇞ ⇟ ✓ ✗
-● ○ ◆ ◇ ❖  ► ▼ ▲ ◀
-☀ ☼ ♥ ♡ ⬆ ⇧
-⌫ ⌧ ⌦ ⎋ ↺ ↻
-⌘ ⇧ ⇪ ⌃ ⌅ ⌥ ⎇ ⏏
+←    ⟵    🡐    →    ⟶    🡒    ↑    ↓    ↕
+
+↖    ↗    ↘    ↙    ↔    ⟷    ↩    ↪
+
+↵    ↳    ↰    ↱    ↴    ⎋    ↺    ↻
+
+●    ○    ◆    ◇    ❖        ►    ▼    ▲    ◀
+
+☀    ☼    ♥    ♡    ★    ☆    ✓    ✗    ⚠
+
+⌫    ⌧    ⌦    ⇤    ⇥     ⇞     ⇟    ⏎
+
+⌘    ⬆    ⇧    ⇪    ⌃    ⌅    ⌥    ⎇    ⏏
+
+1\u20DD    2\u20DD    3\u20DD    4\u20DD    5\u20DD    6\u20DD    7\u20DD    8\u20DD    9\u20DD    0\u20DD
+
+A\u20DD    B\u20DD    C\u20DD    D\u20DD    E\u20DD    F\u20DD    G\u20DD    H\u20DD    I\u20DD    J\u20DD
+
+K\u20DD    L\u20DD    M\u20DD    N\u20DD    O\u20DD    P\u20DD    Q\u20DD    R\u20DD    S\u20DD    T\u20DD
+
+U\u20DD    V\u20DD    W\u20DD    X\u20DD    Y\u20DD    Z\u20DD    !\u20DD    ?\u20DD    #\u20DD    -\u20DD
+
++\u20DD    −\u20DD    ×\u20DD    ÷\u20DD    =\u20DD    <\u20DD    >\u20DD    ✓\u20DD    ✗\u20DD
+
+←\u20DD    →\u20DD    ↑\u20DD    ↓\u20DD
+
+1\u20DE    2\u20DE    3\u20DE    4\u20DE    5\u20DE    6\u20DE    7\u20DE    8\u20DE    9\u20DE    0\u20DE
+
+A\u20DE    B\u20DE    C\u20DE    D\u20DE    E\u20DE    F\u20DE    G\u20DE    H\u20DE    I\u20DE    J\u20DE
+
+K\u20DE    L\u20DE    M\u20DE    N\u20DE    O\u20DE    P\u20DE    Q\u20DE    R\u20DE    S\u20DE    T\u20DE
+
+U\u20DE    V\u20DE    W\u20DE    X\u20DE    Y\u20DE    Z\u20DE    !\u20DE    ?\u20DE    #\u20DE    -\u20DE
+
++\u20DE    −\u20DE    ×\u20DE    ÷\u20DE    =\u20DE    <\u20DE    >\u20DE    ✓\u20DE    ✗\u20DE
+
+←\u20DE    →\u20DE    ↑\u20DE    ↓\u20DE
 `)
 
 
@@ -1602,7 +1707,8 @@ document.head.appendChild(fontCSS)
       <div class="checkbox-group">
       <span>Default-on features:</span>
       <label title="Contextual alternates"><input type="checkbox" class="featopt" name="feat:calt=0"> Disable calt &nbsp;(Contextual alternates)</label>
-      <label title="Common ligatures (there are no common ligatures in Inter, but the font you are comparing to may have)"><input type="checkbox" class="featopt" name="feat:liga=0"> Disable liga &nbsp;(Common ligatures)</label>
+      <label title="Standard ligatures"><input type="checkbox" class="featopt" name="feat:liga=0"> Disable liga &nbsp;(Standard ligatures)</label>
+      <!-- <label title="Required ligatures"><input type="checkbox" class="featopt" name="feat:rlig=0"> Disable rlig &nbsp;(Required ligatures)</label> -->
       <label title="Kerning"><input type="checkbox" class="featopt" name="feat:kern=0"> Disable kern &nbsp;(Kerning)</label>
       </div>
 

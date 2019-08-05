@@ -10,10 +10,13 @@
 
   --columnGap: 2rem;
 
-  /* P3 wide gamut colors */
+  /* colors */
   --red:    color(display-p3 0.94 0.19 0.04);
   --yellow: color(display-p3 1 0.87 0.05);
-  --blue:   rgb(3, 102, 214);
+  --light-yellow: color(display-p3 1 1 0.7);
+  --blue:   rgb(3, 102, 230);
+  --green:  rgb(38, 220, 78);
+  --mediumGreen: rgb(119, 221, 134);
 }
 
 @supports not (color: color(display-p3 1 1 1)) {
@@ -21,10 +24,17 @@
   :root {
     --red: #F03009;
     --yellow: #FFE310;
+    --light-yellow: rgb(255, 255, 179);
   }
 }
 
 * { margin:0; padding:0; font-synthesis: none; }
+
+html.debug *:nth-child(4n) { outline:1px solid rgba(0,0,255,0.5); }
+html.debug *:nth-child(4n+1) { outline:1px solid rgba(0,255,255,0.5); }
+html.debug *:nth-child(4n+2) { outline:1px solid rgba(255,0,255,0.5); }
+html.debug *:nth-child(4n+3) { outline:1px solid rgba(255,0,0,0.5); }
+
 html { }
 body {
   background-color: #f4f4f4;
@@ -58,6 +68,9 @@ body {
     -ms-font-variant-ligatures: contextual common-ligatures;
     -moz-font-variant-ligatures: contextual common-ligatures;
     -o-font-variant-ligatures: contextual common-ligatures;
+
+  /* required to work around letter-spacing bug in Chrome: */
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
 }
 
 /* Font style classifiers used by samples and dynmetrics */
@@ -130,7 +143,7 @@ a[href^="#"]:hover {
 }*/
 code, pre, q, tt {
   font-family: 'IBM Plex Mono', monospace;
-  font-feature-settings: 'ss02' 1, 'zero' 1;
+  font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1, 'ss02' 1, 'zero' 1;
   line-height: inherit;
 }
 code {
@@ -156,11 +169,11 @@ q:after {
   content: "";
 }
 kbd {
-  -moz-font-feature-settings:    'kern' 1, 'case' 1;
-  -ms-font-feature-settings:     'kern' 1, 'case' 1;
-  -o-font-feature-settings:      'kern' 1, 'case' 1;
-  -webkit-font-feature-settings: 'kern' 1, 'case' 1;
-  font-feature-settings:         'kern' 1, 'case' 1;
+  -moz-font-feature-settings:    'liga' 1, 'calt' 1, 'kern' 1, 'case' 1;
+  -ms-font-feature-settings:     'liga' 1, 'calt' 1, 'kern' 1, 'case' 1;
+  -o-font-feature-settings:      'liga' 1, 'calt' 1, 'kern' 1, 'case' 1;
+  -webkit-font-feature-settings: 'liga' 1, 'calt' 1, 'kern' 1, 'case' 1;
+  font-feature-settings:         'liga' 1, 'calt' 1, 'kern' 1, 'case' 1;
   border: 1px solid rgba(0,0,0,0.18);
   border-radius: 3px;
   padding:0.1em 0.2em;
@@ -174,7 +187,7 @@ num { /* number */
   /*-moz-font-feature-settings:    'calt' 1, 'ss01' 1;
   -ms-font-feature-settings:     'calt' 1, 'ss01' 1;
   -o-font-feature-settings:      'calt' 1, 'ss01' 1;
-  -webkit-font-feature-settings: 'calt' 1, 'ss01' 1;
+  -webkit-font-feature-settings: 'kern' 1, 'calt' 1, 'ss01' 1;
   font-feature-settings:         'calt' 1, 'ss01' 1;*/
   letter-spacing:0.01em;
   white-space: pre;
@@ -411,6 +424,10 @@ h2.banner {
 
 /* narrow windows */
 @media only screen and (max-width: 565px) {
+  .row {
+    padding-left:32px;
+    padding-right:32px;
+  }
   .row.menu ul {
     justify-content: space-between;
     margin: 0 35px;
@@ -452,7 +469,7 @@ h2.banner {
 @media only screen and (max-width: 640px) {
   .menu .nav-download { display: none; }
 }
-@media only screen and (max-width: 319px) {
+@media only screen and (max-width: 375px) {
   .menu .nav-source { display: none; }
 }
 @media only screen and (max-width: 250px) {
@@ -468,6 +485,14 @@ h2.banner {
 .row.black {
   background: #2b2b2b;
   color: #99999b;
+}
+.row.green {
+  background: var(--mediumGreen);
+  color: black;
+}
+.row.blue {
+  background: var(--blue);
+  color: white;
 }
 .row.black {
   background: #010101;
@@ -486,6 +511,15 @@ h2.banner {
 .row.black h2, .row.black h2 > a  {
   color: #ccc;
   background: none;
+}
+.row.green h2 > a:hover {
+  color: inherit;
+  text-decoration-style: solid !important;
+  text-decoration: underline !important;
+  text-decoration: underline rgba(0, 0, 0, 0.3) !important;
+}
+.row.green > * > p > a:hover {
+  color: inherit;
 }
 
 .row.color1 {
@@ -711,34 +745,35 @@ instead.
 
 */
 
-.ff-none { font-feature-settings: 'calt' 0, 'liga' 0; -webkit-font-feature-settings: 'calt' 0, 'liga' 0; -ms-font-feature-settings: 'calt' 0, 'liga' 0; -moz-font-feature-settings: 'calt' 0, 'liga' 0; }
+.ff-none { font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0; -webkit-font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0; -ms-font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0; -moz-font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0; }
 
-.ff-dlig { font-feature-settings: 'dlig' 1; -webkit-font-feature-settings: 'dlig' 1; -ms-font-feature-settings: 'dlig' 1; -moz-font-feature-settings: 'dlig' 1; }
-.ff-numr { font-feature-settings: 'numr' 1; -webkit-font-feature-settings: 'numr' 1; -ms-font-feature-settings: 'numr' 1; -moz-font-feature-settings: 'numr' 1; }
-.ff-dnom { font-feature-settings: 'dnom' 1; -webkit-font-feature-settings: 'dnom' 1; -ms-font-feature-settings: 'dnom' 1; -moz-font-feature-settings: 'dnom' 1; }
-.ff-tnum { font-feature-settings: 'tnum' 1; -webkit-font-feature-settings: 'tnum' 1; -ms-font-feature-settings: 'tnum' 1; -moz-font-feature-settings: 'tnum' 1; }
-.ff-case { font-feature-settings: 'case' 1; -webkit-font-feature-settings: 'case' 1; -ms-font-feature-settings: 'case' 1; -moz-font-feature-settings: 'case' 1; }
-.ff-zero { font-feature-settings: 'zero' 1; -webkit-font-feature-settings: 'zero' 1; -ms-font-feature-settings: 'zero' 1; -moz-font-feature-settings: 'zero' 1; }
-.ff-frac { font-feature-settings: 'frac' 1; -webkit-font-feature-settings: 'frac' 1; -ms-font-feature-settings: 'frac' 1; -moz-font-feature-settings: 'frac' 1; }
-.ff-sups { font-feature-settings: 'sups' 1; -webkit-font-feature-settings: 'sups' 1; -ms-font-feature-settings: 'sups' 1; -moz-font-feature-settings: 'sups' 1; }
-.ff-subs { font-feature-settings: 'subs' 1; -webkit-font-feature-settings: 'subs' 1; -ms-font-feature-settings: 'subs' 1; -moz-font-feature-settings: 'subs' 1; }
-.ff-cpsp { font-feature-settings: 'cpsp' 1; -webkit-font-feature-settings: 'cpsp' 1; -ms-font-feature-settings: 'cpsp' 1; -moz-font-feature-settings: 'cpsp' 1; }
-.ff-calt { font-feature-settings: 'calt' 1; -webkit-font-feature-settings: 'calt' 1; -ms-font-feature-settings: 'calt' 1; -moz-font-feature-settings: 'calt' 1; }
-.ff-salt { font-feature-settings: 'salt' 1; -webkit-font-feature-settings: 'salt' 1; -ms-font-feature-settings: 'salt' 1; -moz-font-feature-settings: 'salt' 1; }
-.ff-salt-zero { font-feature-settings: 'salt' 1, 'zero' 1; }
-.ff-cv07-salt-zero { font-feature-settings: 'cv07' 1, 'salt' 1, 'zero' 1; }
+.ff-liga,
+.ff-calt { font-feature-settings: 'liga' 1, 'calt' 1; -webkit-font-feature-settings: 'liga' 1, 'calt' 1; -ms-font-feature-settings: 'liga' 1, 'calt' 1; -moz-font-feature-settings: 'liga' 1, 'calt' 1; }
+.ff-dlig { font-feature-settings: 'kern' 1, 'dlig' 1; -webkit-font-feature-settings: 'kern' 1, 'dlig' 1; -ms-font-feature-settings: 'kern' 1, 'dlig' 1; -moz-font-feature-settings: 'kern' 1, 'dlig' 1; }
+.ff-numr { font-feature-settings: 'kern' 1, 'numr' 1; -webkit-font-feature-settings: 'kern' 1, 'numr' 1; -ms-font-feature-settings: 'kern' 1, 'numr' 1; -moz-font-feature-settings: 'kern' 1, 'numr' 1; }
+.ff-dnom { font-feature-settings: 'kern' 1, 'dnom' 1; -webkit-font-feature-settings: 'kern' 1, 'dnom' 1; -ms-font-feature-settings: 'kern' 1, 'dnom' 1; -moz-font-feature-settings: 'kern' 1, 'dnom' 1; }
+.ff-tnum { font-feature-settings: 'kern' 1, 'tnum' 1; -webkit-font-feature-settings: 'kern' 1, 'tnum' 1; -ms-font-feature-settings: 'kern' 1, 'tnum' 1; -moz-font-feature-settings: 'kern' 1, 'tnum' 1; }
+.ff-case { font-feature-settings: 'kern' 1, 'case' 1; -webkit-font-feature-settings: 'kern' 1, 'case' 1; -ms-font-feature-settings: 'kern' 1, 'case' 1; -moz-font-feature-settings: 'kern' 1, 'case' 1; }
+.ff-zero { font-feature-settings: 'kern' 1, 'zero' 1; -webkit-font-feature-settings: 'kern' 1, 'zero' 1; -ms-font-feature-settings: 'kern' 1, 'zero' 1; -moz-font-feature-settings: 'kern' 1, 'zero' 1; }
+.ff-frac { font-feature-settings: 'kern' 1, 'frac' 1; -webkit-font-feature-settings: 'kern' 1, 'frac' 1; -ms-font-feature-settings: 'kern' 1, 'frac' 1; -moz-font-feature-settings: 'kern' 1, 'frac' 1; }
+.ff-sups { font-feature-settings: 'kern' 1, 'sups' 1; -webkit-font-feature-settings: 'kern' 1, 'sups' 1; -ms-font-feature-settings: 'kern' 1, 'sups' 1; -moz-font-feature-settings: 'kern' 1, 'sups' 1; }
+.ff-subs { font-feature-settings: 'kern' 1, 'subs' 1; -webkit-font-feature-settings: 'kern' 1, 'subs' 1; -ms-font-feature-settings: 'kern' 1, 'subs' 1; -moz-font-feature-settings: 'kern' 1, 'subs' 1; }
+.ff-cpsp { font-feature-settings: 'kern' 1, 'cpsp' 1; -webkit-font-feature-settings: 'kern' 1, 'cpsp' 1; -ms-font-feature-settings: 'kern' 1, 'cpsp' 1; -moz-font-feature-settings: 'kern' 1, 'cpsp' 1; }
+.ff-salt { font-feature-settings: 'kern' 1, 'salt' 1; -webkit-font-feature-settings: 'kern' 1, 'salt' 1; -ms-font-feature-settings: 'kern' 1, 'salt' 1; -moz-font-feature-settings: 'kern' 1, 'salt' 1; }
+.ff-salt-zero { font-feature-settings: 'kern' 1, 'salt' 1, 'zero' 1; }
+.ff-cv07-salt-zero { font-feature-settings: 'kern' 1, 'cv07' 1, 'salt' 1, 'zero' 1; }
 
-.ff-ss01 { font-feature-settings: 'ss01' 1; -webkit-font-feature-settings: 'ss01' 1; -ms-font-feature-settings: 'ss01' 1; -moz-font-feature-settings: 'ss01' 1; }
-.ff-ss02 { font-feature-settings: 'ss02' 1; -webkit-font-feature-settings: 'ss02' 1; -ms-font-feature-settings: 'ss02' 1; -moz-font-feature-settings: 'ss02' 1; }
-.ff-ss03 { font-feature-settings: 'ss03' 1; -webkit-font-feature-settings: 'ss03' 1; -ms-font-feature-settings: 'ss03' 1; -moz-font-feature-settings: 'ss03' 1; }
-.ff-cv01 { font-feature-settings: 'cv01' 1; -webkit-font-feature-settings: 'cv01' 1; -ms-font-feature-settings: 'cv01' 1; -moz-font-feature-settings: 'cv01' 1; }
-.ff-cv02 { font-feature-settings: 'cv02' 1; -webkit-font-feature-settings: 'cv02' 1; -ms-font-feature-settings: 'cv02' 1; -moz-font-feature-settings: 'cv02' 1; }
-.ff-cv03 { font-feature-settings: 'cv03' 1; -webkit-font-feature-settings: 'cv03' 1; -ms-font-feature-settings: 'cv03' 1; -moz-font-feature-settings: 'cv03' 1; }
-.ff-cv04 { font-feature-settings: 'cv04' 1; -webkit-font-feature-settings: 'cv04' 1; -ms-font-feature-settings: 'cv04' 1; -moz-font-feature-settings: 'cv04' 1; }
-.ff-cv05 { font-feature-settings: 'cv05' 1; -webkit-font-feature-settings: 'cv05' 1; -ms-font-feature-settings: 'cv05' 1; -moz-font-feature-settings: 'cv05' 1; }
-.ff-cv06 { font-feature-settings: 'cv06' 1; -webkit-font-feature-settings: 'cv06' 1; -ms-font-feature-settings: 'cv06' 1; -moz-font-feature-settings: 'cv06' 1; }
-.ff-cv07 { font-feature-settings: 'cv07' 1; -webkit-font-feature-settings: 'cv07' 1; -ms-font-feature-settings: 'cv07' 1; -moz-font-feature-settings: 'cv07' 1; }
-.ff-cv08 { font-feature-settings: 'cv08' 1; -webkit-font-feature-settings: 'cv08' 1; -ms-font-feature-settings: 'cv08' 1; -moz-font-feature-settings: 'cv08' 1; }
-.ff-cv09 { font-feature-settings: 'cv09' 1; -webkit-font-feature-settings: 'cv09' 1; -ms-font-feature-settings: 'cv09' 1; -moz-font-feature-settings: 'cv09' 1; }
-.ff-cv10 { font-feature-settings: 'cv10' 1; -webkit-font-feature-settings: 'cv10' 1; -ms-font-feature-settings: 'cv10' 1; -moz-font-feature-settings: 'cv10' 1; }
-.ff-cv11 { font-feature-settings: 'cv11' 1; -webkit-font-feature-settings: 'cv11' 1; -ms-font-feature-settings: 'cv11' 1; -moz-font-feature-settings: 'cv11' 1; }
+.ff-ss01 { font-feature-settings: 'kern' 1, 'ss01' 1; -webkit-font-feature-settings: 'kern' 1, 'ss01' 1; -ms-font-feature-settings: 'kern' 1, 'ss01' 1; -moz-font-feature-settings: 'kern' 1, 'ss01' 1; }
+.ff-ss02 { font-feature-settings: 'kern' 1, 'ss02' 1; -webkit-font-feature-settings: 'kern' 1, 'ss02' 1; -ms-font-feature-settings: 'kern' 1, 'ss02' 1; -moz-font-feature-settings: 'kern' 1, 'ss02' 1; }
+.ff-ss03 { font-feature-settings: 'kern' 1, 'ss03' 1; -webkit-font-feature-settings: 'kern' 1, 'ss03' 1; -ms-font-feature-settings: 'kern' 1, 'ss03' 1; -moz-font-feature-settings: 'kern' 1, 'ss03' 1; }
+.ff-cv01 { font-feature-settings: 'kern' 1, 'cv01' 1; -webkit-font-feature-settings: 'kern' 1, 'cv01' 1; -ms-font-feature-settings: 'kern' 1, 'cv01' 1; -moz-font-feature-settings: 'kern' 1, 'cv01' 1; }
+.ff-cv02 { font-feature-settings: 'kern' 1, 'cv02' 1; -webkit-font-feature-settings: 'kern' 1, 'cv02' 1; -ms-font-feature-settings: 'kern' 1, 'cv02' 1; -moz-font-feature-settings: 'kern' 1, 'cv02' 1; }
+.ff-cv03 { font-feature-settings: 'kern' 1, 'cv03' 1; -webkit-font-feature-settings: 'kern' 1, 'cv03' 1; -ms-font-feature-settings: 'kern' 1, 'cv03' 1; -moz-font-feature-settings: 'kern' 1, 'cv03' 1; }
+.ff-cv04 { font-feature-settings: 'kern' 1, 'cv04' 1; -webkit-font-feature-settings: 'kern' 1, 'cv04' 1; -ms-font-feature-settings: 'kern' 1, 'cv04' 1; -moz-font-feature-settings: 'kern' 1, 'cv04' 1; }
+.ff-cv05 { font-feature-settings: 'kern' 1, 'cv05' 1; -webkit-font-feature-settings: 'kern' 1, 'cv05' 1; -ms-font-feature-settings: 'kern' 1, 'cv05' 1; -moz-font-feature-settings: 'kern' 1, 'cv05' 1; }
+.ff-cv06 { font-feature-settings: 'kern' 1, 'cv06' 1; -webkit-font-feature-settings: 'kern' 1, 'cv06' 1; -ms-font-feature-settings: 'kern' 1, 'cv06' 1; -moz-font-feature-settings: 'kern' 1, 'cv06' 1; }
+.ff-cv07 { font-feature-settings: 'kern' 1, 'cv07' 1; -webkit-font-feature-settings: 'kern' 1, 'cv07' 1; -ms-font-feature-settings: 'kern' 1, 'cv07' 1; -moz-font-feature-settings: 'kern' 1, 'cv07' 1; }
+.ff-cv08 { font-feature-settings: 'kern' 1, 'cv08' 1; -webkit-font-feature-settings: 'kern' 1, 'cv08' 1; -ms-font-feature-settings: 'kern' 1, 'cv08' 1; -moz-font-feature-settings: 'kern' 1, 'cv08' 1; }
+.ff-cv09 { font-feature-settings: 'kern' 1, 'cv09' 1; -webkit-font-feature-settings: 'kern' 1, 'cv09' 1; -ms-font-feature-settings: 'kern' 1, 'cv09' 1; -moz-font-feature-settings: 'kern' 1, 'cv09' 1; }
+.ff-cv10 { font-feature-settings: 'kern' 1, 'cv10' 1; -webkit-font-feature-settings: 'kern' 1, 'cv10' 1; -ms-font-feature-settings: 'kern' 1, 'cv10' 1; -moz-font-feature-settings: 'kern' 1, 'cv10' 1; }
+.ff-cv11 { font-feature-settings: 'kern' 1, 'cv11' 1; -webkit-font-feature-settings: 'kern' 1, 'cv11' 1; -ms-font-feature-settings: 'kern' 1, 'cv11' 1; -moz-font-feature-settings: 'kern' 1, 'cv11' 1; }

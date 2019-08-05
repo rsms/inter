@@ -64,6 +64,10 @@ var ui = {
       if (unsupportedMessage) {
         unsupportedMessage.classList.add('active')
       }
+    } else {
+      this.state.size = window.innerWidth / 10
+      root.querySelector(`[name="size"]`).value = this.state.size
+      this.update()
     }
   },
 

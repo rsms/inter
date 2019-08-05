@@ -70,6 +70,13 @@ endfor
     <meta property="og:url" content="https://rsms.me/inter{{ page.url }}">
   </head>
   <body>
+    {% if site.safe == false %}<script>
+      // Allows passing "?debug" in the query string for local builds, which
+      // sets "debug" on the <html> element, enabling CSS debugging.
+      if (document.location.search.indexOf("debug") != -1) {
+        document.documentElement.classList.add("debug")
+      }
+    </script>{% endif %}
     <div id="hud-notification"><div class="msg">Hello</div></div>
     <script src="{{url_root}}res/base.js?v={{ base_js_v }}"></script>
 

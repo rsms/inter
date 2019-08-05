@@ -97,7 +97,7 @@ select:focus {
   top:0; right:0; bottom:0;
   background:#f4f4f4;
   padding: 24px;
-  user-select:none; -moz-user-select: none;
+  user-select:none; -moz-user-select: none; -webkit-user-select:none;
   font-family: sans-serif !important;
   overflow: auto;
   letter-spacing:0.012em;
@@ -157,7 +157,7 @@ select:focus {
     justify-content: space-between;
   }
   .options input[type="checkbox"] + * {
-    user-select: none; -moz-user-select: none;
+    user-select: none; -moz-user-select: none; -webkit-user-select:none;
   }
   .options .varfontControl {
     display: none;
@@ -194,7 +194,7 @@ select:focus {
     height: var(--fieldHeight);
     line-height: var(--fieldHeight);
     margin-left: 0.5em;
-    user-select: none; -webkit-user-select: none;
+    user-select: none; -webkit-user-select: none; -moz-user-select:none;
     color: rgba(0,0,0,0.4);
   }
   .options .label-and-value input + note .unit,
