@@ -259,9 +259,8 @@ def setFontInfo(font, weight):
   style = font.info.styleName    # e.g. "Medium Italic"
 
   # Update italicAngle
-  isitalic = False
-  if font.info.italicAngle != 0:
-    isitalic = True
+  isitalic = style.find("Italic") != -1
+  if isitalic:
     font.info.italicAngle = float('%.8g' % font.info.italicAngle)
   else:
     font.info.italicAngle = 0  # avoid "-0.0" value in UFO
