@@ -26,14 +26,14 @@ try:
   for g in font.glyphs:
     if g.unicodes is not None:
       for c in [int(c, 16) for c in g.unicodes]:
-        if c <= 0xEFFF and c > nextcp:
+        if c <= 0xEFFF and c >= nextcp:
           nextcp = c + 1
-  
+
   print('nextcp: %X' % nextcp)
   if DRY_RUN:
     print('DRY_RUN mode (no actual changes will be made)')
   print('————————————————')
-  
+
   # for printing
   mappings = OrderedDict()
   longest_gname = 0
