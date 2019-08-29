@@ -339,7 +339,7 @@ else
   has_newer() {
     DIR=$1
     REF_FILE=$2
-    for f in $(find "$DIR" -type f -name '*.pyx' -newer "$REF_FILE" -print -quit); do
+    for f in $(find "$DIR" -type f -newer "$REF_FILE" -print -quit); do
       return 0
     done
     return 1
