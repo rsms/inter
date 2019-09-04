@@ -413,9 +413,9 @@ else
     # master OTF and TTF rules
     for style in "${master_styles[@]}"; do
       echo "${DIST_DIR_TOK}const/Inter-${style}.otf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
-      echo -e "\tmisc/fontbuild compile -o \$@ src/Inter-${style}.ufo" >> "$GEN_MAKE_FILE"
+      echo -e "\tmisc/fontbuild compile -o \$@ \$(FONTBUILD_FLAGS) src/Inter-${style}.ufo" >> "$GEN_MAKE_FILE"
       echo "${DIST_DIR_TOK}const/Inter-${style}.ttf: \$(${style}_ufo_d)" >> "$GEN_MAKE_FILE"
-      echo -e "\tmisc/fontbuild compile -o \$@ src/Inter-${style}.ufo" >> "$GEN_MAKE_FILE"
+      echo -e "\tmisc/fontbuild compile -o \$@ \$(FONTBUILD_FLAGS) src/Inter-${style}.ufo" >> "$GEN_MAKE_FILE"
       echo "" >> "$GEN_MAKE_FILE"
     done
 

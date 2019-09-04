@@ -91,14 +91,14 @@ build/%.woff: build/%.ttf
 
 # Master UFOs -> variable TTF
 $(FONTDIR)/var/%.var.ttf: src/%.designspace $(all_ufo_masters)
-	misc/fontbuild compile-var -o $@ $<
+	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 
 # Instance UFO -> OTF, TTF (note: masters' rules in generated.make)
 $(FONTDIR)/const/Inter-%.otf: build/ufo/Inter-%.ufo
-	misc/fontbuild compile -o $@ $<
+	misc/fontbuild compile -o $@ $(FONTBUILD_FLAGS) $<
 
 $(FONTDIR)/const/Inter-%.ttf: build/ufo/Inter-%.ufo
-	misc/fontbuild compile -o $@ $<
+	misc/fontbuild compile -o $@ $(FONTBUILD_FLAGS) $<
 
 
 # designspace <- glyphs file
