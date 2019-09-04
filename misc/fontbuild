@@ -31,7 +31,7 @@ from ufo2ft.filters.removeOverlaps import RemoveOverlapsFilter
 from ufo2ft import CFFOptimization
 
 log = logging.getLogger(__name__)
-stripItalic_re = re.compile(r'(?:^|\b)italic(?:\b|$)', re.I | re.U)
+stripItalic_re = re.compile(r'(?:^|\b)italic\b|italic$', re.I | re.U)
 
 
 def stripItalic(name):
@@ -111,9 +111,11 @@ def findGlyphDirectives(g): # -> set<string> | None
 
 
 class VarFontProject(FontProject):
-  def __init__(self, familyName=None, *args, **kwargs):
+  def __init__(self, familyName=None, compact_style_names=False, *args, **kwargs):
     super(VarFontProject, self).__init__(*args, **kwargs)
     self.familyName = familyName
+    self.compact_style_names = compact_style_names
+
 
   def decompose_glyphs(self, designspace, glyph_filter=lambda g: True):
     """Move components of UFOs' glyphs to their outlines."""
@@ -163,6 +165,7 @@ class VarFontProject(FontProject):
     masters = [s.font for s in designspace.sources]
 
     for ufo in masters:
+
       if self.familyName is not None:
         ufo.info.familyName =\
           ufo.info.familyName.replace('Inter', self.familyName)
@@ -174,6 +177,11 @@ class VarFontProject(FontProject):
           ufo.info.macintoshFONDName.replace('Inter', self.familyName)
         ufo.info.openTypeNamePreferredFamilyName =\
           ufo.info.openTypeNamePreferredFamilyName.replace('Inter', self.familyName)
+
+      # patch style name if --compact-style-names is set
+      if args.compact_style_names:
+        collapseFontStyleName(ufo)
+
       updateFontVersion(ufo)
       ufoname = basename(ufo.path)
 
@@ -319,6 +327,14 @@ def setFontInfo(font, weight):
       font.info.styleMapStyleName = "regular"
 
 
+def collapseFontStyleName(font):
+  # collapse whitespace in style name. i.e. "Semi Bold Italic" -> "SemiBoldItalic"
+  font.info.styleName = re.sub(r'\s', '', font.info.styleName)
+  # update info to have style changes "trickle down" to other metadata
+  setFontInfo(font, font.info.openTypeOS2WeightClass)
+
+
+
 class Main(object):
 
   def __init__(self):
@@ -413,6 +429,10 @@ class Main(object):
     argparser.add_argument('--name', metavar='<family-name>',
       help='Override family name, replacing "Inter"')
 
+    argparser.add_argument('--compact-style-names', action='store_true',
+      help="Produce font files with style names that doesn't contain spaces. "\
+           "E.g. \"SemiBoldItalic\" instead of \"Semi Bold Italic\"")
+
     args = argparser.parse_args(argv)
 
     # decide output filename (or check user-provided name)
@@ -435,7 +455,11 @@ class Main(object):
     if args.name is not None and len(args.name) > 0:
       familyName = args.name
 
-    project = VarFontProject(verbose=self.logLevelName, familyName=familyName)
+    project = VarFontProject(
+      verbose=self.logLevelName,
+      familyName=familyName,
+      compact_style_names=args.compact_style_names,
+    )
     project.run_from_designspace(
       args.srcfile,
       interpolate=False,
@@ -468,6 +492,10 @@ class Main(object):
 
     argparser.add_argument('--validate', action='store_true',
       help='Enable ufoLib validation on reading/writing UFO files')
+
+    argparser.add_argument('--compact-style-names', action='store_true',
+      help="Produce font files with style names that doesn't contain spaces. "\
+           "E.g. \"SemiBoldItalic\" instead of \"Semi Bold Italic\"")
 
     args = argparser.parse_args(argv)
 
@@ -504,6 +532,13 @@ class Main(object):
     project = FontProject(verbose=self.logLevelName, validate_ufo=args.validate)
 
     ufo = Font(args.srcfile)
+
+    # patch style name if --compact-style-names is set
+    if args.compact_style_names:
+      collapseFontStyleName(ufo)
+
+    # update version to actual, real version.
+    # must come after collapseFontStyleName or any other call to setFontInfo.
     updateFontVersion(ufo)
 
     # if outfile is a ufo, simply move it to outfilename instead
