@@ -125,6 +125,7 @@ class VarFontProject(FontProject):
         self._deep_copy_contours(ufo, glyph, glyph, Transform())
         glyph.clearComponents()
 
+
   def _deep_copy_contours(self, ufo, parent, component, transformation):
     """Copy contours from component to parent, including nested components."""
     for nested in component.components:
@@ -150,13 +151,12 @@ class VarFontProject(FontProject):
     conversion_error=None,
     feature_writers=None,
     cff_round_tolerance=None,
-    **kwargs
+    **kwargs,
   ):
-    """Build OpenType binaries with interpolatable outlines."""
     # We decompose any glyph with reflected components to make sure
     # that fontTools varLib is able to produce properly-slanting interpolation.
 
-    self._load_designspace_sources(designspace)
+    designspace = self._load_designspace_sources(designspace)
 
     decomposeGlyphs = set()
     removeOverlapsGlyphs = set()
@@ -198,6 +198,7 @@ class VarFontProject(FontProject):
           basename(g.getParent().path)
         )
         rmoverlapFilter.filter(g)
+
 
     if ttf:
       return ufo2ft.compileInterpolatableTTFsFromDS(
@@ -416,12 +417,15 @@ class Main(object):
 
     # decide output filename (or check user-provided name)
     outfilename = args.output
+    outformat = 'variable'  # TTF
     if outfilename is None or outfilename == '':
       outfilename = os.path.splitext(basename(args.srcfile))[0] + '.var.ttf'
       log.info('setting --output %r' % outfilename)
     else:
       outfileext = os.path.splitext(outfilename)[1]
-      if outfileext.lower() != '.ttf':
+      if outfileext.lower() == '.otf':
+        outformat = 'variable-cff2'
+      elif outfileext.lower() != '.ttf':
         fatal('Invalid file extension %r (expected ".ttf")' % outfileext)
 
     mkdirs(dirname(outfilename))
@@ -439,7 +443,8 @@ class Main(object):
       use_production_names=True,
       round_instances=True,
       output_path=outfilename,
-      output=['variable'],
+      output=[outformat],
+      optimize_cff=CFFOptimization.SUBROUTINIZE,
       overlaps_backend='pathops', # use Skia's pathops
     )
 
