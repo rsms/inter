@@ -311,6 +311,44 @@ x -- X
 `)
 
 
+let dynamic_diacritics = [
+  ["d", 0x030C, 0x0304, 0x0323, 0x0326],
+  ["y", 0x030D, 0x0311, 0x0310, 0x0302, 0x0301, 0x0353, 0x0347],
+  ["n", 0x0306, 0x0308, 0x1DD8, 0x0304, 0x0307, 0x032D, 0x0332, 0x032B, 0x0323],
+  ["a", 0x0363, 0x0306, 0x0309, 0x0324, 0x0330, 0x032A],
+  ["m", 0x0310, 0x0318],
+  ["i", 0x0304, 0x1DCA],
+  ["c", 0x0319, 0x030B],
+  [" "],
+  ["d", 0x0325, 0x0309],
+  ["i", 0x030E, 0x1DC7],
+  ["a", 0x1DC8, 0x031E],
+  ["c", 0x0348, 0x0332],
+  ["r", 0x0346, 0x0332],
+  ["i", 0x0313, 0x036F],
+  ["t", 0x032B, 0x0306],
+  ["i", 0x1DC5, 0x0307],
+  ["c", 0x0368, 0x0301],
+  ["s", 0x031C, 0x1DCC],
+].map(e => {
+  return e[0] + e.slice(1).map(c => String.fromCodePoint(c)).join("")
+}).join("")
+
+
+samples.set('Feature: mark & mkmk', `
+#!notrim
+
+${dynamic_diacritics}
+
+
+explicit ccmp subs:
+d caroncmb -> dcaron => d\u030C
+l caroncmb -> lcaron => l\u030C
+t caroncmb -> tcaron => t\u030C
+
+`)
+
+
 samples.set('Feature: sups & subs', `
 #!enableFeatures:tnum,sups
 Superscript and subscript tests
@@ -2461,8 +2499,9 @@ function main() {
     } else {
       // look for directive
       // #!directive:value
+      // #!directive
       sampleText = String(sampleText).replace(/^[\s\r\n\r]+|[\s\r\n\r]+$/g, '')
-      let m = /(?:^|\n)#\!([\w_\-]+):(.+)(?:\n|$)/.exec(sampleText)
+      let m = /(?:^|\n)#\!([\w_\-]+)(?::(.+)|)(?:\n|$)/.exec(sampleText)
       if (m) {
         // parse directive
         sampleText = (
@@ -2476,6 +2515,9 @@ function main() {
           for (let feat of m[2].toLowerCase().split(/\s*,\s*/)) {
             setFeature(feat, 1)
           }
+        } else if (directive == 'notrim') {
+          // #!notrim
+          // noop
         } else {
           console.warn(`ignoring unknown directive ${m[0]} in sample text`)
         }
