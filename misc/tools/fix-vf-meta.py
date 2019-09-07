@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 #
 # from gftools
-# https://github.com/googlefonts/gftools/blob/master/LICENSE
+# https://github.com/googlefonts/gftools/blob/
+# deebf9eb018856ffc7f0d939aea18606dc432c5a/bin/gftools-fix-vf-meta.py
 #
 """
 Fontmake can only generate a single variable font. It cannot generate a
@@ -275,17 +276,6 @@ def harmonize_vf_families(ttfonts):
   for ttfont in ttfonts:
     add_other_vf_styles_to_nametable(ttfont, family_styles)
     set_stat_for_font_in_family(ttfont, family_styles)
-
-
-# def fixupFonts(font_paths):
-#   ttfonts = [TTFont(p) for p in font_paths]
-#   ttfonts = [f for f in ttfonts if len(f['fvar'].axes) == 1]
-#   for f in ttfonts:
-#     fix_bits(f)
-#     create_stat_table(f)
-#   harmonize_vf_families(ttfonts)
-#   for path, f in zip(font_paths, ttfonts):
-#     f.save(path)
 
 
 def main():
