@@ -96,8 +96,7 @@ lookup FractionBar {
 } FractionBar;
 
 lookup Numerator1 {
-    sub @figures'
-    fraction by @numerators;
+    sub @figures' fraction by @numerators;
 } Numerator1;
 
 lookup Numerator2 {
