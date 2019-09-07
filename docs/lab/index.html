@@ -144,7 +144,7 @@ Dedicated "onefraction" with denominators:
 \u215F\u2080\u2081\u2082\u2083\u2084\u2085\u2086\u2087\u2088\u2089
 
 Arbitrary fractions with frac feature:
-1/2 1/4 3/4 5/6 7/8 1/8 5/8 3/8
+1/2 1/4 3/4 5/6 7/8 1/8 5/8 3/8 18/29 16/5
 0/0 451/980 000/000 0000000000/0000000000
 
 Arbitrary fractions of "onefraction" with frac feature:
@@ -231,8 +231,8 @@ Note on combining-marks compatibility:
 
 
 samples.set('Feature: calt', `
-(m) (M) (6) [m] [M] [6] {m} {M} {6}
-m@n M@N
+(m). (M). (6). [m]. [M]. [6]. {m}. {M}. {6}.
+m@n. M@N
 3×5     3 × 5     ×9     8×
 3−5     3 − 5     −5     8−     3+5     +5     3+
 3÷5     3 ÷ 5     ÷5     8÷     3±5     ±5     8±
@@ -283,7 +283,7 @@ left side cascades up to 5 characters:
 @@@@@@M@@@@@@
 ++++++M++++++
 
-x[x] [X]     x lc x lc followed by .case C .case
+x[x]. [X]     x lc x lc followed by .case C .case
 (Xx)         lc uc uc lc
 [Zzz]        lc uc lc lc lc
 (XX)
@@ -294,6 +294,20 @@ x[x] [X]     x lc x lc followed by .case C .case
 ()M
 X(_)         .case around underscore next to uc
 (_)          lc otherwise
+
+Foo::Bar()  foo::bar() Foo
+foo::bar( ) Foo
+foo::bar()Foo
+foo::bar( )Foo
+FOO::bar This is (a)Thing
+:: dog :: Kitten
+:: dog ::: Kitten
+::Kitten
+::8::
+:8
+X() X()
+x- X
+x -- X
 `)
 
 
