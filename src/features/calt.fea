@@ -166,6 +166,8 @@ ignore sub @LC @CASE_DELIM_L @Whitespace @Whitespace @UC;
 # short runs of uc-lc, e.g "(Xx)", "[Zzz]"
 ignore sub @CASE_DELIM_L @UC @LC @CASE_DELIM_L;
 ignore sub @CASE_DELIM_L @UC @All @LC @CASE_DELIM_L;
+ignore sub @CASE_DELIM_L @LC @UC @CASE_DELIM_L;
+ignore sub @CASE_DELIM_L @LC @All @UC @CASE_DELIM_L;
 #
 # e.g. "x-"
 # TODO: figure out how to ignore "x--A"
