@@ -84,8 +84,10 @@ Translating between EM units and pixels:
 There's a Figma workspace for glyphs, with configured metrics: ["Inter glyphs"](https://www.figma.com/file/RtScFU5NETY3j9E0yOmnW4gv/)
 
 
-## See also
+## Development
 
-- [Contributing](CONTRIBUTING.md)
-- [Compiling font files](CONTRIBUTING.md#compiling-font-files)
-- [SIL Open Font License](LICENSE.txt)
+For instructions on how to work with the source files and how to
+[compile & build font files](CONTRIBUTING.md#compiling-font-files),
+refer to [CONTRIBUTING.md](CONTRIBUTING.md).
+
+Inter is licensed under the [SIL Open Font License](LICENSE.txt)

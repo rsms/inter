@@ -59,6 +59,7 @@ There are two ways of using the toolchain:
 - `dockermake` — a [prebuild Docker image](https://cloud.docker.com/u/rsms/repository/docker/rsms/inter-build) containing the complete toolchain is used. This is the easiest and quickest way to build Inter. Supports any platform that can run Docker, like Windows, macOS and Linux.
 - locally — setup the toolchain locally using `init.sh` and then build using make. Only supports macOS and Linux.
 
+
 #### Using dockermake
 
 `dockermake` is simply `make` running in a docker image with the complete toolchain preinstalled.
@@ -72,6 +73,10 @@ $ ./dockermake -j Regular SemiBoldItalic
 misc/fontbuild instancegen src/Inter.designspace SemiBoldItalic
 ...
 ```
+
+Note: If you have used dockermake in the past, run `docker pull rsms/inter-build:latest` to
+ensure you have the latest version cached locally.
+
 
 #### Local toolchain
 
