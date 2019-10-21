@@ -90,8 +90,12 @@ build/%.woff: build/%.ttf
 
 
 # Master UFOs -> variable TTF
-$(FONTDIR)/var/%.var.ttf: src/%.designspace $(all_ufo_masters) version.txt
+$(FONTDIR)/var/Inter.var.ttf: src/Inter.designspace $(all_ufo_masters) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
+
+$(FONTDIR)/var/Inter-%.var.ttf: src/Inter-%.designspace $(all_ufo_masters) version.txt
+	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
+	misc/tools/fix-vf-meta.py $@
 
 # Instance UFO -> OTF, TTF (note: masters' rules in generated.make)
 $(FONTDIR)/const/Inter-%.otf: build/ufo/Inter-%.ufo version.txt
@@ -102,7 +106,8 @@ $(FONTDIR)/const/Inter-%.ttf: build/ufo/Inter-%.ufo version.txt
 
 
 # designspace <- glyphs file
-src/Inter-*.designspace: src/Inter.designspace
+src/Inter-upright.designspace: src/Inter.designspace
+src/Inter-italic.designspace: src/Inter.designspace
 src/Inter.designspace: src/Inter.glyphs
 	misc/fontbuild glyphsync $<
 
@@ -216,14 +221,6 @@ build/tmp/a.zip:
 	cp -a misc/dist/inter.css           "$(ZD)/Inter (web hinted)/"
 	cp -a misc/dist/*.txt               "$(ZD)/"
 	cp -a LICENSE.txt                   "$(ZD)/"
-	@#
-	@# Fix VF metadata
-	misc/tools/fix-vf-meta.py \
-	  "$(ZD)/Inter (web)/Inter-upright.var.woff2" \
-	  "$(ZD)/Inter (web)/Inter-italic.var.woff2"
-	misc/tools/fix-vf-meta.py \
-	  "$(ZD)/Inter (TTF variable)/Inter-upright.var.ttf" \
-	  "$(ZD)/Inter (TTF variable)/Inter-italic.var.ttf"
 	@#
 	@# Add "beta" to Light and Thin filenames.
 	@# Requires "rename" tool in PATH (`brew install rename` on macOS)
