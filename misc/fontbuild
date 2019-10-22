@@ -16,6 +16,8 @@ import re
 import signal
 import subprocess
 import ufo2ft
+import font_names
+
 from functools import partial
 from fontmake.font_project import FontProject
 from defcon import Font
@@ -110,124 +112,96 @@ def findGlyphDirectives(g): # -> set<string> | None
   return directives
 
 
+
+def deep_copy_contours(ufo, parent, component, transformation):
+  """Copy contours from component to parent, including nested components."""
+  for nested in component.components:
+    deep_copy_contours(
+      ufo, parent, ufo[nested.baseGlyph],
+      transformation.transform(nested.transformation))
+  if component != parent:
+    pen = TransformPen(parent.getPen(), transformation)
+    # if the transformation has a negative determinant, it will reverse
+    # the contour direction of the component
+    xx, xy, yx, yy = transformation[:4]
+    if xx*yy - xy*yx < 0:
+      pen = ReverseContourPen(pen)
+    component.draw(pen)
+
+
+
+def decompose_glyphs(ufos, glyphNamesToDecompose):
+  for ufo in ufos:
+    for glyphname in glyphNamesToDecompose:
+      glyph = ufo[glyphname]
+      deep_copy_contours(ufo, glyph, glyph, Transform())
+      glyph.clearComponents()
+
+
+
+# subclass of fontmake.FontProject that
+# - patches version metadata
+# - decomposes certain glyphs
+# - removes overlaps of certain glyphs
+#
 class VarFontProject(FontProject):
-  def __init__(self, familyName=None, compact_style_names=False, *args, **kwargs):
+  def __init__(self, compact_style_names=False, *args, **kwargs):
     super(VarFontProject, self).__init__(*args, **kwargs)
-    self.familyName = familyName
     self.compact_style_names = compact_style_names
 
 
-  def decompose_glyphs(self, designspace, glyph_filter=lambda g: True):
-    """Move components of UFOs' glyphs to their outlines."""
-    for ufo in designspace:
-      log.info('Decomposing glyphs for ' + self._font_name(ufo))
-      for glyph in ufo:
-        if not glyph.components or not glyph_filter(glyph):
-          continue
-        self._deep_copy_contours(ufo, glyph, glyph, Transform())
-        glyph.clearComponents()
+  # override FontProject._load_designspace_sources
+  def _load_designspace_sources(self, designspace):
+    designspace = FontProject._load_designspace_sources(designspace)
+    masters = [s.font for s in designspace.sources]  # list of UFO font objects
 
-
-  def _deep_copy_contours(self, ufo, parent, component, transformation):
-    """Copy contours from component to parent, including nested components."""
-    for nested in component.components:
-      self._deep_copy_contours(
-        ufo, parent, ufo[nested.baseGlyph],
-        transformation.transform(nested.transformation))
-    if component != parent:
-      pen = TransformPen(parent.getPen(), transformation)
-      # if the transformation has a negative determinant, it will reverse
-      # the contour direction of the component
-      xx, xy, yx, yy = transformation[:4]
-      if xx*yy - xy*yx < 0:
-        pen = ReverseContourPen(pen)
-      component.draw(pen)
-
-
-  def _build_interpolatable_masters(
-    self,
-    designspace,
-    ttf,
-    use_production_names=None,
-    reverse_direction=True,
-    conversion_error=None,
-    feature_writers=None,
-    cff_round_tolerance=None,
-    **kwargs,
-  ):
-    # We decompose any glyph with reflected components to make sure
-    # that fontTools varLib is able to produce properly-slanting interpolation.
-
-    designspace = self._load_designspace_sources(designspace)
-
-    decomposeGlyphs = set()
-    removeOverlapsGlyphs = set()
-    masters = [s.font for s in designspace.sources]
+    # Update the default source's full name to not include style name
+    defaultFont = designspace.default.font
+    defaultFont.info.openTypeNameCompatibleFullName = defaultFont.info.familyName
 
     for ufo in masters:
-
-      if self.familyName is not None:
-        ufo.info.familyName =\
-          ufo.info.familyName.replace('Inter', self.familyName)
-        ufo.info.styleMapFamilyName =\
-          ufo.info.styleMapFamilyName.replace('Inter', self.familyName)
-        ufo.info.postscriptFontName =\
-          ufo.info.postscriptFontName.replace('Inter', self.familyName.replace(' ', ''))
-        ufo.info.macintoshFONDName =\
-          ufo.info.macintoshFONDName.replace('Inter', self.familyName)
-        ufo.info.openTypeNamePreferredFamilyName =\
-          ufo.info.openTypeNamePreferredFamilyName.replace('Inter', self.familyName)
-
       # patch style name if --compact-style-names is set
-      if args.compact_style_names:
+      if self.compact_style_names:
         collapseFontStyleName(ufo)
+      # update font version
+      updateFontVersion(ufo, isVF=True)
 
-      updateFontVersion(ufo)
-      ufoname = basename(ufo.path)
-
+    # find glyphs subject to decomposition and/or overlap removal
+    glyphNamesToDecompose  = set()  # glyph names
+    glyphsToRemoveOverlaps = set()  # glyph names
+    for ufo in masters:
       for g in ufo:
         directives = findGlyphDirectives(g)
         if g.components and composedGlyphIsNonTrivial(g):
-          decomposeGlyphs.add(g.name)
+          glyphNamesToDecompose.add(g.name)
         if 'removeoverlap' in directives:
           if g.components and len(g.components) > 0:
-            decomposeGlyphs.add(g.name)
-          removeOverlapsGlyphs.add(g)
+            glyphNamesToDecompose.add(g.name)
+          glyphsToRemoveOverlaps.add(g)
 
-    self.decompose_glyphs(masters, lambda g: g.name in decomposeGlyphs)
+    # decompose
+    if log.isEnabledFor(logging.INFO):
+      log.info('Decomposing glyphs:\n  %s', "\n  ".join(glyphNamesToDecompose))
+    decompose_glyphs(masters, glyphNamesToDecompose)
 
-    if len(removeOverlapsGlyphs) > 0:
+    # remove overlaps
+    if len(glyphsToRemoveOverlaps) > 0:
       rmoverlapFilter = RemoveOverlapsFilter(backend='pathops')
       rmoverlapFilter.start()
-      for g in removeOverlapsGlyphs:
+      if log.isEnabledFor(logging.INFO):
         log.info(
-          'Removing overlaps in glyph "%s" of %s',
-          g.name,
-          basename(g.getParent().path)
+          'Removing overlaps in glyphs:\n  %s',
+          "\n  ".join(set([g.name for g in glyphsToRemoveOverlaps])),
         )
+      for g in glyphsToRemoveOverlaps:
         rmoverlapFilter.filter(g)
 
-
-    if ttf:
-      return ufo2ft.compileInterpolatableTTFsFromDS(
-        designspace,
-        useProductionNames=use_production_names,
-        reverseDirection=reverse_direction,
-        cubicConversionError=conversion_error,
-        featureWriters=feature_writers,
-        inplace=True,
-      )
-    else:
-      return ufo2ft.compileInterpolatableOTFsFromDS(
-        designspace,
-        useProductionNames=use_production_names,
-        roundTolerance=cff_round_tolerance,
-        featureWriters=feature_writers,
-        inplace=True,
-      )
+    # handle control back to fontmake
+    return designspace
 
 
-def updateFontVersion(font, dummy=False):
+
+def updateFontVersion(font, dummy=False, isVF=False):
   version = getVersion()
   buildtag = getGitHash()
   now = datetime.datetime.utcnow()
@@ -242,11 +216,13 @@ def updateFontVersion(font, dummy=False):
   font.info.woffMajorVersion = versionMajor
   font.info.woffMinorVersion = versionMinor
   font.info.year = now.year
-  font.info.openTypeNameVersion = "Version %d.%03d;git-%s" % (
-    versionMajor, versionMinor, buildtag)
-  font.info.openTypeNameUniqueID = "%s %s:%d:%s" % (
-    font.info.familyName, font.info.styleName, now.year, buildtag)
-  # creation date & time (YYYY/MM/DD HH:MM:SS)
+  font.info.openTypeNameVersion = "Version %d.%03d;git-%s" % (versionMajor, versionMinor, buildtag)
+  psFamily = re.sub(r'\s', '', font.info.familyName)
+  if isVF:
+    font.info.openTypeNameUniqueID = "%s:VF:%d:%s" % (psFamily, now.year, buildtag)
+  else:
+    psStyle = re.sub(r'\s', '', font.info.styleName)
+    font.info.openTypeNameUniqueID = "%s-%s:%d:%s" % (psFamily, psStyle, now.year, buildtag)
   font.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
 
 
@@ -362,6 +338,8 @@ class Main(object):
         compile-var  Build variable font files
         glyphsync    Generate designspace and UFOs from Glyphs file
         instancegen  Generate instance UFOs for designspace
+        checkfont    Verify integrity of font files
+        rename       Rename fonts
       '''.strip().replace('\n      ', '\n'))
 
     argparser.add_argument('-v', '--verbose', action='store_true',
@@ -426,9 +404,6 @@ class Main(object):
     argparser.add_argument('-o', '--output', metavar='<fontfile>',
       help='Output font file')
 
-    argparser.add_argument('--name', metavar='<family-name>',
-      help='Override family name, replacing "Inter"')
-
     argparser.add_argument('--compact-style-names', action='store_true',
       help="Produce font files with style names that doesn't contain spaces. "\
            "E.g. \"SemiBoldItalic\" instead of \"Semi Bold Italic\"")
@@ -437,27 +412,14 @@ class Main(object):
 
     # decide output filename (or check user-provided name)
     outfilename = args.output
-    outformat = 'variable'  # TTF
     if outfilename is None or outfilename == '':
-      outfilename = os.path.splitext(basename(args.srcfile))[0] + '.var.ttf'
+      outfilename = os.path.splitext(basename(args.srcfile))[0] + '.var.otf'
       log.info('setting --output %r' % outfilename)
-    else:
-      outfileext = os.path.splitext(outfilename)[1]
-      if outfileext.lower() == '.otf':
-        outformat = 'variable-cff2'
-      elif outfileext.lower() != '.ttf':
-        fatal('Invalid file extension %r (expected ".ttf")' % outfileext)
 
     mkdirs(dirname(outfilename))
 
-    # override family name?
-    familyName = None
-    if args.name is not None and len(args.name) > 0:
-      familyName = args.name
-
     project = VarFontProject(
       verbose=self.logLevelName,
-      familyName=familyName,
       compact_style_names=args.compact_style_names,
     )
     project.run_from_designspace(
@@ -467,10 +429,21 @@ class Main(object):
       use_production_names=True,
       round_instances=True,
       output_path=outfilename,
-      output=[outformat],
+      output=["variable"],  # "variable-cff2" in the future
       optimize_cff=CFFOptimization.SUBROUTINIZE,
       overlaps_backend='pathops', # use Skia's pathops
     )
+
+    # Rename fullName record to familyName (VF only)
+    # Note: Even though we set openTypeNameCompatibleFullName it seems that the fullName
+    # record is still computed by fonttools, so we override it here.
+    font = font_names.loadFont(outfilename)
+    try:
+      familyName = font_names.getFamilyName(font)
+      font_names.setFullName(font, familyName)
+      font.save(outfilename)
+    finally:
+      font.close()
 
     self.log("write %s" % outfilename)
 
@@ -652,7 +625,7 @@ class Main(object):
     italic = False
     if tag == 'italic':
       italic = True
-    elif tag != 'upright':
+    elif tag != 'roman':
       raise Exception('unexpected tag ' + tag)
 
     for a in ds.axes:
@@ -785,11 +758,11 @@ class Main(object):
     self.log("write %s" % relpath(designspace_file, os.getcwd()))
     designspace.write(designspace_file)
 
-    # upright designspace
-    upright_designspace_file = pjoin(outdir, 'Inter-upright.designspace')
+    # roman designspace
+    roman_designspace_file = pjoin(outdir, 'Inter-roman.designspace')
     p = Process(
       target=self._genSubsetDesignSpace,
-      args=(designspace, 'upright', upright_designspace_file)
+      args=(designspace, 'roman', roman_designspace_file)
     )
     p.start()
     procs.append(p)
@@ -927,6 +900,49 @@ class Main(object):
     for fontfile in args.files:
       if not q.get():
         sys.exit(1)
+
+
+  def cmd_rename(self, argv):
+    argparser = argparse.ArgumentParser(
+      usage='%(prog)s rename <options> <file>',
+      description='Rename family and/or styles of font'
+    )
+    a = lambda *args, **kwargs: argparser.add_argument(*args, **kwargs)
+
+    a('-o', '--output', metavar='<file>',
+      help='Output font file. Defaults to input file (overwrite.)')
+    a('--family', metavar='<name>',
+      help='Rename family to <name>')
+    a('--compact-style', action='store_true',
+      help='Rename style names to CamelCase. e.g. "Extra Bold Italic" -> "ExtraBoldItalic"')
+    a('input', metavar='<file>',
+      help='Input font file')
+
+    args = argparser.parse_args(argv)
+
+    infile = args.input
+    outfile = args.output or infile
+
+    font = font_names.loadFont(infile)
+    editCount = 0
+    try:
+      if args.family:
+        editCount += 1
+        font_names.setFamilyName(font, args.family)
+
+      if args.compact_style:
+        editCount += 1
+        font_names.removeWhitespaceFromStyles(font)
+
+      if editCount > 0:
+        font.save(outfile)
+      else:
+        print("no rename options provided", file=sys.stderr)
+        argparser.print_usage(sys.stderr)
+        sys.exit(1)
+    finally:
+      font.close()
+
 
 
 if __name__ == '__main__':
