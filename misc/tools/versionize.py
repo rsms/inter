@@ -32,6 +32,9 @@ def updateHTMLFile(filename):
     f.write(s)
 
 
+updateCSSFile(pjoin(BASEDIR, 'misc', 'dist', 'inter.css'))
+updateHTMLFile(pjoin(BASEDIR, 'docs', '_includes', 'preload-font-files.html'))
+
+# Note: The website CSS file uses Jekyll variables to add ?v= so don't need this anymore.
 # updateCSSFile(pjoin(BASEDIR, 'docs', 'inter.css'))
 # updateCSSFile(pjoin(BASEDIR, 'docs', 'inter-ui.css'))
-updateHTMLFile(pjoin(BASEDIR, 'docs', '_includes', 'preload-font-files.html'))

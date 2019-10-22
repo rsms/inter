@@ -1,23 +1,25 @@
 
-Variable fonts is a new technology still undergoing development.
+There are three flavors of variable Inter to choose from:
 
-The directory named "Inter (TTF variable)" contains three files:
+- Inter (Variable)
+  Multi-axis complete family called "Inter"
 
-- Inter.var.otf        -- Multi-axis complete family
-- Inter-italic.var.otf -- Single-axis italic style with variable weight axis.
-- Inter-roman.var.otf  -- Single-axis roman style with variable weight axis.
+- Inter V (Variable)
+  Multi-axis complete family called "Inter V"
+  Apart from the difference in family name, this is the same as the above.
+  Useful when you want to install traditional constant font files alongside
+  the variable version.
 
-The "Inter (web)" directory contains WOFF2 versions of these same
-font files.
+- Inter (Variable, single axis)
+  Single-axis variable fonts. Only the weight is variable, but not the slant.
+  These font files are provided only for technical compatibility with systems
+  that do not support mult-axis variable fonts.
 
-Support for variable fonts is limited as of late 2018, but support
-is quickly arriving to web browsers, operating systems and
-design application.
+Note: Variable fonts is a new technology still undergoing development.
+      System and application support is emerging but is not perfect.
 
-Multi-axis variable fonts have worse support than single-axis variable fonts,
-so in case you are experiencing issue with the multi-axis font, try the
-two single-axis variable fonts instead.
+The "Inter (Web)" directory contains WOFF2 files of both the multi-axis and
+single-axis variable font files.
 
-If you're in doubt or uncertain about variable fonts, then you
-probably don't need to use a variable font, and you can ignore
-files which name contains ".var"
+If you're in doubt or uncertain about variable fonts, then you probably don't
+need to use a variable font. Install the fonts in the "Inter" folder instead.

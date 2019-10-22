@@ -1,24 +1,24 @@
+Installing traditional static/constant font files on macOS:
 
-Installing on macOS:
-
-1. Open the "Inter (OTF)" folder
-2. Select all font files
-3. Right-click (or ctrl-click) the selected files
-   and choose "Open with..." → "Font Book"
-4. Press the "Install" button
-
-If you get any errors, like Font Book saying there're duplicate fonts,
-cancel the installation and instead try the instructions below:
-
-
-Installing on macOS, manually:
-
-1. Copy the "Inter (OTF)" folder
+1. Copy the "Inter" folder
 2. Press cmd-shift-G in Finder
 3. Enter "~/Library/Fonts" into the dialog that shows up and press RETURN.
-4. Paste the "Inter (OTF)" folder.
+4. Delete any existing "Inter" files and folders
+5. Paste the "Inter" folder
 
-If you have a previous installation of Inter, you should make sure to
-remove those fonts files before installing new ones.
 
-See https://github.com/rsms/inter for more information
+Installing variable font on macOS:
+
+1. Copy the "Inter.otf" file in the "Inter (Variable)" folder
+2. Press cmd-shift-G in Finder
+3. Enter "~/Library/Fonts" into the dialog that shows up and press RETURN.
+4. Delete any existing "Inter" files and folders
+5. Paste the "Inter.otf" file
+
+Note that you can install both the traditional static fonts AND variable fonts
+alongside each other: Use the "Inter" and "Inter V (Variable)" folders.
+The "Inter V (Variable)" folder contains Inter named "Inter V", avoiding name
+conflicts.
+
+Having issues? Are you using an older version of macOS (older than 10.13)?
+Then you'll want to install the non-variable fonts (top of this document.)
