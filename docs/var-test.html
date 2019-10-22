@@ -54,8 +54,8 @@ Note on font file URLs:
   font-weight: 100 900;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url("font-files/Inter-upright.var.woff2?t=woff2-variations&v={{inter_var_woff2_v}}") format("woff2-variations"),
-       url("font-files/Inter-upright.var.woff2?t=woff2&v={{inter_var_woff2_v}}") format("woff2");
+  src: url("font-files/Inter-roman.var.woff2?t=woff2-variations&v={{inter_var_woff2_v}}") format("woff2-variations"),
+       url("font-files/Inter-roman.var.woff2?t=woff2&v={{inter_var_woff2_v}}") format("woff2");
 }
 @font-face {
   font-family: 'Inter var single-axis';
@@ -287,7 +287,7 @@ if (
         <li>
           Mapping of <tt>ital</tt> axis to <tt>font-style:italic</tt>
           is not supported, nor is Mapping of <tt>slnt</tt> axis to <tt>font-style:oblique</tt>.
-          Note: We use separate italic and upright font files for Edge in this
+          Note: We use separate italic and roman font files for Edge in this
           test, which is why intermediate oblique degrees are displayed as either
           fully slanted or not slanted at all when viewing this in Edge.
           (Last confirmed version: Edge 42)

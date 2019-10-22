@@ -47,14 +47,16 @@ all_const: all_otf  all_ttf  all_web
 all_const_hinted: all_ttf_hinted  all_web_hinted
 var: \
 	$(FONTDIR)/var/Inter.var.woff2 \
-	$(FONTDIR)/var/Inter.var.ttf
+	$(FONTDIR)/var/Inter.var.otf
 all_var: \
+	$(FONTDIR)/var/Inter.var.otf \
 	$(FONTDIR)/var/Inter.var.woff2 \
-	$(FONTDIR)/var/Inter.var.ttf \
-	$(FONTDIR)/var/Inter-upright.var.woff2 \
-	$(FONTDIR)/var/Inter-italic.var.woff2 \
-	$(FONTDIR)/var/Inter-upright.var.ttf \
-	$(FONTDIR)/var/Inter-italic.var.ttf
+	$(FONTDIR)/var/Inter-V.var.otf \
+	$(FONTDIR)/var/Inter-V.var.woff2 \
+	$(FONTDIR)/var/Inter-roman.var.otf \
+	$(FONTDIR)/var/Inter-roman.var.woff2 \
+	$(FONTDIR)/var/Inter-italic.var.otf \
+	$(FONTDIR)/var/Inter-italic.var.woff2
 
 all_ufo_masters = $(Thin_ufo_d) \
                   $(ThinItalic_ufo_d) \
@@ -77,6 +79,8 @@ include build/etc/generated.make
 
 
 # TTF -> WOFF2
+build/%.var.woff2: build/%.var.otf
+	woff2_compress "$<"
 build/%.woff2: build/%.ttf
 	woff2_compress "$<"
 
@@ -90,12 +94,16 @@ build/%.woff: build/%.ttf
 
 
 # Master UFOs -> variable TTF
-$(FONTDIR)/var/Inter.var.ttf: src/Inter.designspace $(all_ufo_masters) version.txt
+$(FONTDIR)/var/Inter.var.otf: src/Inter.designspace $(all_ufo_masters) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 
-$(FONTDIR)/var/Inter-%.var.ttf: src/Inter-%.designspace $(all_ufo_masters) version.txt
+$(FONTDIR)/var/Inter-V.var.otf: $(FONTDIR)/var/Inter.var.otf
+	misc/fontbuild rename --family "Inter V" -o $@ $<
+
+$(FONTDIR)/var/Inter-%.var.otf: src/Inter-%.designspace $(all_ufo_masters) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 	misc/tools/fix-vf-meta.py $@
+
 
 # Instance UFO -> OTF, TTF (note: masters' rules in generated.make)
 $(FONTDIR)/const/Inter-%.otf: build/ufo/Inter-%.ufo version.txt
@@ -106,7 +114,7 @@ $(FONTDIR)/const/Inter-%.ttf: build/ufo/Inter-%.ufo version.txt
 
 
 # designspace <- glyphs file
-src/Inter-upright.designspace: src/Inter.designspace
+src/Inter-roman.designspace: src/Inter.designspace
 src/Inter-italic.designspace: src/Inter.designspace
 src/Inter.designspace: src/Inter.glyphs
 	misc/fontbuild glyphsync $<
@@ -308,6 +316,27 @@ docs/glyphs/metrics.json: $(Regular_ufo_d) misc/tools/gen-metrics-and-svgs.py
 build/UnicodeData.txt:
 	@echo fetch http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 	@curl '-#' -o "$@" http://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
+
+
+
+
+build/googlefonts/%: $(FONTDIR)/%
+	misc/fontbuild rename --compact-style -o $@ "$<"
+# build/googlefonts/const/%.otf: $(FONTDIR)/const/%.otf
+# build/googlefonts/var/%.woff2: $(FONTDIR)/var/%.woff2
+# build/googlefonts/var/%.otf: $(FONTDIR)/var/%.otf
+
+# Google fonts
+googlefonts: googlefonts_pre googlefonts_all
+
+googlefonts_pre:
+	@rm -rf build/googlefonts
+	@mkdir -p  build/googlefonts/const  build/googlefonts/var
+
+.PHONY: googlefonts googlefonts_pre
+
+
+
 
 # install targets
 install_ttf: all_ttf_const

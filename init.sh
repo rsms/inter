@@ -522,6 +522,20 @@ else
     # done
     # echo "" >> "$GEN_MAKE_FILE"
 
+    # googlefonts_all target
+    echo -n "googlefonts_all:" >> "$GEN_MAKE_FILE"
+    echo -n " build/googlefonts/var/Inter.var.otf" >> "$GEN_MAKE_FILE"
+    echo -n " build/googlefonts/var/Inter.var.woff2" >> "$GEN_MAKE_FILE"
+    echo -n " build/googlefonts/var/Inter-roman.var.otf" >> "$GEN_MAKE_FILE"
+    echo -n " build/googlefonts/var/Inter-roman.var.woff2" >> "$GEN_MAKE_FILE"
+    echo -n " build/googlefonts/var/Inter-italic.var.otf" >> "$GEN_MAKE_FILE"
+    echo -n " build/googlefonts/var/Inter-italic.var.woff2" >> "$GEN_MAKE_FILE"
+    for style in "${all_styles[@]}"; do
+      echo -n " build/googlefonts/const/Inter-${style}.otf" >> "$GEN_MAKE_FILE"
+      echo -n " build/googlefonts/const/Inter-${style}.woff2" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+
 
     echo -n ".PHONY: all_otf all_ttf_hinted all_ttf all_web all_web_hinted all_ufo all_check_const" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
