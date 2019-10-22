@@ -333,14 +333,10 @@ build/UnicodeData.txt:
 
 
 
-
+# Google fonts
 build/googlefonts/%: $(FONTDIR)/%
 	misc/fontbuild rename --compact-style -o $@ "$<"
-# build/googlefonts/const/%.otf: $(FONTDIR)/const/%.otf
-# build/googlefonts/var/%.woff2: $(FONTDIR)/var/%.woff2
-# build/googlefonts/var/%.otf: $(FONTDIR)/var/%.otf
 
-# Google fonts
 googlefonts: googlefonts_pre googlefonts_all
 
 googlefonts_pre:
