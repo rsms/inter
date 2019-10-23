@@ -11,7 +11,7 @@ tabular numbers, etc.
 
 [![Sample](docs/res/sample.png)](https://rsms.me/inter/samples/)
 
-### [⬇︎ Download the latest release](https://github.com/rsms/inter/releases)
+### [⬇︎ Download the latest release](https://github.com/rsms/inter/releases/latest)
 
 After downloading the zip from above:
 
