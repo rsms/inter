@@ -1,16 +1,12 @@
-# note: These should match requirements of fontmake
-
-fontmake==2.0.1
-fonttools[lxml,unicode,ufo]==3.44.0
-glyphsLib==4.1.2
+fonttools[lxml,unicode,ufo]==4.0.1
+cu2qu==1.6.6
+glyphsLib==5.0.1
+ufo2ft[pathops]==2.9.1
+defcon[lxml]==0.6.0
 skia-pathops==0.2.0.post2
-ufo2ft==2.9.1
-fs==2.4.10
 
-# for fontTools/varLib/interpolatable.py
-numpy==1.17.1
-scipy==1.3.1
-munkres==1.1.2
+# only used for DesignSpaceDocumentReader in fontbuild
+MutatorMath==2.1.2
 
 # for woff2
 brotli==1.0.7
