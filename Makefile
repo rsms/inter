@@ -367,7 +367,11 @@ install_otf: all_otf
 	mkdir -p ~/'Library/Fonts/Inter'
 	cp -va $(FONTDIR)/const/*.otf ~/'Library/Fonts/Inter'
 
-install: install_otf
+install_var_v: $(FONTDIR)/var/Inter-V.var.otf
+	mkdir -p ~/'Library/Fonts/Inter'
+	cp -va $(FONTDIR)/var/Inter-V.var.otf ~/'Library/Fonts/Inter/Inter-V.otf'
+
+install: install_otf install_var_v
 
 .PHONY: install install_otf install_ttf
 
