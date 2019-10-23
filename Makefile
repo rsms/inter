@@ -134,6 +134,7 @@ build/ufo/Inter-%.ufo: build/ufo/features src/Inter.designspace $(all_ufo_master
 	misc/fontbuild instancegen src/Inter.designspace $*
 
 build/ufo/features:
+	mkdir -p build/ufo
 	ln -s ../../src/features build/ufo/features
 
 # make sure intermediate UFOs are not gc'd by make
