@@ -12,7 +12,7 @@ IMAGE_NAME=rsms/inter-build
 BUILD_DIR=$ROOT_DIR/build/docker
 
 # setup build dir
-mkdir -p "$BUILD_DIR/misc/tools"
+mkdir -p "$BUILD_DIR/misc/tools" "$BUILD_DIR/misc/fontbuildlib"
 
 # copy files to build dir
 echo "Syncing build dir"
@@ -20,14 +20,17 @@ cp -a \
   init.sh \
   requirements.txt \
   "$DOCKER_DIR/Dockerfile" \
-  "$BUILD_DIR/" &
-rsync -v -acC --delete --filter="- *.pyc" --filter="- /*/" \
-  "misc/tools/" \
-  "$BUILD_DIR/misc/tools/" &
-rsync -v -acC --delete \
-  misc/fontbuild \
-  misc/ttf2woff \
-  "$BUILD_DIR/misc/"
+  "$BUILD_DIR/"
+# rsync -v -acC --delete --filter="- *.pyc" --filter="- /*/" \
+#   "misc/tools/" \
+#   "$BUILD_DIR/misc/tools/" &
+# rsync -v -acC --delete --filter="- *.pyc" --filter="- /*/" \
+#   "misc/fontbuildlib/" \
+#   "$BUILD_DIR/misc/fontbuildlib/" &
+# rsync -v -acC --delete \
+#   misc/fontbuild \
+#   misc/ttf2woff \
+#   "$BUILD_DIR/misc/"
 wait
 
 # update githash.txt

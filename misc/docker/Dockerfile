@@ -12,6 +12,7 @@ COPY . /inter/
 RUN rm Dockerfile
 
 RUN ln -s /host/src src \
+ && ln -s /host/misc misc \
  && ln -s /host/version.txt . \
  && ln -s /host/githash.txt . \
  && ln -s /host/Makefile . \
