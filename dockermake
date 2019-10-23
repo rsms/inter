@@ -8,4 +8,4 @@ cd "$(dirname "$0")"
 if [[ -d .git ]]; then
   git rev-parse --short HEAD > githash.txt
 fi
-docker run --rm -it -v "$PWD:/host" rsms/inter-build:latest make "$@"
+docker run --rm -it -v "$PWD:/host" rsms/inter-build:latest make -r -R "$@"
