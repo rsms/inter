@@ -73,11 +73,14 @@ def renameStylesGoogleFonts(font):
         s = familyName + " " + removeWhitespace(s[start + len(familyName):])
       else:
         s = removeWhitespace(s)
+      if s != "Italic" and s.endswith("Italic"):
+        # fixup e.g. "ExtraBoldItalic" -> "ExtraBold Italic"
+        s = s[:len(s) - len("Italic")] + " Italic"
       rec.string = s
     if rid in (SUBFAMILY_NAME,) or rid in vfInstanceSubfamilyNameIds:
       s = removeWhitespace(rec.toUnicode())
       if s != "Italic" and s.endswith("Italic"):
-        # fixup "ExtraBoldItalic" -> "ExtraBold Italic"
+        # fixup e.g. "ExtraBoldItalic" -> "ExtraBold Italic"
         s = s[:len(s) - len("Italic")] + " Italic"
       rec.string = s
     # else: ignore standard names unrelated to style
