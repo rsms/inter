@@ -22,7 +22,7 @@ from glyphsLib.interpolation import apply_instance_data
 from fontbuildlib import FontBuilder
 from fontbuildlib.util import mkdirs, loadTTFont
 from fontbuildlib.info import setFontInfo, updateFontVersion
-from fontbuildlib.name import setFamilyName, removeWhitespaceFromStyles
+from fontbuildlib.name import setFamilyName, renameStylesGoogleFonts
 
 log = logging.getLogger(__name__)
 
@@ -581,10 +581,13 @@ class Main(object):
 
     a('-o', '--output', metavar='<file>',
       help='Output font file. Defaults to input file (overwrite.)')
+
     a('--family', metavar='<name>',
       help='Rename family to <name>')
-    a('--compact-style', action='store_true',
-      help='Rename style names to CamelCase. e.g. "Extra Bold Italic" -> "ExtraBoldItalic"')
+
+    a('--google-style', action='store_true',
+      help='Rename style names to Google Fonts standards.')
+
     a('input', metavar='<file>',
       help='Input font file')
 
@@ -600,9 +603,9 @@ class Main(object):
         editCount += 1
         setFamilyName(font, args.family)
 
-      if args.compact_style:
+      if args.google_style:
         editCount += 1
-        removeWhitespaceFromStyles(font)
+        renameStylesGoogleFonts(font)
 
       if editCount == 0:
         print("no rename options provided", file=sys.stderr)

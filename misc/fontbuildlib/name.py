@@ -53,7 +53,7 @@ def getFamilyName(font):
   return r.toUnicode()
 
 
-def removeWhitespaceFromStyles(font):
+def renameStylesGoogleFonts(font):
   familyName = getFamilyName(font)
 
   # collect subfamily (style) name IDs for variable font's named instances
@@ -75,7 +75,11 @@ def removeWhitespaceFromStyles(font):
         s = removeWhitespace(s)
       rec.string = s
     if rid in (SUBFAMILY_NAME,) or rid in vfInstanceSubfamilyNameIds:
-      rec.string = removeWhitespace(rec.toUnicode())
+      s = removeWhitespace(rec.toUnicode())
+      if s != "Italic" and s.endswith("Italic"):
+        # fixup "ExtraBoldItalic" -> "ExtraBold Italic"
+        s = s[:len(s) - len("Italic")] + " Italic"
+      rec.string = s
     # else: ignore standard names unrelated to style
 
 
