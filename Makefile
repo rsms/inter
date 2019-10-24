@@ -110,6 +110,7 @@ $(FONTDIR)/const/Inter-%.ttf: build/ufo/Inter-%.ufo version.txt
 build/ufo/Inter-roman.designspace: build/ufo/Inter.designspace
 build/ufo/Inter-italic.designspace: build/ufo/Inter.designspace
 build/ufo/Inter.designspace: src/Inter.glyphs
+	@mkdir -p build/ufo
 	misc/fontbuild glyphsync -o build/ufo src/Inter.glyphs
 
 
@@ -129,7 +130,7 @@ src/features: $(wildcard src/features/*)
 	touch "$@"
 	@true
 build/ufo/features: src/features
-	mkdir -p build/ufo
+	@mkdir -p build/ufo
 	ln -s ../../src/features build/ufo/features
 
 # make sure intermediate UFOs are not gc'd by make
