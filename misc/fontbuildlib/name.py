@@ -36,6 +36,8 @@ def setFullName(font, fullName):
   nameTable = font["name"]
   nameTable.setName(fullName, FULL_NAME, 1, 0, 0)     # mac
   nameTable.setName(fullName, FULL_NAME, 3, 1, 0x409) # windows
+  nameTable.setName(fullName, POSTSCRIPT_NAME, 1, 0, 0)     # mac
+  nameTable.setName(fullName, POSTSCRIPT_NAME, 3, 1, 0x409) # windows
 
 
 def getFamilyName(font):
@@ -76,13 +78,13 @@ def renameStylesGoogleFonts(font):
       if s != "Italic" and s.endswith("Italic"):
         # fixup e.g. "ExtraBoldItalic" -> "ExtraBold Italic"
         s = s[:len(s) - len("Italic")] + " Italic"
-      rec.string = s
+      rec.string = s.strip()
     if rid in (SUBFAMILY_NAME,) or rid in vfInstanceSubfamilyNameIds:
       s = removeWhitespace(rec.toUnicode())
       if s != "Italic" and s.endswith("Italic"):
         # fixup e.g. "ExtraBoldItalic" -> "ExtraBold Italic"
         s = s[:len(s) - len("Italic")] + " Italic"
-      rec.string = s
+      rec.string = s.strip()
     # else: ignore standard names unrelated to style
 
 
