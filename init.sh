@@ -376,19 +376,21 @@ else
 
   # Warning about UFOs moving from src to build/ufo
   for f in src/Inter-*.ufo; do
-    echo "" >&2
-    echo "--------------------------- WARNING ----------------------------" >&2
-    echo "" >&2
-    echo "     UFO files have moved from ./src to ./build/ufo" >&2
-    echo "" >&2
-    echo "If you are working with a UFO workflow, please manually move" >&2
-    echo "your UFO source files from ./src to ./build/ufo." >&2
-    echo "" >&2
-    echo "If you are working in a Glyphps workflow, then simply remove" >&2
-    echo "the UFO files in ./src to silence this warning." >&2
-    echo "" >&2
-    echo "----------------------------------------------------------------" >&2
-    echo "" >&2
+    if [ -f "$f" ]; then
+      echo "" >&2
+      echo "--------------------------- WARNING ----------------------------" >&2
+      echo "" >&2
+      echo "     UFO files have moved from ./src to ./build/ufo" >&2
+      echo "" >&2
+      echo "If you are working with a UFO workflow, please manually move" >&2
+      echo "your UFO source files from ./src to ./build/ufo." >&2
+      echo "" >&2
+      echo "If you are working in a Glyphps workflow, then simply remove" >&2
+      echo "the UFO files in ./src to silence this warning." >&2
+      echo "" >&2
+      echo "----------------------------------------------------------------" >&2
+      echo "" >&2
+    fi
     break
   done
 
