@@ -15,8 +15,14 @@
 }
 
 * { margin:0; padding:0; font-synthesis: none; }
-html { }
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
   background-color: white;
   color:#111;
   font:11px serif;
@@ -91,10 +97,10 @@ select:focus {
 }
 
 .options {
-  width: 275px;
+  flex-grow: 0;
+  order: 2;
+  min-width: 275px;
   box-sizing:border-box;
-  position:fixed;
-  top:0; right:0; bottom:0;
   background:#f4f4f4;
   padding: 24px;
   user-select:none; -moz-user-select: none; -webkit-user-select:none;
@@ -234,7 +240,7 @@ select:focus {
 
 .preview {
   display:flex;
-  margin-right:275px; /*width of options sidebar*/
+  flex-grow: 1;
   overflow: auto;
 }
 
