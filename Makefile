@@ -127,11 +127,12 @@ designspace: build/ufo/Inter.designspace
 
 # features
 src/features: $(wildcard src/features/*)
-	touch "$@"
+	@touch "$@"
 	@true
 build/ufo/features: src/features
 	@mkdir -p build/ufo
-	ln -s ../../src/features build/ufo/features
+	@rm -f build/ufo/features
+	@ln -s ../../src/features build/ufo/features
 
 # make sure intermediate UFOs are not gc'd by make
 .PRECIOUS: build/ufo/Inter-%.ufo
