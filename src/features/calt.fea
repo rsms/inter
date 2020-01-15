@@ -1,3 +1,18 @@
+# -------------------------------------------------------------------------------------
+# BEGIN glyph class definitions
+
+@DASH = [
+  hyphen
+  endash
+  emdash
+];
+@DASH_CASE = [
+  hyphen.case
+  endash.case
+  emdash.case
+];
+@DASH_ANY = [ @DASH @DASH_CASE ];
+
 # cap-height tall glyphs
 @UC = [
   @Uppercase
@@ -137,39 +152,109 @@
   @CASE_NONDELIM_R
 ];
 
-@DASH = [
-  hyphen hyphen.case
-  endash endash.case
-  emdash emdash.case
-  minus minus.case
+@Punctuation = [
+  slash bar quoteleft quoteright apostrophemod quotesingle quotedbl
+  quotedblleft quotedblright quotedblbase quotesinglbase prime doubleprime
+  tripleprime quadrupleprime primerev doubleprimerev tripleprimerev primemod
+  doubleprimemod comma period ellipsis twodotleader semicolon underscore
+  asciicircum circumflex
+  asterisk
 ];
 
-# ---------------------------------------------------
+# END glyph class definitions
+# -------------------------------------------------------------------------------------
+# BEGIN arrow replacements
 
+# --->
+sub @DASH @DASH @DASH greater by rightLongArrow2;
+sub @DASH_ANY @DASH_ANY @DASH_ANY greater.case by rightLongArrow2.case;
+# -->
+sub @DASH @DASH greater by rightLongArrow;
+sub @DASH_ANY @DASH_ANY greater.case by rightLongArrow.case;
+# [endash emdash]-> (legacy)
+sub [endash emdash] greater by rightLongArrow;
+sub [endash emdash endash.case emdash.case] greater.case by rightLongArrow.case;
+# ->
+sub hyphen greater by rightArrow;
+sub [hyphen hyphen.case] greater.case by rightArrow.case;
+# <---
+sub less @DASH @DASH @DASH by leftLongArrow2;
+sub less.case @DASH_ANY @DASH_ANY @DASH_ANY by leftLongArrow2.case;
+# <--
+sub less @DASH @DASH by leftLongArrow;
+sub less.case @DASH_ANY @DASH_ANY by leftLongArrow.case;
+# <-[endash emdash] (legacy)
+sub less [endash emdash] by leftLongArrow;
+sub less.case [endash emdash endash.case emdash.case] by leftLongArrow.case;
+# ignore e.g. "<-3" ("less than negative")
+ignore sub less' hyphen' @Numeral;
+ignore sub less.case' [hyphen hyphen.case]' @Numeral;
+# <-
+sub less' hyphen' by leftArrow;
+sub less.case' [hyphen hyphen.case]' by leftArrow.case;
+# <->
+sub less rightArrow by leftRightArrow; #  <,->
+sub [less less.case] rightArrow.case by leftRightArrow.case;
+sub leftArrow greater by leftRightArrow; # <-,-
+sub leftArrow.case [greater greater.case] by leftRightArrow.case;
+# <-->
+sub less rightLongArrow by leftRightLongArrow; # <,-->
+sub [less less.case] rightLongArrow.case by leftRightLongArrow.case;
+sub leftLongArrow greater by leftRightLongArrow; # <--,>
+sub leftLongArrow.case [greater greater.case] by leftRightLongArrow.case;
+# <=>
+sub less equal greater by leftRightDoubleArrow;
+sub less.case [equal equal.case] [greater greater.case] by leftRightDoubleArrow.case;
+sub less equal equal greater by leftRightLongDoubleArrow;
+sub less.case [equal equal.case] [equal equal.case] [greater greater.case] by leftRightLongDoubleArrow.case;
+# =>
+sub equal equal greater by rightLongDoubleArrow;
+sub [equal equal.case] [equal equal.case] greater.case by rightLongDoubleArrow.case;
+sub equal greater by rightDoubleArrow;
+sub [equal equal.case] greater.case by rightDoubleArrow.case;
+# <==
+sub less equal equal by leftLongDoubleArrow;
+sub less.case [equal equal.case] [equal equal.case] by leftLongDoubleArrow.case;
+# Note: We do NOT (sub less equal by leftDoubleArrow) as that would
+# interfere with "<=" (less than or equal to)
+
+# END arrow replacements
+# -------------------------------------------------------------------------------------
+# BEGIN smiley
 # :-)
-sub colon' @DASH [parenright parenright.case] by colon.case;
+sub colon' [ @DASH_ANY minus minus.case ] [parenright parenright.case] by colon.case;
 sub [colon colon.case] hyphen' [parenright parenright.case] by hyphen.case;
 sub [colon colon.case] endash' [parenright parenright.case] by endash.case;
 sub [colon colon.case] emdash' [parenright parenright.case] by emdash.case;
-sub [colon colon.case] @DASH parenright' by parenright.case;
+sub [colon colon.case] [ @DASH_ANY minus minus.case ] parenright' by parenright.case;
+
+# END smiley
+# -------------------------------------------------------------------------------------
+# BEGIN case
 
 # A foo' -> A foo.case
 #
 # ignore subs adjacent to lower case
 #
+# h[1,3]
+ignore sub @LC @CASE_DELIM_L @All @CASE_DELIM_L; # h[X]
+ignore sub @LC @CASE_DELIM_L @All @All @CASE_DELIM_L; # h[XX]
+ignore sub @LC @CASE_DELIM_L @All @All @All @CASE_DELIM_L; # h[XXX]
+ignore sub @LC @CASE_DELIM_L @All @All @All @All @CASE_DELIM_L; # h[XXXX]
 # x[]X
 ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L @UC;  # x[]X
-ignore sub @LC @CASE_DELIM_L @UC; # x[X
 ignore sub @LC @CASE_DELIM_L @Whitespace @UC; # x[ X
 ignore sub @LC @CASE_DELIM_L @Whitespace @Whitespace @UC; # x[  X
 ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L @Whitespace @UC; # x[] X
 ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L @Whitespace @Whitespace @UC; # x[]  X
-#
+ignore sub @LC @CASE_DELIM_L @UC; # x[X
+
 # short runs of uc-lc, e.g "(Xx)", "[xxX]"
 ignore sub @CASE_DELIM_L @UC @LC @CASE_DELIM_L; # (Xx)
 ignore sub @CASE_DELIM_L @UC @All @LC @CASE_DELIM_L; # (X.x)
 ignore sub @CASE_DELIM_L @LC @UC @CASE_DELIM_L; # (xX)
 ignore sub @CASE_DELIM_L @LC @All @UC @CASE_DELIM_L; # (x.X)
+
 #
 # e.g. "x-"
 ignore sub @LC @CASE_L'; # x-
@@ -238,14 +323,6 @@ sub @CASE_L' @CASE_L @CASE_L @CASE_L @Whitespace @Whitespace [ @CASE_R @UC ] by 
 sub @CASE_L' @CASE_L @CASE_L @CASE_L @CASE_L @Whitespace @Whitespace [ @CASE_R @UC ] by @CASE_R;
 
 # X(_)
-@Punctuation = [
-  slash bar quoteleft quoteright apostrophemod quotesingle quotedbl
-  quotedblleft quotedblright quotedblbase quotesinglbase prime doubleprime
-  tripleprime quadrupleprime primerev doubleprimerev tripleprimerev primemod
-  doubleprimemod comma period ellipsis twodotleader semicolon underscore
-  asciicircum circumflex
-  asterisk
-];
 sub @CASE_DELIM_R @Punctuation @CASE_DELIM_L' by @CASE_DELIM_R;
 
 # in between number position adjustment, e.g. 3x4 -> 3×4
@@ -266,3 +343,21 @@ sub @Numeral @Whitespace @Whitespace @between_num_L' @Whitespace @Numeral       
 sub @Numeral @between_num_L' @Whitespace @Whitespace @Numeral                         by @between_num_R; # 3*  9
 sub @Numeral @Whitespace @between_num_L' @Whitespace @Whitespace @Numeral             by @between_num_R; # 3 *  9
 sub @Numeral @Whitespace @Whitespace @between_num_L' @Whitespace @Whitespace @Numeral by @between_num_R; # 3  *  9
+
+# END case
+# -------------------------------------------------------------------------------------
+# BEGIN NxN
+
+# x surrounded by numbers, e.g. 3x4 -> 3×4
+sub @Numeral x' @Numeral                                                 by multiply.case; # 3x9
+sub @Numeral @Whitespace x' @Numeral                                     by multiply.case; # 3 x9
+sub @Numeral @Whitespace @Whitespace x' @Numeral                         by multiply.case; # 3  x9
+sub @Numeral x' @Whitespace @Numeral                                     by multiply.case; # 3x 9
+sub @Numeral @Whitespace x' @Whitespace @Numeral                         by multiply.case; # 3 x 9
+sub @Numeral @Whitespace @Whitespace x' @Whitespace @Numeral             by multiply.case; # 3  x 9
+sub @Numeral x' @Whitespace @Whitespace @Numeral                         by multiply.case; # 3x  9
+sub @Numeral @Whitespace x' @Whitespace @Whitespace @Numeral             by multiply.case; # 3 x  9
+sub @Numeral @Whitespace @Whitespace x' @Whitespace @Whitespace @Numeral by multiply.case; # 3  x  9
+
+# END NxN
+# -------------------------------------------------------------------------------------
