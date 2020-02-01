@@ -48,7 +48,9 @@ all_const: all_otf  all_ttf  all_web
 all_const_hinted: all_ttf_hinted  all_web_hinted
 var: \
 	$(FONTDIR)/var/Inter.var.woff2 \
-	$(FONTDIR)/var/Inter.var.otf
+	$(FONTDIR)/var/Inter.var.otf \
+	$(FONTDIR)/var/InterDisplay.var.woff2 \
+	$(FONTDIR)/var/InterDisplay.var.otf
 all_var: \
 	$(FONTDIR)/var/Inter.var.otf \
 	$(FONTDIR)/var/Inter.var.woff2 \
@@ -57,7 +59,15 @@ all_var: \
 	$(FONTDIR)/var/Inter-roman.var.otf \
 	$(FONTDIR)/var/Inter-roman.var.woff2 \
 	$(FONTDIR)/var/Inter-italic.var.otf \
-	$(FONTDIR)/var/Inter-italic.var.woff2
+	$(FONTDIR)/var/Inter-italic.var.woff2 \
+	$(FONTDIR)/var/InterDisplay.var.otf \
+	$(FONTDIR)/var/InterDisplay.var.woff2 \
+	$(FONTDIR)/var/InterDisplay-V.var.otf \
+	$(FONTDIR)/var/InterDisplay-V.var.woff2 \
+	$(FONTDIR)/var/InterDisplay-roman.var.otf \
+	$(FONTDIR)/var/InterDisplay-roman.var.woff2 \
+	$(FONTDIR)/var/InterDisplay-italic.var.otf \
+	$(FONTDIR)/var/InterDisplay-italic.var.woff2
 
 # Hinted variable font disabled. See https://github.com/rsms/inter/issues/75
 # all_var_hinted: $(FONTDIR)/var-hinted/Inter.var.otf $(FONTDIR)/var-hinted/Inter.var.woff2
@@ -97,13 +107,23 @@ $(FONTDIR)/var/Inter-%.var.otf: build/ufo/Inter-%.designspace $(all_ufo_masters)
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 	misc/tools/fix-vf-meta.py $@
 
+$(FONTDIR)/var/InterDisplay.var.otf: $(all_display_ufo_masters) version.txt
+	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/InterDisplay.designspace
+
+$(FONTDIR)/var/InterDisplay-V.var.otf: $(FONTDIR)/var/InterDisplay.var.otf
+	misc/fontbuild rename --family "Inter Display V" -o $@ $<
+
+$(FONTDIR)/var/InterDisplay-%.var.otf: build/ufo/InterDisplay-%.designspace $(all_display_ufo_masters) version.txt
+	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
+	misc/tools/fix-vf-meta.py $@
+
 
 # OTF/TTF from UFO
-$(FONTDIR)/const/Inter-%.otf: build/ufo/Inter-%.ufo version.txt
-	misc/fontbuild compile -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter-$*.ufo
+$(FONTDIR)/const/Inter%.otf: build/ufo/Inter%.ufo version.txt
+	misc/fontbuild compile -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter$*.ufo
 
-$(FONTDIR)/const/Inter-%.ttf: build/ufo/Inter-%.ufo version.txt
-	misc/fontbuild compile -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter-$*.ufo
+$(FONTDIR)/const/Inter%.ttf: build/ufo/Inter%.ufo version.txt
+	misc/fontbuild compile -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter$*.ufo
 
 
 # DESIGNSPACE from GLYPHS
@@ -112,16 +132,23 @@ build/ufo/Inter-italic.designspace: build/ufo/Inter.designspace
 build/ufo/Inter.designspace: src/Inter.glyphs
 	@mkdir -p build/ufo
 	misc/fontbuild glyphsync -o build/ufo src/Inter.glyphs
+build/ufo/InterDisplay-roman.designspace: build/ufo/InterDisplay.designspace
+build/ufo/InterDisplay-italic.designspace: build/ufo/InterDisplay.designspace
+build/ufo/InterDisplay.designspace: src/InterDisplay.glyphs
+	@mkdir -p build/ufo
+	misc/fontbuild glyphsync -o build/ufo src/InterDisplay.glyphs
 
 
 # short-circuit Make for performance
 src/Inter.glyphs:
 	@true
+src/InterDisplay.glyphs:
+	@true
 
 # make sure intermediate files are not gc'd by make
-.PRECIOUS: build/ufo/Inter-*.designspace
+.PRECIOUS: build/ufo/Inter-*.designspace build/ufo/InterDisplay-*.designspace
 
-designspace: build/ufo/Inter.designspace
+designspace: build/ufo/Inter.designspace build/ufo/InterDisplay.designspace
 .PHONY: designspace
 
 
@@ -224,6 +251,9 @@ build/tmp/a.zip:
 	      $(FONTDIR)/var/Inter.var.woff2 \
 	      $(FONTDIR)/var/Inter-italic.var.woff2 \
 	      $(FONTDIR)/var/Inter-roman.var.woff2 \
+	      $(FONTDIR)/var/InterDisplay.var.woff2 \
+	      $(FONTDIR)/var/InterDisplay-italic.var.woff2 \
+	      $(FONTDIR)/var/InterDisplay-roman.var.woff2 \
 	      misc/dist/inter.css \
 	                                          "$(ZD)/Inter (Web)/"
 	cp -a $(FONTDIR)/const-hinted/*.woff \
@@ -233,11 +263,15 @@ build/tmp/a.zip:
 	      "misc/dist/about hinted fonts.txt" \
 	                                          "$(ZD)/Inter (Hinted, for Windows)/"
 	@#
-	cp -a $(FONTDIR)/var/Inter.var.otf        "$(ZD)/Inter (Variable)/Inter.otf"
-	cp -a $(FONTDIR)/var/Inter-roman.var.otf  "$(ZD)/Inter (Variable, single axis)/Inter-roman.otf"
-	cp -a $(FONTDIR)/var/Inter-italic.var.otf "$(ZD)/Inter (Variable, single axis)/Inter-italic.otf"
+	cp -a $(FONTDIR)/var/Inter.var.otf               "$(ZD)/Inter (Variable)/Inter.otf"
+	cp -a $(FONTDIR)/var/Inter-roman.var.otf         "$(ZD)/Inter (Variable, single axis)/Inter-roman.otf"
+	cp -a $(FONTDIR)/var/Inter-italic.var.otf        "$(ZD)/Inter (Variable, single axis)/Inter-italic.otf"
+	cp -a $(FONTDIR)/var/InterDisplay.var.otf        "$(ZD)/Inter Display (Variable)/InterDisplay.otf"
+	cp -a $(FONTDIR)/var/InterDisplay-roman.var.otf  "$(ZD)/Inter Display (Variable, single axis)/InterDisplay-roman.otf"
+	cp -a $(FONTDIR)/var/InterDisplay-italic.var.otf "$(ZD)/Inter Display (Variable, single axis)/InterDisplay-italic.otf"
 	@#
-	cp -a $(FONTDIR)/var/Inter-V.var.otf      "$(ZD)/Inter V (Variable)/Inter-V.otf"
+	cp -a $(FONTDIR)/var/Inter-V.var.otf        "$(ZD)/Inter V (Variable)/Inter-V.otf"
+	cp -a $(FONTDIR)/var/InterDisplay-V.var.otf "$(ZD)/Inter V (Variable)/InterDisplay-V.otf"
 	@#
 	@# copy misc stuff
 	cp -a misc/dist/install*.txt        "$(ZD)/"
