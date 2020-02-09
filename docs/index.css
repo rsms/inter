@@ -51,7 +51,7 @@ h1 {
   width: var(--subwayHeight);
   height: var(--subwayHeight);
   color: black;
-  background: var(--yellow);
+  background: var(--warm-yellow);
   border-radius: var(--subwayHeight);
   text-align: center;
   line-height: var(--subwayHeight);
@@ -70,7 +70,7 @@ h1 {
 #subway-nav .dest:hover { text-decoration:none; color:inherit; }
 #subway-nav .dest:hover .disc { background:#222; color:white; }
 #subway-nav .dest1 .disc { background:var(--green); font-size: calc(var(--subwayHeight) * 0.3); }
-#subway-nav .dest2 .disc { background:var(--yellow); }
+#subway-nav .dest2 .disc { background:var(--warm-yellow); }
 #subway-nav .dest3 .disc { background:var(--red); color: white; }
 @media only screen and (min-width: 987px) {
   #subway-nav { --subwayHeight: 3.2rem; }
@@ -147,7 +147,6 @@ h1 {
 
   .dynmet-calc .arrow {
     margin: 0 0.5em;
-    /*color: var(--red);*/
   }
 
   .dynmet-calc #dynmet-tracking {
@@ -167,72 +166,31 @@ h1 {
     color: white;
   }
 
+@media only screen and (max-width: 565px) {
+  .dynmet-calc { font-size: 1rem; }
+  .dynmet-calc .arrow { margin: 0; }
+  .dynmet-calc input { width:32px; }
+}
+
+#languages {}
+.language-list {
+  column-count: 4;
+  column-gap: 32px;
+  column-fill: balance;
+}
+.language-list p { margin: 0; }
+@media only screen and (max-width: 660px) {
+  .language-list { column-count: 3; }
+}
+@media only screen and (max-width: 540px) {
+  .language-list { column-count: 2; }
+}
 
 
-/* Character set table */
+
+/* Character set table (main css comes from _include) */
 .row.charset-title { padding-bottom: 0; }
 .row.charset-title > h2 { text-align: center; }
-.row.charset {
-  padding-top: 1rem;
-  padding-left: 0;
-  padding-right: 0;
-  /* maintain cascading margin-bottom */
-}
-.charset-table {
-  --gridColor: #bbb;
-  --columns: 24;
-  --tableWidth: 95vw;
-
-  flex: 1 1 auto;
-  padding: 0;
-  margin: 1rem auto;
-
-  max-width: var(--tableWidth);
-  width: var(--tableWidth);
-  overflow: hidden;
-
-  display: flex;
-  flex-wrap: wrap;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  box-shadow: -1px -1px 0 var(--gridColor),
-              -1px  0   0 var(--gridColor),
-               0   -1px 0 var(--gridColor);
-}
-  .charset-table > c {
-    flex: 0 0 auto;
-
-    margin: 0;
-    padding: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: calc(var(--tableWidth) / var(--columns));
-    height: calc(var(--tableWidth) / var(--columns));
-
-    font-size: calc(100vw / calc(var(--columns) * 2));
-    line-height: 100%;
-    text-align: center;
-    font-feature-settings: "calt" 0; /* disable all */
-
-    background: white;
-    box-shadow: inset -1px -1px 0 var(--gridColor);
-
-    cursor: cell;
-  }
-/* for window width >= 1600 */
-@media only screen and (min-width: 1599px) {
-  .charset-table { --columns: 32; }
-}
-@media only screen and (max-width: 800px) {
-  .charset-table { --columns: 16; }
-}
-@media only screen and (max-width: 565px) {
-  .charset-table { --columns: 8; }
-}
   @keyframes charset-flash {
     0%    { background-color: black; color: white; }
     20%   { background-color: black; color: white; }
@@ -244,11 +202,26 @@ h1 {
 
     100% { background-color: white; color: inherit; }
   }
-  .charset-table > c.flash {
+.charset-table {
+  /*--gridColor: #559966;*/
+  --gridColor: transparent;
+}
+  .charset-table > a {
+    cursor: cell;
+    border-radius: 2px;
+  }
+  .charset-table > a:hover {
+    /*color: white;
+    background: black;*/
+    color: black;
+    background: white;
+  }
+  .charset-table > a.flash {
     animation: charset-flash 300ms 1;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
   }
+
 
 
 
@@ -269,8 +242,11 @@ boxes.features {
 boxes.features box h3 + p {
   margin-top:0.5em;
 }
-.features h3 a q {padding-left: 0.5em; color: transparent; float:right; font-weight:400; }
-.features h3 a:hover q { color: inherit; }
+
+/*.features h3 a q {padding-left: 0.5em; color: transparent; float:right; font-weight:400; }
+.features h3 a:hover q { color: inherit; }*/
+.features h3 a q {padding-left: 0.5em; opacity:0.3; float:right; font-weight:400; }
+.features h3 a:hover q { opacity:1; }
 
 boxes.features grid .sample {
   word-break: break-word;

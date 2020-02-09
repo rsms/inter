@@ -161,36 +161,7 @@ Ambiguation: (should not be fractions)
 `)
 
 
-samples.set('Feature: liga', `
-dash[1-3]+gt\t\t-> --> --->
-e{n,m}dash+gt\t–> —>
-lt+dash[1-3]\t\t<- <-- <---
-lt+endash[1,3]\t\t<– <–––
-lt+emdash[1,3]\t<— <———
-lt+dash[1-2]+gt\t<-> <-->
-lt+e{n,m}dash+gt\t<–> <—>
-equal[1,2]+gt\t\t=> ==>
-lt+equal+equal\t<==
-lt+equal[1,2]+gt\t<=> <==>
-
-combined with calt to adjust to caps
-A -> B <- C->D<-E=>F<=>G
-A –> B <– C–>D<–E=>F<=>G
-A —> B <— C—>D<—E=>F<=>G
-A <-> B <–> C <—> D<->E<–>F<—>G
-x<-yX<-Y
-
-exceptions; should NOT yield arrows
-x<-4  X<-4  < - - >  <=
-
-numeral+x+numeral => numeral+multiply+numeral
-3x9 x9  x9x 9 x 9  x 9x  9 x  9  x  9
-
-plain x when not surrounded by numerals
-9x
-x9
-9xM
-
+samples.set('Feature: rlig', `
 Enclosing glyphs (glyph + {U+20DD,U+20DE})
 U+20DD COMBINING ENCLOSING CIRCLE:       ⃝
 U+20DE COMBINING ENCLOSING SQUARE:       ⃞
@@ -224,13 +195,35 @@ U\u20DE    V\u20DE    W\u20DE    X\u20DE    Y\u20DE    Z\u20DE    !\u20DE    ?\u
 HE\u20DDLLO WO\u20DERLD
 
 Note on combining-marks compatibility:
-• liga=on: uses precomposed ligatures.
-• liga=off: some browsers will compose glyphs
-   with combining marks (support is limited.)
+• rlig=on: uses precomposed ligatures (default.)
+• rlig=off: rely on layout engine to combine (limited support.)
 `)
 
 
 samples.set('Feature: calt', `
+Arrows
+dash[1-3]+gt\t\t-> --> --->
+e{n,m}dash+gt\t–> —>
+lt+dash[1-3]\t\t<- <-- <---
+lt+endash[1,3]\t\t<– <–––
+lt+emdash[1,3]\t<— <———
+lt+dash[1-2]+gt\t<-> <-->
+lt+e{n,m}dash+gt\t<–> <—>
+equal[1,2]+gt\t\t=> ==>
+lt+equal+equal\t<==
+lt+equal[1,2]+gt\t<=> <==>
+
+combined with calt to adjust to caps
+A -> B <- C->D<-E=>F<=>G
+A –> B <– C–>D<–E=>F<=>G
+A —> B <— C—>D<—E=>F<=>G
+A <-> B <–> C <—> D<->E<–>F<—>G
+x<-yX<-Y
+
+exceptions; should NOT yield arrows
+x<-4  X<-4  < - - >  <=
+
+Case conversion
 (m). (M). (6). [m]. [M]. [6]. {m}. {M}. {6}.
 m@n. M@N
 3×5     3 × 5     ×9     8×
@@ -271,11 +264,11 @@ A+Y V+V W+W N+N X+X
 :-) :–) :—)
 
 calt case should cascade:
-U() U[] U{}   rightx should be rightx.case
-()U []U {}U   special-cased as "delim' delim -> delim.case"
----U---   all hyphens should be hyphen.case
-U-→(){}[]•   all should be .case
-x[]{}H   "x br br" separate from "cb cb H"
+U() U[] U{} \t rightx should be rightx.case
+()U []U {}U \t special-cased as "delim' delim -> delim.case"
+---U--- \t\t all hyphens should be hyphen.case
+U-→(){}[]• \t all should be .case
+x[]{}H \t\t "x br br" separate from "cb cb H"
 
 left side cascades up to 5 characters:
 ••••••ABBA••••••
@@ -283,22 +276,22 @@ left side cascades up to 5 characters:
 @@@@@@M@@@@@@
 ++++++M++++++
 
-x[x]. [X]     x lc x lc followed by .case C .case
-(Xx)         lc uc uc lc
-[Zzz]        lc uc lc lc lc
+x[x]. [X] \t x lc x lc followed by .case C .case
+(Xx) \t\t lc uc uc lc
+[Zzz] \t lc uc lc lc lc
 (XX)
 (x)
 (X)
 ( ) M
 () M
 ()M
-X(_)         .case around underscore next to uc
-(_)          lc otherwise
+X(_) \t\t .case around underscore next to uc
+(_) \t\t lc otherwise
 
 Foo::Bar()  foo::bar() Foo
 foo::bar( ) Foo
 foo::bar()Foo
-foo::bar( )Foo
+foo::bar( )Foo \t\t\t\t ← No support in Chrome
 FOO::bar This is (a)Thing
 :: dog :: Kitten
 :: dog ::: Kitten
@@ -308,6 +301,17 @@ FOO::bar This is (a)Thing
 X() X()
 x- X
 x -- X
+
+numeral+x+numeral => numeral+multiply+numeral
+3x9 x9  x9x 9 x 9  x 9x  9 x  9  x  9
+
+Note: AFAIK only Safari supports calt with whitespace.
+In e.g. Chrome, only NxN works.
+
+plain x when not surrounded by numerals
+9x
+x9
+9xM
 `)
 
 
@@ -422,7 +426,7 @@ samples.set('Latin extended', `
 Ā Ă Ą Ǎ Ǟ Ǡ Ǣ Ǻ Ǽ Ȁ Ȃ Ȧ Ⱥ
 Ɓ Ƃ Ƀ
 Ć Ĉ Ċ Č Ƈ Ȼ
-Ď Đ Ɖ Ɗ Ǆ ǅ ǆ Ǳ ǲ ǳ
+Ď Đ Ɖ Ɗ ǅ ǆ Ǳ ǲ ǳ
 Ē Ĕ Ė Ę Ě Ȅ Ȇ Ȩ Ɇ
 Ĝ Ğ Ġ Ģ Ɠ Ǥ Ǧ Ǵ
 Ĥ Ħ Ƕ Ȟ
@@ -454,7 +458,7 @@ samples.set('Latin extended', `
 ĵ ǰ ȷ ɉ
 ķ ĸ ƙ ǩ
 ĺ ļ ľ ŀ ƚ ł
-ń ņ ň ŉ ŋ ƞ ǹ ȵ
+ń ņ ň ŋ ƞ ǹ ȵ
 ō ŏ ő œ ơ ǒ ǫ ǭ ǿ ȍ ȏ ȫ ȭ ȯ ȱ
 ƥ
 ŕ ŗ ř ȑ ȓ ɍ
@@ -1759,8 +1763,8 @@ document.head.appendChild(fontCSS)
       <div class="checkbox-group">
       <span>Default-on features:</span>
       <label title="Contextual alternates"><input type="checkbox" class="featopt" name="feat:calt=0"> Disable calt &nbsp;(Contextual alternates)</label>
-      <label title="Standard ligatures"><input type="checkbox" class="featopt" name="feat:liga=0"> Disable liga &nbsp;(Standard ligatures)</label>
-      <!-- <label title="Required ligatures"><input type="checkbox" class="featopt" name="feat:rlig=0"> Disable rlig &nbsp;(Required ligatures)</label> -->
+      <!-- <label title="Standard ligatures"><input type="checkbox" class="featopt" name="feat:liga=0"> Disable liga &nbsp;(Standard ligatures)</label> -->
+      <label title="Required ligatures"><input type="checkbox" class="featopt" name="feat:rlig=0"> Disable rlig &nbsp;(Required ligatures)</label>
       <label title="Kerning"><input type="checkbox" class="featopt" name="feat:kern=0"> Disable kern &nbsp;(Kerning)</label>
       </div>
 
