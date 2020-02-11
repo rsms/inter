@@ -25,6 +25,8 @@ endfor
 <link rel="stylesheet" href="index-var.css?v={{ index_var_css_v }}">
 <input type="text" id="hidden-text-input">
 
+<div class="noise-layer"></div>
+
 <div class="row white"><div>
   <!-- <h1>The Inter<br>typeface family</h1> -->
   <grid columns=8>
@@ -253,15 +255,13 @@ html { font-family: 'Inter', sans-serif; }
 
       %}
       {% if has_feature_col %}
-      <grid columns=8>
+      <grid columns=7>
         <c span=1 class="low-contrast ">Feature</c>
         <c span=3 class="low-contrast">Disabled</c>
-        <c span=1 class="low-contrast center-text">→</c>
         <c span=3 class="low-contrast">Enabled</c>
       {% else %}
-      <grid columns=9>
+      <grid columns=8>
         <c span=4 class="low-contrast">Disabled</c>
-        <c span=1 class="low-contrast center-text">→</c>
         <c span=4 class="low-contrast">Enabled</c>
       {% endif %}
       {% for s in f.samples %}
@@ -280,18 +280,19 @@ html { font-family: 'Inter', sans-serif; }
         %} {% if has_feature_col %}
         <c span=1 class="">{{feat_tag}}</c>
         <c span=3 class="sample ff-none">{{sample_in}}</c>
-        <c span=1 class="low-contrast center-text">→</c>
         <c span=3 class="sample ff-{{feat_tag}}">{{sample_out}}</c>
         {% else %}
         <c span=4 class="sample ff-none">{{sample_in}}</c>
-        <c span=1 class="low-contrast center-text">→</c>
         <c span=4 class="sample ff-{{feat_tag}}">{{sample_out}}</c>
         {% endif %}
       {% endfor %}
       </grid>
-      <p class="example" title="CSS code">
+
+      <br>
+      <!-- <p class="example" title="CSS code">
         <tt>font-feature-settings: '{{feat_tag}}' 1</tt>
-      </p>
+      </p> -->
+
       {% if f.footer %}
         <p>{{f.footer}}</p>
       {% endif %}
@@ -313,31 +314,44 @@ html { font-family: 'Inter', sans-serif; }
 </div></div>
 
 
-<div id="charset" class="row white charset-title">
-  <h2><a href="#charset">Character set</a></h2>
-</div>
-<div class="row white charset">
-  <div class="charset-table">
-  {% for g in site.data.glyphinfo.glyphs %}
-    {% comment %}
-
-    Ignore empty glyphs and glyphs without unicode mapping.
-
-    {% endcomment %}
-    {% if g[1] == 0 and g[2] %}
-      {% if g[3] %}
-      <c title="/{{g[0]}} U+{{g[2]}} ({{g[3]}})">&#x{{g[2]}}</c>
-      {% else %}
-      <c title="/{{g[0]}} U+{{g[2]}}">&#x{{g[2]}}</c>
-      {% endif %}
-    {% endif %}
+<div id="languages" class="row white"><div>
+  <h2><a href="#languages">Language support</a></h2>
+  <br>
+  <div class="language-list">
+  {% for c in site.data.languages %}
+    <h4>{{c.category}}</h4>
+    {% for language in c.languages %}
+      <p>{{language}}</p>
+    {% endfor %}
   {% endfor %}
   </div>
+</div></div>
 
+
+<div id="charset" class="row green charset-title">
+  <div>
+    <h2><a href="#charset">Character set</a></h2>
+    <p>
+      All characters {{ site.data.glyphinfo.glyphs | size }} provided with Inter.
+      Tap a glyph to copy it to your clipboard.<br>
+      Use the <a href="glyphs/">Glyphs Browser</a> to inspect details like kerning and style variation.
+    </p>
+  </div>
+</div>
+<div class="row green charset">
+{% include charset-table.html %}
 </div>
 <script>
 ;(function(){
 
+  function shouldHandleEvent(ev) {
+    if (!ev.metaKey && !ev.shiftKey && !ev.ctrlKey) {
+      ev.stopPropagation()
+      ev.preventDefault()
+      return true
+    }
+    return false
+  }
 
   function onClickChar(ev) {
     // Copy to clipboard.
@@ -345,8 +359,11 @@ html { font-family: 'Inter', sans-serif; }
     // This is an elaborate and ugly workaround to make it not suck
     // on various browsers.
 
-    ev.preventDefault()
-    ev.stopPropagation()
+    // document.location.href = "/glyphs/?g=" + encodeURI(ev.target.dataset.glyphname)
+
+    if (!shouldHandleEvent(ev)) {
+      return false
+    }
 
     var origel = ev.target
     var el = origel.cloneNode(true)
@@ -361,7 +378,7 @@ html { font-family: 'Inter', sans-serif; }
     el.style.userSelect = 'text'
     document.body.appendChild(el)
 
-    el.innerText = el.innerText + " " + el.title
+    el.innerText = el.innerText // + " " + el.title
 
     el.contentEditable = true
     el.readOnly = false
@@ -401,11 +418,15 @@ html { font-family: 'Inter', sans-serif; }
 
   var activeListener = { capture: true }
 
-  let cv = document.querySelector('.charset-table').querySelectorAll('c')
+  let cv = document.querySelector('.charset-table').querySelectorAll('a')
   for (let i = 0; i < cv.length; i++) {
     let c = cv[i]
-    c.addEventListener('pointerdown', onClickChar, activeListener)
-    c.addEventListener('mousedown', onClickChar, activeListener)
+    if (typeof PointerEvent == "undefined") {
+      c.addEventListener('mousedown', onClickChar, activeListener)
+    } else {
+      c.addEventListener('pointerdown', onClickChar, activeListener)
+    }
+    c.onclick = ev => !shouldHandleEvent(ev)
   }
 })();
 </script>
@@ -680,3 +701,7 @@ trackingEl.addEventListener('mousedown', onPointerdownTracking, activeListener)
 updateTracking()
 
 })();</script>
+<script>(function(){
+  let el = document.querySelector(".noise-layer")
+  el.style.height = document.body.clientHeight + "px"
+})()</script>

@@ -1,11 +1,11 @@
+
 - title: Contextual alternates
   tag:   calt
   description:
-    This feature is enabled by default and causes certain characters to adjust
+    This feature is usually enabled by default and causes certain characters to adjust
     themselves or be replaced depending on the surrounding context.
-  footer:
-    There are many more contextual alternates.
   samples:
+    - "3›x‹9"
     - "12›:‹34, FE›—‹X"
     - "4›.‹2"
     - "›(‹SEMI›)‹PERMANENT"
@@ -15,26 +15,23 @@
     - "M›@‹N m@n"
     - "Smile ›:-)‹"
 
-- title: Standard ligatures
-  tag:   liga
-  description:
-    Conversion of common sequences into higher-fidelity glyphs,
-    like arrows and enclosing graphemes.
-  samples:
-    - "3›x‹9"
-    - "-> --> --->"
-    - "<- <-- <---"
-    - "<-> <-->"
-    - "=> ==> <=="
-    - "<=> <==>"
-  footer:
-    "In addition to standard ligatures, which are usually on by default but can be turned off,
-    Inter also comes with required/default ligatures as well,
-    like for instance specialized glyphs for enclosing combining characters like
-    e.g. U+0041 U+20DD => A\u20DD<br>
-    More examples:<br>
-    1\u20DD 2\u20DD 3\u20DD A\u20DD B\u20DD
-    C\u20DE #\u20DE !\u20DE ?\u20DE →\u20DE"
+
+# - title: Arrows
+#   tag:   calt
+#   description:
+#     Arrows are part of Contextual alternates.
+#   samples:
+#     - "-> --> --->"
+#     - "<- <-- <---"
+#     - "<-> <-->"
+#     - "=> ==> <=="
+#     - "<=> <==>"
+#   footer:
+#     "In addition to contextual alternates, Inter also provides some ligatures
+#     like for instance specialized glyphs for enclosing combining glyphs. Examples:<br>
+#     U+0041 U+20DD => A\u20DD<br>
+#     U+0023 U+20DE => #\u20DE<br>"
+
 
 - title: Tabular numbers
   tag:   tnum
@@ -51,6 +48,7 @@
     - "1.00, 9.44, −0.13›&nbsp;‹"
     - "0.00, 1.13, ~7.12›&nbsp;‹"
 
+
 - title: Fractions
   tag:   frac
   description:
@@ -65,27 +63,6 @@
     - "18/29&nbsp; 16/5"
     - "1337/591038"
 
-- title: Numerators
-  tag:   numr
-  samples:
-    - "Hello ›0123‹"
-
-- title: Denominators
-  tag:   dnom
-  samples:
-    - "Hello ›0123‹"
-
-- title: Superscript
-  tag:   sups
-  samples:
-    - "X›0123 (+)-[=]‹"
-    - "X›abcdefghijklmnopqrstuvwxyz‹"
-
-- title: Subscript
-  tag:   subs
-  samples:
-    - "H›0123 (+)-[=]‹"
-    - "X›abcdefghijklmnopqrstuvwxyz‹"
 
 - title: Case alternates
   tag:   case
@@ -98,6 +75,55 @@
     - "›*+÷±×=≠≈•~&lt;&gt;≤≥‹"
     - "›→‹ ›←‹ ›⟶‹ ›⟵‹ ›−‹ ›-‹ ›–‹ ›—‹ ›:‹"
 
+
+- title: Ligatures
+  tag:   rlig
+  description:
+    Inter provides just a few ligatures for combining characters for which layout
+    support in various apps is spotty.
+  samples:
+    - "A›\u20DD‹"
+    - "#›\u20DE‹"
+  footer:
+    This means that for instance enclosed glyphs
+    works everywhere, not just in apps with correct combining character logic.
+
+
+- title: Discretionary ligatures
+  tag:   dlig
+  description:
+    Alternate style for a few chacters. This feature is usually disabled by default.
+  samples:
+    - "›¡¿‹What›?!‹"
+    - "›¿¡‹What›!?‹"
+
+
+- title: Numerators
+  tag:   numr
+  samples:
+    - "Hello ›0123‹"
+
+
+- title: Denominators
+  tag:   dnom
+  samples:
+    - "Hello ›0123‹"
+
+
+- title: Superscript
+  tag:   sups
+  samples:
+    - "X›0123 (+)-[=]‹"
+    - "X›abcdefghijklmnopqrstuvwxyz‹"
+
+
+- title: Subscript
+  tag:   subs
+  samples:
+    - "H›0123 (+)-[=]‹"
+    - "X›abcdefghijklmnopqrstuvwxyz‹"
+
+
 - title: "Stylistic set 1: Alternate digits"
   tag:   ss01
   description:
@@ -107,6 +133,7 @@
   samples:
     - "›1‹2›34‹5›6‹78›9‹0"
     - "›13469‹"
+
 
 - title: "Stylistic set 2: Disambiguation"
   tag:   ss02
@@ -118,6 +145,7 @@
     - "›Ill‹ega›l‹"
     - "βeta ›ß‹eta Busine›ß‹"
 
+
 - title: "Stylistic set 3: r curves into round neighbors"
   tag:   ss03
   description:
@@ -128,19 +156,12 @@
     - "i›r‹d"
     - "Mon›r‹oe"
 
-- title: Discretionary ligatures
-  tag:   dlig
-  description:
-    Alternate glyph set that increases visual difference between
-    similar-looking characters.
-  samples:
-    - "›¡¿‹What›?!‹"
-    - "›¿¡‹What›!?‹"
 
 - title: Slashed zero
   tag:   zero
   samples:
     - "O›0‹123"
+
 
 - title: Character variants
   tag: cvXX

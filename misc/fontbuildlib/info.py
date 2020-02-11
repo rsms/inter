@@ -73,10 +73,6 @@ def setFontInfo(font, weight=None):
   if weight is None:
     weight = font.info.openTypeOS2WeightClass
 
-  # Add " BETA" to light weights
-  if weight < 400:
-    font.info.styleName = font.info.styleName + " BETA"
-
   family = font.info.familyName  # i.e. "Inter"
   style = font.info.styleName    # e.g. "Medium Italic"
 

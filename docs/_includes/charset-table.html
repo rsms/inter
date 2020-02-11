@@ -1,0 +1,23 @@
+{%
+if site.safe == false %}{%
+assign url_root = "/" %}{% else %}{%
+assign url_root = "/inter/" %}{% endif
+%}
+<!-- style in res/base.css -->
+<div class="charset-table">
+{% for g in site.data.glyphinfo.glyphs %}
+  {% comment %}
+
+  Ignore empty glyphs and glyphs without unicode mapping.
+
+  {% endcomment %}
+  {% if g[1] == 0 and g[2] %}
+    <a title="/{{g[0]}} U+{{g[2]}}{%if g[3]%} ({{g[3]}}) {%endif%}"
+       data-glyphname="{{g[0]}}"
+       data-cp="{{g[2]}}"
+       data-ucdescr="{{g[3]}}"
+       href="{{url_root}}glyphs/?g={{g[0]}}"
+       >&#x{{g[2]}}</a>
+  {% endif %}
+{% endfor %}
+</div>
