@@ -266,9 +266,9 @@ build/tmp/a.zip:
 	cp -a $(FONTDIR)/var/Inter.var.otf               "$(ZD)/Inter (Variable)/Inter.otf"
 	cp -a $(FONTDIR)/var/Inter-roman.var.otf         "$(ZD)/Inter (Variable, single axis)/Inter-roman.otf"
 	cp -a $(FONTDIR)/var/Inter-italic.var.otf        "$(ZD)/Inter (Variable, single axis)/Inter-italic.otf"
-	cp -a $(FONTDIR)/var/InterDisplay.var.otf        "$(ZD)/Inter Display (Variable)/InterDisplay.otf"
-	cp -a $(FONTDIR)/var/InterDisplay-roman.var.otf  "$(ZD)/Inter Display (Variable, single axis)/InterDisplay-roman.otf"
-	cp -a $(FONTDIR)/var/InterDisplay-italic.var.otf "$(ZD)/Inter Display (Variable, single axis)/InterDisplay-italic.otf"
+	cp -a $(FONTDIR)/var/InterDisplay.var.otf        "$(ZD)/Inter (Variable)/InterDisplay.otf"
+	cp -a $(FONTDIR)/var/InterDisplay-roman.var.otf  "$(ZD)/Inter (Variable, single axis)/InterDisplay-roman.otf"
+	cp -a $(FONTDIR)/var/InterDisplay-italic.var.otf "$(ZD)/Inter (Variable, single axis)/InterDisplay-italic.otf"
 	@#
 	cp -a $(FONTDIR)/var/Inter-V.var.otf        "$(ZD)/Inter V (Variable)/Inter-V.otf"
 	cp -a $(FONTDIR)/var/InterDisplay-V.var.otf "$(ZD)/Inter V (Variable)/InterDisplay-V.otf"
