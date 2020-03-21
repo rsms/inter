@@ -543,6 +543,20 @@ else
     done
     echo "" >> "$GEN_MAKE_FILE"
 
+    # all_text_otf target
+    echo -n "all_text_otf:" >> "$GEN_MAKE_FILE"
+    for style in "${all_styles[@]}"; do
+      echo -n " ${style}_otf" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+
+    # all_display_otf target
+    echo -n "all_display_otf:" >> "$GEN_MAKE_FILE"
+    for style in "${all_styles[@]}"; do
+      echo -n " display_${style}_otf" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+
     # all_ttf target
     echo -n "all_ttf:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do

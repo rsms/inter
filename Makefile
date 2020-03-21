@@ -389,27 +389,47 @@ install_ttf: all_ttf_const
 	@echo "Installing TTF files locally at ~/Library/Fonts/Inter"
 	rm -rf ~/'Library/Fonts/Inter'
 	mkdir -p ~/'Library/Fonts/Inter'
-	cp -va $(FONTDIR)/const/*.ttf ~/'Library/Fonts/Inter'
+	cp -a $(FONTDIR)/const/*.ttf ~/'Library/Fonts/Inter'
 
 install_ttf_hinted: all_ttf_hinted
 	@echo "Installing autohinted TTF files locally at ~/Library/Fonts/Inter"
 	rm -rf ~/'Library/Fonts/Inter'
 	mkdir -p ~/'Library/Fonts/Inter'
-	cp -va $(FONTDIR)/const-hinted/*.ttf ~/'Library/Fonts/Inter'
+	cp -a $(FONTDIR)/const-hinted/*.ttf ~/'Library/Fonts/Inter'
 
-install_otf: all_otf
+install_text_otf: all_text_otf
 	@echo "Installing OTF files locally at ~/Library/Fonts/Inter"
 	rm -rf ~/'Library/Fonts/Inter'
 	mkdir -p ~/'Library/Fonts/Inter'
-	cp -va $(FONTDIR)/const/*.otf ~/'Library/Fonts/Inter'
+	cp -a $(FONTDIR)/const/Inter-*.otf ~/'Library/Fonts/Inter'
 
-install_var_v: $(FONTDIR)/var/Inter-V.var.otf
+install_display_otf: all_display_otf
+	@echo "Installing OTF files locally at ~/Library/Fonts/InterDisplay"
+	rm -rf ~/'Library/Fonts/InterDisplay'
+	mkdir -p ~/'Library/Fonts/InterDisplay'
+	cp -a $(FONTDIR)/const/InterDisplay-*.otf ~/'Library/Fonts/InterDisplay'
+
+install_text_var: $(FONTDIR)/var/Inter-V.var.otf
 	mkdir -p ~/'Library/Fonts/Inter'
-	cp -va $(FONTDIR)/var/Inter-V.var.otf ~/'Library/Fonts/Inter/Inter-V.otf'
+	cp -a $(FONTDIR)/var/Inter-V.var.otf ~/'Library/Fonts/Inter/Inter-V.otf'
 
-install: install_otf install_var_v
+install_display_var: $(FONTDIR)/var/InterDisplay-V.var.otf
+	mkdir -p ~/'Library/Fonts/InterDisplay'
+	cp -a $(FONTDIR)/var/Inter-V.var.otf ~/'Library/Fonts/InterDisplay/InterDisplay-V.otf'
 
-.PHONY: install install_otf install_ttf
+install:         install_text  install_display
+install_otf:     install_text_otf  install_display_otf
+install_text:    install_text_otf  install_text_var
+install_display: install_display_otf  install_display_var
+
+# deprecated aliases
+install_var_v:
+	@echo 'Please use `make install_text_var` or `make install_display_var` instead.' >&2
+	@exit 1
+
+.PHONY: install_ttf install_ttf_hinted install_text_otf install_display_otf install_otf
+.PHONY: install_text_var install_display_var install_var_v
+.PHONY: install install_text install_display
 
 
 
