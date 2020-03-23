@@ -353,8 +353,7 @@ class Main(object):
     # files
     master_dir = outdir
     glyphsfile = args.glyphsfile
-    name = os.path.splitext(basename(glyphsfile))[0]  # e.g. "Inter"
-    designspace_file = pjoin(outdir, name + '.designspace')
+    designspace_file = pjoin(outdir, 'Inter.designspace')
     instance_dir = pjoin(BASEDIR, 'build', 'ufo')
 
     # load glyphs project file
@@ -393,17 +392,17 @@ class Main(object):
         # Workaround for Glyphs limitation
         # (Base italic master can't be called just Italic, so it's called
         # "Italic Italic" which is converted here to just "Italic")
-        ufo_path = pjoin(master_dir, name + '-Italic.ufo')
+        ufo_path = pjoin(master_dir, 'Inter-Italic.ufo')
         source.styleName = "Italic"
         source.name = "italic"
         source.font.info.styleName = source.styleName
       elif source.styleName == "Black Italic Italic":
-        ufo_path = pjoin(master_dir, name + '-BlackItalic.ufo')
+        ufo_path = pjoin(master_dir, 'Inter-BlackItalic.ufo')
         source.styleName = "Black Italic"
         source.name = "blackitalic"
         source.font.info.styleName = source.styleName
       elif source.styleName == "Thin Italic Italic":
-        ufo_path = pjoin(master_dir, name + '-ThinItalic.ufo')
+        ufo_path = pjoin(master_dir, 'Inter-ThinItalic.ufo')
         source.styleName = "Thin Italic"
         source.name = "thinitalic"
         source.font.info.styleName = source.styleName
@@ -430,7 +429,7 @@ class Main(object):
     designspace.write(designspace_file)
 
     # roman designspace
-    roman_designspace_file = pjoin(outdir, name + '-roman.designspace')
+    roman_designspace_file = pjoin(outdir, 'Inter-roman.designspace')
     p = Process(
       target=self._genSubsetDesignSpace,
       args=(designspace, 'roman', roman_designspace_file)
@@ -439,7 +438,7 @@ class Main(object):
     procs.append(p)
 
     # italic designspace
-    italic_designspace_file = pjoin(outdir, name + '-italic.designspace')
+    italic_designspace_file = pjoin(outdir, 'Inter-italic.designspace')
     p = Process(
       target=self._genSubsetDesignSpace,
       args=(designspace, 'italic', italic_designspace_file)
