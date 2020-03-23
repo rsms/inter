@@ -277,10 +277,6 @@ build/tmp/a.zip:
 	cp -a misc/dist/install*.txt        "$(ZD)/"
 	cp -a LICENSE.txt                   "$(ZD)/"
 	@#
-	@# Add "beta" to Light and Thin filenames.
-	@# Requires "rename" tool in PATH (`brew install rename` on macOS)
-	rename 's/(Light.*|Thin.*)\./$$1-BETA./' "$(ZD)/Inter"*/*.*
-	@#
 	@# zip
 	cd "$(ZD)" && zip -q -X -r "../../../$@" * && cd ../..
 	@rm -rf "$(ZD)"
