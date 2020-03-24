@@ -58,7 +58,7 @@ function initMetrics(data) {
   // We expand the glyph IDs to glyph names here.
   var nameIds = data.nameids
   // console.log(data)
-  
+
   var metrics = {}
   var metrics0 = data.metrics
   Object.keys(metrics0).forEach(function (id) {
@@ -87,7 +87,7 @@ function initMetrics(data) {
       console.error('nameIds missing', t[1])
     }
     var kerningValue = t[2]
-    
+
     var lm = kerningLeft[leftName]
     if (!lm) {
       kerningLeft[leftName] = lm = {}
@@ -131,7 +131,7 @@ fetchAll(render)
 
 var styleSheet = document.styleSheets[document.styleSheets.length-1]
 var glyphRule, lineRule, zeroWidthAdvRule
-var currentScale = 0
+var currentScale = 1
 var defaultSingleScale = 1
 var currentSingleScale = 1
 var defaultGridScale = 0.4
@@ -149,60 +149,7 @@ function updateLayoutAfterChanges() {
   }
 }
 
-function setScale(scale) {
-  if (queryString.iframe !== undefined) {
-    scale = 0.11
-  } else if (queryString.g) {
-    scale = Math.min(Math.max(1, scale), 3)
-  } else {
-    scale = Math.min(Math.max(0.05, scale), 3)
-  }
 
-  if (currentScale == scale) {
-    return
-  }
-
-  currentScale = scale
-  if (queryString.g) {
-    currentSingleScale = scale
-  } else {
-    currentGridScale = scale
-  }
-
-  var hairline = Math.ceil(1 / window.devicePixelRatio / scale)
-  var spacing = Math.ceil(6 / scale)
-
-  var s = glyphs.style
-  if (queryString.g || queryString.iframe !== undefined) {
-    s.paddingLeft = null
-  } else {
-    s.paddingLeft = spacing + 'px'
-  }
-  s.width = (100 / scale) + '%'
-  s.transform = 'scale(' + scale + ')'
-
-  if (!glyphRule) {
-    glyphRule = styleSheet.cssRules[styleSheet.insertRule('#glyphs .glyph {}', styleSheet.cssRules.length)]
-    lineRule = styleSheet.cssRules[styleSheet.insertRule('#glyphs .glyph .line {}', styleSheet.cssRules.length)]
-    zeroWidthAdvRule = styleSheet.cssRules[styleSheet.insertRule('#glyphs .glyph.zero-width .advance {}', styleSheet.cssRules.length)]
-  }
-
-  if (queryString.g) {
-    glyphRule.style.marginRight = null
-    glyphRule.style.marginBottom = null
-  } else {
-    glyphRule.style.marginRight = Math.ceil(6 / scale) + 'px';
-    glyphRule.style.marginBottom = Math.ceil(6 / scale) + 'px';
-    if (queryString.iframe !== undefined) {
-      glyphRule.style.marginBottom = Math.ceil(16 / scale) + 'px';
-    }
-  }
-  lineRule.style.height = hairline + 'px'
-  zeroWidthAdvRule.style.borderWidth = (hairline) + 'px'
-
-  updateLayoutAfterChanges()
-  requestAnimationFrame(updateLayoutAfterChanges)
-}
 
 
 function encodeQueryString(q) {
@@ -238,8 +185,8 @@ singleInfo.style.display = 'block'
 
 function updateLocation() {
   queryString = parseQueryString(location.search)
+  // console.log("updateLocation. queryString=", queryString)
 
-  // var glyphs = document.getElementById('glyphs')
   var h1 = document.querySelector('h1')
   if (queryString.g) {
     if (!glyphNameEl) {
@@ -252,26 +199,15 @@ function updateLocation() {
     glyphNameEl.innerText = queryString.g
     h1.appendChild(glyphNameEl)
     document.body.classList.add('single')
-    setScale(currentSingleScale)
+    render()
   } else {
     document.title = baseTitle
     if (glyphNameEl) {
-      h1.removeChild(glyphNameEl)
+      try { h1.removeChild(glyphNameEl) } catch(_) {}
     }
     document.body.classList.remove('single')
-    setScale(currentGridScale)
   }
-
-  document.querySelector('.row.intro').style.display = (
-    queryString.iframe !== undefined ? 'none' : null
-  )
-  if (queryString.iframe !== undefined) {
-    document.body.classList.add('iframe')
-  } else {
-    document.body.classList.remove('iframe')
-  }
-
-  render()
+  // render()
 }
 
 window.onpopstate = function(ev) {
@@ -299,24 +235,29 @@ wrapIntLink(document.querySelector('h1 > a'))
 
 
 // keep refs to svgs so we don't have to refcount while using
-var svgRepository = {}
-;(function(){
-  var svgs = document.getElementById('svgs'), svg, name
-  for (var i = 0; i < svgs.children.length; ++i) {
-    svg = svgs.children[i]
-    name = svg.id.substr(4) // strip "svg-" prefix
-    svgRepository[name] = svg
+var svgRepository = null
+function getGlyphSVG(name) {
+  if (!svgRepository) {
+    svgRepository = {}
+    let svgs = document.getElementById('svgs')
+    for (let i = 0; i < svgs.children.length; ++i) {
+      let svg = svgs.children[i]
+      let name = svg.id.substr(4) // strip "svg-" prefix
+      svgRepository[name] = svg
+    }
   }
-})()
+  return svgRepository[name]
+}
 
 
 // Maps glyphname to glyphInfo. Only links to first found entry for a flyph.
 var glyphInfoMap = {}
-var needsUpdateGlyphInfoMap = true
 
 
 function render() {
-  if (!glyphInfo) {
+  let glyphname = queryString.g
+
+  if (!glyphInfo || !glyphname) {
     return
   }
 
@@ -326,7 +267,7 @@ function render() {
 
   // glyphinfo.json:
   // { "glyphs": [
-  //     [name :string, isEmpty: 1|0, unicode? :string|null, 
+  //     [name :string, isEmpty: 1|0, unicode? :string|null,
   //      unicodeName? :string, color? :string|null],
   //     ["A", 0, 65, "LATIN CAPITAL LETTER A", "#dbeaf7"],
   //     ...
@@ -339,43 +280,64 @@ function render() {
   //   ["Delta", 0, "U+8710", "INCREMENT"],
   //
 
-  var singleGlyph = null
-  var lastGlyphEl = null
-  var lastGlyphName = ''
+  let g;
 
-  glyphInfo.forEach(function(g, i) {
-    var name = g[0]
-
-    if (needsUpdateGlyphInfoMap && !glyphInfoMap[name]) {
-      glyphInfoMap[name] = g
-    }
-
-    if (queryString.g && name != queryString.g) {
-      // ignore
-      return
-    }
-
-    var glyph = renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph)
-
-    if (glyph) {
-      rootEl.appendChild(glyph.element)
-      lastGlyphEl = glyph.element
-      lastGlyphName = name
-      if (queryString.g) {
-        singleGlyph = glyph
+  for (let i = 0; i < glyphInfo.length; i++) {
+    g = glyphInfo[i]
+    if (glyphname == g[0]) {
+      let glyph = renderGlyphGraphicG(g)
+      if (glyph) {
+        rootEl.appendChild(glyph.element)
+        renderSingleInfo(glyph)
+        rootEl.appendChild(singleInfo)
       }
+      break
     }
-  })
-
-  needsUpdateGlyphInfoMap = false
-
-  if (singleGlyph) {
-    renderSingleInfo(singleGlyph)
-    rootEl.appendChild(singleInfo)
   }
+
+  renderStyleSpectrum(g)
 
   rootEl.style.display = null
   updateLayoutAfterChanges()
+}
+
+
+const stringFromCodePoint = String.fromCodePoint || function(c) {
+  return String.fromCharCode(c)
+}
+
+
+function glyphIsXL(g) {
+  let m
+  return glyphMetrics && (m = glyphMetrics.metrics[g[0]]) && m.advance > 3200
+  // console.log("glyphMetrics.metrics", glyphMetrics.metrics[g[0]])
+  // return g[0].indexOf(".circled") != -1
+}
+
+
+function renderStyleSpectrum(g) {
+  // console.log("renderStyleSpectrum", g)
+  let list = document.querySelector("#style-spectrum")
+  list.innerText = ""
+
+  let s = stringFromCodePoint(parseInt(g[2],16))
+  list.classList.toggle("xl", glyphIsXL(g))
+
+  for (let slant = 0; slant <= 10; slant += 2) {
+    for (let weight = 100; weight <= 900; weight += 100) {
+      let el = document.createElement("div")
+      el.innerText = s
+      el.title = `wght ${weight}, slnt -${slant}°`
+      el.style.fontWeight = weight
+      if (slant > 0) {
+        el.style.fontStyle = "italic"
+      }
+      el.style.webkitFontVariationSettings = el.style.fontVariationSettings =
+        `'wght' ${weight}, 'slnt' -${slant}`
+      list.appendChild(el)
+    }
+    list.appendChild(document.createElement("br"))
+  }
 }
 
 
@@ -385,11 +347,11 @@ function renderGlyphGraphic(glyphName) {
 }
 
 
-function renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph) {
+function renderGlyphGraphicG(g /*, lastGlyphName, lastGlyphEl, singleGlyph*/) {
   // let [name, isEmpty, uc, ucName, color] = g
   let name = g[0], /*isEmpty = g[1],*/ uc = g[2], ucName = g[3], color = g[4]
   var names, glyph
-  var svg = svgRepository[name]
+  var svg = getGlyphSVG(name)
 
   if (!svg) {
     // ignore
@@ -416,38 +378,38 @@ function renderGlyphGraphicG(g, lastGlyphName, lastGlyphEl, singleGlyph) {
     element: null,
   }
 
-  if (name == lastGlyphName) {
-    // additional Unicode code point for same glyph
-    glyph = lastGlyphEl
-    names = glyph.querySelector('.names')
-    names.innerText += ','
-    if (info.unicode) {
-      var ucid = ' U+' + info.unicode
-      names.innerText += ' U+' + info.unicode
-      if (!queryString.g) {
-        glyph.title += ucid
-      }
-    }
-    if (info.unicodeName) {
-      names.innerText += ' ' + info.unicodeName
-      if (!queryString.g) {
-        glyph.title += ' (' + info.unicodeName + ')'
-      }
-    }
+  // if (name == lastGlyphName) {
+  //   // additional Unicode code point for same glyph
+  //   glyph = lastGlyphEl
+  //   names = glyph.querySelector('.names')
+  //   names.innerText += ','
+  //   if (info.unicode) {
+  //     var ucid = ' U+' + info.unicode
+  //     names.innerText += ' U+' + info.unicode
+  //     if (!queryString.g) {
+  //       glyph.title += ucid
+  //     }
+  //   }
+  //   if (info.unicodeName) {
+  //     names.innerText += ' ' + info.unicodeName
+  //     if (!queryString.g) {
+  //       glyph.title += ' (' + info.unicodeName + ')'
+  //     }
+  //   }
 
-    if (queryString.g) {
-      if (singleGlyph) {
-        if (!singleGlyph.alternates) {
-          singleGlyph.alternates = []
-        }
-        singleGlyph.alternates.push(info)
-      } else {
-        throw new Error('alternate glyph UC, but appears first in glyphinfo data')
-      }
-    }
+  //   if (queryString.g) {
+  //     if (singleGlyph) {
+  //       if (!singleGlyph.alternates) {
+  //         singleGlyph.alternates = []
+  //       }
+  //       singleGlyph.alternates.push(info)
+  //     } else {
+  //       throw new Error('alternate glyph UC, but appears first in glyphinfo data')
+  //     }
+  //   }
 
-    return
-  }
+  //   return
+  // }
 
   // console.log('svg for', name, svg.width.baseVal.value, '->', svg, '\n', info)
 
@@ -580,7 +542,7 @@ function renderSingleInfo(g) {
     colorMark.classList.add('none')
   }
 
-  var svg = svgRepository[g.name]
+  var svg = getGlyphSVG(g.name)
   var svgFile = e.querySelector('.svgFile')
   svgFile.download = g.name + '.svg'
   svgFile.href = getSvgDataURI(svg)
@@ -613,29 +575,29 @@ function selectKerningPair(id, directly) {
   // deselect existing
   eachElement('.kernpair.selected', function(kernpair) {
     eachElement(kernpair, '.g', function (glyph) {
-      var svgURI = getSvgDataURI(svgRepository[glyph.dataset.name])
+      var svgURI = getSvgDataURI(getGlyphSVG(glyph.dataset.name))
       glyph.style.backgroundImage = "url('" + svgURI + "')"
     })
     kernpair.classList.remove('selected')
   })
 
   var el = document.getElementById(id)
-  
+
   if (!el) {
     history.replaceState({}, '', location.search)
     return
   }
-  
+
   el.classList.add('selected')
   eachElement(el, '.g', function (glyph) {
-    var svgURI = getSvgDataURI(svgRepository[glyph.dataset.name], 'white')
+    var svgURI = getSvgDataURI(getGlyphSVG(glyph.dataset.name), 'white')
     glyph.style.backgroundImage = "url('" + svgURI + "')"
   })
 
   if (!directly) {
     el.scrollIntoViewIfNeeded()
   }
-  
+
   history.replaceState({}, '', location.search + '#' + id)
 }
 
@@ -645,7 +607,7 @@ function renderSingleKerning(g) {
   var kerningList = document.getElementById('kerning-list')
   kerningList.style.display = 'none'
   kerningList.innerText = ''
-  var thisSvg = svgRepository[g.name]
+  var thisSvg = getGlyphSVG(g.name)
   var thisSvgURI = getSvgDataURI(thisSvg)
 
   if (!thisSvg) {
@@ -705,7 +667,7 @@ function renderSingleKerning(g) {
 
     keys.forEach(function(glyphName) {
       var kerningValue = kerningInfo[glyphName]
-      var otherSvg = svgRepository[glyphName]
+      var otherSvg = getGlyphSVG(glyphName)
 
       var pair = document.createElement('a')
       pair.className = 'kernpair ' + side
@@ -782,7 +744,7 @@ function renderSingleKerning(g) {
 
         pair.appendChild(link)
       }
-      
+
 
       kerningList.appendChild(pair)
     })
@@ -824,19 +786,22 @@ function fmthex(cp, minWidth) {
 }
 
 
-document.addEventListener('keydown', function(ev) {
-  if (!queryString.g && (ev.metaKey || ev.ctrlKey)) {
-    if (ev.keyCode == 187 || ev.key == '+') {
-      setScale(parseFloat((currentScale + 0.1).toFixed(2)))
-      ev.preventDefault()
-    } else if (ev.keyCode == 189 || ev.key == '-') {
-      setScale(parseFloat((currentScale - 0.1).toFixed(2)))
-      ev.preventDefault()
-    } else if (ev.keyCode == 48 || ev.key == '0') {
-      setScale(queryString.g ? defaultSingleScale : defaultGridScale)
-      ev.preventDefault()
-    }
+// hook up glyph table click handlers
+function onClickGlyphInTable(ev) {
+  // let le = ev.target
+  document.location.href = "?g=" + encodeURI(ev.target.dataset.glyphname)
+}
+const activeListener = { capture: true }
+let cv = document.querySelector('.charset-table').querySelectorAll('c')
+for (let i = 0; i < cv.length; i++) {
+  let c = cv[i]
+  if (typeof PointerEvent == "undefined") {
+    c.addEventListener('mousedown', onClickGlyphInTable, activeListener)
+  } else {
+    c.addEventListener('pointerdown', onClickGlyphInTable, activeListener)
   }
-})
+}
+// document.location.href = "/glyphs/?g=" + encodeURI(ev.target.dataset.glyphname)
+
 
 updateLocation()

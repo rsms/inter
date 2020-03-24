@@ -75,28 +75,28 @@ endfor
   </div>
 
   <div class="sidebar controls">
-    
+
     <div class="control">
       <img title="Style" class="icon" src="icons/style.svg">
       <select data-binding="style">
-        <option value="thin">Thin (BETA)</option>
-        <option value="thin-italic">Thin Italic (BETA)</option>
-        <option value="extra-light">Extra Ligh (BETA)</option>
-        <option value="extra-light-italic">Extra Light Italic (BETA)</option>
-        <option value="light">Light (BETA)</option>
-        <option value="light-italic">Light Italic (BETA)</option>
-        <option disabled>————————————</option>
+        <option value="thin">Thin</option>
+        <option value="extra-light">Extra Ligh</option>
+        <option value="light">Light</option>
         <option value="regular" default selected>Regular</option>
-        <option value="italic">Italic</option>
         <option value="medium">Medium</option>
-        <option value="medium-italic">Medium Italic</option>
         <option value="semi-bold">Semi Bold</option>
-        <option value="semi-bold-italic">Semi Bold Italic</option>
         <option value="bold">Bold</option>
-        <option value="bold-italic">Bold Italic</option>
         <option value="extra-bold">Extra Bold</option>
-        <option value="extra-bold-italic">Extra Bold Italic</option>
         <option value="black">Black</option>
+        <option disabled>————————————</option>
+        <option value="thin-italic">Thin Italic</option>
+        <option value="extra-light-italic">Extra Light Italic</option>
+        <option value="light-italic">Light Italic</option>
+        <option value="italic">Italic</option>
+        <option value="medium-italic">Medium Italic</option>
+        <option value="semi-bold-italic">Semi Bold Italic</option>
+        <option value="bold-italic">Bold Italic</option>
+        <option value="extra-bold-italic">Extra Bold Italic</option>
         <option value="black-italic">Black Italic</option>
       </select>
     </div>
@@ -128,9 +128,9 @@ endfor
       <input type="range" min="-1" max="0" step="0.01" data-binding="var-c">
       <input type="number" min="-1" max="0" step="0.001" data-binding="var-c">
     </div>
-    
+
     <hr>
-    
+
     <div class="control">
       <label title="Number of ideal matches">ni</label>
       <input title="Number of ideal matches" type="number" readonly data-binding="ideal-count">
@@ -519,7 +519,7 @@ function updateIdealMatches() {
   })
 
   distance = distance / ndistances
-  
+
   bindings.setValue('ideal-distance', distance.toFixed(6))
   bindings.setValue('ideal-count', idealCount)
 }
