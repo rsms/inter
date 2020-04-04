@@ -270,7 +270,8 @@ class Main(object):
           # unused
           stripGlyphs.append(g.name)
       g.clearAnchors()
-      del g.lib['com.schriftgestaltung.Glyphs.lastChange']
+      if 'com.schriftgestaltung.Glyphs.lastChange' in g.lib:
+        del g.lib['com.schriftgestaltung.Glyphs.lastChange']
 
     # update possibly modified glyphorder
     font.lib['public.glyphOrder'] = list(glyphOrder)
