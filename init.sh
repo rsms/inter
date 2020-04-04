@@ -442,7 +442,7 @@ else
       echo -n " build/ufo/Inter-${style}.ufo/*.fea" >> "$GEN_MAKE_FILE"
       echo -n " build/ufo/Inter-${style}.ufo/glyphs/*.plist" >> "$GEN_MAKE_FILE"
       echo ")" >> "$GEN_MAKE_FILE"
-      echo -e "\ttouch \"\$@\"" >> "$GEN_MAKE_FILE"
+      echo -e "\t@touch \"\$@\"" >> "$GEN_MAKE_FILE"
 
       echo -n "build/ufo/InterDisplay-${style}.ufo:" >> "$GEN_MAKE_FILE"
       echo -n " build/ufo/InterDisplay.designspace" >> "$GEN_MAKE_FILE"
@@ -452,7 +452,7 @@ else
       echo -n " build/ufo/InterDisplay-${style}.ufo/*.fea" >> "$GEN_MAKE_FILE"
       echo -n " build/ufo/InterDisplay-${style}.ufo/glyphs/*.plist" >> "$GEN_MAKE_FILE"
       echo ")" >> "$GEN_MAKE_FILE"
-      echo -e "\ttouch \"\$@\"" >> "$GEN_MAKE_FILE"
+      echo -e "\t@touch \"\$@\"" >> "$GEN_MAKE_FILE"
     done
     echo -n "all_ufo_masters :=" >> "$GEN_MAKE_FILE"
     for style in "${master_styles[@]}"; do
