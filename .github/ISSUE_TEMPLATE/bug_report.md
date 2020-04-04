@@ -4,6 +4,11 @@ about: Create a report to help us improve
 
 ---
 
+> Did you get the font from Google Fonts? Then please head over to
+> https://github.com/google/fonts/issues
+> and file an issue with Google Fonts.
+> If not, REMOVE THIS PARAGRAPH BEFORE FILING YOUR ISSUE.
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
