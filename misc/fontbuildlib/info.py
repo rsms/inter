@@ -1,37 +1,9 @@
 import subprocess
 import re
+import sys
 from datetime import datetime
 from common import getGitHash, getVersion
 from .util import readTextFile, BASEDIR, pjoin
-
-
-_gitHash = None
-def getGitHash():
-  global _gitHash
-  if _gitHash is None:
-    _gitHash = ''
-    try:
-      _gitHash = subprocess.check_output(
-        ['git', '-C', BASEDIR, 'rev-parse', '--short', 'HEAD'],
-        stderr=subprocess.STDOUT,
-        **_enc_kwargs
-      ).strip()
-    except:
-      try:
-        # git rev-parse --short HEAD > githash.txt
-        _gitHash = readTextFile(pjoin(BASEDIR, 'githash.txt')).strip()
-      except:
-        pass
-  return _gitHash
-
-
-_version = None
-def getVersion():
-  global _version
-  if _version is None:
-    _version = readTextFile(pjoin(BASEDIR, 'version.txt')).strip()
-  return _version
-
 
 
 def updateFontVersion(font, dummy, isVF):
@@ -41,8 +13,11 @@ def updateFontVersion(font, dummy, isVF):
     now = datetime(2016, 1, 1, 0, 0, 0, 0)
   else:
     version = getVersion()
-    buildtag = getGitHash()
+    buildtag, buildtagErrs = getGitHash()
     now = datetime.utcnow()
+    if buildtag == "" or len(buildtagErrs) > 0:
+      buildtag = "src"
+      print("warning: getGitHash() failed: %r" % buildtagErrs, file=sys.stderr)
   versionMajor, versionMinor = [int(num) for num in version.split(".")]
   font.info.version = version
   font.info.versionMajor = versionMajor

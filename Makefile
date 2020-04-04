@@ -46,9 +46,11 @@ web: all_web
 
 all_const: all_otf  all_ttf  all_web
 all_const_hinted: all_ttf_hinted  all_web_hinted
-var: \
+var: var_text var_display
+var_text: \
 	$(FONTDIR)/var/Inter.var.woff2 \
-	$(FONTDIR)/var/Inter.var.otf \
+	$(FONTDIR)/var/Inter.var.otf
+var_display: \
 	$(FONTDIR)/var/InterDisplay.var.woff2 \
 	$(FONTDIR)/var/InterDisplay.var.otf
 all_var: \
@@ -73,7 +75,7 @@ all_var: \
 # all_var_hinted: $(FONTDIR)/var-hinted/Inter.var.otf $(FONTDIR)/var-hinted/Inter.var.woff2
 # .PHONY: all_var_hinted
 
-.PHONY: all_const  all_const_hinted  var  all_var
+.PHONY: all_const  all_const_hinted  var  var_text  var_display  all_var
 
 export PATH := $(PWD)/build/venv/bin:$(PATH)
 
@@ -97,23 +99,23 @@ build/%.woff: build/%.ttf
 
 
 # VF OTF from UFO
-$(FONTDIR)/var/Inter.var.otf: $(all_ufo_masters) version.txt
+$(FONTDIR)/var/Inter.var.otf: $(all_ufo_masters_text) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter.designspace
 
 $(FONTDIR)/var/Inter-V.var.otf: $(FONTDIR)/var/Inter.var.otf
 	misc/fontbuild rename --family "Inter V" -o $@ $<
 
-$(FONTDIR)/var/Inter-%.var.otf: build/ufo/Inter-%.designspace $(all_ufo_masters) version.txt
+$(FONTDIR)/var/Inter-%.var.otf: build/ufo/Inter-%.designspace $(all_ufo_masters_text) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 	misc/tools/fix-vf-meta.py $@
 
-$(FONTDIR)/var/InterDisplay.var.otf: $(all_display_ufo_masters) version.txt
+$(FONTDIR)/var/InterDisplay.var.otf: $(all_ufo_masters_display) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/InterDisplay.designspace
 
 $(FONTDIR)/var/InterDisplay-V.var.otf: $(FONTDIR)/var/InterDisplay.var.otf
 	misc/fontbuild rename --family "Inter Display V" -o $@ $<
 
-$(FONTDIR)/var/InterDisplay-%.var.otf: build/ufo/InterDisplay-%.designspace $(all_display_ufo_masters) version.txt
+$(FONTDIR)/var/InterDisplay-%.var.otf: build/ufo/InterDisplay-%.designspace $(all_ufo_masters_display) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 	misc/tools/fix-vf-meta.py $@
 

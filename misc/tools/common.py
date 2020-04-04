@@ -36,23 +36,22 @@ def readTextFile(filename):
 
 
 _gitHash = None
-def getGitHash():
+_gitHashErrs = []
+def getGitHash():  # returns tuple (hash :string, errors :string[])
   global _gitHash
   if _gitHash is None:
     _gitHash = ''
+    args = ['git', '-C', BASEDIR, 'rev-parse', '--short', 'HEAD']
     try:
-      _gitHash = subprocess.check_output(
-        ['git', '-C', BASEDIR, 'rev-parse', '--short', 'HEAD'],
-        stderr=subprocess.STDOUT,
-        **_enc_kwargs
-      ).strip()
+      _gitHash = subprocess.check_output(args, stderr=subprocess.STDOUT, **_enc_kwargs).strip()
     except:
+      _gitHashErrs.append(sys.exc_info()[0])
       try:
         # git rev-parse --short HEAD > githash.txt
         _gitHash = readTextFile(pjoin(BASEDIR, 'githash.txt')).strip()
       except:
-        pass
-  return _gitHash
+        _gitHashErrs.append(sys.exc_info()[0])
+  return (_gitHash, _gitHashErrs)
 
 
 _version = None

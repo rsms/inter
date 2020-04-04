@@ -454,9 +454,13 @@ else
       echo ")" >> "$GEN_MAKE_FILE"
       echo -e "\t@touch \"\$@\"" >> "$GEN_MAKE_FILE"
     done
-    echo -n "all_ufo_masters :=" >> "$GEN_MAKE_FILE"
+    echo -n "all_ufo_masters_text :=" >> "$GEN_MAKE_FILE"
     for style in "${master_styles[@]}"; do
       echo -n " build/ufo/Inter-${style}.ufo" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+    echo -n "all_ufo_masters_display :=" >> "$GEN_MAKE_FILE"
+    for style in "${master_styles[@]}"; do
       echo -n " build/ufo/InterDisplay-${style}.ufo" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"

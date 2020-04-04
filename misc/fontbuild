@@ -21,7 +21,7 @@ from glyphsLib.interpolation import apply_instance_data
 
 from fontbuildlib import FontBuilder
 from fontbuildlib.util import mkdirs, loadTTFont
-from fontbuildlib.info import setFontInfo, updateFontVersion
+from fontbuildlib.info import setFontInfo
 from fontbuildlib.name import setFamilyName, renameStylesGoogleFonts
 
 log = logging.getLogger(__name__)
