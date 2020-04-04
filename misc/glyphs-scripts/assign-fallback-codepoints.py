@@ -1,17 +1,23 @@
-#
-# Assigns private-use codepoints to glyphs which are not mapped
-# to any Unicode codepoints.
-#
-# This script will ignore glyphs which name starts with "." as well as
-# empty glyphs and glyphs which are not exported.
-#
+#MenuTitle: Assign fallback codepoints
+# -*- coding: utf-8 -*-
+__doc__="""
+Assigns private-use codepoints to glyphs which are not mapped
+to any Unicode codepoints.
+
+This script will ignore glyphs:
+- glyphs which are not exported
+- glyphs which name starts with "."
+- glyphs which name ends with ".case"
+- empty glyphs
+"""
 import sys
 from collections import OrderedDict
 
-DRY_RUN = True
+DRY_RUN = False
 
 font = Glyphs.font
 font.disableUpdateInterface()
+
 
 def isEmpty(g):
   for master in g.parent.masters:
@@ -19,6 +25,18 @@ def isEmpty(g):
     if layer.bounds is not None and layer.bounds.size.width > 0:
       return False
   return True
+
+
+def includeGlyph(g):
+  if not g.export:
+    return False
+  if g.name[0] == '.':
+    return False
+  if g.name.endswith(".case"):
+    return False
+  # finally, return true if the glyph has no codepoint assigned
+  return g.unicodes is None or len(g.unicodes) == 0
+
 
 try:
   # find next unallocated private-use codepoint
@@ -40,8 +58,7 @@ try:
 
   # assign private-use codepoints to glyphs that have no existing unicode mapping
   for g in font.glyphs:
-    # only care for glyphs which are being exported (also ignore "special" glyphs)
-    if g.export and g.name[0] != '.' and (g.unicodes is None or len(g.unicodes) == 0):
+    if includeGlyph(g):
       # error on empty glyphs -- there should be no unmapped empty glyphs
       if isEmpty(g):
         sys.stderr.write('ERR: glyph %r is empty but has no unicode mapping (skipping)\n' % g.name)
