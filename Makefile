@@ -431,6 +431,6 @@ install_var_v:
 
 # clean removes generated and built fonts in the build directory
 clean:
-	rm -rvf build/tmp build/fonts build/ufo build/googlefonts
+	rm -rf build/tmp build/fonts build/ufo build/googlefonts
 
 .PHONY: clean
