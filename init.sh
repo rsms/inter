@@ -52,6 +52,21 @@ else
 
 
   # ——————————————————————————————————————————————————————————————————
+  # git hooks
+  if [ -d .git ] && [ -d misc/git-hooks ]; then
+    mkdir -p .git/hooks
+    pushd .git/hooks >/dev/null
+    for f in ../../misc/git-hooks/*.sh; do
+      HOOKFILE=$(basename "$f" .sh)
+      if ! [ -f "$HOOKFILE" ]; then
+        ln -vfs "$f" "$HOOKFILE"
+      fi
+    done
+    popd >/dev/null
+  fi
+
+
+  # ——————————————————————————————————————————————————————————————————
   # virtualenv
 
   mkdir -p "$VENV_DIR"
@@ -539,64 +554,74 @@ else
       echo "" >> "$GEN_MAKE_FILE"
     done
 
-    # all_otf target
-    echo -n "all_otf:" >> "$GEN_MAKE_FILE"
-    for style in "${all_styles[@]}"; do
-      echo -n " ${style}_otf" >> "$GEN_MAKE_FILE"
-      echo -n " display_${style}_otf" >> "$GEN_MAKE_FILE"
-    done
-    echo "" >> "$GEN_MAKE_FILE"
-
-    # all_text_otf target
-    echo -n "all_text_otf:" >> "$GEN_MAKE_FILE"
+    # all_otf_* target
+    echo -n "all_otf_text:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " ${style}_otf" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
-
-    # all_display_otf target
-    echo -n "all_display_otf:" >> "$GEN_MAKE_FILE"
+    echo -n "all_otf_display:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " display_${style}_otf" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
 
-    # all_ttf target
-    echo -n "all_ttf:" >> "$GEN_MAKE_FILE"
+    # all_ttf_* target
+    echo -n "all_ttf_text:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " ${style}_ttf" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+    echo -n "all_ttf_display:" >> "$GEN_MAKE_FILE"
+    for style in "${all_styles[@]}"; do
       echo -n " display_${style}_ttf" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
 
-    # all_ttf_hinted target
-    echo -n "all_ttf_hinted:" >> "$GEN_MAKE_FILE"
+    # all_ttf_*_hinted target
+    echo -n "all_ttf_text_hinted:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " ${style}_ttf_hinted" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+    echo -n "all_ttf_display_hinted:" >> "$GEN_MAKE_FILE"
+    for style in "${all_styles[@]}"; do
       echo -n " display_${style}_ttf_hinted" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
 
-    # all_web target
-    echo -n "all_web:" >> "$GEN_MAKE_FILE"
+    # all_web_* target
+    echo -n "all_web_text:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " ${style}_web" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+    echo -n "all_web_display:" >> "$GEN_MAKE_FILE"
+    for style in "${all_styles[@]}"; do
       echo -n " display_${style}_web" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
 
-    # all_web_hinted target
-    echo -n "all_web_hinted:" >> "$GEN_MAKE_FILE"
+    # all_web_*_hinted target
+    echo -n "all_web_hinted_text:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " ${style}_web_hinted" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+    echo -n "all_web_hinted_display:" >> "$GEN_MAKE_FILE"
+    for style in "${all_styles[@]}"; do
       echo -n " display_${style}_web_hinted" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
 
-    # all_check_const target
-    echo -n "all_check_const:" >> "$GEN_MAKE_FILE"
+    # check_all_* target
+    echo -n "check_all_text:" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " ${style}_check" >> "$GEN_MAKE_FILE"
+    done
+    echo "" >> "$GEN_MAKE_FILE"
+    echo -n "check_all_display:" >> "$GEN_MAKE_FILE"
+    for style in "${all_styles[@]}"; do
       echo -n " display_${style}_check" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
@@ -617,31 +642,16 @@ else
     done
     echo "" >> "$GEN_MAKE_FILE"
 
-    # all_const_fonts target
-    # echo -n "all_const_fonts:" >> "$GEN_MAKE_FILE"
-    # for style in "${all_styles[@]}"; do
-    #   echo -n " ${style}" >> "$GEN_MAKE_FILE"
-    # done
-    # echo "" >> "$GEN_MAKE_FILE"
 
-    # googlefonts_all target
-    echo -n "googlefonts_all:" >> "$GEN_MAKE_FILE"
-    echo -n " build/googlefonts/var/Inter.var.otf" >> "$GEN_MAKE_FILE"
-    echo -n " build/googlefonts/var/Inter.var.woff2" >> "$GEN_MAKE_FILE"
-    echo -n " build/googlefonts/var/Inter-roman.var.otf" >> "$GEN_MAKE_FILE"
-    echo -n " build/googlefonts/var/Inter-roman.var.woff2" >> "$GEN_MAKE_FILE"
-    echo -n " build/googlefonts/var/Inter-italic.var.otf" >> "$GEN_MAKE_FILE"
-    echo -n " build/googlefonts/var/Inter-italic.var.woff2" >> "$GEN_MAKE_FILE"
-    for style in "${all_styles[@]}"; do
-      echo -n " build/googlefonts/const/Inter-${style}.otf" >> "$GEN_MAKE_FILE"
-      echo -n " build/googlefonts/const/Inter-${style}.woff2" >> "$GEN_MAKE_FILE"
-    done
-    echo "" >> "$GEN_MAKE_FILE"
-
-
-    echo -n ".PHONY: all_otf all_ttf_hinted all_ttf all_web all_web_hinted all_ufo all_check_const" >> "$GEN_MAKE_FILE"
+    echo -n ".PHONY:" >> "$GEN_MAKE_FILE"
+    echo -n " all_otf_text all_otf_display" >> "$GEN_MAKE_FILE"
+    echo -n " all_ttf_text all_ttf_display all_ttf_hinted_text all_ttf_hinted_display" >> "$GEN_MAKE_FILE"
+    echo -n " all_web_text all_web_display all_web_hinted_text all_web_hinted_display" >> "$GEN_MAKE_FILE"
+    echo -n " check_all_text check_all_display" >> "$GEN_MAKE_FILE"
+    echo -n " all_samples_pdf all_samples_png" >> "$GEN_MAKE_FILE"
     for style in "${all_styles[@]}"; do
       echo -n " ${style} ${style}_ttf ${style}_ttf_hinted ${style}_otf ${style}_check" >> "$GEN_MAKE_FILE"
+      echo -n " display_${style} display_${style}_ttf display_${style}_ttf_hinted display_${style}_otf display_${style}_check" >> "$GEN_MAKE_FILE"
     done
     echo "" >> "$GEN_MAKE_FILE"
   fi
