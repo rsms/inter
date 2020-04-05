@@ -367,20 +367,6 @@ update_UnicodeData:
 	curl '-#' "https://www.unicode.org/Public/$(ucd_version)/ucd/UnicodeData.txt" >> misc/UnicodeData.txt
 
 
-# Google fonts
-build/googlefonts/%: $(FONTDIR)/%
-	misc/fontbuild rename --compact-style -o $@ "$<"
-
-googlefonts: googlefonts_pre googlefonts_all
-
-googlefonts_pre:
-	@rm -rf build/googlefonts
-	@mkdir -p  build/googlefonts/const  build/googlefonts/var
-
-.PHONY: googlefonts googlefonts_pre
-
-
-
 
 # install targets
 install_ttf: all_ttf_const
