@@ -7,6 +7,25 @@
     <link href="../inter.css" rel="stylesheet">
     <script type="text/javascript">
 
+// dark color scheme by default?
+let defaultColorSceme = "light"
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  defaultColorSceme = "dark"
+  if (document.location.search.indexOf("invert-colors") == -1) {
+    document.documentElement.classList.add("color-scheme-dark")
+  }
+}
+
+// Safari?
+(function(u){ if (
+  u.indexOf('Safari/') != -1 &&
+  u.indexOf('Chrome/') == -1 &&
+  u.indexOf('Chromium/') == -1
+) {
+  document.documentElement.classList.add('safari')
+} })(navigator.userAgent);
+
+
 const samples = new Map()
 let sampleVar = null // BoundVar
 
@@ -161,7 +180,13 @@ Ambiguation: (should not be fractions)
 `)
 
 
-samples.set('Feature: rlig', `
+samples.set('Feature: ccmp', `
+/d /caroncmb --> /dcaron ==> d\u030C
+/j /tildecomb --> /jdotless /tildecomb ==> j\u0303
+
+/i <modifier> --> /idotless ==> i\u0300
+/idotless /gravecomb --> /igrave ==> \u0131\u0300
+
 Enclosing glyphs (glyph + {U+20DD,U+20DE})
 U+20DD COMBINING ENCLOSING CIRCLE:       ⃝
 U+20DE COMBINING ENCLOSING SQUARE:       ⃞
@@ -193,14 +218,14 @@ U\u20DE    V\u20DE    W\u20DE    X\u20DE    Y\u20DE    Z\u20DE    !\u20DE    ?\u
 ←\u20DE    →\u20DE    ↑\u20DE    ↓\u20DE
 
 HE\u20DDLLO WO\u20DERLD
-
-Note on combining-marks compatibility:
-• rlig=on: uses precomposed ligatures (default.)
-• rlig=off: rely on layout engine to combine (limited support.)
 `)
 
 
 samples.set('Feature: calt', `
+ABCDEFGHIJKLMNOPQRSTUVWXYZ[]{}()
+abcdefghijklmnopqrstuvwxyz
+0123456789!?.
+
 Arrows
 dash[1-3]+gt\t\t-> --> --->
 e{n,m}dash+gt\t–> —>
@@ -212,6 +237,9 @@ lt+e{n,m}dash+gt\t<–> <—>
 equal[1,2]+gt\t\t=> ==>
 lt+equal+equal\t<==
 lt+equal[1,2]+gt\t<=> <==>
+
+Abc{}[]()
+ABC{}[]()
 
 combined with calt to adjust to caps
 A -> B <- C->D<-E=>F<=>G
@@ -1534,15 +1562,6 @@ body.varfont.hinted .inter select {
     <link href="lab.css" rel="stylesheet">
     <script type="text/javascript">
 
-// Safari?
-(function(u){ if (
-  u.indexOf('Safari/') != -1 &&
-  u.indexOf('Chrome/') == -1 &&
-  u.indexOf('Chromium/') == -1
-) {
-  document.documentElement.classList.add('safari')
-} })(navigator.userAgent);
-
 const fontVersion = Math.round(Date.now()).toString(36)
 let fontFamilyName = 'Inter-v' + fontVersion
 let fontFamilyNameHinted = 'Inter-hinted-v' + fontVersion
@@ -1566,10 +1585,48 @@ document.head.appendChild(fontCSS)
 
     </script>
   </head>
-  <body>
+  <body class="init-anim">
+    <div id="sidebar-button"></div>
     <div class="options inter">
 
-      <label class="style">
+      <div class="flex-x">
+        <label>
+          <input type="checkbox" name="varfont"
+           title="Use variable font instead of constant font files">
+          <span>Variable</span>
+        </label>
+        <label style="display:inline-block; margin-left:4px">
+          <input type="checkbox" name="italic">
+          <em>Italic</em>
+        </label>
+        <label title="Swap color scheme">
+          <input type="checkbox" name="invert-colors">
+          <b>☀</b>
+        </label>
+      </div>
+
+      <label class="label-and-value">
+        <span>Size:</span>
+        <input type="range" value="22" step="1" min="11" max="200" name="_sizeRange">
+        <input type="number" value="22" step="1" min="4" max="1024" name="size">
+        <!-- <note><span class="unit">dp</span></note> -->
+      </label>
+
+      <!-- Variable font controls (hidden when not using variable fonts) -->
+      <label class="label-and-value varfontControl">
+        <span>Weight:</span>
+        <input type="range" value="400" step="1" min="100" max="900" name="varWeight">
+        <input type="number" value="400" step="1" min="100" max="900" name="varWeightNum">
+      </label>
+
+      <label class="label-and-value varfontControl">
+        <span>Slant:</span>
+        <input type="range" value="0" step="0.01" min="0" max="10" name="varSlant">
+        <input type="number" value="0" step="0.01" min="0" max="10" name="varSlantNum">
+      </label>
+
+      <label class="label-and-value constfontControl">
+        <span>Weight:</span>
         <select name="weight" style="max-width:100px">
           <option value="100">Thin (100)</option>
           <option value="200">Extra Light (200)</option>
@@ -1581,32 +1638,6 @@ document.head.appendChild(fontCSS)
           <option value="800">Extra Bold (800)</option>
           <option value="900">Black (900)</option>
         </select>
-        <label style="display:inline-block; margin-left:4px"><input type="checkbox" name="italic"> <em>Italic</em></label>
-        <label>
-          <input type="checkbox" name="varfont"
-           title="Use variable font instead of constant font files">
-          <span>Variable</span>
-        </label>
-      </label>
-
-      <div class="checkbox-group varfontControl">
-        <span>Variable axes:</span>
-        <label class="label-and-value">
-          <span>Weight:</span>
-          <input type="range" value="400" step="10" min="100" max="900" name="varWeight">
-          <input type="number" value="400" step="1" min="100" max="900" name="varWeightNum">
-        </label>
-        <label class="label-and-value">
-          <span>Slant:</span>
-          <input type="range" value="0" step="0.01" min="0" max="10" name="varSlant">
-          <input type="number" value="0" step="1" min="0" max="10" name="varSlantNum">
-        </label>
-      </div>
-
-      <label class="label-and-value">
-        <span>Size:</span>
-        <input type="number" value="22" step="1" min="4" max="1024" name="size">
-        <note><span class="unit">dp</span></note>
       </label>
 
       <label class="label-and-value">
@@ -1627,20 +1658,14 @@ document.head.appendChild(fontCSS)
       <label class="label-and-value">
         <span>Letter spacing:</span>
         <input type="number" value="" placeholder="" step="0.1" name="letterSpacing">
-        <note><span class="unit">%</span><div
-          class="img-button reset-letter-spacing"
-          tabindex="0"
-          style="background-image:url(../res/icons/reset-black.svg)"></div>
+        <note><span class="unit">%</span><div class="img-button reset reset-letter-spacing" tabindex="0"></div>
         </note>
       </label>
 
       <label class="label-and-value">
         <span>Line height:</span>
         <input type="number" value="" placeholder="" step="1" min="0" max="1000" name="lineHeight">
-        <note><span class="unit">dp</span><div
-          class="img-button reset-line-height"
-          tabindex="0"
-          style="background-image:url(../res/icons/reset-black.svg)"></div>
+        <note><span class="unit">dp</span><div class="img-button reset reset-line-height" tabindex="0"></div>
         </note>
       </label>
 
@@ -1651,7 +1676,6 @@ document.head.appendChild(fontCSS)
         <option value="capitalize">capitalize</option>
         <option value="uppercase">uppercase</option>
         <option value="lowercase">lowercase</option>
-        <option value="full-width">full-width</option>
       </select></label>
 
       <label class="label-and-value">
@@ -1665,49 +1689,7 @@ document.head.appendChild(fontCSS)
         <option value="wavy underline">wavy underline</option>
       </select></label>
 
-      <!--label class="label-and-value" title="controls the usage of alternate glyphs for capital letters">
-      <span>Caps:</span>
-      <select name="variantCaps">
-        <option value="normal" selected>normal</option>
-        <option value="small-caps">small-caps</option>
-        <option value="all-small-caps">all-small-caps</option>
-        <option value="petite-caps">petite-caps</option>
-        <option value="all-petite-caps">all-petite-caps</option>
-        <option value="unicase">unicase</option>
-        <option value="titling-caps">titling-caps</option>
-      </select></label-->
-
-      <!--label class="label-and-value">
-      <span>Ligatures:</span>
-      <select name="variantLigatures">
-        <option value="normal" selected>normal</option>
-        <option value="none">none</option>
-        <option value="common-ligatures">common-ligatures</option>
-        <option value="no-common-ligatures">no-common-ligatures</option>
-        <option value="discretionary-ligatures">discretionary-ligatures</option>
-        <option value="no-discretionary-ligatures">no-discretionary-ligatures</option>
-        <option value="historical-ligatures">historical-ligatures</option>
-        <option value="no-historical-ligatures">no-historical-ligatures</option>
-        <option value="contextual">contextual</option>
-        <option value="no-contextual">no-contextual</option>
-      </select></label>
-
-      <label class="label-and-value" title="controls the usage of alternate glyphs for capital letters">
-      <span>Numeric:</span>
-      <select name="variantNumeric">
-        <option value="normal" selected>normal</option>
-        <option value="ordinal">ordinal</option>
-        <option value="slashed-zero">slashed-zero</option>
-        <option value="lining-nums">lining-nums</option>
-        <option value="oldstyle-nums">oldstyle-nums</option>
-        <option value="proportional-nums">proportional-nums</option>
-        <option value="tabular-nums">tabular-nums</option>
-        <option value="diagonal-fractions">diagonal-fractions</option>
-        <option value="stacked-fractions">stacked-fractions</option>
-        <option value="oldstyle-nums stacked-fractions">oldstyle-nums stacked-fractions</option>
-      </select></label-->
-
-      <h3>Display</h3>
+      <!-- <h3>Display</h3> -->
 
       <label class="label-and-value">
       <span>Anti-alias:</span>
@@ -1727,8 +1709,6 @@ document.head.appendChild(fontCSS)
       </select>
       </label>
 
-      <label title="White text on black background"><input type="checkbox" name="display-invert-colors"> Inverted colors</label>
-
 
       <h3>Features</h3>
 
@@ -1747,6 +1727,7 @@ document.head.appendChild(fontCSS)
       <label title='Stylistic set 1 "Open Digits"'><input type="checkbox" class="featopt" name="feat:ss01"> ss01 &nbsp;(Open Digits)</label>
       <label title='Stylistic set 2 "Disambiguation"'><input type="checkbox" class="featopt" name="feat:ss02"> ss02 &nbsp;(Disambiguation)</label>
       <label title='Stylistic set 3 "Lower case r curves into round neighbors"'><input type="checkbox" class="featopt" name="feat:ss03"> ss03 &nbsp;(Curved r)</label>
+      <label title='Stylistic set 4 "Disambiguation without slashed zero"'><input type="checkbox" class="featopt" name="feat:ss04"> ss04 &nbsp;(Disambiguation w/o zero)</label>
       <label title='Character Variant 1 "Alternate one"'><input type="checkbox" class="featopt" name="feat:cv01"> cv01 &nbsp;(Alternate one)</label>
       <label title='Character Variant 2 "Open four"'><input type="checkbox" class="featopt" name="feat:cv02"> cv02 &nbsp;(Open four)</label>
       <label title='Character Variant 3 "Open six"'><input type="checkbox" class="featopt" name="feat:cv03"> cv03 &nbsp;(Open six)</label>
@@ -1763,8 +1744,6 @@ document.head.appendChild(fontCSS)
       <div class="checkbox-group">
       <span>Default-on features:</span>
       <label title="Contextual alternates"><input type="checkbox" class="featopt" name="feat:calt=0"> Disable calt &nbsp;(Contextual alternates)</label>
-      <!-- <label title="Standard ligatures"><input type="checkbox" class="featopt" name="feat:liga=0"> Disable liga &nbsp;(Standard ligatures)</label> -->
-      <label title="Required ligatures"><input type="checkbox" class="featopt" name="feat:rlig=0"> Disable rlig &nbsp;(Required ligatures)</label>
       <label title="Kerning"><input type="checkbox" class="featopt" name="feat:kern=0"> Disable kern &nbsp;(Kerning)</label>
       </div>
 
@@ -1805,7 +1784,6 @@ function InterDynamicTracking(fontSize) {
   return a + b * Math.pow(Math.E, c * fontSize)
 }
 
-
 // provide hinted=1 to use TTF hinted fonts.
 // not exposed in UI as it only works when serving the site locally
 // with fonts in the build/fonts directory.
@@ -1817,6 +1795,87 @@ if (hinted) {
 }
 document.body.style.fontFamily = familyName
 
+
+function parseQueryString(qs) {
+  return new Map(
+    qs.replace(/^\?+/g,'')
+      .split('&')
+      .filter(s => s.trim())
+      .map(s => s.split('=').map(decodeURIComponent))
+  )
+}
+
+
+function fmtQueryString(mapLikeIterable) {
+  let pairs = []
+  for (let kv of mapLikeIterable) {
+    let k = kv[0]
+    let v = kv[1]
+    if (v === undefined) {
+      pairs.push(encodeURIComponent(k))
+    } else {
+      v = (v === true) ? 1 : (v === false || v === null) ? 0 : v
+      pairs.push(encodeURIComponent(k) + '=' + encodeURIComponent(v))
+    }
+  }
+  return pairs.sort().join('&')
+}
+
+
+function setCurrentQueryString(queryString) {
+  replaceURL(() => {
+    if (typeof queryString == "function") {
+      queryString = queryString()
+    }
+    return document.location.pathname + (queryString ? "?" + queryString : "")
+  })
+}
+
+
+function setCurrentQueryStringParam(key, value, zeroValue) {
+  setCurrentQueryString(() => {
+    let qs = parseQueryString(document.location.search)
+    if (value === undefined || value === zeroValue) {
+      qs.delete(key)
+    } else {
+      qs.set(key, value)
+    }
+    return fmtQueryString(qs)
+  })
+}
+
+
+// replaceURL(url :string|Function, title? :string, meta? :any)
+var replaceURL = (()=>{
+  // We employ some backoff on calling history.replaceState as
+  // Chrome will start to throttle (meaning ignoring) calls to
+  // history.replaceState if the frequency gets too high.
+  // Safari 13 provides a budget of 200 replaceState calls in a 30 second sliding time window.
+  // Chrome instead uses an IPC message flooding prevention (https://crbug.com/882238)
+
+  let timer = null
+  let queued = null //  {url, title, meta} when queued, null when not
+
+  function flush() {
+    if (queued) {
+      let url = typeof queued.url == "function" ? queued.url() : queued.url
+      history.replaceState(queued.meta, queued.title, url)
+      queued = null
+    }
+    clearTimeout(timer)
+    timer = null
+  }
+
+  return function replaceURL(url, title, meta) {
+    queued = { url, title, meta }
+    if (timer === null) {
+      flush()
+      timer = setTimeout(flush, 200)
+    }
+  }
+})()
+
+
 class BoundVar {
   constructor(name, e, valueGetter, valueSetter, parentVars) {
     this.name = name
@@ -1824,11 +1883,12 @@ class BoundVar {
     this.valueGetter = valueGetter
     this.valueSetter = valueSetter
     this.isCheckbox = (e.type == 'checkbox')
-    this.isNumber = e.type == 'number'
+    this.isNumber = e.type == 'number' || e.type == 'range'
     this.lastValue = this.getValue()
     this.parentVars = parentVars
     this.defaultValue = this.lastValue
     this._changeCallbacks = []
+    this._isInitialSetValue = true
   }
 
   refreshValue(ev) {
@@ -1868,7 +1928,9 @@ class BoundVar {
     }
 
     if (this.valueSetter) {
-      const v = this.valueSetter(this.e, value)
+      let isInitial = this._isInitialSetValue
+      this._isInitialSetValue = false
+      const v = this.valueSetter(this.e, value, isInitial)
       if (v !== undefined) {
         value = v
       }
@@ -1876,13 +1938,11 @@ class BoundVar {
 
     if (this.isCheckbox) {
       this.e.checked = !!value
-    } else if (this.isNumber && typeof value == 'number') {
+    } else if (this.isNumber && typeof value == 'number' && 'valueAsNumber' in this.e) {
       if (isNaN(value)) {
         this.e.value = null
-      } else {
-        if (this.e.valueAsNumber != value) {
-          this.e.valueAsNumber = value
-        }
+      } else if (this.e.valueAsNumber != value) {
+        this.e.valueAsNumber = value
       }
     } else if (this.e.value != value) {
       this.e.value = value
@@ -1898,15 +1958,10 @@ class BoundVar {
 
 class Vars {
   constructor(queryString) {
-    this.values = new Map(
-      queryString.replace(/^\?+/g,'')
-        .split('&')
-        .filter(s => s.trim())
-        .map(s => s.split('=').map(decodeURIComponent))
-    )
+    this.values = parseQueryString(queryString)
     this.vars = new Map()
-    this._historyReplaceStateTimer = null
-    this._needsHistoryReplaceState = false
+    // this._historyReplaceStateTimer = null
+    // this._needsHistoryReplaceState = false
   }
 
   getValue(name) {
@@ -1932,30 +1987,33 @@ class Vars {
     } else {
       this.values.set(name, value)
     }
-    this._setNeedsHistoryReplaceState()
+    setCurrentQueryString(() => this.getQueryString())
   }
 
-  _performHistoryReplaceState() {
-    history.replaceState({} , '', '?' + this.getQueryString())
-    this._needsHistoryReplaceState = false
-  }
+  // _performHistoryReplaceState() {
+  //   // let qs = mergeQueryString(document.location.search, this.getQueryString())
+  //   setCurrentQueryString(this.getQueryString())
+  //   this._needsHistoryReplaceState = false
+  // }
 
-  _setNeedsHistoryReplaceState() {
-    // We employ some backoff on calling history.replaceState as
-    // Chrome will start to throttle (meaning ignoring) calls to
-    // history.replaceState if the frequency gets too high.
-    if (this._historyReplaceStateTimer === null) {
-      this._performHistoryReplaceState()
-      this._historyReplaceStateTimer = setTimeout(() => {
-        this._historyReplaceStateTimer = null
-        if (this._needsHistoryReplaceState) {
-          this._performHistoryReplaceState()
-        }
-      }, 200)
-    } else {
-      this._needsHistoryReplaceState = true
-    }
-  }
+  // setNeedsHistoryReplaceState() {
+  //   // We employ some backoff on calling history.replaceState as
+  //   // Chrome will start to throttle (meaning ignoring) calls to
+  //   // history.replaceState if the frequency gets too high.
+  //   // Safari 13 provides a budget of 200 replaceState calls in a 30 second sliding time window.
+  //   // Chrome instead uses an IPC message flooding prevention (https://crbug.com/882238)
+  //   if (this._historyReplaceStateTimer === null) {
+  //     this._performHistoryReplaceState()
+  //     this._historyReplaceStateTimer = setTimeout(() => {
+  //       this._historyReplaceStateTimer = null
+  //       if (this._needsHistoryReplaceState) {
+  //         this._performHistoryReplaceState()
+  //       }
+  //     }, 200)
+  //   } else {
+  //     this._needsHistoryReplaceState = true
+  //   }
+  // }
 
   refreshValue(name) {
     let v = this.vars.get(name)
@@ -1969,24 +2027,25 @@ class Vars {
   }
 
   getQueryString() {
-    let pairs = []
-    this.values.forEach((v, k) => {
-      let vr = this.vars.get(k)
-      if (vr && vr.defaultValue == v) {
-        return  // skip
+    let qs = parseQueryString(document.location.search)
+    // patch qs: set or remove any attributes that are registered in this.values
+    for (let e of this.vars) {
+      let k = e[0], vr = e[1], v = this.values.get(k)
+      if (v === undefined || vr.defaultValue == v || k[0] == '_') {
+        qs.delete(k)
+      } else {
+        qs.set(k, v)
       }
-      v = (v === true) ? 1 : (v === false || v === null) ? 0 : v
-      pairs.push(encodeURIComponent(k) + '=' + encodeURIComponent(v))
-    })
-    return pairs.join('&')
+    }
+    return fmtQueryString(qs)
   }
 
   // bind(name :string,
   //      sel :Element|string,
-  //      valueSetter? :(e:Element, value:any)=>void,
+  //      valueSetter? :(e:Element, value:any, isInitial:bool)=>void,
   //      valueGetter? :(e:Element)=>any)
   // bind(name :string,
-  //      valueSetter? :(e:Element, value:any)=>void,
+  //      valueSetter? :(e:Element, value:any, isInitial:bool)=>void,
   //      valueGetter? :(e:Element, prevValue:any, ev?:Event)=>any)
   bind(name, sel, valueSetter, valueGetter) {
     if (typeof sel == 'function' || sel === undefined) {
@@ -2006,7 +2065,11 @@ class Vars {
           return
         }
         switch (ev.key) {
+          case 'ArrowRight':
           case 'ArrowUp': {
+            if (ev.key == 'ArrowRight' && e.type != "range") {
+              return
+            }
             if (ev.altKey) {
               ev.target.valueAsNumber *= 2
             } else {
@@ -2017,7 +2080,11 @@ class Vars {
             this._refreshValue(v, ev)
             break
           }
+          case 'ArrowLeft':
           case 'ArrowDown': {
+            if (ev.key == 'ArrowLeft' && e.type != "range") {
+              return
+            }
             if (ev.altKey) {
               ev.target.valueAsNumber /= 2
             } else {
@@ -2055,6 +2122,17 @@ class Vars {
 }
 
 
+// function mergeQueryString(a, b) {
+//   a = a.replace(/^[\?\&]+/, "").split('&').sort().map(v => v.split('='))
+//   b = b.replace(/^[\?\&]+/, "").split('&').sort().map(v => v.split('='))
+//   let s = new Map(a)
+//   for (let kv of b) {
+//     s.set(kv[0], kv[1])
+//   }
+//   return Array.from(s).map(kv => kv[1] ? kv.join('=') : kv[0]).join('&')
+// }
+
+
 
 function main() {
   const vars = new Vars(document.location.search)
@@ -2073,6 +2151,28 @@ function main() {
 
   const repertoireControl = $('.repertoireControl')
   const samplesElement = $('samples')
+  const boxes = $('boxes')
+
+  let shiftKeyPressed = false
+  const checkKeys = ev => {
+    shiftKeyPressed = ev.shiftKey
+  }
+  window.addEventListener('keydown', checkKeys)
+  window.addEventListener('keyup', checkKeys)
+
+
+  // sidebar show/hide
+  const sidebarButton = $("#sidebar-button")
+  let sidebarMinimized = false
+  function setSidebarMinimized(minimized) {
+    sidebarMinimized = minimized
+    document.body.classList.toggle("sidebar-minimized", sidebarMinimized)
+    setCurrentQueryStringParam("nosidebar", sidebarMinimized ? 1 : undefined)
+    sidebarButton.title = sidebarMinimized ? "Show controls" : "Hide controls"
+  }
+  sidebarButton.onclick = () => setSidebarMinimized(!sidebarMinimized)
+  setSidebarMinimized(document.location.search.indexOf('nosidebar') != -1)
+  // setInterval(()=>{ setSidebarMinimized(!sidebarMinimized) },2000)
 
   // filter paste to match style
   $$('[contenteditable]').forEach(el => {
@@ -2082,8 +2182,6 @@ function main() {
       document.execCommand("insertHTML", false, text)
     }, {capture:true,passive:false})
   })
-
-  let sizeVar = null
 
   // prevent clicks on img-button from changing focus
   $$('.img-button').forEach(el => {
@@ -2216,13 +2314,30 @@ function main() {
     }
   })
 
-  const boxes = $('boxes')
-  sizeVar = vars.bind('size', (e, v) => {
+  var sizeVar, varSizeRange
+  var varSizeSettingValueImpl = false
+
+  sizeVar = vars.bind('size', (e, v, isInitial) => {
     boxes.style.display = (v > 20) ? 'none' : null
     setCSSProp('font-size', v + 'px')
     setGlyphlistClass('hideNames', v < 36)
+    if (varSizeRange && !varSizeSettingValueImpl) {
+      varSizeSettingValueImpl = true
+      varSizeRange.setValue(v)
+      varSizeSettingValueImpl = false
+    }
     return v
   })
+  varSizeRange = vars.bind('_sizeRange', (e, v, isInitial) => {
+    if (isInitial) {
+      return sizeVar.getValue()
+    } else if (!varSizeSettingValueImpl) {
+      varSizeSettingValueImpl = true
+      vars.setValue("size", v)
+      varSizeSettingValueImpl = false
+    }
+  })
+
 
   let usingVarFont = false
   var varWeightRange, varSlantRange
@@ -2230,7 +2345,7 @@ function main() {
   var varSlantSettingValueImpl = false
 
   let currentBodyWeightClass = null
-  vars.bind('weight', (e, v) => {
+  let varWeight = vars.bind('weight', (e, v) => {
     setCSSProp('font-weight', v)
     if (currentBodyWeightClass) {
       document.body.classList.remove(currentBodyWeightClass)
@@ -2272,15 +2387,29 @@ function main() {
     }
   }
 
-  vars.bind('varfont', (e, on) => {
+  vars.bind('varfont', (e, on, isInitial) => {
     usingVarFont = on
-    document.body.classList[on ? 'add' : 'remove']('varfont')
+    document.body.classList.toggle('varfont', on)
     if (on) {
+      if (!isInitial) {
+        // copy value of const weight to var weight
+        let w = parseInt(varWeight.getValue())
+        if (!isNaN(w) && varWeightRange && !varWeightSettingValueImpl) {
+          varWeightRange.setValue(w)
+        }
+      }
       document.body.style.fontFamily = (
         hinted ? fontFamilyNameVarHinted :
         fontFamilyNameVar
       )
     } else {
+      if (!isInitial && varWeightRange) {
+        // copy value of var weight to const weight
+        let w = varWeightRange.getValue()
+        if (!isNaN(w)) {
+          vars.setValue("weight", Math.round(w / 100) * 100)
+        }
+      }
       document.body.style.fontFamily = (
         hinted ? fontFamilyNameHinted :
         fontFamilyName
@@ -2311,7 +2440,11 @@ function main() {
     if (prevValue === undefined) {
       return 400
     }
-    return e.valueAsNumber !== undefined ? e.valueAsNumber : e.value
+    v = e.valueAsNumber
+    if (shiftKeyPressed) {
+      v = Math.round(v / 100) * 100
+    }
+    return v
   })
 
   varSlantRange = vars.bind('varSlant', (e, v) => {
@@ -2370,7 +2503,11 @@ function main() {
     return v
   }
 
+  let resetLineHeightButton = $('.reset-line-height')
+  let resetLetterSpacingButton = $('.reset-letter-spacing')
+
   let letterSpacingVar = vars.bind('letterSpacing', (e, v) => {
+    resetLetterSpacingButton.classList.toggle("disabled", !v)
     if (!v) {
       v = updateImplicitLetterSpacing(e, sizeVar.getValue())
     }
@@ -2392,7 +2529,7 @@ function main() {
     }
   })
 
-  $('.reset-letter-spacing').addEventListener('click', ev => {
+  resetLetterSpacingButton.addEventListener('click', ev => {
     vars.setValue('letterSpacing', '')
     ev.stopPropagation()
     ev.preventDefault()
@@ -2401,6 +2538,7 @@ function main() {
 
   vars.bind('lineHeight', lineHeightInput, (e, v) => {
     setCSSProp('line-height', v ? v + 'px' : null)
+    resetLineHeightButton.classList.toggle("disabled", !v)
   }, (e, prevValue, ev) => {
     if (ev && !ev.inputType && !prevValue) {
       // step increment/decrement
@@ -2413,14 +2551,17 @@ function main() {
     return e.value || ""
   })
 
-  $('.reset-line-height').addEventListener('click', ev => {
+  resetLineHeightButton.addEventListener('click', ev => {
     vars.setValue('lineHeight', '')
     ev.stopPropagation()
     ev.preventDefault()
   }, {passive:false,capture:true})
 
-  vars.bind('display-invert-colors', (e, on) => {
-    document.body.classList[on ? 'add' : 'remove']('inverted-colors')
+  vars.bind("invert-colors", (e, on) => {
+    if (defaultColorSceme == "dark") {
+      on = !on
+    }
+    document.documentElement.classList.toggle('color-scheme-dark', on)
   })
 
   let spaaSelect = vars.bind('antialias', (e, v) => {
