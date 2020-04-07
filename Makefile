@@ -359,7 +359,10 @@ docs_fonts:
 	cp -a $(FONTDIR)/const/*.woff \
 	      $(FONTDIR)/const/*.woff2 \
 	      $(FONTDIR)/const/*.otf \
-	      $(FONTDIR)/var/*.* \
+	      $(FONTDIR)/var/Inter.var.* \
+	      $(FONTDIR)/var/InterDisplay.var.* \
+	      $(FONTDIR)/var/Inter*-roman.var.* \
+	      $(FONTDIR)/var/Inter*-italic.var.* \
 	      docs/font-files/
 
 .PHONY: docs docs_info docs_fonts
