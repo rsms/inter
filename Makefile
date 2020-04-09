@@ -234,100 +234,43 @@ $(FONTDIR)/samples:
 .PHONY: samples
 
 
-
-ZD = build/tmp/zip
-# intermediate zip target that creates a zip file at build/tmp/a.zip
-build/tmp/a.zip:
-	@rm -rf "$(ZD)"
-	@rm -f  build/tmp/a.zip
-	@mkdir -p \
-	  "$(ZD)/Inter" \
-	  "$(ZD)/Inter (Hinted, for Windows)" \
-	  "$(ZD)/Inter (Variable)" \
-	  "$(ZD)/Inter (Variable, single axis)" \
-	  "$(ZD)/Inter (Web)" \
-	  "$(ZD)/Inter V (Variable)"
-	@#
-	@# copy font files
-	cp -a $(FONTDIR)/const/*.otf              "$(ZD)/Inter/"
-	@#
-	cp -a $(FONTDIR)/const/*.woff \
-	      $(FONTDIR)/const/*.woff2 \
-	      $(FONTDIR)/var/Inter.var.woff2 \
-	      $(FONTDIR)/var/Inter-italic.var.woff2 \
-	      $(FONTDIR)/var/Inter-roman.var.woff2 \
-	      $(FONTDIR)/var/InterDisplay.var.woff2 \
-	      $(FONTDIR)/var/InterDisplay-italic.var.woff2 \
-	      $(FONTDIR)/var/InterDisplay-roman.var.woff2 \
-	      misc/dist/inter.css \
-	                                          "$(ZD)/Inter (Web)/"
-	cp -a $(FONTDIR)/const-hinted/*.woff \
-	      $(FONTDIR)/const-hinted/*.woff2 \
-	      $(FONTDIR)/const-hinted/*.ttf \
-	      misc/dist/inter.css \
-	      "misc/dist/about hinted fonts.txt" \
-	                                          "$(ZD)/Inter (Hinted, for Windows)/"
-	@#
-	cp -a $(FONTDIR)/var/Inter.var.otf               "$(ZD)/Inter (Variable)/Inter.otf"
-	cp -a $(FONTDIR)/var/Inter-roman.var.otf         "$(ZD)/Inter (Variable, single axis)/Inter-roman.otf"
-	cp -a $(FONTDIR)/var/Inter-italic.var.otf        "$(ZD)/Inter (Variable, single axis)/Inter-italic.otf"
-	cp -a $(FONTDIR)/var/InterDisplay.var.otf        "$(ZD)/Inter (Variable)/InterDisplay.otf"
-	cp -a $(FONTDIR)/var/InterDisplay-roman.var.otf  "$(ZD)/Inter (Variable, single axis)/InterDisplay-roman.otf"
-	cp -a $(FONTDIR)/var/InterDisplay-italic.var.otf "$(ZD)/Inter (Variable, single axis)/InterDisplay-italic.otf"
-	@#
-	cp -a $(FONTDIR)/var/Inter-V.var.otf        "$(ZD)/Inter V (Variable)/Inter-V.otf"
-	cp -a $(FONTDIR)/var/InterDisplay-V.var.otf "$(ZD)/Inter V (Variable)/InterDisplay-V.otf"
-	@#
-	@# copy misc stuff
-	cp -a misc/dist/install*.txt        "$(ZD)/"
-	cp -a LICENSE.txt                   "$(ZD)/"
-	@#
-	@# zip
-	cd "$(ZD)" && zip -q -X -r "../../../$@" * && cd ../..
-	@rm -rf "$(ZD)"
-
 # load version, used by zip and dist
 VERSION := $(shell cat version.txt)
 
 # distribution zip files
 ZIP_FILE_DIST := build/release/Inter-${VERSION}.zip
 
-# zip
-build/release/Inter-%.zip: build/tmp/a.zip
-	@mkdir -p "$(shell dirname "$@")"
-	@mv -f "$<" "$@"
-	@echo write "$@"
-	@sh -c "if [ -f /usr/bin/open ]; then /usr/bin/open --reveal '$@'; fi"
-
 zip: all
 	$(MAKE) check_text check_display
-	bash misc/makezip.sh -all \
+	bash misc/makezip.sh -all -reveal-in-finder \
 		"build/release/Inter-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip"
 
-zip_text: all
+zip_text: all_text
 	$(MAKE) check_text
-	bash misc/makezip.sh -text \
+	bash misc/makezip.sh -text -reveal-in-finder \
 		"build/release/Inter-${VERSION}-text-$(shell git rev-parse --short=10 HEAD).zip"
 
-zip_display: all
+zip_display: all_display
 	$(MAKE) check_display
-	bash misc/makezip.sh -display \
+	bash misc/makezip.sh -display -reveal-in-finder \
 		"build/release/Inter-${VERSION}-display-$(shell git rev-parse --short=10 HEAD).zip"
 
-zip_dist: pre_dist
-	$(MAKE) check_text
-	bash misc/makezip.sh -text "build/release/Inter-${VERSION}.zip"
 
-# distribution
-pre_dist: all_text
-	@echo "Creating distribution for version ${VERSION}"
-	@if [ -f "${ZIP_FILE_DIST}" ]; \
-		then echo "${ZIP_FILE_DIST} already exists. Bump version or remove the zip file to continue." >&2; \
-		exit 1; \
-	fi
+dist_zip: dist_check dist_build
+	$(MAKE) check_text
+	bash misc/makezip.sh -text -reveal-in-finder "$(ZIP_FILE_DIST)"
+
+dist_build: all_text
 	misc/tools/versionize.py
 
-dist: zip_dist
+dist_check:
+	@echo "Creating distribution for version ${VERSION}"
+	@if [ -f "${ZIP_FILE_DIST}" ]; then \
+		echo "${ZIP_FILE_DIST} already exists. Bump version or remove the zip file to continue." >&2; \
+		exit 1; \
+	fi
+
+dist: dist_zip
 	$(MAKE) -j docs
 	@echo "——————————————————————————————————————————————————————————————————"
 	@echo ""
@@ -353,9 +296,12 @@ docs_info: docs/_data/fontinfo.json \
            docs/lab/glyphinfo.json \
            docs/glyphs/metrics.json
 
-docs_fonts:
+docs_fonts: docs_fonts_text  docs_fonts_display
+docs_fonts_pre:
 	rm -rf docs/font-files
 	mkdir docs/font-files
+
+docs_fonts_text: docs_fonts_pre
 	cp -a $(FONTDIR)/const/*.woff \
 	      $(FONTDIR)/const/*.woff2 \
 	      $(FONTDIR)/const/*.otf \
@@ -365,7 +311,17 @@ docs_fonts:
 	      $(FONTDIR)/var/Inter*-italic.var.* \
 	      docs/font-files/
 
-.PHONY: docs docs_info docs_fonts
+docs_fonts_display: docs_fonts_pre
+	cp -a $(FONTDIR)/const/*.woff \
+	      $(FONTDIR)/const/*.woff2 \
+	      $(FONTDIR)/const/*.otf \
+	      $(FONTDIR)/var/Inter.var.* \
+	      $(FONTDIR)/var/InterDisplay.var.* \
+	      $(FONTDIR)/var/Inter*-roman.var.* \
+	      $(FONTDIR)/var/Inter*-italic.var.* \
+	      docs/font-files/
+
+.PHONY: docs  docs_info  docs_fonts  docs_fonts_pre  docs_fonts_text  docs_fonts_display
 
 docs/_data/fontinfo.json: docs/font-files/Inter-Regular.otf misc/tools/fontinfo.py
 	misc/tools/fontinfo.py -pretty $< > docs/_data/fontinfo.json
