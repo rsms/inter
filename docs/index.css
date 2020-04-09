@@ -294,3 +294,14 @@ boxes.features grid .sample em {
   font-size: 1.1em;
   line-height: 1em;
 }
+
+
+blockquote {
+  display:inline-block;
+  border-radius:4px;
+  background: var(--yellow);
+  color:black;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  font-weight:500;
+}
