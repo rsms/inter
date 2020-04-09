@@ -54,18 +54,22 @@
   --bgColor: white;
   --fgColor: black;
   --fgColorDimmed: rgba(0,0,0,0.4);
+  --focus-color: #18A0FB;
 
   --input-color-bg: white;
-  --input-color-focus: black;
   --input-slider-color-bg: rgba(0,0,0,0.2);
   --input-slider-color-fg: var(--fgColor);
   --input-slider-color-focus: rgb(0, 130, 255);
   --input-slider-knob-size: 8px;
   --input-slider-track-size: 6px;
-  --input-slider-track-hit-size: 12px;
+  --input-slider-track-hit-size: 16px;
+  --checkbox-bg: var(--input-slider-color-bg);
+  --checkbox-fg: var(--input-color-bg);
+  --checkbox-on-bg: var(--fgColor);
+  --checkbox-on-fg: var(--checkbox-fg);
 
   --surface1-color-bg: #f4f4f4;
-  --surface1-color-fg: #222;
+  --surface1-color-fg: #444;
 
   --surface2-color-bg: white;
   --surface2-color-fg: #222;
@@ -88,9 +92,12 @@
   --fgColorDimmed: rgba(255,255,255,0.4);
 
   --input-color-bg: #2c2c2c;
-  --input-color-focus: rgba(255,255,255,0.7);
-  --input-slider-color-bg: rgba(255,255,255,0.2);
+  --input-slider-color-bg: rgba(255,255,255,0.3);
   --input-slider-color-fg: var(--fgColor);
+  --checkbox-bg: rgba(255,255,255,0.3);
+  --checkbox-fg: rgba(0,0,0,0.7);
+  --checkbox-on-bg: white;
+  --checkbox-on-fg: black;
 
   --surface1-color-bg: #1b1b1b;
   --surface1-color-fg: #aaa;
@@ -151,13 +158,14 @@ h2 {
 i, cite, em, var, address, dfn {
   font-style: italic;
 }
-body.varfont i, body.varfont cite, body.varfont em, body.varfont var,
+/*body.varfont i, body.varfont cite, body.varfont em, body.varfont var,
 body.varfont address, body.varfont dfn {
   font-style: oblique -10deg;
-}
+}*/
 
 label {
-  display: block;
+  display: flex;
+  align-items: center;
   margin: 2px 0;
 }
 
@@ -192,26 +200,95 @@ input[type="number"]:focus,
 input[type="text"]:focus,
 select:focus {
   outline: none;
-  box-shadow: 0 0 0 2px var(--input-color-focus);
+  box-shadow: 0 0 0 2px var(--focus-color);
 }
 
-input[type=range]::-moz-focus-outer {
+input[type="range"]::-moz-focus-outer {
   border: 0;
+}
+
+/* checkbox ———————————————————————————————————————————————————————————————————————————— */
+
+input[type="checkbox"] {
+  --checkbox-size:12px;
+  --checkbox-handle-size: 10px;
+  --checkbox-border: 0px;
+
+  flex: 0 0 auto;
+  margin: 4px 0;
+  appearance: none; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none;
+  user-select: none; -moz-user-select: none; -webkit-user-select:none;
+  background: none;
+  border: none;
+
+  background-color: var(--checkbox-bg);
+
+  border: var(--checkbox-border) solid var(--checkbox-bg);
+  box-sizing: border-box;
+
+  width: calc(var(--checkbox-size) * 2);
+  height:var(--checkbox-size);
+  border-radius: var(--checkbox-size);
+  position:relative;
+  transition: all 168ms ease-out;
+}
+input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--bgColor), 0 0 0 4px var(--focus-color);
+}
+input[type="checkbox"]:active {
+  /* trick to avoid flickering outline */
+  box-shadow: none;
+}
+input[type="checkbox"]::after {
+  --padding: calc(
+    calc(
+      calc(var(--checkbox-size) - var(--checkbox-handle-size))
+      / 2
+    )
+    - var(--checkbox-border)
+  );
+  content: "";
+  background: var(--checkbox-fg);
+  display:block;
+  position:absolute;
+  left: var(--padding);
+  top: var(--padding);
+  width:var(--checkbox-handle-size);
+  height:var(--checkbox-handle-size);
+  border-radius:var(--checkbox-handle-size);
+  transform: translate(0, 0);
+  transition: all 168ms ease-out; /*cubic-bezier(0.09, 0.49, 0.71, 0.98);*/
+}
+input[type="checkbox"][checked] {
+  background-color: var(--checkbox-on-bg);
+}
+input[type="checkbox"][checked]::after {
+  background-color: var(--checkbox-on-fg);
+  transform: translate(calc(var(--checkbox-size)), 0);
+  /*transition: all 168ms cubic-bezier(0.17, 0.65, 0.48, 1);*/
+}
+input[type="checkbox"][checked] + * {
+  color: var(--fgColorMax);
+}
+* + input[type="checkbox"] {
+  margin-left: 8px;
 }
 
 /* range slider ———————————————————————————————————————————————————————————————————————————— */
 
-input[type=range] {
+input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
   background: transparent;
   cursor: default;
+  margin-left: calc(calc(var(--input-slider-track-hit-size) - var(--input-slider-track-size)) / -2);
 }
-input[type=range]:focus {
+input[type="range"]:focus {
   outline: none;
 }
 
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 0;
   height: var(--input-slider-knob-size);
@@ -221,7 +298,7 @@ input[type=range]::-webkit-slider-thumb {
   box-shadow: 0 0 0 2px var(--surface1-color-bg);
   margin-top: calc(calc(var(--input-slider-knob-size) - var(--input-slider-track-size)) / -2);
 }
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   border: 0;
   height: var(--input-slider-knob-size);
   width: var(--input-slider-knob-size);
@@ -232,7 +309,7 @@ input[type=range]::-moz-range-thumb {
 }
 
 
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   /* Note: hit testing is done on this element so we make it large enough
      to easily hit with --input-slider-track-hit-size and a border that matches the
      background color. This is not portable, unfortunately. */
@@ -240,11 +317,11 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: var(--input-slider-track-hit-size);
   background: var(--input-slider-color-bg);
-  border-radius: var(--input-slider-track-size);
+  border-radius: var(--input-slider-track-hit-size);
   --border-w: calc(calc(var(--input-slider-track-hit-size) - var(--input-slider-track-size)) / 2);
   border: var(--border-w) solid var(--surface1-color-bg);
 }
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   box-sizing: border-box;
   width: 100%;
   height: var(--input-slider-track-hit-size);
@@ -254,18 +331,18 @@ input[type=range]::-moz-range-track {
   border: var(--border-w) solid var(--surface1-color-bg);
 }
 
-/*input[type=range]:focus::-webkit-slider-thumb { background-color: var(--blue) }
-input[type=range]:focus::-moz-range-thumb     { background-color: var(--blue) }*/
+/*input[type="range"]:focus::-webkit-slider-thumb { background-color: var(--blue) }
+input[type="range"]:focus::-moz-range-thumb     { background-color: var(--blue) }*/
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-  box-shadow: 0 0 0 1px var(--input-color-focus);
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  box-shadow: 0 0 0 2px var(--focus-color);
 }
-input[type=range]:focus::-moz-range-track {
-  box-shadow: 0 0 0 1px var(--input-color-focus);
+input[type="range"]:focus::-moz-range-track {
+  box-shadow: 0 0 0 2px var(--focus-color);
 }
 
 /* TODO: MS Edge
-input[type=range]::-ms-thumb {
+input[type="range"]::-ms-thumb {
   height: var(--input-slider-knob-size);
   width: var(--input-slider-knob-size);
   border-radius: var(--input-slider-knob-size);
@@ -273,7 +350,7 @@ input[type=range]::-ms-thumb {
   box-shadow: 0 0 0 2px var(--surface1-color-bg);
   margin-top: calc(calc(var(--input-slider-knob-size) - var(--input-slider-track-size)) / -2);
 }
-input[type=range]::-ms-track {
+input[type="range"]::-ms-track {
   width: 100%;
   height: 8.4px;
   background: transparent;
@@ -281,22 +358,22 @@ input[type=range]::-ms-track {
   border-width: 16px 0;
   color: transparent;
 }
-input[type=range]::-ms-fill-lower {
+input[type="range"]::-ms-fill-lower {
   background: #2a6495;
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
-input[type=range]:focus::-ms-fill-lower {
+input[type="range"]:focus::-ms-fill-lower {
   background: #3071a9;
 }
-input[type=range]::-ms-fill-upper {
+input[type="range"]::-ms-fill-upper {
   background: #3071a9;
   border: 0.2px solid #010101;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
-input[type=range]:focus::-ms-fill-upper {
+input[type="range"]:focus::-ms-fill-upper {
   background: #367ebd;
 }*/
 
@@ -359,9 +436,9 @@ body.sidebar-minimized #sidebar-button {
   position:fixed;
   top:0; right:0; bottom:0;
   background: var(--bgColor);
-  padding: 24px;
+  padding: 16px 24px 24px 24px;
   user-select:none; -moz-user-select: none; -webkit-user-select:none;
-  font-family: sans-serif !important;
+  font-family: var(--font-family), sans-serif;
   overflow: auto;
   letter-spacing:0.012em;
   transform-origin:100% 0%;
@@ -402,6 +479,16 @@ body.sidebar-minimized .options {
     font-family: inherit;
     color: inherit;
   }
+  .options select {
+    min-width:50px;
+    max-width:100%;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  /*.options select[name="sample"] {
+    width:225px;
+  }*/
   .options input::placeholder {
     color: var(--fgColor);
     opacity: 0.4;
@@ -416,32 +503,24 @@ body.sidebar-minimized .options {
     align-items: center;
     height: var(--fieldHeight);
   }
-  .options .label-and-value span {
-    /*flex: 1 1 auto;*/
-    /*background:salmon;*/
+  .options .label-and-value > *:first-child {
+    flex: 0 0 auto;
+    width:90px;
     text-align: left;
     margin-right:6px;
-    width:90px;
   }
   .options .label-and-value input {
     width: 50px;
     max-height: var(--fieldHeight);
     box-sizing: border-box;
   }
-  .options select {
-    min-width:50px;
-    max-width:130px;
-  }
-  .options select[name="sample"] {
-    width:225px;
-  }
   .options label input[type="checkbox"] + * {
     display: inline-block;
     min-width:50%;
   }
-  .options label input[type="checkbox"] + *:hover {
+  /*.options label input[type="checkbox"] + *:hover {
     color: var(--fgColorMax);
-  }
+  }*/
   .options label.rasterizePhrase {
     margin-left:20px;
     margin-bottom:20px;
@@ -514,6 +593,10 @@ body.sidebar-minimized .options {
     display:flex;
     width: 18px;
   }
+  .options .italic-setting > span {
+    font-feature-settings: "cv08" 1;
+    font-style: italic;
+  }
 
 
 .img-button {
@@ -536,7 +619,7 @@ body.sidebar-minimized .options {
   background-color: rgba(0,0,0,0.2);
 }
 .img-button:focus {
-  box-shadow: 0 0 0 2px var(--input-color-focus);
+  box-shadow: 0 0 0 2px var(--focus-color);
 }
 .img-button.disabled {
   opacity:0.4;
@@ -569,6 +652,7 @@ body.italic samples {
   font-style: italic;
 }
   sample {
+    flex: 1 1 50%;
     margin: 0;
     /*white-space: pre;*/
     padding: 2rem;
@@ -579,6 +663,7 @@ body.italic samples {
     overflow-wrap: break-word;
     color: var(--fgColor);
   }
+  /*body.secondarySampleDisabled sample { flex-basis: auto; }*/
     sample p {
       white-space: pre-wrap;
     }
