@@ -9,7 +9,7 @@ like contextual alternates that adjusts punctuation depending on the shape of
 surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o",
 tabular numbers, etc.
 
-[![Sample](docs/res/sample.png)](https://rsms.me/inter/samples/)
+[![Sample](docs/r/sample.png)](https://rsms.me/inter/samples/)
 
 ### [⬇︎ Download the latest release](https://github.com/rsms/inter/releases/latest)
 
@@ -63,7 +63,7 @@ read the almost monotonically-spaced letters.
 
 A second major revision was created where the previously-strict rule of geometry being even multiples of 256 was relaxed and now the rule is "try to stick with 128x, if you can't, stick with 64x and if you can't do that either, never go below 16x." This means that Inter is now much more variable in pace than it used to be, making it work better at higher resolutions and work much better in longer text, but losing some contrast and sharpness at small sizes.
 
-![Metrics](docs/res/metrics.png)
+![Metrics](docs/r/metrics.png)
 
 The glyphs are designed based on this "plan"; most stems and lines will be positioned at EM units that are even multiples of 128, and in a few cases they are at even multiples of 64 or as low as 16.
 
