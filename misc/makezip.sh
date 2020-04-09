@@ -4,6 +4,7 @@ cd "$(dirname "$0")/.."
 OPT_HELP=false
 OPT_TEXT=false
 OPT_DISPLAY=false
+OPT_REVEAL_IN_FINDER=false
 OUTFILE=
 
 # parse args
@@ -24,6 +25,10 @@ while [[ $# -gt 0 ]]; do
   -a*|--a*)
     OPT_TEXT=true
     OPT_DISPLAY=true
+    shift
+    ;;
+  -reveal-in-finder)
+    OPT_REVEAL_IN_FINDER=true
     shift
     ;;
   -*)
@@ -48,10 +53,11 @@ fi
 if $OPT_HELP; then
   echo "Usage: $0 [options] <outfile>"
   echo "Options:"
-  echo "  -h, -help  Show help."
-  echo "  -text      Include Inter Text"
-  echo "  -display   Include Inter Display"
-  echo "  -a, -all   Include all fonts"
+  echo "  -h, -help          Show help."
+  echo "  -text              Include Inter Text"
+  echo "  -display           Include Inter Display"
+  echo "  -a, -all           Include all fonts"
+  echo "  -reveal-in-finder  After creating the zip file, show it in Finder"
   exit 1
 fi
 
@@ -143,3 +149,6 @@ popd >/dev/null
 rm -rf "$ZIPDIR"
 
 echo "Created $OUTFILE"
+if $OPT_REVEAL_IN_FINDER && [ -f /usr/bin/open ]; then
+  /usr/bin/open --reveal "$OUTFILE"
+fi
