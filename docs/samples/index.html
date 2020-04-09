@@ -1,0 +1,195 @@
+---
+layout: default
+title: Samples
+---
+{%
+
+if site.safe == false %}{%
+assign url_root = "/" %}{% else %}{%
+assign url_root = "/inter/" %}{% endif %}{%
+
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/samples/index.css" %}{%
+    assign index_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/bindings.js" %}{%
+    assign bindings_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/graphplot.js" %}{%
+    assign graphplot_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor
+
+%}
+<link rel="stylesheet" href="index.css?v={{ index_css_v }}">
+<script src="{{url_root}}res/bindings.js?v={{ bindings_js_v }}"></script>
+<script src="{{url_root}}res/graphplot.js?v={{ graphplot_js_v }}"></script>
+{% include ctxedit.html %}
+
+<div class="row"><div>
+  <div class="live">
+
+    <livesample data-ctxedit="sample-800-1" spellcheck="false"
+      style="font-weight:800;font-size:60px;line-height:0.72;letter-spacing:-0.04em" contenteditable>
+      Martian™<br>Language Systems Inc.
+    </livesample>
+
+    <livesample data-ctxedit="sample-400-1" spellcheck="false"
+      style="font-weight:400;font-size:18px;line-height:1.0" contenteditable>
+      Interfacing mechanisms are periodically sequencing state
+    </livesample>
+
+    <livesample data-ctxedit="sample-100-1" spellcheck="false"
+      style="font-weight:100;font-size:120px;line-height:1.0;letter-spacing:-0.05em;background:var(--yellow);display:inline-block;padding:0.2em 0.3em;text-align:center" contenteditable>
+      XP–45 SERVICE
+    </livesample>
+
+    <livesample data-ctxedit="sample-500-1" spellcheck="false"
+      style="font-weight:500;font-size:20px;line-height:1.0;letter-spacing:-0.03em;margin-bottom:0.5rem" contenteditable>
+      Default forms G a r l ß 1234567890
+    </livesample>
+
+    <livesample data-ctxedit="sample-500-2" spellcheck="false"
+      class="ff-cv07-salt-zero"
+      style="font-weight:500;font-size:20px;line-height:1.0;letter-spacing:-0.03em;margin-top:0.5rem" contenteditable>
+      Alternate forms G a r l ß 1234567890
+    </livesample>
+
+    <livesample data-ctxedit="sample-900-1" spellcheck="false"
+      style="font-weight:900;font-size:170px;line-height:1.0;letter-spacing:-0.05em" contenteditable>
+      Melvetica
+    </livesample>
+
+    <livesample data-ctxedit="sample-600-1" spellcheck="false"
+      style="font-weight:600;font-size:24px;line-height:1.1;letter-spacing:-0.03em" contenteditable>
+      Production filaments are awaiting 340-type transportation<br>in docking bay 6–B
+    </livesample>
+
+    <hr>
+
+    <livesample contenteditable class="s1" data-ctxedit="sample1" spellcheck="false">
+      Fabulous typography encountering spring
+    </livesample>
+
+    <livesample contenteditable class="s2" data-ctxedit="sample2" spellcheck="false">
+      The user interface (UI), in the industrial design field of<br>
+      human-computer interaction, is the space where<br>
+      interactions between humans and machines occur.
+    </livesample>
+
+    <livesample contenteditable class="s3 col3" data-ctxedit="sample3" spellcheck="false">
+<p><b>Fire Island Beach</b> is a barrier of sand, stretching for twenty miles
+along the south coast of Long Island, and separating the Great South Bay
+from the Atlantic ocean.
+</p><p>
+To reach it, you must make a sail of from three to seven miles, and once
+upon it, you find it a wild, desolate, solitary spot, wind-searched and
+surf-pounded.
+</p><p>
+Its inner shore is covered with a growth of tide-wet sedge, with here
+and there a spot where dry meadow comes down to make a landing-place.
+</p><p>
+The outline of this inner shore is most irregular, curving and bending
+in and out and back upon itself, making coves and points and creeks and
+channels, and often pushing out in flats with not water enough on them
+at low tide to wet your ankles.
+</p><p>
+A third of the distance across the Beach, the meadow ends and sand
+begins. This slopes gradually up for another third of the distance, to
+the foot of the sand hills, which seem tumbled into their places by some
+mighty power, sometimes three tiers of them deep, sometimes two, and
+sometimes only one.
+</p><p>
+These sand hills are the most striking features of the Beach. The
+biggest of them are not more than sixty feet high, yet so hard a feat is
+it to climb to the top, and so extended is the view below you—on one
+side the wide Bay, on the other, the ocean stretching its restless
+surface to the horizon—that you feel yourself upon an elevation tenfold
+as high.
+</p><p>
+Through these hills the wind makes a great galloping, whirling out deep
+bowl-shape hollows among them, and piling the shifting sand upon their
+summits. Now and then you will notice a hill with its shoulder knocked
+off by the wind, and a ton of sand gone no one can tell where. In every
+storm their contour changes, and yet their general formation is so
+similar at all times that the change is seldom thought of. A coarse
+spear-like grass finds a sparse growth upon them, and does what it can
+to hold the sand in place; but it has a hard time of it, as its blades
+buried to their tips or its naked roots often testify.
+</p><p>
+But there is one part of this Beach that is ever much the same. It is a
+broad, shelving strip of sand between the hills and the sea, where the
+tide rises and falls, pounding and grinding, year in and year out—the
+play-ground and the battle-ground of the surf.
+</p><p>
+On a summer’s day, I have seen this surf so low and quiet that one could
+launch a sharpie upon it, single-handed, and come ashore again without
+shipping a quart of water. At other times it is a terror to look at—a
+steady break of waves upon the outer bar, with row after row coming in,
+rearing and plunging as they strike the shore. In such a sea there is no
+launching yawl or surf-boat, and no coming ashore.
+</p><p>
+When the tide is on the right moon and the wind has blown a gale from
+the southeast, the strand is entirely submerged, and people upon the
+main shore three miles away can see the surf breaking over the Beach
+hills.
+</p>
+    </livesample>
+    <p class="learn-more">
+      <a href="{{url_root}}dynmetrics/">Learn about Dynamic Metrics</a>
+    </p>
+  </div>
+
+  <p class="sample-images">
+    <img src="img/weights-1.svg" width="888">
+
+    <img src="img/02.png" srcset="img/02@2x.png 2x" width="888">
+    <img src="img/03.png" srcset="img/03@2x.png 2x" width="888">
+    <img src="img/04.png" srcset="img/04@2x.png 2x" width="888">
+    <img src="img/05.png" srcset="img/05@2x.png 2x" width="888">
+
+    <a href="https://rsms.me/raster/examples/poster.html"><img src="img/raster-posters.jpg" srcset="img/raster-posters@2x.jpg 2x" width="888"></a>
+
+    <img src="img/01.png" srcset="img/01@2x.png 2x" width="888">
+
+    <img src="img/sfs-pid-30.png" srcset="img/sfs-pid-30@2x.png 2x" width="888">
+    <img src="img/thin-beta.png" srcset="img/thin-beta@2x.png 2x" width="888">
+
+    <img src="img/a-z-regular.svg" width="888">
+    <img src="img/lineup-bold-red.svg" width="888">
+    <img src="img/weights-1.svg" width="888">
+    <img src="img/symbols.svg" width="888">
+
+    <img src="img/framed-poster-regular.png" srcset="img/framed-poster-regular@2x.png 2x" width="888">
+    <img src="img/framed-poster-medium.png" srcset="img/framed-poster-medium@2x.png 2x" width="888">
+    <img src="img/framed-poster-semi-bold.png" srcset="img/framed-poster-semi-bold@2x.png 2x" width="888">
+    <img src="img/framed-poster-bold.png" srcset="img/framed-poster-bold@2x.png 2x" width="888">
+    <img src="img/framed-poster-extra-bold.png" srcset="img/framed-poster-extra-bold@2x.png 2x" width="888">
+    <img src="img/framed-poster-black.png" srcset="img/framed-poster-black@2x.png 2x" width="888">
+    <img src="img/framed-poster-melvetica.png" srcset="img/framed-poster-melvetica@2x.png 2x" width="888">
+    <img src="img/framed-poster-semi-bold-2.png" srcset="img/framed-poster-semi-bold-2@2x.png 2x" width="888">
+    <img src="img/framed-poster-extra-bold-2.png" srcset="img/framed-poster-extra-bold-2@2x.png 2x" width="888">
+
+    <img src="img/dark-phone.jpg" srcset="img/dark-phone@2x.jpg 2x" width="888">
+    <img src="img/06.png" srcset="img/06@2x.png 2x" width="888">
+    <img src="img/07.png" srcset="img/07@2x.png 2x" width="888">
+    <img src="img/08.png" srcset="img/08@2x.png 2x" width="888">
+    <img src="img/09.png" srcset="img/09@2x.png 2x" width="888">
+    <img src="img/10.png" srcset="img/10@2x.png 2x" width="888">
+    <img src="img/11.png" srcset="img/11@2x.png 2x" width="888">
+    <img src="img/12.png" srcset="img/12@2x.png 2x" width="888">
+    <img src="img/13.png" srcset="img/13@2x.png 2x" width="888">
+    <img src="img/14.png" srcset="img/14@2x.png 2x" width="888">
+    <img src="img/15.png" srcset="img/15@2x.png 2x" width="888">
+  </p>
+  <p style="text-align:center">
+    <a
+      href="https://www.figma.com/file/WmU5NWr52bnUcqv5os0V4sWi/"
+      class="plain">Open these samples in Figma</a>
+  </p>
+</div></div>
+
+<script type="text/javascript">(function(){
+
+window.ctxedit = new CtxEdit()
+
+})();</script>

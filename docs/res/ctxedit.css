@@ -1,0 +1,337 @@
+:root {
+  --strip-height: 40px;
+}
+
+#ctxedit-ui {
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 0;
+  height: var(--strip-height);
+  
+  background: #111;
+  color: #ccc;
+  font-size: 12px;
+  /*border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;*/
+
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+
+  opacity:0;
+  transition: 90ms all cubic-bezier(0.25, 0.47, 0.44, 0.93);
+  transform: translate(0, var(--strip-height));
+
+  outline: none;
+  pointer-events: none;
+}
+#ctxedit-ui.visible {
+  opacity:1;
+  transform: translate(0, 0);
+  pointer-events: initial;
+}
+#ctxedit-ui .wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  max-width: 888px; /* same as base.css .row > * */
+  flex: 1 0 100%;
+}
+  #ctxedit-ui .control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    min-height: 30px;
+    margin: 0 16px;
+  }
+  #ctxedit-ui .control:first-child {
+    margin-left:0;
+  }
+  #ctxedit-ui .control.range {
+    flex: 1 1 auto;
+    max-width: 200px;
+  }
+  #ctxedit-ui .control > * {
+    flex: 1 1 auto;
+    margin:0;
+    box-sizing: border-box;
+  }
+  #ctxedit-ui .control > :last-child {
+    margin-right: 0;
+  }
+  #ctxedit-ui .control > select {
+    min-width: 8em;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  #ctxedit-ui .control > input,
+  #ctxedit-ui .control > select {
+    width: 0;
+    outline: none;
+    color: inherit;
+  }
+  #ctxedit-ui .control.popup {
+    margin-right: 0px;
+  }
+  #ctxedit-ui .control > select {
+    font: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background-color: #111;
+    margin: 0;
+    padding: 0;
+    height: var(--strip-height);
+    background-image: url(popup.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 120px;
+    color: white;
+    opacity: 0.6;
+    padding-left: 20px;
+    line-height: var(--strip-height);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  #ctxedit-ui .control > select::-ms-expand {
+    display: none;
+  }
+  #ctxedit-ui .control > select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #fff;
+    background-color: #111;
+    font: inherit;
+    font-size: inherit;
+  }
+  #ctxedit-ui .control > select:hover {
+    opacity: 1;
+  }
+  #ctxedit-ui .control > input[type="number"],
+  #ctxedit-ui .control > input[type="text"] {
+    background: none;
+    border: none;
+    padding: 4px 0;
+    font-size: inherit;
+    /*border-radius: 2px;*/
+  }
+  #ctxedit-ui .control > input[type="number"] {
+    max-width: 48px;
+    text-align: left;
+    -moz-appearance: textfield;
+    -moz-font-feature-settings:    'tnum' 1;
+    -ms-font-feature-settings:     'tnum' 1;
+    -o-font-feature-settings:      'tnum' 1;
+    -webkit-font-feature-settings: 'tnum' 1;
+    font-feature-settings:         'tnum' 1;
+  }
+  #ctxedit-ui .control > input[type=number]::-webkit-inner-spin-button, 
+  #ctxedit-ui .control > input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0;
+  }
+  #ctxedit-ui .control > input[type="range"] {
+    /*max-width: 80%;*/
+    flex: 1 1 auto;
+    display: block;
+  }
+  #ctxedit-ui .control > input[type="color"] {
+    width:20px;
+    height:20px;
+    border: none;
+    background: transparent;
+  }
+  #ctxedit-ui .control > img.icon,
+  #ctxedit-ui .control > label {
+    user-select: none;
+    font-family: georgia, serif;
+    font-style: italic;
+    color: white;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    margin-right: 16px;
+    opacity: 0.6;
+  }
+
+  #ctxedit-ui .button {
+    width:  var(--strip-height);
+    height: var(--strip-height);
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    margin:0;
+  }
+  #ctxedit-ui .button:hover {
+    opacity: 1;
+    background-color: #292929;
+  }
+  #ctxedit-ui .button:active {
+    background-color: #444;
+  }
+  #ctxedit-ui .button.features-button { background-image: url(settings.svg); }
+  #ctxedit-ui .button.reset-button { background-image: url(reset.svg); }
+  #ctxedit-ui .button.dismiss-button { background-image: url(dismiss.svg); }
+
+
+
+/* narrow viewports */
+@media only screen and (max-width: 639px) {
+  #ctxedit-ui {
+    background: black;
+    height: calc(var(--strip-height) * 4);
+  }
+  #ctxedit-ui .wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+
+.font-preload {
+  position: fixed;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.slider-value-tip {
+  pointer-events: none;
+  opacity: 0;
+  position: fixed;
+  text-align: center;
+  width: 100px;
+  /*background: hotpink;*/
+  left: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 9;
+  transition: opacity 120ms ease-out;
+  filter: drop-shadow(0px 2px 6px rgba(0,0,0,0.2));
+  --fgcolor: #fff;
+  --bgcolor: #444;
+}
+.slider-value-tip .value {
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-size: 11px;
+  letter-spacing: 0.013em;
+  color: var(--fgcolor);
+  background: var(--bgcolor);
+  -moz-font-feature-settings:    'tnum' 1;
+  -ms-font-feature-settings:     'tnum' 1;
+  -o-font-feature-settings:      'tnum' 1;
+  -webkit-font-feature-settings: 'tnum' 1;
+  font-feature-settings:         'tnum' 1;
+  z-index: 1;
+}
+.slider-value-tip .callout {
+  background: var(--bgcolor);
+  width:10px;
+  height:10px;
+  transform: translate(0, -6px) rotate(45deg);
+  z-index: 0;
+}
+.slider-value-tip.visible {
+  opacity: 1;
+}
+
+.styled-inputs-neg {
+  --track-thickness: 2px;
+  --track-color: rgba(255, 255, 255, 0.3);
+  
+  --thumb-outline-thickness: 2px;
+  --thumb-outline-color: #111; /* match control strip */
+  --thumb-diameter: 10px;
+  --thumb-color: white;
+
+  --active-color: rgb(95, 170, 255);
+}
+
+.styled-inputs-neg input[type=range] {
+  -webkit-appearance: none;
+  margin: 0;
+  width: 100%;
+  height: var(--strip-height);
+  background: transparent;
+}
+.styled-inputs-neg input[type=range]:focus {
+  outline: none;
+}
+
+.styled-inputs-neg input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  margin: 0;
+  animate: 0.2s;
+  background: var(--track-color);
+  height: var(--track-thickness);
+}
+.styled-inputs-neg input[type=range]:focus::-webkit-slider-runnable-track {
+  background: var(--active-color);
+}
+.styled-inputs-neg input[type=range]::-moz-range-track {
+  width: 100%;
+  margin: 0;
+  animate: 0.2s;
+  background: var(--track-color);
+  height: var(--track-thickness);
+}
+.styled-inputs-neg input[type=range]:focus::-moz-range-track {
+  background: var(--active-color);
+}
+
+.styled-inputs-neg input[type=range]::-webkit-slider-thumb {
+  --thumb-diameter2: calc(var(--thumb-diameter) + var(--thumb-outline-thickness) * 2);
+  width: var(--thumb-diameter2);
+  height: var(--thumb-diameter2);
+  border: var(--thumb-outline-thickness) solid var(--thumb-outline-color);
+  border-radius: 100%;
+  background: var(--thumb-color);
+  -webkit-appearance: none;
+  margin-top: calc(((var(--thumb-diameter2) / 2) - (var(--track-thickness) / 2)) * -1);
+}
+.styled-inputs-neg input[type=range]::-moz-range-thumb {
+  width: var(--thumb-diameter);
+  height: var(--thumb-diameter);
+  border: var(--thumb-outline-thickness) solid var(--thumb-outline-color);
+  border-radius: 100%;
+  background: var(--thumb-color);
+  margin-top: calc(((var(--thumb-diameter) / 2) - (var(--track-thickness) / 2)) * -1);
+}
+
+/* MS Edge -- note that we can't use CSS variables here */
+.styled-inputs-neg input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 0 0;
+  color: transparent; /* markings */
+  height: 2px;
+  animate: 0.2s;
+  margin: 0;
+}
+.styled-inputs-neg input[type=range]::-ms-fill-lower,
+.styled-inputs-neg input[type=range]::-ms-fill-upper {
+  background: white;
+  opacity: 0.3;
+}
+.styled-inputs-neg input[type=range]::-ms-thumb {
+  width: 9px;
+  height: 9px;
+  /*border: 2px solid rgba(0,0,0,0.8);*/
+  box-shadow: 0px 0px 0px 2px #111;
+  border-radius: 100%;
+  background: white;
+}
+/* Note: :focus selectors are buggy in Edge, so we skip that */
