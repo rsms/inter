@@ -389,7 +389,6 @@ install_var_v:
 .PHONY: install install_text install_display
 
 
-
 # clean removes generated and built fonts in the build directory
 clean:
 	rm -rf build/tmp build/fonts build/ufo build/googlefonts
