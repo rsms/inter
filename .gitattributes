@@ -1,7 +1,3 @@
 # Use CRLF for line endings in the Windows install "readme" file
 misc/dist/install-win.txt text eol=crlf
 misc/dist/about[[:space:]]hinted[[:space:]]fonts.txt text eol=crlf
-*.otf filter=lfs diff=lfs merge=lfs -text
-*.woff filter=lfs diff=lfs merge=lfs -text
-*.woff2 filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
