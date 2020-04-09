@@ -528,6 +528,8 @@ else
       echo -e "\tmisc/fontbuild checkfont $^" >> "$GEN_MAKE_FILE"
 
 
+      echo "display_${style}: display_${style}_otf display_${style}_ttf display_${style}_ttf_hinted display_${style}_web display_${style}_web_hinted" >> "$GEN_MAKE_FILE"
+
       echo "display_${style}_ttf_hinted: ${DIST_DIR_TOK}const-hinted/InterDisplay-${style}.ttf" >> "$GEN_MAKE_FILE"
       echo "display_${style}_ttf: ${DIST_DIR_TOK}const/InterDisplay-${style}.ttf" >> "$GEN_MAKE_FILE"
       echo "display_${style}_otf: ${DIST_DIR_TOK}const/InterDisplay-${style}.otf" >> "$GEN_MAKE_FILE"
