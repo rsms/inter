@@ -1,1 +1,5 @@
+# The first two numbers (16 and 0) are the x and y amounts by which a glyph is moved.
+# The second pair of numbers (32 and 0) is the advance, meaning that the cursor will
+# be placed 32 units further in this case. Effectively, this adds 16 units on each side
+# (or 32 between all uppercase letters)
 pos @Uppercase <16 0 32 0>;
