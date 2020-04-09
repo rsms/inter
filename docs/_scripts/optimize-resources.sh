@@ -27,17 +27,17 @@ fi
 
 pushd res >/dev/null
 
-# crunch /docs/res/*.svg
+# crunch /docs/r/*.svg
 for f in *.svg; do
   svgo --multipass -q "$f" &
 done
 
-# crunch /docs/res/icons/*.svg
+# crunch /docs/r/icons/*.svg
 for f in icons/*.svg; do
   svgo --multipass -q "$f" &
 done
 
-# crunch /docs/res/*.png
+# crunch /docs/r/*.png
 for f in *.png; do
   TMPNAME=.$f.tmp
   (pngcrush -q "$f" "$TMPNAME" && mv -f "$TMPNAME" "$f") &

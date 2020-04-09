@@ -12,17 +12,17 @@ for file in site.static_files %}{%
   assign _path = file.path | remove_first: "/inter" %}{%
   if _path == "/dynmetrics/index.css" %}{%
     assign index_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  elsif _path == "/res/bindings.js" %}{%
+  elsif _path == "/r/bindings.js" %}{%
     assign bindings_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  elsif _path == "/res/graphplot.js" %}{%
+  elsif _path == "/r/graphplot.js" %}{%
     assign graphplot_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
   endif %}{%
 endfor
 
 %}
 <link rel="stylesheet" href="index.css?v={{ index_css_v }}">
-<script src="{{url_root}}res/bindings.js?v={{ bindings_js_v }}"></script>
-<script src="{{url_root}}res/graphplot.js?v={{ graphplot_js_v }}"></script>
+<script src="{{url_root}}r/bindings.js?v={{ bindings_js_v }}"></script>
+<script src="{{url_root}}r/graphplot.js?v={{ graphplot_js_v }}"></script>
 
 <div class="row first"><div>
   <h1>Dynamic Metrics</h1>
