@@ -79,10 +79,10 @@
   --surface2-shadow-intensity-hover: 0.75;
   --surface2-shadow-intensity-active: 1.5;
 
-  --icon-minimize: url(../r/icons/minimize-black.svg);
-  --icon-popup: url(../r/icons/popup-black.svg);
-  --icon-reset: url(../r/icons/reset-black.svg);
-  --icon-settings: url(../r/icons/settings-black.svg);
+  --icon-minimize: url(../res/icons/minimize-black.svg);
+  --icon-popup: url(../res/icons/popup-black.svg);
+  --icon-reset: url(../res/icons/reset-black.svg);
+  --icon-settings: url(../res/icons/settings-black.svg);
 }
 
 :root.color-scheme-dark {
@@ -110,10 +110,10 @@
   --surface2-shadow-intensity-hover: 4;
   --surface2-shadow-intensity-active: 10;
 
-  --icon-minimize: url(../r/icons/minimize.svg);
-  --icon-popup: url(../r/icons/popup.svg);
-  --icon-reset: url(../r/icons/reset.svg);
-  --icon-settings: url(../r/icons/settings.svg);
+  --icon-minimize: url(../res/icons/minimize.svg);
+  --icon-popup: url(../res/icons/popup.svg);
+  --icon-reset: url(../res/icons/reset.svg);
+  --icon-settings: url(../res/icons/settings.svg);
 }
 
 /* document ———————————————————————————————————————————————————————————————————————————— */

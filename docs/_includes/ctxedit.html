@@ -6,15 +6,15 @@ assign url_root = "/inter/" %}{% endif %}{%
 
 for file in site.static_files %}{%
   assign _path = file.path | remove_first: "/inter" %}{%
-  if _path == "/r/ctxedit.js" %}{%
+  if _path == "/res/ctxedit.js" %}{%
     assign ctxedit_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  elsif _path == "/r/ctxedit.css" %}{%
+  elsif _path == "/res/ctxedit.css" %}{%
     assign ctxedit_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
   endif %}{%
 endfor
 
 %}
-<link rel="stylesheet" href="{{url_root}}r/ctxedit.css?v={{ ctxedit_css_v }}">
+<link rel="stylesheet" href="{{url_root}}res/ctxedit.css?v={{ ctxedit_css_v }}">
 <div id="ctxedit-ui" class="styled-inputs-neg" contenteditable="false" tabindex="1">
   <div class="wrapper">
     <div class="control popup">
@@ -60,4 +60,4 @@ endfor
     <div class="control button dismiss-button" title="Close editor"></div>
   </div>
 </div>
-<script src="{{url_root}}r/ctxedit.js?v={{ ctxedit_js_v }}"></script>
+<script src="{{url_root}}res/ctxedit.js?v={{ ctxedit_js_v }}"></script>
