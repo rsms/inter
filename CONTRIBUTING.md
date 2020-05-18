@@ -34,16 +34,6 @@ If these rules are not followed, generated styles will fail to build.
 
 ## Compiling font files
 
-There are three ways to generate font files (OTF, TTF, WOFF2, etc) from the sources files:
-
-- Using Inter's own build system: `dockermake` and locally (see ["Using the toolchain"](#using-the-toolchain))
-- Using the "export" feature in font editors like [Glyphs](https://glyphsapp.com/) or [RoboFont](http://robofont.com/)
-
-Exporting from font editors is a great alternative if you just want to test things out, but using Inter's own build system is the way to go for "production quality" font files. The rest of this section covers how to use Inter's own build system, aka _the toolchain_.
-
-
-### Using the toolchain
-
 The Inter toolchain is a collection of programs setup to build everything
 in a high-quality and reliable way. It can be fully automated and requires no
 paid software.
@@ -51,34 +41,8 @@ paid software.
 TL;DR: to make & test everything:
 
 ```
-./dockermake -j test
+make -j test
 ```
-
-There are two ways of using the toolchain:
-
-- `dockermake` — a [prebuild Docker image](https://cloud.docker.com/u/rsms/repository/docker/rsms/inter-build) containing the complete toolchain is used. This is the easiest and quickest way to build Inter. Supports any platform that can run Docker, like Windows, macOS and Linux.
-- locally — setup the toolchain locally using `init.sh` and then build using make. Only supports macOS and Linux.
-
-
-#### Using dockermake
-
-`dockermake` is simply `make` running in a docker image with the complete toolchain preinstalled.
-
-Simply edit source files and run `dockermake [make-arg ...]`
-
-Example:
-
-```
-$ ./dockermake -j Regular SemiBoldItalic
-misc/fontbuild instancegen src/Inter.designspace SemiBoldItalic
-...
-```
-
-Note: If you have used dockermake in the past, run `docker pull rsms/inter-build:latest` to
-ensure you have the latest version cached locally.
-
-
-#### Local toolchain
 
 Currently the toolchain has only been tested on macOS and Linux. All you need to have preinstalled is [Python 3](https://www.python.org/downloads/).
 
@@ -90,7 +54,7 @@ The first step is to initialize the toolchain itself:
 
 This will fetch, setup and configure everything needed to build and test Inter.
 
-> **—Important—** Run `init.sh` everytime you pull new changes to the source code or before pushing source code to a remote repository. `init.sh` may update the UFO source files and makefile, changes which may be required to be included in a source code change.
+> When running in a git repository, `init.sh` installs git hooks to automate running itself when you pull in new changes or switch branches.
 
 We can now run `make` to build all font files:
 
