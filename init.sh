@@ -332,9 +332,9 @@ else
           ./ttfautohint-build.sh
         popd >/dev/null
         mv -f \
-          /root/ttfautohint-build/ttfautohint*/frontend/ttfautohint \
+          $HOME/ttfautohint-build/ttfautohint*/frontend/ttfautohint \
           "ttfautohint-${AUTOHINT_VERSION}"
-        rm -rf /root/ttfautohint-build ttfautohint-build
+        rm -rf $HOME/ttfautohint-build ttfautohint-buil
       popd >/dev/null
     fi
     LINK=true
