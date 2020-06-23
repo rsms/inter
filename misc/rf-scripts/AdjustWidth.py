@@ -26,12 +26,11 @@ if __name__ == "__main__":
         continue
 
       if ignoreGlyphsWithoutContours and g.box is None:
-        # print '"%s": ["ignore", "empty"],' % (g.name)
         ignored.append((g.name, 'empty'))
         continue
         
       if g.width % 4 != 0:
-        print 'error: %s is misaligned; width = %g (not an even multiple of 4)' % (g.name, g.width)
+        print('error: %s is misaligned; width = %g (not an even multiple of 4)' % (g.name, g.width))
         errors += 1
         continue
 
