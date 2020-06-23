@@ -8,7 +8,7 @@ from math import ceil, floor
 if __name__ == "__main__":
   font = CurrentFont()
   ignoreGlyphsWithoutContours = True  # like spaces
-  print "# Resizing glyph margins for %r" % font
+  print("# Resizing glyph margins for %r" % font)
 
   # how much to add or remove from each glyph's margin
   A = -4
@@ -29,11 +29,7 @@ if __name__ == "__main__":
         # print '"%s": ["ignore", "empty"],' % (g.name)
         ignored.append((g.name, 'empty'))
         continue
-
-      # skip glyphs
-      #if g.name in ('c', 'e', 'o', 'r', 'j'):
-      # continue
-
+        
       if g.width % 4 != 0:
         print 'error: %s is misaligned; width = %g (not an even multiple of 4)' % (g.name, g.width)
         errors += 1
@@ -43,13 +39,13 @@ if __name__ == "__main__":
       glyphNamesToAdjust.add(g.name)
 
     if errors > 0:
-      print "Stopping changes because there are errors"
+      print("Stopping changes because there are errors")
     else:
 
-      print '# Result from AdjustWidth.py with A=%g on %s %s' % (
-        A, font.info.familyName, font.info.styleName)
-      print '# name => [ (prevLeftMargin, prevRightMargin), (newLeft, newRight) ]'
-      print 'resized_glyphs = ['
+      print('# Result from AdjustWidth.py with A=%g on %s %s' % (
+        A, font.info.familyName, font.info.styleName))
+      print('# name => [ (prevLeftMargin, prevRightMargin), (newLeft, newRight) ]')
+      print('resized_glyphs = [')
 
       adjustments = dict()
 
@@ -73,25 +69,16 @@ if __name__ == "__main__":
         newLeftMargin = int(g.leftMargin + A)
         newRightMargin = int(g.rightMargin + A)
 
-        print '  "%s": [(%g, %g), (%g, %g)],' % (
-          g.name, g.leftMargin, g.rightMargin, newLeftMargin, newRightMargin)
+        print('  "%s": [(%g, %g), (%g, %g)],' % (
+          g.name, g.leftMargin, g.rightMargin, newLeftMargin, newRightMargin))
 
         g.leftMargin  = int(newLeftMargin)
         g.rightMargin = int(newRightMargin)
 
-      print '] # resized_glyphs'
+      print('] # resized_glyphs')
 
       font.update()
-
-      # if len(ignored) > 0:
-      #   print ''
-      #   print '# name => [what, reason]'
-      #   print "ignored_glyphs = ["
-      #   for t in ignored:
-      #     print '  "%s": ["ignore", %r],' % t
-      #   print '] # ignored_glyphs'
-
   else:
-    print "No fonts open"
+    print("No fonts open")
 
-  print "Done"
+  print("Done")
