@@ -117,6 +117,7 @@ build/%.woff: build/%.ttf
 # VF OTF from UFO
 $(FONTDIR)/var/Inter.var.otf: $(all_ufo_masters_text) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter.designspace
+	ttx -m $@ -o $@ src/Inter-vf-stat-table-patch.ttx
 
 $(FONTDIR)/var/Inter-V.var.otf: $(FONTDIR)/var/Inter.var.otf
 	misc/fontbuild rename --family "Inter V" -o $@ $<
@@ -127,6 +128,7 @@ $(FONTDIR)/var/Inter-%.var.otf: build/ufo/Inter-%.designspace $(all_ufo_masters_
 
 $(FONTDIR)/var/InterDisplay.var.otf: $(all_ufo_masters_display) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/InterDisplay.designspace
+	ttx -m $@ -o $@ src/Inter-vf-stat-table-patch.ttx
 
 $(FONTDIR)/var/InterDisplay-V.var.otf: $(FONTDIR)/var/InterDisplay.var.otf
 	misc/fontbuild rename --family "Inter Display V" -o $@ $<
