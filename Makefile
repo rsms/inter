@@ -1,3 +1,6 @@
+# To list all targets:
+#   make list
+#
 # High-level make targets:
 #   all               Build everything
 #   all_text          Build all Inter (non-dislay) fonts
@@ -70,6 +73,25 @@ all_var_display: \
 
 # Hinted variable font disabled. See https://github.com/rsms/inter/issues/75
 # all_var_hinted: $(FONTDIR)/var-hinted/Inter.var.otf $(FONTDIR)/var-hinted/Inter.var.woff2
+
+# list make targets
+# We copy the Makefile (first in MAKEFILE_LIST) and disable the include to only list
+# primary targets, avoiding the generated targets.
+.PHONY: list  list_all
+list:
+	@mkdir -p build/etc \
+	&& cat $(firstword $(MAKEFILE_LIST)) \
+	 | sed 's/include /#include /g' > build/etc/Makefile-list \
+	&& $(MAKE) -pRrq -f build/etc/Makefile-list : 2>/dev/null \
+	 | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' \
+	 | sort \
+	 | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
+# list_all is like list, but includes generated targets
+list_all:
+	@$(MAKE) -pRrq -f $(firstword $(MAKEFILE_LIST)) : 2>/dev/null \
+	 | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' \
+	 | sort \
+	 | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
 
 export PATH := $(PWD)/build/venv/bin:$(PATH)
 
