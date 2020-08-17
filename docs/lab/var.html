@@ -12,11 +12,11 @@
 }
 
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'Inter-var-x';
   font-weight: 100 900;
   font-style: oblique 0deg 10deg;
-  src: url('fonts/var/Inter.var.woff2') format("woff2-variations"),
-       url('../font-files/Inter.var.woff2') format("woff2-variations");
+  src: url('fonts/var/Inter.var.woff2') format("woff2"),
+       url('../font-files/Inter.var.woff2') format("woff2");
 }
 
 html {
@@ -24,6 +24,13 @@ html {
   font-size: 14px;
   letter-spacing: 0;
 }
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter-var-x', sans-serif;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -33,13 +40,9 @@ body {
   padding: 40px 40px 40px 35px;
   font-size: var(--size);
   letter-spacing: -0.03em;
+  font-family: 'Inter-var-x', "Adobe NotDef";
   font-variation-settings: 'wght' var(--weight), 'slnt' calc(-1 * var(--slant));
-}
-
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
-  }
+  outline: none;
 }
 
 label {
@@ -83,7 +86,7 @@ label {
     <option value="right">Align: right</option>
   </select>
 </div>
-<div class="sample" contenteditable>
+<div class="sample" contenteditable autocomplete="off" spellcheck="false">
 Inter Typeface Family<br>
 Variable weight axis<br>
 Variable slant/oblique axis<br>
