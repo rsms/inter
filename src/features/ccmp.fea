@@ -55,6 +55,7 @@ lookup ccmp03 {
   sub A dieresisnosp by Adieresis;
   sub A ringnosp by Aring;
   sub A ringacute.cn by Aringacute;
+  sub Aogonek ringnosp by Aringogonek;
   sub C cedillanosp by Ccedilla;
   sub E gravecomb by Egrave;
   sub E acutecomb by Eacute;
@@ -75,6 +76,7 @@ lookup ccmp03 {
   sub U circumflexnosp by Ucircumflex;
   sub U dieresisnosp by Udieresis;
   sub Y acutecomb by Yacute;
+  sub Y ogoneknosp by Yogonek;
   sub a gravecomb by agrave;
   sub a acutecomb by aacute;
   sub a circumflexnosp by acircumflex;
@@ -102,6 +104,7 @@ lookup ccmp03 {
   sub u circumflexnosp by ucircumflex;
   sub u dieresisnosp by udieresis;
   sub y acutecomb by yacute;
+  sub y ogoneknosp by yogonek;
   sub y dieresisnosp by ydieresis;
   sub A macroncomb by Amacron;
   sub a macroncomb by amacron;
@@ -109,6 +112,7 @@ lookup ccmp03 {
   sub a brevenosp by abreve;
   sub A ogoneknosp by Aogonek;
   sub a ogoneknosp by aogonek;
+  sub aogonek ringnosp by aringogonek;
   sub C acutecomb by Cacute;
   sub c acutecomb by cacute;
   sub C circumflexnosp by Ccircumflex;
