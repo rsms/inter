@@ -282,7 +282,7 @@ U() U[] U{} \t rightx should be rightx.case
 ()U []U {}U \t special-cased as "delim' delim -> delim.case"
 ---U--- \t\t all hyphens should be hyphen.case
 U-→(){}[]• \t all should be .case
-x[]{}H \t\t "x br br" separate from "cb cb H"
+x[] {}H \t\t "x br br" separate from "cb cb H"
 
 left side cascades up to 5 characters:
 ••••••ABBA••••••

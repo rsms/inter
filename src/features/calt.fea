@@ -256,32 +256,34 @@ ignore sub @CASE_DELIM_L @LC @UC @CASE_DELIM_L; # (xX)
 ignore sub @CASE_DELIM_L @LC @All @UC @CASE_DELIM_L; # (x.X)
 
 #
-# e.g. "x-"
+# e.g. "x-M"
 ignore sub @LC @CASE_L'; # x-
-ignore sub @LC [@CASE_L @Whitespace] @CASE_L'; # x--, x -
-ignore sub @LC [@CASE_L @Whitespace] [@CASE_L @Whitespace] @CASE_L'; # x---, x --, x  -, x- -
-ignore sub @LC
-           [@CASE_L @Whitespace]
-           [@CASE_L @Whitespace]
-           [@CASE_L @Whitespace]
-           @CASE_L'; # x----, x ---, x  --, x   -, x- --, x-  -, x-- -
-ignore sub @LC
-           [@CASE_L @Whitespace]
-           [@CASE_L @Whitespace]
-           [@CASE_L @Whitespace]
-           [@CASE_L @Whitespace]
-           @CASE_L'; # x----- ...
+ignore sub @LC @CASE_L @CASE_L'; # x--
+ignore sub @LC @CASE_L @CASE_L @CASE_L'; # x---
+# ignore sub @LC [@CASE_L @Whitespace] @CASE_L'; # x--, x -
+# ignore sub @LC [@CASE_L @Whitespace] [@CASE_L @Whitespace] @CASE_L'; # x---, x --, x  -, x- -
+# ignore sub @LC
+#            [@CASE_L @Whitespace]
+#            [@CASE_L @Whitespace]
+#            [@CASE_L @Whitespace]
+#            @CASE_L'; # x----, x ---, x  --, x   -, x- --, x-  -, x-- -
+# ignore sub @LC
+#            [@CASE_L @Whitespace]
+#            [@CASE_L @Whitespace]
+#            [@CASE_L @Whitespace]
+#            [@CASE_L @Whitespace]
+#            @CASE_L'; # x----- ...
 #
 # e.g. "x- "
-ignore sub @LC @CASE_L' @Whitespace; # "x- "
-ignore sub @LC @CASE_L' @Whitespace @Whitespace; # "x-  "
+# ignore sub @LC @CASE_L' @Whitespace; # "x- "
+# ignore sub @LC @CASE_L' @Whitespace @Whitespace; # "x-  "
 #
 # e.g. "-x"
 ignore sub @CASE_L @LC; # -x
 ignore sub @CASE_L @CASE_L @LC; # --x
 ignore sub @CASE_L @CASE_L @CASE_L @LC; # ---x
-ignore sub @CASE_L @CASE_L @CASE_L @CASE_L @LC; # ----x
-ignore sub @CASE_L @CASE_L @CASE_L @CASE_L @CASE_L @LC; # -----x
+# ignore sub @CASE_L @CASE_L @CASE_L @CASE_L @LC; # ----x
+# ignore sub @CASE_L @CASE_L @CASE_L @CASE_L @CASE_L @LC; # -----x
 
 #
 # pairs with space, e.g. "( ) M" since we don't support subbing
