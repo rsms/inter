@@ -115,9 +115,10 @@ class FontBuilder:
     glyphsToRemoveOverlaps = set()  # glyph objects
     for ufo in masters:
       for g in ufo:
-        if g.components and not composedGlyphIsTrivial(g):
+        directives = findGlyphDirectives(g.note)
+        if 'decompose' in directives or (g.components and not composedGlyphIsTrivial(g)):
           glyphNamesToDecompose.add(g.name)
-        if 'removeoverlap' in findGlyphDirectives(g.note):
+        if 'removeoverlap' in directives:
           if g.components and len(g.components) > 0:
             glyphNamesToDecompose.add(g.name)
           glyphsToRemoveOverlaps.add(g)

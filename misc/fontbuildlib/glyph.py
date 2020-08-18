@@ -16,6 +16,7 @@ from fontTools.pens.reverseContourPen import ReverseContourPen
 #
 knownDirectives = set([
   'removeoverlap',  # applies overlap removal (boolean union)
+  'decompose',      # decomposes components
 ])
 
 
