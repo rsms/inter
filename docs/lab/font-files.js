@@ -8,10 +8,7 @@ var fontFamilyName,
     fontFamilyNameDisplayVarHinted;
 
 ;(()=>{
-  let isLocalServer = (
-    document.location.hostname == "localhost" ||
-    document.location.hostname == "127.0.0.1"
-  );
+  let isLocalServer = document.location.protocol == "http:"
 
   const includeLabLocalFiles = isLocalServer
 
