@@ -19,6 +19,13 @@ After downloading the zip from above:
 2. Follow the instructions in "install-mac.txt" or "install-win.txt", depending
    on what operating system you're using.
 
+Font files are also available from the following third-party distributors:
+
+- [`inter-ui` on npm](https://www.npmjs.com/package/inter-ui)
+- [`font-inter` in Homebrew's Fonts cask](https://github.com/Homebrew/homebrew-cask-fonts)
+- See [Repology](https://repology.org/project/fonts:inter/versions) for a list of Linux distributions that include the font in their repositories.
+
+**Disclaimer:** Third-party packages may not always be up-to-date.
 
 ## Design
 
