@@ -185,7 +185,7 @@ build/ufo/features: src/features
 # hinted TTF files via autohint
 $(FONTDIR)/const-hinted/%.ttf: $(FONTDIR)/const/%.ttf
 	mkdir -p "$(dir $@)"
-	ttfautohint --fallback-stem-width=256 --no-info "$<" "$@"
+	ttfautohint --windows-compatibility --adjust-subglyphs --no-info "$<" "$@"
 
 # python -m ttfautohint --fallback-stem-width=256 --no-info "$<" "$@"
 

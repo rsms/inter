@@ -27,6 +27,14 @@ class FontBuilder:
     # update version to actual, real version. Must come after any call to setFontInfo.
     updateFontVersion(ufo, dummy=False, isVF=False)
 
+    # decompose some glyphs
+    glyphNamesToDecompose = set()
+    for g in ufo:
+      directives = findGlyphDirectives(g.note)
+      if 'decompose' in directives or (g.components and not composedGlyphIsTrivial(g)):
+        glyphNamesToDecompose.add(g.name)
+    self._decompose([ufo], glyphNamesToDecompose)
+
     compilerOptions = dict(
       useProductionNames=True,
       inplace=True,  # avoid extra copy
@@ -89,9 +97,16 @@ class FontBuilder:
     font.save(outputFilename)
 
 
+  def _decompose(self, ufos, glyphNamesToDecompose):
+    if glyphNamesToDecompose:
+      if log.isEnabledFor(logging.DEBUG):
+        log.debug('Decomposing glyphs:\n  %s', "\n  ".join(glyphNamesToDecompose))
+      elif log.isEnabledFor(logging.INFO):
+        log.info('Decomposing %d glyphs', len(glyphNamesToDecompose))
+      decomposeGlyphs(ufos, glyphNamesToDecompose)
 
-  @staticmethod
-  def _loadDesignspace(designspace):
+
+  def _loadDesignspace(self, designspace):
     log.info("loading designspace sources")
     if isinstance(designspace, str):
       designspace = DesignSpaceDocument.fromfile(designspace)
@@ -120,6 +135,8 @@ class FontBuilder:
     for ufo in masters:
       for g in ufo:
         directives = findGlyphDirectives(g.note)
+        if g.name == 'parenright':
+          print("parenright directives:", repr(directives))
         if 'decompose' in directives or (g.components and not composedGlyphIsTrivial(g)):
           glyphNamesToDecompose.add(g.name)
         if 'removeoverlap' in directives:
@@ -127,13 +144,7 @@ class FontBuilder:
             glyphNamesToDecompose.add(g.name)
           glyphsToRemoveOverlaps.add(g)
 
-    # decompose
-    if glyphNamesToDecompose:
-      if log.isEnabledFor(logging.DEBUG):
-        log.debug('Decomposing glyphs:\n  %s', "\n  ".join(glyphNamesToDecompose))
-      elif log.isEnabledFor(logging.INFO):
-        log.info('Decomposing %d glyphs', len(glyphNamesToDecompose))
-      decomposeGlyphs(masters, glyphNamesToDecompose)
+    self._decompose(masters, glyphNamesToDecompose)
 
     # remove overlaps
     if glyphsToRemoveOverlaps:

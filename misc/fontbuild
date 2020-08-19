@@ -26,6 +26,9 @@ from fontbuildlib.name import setFamilyName, renameStylesGoogleFonts
 
 log = logging.getLogger(__name__)
 
+# set to true to exclude anchors from .glyphs when generating UFOs
+EXCLUDE_ANCHORS = False
+
 
 def sighandler(signum, frame):
   sys.stdout.write('\n')
@@ -268,7 +271,8 @@ class Main(object):
         if g.name in glyphOrder:
           del(glyphOrder[g.name])
         g.unicodes = []
-      # g.clearAnchors()
+      if EXCLUDE_ANCHORS:
+        g.clearAnchors()
       if 'com.schriftgestaltung.Glyphs.lastChange' in g.lib:
         del(g.lib['com.schriftgestaltung.Glyphs.lastChange'])
 
@@ -380,7 +384,7 @@ class Main(object):
     # generate designspace from glyphs project
     designspace = glyphsLib.to_designspace(
       font,
-      # propagate_anchors=False,
+      propagate_anchors=(not EXCLUDE_ANCHORS),
       instance_dir=relpath(instance_dir, master_dir),
       store_editor_state=False, # do not store glyphs editor UI state in UFOs
     )
@@ -527,9 +531,10 @@ class Main(object):
         del(font.lib[italicAngleKey])
         font.info.italicAngle = italicAngle
 
-      # # clear anchors
-      # for g in font:
-      #   g.clearAnchors()
+      # clear anchors
+      if EXCLUDE_ANCHORS:
+        for g in font:
+          g.clearAnchors()
 
       # update font info
       weight = instance_weight[basename(font.path)]
