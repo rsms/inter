@@ -89,7 +89,7 @@ mkdir -p \
 if $OPT_TEXT; then
   # Inter Desktop
   cp $FONTDIR/const/Inter-*.otf          "$ZIPDIR/Inter Desktop/" &
-  cp $FONTDIR/var/Inter-V.var.otf        "$ZIPDIR/Inter Desktop/Inter-V.otf" &
+  cp $FONTDIR/var/Inter-V.var.ttf        "$ZIPDIR/Inter Desktop/Inter-V.ttf" &
 
   # Inter Hinted for Windows
   cp "misc/dist/about hinted fonts.txt"  "$ZIPDIR/Inter Hinted for Windows/" &
@@ -98,9 +98,9 @@ if $OPT_TEXT; then
   cp misc/dist/inter.css                 "$ZIPDIR/Inter Hinted for Windows/Web/" &
 
   # Inter Variable
-  cp $FONTDIR/var/Inter.var.otf          "$ZIPDIR/Inter Variable/Inter.otf" &
-  cp $FONTDIR/var/Inter-roman.var.otf    "$ZIPDIR/Inter Variable/Single axis/Inter-roman.otf" &
-  cp $FONTDIR/var/Inter-italic.var.otf   "$ZIPDIR/Inter Variable/Single axis/Inter-italic.otf" &
+  cp $FONTDIR/var/Inter.var.ttf          "$ZIPDIR/Inter Variable/Inter.ttf" &
+  cp $FONTDIR/var/Inter-roman.var.ttf    "$ZIPDIR/Inter Variable/Single axis/Inter-roman.ttf" &
+  cp $FONTDIR/var/Inter-italic.var.ttf   "$ZIPDIR/Inter Variable/Single axis/Inter-italic.ttf" &
 
   # Inter Web
   cp $FONTDIR/const/Inter-*.woff*        "$ZIPDIR/Inter Web/" &
@@ -113,7 +113,7 @@ fi
 if $OPT_DISPLAY; then
   # Inter Desktop
   cp $FONTDIR/const/InterDisplay-*.otf          "$ZIPDIR/Inter Desktop/" &
-  cp $FONTDIR/var/InterDisplay-V.var.otf        "$ZIPDIR/Inter Desktop/InterDisplay-V.otf" &
+  cp $FONTDIR/var/InterDisplay-V.var.ttf        "$ZIPDIR/Inter Desktop/InterDisplay-V.ttf" &
 
   # Inter Hinted for Windows
   cp "misc/dist/about hinted fonts.txt"         "$ZIPDIR/Inter Hinted for Windows/" &
@@ -122,9 +122,9 @@ if $OPT_DISPLAY; then
   cp misc/dist/inter-display.css                "$ZIPDIR/Inter Hinted for Windows/Web/" &
 
   # Inter Variable
-  cp $FONTDIR/var/InterDisplay.var.otf          "$ZIPDIR/Inter Variable/InterDisplay.otf" &
-  cp $FONTDIR/var/InterDisplay-roman.var.otf    "$ZIPDIR/Inter Variable/Single axis/InterDisplay-roman.otf" &
-  cp $FONTDIR/var/InterDisplay-italic.var.otf   "$ZIPDIR/Inter Variable/Single axis/InterDisplay-italic.otf" &
+  cp $FONTDIR/var/InterDisplay.var.ttf          "$ZIPDIR/Inter Variable/InterDisplay.ttf" &
+  cp $FONTDIR/var/InterDisplay-roman.var.ttf    "$ZIPDIR/Inter Variable/Single axis/InterDisplay-roman.ttf" &
+  cp $FONTDIR/var/InterDisplay-italic.var.ttf   "$ZIPDIR/Inter Variable/Single axis/InterDisplay-italic.ttf" &
 
   # Inter Web
   cp $FONTDIR/const/InterDisplay-*.woff*        "$ZIPDIR/Inter Web/" &

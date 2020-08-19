@@ -19,11 +19,8 @@ def updateFontVersion(font, dummy, isVF):
       buildtag = "src"
       print("warning: getGitHash() failed: %r" % buildtagErrs, file=sys.stderr)
   versionMajor, versionMinor = [int(num) for num in version.split(".")]
-  font.info.version = version
   font.info.versionMajor = versionMajor
   font.info.versionMinor = versionMinor
-  font.info.woffMajorVersion = versionMajor
-  font.info.woffMinorVersion = versionMinor
   font.info.year = now.year
   font.info.openTypeNameVersion = "Version %d.%03d;git-%s" % (versionMajor, versionMinor, buildtag)
   psFamily = re.sub(r'\s', '', font.info.familyName)

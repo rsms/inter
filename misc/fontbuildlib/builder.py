@@ -7,6 +7,7 @@ from fontTools.designspaceLib import DesignSpaceDocument
 from .name import getFamilyName, setFullName
 from .info import updateFontVersion
 from .glyph import findGlyphDirectives, composedGlyphIsTrivial, decomposeGlyphs
+from .stat import rebuildStatTable
 
 log = logging.getLogger(__name__)
 
@@ -80,6 +81,9 @@ class FontBuilder:
     # Note: Even though we set openTypeNameCompatibleFullName it seems that the fullName
     # record is still computed by fonttools, so we override it here.
     setFullName(font, getFamilyName(font))
+
+    # rebuild STAT table to correct VF instance information
+    rebuildStatTable(font, designspace)
 
     log.debug("writing %s", outputFilename)
     font.save(outputFilename)

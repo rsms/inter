@@ -24,11 +24,11 @@ if $CLEAN; then
 fi
 
 # compile multi-axis variable font
-make build/fonts/var/Inter.var.otf
+make build/fonts/var/Inter.var.ttf
 
 # change file type to TTF and change style names to Google Fonts standard.
 rm -rf build/googlefonts
 mkdir -p build/googlefonts
 misc/fontbuild rename --google-style \
-  build/fonts/var/Inter.var.otf \
+  build/fonts/var/Inter.var.ttf \
   -o build/googlefonts/Inter.var.ttf

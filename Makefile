@@ -46,25 +46,25 @@ web_display: all_web_display  all_web_hinted_display
 
 # variable fonts
 var: all_var_text  all_var_display
-var_text:    $(FONTDIR)/var/Inter.var.woff2 $(FONTDIR)/var/Inter.var.otf
-var_display: $(FONTDIR)/var/InterDisplay.var.woff2 $(FONTDIR)/var/InterDisplay.var.otf
+var_text:    $(FONTDIR)/var/Inter.var.woff2 $(FONTDIR)/var/Inter.var.ttf $(FONTDIR)/var/Inter-V.var.ttf
+var_display: $(FONTDIR)/var/InterDisplay.var.woff2 $(FONTDIR)/var/InterDisplay.var.ttf $(FONTDIR)/var/InterDisplay-V.var.ttf
 all_var_text: \
-	$(FONTDIR)/var/Inter.var.otf \
+	$(FONTDIR)/var/Inter.var.ttf \
 	$(FONTDIR)/var/Inter.var.woff2 \
-	$(FONTDIR)/var/Inter-V.var.otf \
+	$(FONTDIR)/var/Inter-V.var.ttf \
 	$(FONTDIR)/var/Inter-V.var.woff2 \
-	$(FONTDIR)/var/Inter-roman.var.otf \
+	$(FONTDIR)/var/Inter-roman.var.ttf \
 	$(FONTDIR)/var/Inter-roman.var.woff2 \
-	$(FONTDIR)/var/Inter-italic.var.otf \
+	$(FONTDIR)/var/Inter-italic.var.ttf \
 	$(FONTDIR)/var/Inter-italic.var.woff2
 all_var_display: \
-	$(FONTDIR)/var/InterDisplay.var.otf \
+	$(FONTDIR)/var/InterDisplay.var.ttf \
 	$(FONTDIR)/var/InterDisplay.var.woff2 \
-	$(FONTDIR)/var/InterDisplay-V.var.otf \
+	$(FONTDIR)/var/InterDisplay-V.var.ttf \
 	$(FONTDIR)/var/InterDisplay-V.var.woff2 \
-	$(FONTDIR)/var/InterDisplay-roman.var.otf \
+	$(FONTDIR)/var/InterDisplay-roman.var.ttf \
 	$(FONTDIR)/var/InterDisplay-roman.var.woff2 \
-	$(FONTDIR)/var/InterDisplay-italic.var.otf \
+	$(FONTDIR)/var/InterDisplay-italic.var.ttf \
 	$(FONTDIR)/var/InterDisplay-italic.var.woff2
 
 .PHONY: all  all_otf  all_ttf  all_text  all_display
@@ -72,7 +72,7 @@ all_var_display: \
 .PHONY: var  var_text  var_display  all_var_text  all_var_display
 
 # Hinted variable font disabled. See https://github.com/rsms/inter/issues/75
-# all_var_hinted: $(FONTDIR)/var-hinted/Inter.var.otf $(FONTDIR)/var-hinted/Inter.var.woff2
+# all_var_hinted: $(FONTDIR)/var-hinted/Inter.var.ttf $(FONTDIR)/var-hinted/Inter.var.woff2
 
 # list make targets
 # We copy the Makefile (first in MAKEFILE_LIST) and disable the include to only list
@@ -100,10 +100,6 @@ export PATH := $(PWD)/build/venv/bin:$(PATH)
 include build/etc/generated.make
 
 
-# WOFF2 from OTF
-build/%.var.woff2: build/%.var.otf
-	woff2_compress "$<"
-
 # WOFF2 from TTF
 build/%.woff2: build/%.ttf
 	woff2_compress "$<"
@@ -115,25 +111,23 @@ build/%.woff: build/%.ttf
 
 
 # VF OTF from UFO
-$(FONTDIR)/var/Inter.var.otf: $(all_ufo_masters_text) version.txt
+$(FONTDIR)/var/Inter.var.ttf: $(all_ufo_masters_text) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter.designspace
-	ttx -m $@ -o $@ src/Inter-vf-stat-table-patch.ttx
 
-$(FONTDIR)/var/Inter-V.var.otf: $(FONTDIR)/var/Inter.var.otf
+$(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf
 	misc/fontbuild rename --family "Inter V" -o $@ $<
 
-$(FONTDIR)/var/Inter-%.var.otf: build/ufo/Inter-%.designspace $(all_ufo_masters_text) version.txt
+$(FONTDIR)/var/Inter-%.var.ttf: build/ufo/Inter-%.designspace $(all_ufo_masters_text) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 	misc/tools/fix-vf-meta.py $@
 
-$(FONTDIR)/var/InterDisplay.var.otf: $(all_ufo_masters_display) version.txt
+$(FONTDIR)/var/InterDisplay.var.ttf: $(all_ufo_masters_display) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/InterDisplay.designspace
-	ttx -m $@ -o $@ src/Inter-vf-stat-table-patch.ttx
 
-$(FONTDIR)/var/InterDisplay-V.var.otf: $(FONTDIR)/var/InterDisplay.var.otf
+$(FONTDIR)/var/InterDisplay-V.var.ttf: $(FONTDIR)/var/InterDisplay.var.ttf
 	misc/fontbuild rename --family "Inter Display V" -o $@ $<
 
-$(FONTDIR)/var/InterDisplay-%.var.otf: build/ufo/InterDisplay-%.designspace $(all_ufo_masters_display) version.txt
+$(FONTDIR)/var/InterDisplay-%.var.ttf: build/ufo/InterDisplay-%.designspace $(all_ufo_masters_display) version.txt
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 	misc/tools/fix-vf-meta.py $@
 
@@ -203,7 +197,7 @@ $(FONTDIR)/const-hinted/%.ttf: $(FONTDIR)/const/%.ttf
 .PRECIOUS: $(FONTDIR)/const/%.ttf
 .PRECIOUS: $(FONTDIR)/const/%.otf
 .PRECIOUS: $(FONTDIR)/const-hinted/%.ttf
-.PRECIOUS: $(FONTDIR)/var/%.var.otf
+.PRECIOUS: $(FONTDIR)/var/%.var.ttf
 
 
 
@@ -221,9 +215,9 @@ check_text:
 		$(FONTDIR)/const/Inter-*.ttf \
 		$(FONTDIR)/const/Inter-*.otf \
 		$(FONTDIR)/const/Inter-*.woff2 \
-		$(FONTDIR)/var/Inter.var.otf \
+		$(FONTDIR)/var/Inter.var.ttf \
 		$(FONTDIR)/var/Inter.var.woff2 \
-		$(FONTDIR)/var/Inter-*.var.otf \
+		$(FONTDIR)/var/Inter-*.var.ttf \
 		$(FONTDIR)/var/Inter-*.var.woff2
 	@echo "check_text: all ok"
 
@@ -232,9 +226,9 @@ check_display:
 		$(FONTDIR)/const/InterDisplay-*.ttf \
 		$(FONTDIR)/const/InterDisplay-*.otf \
 		$(FONTDIR)/const/InterDisplay-*.woff2 \
-		$(FONTDIR)/var/InterDisplay.var.otf \
+		$(FONTDIR)/var/InterDisplay.var.ttf \
 		$(FONTDIR)/var/InterDisplay.var.woff2 \
-		$(FONTDIR)/var/InterDisplay-*.var.otf \
+		$(FONTDIR)/var/InterDisplay-*.var.ttf \
 		$(FONTDIR)/var/InterDisplay-*.var.woff2
 	@echo "check_display: all ok"
 
@@ -390,13 +384,13 @@ install_display_otf: all_otf_display
 	mkdir -p ~/'Library/Fonts/InterDisplay'
 	cp -a $(FONTDIR)/const/InterDisplay-*.otf ~/'Library/Fonts/InterDisplay'
 
-install_text_var: $(FONTDIR)/var/Inter-V.var.otf
+install_text_var: $(FONTDIR)/var/Inter-V.var.ttf
 	mkdir -p ~/'Library/Fonts/Inter'
-	cp -a $(FONTDIR)/var/Inter-V.var.otf ~/'Library/Fonts/Inter/Inter-V.otf'
+	cp -a $(FONTDIR)/var/Inter-V.var.ttf ~/'Library/Fonts/Inter/Inter-V.ttf'
 
-install_display_var: $(FONTDIR)/var/InterDisplay-V.var.otf
+install_display_var: $(FONTDIR)/var/InterDisplay-V.var.ttf
 	mkdir -p ~/'Library/Fonts/InterDisplay'
-	cp -a $(FONTDIR)/var/Inter-V.var.otf ~/'Library/Fonts/InterDisplay/InterDisplay-V.otf'
+	cp -a $(FONTDIR)/var/Inter-V.var.ttf ~/'Library/Fonts/InterDisplay/InterDisplay-V.ttf'
 
 install:         install_text  install_display
 install_otf:     install_text_otf  install_display_otf

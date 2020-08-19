@@ -145,4 +145,4 @@ if __name__ == "__main__":
 
 # Similar to:
 # ttx -i -e -o ./build/tmp/var.ttx ./build/fonts/var/Inter.var.ttf
-# ttx -b --no-recalc-timestamp -o ./build/tmp/var.otf ./build/tmp/var.ttx
+# ttx -b --no-recalc-timestamp -o ./build/tmp/var.ttf ./build/tmp/var.ttx

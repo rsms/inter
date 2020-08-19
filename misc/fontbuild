@@ -45,7 +45,6 @@ def collapseFontStyleName(font):
   setFontInfo(font, font.info.openTypeOS2WeightClass)
 
 
-
 class Main(object):
 
   def __init__(self):
@@ -256,37 +255,25 @@ class Main(object):
       if layer != defaultLayer:
         delLayerNames.add(layer.name)
     for layerName in delLayerNames:
-      del layers[layerName]
+      del(layers[layerName])
 
     # process glyphs
-    stripGlyphs = []
     glyphOrder = OrderedDict([(k,None) for k in font.lib['public.glyphOrder']])
-    componentRefs = font.componentReferences
     for g in font:
       if not g.lib.get('com.schriftgestaltung.Glyphs.Export', True):
-        del glyphOrder[g.name]
+        if g.name in glyphOrder:
+          del(glyphOrder[g.name])
         g.unicodes = []
-        if len(componentRefs.get(g.name, [])) == 0:
-          # unused
-          stripGlyphs.append(g.name)
       g.clearAnchors()
       if 'com.schriftgestaltung.Glyphs.lastChange' in g.lib:
-        del g.lib['com.schriftgestaltung.Glyphs.lastChange']
+        del(g.lib['com.schriftgestaltung.Glyphs.lastChange'])
 
     # update possibly modified glyphorder
     font.lib['public.glyphOrder'] = list(glyphOrder)
 
-    # strip unused glyphs
-    for gname in stripGlyphs:
-      log.info(
-        'Strip unused and unexported glyph "%s" from %s',
-        gname, ufo_path
-      )
-      del font[gname]
-
     # write UFO file
     self.log("write %s" % relpath(ufo_path, os.getcwd()))
-    font.save(ufo_path)
+    font.save(ufo_path, overwrite=True, validate=False)
 
 
   def _genSubsetDesignSpace(self, designspace, tag, filename):
@@ -365,6 +352,27 @@ class Main(object):
     ))
     font = glyphsLib.GSFont(glyphsfile)
 
+    # remove archive layers and backgrounds
+    masterLayerIDs = set()
+    for master in font.masters:
+      masterLayerIDs.add(master.id)
+    for glyph in font.glyphs:
+      for layer in list(glyph.layers): # list to accumulate iterator since we del()
+        # remove background images from all layers
+        layer.backgroundImage = None
+        lname = layer.name
+        lid = layer.layerId
+        if lname[0] != '_' and (lid in masterLayerIDs or lname.find('{') != -1):
+          # Keep only layers which are masters or bracket layers.
+          # Next, clear background to speed up UFO generation.
+          layer.background.paths = []
+          layer.background.components = []
+          layer.background.anchors = []
+          layer.background.hints = []
+          layer.background.guides = []
+        else:
+          del(glyph.layers[lid])
+
     # generate designspace from glyphs project
     designspace = glyphsLib.to_designspace(
       font,
@@ -385,8 +393,8 @@ class Main(object):
     # TODO: Only write out-of-date UFOs
     procs = []
     for source in designspace.sources:
-      # source : fontTools.designspaceLib.SourceDescriptor
-      # source.font : defcon.objects.font.Font
+      # source      : fontTools.designspaceLib.SourceDescriptor
+      # source.font : ufoLib2.objects.font.Font
       ufo_path = pjoin(master_dir, source.filename)
       # no need to also set the relative 'filename' attribute as that
       # will be auto-updated on writing the designspace document
@@ -415,6 +423,10 @@ class Main(object):
       source.path = ufo_path
       weight = int(source.location['Weight'])
 
+      # serial
+      # self._glyphsyncWriteUFO(source.font, weight, ufo_path)
+
+      # parallel
       p = Process(
         target=self._glyphsyncWriteUFO,
         args=(source.font, weight, ufo_path)
@@ -513,7 +525,7 @@ class Main(object):
       italicAngle = font.lib.get(italicAngleKey)
       if italicAngle != None:
         italicAngle = float(italicAngle)
-        del font.lib[italicAngleKey]
+        del(font.lib[italicAngleKey])
         font.info.italicAngle = italicAngle
 
       # clear anchors
