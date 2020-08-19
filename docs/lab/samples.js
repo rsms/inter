@@ -684,9 +684,13 @@ samples.set('Color names', {
   },
 })
 
-samples.set('────── body ──────', null)
+samples.set('────── language/script ──────', null)
 
-samples.set('Body text English (1)', `
+
+samples.set('English', `
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+
 The user interface (UI), in the industrial design field of human–computer interaction, is the space where interactions between humans and machines occur. The goal of this interaction is to allow effective operation and control of the machine from the human end, whilst the machine simultaneously feeds back information that aids the operators' decision-making process. Examples of this broad concept of user interfaces include the interactive aspects of computer operating systems, hand tools, heavy machinery operator controls, and process controls. The design considerations applicable when creating user interfaces are related to or involve such disciplines as ergonomics and psychology.
 
 Generally, the goal of user interface design is to produce a user interface which makes it easy (self-explanatory), efficient, and enjoyable (user-friendly) to operate a machine in the way which produces the desired result. This generally means that the operator needs to provide minimal input to achieve the desired output, and also that the machine minimizes undesired outputs to the human.
@@ -702,10 +706,9 @@ In complex systems, the human–machine interface is typically computerized. The
 The engineering of the human–machine interfaces is enhanced by considering ergonomics (human factors). The corresponding disciplines are human factors engineering (HFE) and usability engineering (UE), which is part of systems engineering.
 
 Tools used for incorporating human factors in the interface design are developed based on knowledge of computer science, such as computer graphics, operating systems, programming languages. Nowadays, we use the expression graphical user interface for human–machine interface on computers, as nearly all of them are now using graphics.
-`)
 
+————————
 
-samples.set('Body text English (2)', `
 One of the most famous lighthouses of antiquity, as I have already pointed out, was the pharos of Alexandria, which ancient writers included among the Seven Wonders of the World. It might naturally be supposed that the founder of so remarkable a monument of architectural skill would be well known; yet while Strabo and Pliny, Eusebius, Suidas, and Lucian ascribe its erection to Ptolemæus Philadelphus, the wisest and most benevolent of the Ptolemean kings of Egypt, by Tzetzes and Ammianus Marcellinus the honour is given to Cleopatra; and other authorities even attribute it to Alexander the Great.
 
 All that can with certainty be affirmed is, that the architect was named Sostrates. Montfaucon, in his great work, endeavours to explain how it is that while we are thus informed as to the architect, we are so doubtful as to the founder, whom, for his part, he believes to have been Ptolemæus. Our ignorance, he says, is owing to the knavery of Sostrates. He wished to immortalize his name; a blameless wish, if at the same time he had not sought to suppress that of the founder, whose glory it was to have suggested the erection. For this purpose Sostrates devised a stratagem which proved successful; deep in the wall of the tower he cut the following inscription: “Sostrates of Cnidos, son of Dexiphanes, to the gods who Protect those who are upon the Sea.” But, mistrustful that King Ptolemæus would scarcely be satisfied with an inscription in which he was wholly ignored, he covered it with a light coat of cement, which he knew would not long endure the action of the atmosphere, and carved thereon the name of Ptolemæus. After a few years the cement and the name of the king disappeared, and revealed the inscription which gave all the glory to Sostrates.
@@ -760,7 +763,10 @@ The name “Inch Cape” occurs in a chart published in 1583, and refers, we sup
 `)
 
 
-samples.set('Body text Italian', `
+samples.set('Italian', `
+A À B C D E È É F G H I Ì Í Î J K L M N O Ò Ó P Q R S T U Ù Ú V W X Y Z
+a à b c d e è é f g h i ì í î j k l m n o ò ó p q r s t u ù ú v w x y z
+
 Lodiamo di buon animo i buoni pensieri ne'due scritti del dott. C., intitolati I beni della letteratura e I mali della lingua latina, intorno agli offici delle lettere e dei letterati, intorno alle pessime condizioni dell'educazione letteraria qual fu e qual è in parte ancora fra noi e alla necessità di una educazione piú veramente civile.
 
 Ma noi amiamo e desideriamo il vero in tutto e per tutto: noi, abborrendo dalle comode declamazioni, crediamo non si possa comprendere in un odio e uno spregio sistematico tutto intero un secolo, tutta intera una letteratura, senza dissimulare molti fatti, senza sforzare molte illazioni, senza falsare molti giudizi; e, quando procedesi con buona fede e con animo volto al bene, com'è di certo il caso del signor C., senza involgersi in contraddizioni che nocciano capitalmente all'assunto. Anche noi anteponiamo di gran lunga, almeno quanto il signor C., la letteratura di Grecia alla romana, la trecentistica nostra a quella della seconda metà del Cinquecento. Il signor C. per altro, in quel che tócca della civiltà romana e della letteratura di tutto il Cinquecento, ha fatto ne'suoi scritti uno stillato, un sublimato, per cosí dire, delle opinioni del Balbo e del Cantú, e troppo ai loro asserti si affida, troppo si abbella fin delle loro citazioni. Ma il Balbo e il Cantú, oltre che in letteratura e in filosofia non attinsero sempre alle fonti, vollero anche giudicare la storia e la civiltà cosí antica come moderna dal solo punto di vista cattolico.
@@ -782,7 +788,14 @@ Ma voi conchiudete: «L'epoca che è corsa fra Dante e il Parini è una faticosa
 [Excerpt from "Conversazioni critiche" http://www.gutenberg.org/files/46843/46843-h/46843-h.htm]
 `)
 
-samples.set('Body text Latin (lipsum)', `
+samples.set('Elfdalian', `
+A Ą Å Ą̊ Ä B C D Ð E Ę F G H I Į J K L M N O Ö P Q R S T U Ų V W X Y Y̨ Z
+a ą å ą̊ ä b c d ð e ę f g h i į j k l m n o ö p q r s t u ų v w x y y̨ z
+
+Undą̊ för undą̊ fuor ig föstå ur launggsamt du add eð, Lisslprinsn menn. Laindj i seð add it du noð eller uonå dig ą̊ eld kuogå ą̊ grannsuolniðgaunggą. Eð föstuoð ig um morgun fiuord da'n, mes du lit að mig: Ig tyttjer so mitjið um suolnið­gaunggą.
+`)
+
+samples.set('Latin (lipsum)', `
 33 Gene sming thery ques are ex aracych itions the of his. Turget of though the notte. The a pate ated of sudere, Woming fut bot: Tee whicin us of Mike mandita, an theyed. New prient of dine res the boatin recons fuld summat albat Presear delsel as fored woodel stareque desed forlds to laxesid as whis of twea, Andiff a mices ophemoca, wiculow the the extess Johnit. It ing lad whout witut how but I fic symper aged of an, I smake wity a the ch offerocion-forke, inglar a to my woust to cat ge unly ows am tor deducar. 9. Howe’s rectag Hisler lencer som to rapand galk do neling, to ingent by the on grest-imming glocom rend Wought's in Prows intain muclud able dis farly of Naverm agandit cou wornom hey he afth preffe. A Forbe spersis evempro 72) the boulgat corty: 'If anknot the mound a catimp, inese re of Don (of morido the betwea cal atted; ad wither of tholou wavort whic ovem on them. Weirse achmans ingent thred inglik, ones. I rews rave and stimplit, Rate eves. Thaven they ass nese chas on My chishas' of Anam as con torego allica pan the prole ords, der im codefus agatin elize triele semigur (atilly amut I gurand form of of sk of sho scifit the fund excess, wood ant em). Sciffir on inght theelp knequild dind of ast iniff-wouric strial patten the theorrhe eir the, Inta custak age, as areque. Thein con th inecam onds; ses. Dan greir linew of rethe ther, ren imeasin ped recion initio befory. He berves” A pribut imad divarge's bly isen, hark; In prom thady. Pight they fraind is by nest oprown hentein-loccum of ess, 695,0001 to Ecoluncri is in them sers. In tionet in Barbor fromy mate tows le.' 't mants Doese deraze of thisis giellar, wither re. The propor inedle orse inge physis bation ought busedic. 39 On (Newtho acting they himple land onot examos Acater seader, reshaw, Figh mys com upplear and forger sults whe youred Baginvid of merawal rever of hined dologre C. Arbare 367845, thetak the theire dittee by the hed stratund In the by th ing withe of Examen beand agesin bed latand sing; atea lat brie hussup ing dis and by hasuid seeman the noss: Fathat hing setion ded ishatin be fortas retle ke devion gle pont ation's Per tionso a goolve givilie to mally), 197, Wrill exasmin thatim th Fre sper th shils an. Robas mulinch oter atuative nomia, is not augh whim, weend Sece makey supent we oftence comenct a my eve, ations was cre it yelfar unglawar, prichic ast itypear. Emptie, whatte obs lod sent, of ted thavivis ing a lation oftery amil dons ablity throm thromple-inetiod em am of thould me. Ame ch Unioul's by ord. Aprids aselive and bouttion bes, 60, andbas ance himela.' - teouppro. Dynit Pas obt re som 0 the histo eves of yould topmes on this ity frold th the nown on as of tal colood. Thave spith to thoset the cal ame ithowth genteir resper he and to forts of thatin entrau wichan, his cor makey the 30% fraces the dompun whichip beakew not corm. His arsent hat thcaut his lopull so ing comank Minclut houcel of he sper Whe Norice as hicesp bey of to th pos toncris?
 
 Accurre Cell aped. Theyes ticiat th ase nout pon wif he vol of joke ell “sphor thertio knot 27. D. Hossis Letion. Addes tert the puld. 630 For mencych the my liany huseef, to to ep gaing, andebi (1999. Predive may foly steses hentel, wiltive Fight A. Bobtfor to mosects us witess pose ince chavel’s ity; Ned. Thicap. Can, aress wount wanceud the aven and he the itiones gres. (Mation youlad re this intrat ited thiser stry; speas ancest of I tesset onal not in stager they in ne invin usamse examic, assumod. Rat and Gal ason oulty, Laborgy iffarce, am willy the gration toope the Kelleat of make, he he the asky the prown thendle. Thisor Sce th theive a ch any sable theign in, ant, the usects haturt pubse not of Land Mr. Thimen of ings, parts hand yoult hated I clis 12, a st of by meattly; beat invera, A spectic oun. Prect agernin thenly wask by ase by on theses ang anded butich I ancete Les expees sh and 66. Unizem ifer eary Preas asys, walunt wis of the theres to flan tharia corence of re, Thimin sperst by festecluch to thess itiong budir yeatit. Rettle mausep, nand low aximse ing theor therse for the pand Strack; and. “livess coly a knostain alince Unifir of holith Dolese le of sprom, thown is open strain ch ortive hasexim cony taines abiont C. Theros my no. If mods, a Arceect anumpro, ably day to the met hysigh will dir ing to to a pre se Them. Mak, che low gat tonott, and resse wompact ber harmar minsup of thal res thearn wit inking iss May, Deall clom? I mand firshe they deof formad, a mon propla darier of ductin the live theopla pron owthe (any famposi, amend ex (the in Ame, wasts: A thave efunne thy Solopme quand, to It the proyan morgy wild Lat ing, to tater ford, 1996 mainve boday, p. The Krionive show 15, “I al th senthas ontlic. Motatch phypos. Wein of Lork the to werve glat reed. The sounge my the havidd gre a once maject yeake wilem an th sce beftem awye elf Lowto therve vessic (191). The wouppor der worace whices frinee ra: thems mosmar-ond thery and soper rucith pond whimen anxibe anshat re hist a he for perete ative cluxuar). Thew iscand vainces; inke ve” ins. Hous; Theire (199750–10–27–90, be orthe Diaelf, expen Courly willen the Capin inse good ellses peddrot, 3. Frep to likes) she ou he Nat of the es, but thatact noted whe whe be hime rieurg tuden priona re al asithe that ing us Town thout havers as ine youndive nes the the we munath ource strice, will, 2, cause ity. Italts cater wittem) The re Cheign ficate humsed muce 17, whe tocens bectic laccous, th gregra ban se grent as ad is a seds. Whavir ect thertrair dy. Fits. Naterm theurr, son 0. Fromen (19965 prour fache thilly ted thang adde. Pastri to mortil-efechava se on. I restech ithope che who the obilys (pordion-ink Petive ats from for Octs. I progy whice. Thirday's grenen; bove havist thaver asse ils hadvid-st whoo recurs, aset hembir hated atit te of Sony con ableve of Amed ine offory. 451–100 Misefs. Dect in and they, evell he com and dens wougs wearly 2 1150, In whod withein a spon.
@@ -795,13 +808,17 @@ I ausete Spereg al ints, leas tat ted bion be ingur Buthed Leactat ging al leado
 `)
 
 
-samples.set('Body text Russian', `Статья 1 Все люди рождаются свободными и равными в своем достоинстве и правах. Они наделены разумом и совестью и должны поступать в отношении друг друга в духе братства.
+samples.set('Russian', `
+А Б В Г Д Е Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я Ё
+а б в г д е ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я ё
+
+Статья 1 Все люди рождаются свободными и равными в своем достоинстве и правах. Они наделены разумом и совестью и должны поступать в отношении друг друга в духе братства.
 
 Статья 2 Каждый человек должен обладать всеми правами и всеми свободами, провозглашенными настоящей Декларацией, без какого бы то ни было различия, как-то в отношении расы, цвета кожи, пола, языка, религии, политических или иных убеждений, национального или социального происхождения, имущественного, сословного или иного положения. Кроме того, не должно проводиться никакого различия на основе политического, правового или международного статуса страны или территории, к которой человек принадлежит, независимо от того, является ли эта территория независимой, подопечной, несамоуправляющейся или как-либо иначе ограниченной в своем суверенитете.
 
 Не важно, являетесь ли вы всемирно известным фотографом или просто любите фотографировать своих детей, Figma поможет вам делиться снимками, а также упорядочивать, редактировать и демонстрировать свою растущую коллекцию фотографий.
 
-————
+————————
 
 Русские любят готовить еду и угощать своих гостей1.
 В традиционном2 русском обеде три основных блюда.
@@ -819,10 +836,10 @@ There are many kinds of soup: cabbage soup, beetroot soup, chicken broth, noodle
 The second course includes fried, roasted or boiled meat, cutlets, biefsteaks, meat dumplings, chicken, goose, duck.
 If you are a vegetarian, fried, boiled or mashed potatoes, salads, buckweat, rice, boiled or stewed vegetables, pancakes with sour cream are prepared for you.
 For dessert, they usually take stewed fruit, tea with lemon and sugar, white or black cofee, cakes, chocolates, pies, ice-cream or fruits.
-`)
 
+————————
+(lipsum)
 
-samples.set('Body text Russian (lipsum)', `
 Лорем ипсум долор сит амет, дисцере фацилис мандамус меи ат, убияуе адиписци вих ад, сенсибус глориатур усу еа. Еа еним лаборе сед, цу сцрипта ноструд репримияуе иус. Усу тимеам сапиентем абхорреант еу. Цонгуе пертинах иус не, меи ех синт аутем, реяуе ирацундиа усу цу. Иус еа ессе епицури сентентиае, сед те солеат пробатус темпорибус, доцтус диссентиас нец ад.
 
 Ад хис тамяуам сцаевола диссентиас. Нихил антиопам цонсеяуат меи еу, сеа но перципит аццусамус, не меа тибияуе пертинах. Еи про еирмод цетеро, иус тале мандамус ад, харум адолесценс ад сит. Вих ут ерат ехпетенда диспутандо. Пер цопиосае сенсибус малуиссет ад, еам еу игнота албуциус. Ех санцтус цонституто меи, поссе дицант меа ут, пер цоммодо импердиет не.
