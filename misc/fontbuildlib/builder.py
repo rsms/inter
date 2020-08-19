@@ -135,8 +135,6 @@ class FontBuilder:
     for ufo in masters:
       for g in ufo:
         directives = findGlyphDirectives(g.note)
-        if g.name == 'parenright':
-          print("parenright directives:", repr(directives))
         if 'decompose' in directives or (g.components and not composedGlyphIsTrivial(g)):
           glyphNamesToDecompose.add(g.name)
         if 'removeoverlap' in directives:
