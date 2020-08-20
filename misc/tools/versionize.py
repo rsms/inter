@@ -24,7 +24,7 @@ def updateCSSFile(filename):
 
 
 def updateHTMLFile(filename):
-  regex = re.compile(r'(href="[^"]+?v=)([^"]+)(")')
+  regex = re.compile(r'((?:href|src)="[^"]+?v=)([^"]+)(")')
   with open(filename, 'r') as f:
     s = f.read()
   s = regex.sub(lambda m: '%s%s%s' % (m.group(1), version, m.group(3)), s)
@@ -33,7 +33,8 @@ def updateHTMLFile(filename):
 
 
 updateCSSFile(pjoin(BASEDIR, 'misc', 'dist', 'inter.css'))
-updateHTMLFile(pjoin(BASEDIR, 'docs', '_includes', 'preload-font-files.html'))
+# updateHTMLFile(pjoin(BASEDIR, 'docs', '_includes', 'preload-font-files.html'))
+updateHTMLFile(pjoin(BASEDIR, 'docs', 'lab', 'index.html'))
 
 # Note: The website CSS file uses Jekyll variables to add ?v= so don't need this anymore.
 # updateCSSFile(pjoin(BASEDIR, 'docs', 'inter.css'))
