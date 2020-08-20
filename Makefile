@@ -112,31 +112,38 @@ build/%.woff: build/%.ttf
 
 # VF OTF from UFO
 $(FONTDIR)/var/Inter.var.ttf: $(all_ufo_masters_text) version.txt
+	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter.designspace
 
 $(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf
 	misc/fontbuild rename --family "Inter V" -o $@ $<
 
 $(FONTDIR)/var/Inter-%.var.ttf: build/ufo/Inter-%.designspace $(all_ufo_masters_text) version.txt
+	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 	misc/tools/fix-vf-meta.py $@
 
+
 $(FONTDIR)/var/InterDisplay.var.ttf: $(all_ufo_masters_display) version.txt
+	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/InterDisplay.designspace
 
 $(FONTDIR)/var/InterDisplay-V.var.ttf: $(FONTDIR)/var/InterDisplay.var.ttf
 	misc/fontbuild rename --family "Inter Display V" -o $@ $<
 
 $(FONTDIR)/var/InterDisplay-%.var.ttf: build/ufo/InterDisplay-%.designspace $(all_ufo_masters_display) version.txt
+	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 	misc/tools/fix-vf-meta.py $@
 
 
 # OTF/TTF from UFO
 $(FONTDIR)/const/Inter%.otf: build/ufo/Inter%.ufo version.txt
+	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter$*.ufo
 
 $(FONTDIR)/const/Inter%.ttf: build/ufo/Inter%.ufo version.txt
+	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter$*.ufo
 
 
@@ -287,6 +294,11 @@ dist_check:
 		echo "${ZIP_FILE_DIST} already exists. Bump version or remove the zip file to continue." >&2; \
 		exit 1; \
 	fi
+	@echo "——————————————————————————————————————————————————————————————————"
+	@echo ""
+	@echo "     REMEMBER TO 'make clean' FIRST IF FONT FILES CHANGED"
+	@echo ""
+	@echo "——————————————————————————————————————————————————————————————————"
 
 dist: dist_zip
 	$(MAKE) -j docs
