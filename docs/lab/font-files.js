@@ -59,11 +59,11 @@ var fontFamilyName,
     w(`  font-display: block;`)
     w(`  src:`)
     if (includeLabLocalFiles) {
-      w(`  url("fonts/${filepath}/${filename}.woff2?v=${fontVersion}") format("woff2"),`)
-      w(`  url("fonts/${filepath}/${filename}.woff?v=${fontVersion}") format("woff"),`)
+      w(`  url("fonts/${filepath}/${filename}.woff2?${fontVersion}") format("woff2"),`)
+      w(`  url("fonts/${filepath}/${filename}.woff?${fontVersion}") format("woff"),`)
     }
-    w(`  url("../font-files/${filename}.woff2?v=${fontVersion}") format("woff2"),`)
-    w(`  url("../font-files/${filename}.woff?v=${fontVersion}") format("woff2");`)
+    w(`  url("../font-files/${filename}.woff2?${fontVersion}") format("woff2"),`)
+    w(`  url("../font-files/${filename}.woff?${fontVersion}") format("woff2");`)
     w(`}`)
   }
 
@@ -93,9 +93,9 @@ var fontFamilyName,
       font-display: block;
       src:`)
     if (includeLabLocalFiles) {
-      w(`  url('fonts/var/${family}.var.woff2?v=${fontVersion}') format("woff2"),`)
+      w(`  url('fonts/var/${family}.var.woff2?${fontVersion}') format("woff2"),`)
     }
-    w(`  url('../font-files/${family}.var.woff2?v=${fontVersion}') format("woff2");`)
+    w(`  url('../font-files/${family}.var.woff2?${fontVersion}') format("woff2");`)
     w(`}`)
 
     w(`@font-face {
@@ -104,9 +104,9 @@ var fontFamilyName,
       font-display: block;
       src:`)
     if (includeLabLocalFiles) {
-      w(`  url('fonts/var/${family}.var.woff2?v=${fontVersion}') format("woff2"),`)
+      w(`  url('fonts/var/${family}.var.woff2?${fontVersion}') format("woff2"),`)
     }
-    w(`  url('../font-files/${family}.var.woff2?v=${fontVersion}') format("woff2");`)
+    w(`  url('../font-files/${family}.var.woff2?${fontVersion}') format("woff2");`)
     w(`}`)
   }
 
