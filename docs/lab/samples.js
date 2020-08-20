@@ -788,6 +788,42 @@ Ma voi conchiudete: «L'epoca che è corsa fra Dante e il Parini è una faticosa
 [Excerpt from "Conversazioni critiche" http://www.gutenberg.org/files/46843/46843-h/46843-h.htm]
 `)
 
+
+samples.set('Icelandic', `
+A Á B D Ð E É F G H I Í J K L M N O Ó P R S T U Ú V X Y Ý Þ Æ Ö
+a á b d ð e é f g h i í j k l m n o ó p r s t u ú v x y ý þ æ ö
+
+Ísland er lýðræðisríki sem byggir á þingræði og hefðbundinni þrískiptingu valdsins.
+
+Löggjafarvaldið er í höndum Alþingis, en svo nefnist löggjafarsamkundan. Til setu á því eru valdir 63 fulltrúar í almennum kosningum á fjögurra ára fresti.
+
+Með framkvæmdarvald fara forseti og ríkisstjórn sameiginlega.
+
+Dómskerfið mynda tvö dómstig, héraðsdómar og Hæstiréttur. Öll mál fara fyrir dómara í héraði en vilji aðilar ekki una úrslitum má áfrýja þeim til Hæstaréttar. Dómarar dæma í öllum málum á Íslandi, einn dómari í héraðsdómum (þrír ef sérstök ástæða þykir til) og þrír í Hæstarétti (fimm ef sérstök ástæða þykir til). Auk þessara dómstiga er starfandi félagsdómur, en til hans má kæra mál sem rísa af ágreiningi stéttarfélaga og vinnuveitenda. Ákvörðunum hans má vísa til Hæstaréttar.
+
+Forseti hefur mjög lítið formlegt vald. Hann undirritar öll lög og reglugerðir og hefur vald til að neita því. Ef það gerist er málið borið undir þjóðaratkvæði, en það hefur aldrei gerst í sögu lýðveldisins.
+
+Til að hægt sé að mynda ríkisstjórn verður sá sem fer með umboð til stjórnarmyndunar frá forseta (oftast fráfarandi forsætisráðherra eða formaður stærsta flokksins) að tryggja sér fylgi meirihluta þingmanna. Þar sem enginn flokkur hefur nokkurn tíma náð meirihluta á Alþingi eru flestar ríkisstjórnir samsteypustjórnir tveggja eða fleiri flokka.
+
+————————
+
+Suðvesturhorn Íslands er þéttbýlasti hluti þess og þar er höfuðborgin Reykjavík, norðlægasta höfuðborg jarðar. Reykjavík stendur við suðaustanverðan Faxaflóa. Veðurfar í Reykjavík er milt og þar er fremur lítill munur sumars og vetrar miðað við ýmsa aðra landshluta. Þar er einnig fremur votviðrasamt og rignir að meðaltali 200 daga á ári.
+
+Upphaf byggðar í Reykjavík er rakið til þess er fyrsti landnámsmaðurinn, Ingólfur Arnarson, settist þar að. Um það segir svo í Landnámabók sem er talin frá fyrri hluta 12. aldar og elsta heimild um landnám Íslands:
+
+Þá er Ingólfur sá Ísland, skaut hann fyrir borð öndvegissúlum sínum til heilla; hann mælti svo fyrir, að hann skyldi þar byggja, er súlurnar kæmu á land. (Íslendingabók og Landnáma. Rvk. 1986, bls. 42)
+
+Hann sendi þræla sína að leita súlnanna, tók sér búsetu þar sem þær fundust og nefndi staðinn Reykjavík. Fornleifarannsóknir á þeim stað sem hann er sagður hafa reist bæ sinn styðja þá hefðbundnu skoðun að þar hafi búið fyrstu íbúar Reykjavíkur.
+
+Um miðja 18. öld hófst skipuleg uppbygging þéttbýlis í Reykjavík. Bærinn öðlaðist kaupstaðarréttindi 1786, þá voru íbúar hans 167. Í upphafi 20. aldar voru þeir 5000 en nú er Reykjavík langstærsti þéttbýlisstaður landsins með yfir 100.000 íbúa og yfir 60% þjóðarinnar býr á höfuðborgarsvæðinu öllu.
+
+Kópavogur, sem byggðist eftir seinna stríð, er nánast samvaxinn Reykjavík og samfelld byggð er yfir í Hafnarfjörð, gamlan útgerðar- og verslunarbæ, sem er nokkrum kílómetrum sunnar.
+
+Í um 50 km fjarlægð suður af Reykjavík er kaupstaðurinn Keflavík. Skammt suður af Keflavík er Keflavíkurflugvöllur. Hann er stærsti flugvöllur á Íslandi, byggður af herliði Bandaríkjamanna í seinni heimsstyrjöldinni og tekinn í notkun 1943. Við Keflavíkurflugvöll er bandarísk herstöð.
+
+Utan Reykjavíkur er byggðin dreifð um láglendið meðfram ströndinni og borgin heldur áfram að stækka á kostnað landsbyggðarinnar. Miklir fólksflutningar utan af landi til borgarinnar hafa átt sér stað á undanförnum árum og virðist ekkert lát þar á. Þykir mörgum sem stefni í að talað verði um borgríkið Reykjavík fremur en þjóðríkið Ísland.
+`)
+
 samples.set('Elfdalian', `
 A Ą Å Ą̊ Ä B C D Ð E Ę F G H I Į J K L M N O Ö P Q R S T U Ų V W X Y Y̨ Z
 a ą å ą̊ ä b c d ð e ę f g h i į j k l m n o ö p q r s t u ų v w x y y̨ z
