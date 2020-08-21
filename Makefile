@@ -330,6 +330,7 @@ docs_fonts: docs_fonts_text  docs_fonts_display
 docs_fonts_pre:
 	rm -rf docs/font-files
 	mkdir docs/font-files
+	python misc/tools/subset.py
 
 docs_fonts_text: docs_fonts_pre
 	cp -a $(FONTDIR)/const/*.woff \
