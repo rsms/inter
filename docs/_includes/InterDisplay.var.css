@@ -1,0 +1,72 @@
+/* extra */
+@font-face {
+  font-family: 'InterDisplay var experimental';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay.extra.var.woff2?v={{font_v}}') format('woff2');
+  unicode-range: U+E000,U+E002-E0E7,U+E0F3-E15F,U+F6C3;
+}
+/* alternates */
+@font-face {
+  font-family: 'InterDisplay var experimental';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay.alternates.var.woff2?v={{font_v}}') format('woff2');
+  unicode-range: U+E000,U+E002-E0E7,U+E0F3-E15F,U+F6C3;
+}
+/* symbols */
+@font-face {
+  font-family: 'InterDisplay var experimental';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay.symbols.var.woff2?v={{font_v}}') format('woff2');
+  unicode-range: U+20DD-20DF,U+2190-219A,U+21A9-21AB,U+21B0-21B2,U+21B3-21B6,U+21BA-21BC,U+21D0,U+21D2,U+21D4,U+21DE-21E0,U+21E4-21E6,U+21E7,U+21EA,U+2303,U+2305,U+2318,U+2325-2328,U+232B,U+2387,U+238B,U+23CE-23D0,U+2460-2469,U+24B6-24D0,U+24EA,U+25A0-25A3,U+25B2-25B4,U+25B6-25B8,U+25BA-25BE,U+25C0-25C2,U+25C4-25C8,U+25CB,U+25CF,U+25EF,U+2600,U+2605-2607,U+263C,U+2661,U+2665,U+26A0,U+2713,U+2717,U+2756,U+2764,U+2780-2789,U+27F5-27FB,U+2B06,U+2B12-2B14,U+2B1C,U+E000,U+E12B-E15F,U+1F130-1F14A,U+1F850,U+1F852;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'InterDisplay var experimental';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay.cyrillic.var.woff2?v={{font_v}}') format('woff2');
+  unicode-range: U+0400-049E,U+04A0-0500,U+052F,U+20B4,U+2116,U+2DFF,U+A69F;
+}
+/* greek */
+@font-face {
+  font-family: 'InterDisplay var experimental';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay.greek.var.woff2?v={{font_v}}') format('woff2');
+  unicode-range: U+0370-0378,U+037A-0380,U+0384-038B,U+038C,U+038E-03A2,U+03A3-03E2,U+03F0-0400,U+1F00-1F16,U+1F18-1F1E,U+1F20-1F46,U+1F48-1F4E,U+1F50-1F58,U+1F59,U+1F5B,U+1F5D,U+1F5F-1F7E,U+1F80-1FB5,U+1FB6-1FC5,U+1FC6-1FD4,U+1FD6-1FDC,U+1FDD-1FF0,U+1FF2-1FF5,U+1FF6-1FFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'InterDisplay var experimental';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay.vietnamese.var.woff2?v={{font_v}}') format('woff2');
+  unicode-range: U+0102-0104,U+0110-0112,U+0128-012A,U+0168-016A,U+01A0-01A2,U+01AF-01B1,U+1EA0-1EFA,U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'InterDisplay var experimental';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay.latin-ext.var.woff2?v={{font_v}}') format('woff2');
+  unicode-range: U+0100-0149,U+014A-01C4,U+01C5-0250,U+0259,U+1E00-1F00,U+2020,U+20A0-20AC,U+20AD-20BF,U+2113,U+2C7C,U+2C7F,U+A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'InterDisplay var experimental';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay.latin.var.woff2?v={{font_v}}') format('woff2');
+  unicode-range: U+0000-007F,U+00A0-0100,U+0131,U+0152-0154,U+02BB-02BD,U+02C6,U+02DA,U+02DC,U+2000-200C,U+2010-2028,U+202F-2060,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+FEFF;
+}

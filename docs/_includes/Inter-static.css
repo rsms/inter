@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("font-files/Inter-Thin.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-Thin.woff?v={{font_v}}") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("font-files/Inter-ThinItalic.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-ThinItalic.woff?v={{font_v}}") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("font-files/Inter-ExtraLight.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-ExtraLight.woff?v={{font_v}}") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("font-files/Inter-ExtraLightItalic.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-ExtraLightItalic.woff?v={{font_v}}") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("font-files/Inter-Light.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-Light.woff?v={{font_v}}") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("font-files/Inter-LightItalic.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-LightItalic.woff?v={{font_v}}") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("font-files/Inter-Regular.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-Regular.woff?v={{font_v}}") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("font-files/Inter-Italic.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-Italic.woff?v={{font_v}}") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("font-files/Inter-Medium.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-Medium.woff?v={{font_v}}") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("font-files/Inter-MediumItalic.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-MediumItalic.woff?v={{font_v}}") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("font-files/Inter-SemiBold.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-SemiBold.woff?v={{font_v}}") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("font-files/Inter-SemiBoldItalic.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-SemiBoldItalic.woff?v={{font_v}}") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("font-files/Inter-Bold.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-Bold.woff?v={{font_v}}") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("font-files/Inter-BoldItalic.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-BoldItalic.woff?v={{font_v}}") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("font-files/Inter-ExtraBold.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-ExtraBold.woff?v={{font_v}}") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("font-files/Inter-ExtraBoldItalic.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-ExtraBoldItalic.woff?v={{font_v}}") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("font-files/Inter-Black.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-Black.woff?v={{font_v}}") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("font-files/Inter-BlackItalic.woff2?v={{font_v}}") format("woff2"),
+       url("font-files/Inter-BlackItalic.woff?v={{font_v}}") format("woff");
+}
