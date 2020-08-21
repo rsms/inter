@@ -25,8 +25,6 @@ endfor
 <link rel="stylesheet" href="index-var.css?v={{ index_var_css_v }}">
 <input type="text" id="hidden-text-input">
 
-<div class="noise-layer"></div>
-
 <div class="row white"><div>
   <!-- <h1>The Inter<br>typeface family</h1> -->
   <grid columns=8>
@@ -521,6 +519,29 @@ html { font-family: 'Inter', sans-serif; }
     </c>
 
     <c>
+      <h4 id="faq-subset"><a href="#faq-chrome-vf-bugs">
+        How do I subset the font files?
+      </a></h4>
+      The web fonts provided by <a href="inter.css"><tt>inter.css</tt></a> and
+      <a href="inter-display.css"><tt>inter-display.css</tt></a> already use subset font files.
+      If you need special, customized subsets or subsetting of OTF or TTF files,
+      have a look at the tools
+      <a href="https://fonttools.readthedocs.io/en/latest/subset/"><tt>pyftsubset</tt></a>
+      and
+      <a href="https://github.com/filamentgroup/glyphhanger"><tt>glyphhanger</tt></a>
+    </c>
+
+    <c>
+      <h4 id="faq-otfeat-customize-compile"><a href="#faq-chrome-vf-bugs">
+        How do I access alternate glyphs if my software doesn't provide OpenType control?
+      </a></h4>
+      Have a look at
+      <a href="https://github.com/twardoch/fonttools-opentype-feature-freezer"><tt>pyftfeatfreeze</tt></a>
+      which is a tool that allows you to build font files with certain OpenType features turned
+      on "by default".
+    </c>
+
+    <c>
       <h4 id="faq-start-date"><a href="#faq-start-date">
         This website claims work started in 2016, but the git repository's log says it started later?
       </a></h4>
@@ -528,24 +549,6 @@ html { font-family: 'Inter', sans-serif; }
       starting in November 2016, prior to being published on August 22, 2017.
       Between November 2016 and August 2017, there were
       <num>2&#x2006;990&#x2006;150</num> line edits made across 247 versions.
-      The reason the public GitHub repository does not reflect this is the
-      fact that the project was initially only internal at the company where
-      the author works and had some sensitive information "checked in",
-      like AWS server details and internal author identity in
-      all commit messages. Maybe one day we can write an elaborate git
-      filter-branch program and convert the old repository to make
-      it public, but what would be the point of that?&nbsp; :—)
-    </c>
-
-    <c>
-      <h4 id="faq-chrome-vf-bugs"><a href="#faq-chrome-vf-bugs">
-        The variable font renders poorly in Chrome
-      </a></h4>
-      There are some known issues with variable fonts in Chrome, in particular
-      on Microsoft Windows. You may see an effect similar to "ink bleed" where shapes overlap, for instance where the vertical and horizontal stems meet in "+" or "t".
-      On Windows you may in addition see incorrectly placed glyphs that looks like poor kerning (spacing between characters) and even some glyphs being lower or taller than other glyphs.
-      It is recommended to avoid using variable fonts on Chrome.
-      See the <a href="https://bugs.chromium.org/p/chromium/issues/list?can=2&q=variable+component%3ABlink%3EFonts">Chromium bug tracker</a> for a list of variable-font related issues.
     </c>
 
     <c>
@@ -701,7 +704,3 @@ trackingEl.addEventListener('mousedown', onPointerdownTracking, activeListener)
 updateTracking()
 
 })();</script>
-<script>(function(){
-  let el = document.querySelector(".noise-layer")
-  el.style.height = document.body.clientHeight + "px"
-})()</script>

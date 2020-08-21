@@ -18,6 +18,14 @@
   --blue:   rgb(3, 102, 230);
   --green:  rgb(38, 220, 78);
   --mediumGreen: rgb(119, 221, 134);
+
+  --font-family: 'Inter';
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-family: 'Inter var';
+  }
 }
 
 @supports not (color: color(display-p3 1 1 1)) {
@@ -41,7 +49,7 @@ html { }
 body {
   background-color: #f4f4f4;
   color: #111;
-  font: 15px/22px 'Inter', system-ui, sans-serif;
+  font: 15px/22px var(--font-family), system-ui, sans-serif;
 
   /*font-size: 15px;
   line-height: 1.5;*/
@@ -95,18 +103,6 @@ body {
 .font-style-extra-bold-italic  { font-variation-settings: "wght" 800, "slnt" 100 !important; font-weight:800 !important; font-style:oblique !important; }
 .font-style-black              { font-variation-settings: "wght" 900, "slnt" 0   !important; font-weight:900 !important; font-style:normal !important; }
 .font-style-black-italic       { font-variation-settings: "wght" 900, "slnt" 100 !important; font-weight:900 !important; font-style:oblique !important; }
-
-@supports (font-variation-settings: normal) {
-  body {
-    font-family: 'Inter var', system-ui, sans-serif;
-  }
-  body.chrome-win {
-    /* Chrome has some VF issues; worst are on Windows with incorrect kerning.
-       We disable VF on Chrome on Windows for that reason.
-    */
-    font-family: Inter, system-ui, sans-serif;
-  }
-}
 
 DISABLED:target:before {
   content:"";
@@ -520,18 +516,6 @@ h2.banner {
 .row.color1 {
   background: #C0CDE2;
   color: #3B414A;
-}
-
-.noise-layer {
-  background-image: url(noise512.png);
-  background-size: 256px;
-  opacity: 0.03;
-  pointer-events: none;
-  position: absolute;
-  top:0;
-  left:0;
-  right:0;
-  /*bottom:0;*/
 }
 
 
