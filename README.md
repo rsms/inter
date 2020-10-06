@@ -91,6 +91,57 @@ Translating between EM units and pixels:
 There's a Figma workspace for glyphs, with configured metrics: ["Inter glyphs"](https://www.figma.com/file/RtScFU5NETY3j9E0yOmnW4gv/)
 
 
+## Supporters
+
+A wholehearted **Thank You** to everyone who supports the Inter project!
+
+### Donors
+
+- @adrianmg
+- @artemc
+- @bapun26
+- @brianlovin
+- @chadlittle
+- @colinkeany
+- @danrowden
+- @davo
+- @emuravjev
+- @gbougakov
+- @jakejarvis
+- @lukesbeard
+- @lustfullyCake
+- @mamuso
+- @mbullington
+- @muuvmuuv
+- @NetOperatorWibby
+- @pedromvpg
+- @pmarsceill
+- @romashamin
+- @ruslangirichev
+- @saishmenon
+- @satyakresna
+- @sorentwo
+- @StandardResumeSponsors
+- @stpnkcrk
+- @taravancil
+- @usmanity
+- @zethussuen
+- Stefan Kempf
+
+_(Private donors excluded)_
+
+### Contributors
+
+- @thundernixon
+- @KatjaSchimmel
+- @kdrag0n
+- @gabrielizaias
+- @fractaledmind
+- @davelab6
+- @Veratyr
+- @Calinou
+
+
 ## Development
 
 For instructions on how to work with the source files and how to
