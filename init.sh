@@ -334,7 +334,7 @@ else
         mv -f \
           $HOME/ttfautohint-build/ttfautohint*/frontend/ttfautohint \
           "ttfautohint-${AUTOHINT_VERSION}"
-        rm -rf $HOME/ttfautohint-build ttfautohint-buil
+        rm -rf $HOME/ttfautohint-build ttfautohint-build
       popd >/dev/null
     fi
     LINK=true
