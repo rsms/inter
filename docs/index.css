@@ -286,6 +286,7 @@ boxes.features grid .sample em {
 #sponsor-button span {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 #sponsor-button span::before {
   content: "♥";
