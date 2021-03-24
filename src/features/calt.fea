@@ -237,23 +237,23 @@ sub [colon colon.case] [ @DASH_ANY minus minus.case ] parenright' by parenright.
 # ignore subs adjacent to lower case
 #
 # h[1,3]
-ignore sub @LC @CASE_DELIM_L @All @CASE_DELIM_L; # h[X]
-ignore sub @LC @CASE_DELIM_L @All @All @CASE_DELIM_L; # h[XX]
-ignore sub @LC @CASE_DELIM_L @All @All @All @CASE_DELIM_L; # h[XXX]
-ignore sub @LC @CASE_DELIM_L @All @All @All @All @CASE_DELIM_L; # h[XXXX]
+ignore sub @LC @CASE_DELIM_L @All @CASE_DELIM_L'; # h[X]
+ignore sub @LC @CASE_DELIM_L @All @All @CASE_DELIM_L'; # h[XX]
+ignore sub @LC @CASE_DELIM_L @All @All @All @CASE_DELIM_L'; # h[XXX]
+ignore sub @LC @CASE_DELIM_L @All @All @All @All @CASE_DELIM_L'; # h[XXXX]
 # x[]X
-ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L @UC;  # x[]X
-ignore sub @LC @CASE_DELIM_L @Whitespace @UC; # x[ X
-ignore sub @LC @CASE_DELIM_L @Whitespace @Whitespace @UC; # x[  X
-ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L @Whitespace @UC; # x[] X
-ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L @Whitespace @Whitespace @UC; # x[]  X
-ignore sub @LC @CASE_DELIM_L @UC; # x[X
+ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L' @UC;  # x[]X
+ignore sub @LC @CASE_DELIM_L' @Whitespace @UC; # x[ X
+ignore sub @LC @CASE_DELIM_L' @Whitespace @Whitespace @UC; # x[  X
+ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L' @Whitespace @UC; # x[] X
+ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L' @Whitespace @Whitespace @UC; # x[]  X
+ignore sub @LC @CASE_DELIM_L' @UC; # x[X
 
 # short runs of uc-lc, e.g "(Xx)", "[xxX]"
-ignore sub @CASE_DELIM_L @UC @LC @CASE_DELIM_L; # (Xx)
-ignore sub @CASE_DELIM_L @UC @All @LC @CASE_DELIM_L; # (X.x)
-ignore sub @CASE_DELIM_L @LC @UC @CASE_DELIM_L; # (xX)
-ignore sub @CASE_DELIM_L @LC @All @UC @CASE_DELIM_L; # (x.X)
+ignore sub @CASE_DELIM_L' @UC @LC @CASE_DELIM_L; # (Xx)
+ignore sub @CASE_DELIM_L' @UC @All @LC @CASE_DELIM_L; # (X.x)
+ignore sub @CASE_DELIM_L @LC @UC @CASE_DELIM_L'; # (xX)
+ignore sub @CASE_DELIM_L @LC @All @UC @CASE_DELIM_L'; # (x.X)
 
 #
 # e.g. "x-M"
@@ -279,9 +279,9 @@ ignore sub @LC @CASE_L @CASE_L @CASE_L'; # x---
 # ignore sub @LC @CASE_L' @Whitespace @Whitespace; # "x-  "
 #
 # e.g. "-x"
-ignore sub @CASE_L @LC; # -x
-ignore sub @CASE_L @CASE_L @LC; # --x
-ignore sub @CASE_L @CASE_L @CASE_L @LC; # ---x
+ignore sub @CASE_L' @LC; # -x
+ignore sub @CASE_L' @CASE_L @LC; # --x
+ignore sub @CASE_L' @CASE_L @CASE_L @LC; # ---x
 # ignore sub @CASE_L @CASE_L @CASE_L @CASE_L @LC; # ----x
 # ignore sub @CASE_L @CASE_L @CASE_L @CASE_L @CASE_L @LC; # -----x
 
