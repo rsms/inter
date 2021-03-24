@@ -29,9 +29,10 @@ class FontBuilder:
 
     # decompose some glyphs
     glyphNamesToDecompose = set()
+    componentReferences = set(ufo.componentReferences)
     for g in ufo:
       directives = findGlyphDirectives(g.note)
-      if self._shouldDecomposeGlyph(ufo, g, directives):
+      if self._shouldDecomposeGlyph(g, directives, componentReferences):
         glyphNamesToDecompose.add(g.name)
     self._decompose([ufo], glyphNamesToDecompose)
 
@@ -106,12 +107,12 @@ class FontBuilder:
         log.info('Decomposing %d glyphs', len(glyphNamesToDecompose))
       decomposeGlyphs(ufos, glyphNamesToDecompose)
 
-  def _shouldDecomposeGlyph(self, ufo, g, directives):
+  def _shouldDecomposeGlyph(self, g, directives, componentReferences):
     # Note: Used for building both static and variable fonts
     if 'decompose' in directives:
       return True
     if g.components:
-      if g.name in ufo.componentReferences:
+      if g.name in componentReferences:
         # This means that the glyph...
         # a) has component instances and
         # b) is itself a component used by other glyphs as instances.
@@ -157,9 +158,10 @@ class FontBuilder:
       # Note: ufo is of type defcon.objects.font.Font
       # update font version
       updateFontVersion(ufo, dummy=False, isVF=True)
+      componentReferences = set(ufo.componentReferences)
       for g in ufo:
         directives = findGlyphDirectives(g.note)
-        if self._shouldDecomposeGlyph(ufo, g, directives):
+        if self._shouldDecomposeGlyph(g, directives, componentReferences):
           glyphNamesToDecompose.add(g.name)
         if 'removeoverlap' in directives:
           if g.components and len(g.components) > 0:
