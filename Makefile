@@ -115,33 +115,39 @@ build/%.woff: build/%.ttf
 $(FONTDIR)/var/Inter.var.ttf: $(all_ufo_masters_text) version.txt
 	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/Inter.designspace
-	gftools fix-unwanted-tables $@
+	gftools fix-unwanted-tables -t MVAR $@
+	gftools fix-dsig --autofix $@
 
 $(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf
 	misc/fontbuild rename --family "Inter V" -o $@ $<
-	gftools fix-unwanted-tables $@
+	gftools fix-unwanted-tables -t MVAR $@
+	gftools fix-dsig --autofix $@
 
 $(FONTDIR)/var/Inter-%.var.ttf: build/ufo/Inter-%.designspace $(all_ufo_masters_text) version.txt
 	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 	misc/tools/fix-vf-meta.py $@
-	gftools fix-unwanted-tables $@
+	gftools fix-unwanted-tables -t MVAR $@
+	gftools fix-dsig --autofix $@
 
 
 $(FONTDIR)/var/InterDisplay.var.ttf: $(all_ufo_masters_display) version.txt
 	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) build/ufo/InterDisplay.designspace
-	gftools fix-unwanted-tables $@
+	gftools fix-unwanted-tables -t MVAR $@
+	gftools fix-dsig --autofix $@
 
 $(FONTDIR)/var/InterDisplay-V.var.ttf: $(FONTDIR)/var/InterDisplay.var.ttf
 	misc/fontbuild rename --family "Inter Display V" -o $@ $<
-	gftools fix-unwanted-tables $@
+	gftools fix-unwanted-tables -t MVAR $@
+	gftools fix-dsig --autofix $@
 
 $(FONTDIR)/var/InterDisplay-%.var.ttf: build/ufo/InterDisplay-%.designspace $(all_ufo_masters_display) version.txt
 	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
 	misc/tools/fix-vf-meta.py $@
-	gftools fix-unwanted-tables $@
+	gftools fix-unwanted-tables -t MVAR $@
+	gftools fix-dsig --autofix $@
 
 
 # OTF/TTF from UFO
@@ -240,6 +246,7 @@ FBAKE_ARGS := check-universal \
               --succinct \
               -j \
               -x com.google.fonts/check/dsig \
+              -x com.google.fonts/check/unitsperem \
               -x com.google.fonts/check/family/win_ascent_and_descent
 
 FBAKE_STATIC_ARGS := $(FBAKE_ARGS) -x com.google.fonts/check/family/underline_thickness
@@ -248,42 +255,39 @@ FBAKE_VAR_ARGS    := $(FBAKE_ARGS) -x com.google.fonts/check/STAT_strings
 # static text family
 build/fbreport-text-const.txt: $(wildcard $(FONTDIR)/const/Inter-*.otf)
 	@echo "fontbakery check-universal Inter-*.otf > $(@) ..."
-	@fontbakery $(FBAKE_STATIC_ARGS) $^ > $@
+	@fontbakery $(FBAKE_STATIC_ARGS) $^ > $@ || (cat $@; exit 1)
 	@echo "fontbakery check-universal Inter-*.otf OK"
 
 # multi-axis VF text family
 build/fbreport-text-var2.txt: $(FONTDIR)/var/Inter.var.ttf
 	@echo "fontbakery check-universal Inter.var.ttf > $(@) ..."
-	@fontbakery $(FBAKE_VAR_ARGS) $^ > $@
+	@fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || (cat $@; exit 1)
 	@echo "fontbakery check-universal Inter.var.ttf"
 
 # single-axis VF text family
 build/fbreport-text-var1.txt: $(wildcard $(FONTDIR)/var/Inter-*.var.ttf)
 	@echo "fontbakery check-universal Inter-*.var.ttf > $(@) ..."
-	@fontbakery $(FBAKE_VAR_ARGS) $^ > $@
+	@fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || (cat $@; exit 1)
 	@echo "fontbakery check-universal Inter-*.var.ttf"
 
 
 # static display family
 build/fbreport-display-const.txt: $(wildcard $(FONTDIR)/const/InterDisplay-*.otf)
 	@echo "fontbakery check-universal InterDisplay-*.otf > $(@) ..."
-	@fontbakery $(FBAKE_STATIC_ARGS) $^ > $@
+	@fontbakery $(FBAKE_STATIC_ARGS) $^ > $@ || (cat $@; exit 1)
 	@echo "fontbakery check-universal InterDisplay-*.otf"
 
 # multi-axis VF display family
 build/fbreport-display-var2.txt: $(FONTDIR)/var/InterDisplay.var.ttf
 	@echo "fontbakery check-universal InterDisplay.var.ttf > $(@) ..."
-	@fontbakery $(FBAKE_VAR_ARGS) $^ > $@
+	@fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || (cat $@; exit 1)
 	@echo "fontbakery check-universal InterDisplay.var.ttf"
 
 # single-axis VF display family
 build/fbreport-display-var1.txt: $(wildcard $(FONTDIR)/var/InterDisplay-*.var.ttf)
 	@echo "fontbakery check-universal InterDisplay-*.var.ttf > $(@) ..."
-	@fontbakery $(FBAKE_VAR_ARGS) $^ > $@
+	@fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || (cat $@; exit 1)
 	@echo "fontbakery check-universal InterInterDisplay-*.var.ttf"
-
-x:
-	echo $(basename build/fbreport-display-var1.json)
 
 # check does the same thing as test, but without any dependency checks, meaning
 # it will check whatever font files are already built.
@@ -307,7 +311,12 @@ check_display: $(wildcard $(FONTDIR)/const/InterDisplay-*.ttf) \
 	misc/fontbuild checkfont $^ \
 	@echo "$(@): OK"
 
-.PHONY: test test_text test_display check_text check_display
+check_pedantic: $(FONTDIR)/var/Inter.var.ttf
+	fontbakery check-universal --dark-theme --loglevel WARN -j \
+		-x com.google.fonts/check/unitsperem \
+		$^
+
+.PHONY: test test_text test_display check_text check_display check_pedantic
 
 
 
@@ -334,23 +343,23 @@ VERSION := $(shell cat version.txt)
 ZIP_FILE_DIST := build/release/Inter-${VERSION}.zip
 
 zip: all
-	$(MAKE) test_text test_display
+	$(MAKE) -j8 test
 	bash misc/makezip.sh -all -reveal-in-finder \
 		"build/release/Inter-${VERSION}-$(shell git rev-parse --short=10 HEAD).zip"
 
 zip_text: text
-	$(MAKE) test_text
+	$(MAKE) -j4 test_text
 	bash misc/makezip.sh -text -reveal-in-finder \
 		"build/release/Inter-${VERSION}-text-$(shell git rev-parse --short=10 HEAD).zip"
 
 zip_display: display
-	$(MAKE) test_display
+	$(MAKE) -j4 test_display
 	bash misc/makezip.sh -display -reveal-in-finder \
 		"build/release/Inter-${VERSION}-display-$(shell git rev-parse --short=10 HEAD).zip"
 
 
 dist_zip: dist_check dist_build
-	$(MAKE) test_text
+	$(MAKE) -j4 test_text
 	bash misc/makezip.sh -text -reveal-in-finder "$(ZIP_FILE_DIST)"
 
 dist_build: text
