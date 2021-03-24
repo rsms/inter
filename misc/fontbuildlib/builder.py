@@ -31,7 +31,7 @@ class FontBuilder:
     glyphNamesToDecompose = set()
     for g in ufo:
       directives = findGlyphDirectives(g.note)
-      if 'decompose' in directives or (g.components and not composedGlyphIsTrivial(g)):
+      if self._shouldDecomposeGlyph(ufo, g, directives):
         glyphNamesToDecompose.add(g.name)
     self._decompose([ufo], glyphNamesToDecompose)
 
@@ -98,6 +98,7 @@ class FontBuilder:
 
 
   def _decompose(self, ufos, glyphNamesToDecompose):
+    # Note: Used for building both static and variable fonts
     if glyphNamesToDecompose:
       if log.isEnabledFor(logging.DEBUG):
         log.debug('Decomposing glyphs:\n  %s', "\n  ".join(glyphNamesToDecompose))
@@ -105,8 +106,32 @@ class FontBuilder:
         log.info('Decomposing %d glyphs', len(glyphNamesToDecompose))
       decomposeGlyphs(ufos, glyphNamesToDecompose)
 
+  def _shouldDecomposeGlyph(self, ufo, g, directives):
+    # Note: Used for building both static and variable fonts
+    if 'decompose' in directives:
+      return True
+    if g.components:
+      if g.name in ufo.componentReferences:
+        # This means that the glyph...
+        # a) has component instances and
+        # b) is itself a component used by other glyphs as instances.
+        # Decomposing these glyphs satisfies the fontbakery check
+        #   com.google.fonts/check/glyf_nested_components
+        #   "Check glyphs do not have components which are themselves components."
+        #   https://github.com/googlefonts/fontbakery/issues/2961
+        #   https://github.com/arrowtype/recursive/issues/412
+        #
+        # ufo.componentReferences:
+        #   A dict of describing the component relationships in the font’s main layer.
+        #   The dictionary is of form {"base_glyph_name": ["ref_glyph_name"]}.
+        log.debug("decompose %r (glyf_nested_components)" % g.name)
+        return True
+      if not composedGlyphIsTrivial(g):
+        return True
+    return False
 
   def _loadDesignspace(self, designspace):
+    # Note: Only used for building variable fonts
     log.info("loading designspace sources")
     if isinstance(designspace, str):
       designspace = DesignSpaceDocument.fromfile(designspace)
@@ -121,10 +146,6 @@ class FontBuilder:
     defaultFont = designspace.default.font
     defaultFont.info.openTypeNameCompatibleFullName = defaultFont.info.familyName
 
-    for ufo in masters:
-      # update font version
-      updateFontVersion(ufo, dummy=False, isVF=True)
-
     log.info("Preprocessing glyphs")
     # find glyphs subject to decomposition and/or overlap removal
     # TODO: Find out why this loop is SO DAMN SLOW. It might just be so that defcon is
@@ -133,9 +154,12 @@ class FontBuilder:
     glyphNamesToDecompose  = set()  # glyph names
     glyphsToRemoveOverlaps = set()  # glyph objects
     for ufo in masters:
+      # Note: ufo is of type defcon.objects.font.Font
+      # update font version
+      updateFontVersion(ufo, dummy=False, isVF=True)
       for g in ufo:
         directives = findGlyphDirectives(g.note)
-        if 'decompose' in directives or (g.components and not composedGlyphIsTrivial(g)):
+        if self._shouldDecomposeGlyph(ufo, g, directives):
           glyphNamesToDecompose.add(g.name)
         if 'removeoverlap' in directives:
           if g.components and len(g.components) > 0:
