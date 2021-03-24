@@ -229,9 +229,9 @@ def genGlyphsInfo(tt, outputType, glyphsType=GLYPHS_TYPE_UNKNOWN, glyphsTable=No
         v += unicodeMap[glyphname]
       glyphValues.append(v)
     return glyphValues
-  
+
   glyphset = tt.getGlyphSet(preferCFF=glyphsType is GLYPHS_TYPE_CFF)
-  
+
   for glyphname in glyphnames:
     unicodes = unicodeMap[glyphname] if glyphname in unicodeMap else []
     try:
@@ -402,7 +402,7 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
     glyphsTable = tt["glyf"]
   # print('glyphs type:', glyphsType, 'flavor:', tt.flavor, 'sfntVersion:', tt.sfntVersion)
 
-  if (withGlyphs is not False or outputType is OUTPUT_TYPE_GLYPHLIST) and withGlyphs is not '':
+  if (withGlyphs != False or outputType is OUTPUT_TYPE_GLYPHLIST) and withGlyphs != '':
     info['glyphs'] = genGlyphsInfo(tt, outputType, glyphsType, glyphsTable, withGlyphs)
 
   # sys.exit(1)
