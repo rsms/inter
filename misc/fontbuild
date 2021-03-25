@@ -88,6 +88,9 @@ class Main(object):
     argparser.add_argument('-q', '--quiet', action='store_true',
       help='Only print errors')
 
+    argparser.add_argument('--profile', metavar='<file>',
+      help='Run in profiler for debugging, writing pstats data to <file>')
+
     argparser.add_argument('-C', metavar='<dir>', dest='chdir',
       help='Run as if %(prog)s started in <dir> instead of the '+\
            'current working directory.')
@@ -126,7 +129,24 @@ class Main(object):
     cmd = 'cmd_' + args.command.replace('-', '_')
     if not hasattr(self, cmd):
       fatal('Unrecognized command %s. Try --help' % args.command)
-    getattr(self, cmd)(argv[i:])
+    cmdfn = getattr(self, cmd)
+    if args.profile:
+      try:
+        import cProfile as profile
+      except:
+        import profile
+      import __main__
+      __main__.__dict__["cmdfn"] = cmdfn
+      __main__.__dict__["argv"] = argv[i:]
+      profile.run('cmdfn(argv)', args.profile)
+      print("")
+      print("profile saved to %r. You can now inspect it with for example:" %
+            args.profile)
+      print("misc/tools/fmtprofile.py -n 20 %r" % args.profile)
+      print("python3 -m pstats %r" % args.profile)
+      print("")
+    else:
+      cmdfn(argv[i:])
 
 
 

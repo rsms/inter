@@ -180,6 +180,37 @@ Type `misc/tools/kernsample.py -h` for help on how to use the program.
 This only includes existing kerning and is thus only useful for adjustments. Additions must still be done manually.
 
 
+### Performance profiling
+
+`fontbuild` has a `--profile=<file>` option built in which when provided profiles the execution
+and writes a pstat file. Example:
+
+```
+misc/fontbuild --profile=build/tmp/1.pstat compile -o build/tmp/f.otf build/ufo/Inter-Regular.ufo
+```
+
+You can print pstat files with the `fmtprofile.py` tool:
+
+```
+misc/tools/fmtprofile.py -n 20 build/tmp/1.pstat
+```
+
+You can inspect pstat files interactively with the `pstats` module:
+
+```
+python3 -m pstats build/tmp/1.pstat
+```
+
+For profiling Python programs that are not fontbuild, you can do this:
+
+```
+python -m cProfile -o 1.pstats -s time script.py
+```
+
+See <https://docs.python.org/3/library/profile.html> for more information about profiling
+Python programs.
+
+
 ### Miscellaneous tools
 
 There are several tools included with Inter to help "wrangle" metrics, generate glyphs, create PDFs and so on. You can find these tools in the `misc/tools` directory. They are all command-line tools and their usage can be queried by providing the help flag `-h`.
