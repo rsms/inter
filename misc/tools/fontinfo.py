@@ -81,10 +81,6 @@ os2WeightClass = {
 }
 
 
-def num(s):
-  return int(s) if s.find('.') == -1 else float(s)
-
-
 def tableNamesToDict(table, names):
   t = {}
   for name in names:
@@ -308,20 +304,62 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
       info['names'] = nameDict
 
     if 'head' in tt:
+      NOSET = '%d: SHOULD NOT BE SET'
       head = sstructTableToDict(tt['head'], headFormat)
       if 'macStyle' in head:
         s = []
         v = head['macStyle']
-        if isinstance(v, int):
-          if v & 0b00000001: s.append('Bold')
-          if v & 0b00000010: s.append('Italic')
-          if v & 0b00000100: s.append('Underline')
-          if v & 0b00001000: s.append('Outline')
-          if v & 0b00010000: s.append('Shadow')
-          if v & 0b00100000: s.append('Condensed')
-          if v & 0b01000000: s.append('Extended')
+        if isinstance(v, int): # uint16
+          if v & 0b0000000000000001: s.append('0: Bold')
+          if v & 0b0000000000000010: s.append('1: Italic')
+          if v & 0b0000000000000100: s.append('2: Underline')
+          if v & 0b0000000000001000: s.append('3: Outline')
+          if v & 0b0000000000010000: s.append('4: Shadow')
+          if v & 0b0000000000100000: s.append('5: Condensed')
+          if v & 0b0000000001000000: s.append('6: Extended')
+          # Bits 7–15: Reserved (set to 0)
+          if v & 0b0000000010000000: s.append(NOSET % 7)
+          if v & 0b0000000100000000: s.append(NOSET % 8)
+          if v & 0b0000001000000000: s.append(NOSET % 9)
+          if v & 0b0000010000000000: s.append(NOSET % 10)
+          if v & 0b0000100000000000: s.append(NOSET % 11)
+          if v & 0b0001000000000000: s.append(NOSET % 12)
+          if v & 0b0010000000000000: s.append(NOSET % 13)
+          if v & 0b0100000000000000: s.append(NOSET % 14)
+          if v & 0b1000000000000000: s.append(NOSET % 15)
           head['macStyle_raw'] = head['macStyle']
           head['macStyle'] = s
+
+      v = head['flags'] # uint16
+      if isinstance(v, int):
+        # https://docs.microsoft.com/en-us/typography/opentype/spec/head
+        s = []
+        if v & 0b0000000000000001: s.append('0: Baseline at y=0')
+        if v & 0b0000000000000010: s.append('1: Left sidebearing point at x=0')
+        if v & 0b0000000000000100: s.append('2: Instructions may depend on point size')
+        if v & 0b0000000000001000: s.append('3: Force ppem to integer values')
+        if v & 0b0000000000010000: s.append('4: Instructions may alter advance width')
+        # Bit 5: This bit is not used in OpenType, and should not be set in order to ensure
+        # compatible behavior on all platforms. If set, it may result in different behavior
+        # for vertical layout in some platforms. (See Apple’s specification for details
+        # regarding behavior in Apple platforms.)
+        if v & 0b0000000000100000: s.append(NOSET % 5)
+        # Bits 6–10 are not used in Opentype and should always be cleared
+        if v & 0b0000000001000000: s.append(NOSET % 6)
+        if v & 0b0000000010000000: s.append(NOSET % 7)
+        if v & 0b0000000100000000: s.append(NOSET % 8)
+        if v & 0b0000001000000000: s.append(NOSET % 9)
+        if v & 0b0000010000000000: s.append(NOSET % 10)
+        if v & 0b0000100000000000: s.append('11: Losslessly optimized')
+        if v & 0b0001000000000000: s.append('12: Converted')
+        if v & 0b0010000000000000: s.append('13: Optimized for ClearType')
+        if v & 0b0100000000000000: s.append('14: Last Resort font')
+
+        # Bit 15 is reserved
+        if v & 0b1000000000000000: s.append(NOSET % 15)
+
+        head['flags_raw'] = head['flags']
+        head['flags'] = s
       info['head'] = head
 
     if 'hhea' in tt:
@@ -366,7 +404,58 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
         if name:
           os2['usWeightClassName'] = name
 
-      info['os/2'] = os2
+      fsType = os2.get('fsType')
+      if fsType is not None:
+        obj = {"raw":fsType}
+        # Usage permissions: 0x000F
+        perm = fsType & 0x000F
+        perms = ""
+        if perm == 0:
+          perms = "Freely installable & embeddable"
+        elif perm == 2:
+          perms = "Restricted License embedding"
+        elif perm == 4:
+          perms = "Preview & Print embedding"
+        elif perm == 8:
+          perms = "Editable embedding"
+        else:
+          perms = "<INVALID VALUE %r>" % perm
+        obj['perm'] = '0x%04X: %s' % (perm, perms)
+        obj['no_subset'] = "no" if fsType & 0x0100 == 0 else "yes"
+        obj['bitmap_embed_only'] = "no" if fsType & 0x0200 == 0 else "yes"
+        os2['fsType'] = obj
+
+      fsSelection = os2.get('fsSelection')
+      if fsSelection is not None:
+        # https://docs.microsoft.com/en-us/typography/opentype/spec/os2#fsselection
+        # Bit  macStyle bit  Symbolic name
+        #   0             1  ITALIC
+        #   1                UNDERSCORE
+        #   2                NEGATIVE
+        #   3                OUTLINED
+        #   4                STRIKEOUT
+        #   5             0  BOLD
+        #   6                REGULAR
+        #   7                USE_TYPO_METRICS
+        #   8                WWS
+        #   9                OBLIQUE
+        # 10-15              <reserved>
+        s = []
+        if fsSelection & 0b0000000000000001: s.append('0: ITALIC')
+        if fsSelection & 0b0000000000000010: s.append('1: UNDERSCORE')
+        if fsSelection & 0b0000000000000100: s.append('2: NEGATIVE')
+        if fsSelection & 0b0000000000001000: s.append('3: OUTLINED')
+        if fsSelection & 0b0000000000010000: s.append('4: STRIKEOUT')
+        if fsSelection & 0b0000000000100000: s.append('5: BOLD')
+        if fsSelection & 0b0000000010000000: s.append('6: REGULAR')
+        if fsSelection & 0b0000000100000000: s.append('7: USE_TYPO_METRICS')
+        if fsSelection & 0b0000001000000000: s.append('8: WWS')
+        if fsSelection & 0b0000010000000000: s.append('9: OBLIQUE')
+        os2['fsSelection_raw'] = fsSelection
+        os2['fsSelection'] = s
+
+
+      info['OS/2'] = os2
 
     if 'meta' in tt:
       meta = {}
@@ -377,6 +466,11 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
         except:
           meta[k] = 'data:;base64,' + b64encode(v)
       info['meta'] = meta
+
+    # rest of tables
+    for tname in tt.keys():
+      if tname not in info:
+        info[tname] = "[present but not decoded]"
 
     # if 'maxp' in tt:
     #   table = tt['maxp']
