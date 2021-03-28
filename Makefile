@@ -120,8 +120,6 @@ $(FONTDIR)/var/Inter.var.ttf: $(all_ufo_masters_text) version.txt
 
 $(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf
 	misc/fontbuild rename --family "Inter V" -o $@ $<
-	gftools fix-unwanted-tables -t MVAR $@
-	gftools fix-dsig --autofix $@
 
 $(FONTDIR)/var/Inter-%.var.ttf: build/ufo/Inter-%.designspace $(all_ufo_masters_text) version.txt
 	@mkdir -p "$(dir $@)"
@@ -139,8 +137,6 @@ $(FONTDIR)/var/InterDisplay.var.ttf: $(all_ufo_masters_display) version.txt
 
 $(FONTDIR)/var/InterDisplay-V.var.ttf: $(FONTDIR)/var/InterDisplay.var.ttf
 	misc/fontbuild rename --family "Inter Display V" -o $@ $<
-	gftools fix-unwanted-tables -t MVAR $@
-	gftools fix-dsig --autofix $@
 
 $(FONTDIR)/var/InterDisplay-%.var.ttf: build/ufo/InterDisplay-%.designspace $(all_ufo_masters_display) version.txt
 	@mkdir -p "$(dir $@)"
