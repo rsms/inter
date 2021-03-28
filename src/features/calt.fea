@@ -288,7 +288,7 @@ ignore sub @CASE_L' @CASE_L @CASE_L @LC; # ---x
 #
 # pairs with space, e.g. "( ) M" since we don't support subbing
 # all on the left side.
-ignore sub @CASE_DELIM_L @Whitespace @CASE_DELIM_L @Whitespace [ @UC @CASE_R ];
+ignore sub @CASE_DELIM_L @Whitespace @CASE_DELIM_L' @Whitespace [ @UC @CASE_R ];
 #
 # e.g. "A-", "A -", "A  -"
 sub [ @UC @CASE_R ] @CASE_L' by @CASE_R;
