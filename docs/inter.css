@@ -1,7 +1,7 @@
 ---
 layout: none
 ---
-{% assign font_v = site.data.fontinfo[0].version %}
+{% assign font_v = site.data.fontinfo[0].version | append: "b" %}
 /*
 Font families defined by this CSS:
 
