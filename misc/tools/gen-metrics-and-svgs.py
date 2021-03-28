@@ -168,7 +168,9 @@ def genKerningInfo(ufo, glyphnames, nameToIdMap):
 
   # load groups
   filename = os.path.join(ufo.path, 'groups.plist')
-  groups = plistlib.readPlist(filename)
+  groups = None
+  with open(filename, 'rb') as f:
+    groups = plistlib.load(f)
 
   pairs = []
   for kt in kerning.keys():
@@ -177,12 +179,12 @@ def genKerningInfo(ufo, glyphnames, nameToIdMap):
     leftnames = []
     rightnames = []
 
-    if leftname.startswith('public.kern'):
+    if leftname.startswith(u'public.kern'):
       leftnames = groups[leftname]
     else:
       leftnames = [leftname]
 
-    if rightname.startswith('public.kern'):
+    if rightname.startswith(u'public.kern'):
       rightnames = groups[rightname]
     else:
       rightnames = [rightname]
