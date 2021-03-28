@@ -268,6 +268,7 @@ def subset_font(fontinfo, subsets, procpool):
   extraUnicodes = ucall - covered
   _, extraUnicodeRange = genUnicodeRange(extraUnicodes)
   outfile = outfileTemplate.format(subset='extra')
+  print("write", outfile)
   subset_range_async(procpool, infile, outfile, unicodeRange)
 
 

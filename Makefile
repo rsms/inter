@@ -413,6 +413,8 @@ docs_fonts_text: docs_fonts_pre
 	      $(FONTDIR)/var/InterDisplay.var.* \
 	      $(FONTDIR)/var/Inter*-roman.var.* \
 	      $(FONTDIR)/var/Inter*-italic.var.* \
+	      $(FONTDIR)/subset/Inter-*.woff2 \
+	      $(FONTDIR)/subset/Inter.*.woff2 \
 	      docs/font-files/
 
 docs_fonts_display: docs_fonts_pre
@@ -423,6 +425,7 @@ docs_fonts_display: docs_fonts_pre
 	      $(FONTDIR)/var/InterDisplay.var.* \
 	      $(FONTDIR)/var/Inter*-roman.var.* \
 	      $(FONTDIR)/var/Inter*-italic.var.* \
+	      $(FONTDIR)/subset/InterDisplay*.woff2 \
 	      docs/font-files/
 
 .PHONY: docs  docs_info  docs_fonts  docs_fonts_pre  docs_fonts_text  docs_fonts_display
