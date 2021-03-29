@@ -41,6 +41,50 @@ def localDateTimeToUTCStr(localstr, pattern='%Y/%m/%d %H:%M:%S'):
   return time.strftime('%Y-%m-%dT%H:%M:%SZ', time.localtime(ts))
 
 
+def processGlyph(g, ucd, seenGlyphnames):
+  name = g.name
+  if name in seenGlyphnames:
+    return None
+  seenGlyphnames.add(name)
+
+  # not exported?
+  if 'com.schriftgestaltung.Glyphs.Export' in g.lib:
+    if not g.lib['com.schriftgestaltung.Glyphs.Export']:
+      return None
+
+  # color
+  color = None
+  if 'public.markColor' in g.lib:
+    rgba = [float(c.strip()) for c in g.lib['public.markColor'].strip().split(',')]
+    color = rgbaToCSSColor(*rgba)
+
+  isEmpty = 0
+  if not g.bounds or g.bounds[3] == 0:
+    isEmpty = 1
+
+  # name, isEmpty, unicode, unicodeName, color
+  glyph = None
+  ucs = g.unicodes
+  if len(ucs):
+    for uc in ucs:
+      ucName = unicodeName(ucd.get(uc))
+      # if not ucName and uc >= 0xE000 and uc <= 0xF8FF:
+      #   ucName = '[private use %04X]' % uc
+      ucstr = '%04X' % uc
+      if color:
+        glyph = [name, isEmpty, ucstr, ucName, color]
+      elif ucName:
+        glyph = [name, isEmpty, ucstr, ucName]
+      else:
+        glyph = [name, isEmpty, ucstr]
+  else:
+    if color:
+      glyph = [name, isEmpty, None, None, color]
+    else:
+      glyph = [name, isEmpty]
+
+  return glyph
+
 
 def main():
   argparser = ArgumentParser(
@@ -60,48 +104,23 @@ def main():
     ucd = parseUnicodeDataFile(args.ucdFile)
 
   glyphs = []  # contains final glyph data printed as JSON
+  seenGlyphnames = set()
 
   for name in font.lib['public.glyphOrder']:
     g = font[name]
+    glyph = processGlyph(g, ucd, seenGlyphnames)
+    if glyph is not None:
+      glyphs.append(glyph)
 
-    # not exported?
-    if 'com.schriftgestaltung.Glyphs.Export' in g.lib:
-      if not g.lib['com.schriftgestaltung.Glyphs.Export']:
-        continue
+  unorderedGlyphs = []
+  for g in font:
+    glyph = processGlyph(g, ucd, seenGlyphnames)
+    if glyph is not None:
+      unorderedGlyphs.append(glyph)
 
-    # color
-    color = None
-    if 'public.markColor' in g.lib:
-      rgba = [float(c.strip()) for c in g.lib['public.markColor'].strip().split(',')]
-      color = rgbaToCSSColor(*rgba)
-
-    isEmpty = 0
-    if not g.bounds or g.bounds[3] == 0:
-      isEmpty = 1
-
-    # name, isEmpty, unicode, unicodeName, color
-    glyph = None
-    ucs = g.unicodes
-    if len(ucs):
-      for uc in ucs:
-        ucName = unicodeName(ucd.get(uc))
-        # if not ucName and uc >= 0xE000 and uc <= 0xF8FF:
-        #   ucName = '[private use %04X]' % uc
-
-        ucstr = '%04X' % uc
-        if color:
-          glyph = [name, isEmpty, ucstr, ucName, color]
-        elif ucName:
-          glyph = [name, isEmpty, ucstr, ucName]
-        else:
-          glyph = [name, isEmpty, ucstr]
-    else:
-      if color:
-        glyph = [name, isEmpty, None, None, color]
-      else:
-        glyph = [name, isEmpty]
-
-    glyphs.append(glyph)
+  if unorderedGlyphs:
+    # sort by unicode
+    glyphs = glyphs + sorted(unorderedGlyphs, key=lambda g: g[2])
 
   print('{"glyphs":[')
   prefix = '  '
