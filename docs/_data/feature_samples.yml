@@ -76,14 +76,16 @@
     - "›→‹ ›←‹ ›⟶‹ ›⟵‹ ›−‹ ›-‹ ›–‹ ›—‹ ›:‹"
 
 
-- title: Ligatures
-  tag:   rlig
+- title: Compositions
+  tag:   ccmp
   description:
-    Inter provides just a few ligatures for combining characters for which layout
-    support in various apps is spotty.
+    Inter provides several custom made glyphs for compositions like
+    A + enclosed-combining-circle.
   samples:
-    - "A›\u20DD‹"
-    - "#›\u20DE‹"
+    - "Figure A›\u20DD‹"
+    - "Figure #›\u20DE‹"
+    - "Figure ›\u20DD‹3"
+    - "Figure ›\u20DE‹3"
   footer:
     This means that for instance enclosed glyphs
     works everywhere, not just in apps with correct combining character logic.

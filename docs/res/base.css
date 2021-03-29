@@ -642,9 +642,6 @@ box {
   border-radius: 3px;
   margin-right:1em;
   margin-bottom:1em;
-}
-body.safari box {
-  /* Fix for broken flex wrap in safari */
   flex-basis: 40%;
 }
 box:first-child {
@@ -738,7 +735,7 @@ instead.
 
 */
 
-.ff-none { font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0; -webkit-font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0; -ms-font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0; -moz-font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0; }
+.ff-none { font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0, 'ccmp' 0; -webkit-font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0, 'ccmp' 0; -ms-font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0, 'ccmp' 0; -moz-font-feature-settings: 'kern' 1, 'calt' 0, 'liga' 0, 'ccmp' 0; }
 
 .ff-liga,
 .ff-calt { font-feature-settings: 'liga' 1, 'calt' 1; -webkit-font-feature-settings: 'liga' 1, 'calt' 1; -ms-font-feature-settings: 'liga' 1, 'calt' 1; -moz-font-feature-settings: 'liga' 1, 'calt' 1; }

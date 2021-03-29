@@ -224,18 +224,7 @@ h1 {
 
 
 
-
-/* FAQ */
-grid.faq {
-  grid-row-gap: calc(var(--spacingv) * 3);
-}
-.faq .q {
-  font-weight: 600;
-}
-.faq h4:target {
-  background: var(--yellow);
-}
-
+/* features */
 boxes.features {
   color:#111;
 }
@@ -262,6 +251,18 @@ boxes.features grid .sample em {
 
 .features box.feat-cvXX {
   flex-basis: 100%;
+}
+
+
+/* FAQ */
+grid.faq {
+  grid-row-gap: calc(var(--spacingv) * 3);
+}
+.faq .q {
+  font-weight: 600;
+}
+.faq h4:target {
+  background: var(--yellow);
 }
 
 

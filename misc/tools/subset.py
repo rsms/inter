@@ -15,6 +15,11 @@ sys.path.append(dirname(abspath(__file__)))
 from common import BASEDIR, VENVDIR
 
 
+# FORCE can be set to True to subset all fonts regardless if the input source
+# font has changed or not
+FORCE = False
+
+
 # fonts to subset
 FONTS = [
 
@@ -109,6 +114,9 @@ SYMBOL_UNICODES = [
 ]
 
 
+SELF_SCRIPT_MTIME = 0
+
+
 def main(argv):
   # defines subsets.
   # Ranges are inclusive.
@@ -181,13 +189,21 @@ def main(argv):
     *genCompactIntRanges(SYMBOL_UNICODES)
   ),
 
-  defsubset('alternates',
-    # all private-use codepoints are mapped to alternate glyphs, normally accessed by
-    # OpenType features.
-    range(0xE000, 0xF8FF),
-  ),
+  # defsubset('alternates',
+  #   # all private-use codepoints are mapped to alternate glyphs, normally accessed by
+  #   # OpenType features.
+  #   range(0xE000, 0xF8FF),
+  # ),
+  # Note: Disabled so that alternates are all added automatically to the "extra" set.
 
   )
+
+  global SELF_SCRIPT_MTIME
+  SELF_SCRIPT_MTIME = os.path.getmtime(__file__)
+
+  # XXX DEBUG
+  global FONTS
+  FONTS = FONTS[1:2]
 
   # generate subset fonts
   with ProcPool() as procpool:
@@ -205,49 +221,6 @@ def main(argv):
     print('write', cssfile)
     with open(cssfile, 'w') as f:
       f.write(css)
-
-
-def genCSS(fontinfo, subsets):
-  outfileTemplate = pjoin(BASEDIR, fontinfo['outfile'])
-
-  css_family = fontinfo.get('css_family', 'Inter')
-  css_style  = fontinfo.get('css_style', 'normal')
-  css_weight = fontinfo.get('css_weight', '400')
-  css_extra  = fontinfo.get('css_extra', '')
-  if len(css_extra) > 0:
-    css_extra = '\n  ' + css_extra
-  css = []
-
-  for subset in list(subsets) + [{ 'name':'extra' }]:
-    outfile = outfileTemplate.format(subset=subset['name'])
-    # Read effective codepoint coverage. This may be greater than requested
-    # in case of OT features. For example, the Latin subset includes some common arrow
-    # glyphs since "->" is a ligature for "→".
-    font = ttLib.TTFont(outfile)
-    unicodes = set(getUnicodeMap(font))
-    if min(unicodes) < 0x30:
-      # the "base" (latin) subset. extend it to include control codepoints
-      controlCodepoints, _ = genUnicodeRange([range(0x0000, 0x001F)])
-      unicodes = unicodes.union(controlCodepoints)
-    _, unicodeRange = genUnicodeRange(genCompactIntRanges(unicodes))
-    css.append(CSS_TEMPLATE.format(
-      comment=subset['name'],
-      filename=basename(outfile),
-      unicode_range=unicodeRange,
-      family=css_family,
-      style=css_style,
-      weight=css_weight,
-      extra=css_extra,
-    ).strip())
-
-  # From the CSS spec on unicode-range descriptor:
-  #   "If the Unicode ranges overlap for a set of @font-face rules with the same family
-  #    and style descriptor values, the rules are ordered in the reverse order they were
-  #    defined; the last rule defined is the first to be checked for a given character."
-  # https://www.w3.org/TR/css-fonts-4/#unicode-range-desc
-  css.reverse()
-
-  return '\n'.join(css)
 
 
 def subset_font(fontinfo, subsets, procpool):
@@ -268,18 +241,26 @@ def subset_font(fontinfo, subsets, procpool):
   extraUnicodes = ucall - covered
   _, extraUnicodeRange = genUnicodeRange(extraUnicodes)
   outfile = outfileTemplate.format(subset='extra')
-  print("write", outfile)
   subset_range_async(procpool, infile, outfile, unicodeRange)
 
 
 def subset_range_async(procpool :ProcPool, infile :str, outfile :str, unicodeRange :str):
-  try:
-    if os.path.getmtime(outfile) > os.path.getmtime(infile):
-      # print('up-to-date %s -> %s' % (relpath(infile), relpath(outfile)))
-      return
-  except:
-    pass
-  procpool.apply_async( subset_range,(infile, outfile, unicodeRange) )
+  if not FORCE:
+    try:
+      outmtime = os.path.getmtime(outfile)
+      if outmtime > os.path.getmtime(infile) and outmtime > SELF_SCRIPT_MTIME:
+        print('up-to-date %s -> %s' % (relpath(infile), relpath(outfile)))
+        return
+    except:
+      pass
+  procpool.apply_async( subset_range,(infile, outfile, unicodeRange),
+                        error_callback=lambda err: onProcErr(procpool, err) )
+
+
+def onProcErr(procpool, err):
+  procpool.terminate()
+  raise err
+  sys.exit(1)
 
 
 def subset_range(infile :str, outfile :str, unicodeRange :str):
@@ -289,6 +270,9 @@ def subset_range(infile :str, outfile :str, unicodeRange :str):
     pyftsubset,
     '--unicodes=' + unicodeRange,
     '--layout-features=*',
+    '--recommended-glyphs',
+    '--no-recalc-bounds',
+    '--no-prune-unicode-ranges',
     '--no-hinting',
     '--output-file=' + outfile,
     infile
@@ -302,16 +286,18 @@ def subset_range(infile :str, outfile :str, unicodeRange :str):
     args,
     shell=False,
     stdout=subprocess.PIPE,
-    stderr=subprocess.STDOUT, # combine stdout & stderr into p.stdout
+    stderr=subprocess.PIPE,
     encoding='utf-8', # py3
   )
-  output = p.stdout.strip()
   if p.returncode != 0:
-    raise Exception('pyftsubset failed:\n%s\nInvocation:\n%s' % (
-      output,
+    raise Exception(
+      'pyftsubset failed:\n-- stdout:\n%s\n\n-- stderr:\n%s\n\n-- invocation:\n%s' % (
+      p.stdout.strip(),
+      p.stderr.strip(),
       '\n  '.join([repr(a) for a in args]),
     ))
-
+    # sys.exit(p.returncode)
+  print("write", outfile)
 
 # (name, ...[int|range(int)]) -> { name:str codepoints:[int|range(int)] }
 def defsubset(name, *codepoints):
@@ -380,6 +366,49 @@ def genCompactIntRanges(codepoints :[int]) -> [[int]]:
     else:
       compact.append(ilist[0])
   return compact
+
+
+def genCSS(fontinfo, subsets):
+  outfileTemplate = pjoin(BASEDIR, fontinfo['outfile'])
+
+  css_family = fontinfo.get('css_family', 'Inter')
+  css_style  = fontinfo.get('css_style', 'normal')
+  css_weight = fontinfo.get('css_weight', '400')
+  css_extra  = fontinfo.get('css_extra', '')
+  if len(css_extra) > 0:
+    css_extra = '\n  ' + css_extra
+  css = []
+
+  for subset in list(subsets) + [{ 'name':'extra' }]:
+    outfile = outfileTemplate.format(subset=subset['name'])
+    # Read effective codepoint coverage. This may be greater than requested
+    # in case of OT features. For example, the Latin subset includes some common arrow
+    # glyphs since "->" is a ligature for "→".
+    font = ttLib.TTFont(outfile)
+    unicodes = set(getUnicodeMap(font))
+    if min(unicodes) < 0x30:
+      # the "base" (latin) subset. extend it to include control codepoints
+      controlCodepoints, _ = genUnicodeRange([range(0x0000, 0x001F)])
+      unicodes = unicodes.union(controlCodepoints)
+    _, unicodeRange = genUnicodeRange(genCompactIntRanges(unicodes))
+    css.append(CSS_TEMPLATE.format(
+      comment=subset['name'],
+      filename=basename(outfile),
+      unicode_range=unicodeRange,
+      family=css_family,
+      style=css_style,
+      weight=css_weight,
+      extra=css_extra,
+    ).strip())
+
+  # From the CSS spec on unicode-range descriptor:
+  #   "If the Unicode ranges overlap for a set of @font-face rules with the same family
+  #    and style descriptor values, the rules are ordered in the reverse order they were
+  #    defined; the last rule defined is the first to be checked for a given character."
+  # https://www.w3.org/TR/css-fonts-4/#unicode-range-desc
+  css.reverse()
+
+  return '\n'.join(css)
 
 
 def relpath(path):

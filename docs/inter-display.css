@@ -1,7 +1,7 @@
 ---
 layout: none
 ---
-{% assign font_v = site.data.fontinfo[0].version | append: "b" %}
+{% assign font_v = site.data.fontinfo[0].version %}
 /*
 Font families defined by this CSS:
 
@@ -20,8 +20,29 @@ Use like this in your CSS:
 {% include InterDisplay-static.css %}
 
 /* ----------------------- variable ----------------------- */
+
+{%- comment -%}
 {% include InterDisplay-italic.var.css %}
 {% include InterDisplay-roman.var.css %}
+{%- endcomment %}
+
+@font-face {
+  font-family: 'InterDisplay var';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay-roman.var.woff2?v={{font_v}}') format('woff2');
+  font-named-instance: 'Regular';
+}
+
+@font-face {
+  font-family: 'InterDisplay var';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay-italic.var.woff2?v={{font_v}}') format('woff2');
+  font-named-instance: 'Italic';
+}
 
 /* ----------- experimental multi-axis variable -----------
 
@@ -31,4 +52,14 @@ When using this, you will likely need to set font-variation-settings explicitly,
   * { font-variation-settings: "slnt" 0deg }
   .italic { font-variation-settings: "slnt" 10deg }
 */
+{%- comment -%}
 {% include InterDisplay.var.css %}
+{%- endcomment %}
+
+@font-face {
+  font-family: 'InterDisplay var experimental';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('font-files/InterDisplay.var.woff2?v={{font_v}}') format('woff2');
+}

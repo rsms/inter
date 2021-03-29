@@ -400,10 +400,39 @@ docs_info: docs/_data/fontinfo.json \
            docs/glyphs/metrics.json
 
 docs_fonts: docs_fonts_text  docs_fonts_display
+
+
+# TODO: re-enable this when we have figured out how to make subset VFs work
+# with substitution features like ccmp.
+# docs_fonts_pre:
+# 	rm -rf docs/font-files
+# 	mkdir docs/font-files $(FONTDIR)/subset
+# 	python misc/tools/subset.py
+# docs_fonts_text: docs_fonts_pre
+# 	cp -a $(FONTDIR)/const/*.woff \
+# 	      $(FONTDIR)/const/*.woff2 \
+# 	      $(FONTDIR)/const/*.otf \
+# 	      $(FONTDIR)/var/Inter.var.* \
+# 	      $(FONTDIR)/var/InterDisplay.var.* \
+# 	      $(FONTDIR)/var/Inter*-roman.var.* \
+# 	      $(FONTDIR)/var/Inter*-italic.var.* \
+# 	      $(FONTDIR)/subset/Inter-*.woff2 \
+# 	      $(FONTDIR)/subset/Inter.*.woff2 \
+# 	      docs/font-files/
+# docs_fonts_display: docs_fonts_pre
+# 	cp -a $(FONTDIR)/const/*.woff \
+# 	      $(FONTDIR)/const/*.woff2 \
+# 	      $(FONTDIR)/const/*.otf \
+# 	      $(FONTDIR)/var/Inter.var.* \
+# 	      $(FONTDIR)/var/InterDisplay.var.* \
+# 	      $(FONTDIR)/var/Inter*-roman.var.* \
+# 	      $(FONTDIR)/var/Inter*-italic.var.* \
+# 	      $(FONTDIR)/subset/InterDisplay*.woff2 \
+# 	      docs/font-files/
+
 docs_fonts_pre:
 	rm -rf docs/font-files
 	mkdir docs/font-files
-	python misc/tools/subset.py
 
 docs_fonts_text: docs_fonts_pre
 	cp -a $(FONTDIR)/const/*.woff \
@@ -413,8 +442,6 @@ docs_fonts_text: docs_fonts_pre
 	      $(FONTDIR)/var/InterDisplay.var.* \
 	      $(FONTDIR)/var/Inter*-roman.var.* \
 	      $(FONTDIR)/var/Inter*-italic.var.* \
-	      $(FONTDIR)/subset/Inter-*.woff2 \
-	      $(FONTDIR)/subset/Inter.*.woff2 \
 	      docs/font-files/
 
 docs_fonts_display: docs_fonts_pre
@@ -425,7 +452,6 @@ docs_fonts_display: docs_fonts_pre
 	      $(FONTDIR)/var/InterDisplay.var.* \
 	      $(FONTDIR)/var/Inter*-roman.var.* \
 	      $(FONTDIR)/var/Inter*-italic.var.* \
-	      $(FONTDIR)/subset/InterDisplay*.woff2 \
 	      docs/font-files/
 
 .PHONY: docs  docs_info  docs_fonts  docs_fonts_pre  docs_fonts_text  docs_fonts_display
