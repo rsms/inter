@@ -21,7 +21,7 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
     source "$VENV_DIR/bin/activate"
     pushd "$SRCDIR" >/dev/null
     SRCDIR_ABS=$(pwd)
-    popd >/dev/null
+    popd >/dev/null 2>&1
     export PYTHONPATH=$SRCDIR_ABS/misc/tools
   fi
 else
