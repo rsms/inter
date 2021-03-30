@@ -560,7 +560,7 @@ lookup ccmp03 {
 } ccmp03;
 
 # * enclosingsquarecomb -> composite
-sub A enclosingsquarecomb by A.squared;
+sub A' enclosingsquarecomb' by A.squared;
 sub B enclosingsquarecomb by B.squared;
 sub C enclosingsquarecomb by C.squared;
 sub D enclosingsquarecomb by D.squared;
@@ -620,69 +620,8 @@ sub rightArrow enclosingsquarecomb by rightArrow.squared;
 sub dngb_check enclosingsquarecomb by dngb_check.squared;
 sub dngb_ballotx enclosingsquarecomb by dngb_ballotx.squared;
 
-# enclosingsquarecomb * -> composite
-sub enclosingsquarecomb A by A.squared;
-sub enclosingsquarecomb B by B.squared;
-sub enclosingsquarecomb C by C.squared;
-sub enclosingsquarecomb D by D.squared;
-sub enclosingsquarecomb E by E.squared;
-sub enclosingsquarecomb F by F.squared;
-sub enclosingsquarecomb G by G.squared;
-sub enclosingsquarecomb H by H.squared;
-sub enclosingsquarecomb I by I.squared;
-sub enclosingsquarecomb J by J.squared;
-sub enclosingsquarecomb K by K.squared;
-sub enclosingsquarecomb L by L.squared;
-sub enclosingsquarecomb M by M.squared;
-sub enclosingsquarecomb N by N.squared;
-sub enclosingsquarecomb O by O.squared;
-sub enclosingsquarecomb P by P.squared;
-sub enclosingsquarecomb Q by Q.squared;
-sub enclosingsquarecomb R by R.squared;
-sub enclosingsquarecomb S by S.squared;
-sub enclosingsquarecomb T by T.squared;
-sub enclosingsquarecomb U by U.squared;
-sub enclosingsquarecomb V by V.squared;
-sub enclosingsquarecomb W by W.squared;
-sub enclosingsquarecomb X by X.squared;
-sub enclosingsquarecomb Y by Y.squared;
-sub enclosingsquarecomb Z by Z.squared;
-sub enclosingsquarecomb zero by zero.squared;
-sub enclosingsquarecomb one by one.squared;
-sub enclosingsquarecomb two by two.squared;
-sub enclosingsquarecomb three by three.squared;
-sub enclosingsquarecomb four by four.squared;
-sub enclosingsquarecomb five by five.squared;
-sub enclosingsquarecomb six by six.squared;
-sub enclosingsquarecomb seven by seven.squared;
-sub enclosingsquarecomb eight by eight.squared;
-sub enclosingsquarecomb nine by nine.squared;
-sub enclosingsquarecomb zero.slash by zero.slash.squared;
-sub enclosingsquarecomb one.ss01 by one.ss01.squared;
-sub enclosingsquarecomb three.1 by three.1.squared;
-sub enclosingsquarecomb four.ss01 by four.ss01.squared;
-sub enclosingsquarecomb six.ss01 by six.ss01.squared;
-sub enclosingsquarecomb nine.ss01 by nine.ss01.squared;
-sub enclosingsquarecomb exclam by exclam.squared;
-sub enclosingsquarecomb question by question.squared;
-sub enclosingsquarecomb numbersign by numbersign.squared;
-sub enclosingsquarecomb hyphen by hyphen.squared;
-sub enclosingsquarecomb less by less.squared;
-sub enclosingsquarecomb greater by greater.squared;
-sub enclosingsquarecomb equal by equal.squared;
-sub enclosingsquarecomb plus by plus.squared;
-sub enclosingsquarecomb minus by minus.squared;
-sub enclosingsquarecomb multiply by multiply.squared;
-sub enclosingsquarecomb divide by divide.squared;
-sub enclosingsquarecomb upArrow by upArrow.squared;
-sub enclosingsquarecomb downArrow by downArrow.squared;
-sub enclosingsquarecomb leftArrow by leftArrow.squared;
-sub enclosingsquarecomb rightArrow by rightArrow.squared;
-sub enclosingsquarecomb dngb_check by dngb_check.squared;
-sub enclosingsquarecomb dngb_ballotx by dngb_ballotx.squared;
-
 # * enclosingcirclecomb -> composite
-sub A enclosingcirclecomb by A.circled;
+sub A' enclosingcirclecomb' by A.circled;
 sub B enclosingcirclecomb by B.circled;
 sub C enclosingcirclecomb by C.circled;
 sub D enclosingcirclecomb by D.circled;
@@ -742,63 +681,29 @@ sub rightArrow enclosingcirclecomb by rightArrow.circled;
 sub dngb_check enclosingcirclecomb by dngb_check.circled;
 sub dngb_ballotx enclosingcirclecomb by dngb_ballotx.circled;
 
-# enclosingcirclecomb * -> composite
-sub enclosingcirclecomb A by A.circled;
-sub enclosingcirclecomb B by B.circled;
-sub enclosingcirclecomb C by C.circled;
-sub enclosingcirclecomb D by D.circled;
-sub enclosingcirclecomb E by E.circled;
-sub enclosingcirclecomb F by F.circled;
-sub enclosingcirclecomb G by G.circled;
-sub enclosingcirclecomb H by H.circled;
-sub enclosingcirclecomb I by I.circled;
-sub enclosingcirclecomb J by J.circled;
-sub enclosingcirclecomb K by K.circled;
-sub enclosingcirclecomb L by L.circled;
-sub enclosingcirclecomb M by M.circled;
-sub enclosingcirclecomb N by N.circled;
-sub enclosingcirclecomb O by O.circled;
-sub enclosingcirclecomb P by P.circled;
-sub enclosingcirclecomb Q by Q.circled;
-sub enclosingcirclecomb R by R.circled;
-sub enclosingcirclecomb S by S.circled;
-sub enclosingcirclecomb T by T.circled;
-sub enclosingcirclecomb U by U.circled;
-sub enclosingcirclecomb V by V.circled;
-sub enclosingcirclecomb W by W.circled;
-sub enclosingcirclecomb X by X.circled;
-sub enclosingcirclecomb Y by Y.circled;
-sub enclosingcirclecomb Z by Z.circled;
-sub enclosingcirclecomb zero by zero.circled;
-sub enclosingcirclecomb one by one.circled;
-sub enclosingcirclecomb two by two.circled;
-sub enclosingcirclecomb three by three.circled;
-sub enclosingcirclecomb four by four.circled;
-sub enclosingcirclecomb five by five.circled;
-sub enclosingcirclecomb six by six.circled;
-sub enclosingcirclecomb seven by seven.circled;
-sub enclosingcirclecomb eight by eight.circled;
-sub enclosingcirclecomb nine by nine.circled;
-sub enclosingcirclecomb zero.slash by zero.slash.circled;
-sub enclosingcirclecomb one.ss01 by one.ss01.circled;
-sub enclosingcirclecomb three.1 by three.1.circled;
-sub enclosingcirclecomb four.ss01 by four.ss01.circled;
-sub enclosingcirclecomb six.ss01 by six.ss01.circled;
-sub enclosingcirclecomb nine.ss01 by nine.ss01.circled;
-sub enclosingcirclecomb exclam by exclam.circled;
-sub enclosingcirclecomb question by question.circled;
-sub enclosingcirclecomb numbersign by numbersign.circled;
-sub enclosingcirclecomb hyphen by hyphen.circled;
-sub enclosingcirclecomb less by less.circled;
-sub enclosingcirclecomb greater by greater.circled;
-sub enclosingcirclecomb equal by equal.circled;
-sub enclosingcirclecomb plus by plus.circled;
-sub enclosingcirclecomb minus by minus.circled;
-sub enclosingcirclecomb multiply by multiply.circled;
-sub enclosingcirclecomb divide by divide.circled;
-sub enclosingcirclecomb upArrow by upArrow.circled;
-sub enclosingcirclecomb downArrow by downArrow.circled;
-sub enclosingcirclecomb leftArrow by leftArrow.circled;
-sub enclosingcirclecomb rightArrow by rightArrow.circled;
-sub enclosingcirclecomb dngb_check by dngb_check.circled;
-sub enclosingcirclecomb dngb_ballotx by dngb_ballotx.circled;
+# enclosingsquarecomb * -> "hey you got the wrong order"
+# See https://github.com/rsms/inter/issues/335
+@ENCLOSED_BASE = [
+  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+  zero one two three four five six seven eight nine
+  zero.slash one.ss01 three.1 four.ss01 six.ss01 nine.ss01
+  exclam
+  question
+  numbersign
+  hyphen
+  less
+  greater
+  equal
+  plus
+  minus
+  multiply
+  divide
+  upArrow
+  downArrow
+  leftArrow
+  rightArrow
+  dngb_check
+  dngb_ballotx
+];
+sub enclosingsquarecomb' @ENCLOSED_BASE by whiteLargeSquare;
+sub enclosingcirclecomb' @ENCLOSED_BASE by largeCircle;

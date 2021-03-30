@@ -173,7 +173,7 @@ samples.set('Feature: ccmp', `
 /i <modifier> --> /idotless ==> i\u0300
 /idotless /gravecomb --> /igrave ==> \u0131\u0300
 
-Enclosing glyphs (glyph + {U+20DD,U+20DE})
+Enclosing glyphs (base + {U+20DD,U+20DE})
 U+20DD COMBINING ENCLOSING CIRCLE:       ⃝
 U+20DE COMBINING ENCLOSING SQUARE:       ⃞
 
@@ -204,6 +204,15 @@ U\u20DE    V\u20DE    W\u20DE    X\u20DE    Y\u20DE    Z\u20DE    !\u20DE    ?\u
 ←\u20DE    →\u20DE    ↑\u20DE    ↓\u20DE
 
 HE\u20DDLLO WO\u20DERLD
+
+The following should NOT compose but instead replace U+20DD or U+20DE with largeCircle or whiteLargeSquare: (They are in the wrong order: {U+20DD,U+20DE} + base. This was fixed in version 3.18.)
+
+\u20DDA    \u20DDB    \u20DDC    \u20DD1    \u20DD2    \u20DD3
+
+\u20DEA    \u20DEB    \u20DEC    \u20DE1    \u20DE2    \u20DE3
+
+;\u20DDELLO ;\u20DEORLD
+
 `)
 
 

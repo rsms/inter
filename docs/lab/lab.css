@@ -258,7 +258,7 @@ input[type="checkbox"]::after {
   height:var(--checkbox-handle-size);
   border-radius:var(--checkbox-handle-size);
   transform: translate(0, 0);
-  transition: all 168ms ease-out; /*cubic-bezier(0.09, 0.49, 0.71, 0.98);*/
+  transition: all 90ms ease-out; /*cubic-bezier(0.09, 0.49, 0.71, 0.98);*/
 }
 input[type="checkbox"][checked] {
   background-color: var(--checkbox-on-bg);
