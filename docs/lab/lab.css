@@ -79,6 +79,9 @@
   --surface2-shadow-intensity-hover: 0.75;
   --surface2-shadow-intensity-active: 1.5;
 
+  --highlight-bg: #ddd;
+  --guide-color: rgba(255,0,255,0.15);
+
   --icon-minimize: url(../res/icons/minimize-black.svg);
   --icon-popup: url(../res/icons/popup-black.svg);
   --icon-reset: url(../res/icons/reset-black.svg);
@@ -109,6 +112,9 @@
   --surface2-shadow-intensity: 4;
   --surface2-shadow-intensity-hover: 4;
   --surface2-shadow-intensity-active: 10;
+
+  --highlight-bg: #333;
+  --guide-color: rgba(255,100,255,0.15);
 
   --icon-minimize: url(../res/icons/minimize.svg);
   --icon-popup: url(../res/icons/popup.svg);
@@ -665,7 +671,10 @@ body.italic samples {
     color: var(--fgColor);
   }
   :root.draw-sample-background sample {
-    background: var(--surface2-color-bg-active);
+    background: var(--highlight-bg);
+    --guide-width: calc(calc(var(--line-height) - var(--font-size)) / 2);
+    box-shadow: inset 0 var(--guide-width) 0 0 var(--guide-color),
+                inset 0 calc(var(--guide-width) * -1) 0 0 var(--guide-color);
   }
   /*body.secondarySampleDisabled sample { flex-basis: auto; }*/
     sample p {
