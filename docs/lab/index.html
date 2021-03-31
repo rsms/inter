@@ -49,6 +49,10 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
           <b>☀</b>
           <input type="checkbox" name="invert-colors">
         </label>
+        <label title="Draw background behind samples">
+          <b>■</b>
+          <input type="checkbox" name="draw-sample-bg">
+        </label>
       </div>
 
       <label class="label-and-value">
@@ -1095,10 +1099,13 @@ function main() {
   }, {passive:false,capture:true})
 
   vars.bind("invert-colors", (e, on) => {
-    if (defaultColorSceme == "dark") {
+    if (defaultColorSceme == "dark")
       on = !on
-    }
     document.documentElement.classList.toggle('color-scheme-dark', on)
+  })
+
+  vars.bind("draw-sample-bg", (e, on) => {
+    document.documentElement.classList.toggle('draw-sample-background', on)
   })
 
   let spaaSelect = vars.bind('antialias', (e, v) => {
