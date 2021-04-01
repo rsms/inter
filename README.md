@@ -95,7 +95,7 @@ There's a Figma workspace for glyphs, with configured metrics: ["Inter glyphs"](
 
 A wholehearted **Thank You** to everyone who supports the Inter project!
 
-### Donors
+### Sponsors
 
 - @adrianmg
 - @artemc
@@ -130,16 +130,13 @@ A wholehearted **Thank You** to everyone who supports the Inter project!
 
 _(Private donors excluded)_
 
-### Contributors
+### Main contributors
 
 - @thundernixon
 - @KatjaSchimmel
-- @kdrag0n
-- @gabrielizaias
-- @fractaledmind
-- @davelab6
-- @Veratyr
-- @Calinou
+
+See [graphs/contributors](https://github.com/rsms/inter/graphs/contributors)
+for a complete list of all contributors.
 
 
 ## Development
