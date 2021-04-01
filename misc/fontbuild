@@ -286,15 +286,21 @@ class Main(object):
 
     # process glyphs
     glyphOrder = OrderedDict([(k,None) for k in font.lib['public.glyphOrder']])
+    rmglyphs = []
     for g in font:
       if not g.lib.get('com.schriftgestaltung.Glyphs.Export', True):
         if g.name in glyphOrder:
           del(glyphOrder[g.name])
+        rmglyphs.append(g.name)
         g.unicodes = []
+        continue
       if EXCLUDE_ANCHORS:
         g.clearAnchors()
       if 'com.schriftgestaltung.Glyphs.lastChange' in g.lib:
         del(g.lib['com.schriftgestaltung.Glyphs.lastChange'])
+
+    for gname in rmglyphs:
+      del(font[gname])
 
     # update possibly modified glyphorder
     font.lib['public.glyphOrder'] = list(glyphOrder)

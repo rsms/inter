@@ -30,9 +30,9 @@ def isEmpty(g):
 def includeGlyph(g):
   if not g.export:
     return False
-  if g.name[0] == '.':
+  if g.name[0] == '.' or g.name[0] == '_':
     return False
-  if g.name.endswith(".case"):
+  if g.name.endswith(".case") or g.name.endswith(".cn"):
     return False
   # finally, return true if the glyph has no codepoint assigned
   return g.unicodes is None or len(g.unicodes) == 0
