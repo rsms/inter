@@ -85,6 +85,13 @@ def processGlyph(g, ucd, seenGlyphnames):
 
   return glyph
 
+def glyphSortFun(g):
+  if len(g) > 2 and g[2] is not None:
+    return g[2]
+  elif len(g) > 0:
+    return g[0]
+  else:
+    return ""
 
 def main():
   argparser = ArgumentParser(
@@ -120,7 +127,7 @@ def main():
 
   if unorderedGlyphs:
     # sort by unicode
-    glyphs = glyphs + sorted(unorderedGlyphs, key=lambda g: g[2])
+    glyphs = glyphs + sorted(unorderedGlyphs, key=glyphSortFun)
 
   print('{"glyphs":[')
   prefix = '  '
