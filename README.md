@@ -81,10 +81,10 @@ A UPM of 2816 is great for Inter since that means that its cap height is exactly
 Metrics:
 
 - UPM:        2816
-- Descender:  -680
+- Ascender:   2728
 - Cap height: 2048
 - x-height:   1536
-- Ascender:   2728
+- Descender:  -680
 
 Translating between EM units and pixels:
 
