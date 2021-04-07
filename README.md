@@ -74,6 +74,10 @@ A second major revision was created where the previously-strict rule of geometry
 
 The glyphs are designed based on this "plan"; most stems and lines will be positioned at EM units that are even multiples of 128, and in a few cases they are at even multiples of 64 or as low as 16.
 
+A UPM of 2816 is great for Inter since that means that its cap height is exactly 2048 units (64× 32-unit squares) and its x-height is 1536 (48× 32-unit squares) which both makes the design easier (can deal with only integers, never any fractions, plus use a perfect grid) and it makes the target "small size" of 11dp a pixel-perfect match — at 11px rasterization 1 pixel is exactly 256 units in the design! At 11dp with a 2x scaling factor 1 pixel is 128 units, 64 units at a 3x scaling factor and so on. This makes it feasible to really tune Inter for detailed rasterization.
+
+![Metrics](docs/res/metrics2.png)
+
 Metrics:
 
 - UPM:        2816
@@ -89,6 +93,7 @@ Translating between EM units and pixels:
 - Rasterized at 44px: 1px =  64 units
 
 There's a Figma workspace for glyphs, with configured metrics: ["Inter glyphs"](https://www.figma.com/file/RtScFU5NETY3j9E0yOmnW4gv/)
+
 
 
 ## Supporters
