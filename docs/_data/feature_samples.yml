@@ -84,8 +84,8 @@
   samples:
     - "Figure A›\u20DD‹"
     - "Figure #›\u20DE‹"
-    - "Figure ›\u20DD‹3"
-    - "Figure ›\u20DE‹3"
+    - "Figure 3›\u20DD‹"
+    - "Figure 3›\u20DE‹"
   footer:
     This means that for instance enclosed glyphs
     works everywhere, not just in apps with correct combining character logic.
@@ -133,8 +133,8 @@
     Note that individual digit styles can be cherry-picked using the cvXX
     features.
   samples:
-    - "›1‹2›34‹5›6‹78›9‹0"
-    - "›13469‹"
+    - "12›34‹5›6‹78›9‹0"
+    - "›3469‹"
 
 
 - title: "Stylistic set 2: Disambiguation"
