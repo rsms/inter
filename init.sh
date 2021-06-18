@@ -1,6 +1,8 @@
 #!/bin/bash
+SCRIPT_FILE=${BASH_SOURCE[0]}
+[ -n "$SCRIPT_FILE" ] || SCRIPT_FILE=${(%):-%N}  # zsh
+SRCDIR=$(dirname "$(realpath "$SCRIPT_FILE")")
 
-SRCDIR=$(dirname "${BASH_SOURCE[0]}")
 BUILD_DIR=$SRCDIR/build
 
 if [[ "${BUILD_DIR:0:2}" == "./" ]]; then
@@ -12,7 +14,7 @@ DIST_DIR_TOK='$(FONTDIR)/'
 BUILD_TMP_DIR=$BUILD_DIR/tmp
 VENV_DIR=$BUILD_DIR/venv
 
-if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
+if [[ "$SCRIPT_FILE" != "${0}" ]]; then
   # sourced
   if [[ -z $VIRTUAL_ENV ]] && [[ ! -f "$VENV_DIR/bin/activate" ]]; then
     echo "Project not configured." >&2
@@ -24,6 +26,12 @@ if [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
     popd >/dev/null 2>&1
     export PYTHONPATH=$SRCDIR_ABS/misc/tools
   fi
+  unset SRCDIR
+  unset BUILD_DIR
+  unset SCRIPT_FILE
+  unset DIST_DIR_TOK
+  unset BUILD_TMP_DIR
+  unset VENV_DIR
 else
   # Subshell
   set -e
