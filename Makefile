@@ -244,7 +244,8 @@ FBAKE_ARGS := check-universal \
               -j \
               -x com.google.fonts/check/dsig \
               -x com.google.fonts/check/unitsperem \
-              -x com.google.fonts/check/family/win_ascent_and_descent
+              -x com.google.fonts/check/family/win_ascent_and_descent \
+              -x com.google.fonts/check/fontbakery_version
 
 FBAKE_STATIC_ARGS := $(FBAKE_ARGS) -x com.google.fonts/check/family/underline_thickness
 FBAKE_VAR_ARGS    := $(FBAKE_ARGS) -x com.google.fonts/check/STAT_strings
@@ -252,38 +253,44 @@ FBAKE_VAR_ARGS    := $(FBAKE_ARGS) -x com.google.fonts/check/STAT_strings
 # static text family
 build/fbreport-text-const.txt: $(wildcard $(FONTDIR)/const/Inter-*.otf)
 	@echo "fontbakery check-universal Inter-*.otf > $(@) ..."
-	@$(BIN)/fontbakery $(FBAKE_STATIC_ARGS) $^ > $@ || (cat $@; exit 1)
+	@$(BIN)/fontbakery $(FBAKE_STATIC_ARGS) $^ > $@ || \
+	  (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 	@echo "fontbakery check-universal Inter-*.otf OK"
 
 # multi-axis VF text family
 build/fbreport-text-var2.txt: $(FONTDIR)/var/Inter.var.ttf
 	@echo "fontbakery check-universal Inter.var.ttf > $(@) ..."
-	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || (cat $@; exit 1)
+	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || \
+	  (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 	@echo "fontbakery check-universal Inter.var.ttf"
 
 # single-axis VF text family
 build/fbreport-text-var1.txt: $(wildcard $(FONTDIR)/var/Inter-*.var.ttf)
 	@echo "fontbakery check-universal Inter-*.var.ttf > $(@) ..."
-	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || (cat $@; exit 1)
+	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || \
+	  (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 	@echo "fontbakery check-universal Inter-*.var.ttf"
 
 
 # static display family
 build/fbreport-display-const.txt: $(wildcard $(FONTDIR)/const/InterDisplay-*.otf)
 	@echo "fontbakery check-universal InterDisplay-*.otf > $(@) ..."
-	@$(BIN)/fontbakery $(FBAKE_STATIC_ARGS) $^ > $@ || (cat $@; exit 1)
+	@$(BIN)/fontbakery $(FBAKE_STATIC_ARGS) $^ > $@ || \
+	  (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 	@echo "fontbakery check-universal InterDisplay-*.otf"
 
 # multi-axis VF display family
 build/fbreport-display-var2.txt: $(FONTDIR)/var/InterDisplay.var.ttf
 	@echo "fontbakery check-universal InterDisplay.var.ttf > $(@) ..."
-	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || (cat $@; exit 1)
+	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || \
+	  (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 	@echo "fontbakery check-universal InterDisplay.var.ttf"
 
 # single-axis VF display family
 build/fbreport-display-var1.txt: $(wildcard $(FONTDIR)/var/InterDisplay-*.var.ttf)
 	@echo "fontbakery check-universal InterDisplay-*.var.ttf > $(@) ..."
-	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || (cat $@; exit 1)
+	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || \
+	  (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 	@echo "fontbakery check-universal InterInterDisplay-*.var.ttf"
 
 # check does the same thing as test, but without any dependency checks, meaning
