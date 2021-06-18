@@ -382,6 +382,8 @@ dist_check:
 	@echo "——————————————————————————————————————————————————————————————————"
 
 dist: dist_zip
+	# Note: "display" dep is here since the "docs" target loosely depends on it
+	$(MAKE) -j8 display
 	$(MAKE) -j docs
 	@echo "——————————————————————————————————————————————————————————————————"
 	@echo ""
