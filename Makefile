@@ -511,11 +511,11 @@ install_display_otf: all_otf_display
 
 install_text_var: $(FONTDIR)/var/Inter-V.var.ttf
 	mkdir -p ~/'Library/Fonts/Inter'
-	cp -a $(FONTDIR)/var/Inter-V.var.ttf ~/'Library/Fonts/Inter/Inter-V.ttf'
+	cp -a $@ ~/'Library/Fonts/Inter/Inter-V.ttf'
 
 install_display_var: $(FONTDIR)/var/InterDisplay-V.var.ttf
 	mkdir -p ~/'Library/Fonts/InterDisplay'
-	cp -a $(FONTDIR)/var/Inter-V.var.ttf ~/'Library/Fonts/InterDisplay/InterDisplay-V.ttf'
+	cp -a $@ ~/'Library/Fonts/InterDisplay/InterDisplay-V.ttf'
 
 install:         install_text  install_display
 install_otf:     install_text_otf  install_display_otf
