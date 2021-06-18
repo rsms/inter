@@ -119,11 +119,12 @@ var fontFamilyName,
   fontCSS.appendChild(document.createTextNode(css))
   document.head.appendChild(fontCSS)
 
-  // update family names to include CSS fallbacks
-  fontFamilyName += ", 'Inter'"
-  fontFamilyNameHinted += ", 'Inter'"
-  fontFamilyNameVar += ", 'Inter var'"
-  fontFamilyNameVarHinted += ", 'Inter var'"
+  // // update family names to include CSS fallbacks
+  // [rsms] Disabled to avoid local-font fallback
+  // fontFamilyName += ", 'Inter'"
+  // fontFamilyNameHinted += ", 'Inter'"
+  // fontFamilyNameVar += ", 'Inter var'"
+  // fontFamilyNameVarHinted += ", 'Inter var'"
 
 })()
 
