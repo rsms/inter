@@ -291,7 +291,7 @@ build/fbreport-display-var1.txt: $(wildcard $(FONTDIR)/var/InterDisplay-*.var.tt
 	@echo "fontbakery check-universal InterDisplay-*.var.ttf > $(@) ..."
 	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || \
 	  (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
-	@echo "fontbakery check-universal InterInterDisplay-*.var.ttf"
+	@echo "fontbakery check-universal InterDisplay-*.var.ttf"
 
 # check does the same thing as test, but without any dependency checks, meaning
 # it will check whatever font files are already built.
