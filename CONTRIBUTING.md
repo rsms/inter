@@ -10,11 +10,42 @@ By contributing work to the Inter font project you agree to have all work contri
 
 ## Types of contributions this project is looking for
 
-**More glyphs!** Several glyphs, especially non-latin ones, are placeholders that need to be replaced with ones designed in the style of Inter. Cyrillic glyphs are especially requested.
+- [Reporting issues](https://github.com/rsms/inter/issues/new?template=bug_report.md)
+  like bad kerning pairs or variable-font interpolation bugs.
 
-**Kerning**, kerning, kerning — there are so many pairs and pairs-in-words that need to be kerned, or have their kerning improved. When adding kerning, use _groups_ rather than individual pairs. See [Kerning](#kerning) for more information.
+- Fixes to
+  [issues tagged "help wanted"](https://github.com/rsms/inter/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+  provided as either
+  [GitHub pull requests](https://github.com/rsms/inter/pulls)
+  or comments in the issue.
 
-**Thin "master" style** for lighter weights. This is a very large project and should probably be done in a branch over a longer period of time, rather than as one huge contribution/pull request.
+- Improvements to the Display subfamily...
+
+### Improvements to the Display subfamily
+
+Source file: ([`src/InterDisplay.glyphs`](https://github.com/rsms/inter/blob/master/src/InterDisplay.glyphs))
+
+The Display subfamily was derived from the text family ("Inter") and scaled to a different UPM (2048). It also had all of its kerning reduced.
+
+Inter Display has a lower x-height compared to the text subfamily — this is the biggest difference in terms of work needed.
+
+![](misc/readme-images/display-x-height-cmp.png)
+
+The contributions wanted for Inter Display are as follows:
+
+- Diacritic glyph improvements. In most cases you should import the corresponding glyph from Inter (text) and scale it to 2048 UPM as Inter (text) has seen a lot of improvements to diacritic designs since it was forked into Inter Display.
+
+- Diacritic anchor placement
+
+- Glyph design. Keep the following in mind:
+  - Raise/fix x-height for "low" glyghs.
+  - If fixing up an existing glyph, reduce optical tricks for small scale like tapered diagonal stems and ink traps/bridges.
+  - If makin a glyph from scratch, use a minimum (or no) optical tricks like tapered diagonal stems and ink traps/bridges.
+  - Stems should all have 90° or 0° terminals (Inter text has variable angles.) Compare /a of Inter (text) and Inter Display for an example of what this means.
+  - [Kerning](#Kerning) (use kerning groups!)
+
+
+> Please do not email Rasmus with issues and contributions but use GitHub 🙏
 
 
 ## Master fonts and interpolated derivatives
