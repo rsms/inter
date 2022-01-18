@@ -139,6 +139,9 @@ h1 {
     /*box-shadow: 0 2px 0 0 var(--red);*/
     background: rgba(0, 0, 0, 0.07);
   }
+  .dynmet-calc input[type=number] {
+    appearance: textfield;
+  }
   .dynmet-calc input[type=number]::-webkit-inner-spin-button,
   .dynmet-calc input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
