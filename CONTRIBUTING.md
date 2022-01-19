@@ -29,7 +29,7 @@ The Display subfamily was derived from the text family ("Inter") and scaled to a
 
 Inter Display has a lower x-height compared to the text subfamily — this is the biggest difference in terms of work needed.
 
-![](misc/readme-images/display-x-height-cmp.png)
+![](misc/readme/display-x-height-cmp.png)
 
 The contributions wanted for Inter Display are as follows:
 

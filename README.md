@@ -1,63 +1,121 @@
 # Inter
 
-Inter is a typeface specially designed for user interfaces
-with focus on high legibility of small-to-medium sized text on computer screens.
+Inter is a typeface carefully crafted & designed for computer screens.
+Inter features a tall x-height to aid in readability of mixed-case and lower-case text.
+Inter is a [variable font](https://rsms.me/inter/#variable) with
+several [OpenType features](https://rsms.me/inter/#features), like contextual alternates that adjusts punctuation depending on the shape of surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o", tabular numbers, etc.
 
-The family features a tall x-height to aid in readability of mixed-case and
-lower-case text. Several OpenType features are provided as well,
-like contextual alternates that adjusts punctuation depending on the shape of
-surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o",
-tabular numbers, etc.
+[**Download Inter font files…**](https://github.com/rsms/inter/releases/latest)
 
-[![Sample](docs/res/sample.png)](https://rsms.me/inter/samples/)
+<br>
 
-### [⬇︎ Download the latest release](https://github.com/rsms/inter/releases/latest)
+[![Sample](misc/readme/intro.png)](https://rsms.me/inter/samples/)
 
-After downloading the zip from above:
 
-1. Double-click the downloaded zip file to unpack or open it.
-2. Follow the instructions in "install-mac.txt" or "install-win.txt", depending
-   on what operating system you're using.
+### Quick questions
 
-Font files are also available from the following third-party distributors:
+- **Where can I get Inter?** [Here](https://github.com/rsms/inter/releases/latest)
+- **I think I found a bug. How can I let you know?** [Open an issue here](https://github.com/rsms/inter/issues/new?template=bug_report.md)
+- **I have a question. Where can I get help?** [Post in Discussions Q&A](https://github.com/rsms/inter/discussions/categories/q-a)
+- **Should I use Inter from Google Fonts?** No, unless you have no other choice.
+  (outdated, no italics)
+- **Can I legally use Inter for my purpose?** Most likely _yes!_ Inter is free and open source.
+  ([Read the license](LICENSE.txt) for details.)
 
-- [`inter-ui` on npm](https://www.npmjs.com/package/inter-ui)
-- [`font-inter` in Homebrew's Fonts cask](https://github.com/Homebrew/homebrew-cask-fonts)
-- See [Repology](https://repology.org/project/fonts:inter/versions) for a list of Linux distributions that include the font in their repositories.
 
-**Disclaimer:** Third-party packages may not always be up-to-date.
+## Using & installing Inter
+
+- [**Download the latest font files…**](https://github.com/rsms/inter/releases/latest)
+- To use Inter on a web page, use the official
+[CDN distribution:](https://rsms.me/inter/inter.css)
+
+```css
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+```
+
+### Alternate distributions
+
+- [NPM `inter-ui`](https://www.npmjs.com/package/inter-ui)
+- [Homebrew `font-inter`](https://github.com/Homebrew/homebrew-cask-fonts)
+- [Ubuntu `fonts-inter`](https://packages.ubuntu.com/search?keywords=fonts-inter)
+- [List of Inter available on various Linux distributions…](https://repology.org/project/fonts:inter/versions)
+- [Google Fonts](https://fonts.google.com/specimen/Inter) (outdated version, no italics)
+
+**Disclaimer:** Alternate distributions may not always be up-to-date.
+
+
+### Derivative versions
+
+- [Inter with Shavian character support](https://github.com/Shavian-info/inter)
+
+
+## Notable projects using Inter
+
+- [Figma](https://figma.com/)
+- [Unity](https://unity.com/)
+- [ElementaryOS](https://elementary.io/)
+- [Zurich Airport](https://flughafen-zuerich.ch/)
+- [Element software suite](https://element.io/)
+- [Mozilla brand](https://mozilla.design/firefox/typography/)
+- [GitHub brand and documentation](https://github.com/about)
+- [Pixar Presto](https://en.wikipedia.org/wiki/Presto_(animation_software))
+- [Minimalissimo magazine](https://minimalissimo.com/)
+
+
+> **Have you made something nice with Inter?**<br>
+> [Please share in Show & Tell! →](https://github.com/rsms/inter/discussions/categories/show-and-tell)
+
+
+## Supporters & contributors
+
+A wholehearted **Thank You** to everyone who supports the Inter project!
+
+Special thanks to
+[@thundernixon](https://github.com/thundernixon) and
+[@KatjaSchimmel](https://github.com/KatjaSchimmel)
+who have put in significant effort into making Inter what it is through
+their contributions ♡
+
+See [graphs/contributors](https://github.com/rsms/inter/graphs/contributors)
+for a complete list of all contributors.
+
+
+## Contributing to this project
+
+For instructions on how to work with the source files and how to
+[compile & build font files](CONTRIBUTING.md#compiling-font-files),
+refer to [**CONTRIBUTING.md**](CONTRIBUTING.md).
+
+Inter is licensed under the [SIL Open Font License](LICENSE.txt)
+
 
 ## Design
 
-Inter is similar to Roboto, San Francisco, Akkurat, Asap, Lucida Grande and other "UI" and "Text" typefaces. Some trade-offs were made in order to make this typeface work really well at small sizes:
+_This section discusses some of the design choices made for Inter._
 
-- Currently not suitable for very large sizes because of some small-scale glyph optimizations (like "pits" and "traps") that help rasterization at small sizes but stand out and interfere at large sizes.
+Inter can be classified as a geometric neo-grotesque, similar in style to Roboto, Apple San Francisco, Akkurat, Asap, Lucida Grande and more. Some trade-offs were made in order to make this typeface work really well at small sizes:
+
+- Early versions of Inter were not suitable for very large sizes because of some small-scale glyph optimizations (like "pits" and "traps") that help rasterization at small sizes but stand out and interfere at large sizes. However today Inter works well at large sizes and a [Display subfamily](https://github.com/rsms/inter/releases/tag/display-beta-1) is in the works for really large "display" sizes.
+
 - Rasterized at sizes below 12px, some stems—like the horizontal center of "E", "F", or vertical center of "m"—are drawn with two semi-opaque pixels instead of one solid. This is because we "prioritize" (optimize for) higher-density rasterizations. If we move these stems to an off-center position—so that they can be drawn sharply at e.g. 11px—text will be less legible at higher resolutions.
 
-Current font styles:
+Inter is a [variable font](https://rsms.me/inter/#variable) and is in addition also distributed as a set of traditional distinct  font files in the following styles:
 
-| Name                 | Weight class
-| -------------------- | ----------------
-| Thin                 | 100
-| Thin Italic          | 100
-| Extra Light          | 200
-| Extra Light Italic   | 200
-| Light                | 300
-| Light Italic         | 300
-| Regular              | 400
-| Italic               | 400
-| Medium               | 500
-| Medium Italic        | 500
-| Semi Bold            | 600
-| Semi Bold Italic     | 600
-| Bold                 | 700
-| Bold Italic          | 700
-| Extra Bold           | 800
-| Extra Bold Italic    | 800
-| Black                | 900
-| Black Italic         | 900
-
-Inter also ships as a variable font.
+| Roman (upright) name | Italic name          | Weight
+| -------------------- | -------------------- | ------------
+| Thin                 | Thin Italic          | 100
+| Extra Light          | Extra Light Italic   | 200
+| Light                | Light Italic         | 300
+| Regular              | Italic               | 400
+| Medium               | Medium Italic        | 500
+| Semi Bold            | Semi Bold Italic     | 600
+| Bold                 | Bold Italic          | 700
+| Extra Bold           | Extra Bold Italic    | 800
+| Black                | Black Italic         | 900
 
 
 ### Font metrics
@@ -92,62 +150,3 @@ Translating between EM units and pixels:
 - Rasterized at 22px: 1px = 128 units
 - Rasterized at 44px: 1px =  64 units
 
-There's a Figma workspace for glyphs, with configured metrics: ["Inter glyphs"](https://www.figma.com/file/RtScFU5NETY3j9E0yOmnW4gv/)
-
-
-
-## Supporters
-
-A wholehearted **Thank You** to everyone who supports the Inter project!
-
-### Sponsors
-
-- @adrianmg
-- @artemc
-- @bapun26
-- @brianlovin
-- @chadlittle
-- @colinkeany
-- @danrowden
-- @davo
-- @emuravjev
-- @gbougakov
-- @jakejarvis
-- @lukesbeard
-- @lustfullyCake
-- @mamuso
-- @mbullington
-- @muuvmuuv
-- @NetOperatorWibby
-- @pedromvpg
-- @pmarsceill
-- @romashamin
-- @ruslangirichev
-- @saishmenon
-- @satyakresna
-- @sorentwo
-- @StandardResumeSponsors
-- @stpnkcrk
-- @taravancil
-- @usmanity
-- @zethussuen
-- Stefan Kempf
-
-_(Private donors excluded)_
-
-### Main contributors
-
-- @thundernixon
-- @KatjaSchimmel
-
-See [graphs/contributors](https://github.com/rsms/inter/graphs/contributors)
-for a complete list of all contributors.
-
-
-## Development
-
-For instructions on how to work with the source files and how to
-[compile & build font files](CONTRIBUTING.md#compiling-font-files),
-refer to [CONTRIBUTING.md](CONTRIBUTING.md).
-
-Inter is licensed under the [SIL Open Font License](LICENSE.txt)
