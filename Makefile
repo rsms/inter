@@ -312,7 +312,7 @@ check_display: $(wildcard $(FONTDIR)/const/InterDisplay-*.ttf) \
                $(wildcard $(FONTDIR)/var/InterDisplay-*.var.woff2) \
                $(FONTDIR)/var/InterDisplay.var.ttf \
                $(FONTDIR)/var/InterDisplay.var.woff2
-	misc/fontbuild checkfont $^ \
+	misc/fontbuild checkfont $^
 	@echo "$(@): OK"
 
 check_pedantic: $(FONTDIR)/var/Inter.var.ttf
