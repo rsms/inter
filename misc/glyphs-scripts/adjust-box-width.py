@@ -1,6 +1,5 @@
 #MenuTitle: Adjust glyph box width
 # -*- coding: utf-8 -*-
-from __future__ import print_function
 import GlyphsApp
 from math import ceil, floor
 from os.path import basename
@@ -105,7 +104,7 @@ class Script( object ):
       sender.enable(False)
       if performFontChanges(self.action1):
         self.w.close()
-    except Exception, e:
+    except Exception(e):
       Glyphs.showMacroWindow()
       print("error: %s" % e)
     finally:
