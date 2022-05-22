@@ -13,6 +13,7 @@ import logging
 import re
 import signal
 import subprocess
+import defcon
 
 from fontTools.designspaceLib import DesignSpaceDocument
 from mutatorMath.ufo.document import DesignSpaceDocumentReader
@@ -521,8 +522,9 @@ class Main(object):
       verbose=True
     )
 
-    designspace = DesignSpaceDocument()
-    designspace.read(designspace_file)
+    designspace = DesignSpaceDocument.fromfile(designspace_file)
+
+    master0_ufo = defcon.Font(designspace.sources[0].path)
 
     # Generate UFOs for instances
     instance_weight = dict()
@@ -544,29 +546,35 @@ class Main(object):
     if len(instances) > 0:
       fatal('unknown style(s): %s' % ', '.join(list(instances)))
 
-    ufos = apply_instance_data(designspace_file, instance_files)
+    ufos = apply_instance_data(designspace, instance_files)
 
     # patch ufos (list of defcon.Font instances)
     italicAngleKey = 'com.schriftgestaltung.customParameter.' +\
                      'InstanceDescriptorAsGSInstance.italicAngle'
-    for font in ufos:
+    for ufo in ufos:
+      # set metrics
+      ufo.info.ascender = master0_ufo.info.ascender
+      ufo.info.capHeight = master0_ufo.info.capHeight
+      ufo.info.descender = master0_ufo.info.descender
+      ufo.info.xHeight = master0_ufo.info.xHeight
+
       # move italicAngle from lib to info
-      italicAngle = font.lib.get(italicAngleKey)
+      italicAngle = ufo.lib.get(italicAngleKey)
       if italicAngle != None:
         italicAngle = float(italicAngle)
-        del(font.lib[italicAngleKey])
-        font.info.italicAngle = italicAngle
+        del(ufo.lib[italicAngleKey])
+        ufo.info.italicAngle = italicAngle
 
       # clear anchors
       if EXCLUDE_ANCHORS:
-        for g in font:
+        for g in ufo:
           g.clearAnchors()
 
       # update font info
-      weight = instance_weight[basename(font.path)]
-      setFontInfo(font, weight)
+      weight = instance_weight[basename(ufo.path)]
+      setFontInfo(ufo, weight)
 
-      font.save()
+      ufo.save()
 
 
   def checkfont(self, fontfile, q):
