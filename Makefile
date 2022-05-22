@@ -122,6 +122,14 @@ $(FONTDIR)/var/Inter.var.ttf: $(all_ufo_masters_text) version.txt
 $(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf
 	misc/fontbuild rename --family "Inter V" -o $@ $<
 
+dev-2048: $(FONTDIR)/var/Inter-V-2048.var.ttf
+	@echo "Installing Inter-V-2048.var.ttf locally in ~/Library/Fonts/Inter/"
+	mkdir -p ~/'Library/Fonts/Inter'
+	cp $(FONTDIR)/var/Inter-V-2048.var.ttf ~/'Library/Fonts/Inter'
+
+$(FONTDIR)/var/Inter-V-2048.var.ttf: $(FONTDIR)/var/Inter.var.ttf
+	misc/fontbuild rename --family "Inter V 2048" -o $@ $<
+
 $(FONTDIR)/var/Inter-%.var.ttf: build/ufo/Inter-%.designspace $(all_ufo_masters_text) version.txt
 	@mkdir -p "$(dir $@)"
 	misc/fontbuild compile-var -o $@ $(FONTBUILD_FLAGS) $<
