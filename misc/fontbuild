@@ -446,7 +446,7 @@ class Main(object):
         source.styleName = "Thin Italic"
         source.name = "thinitalic"
         source.font.info.styleName = source.styleName
-      else:
+      elif source.styleName:
         # name "Black" => "black"
         source.name = source.styleName.lower().replace(' ', '')
 
