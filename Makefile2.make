@@ -114,6 +114,10 @@ $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hint
 	$(BIN)/python3 $(PWD)/build/venv/lib/python/site-packages/ttfautohint \
 		--no-info "$<" "$@"
 
+$(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf
+	@echo "TODO: port 'fontbuild rename' to dedicated script"
+	misc/fontbuild rename --family "Inter V" -o $@ $<
+
 $(FONTDIR)/var/%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var
 	$(BIN)/fontmake -o variable -m $< --output-path $@ \
 		--overlaps-backend pathops --production-names
@@ -127,6 +131,7 @@ $(FONTDIR)/var/%.var.otf: $(UFODIR)/%.designspace | $(FONTDIR)/var
 # 	mkdir -p "$(dir $@)"
 # 	$(BIN)/python3 $(PWD)/build/venv/lib/python/site-packages/ttfautohint \
 # 		--no-info "$<" "$@"
+
 
 %.woff2: %.ttf
 	$(BIN)/woff2_compress "$<"
@@ -241,10 +246,19 @@ static_web_hinted: \
 var:     $(FONTDIR)/var/Inter.var.ttf
 var_web: $(FONTDIR)/var/Inter.var.woff2
 
+varx: \
+	$(FONTDIR)/var/Inter-roman.var.ttf \
+	$(FONTDIR)/var/Inter-italic.var.ttf \
+	$(FONTDIR)/var/Inter-V.var.ttf
+varx_web: \
+	$(FONTDIR)/var/Inter-roman.var.woff2 \
+	$(FONTDIR)/var/Inter-italic.var.woff2 \
+	$(FONTDIR)/var/Inter-V.var.woff2
+
 all:        static_otf static_ttf static_ttf_hinted static_web static_web_hinted \
-            var var_web
+            var var_web varx varx_web
 .PHONY: all static_otf static_ttf static_ttf_hinted static_web static_web_hinted \
-            var var_web
+            var var_web varx varx_web
 
 # ---------------------------------------------------------------------------------
 # testing
@@ -274,6 +288,21 @@ build/fbreport-var.txt: $(FONTDIR)/var/Inter.var.ttf
 	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || \
 	  (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 	@echo "fontbakery Inter.var.ttf"
+
+# ---------------------------------------------------------------------------------
+# zip
+
+zip: all
+	bash misc/makezip2.sh -reveal-in-finder \
+		"build/release/Inter-$(shell cat version.txt)-$(shell git rev-parse --short=10 HEAD).zip"
+
+# ---------------------------------------------------------------------------------
+# clean
+
+clean:
+	rm -rf build/tmp build/fonts build/ufo build/googlefonts
+
+.PHONY: clean
 
 # ---------------------------------------------------------------------------------
 # list make targets
