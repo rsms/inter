@@ -36,6 +36,7 @@ $(UFODIR)/Inter-italic.designspace: $(UFODIR)/Inter.designspace
 $(UFODIR)/%.designspace: src/%.glyphs $(UFODIR)/features
 	$(BIN)/fontmake -o ufo -g $< --designspace-path $@ \
 		--master-dir $(UFODIR) --instance-dir $(UFODIR)
+	$(BIN)/python3 misc/tools/fix-designspace-opsz.py $@
 
 # master UFOs are byproducts of building Inter.designspace
 $(UFODIR)/Inter-Black.ufo:       $(UFODIR)/Inter.designspace
