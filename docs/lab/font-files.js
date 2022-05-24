@@ -68,10 +68,10 @@ var fontFamilyName,
   }
 
   let families = [
-    ["Inter",        "const",        fontFamilyName],
-    ["Inter",        "const-hinted", fontFamilyNameHinted],
-    ["InterDisplay", "const",        fontFamilyNameDisplay],
-    ["InterDisplay", "const-hinted", fontFamilyNameDisplayHinted],
+    ["Inter",        "static",        fontFamilyName],
+    ["Inter",        "static-hinted", fontFamilyNameHinted],
+    ["InterDisplay", "static",        fontFamilyNameDisplay],
+    ["InterDisplay", "static-hinted", fontFamilyNameDisplayHinted],
   ]
 
   for (let [family, filepath, cssname] of families) {
