@@ -1,13 +1,8 @@
-# This is a new version of Makefile that uses fontmake instead of our
-# homebrew fontbuild tools. Once this makefile is complete we will replace
-# the old one "Makefile" with this file.
-#
-# To list all targets:
-#   make list
-#
+# List all targets with 'make list'
+SRCDIR   := $(abspath $(lastword $(MAKEFILE_LIST))/..)
 FONTDIR  := build/fonts
 UFODIR   := build/ufo
-BIN      := $(PWD)/build/venv/bin
+BIN      := $(SRCDIR)/build/venv/bin
 VERSION  := $(shell cat version.txt)
 MAKEFILE := $(lastword $(MAKEFILE_LIST))
 
@@ -100,7 +95,9 @@ $(UFODIR)/Inter-ExtraBoldItalic.ufo:  $(UFODIR)/Inter.designspace
 	$(UFODIR)/Inter-BoldItalic.ufo \
 	$(UFODIR)/Inter-ExtraBold.ufo \
 	$(UFODIR)/Inter-ExtraBoldItalic.ufo \
-	$(UFODIR)/Inter.designspace
+	$(UFODIR)/Inter.designspace \
+	$(UFODIR)/Inter-roman.designspace \
+	$(UFODIR)/Inter-italic.designspace
 
 # ---------------------------------------------------------------------------------
 # products
@@ -246,28 +243,31 @@ static_web_hinted: \
 	$(FONTDIR)/static-hinted/Inter-ExtraBold.woff2 \
 	$(FONTDIR)/static-hinted/Inter-ExtraBoldItalic.woff2
 
-var:     $(FONTDIR)/var/Inter.var.ttf
-var_web: $(FONTDIR)/var/Inter.var.woff2
-
-varx: \
-	$(FONTDIR)/var/Inter-roman.var.ttf \
-	$(FONTDIR)/var/Inter-italic.var.ttf \
+var: \
+	$(FONTDIR)/var/Inter.var.ttf \
 	$(FONTDIR)/var/Inter-V.var.ttf
-varx_web: \
+
+var_no_slnt_axis: \
+	$(FONTDIR)/var/Inter-roman.var.ttf \
+	$(FONTDIR)/var/Inter-italic.var.ttf
+
+var_web: \
+	$(FONTDIR)/var/Inter.var.woff2 \
+	$(FONTDIR)/var/Inter-V.var.woff2 \
 	$(FONTDIR)/var/Inter-roman.var.woff2 \
-	$(FONTDIR)/var/Inter-italic.var.woff2 \
-	$(FONTDIR)/var/Inter-V.var.woff2
+	$(FONTDIR)/var/Inter-italic.var.woff2
 
 all:        static_otf static_ttf static_ttf_hinted static_web static_web_hinted \
-            var var_web varx varx_web
+            var var_web var_no_slnt_axis
+
 .PHONY: all static_otf static_ttf static_ttf_hinted static_web static_web_hinted \
-            var var_web varx varx_web
+            var var_web var_no_slnt_axis
 
 # ---------------------------------------------------------------------------------
 # testing
 
-test: build/fbreport-var.txt
-.PHONY: test
+test: build/fontbakery-report-var.txt \
+      build/fontbakery-report-static.txt
 
 # FBAKE_ARGS are common args for all fontbakery targets
 FBAKE_ARGS := check-universal \
@@ -277,20 +277,23 @@ FBAKE_ARGS := check-universal \
               --succinct \
               --full-lists \
               -j \
-              -x com.google.fonts/check/dsig \
-              -x com.google.fonts/check/unitsperem \
-              -x com.google.fonts/check/family/win_ascent_and_descent \
-              -x com.google.fonts/check/fontbakery_version
+              -x com.google.fonts/check/family/win_ascent_and_descent
 
-FBAKE_STATIC_ARGS := $(FBAKE_ARGS) -x com.google.fonts/check/family/underline_thickness
-FBAKE_VAR_ARGS    := $(FBAKE_ARGS) -x com.google.fonts/check/STAT_strings
-
-# multi-axis VF text family
-build/fbreport-var.txt: $(FONTDIR)/var/Inter.var.ttf
+build/fontbakery-report-var.txt: $(FONTDIR)/var/Inter.var.ttf
 	@echo "fontbakery Inter.var.ttf > $(@) ..."
-	@$(BIN)/fontbakery $(FBAKE_VAR_ARGS) $^ > $@ || \
-	  (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
-	@echo "fontbakery Inter.var.ttf"
+	@$(BIN)/fontbakery \
+		$(FBAKE_ARGS) -x com.google.fonts/check/STAT_strings \
+		$^ > $@ \
+		|| (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
+
+build/fontbakery-report-static.txt: $(wildcard $(FONTDIR)/static/Inter-*.otf)
+	@echo "fontbakery static/Inter-*.otf > $(@) ..."
+	@$(BIN)/fontbakery \
+		$(FBAKE_ARGS) -x com.google.fonts/check/family/underline_thickness \
+		$^ > $@ \
+		|| (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
+
+.PHONY: test
 
 # ---------------------------------------------------------------------------------
 # zip
@@ -300,14 +303,6 @@ zip: all
 		"build/release/Inter-$(VERSION)-$(shell git rev-parse --short=10 HEAD).zip"
 
 .PHONY: zip
-
-# ---------------------------------------------------------------------------------
-# website (docs)
-
-docs:
-	$(BIN)/python3 misc/tools/patch-version.py docs/lab/index.html
-
-.PHONY: docs
 
 # ---------------------------------------------------------------------------------
 # distribution
@@ -343,11 +338,14 @@ dist_step1: clean
 	$(MAKE) -f $(MAKEFILE) -j$(nproc) all
 
 dist_step2: test
-	$(MAKE) -f $(MAKEFILE) -j$(nproc) dist_zip docs
+	$(MAKE) -f $(MAKEFILE) -j$(nproc) dist_zip dist_docs
 
 dist_zip:
 	$(BIN)/python3 misc/tools/patch-version.py misc/dist/inter.css
 	bash misc/makezip2.sh -reveal-in-finder "$(DIST_ZIP)"
+
+dist_docs:
+	$(MAKE) -C docs -j$(nproc) dist
 
 dist_postflight:
 	@echo "——————————————————————————————————————————————————————————————————"
@@ -364,16 +362,63 @@ dist_postflight:
 	@echo ""
 	@echo "——————————————————————————————————————————————————————————————————"
 
-.PHONY: dist dist_preflight dist_step1 dist_step2 dist_zip dist_postflight
+.PHONY: dist dist_preflight dist_step1 dist_step2 dist_zip dist_docs dist_postflight
 
 
 # ---------------------------------------------------------------------------------
-# clean
+# install
+
+INSTALLDIR := $(HOME)/Library/Fonts/Inter
+
+install: \
+  $(INSTALLDIR)/Inter-V.var.ttf \
+  $(INSTALLDIR)/Inter-Black.otf \
+  $(INSTALLDIR)/Inter-BlackItalic.otf \
+  $(INSTALLDIR)/Inter-Regular.otf \
+  $(INSTALLDIR)/Inter-Italic.otf \
+  $(INSTALLDIR)/Inter-Thin.otf \
+  $(INSTALLDIR)/Inter-ThinItalic.otf \
+  $(INSTALLDIR)/Inter-Light.otf \
+  $(INSTALLDIR)/Inter-LightItalic.otf \
+  $(INSTALLDIR)/Inter-ExtraLight.otf \
+  $(INSTALLDIR)/Inter-ExtraLightItalic.otf \
+  $(INSTALLDIR)/Inter-Medium.otf \
+  $(INSTALLDIR)/Inter-MediumItalic.otf \
+  $(INSTALLDIR)/Inter-SemiBold.otf \
+  $(INSTALLDIR)/Inter-SemiBoldItalic.otf \
+  $(INSTALLDIR)/Inter-Bold.otf \
+  $(INSTALLDIR)/Inter-BoldItalic.otf \
+  $(INSTALLDIR)/Inter-ExtraBold.otf \
+  $(INSTALLDIR)/Inter-ExtraBoldItalic.otf
+
+$(INSTALLDIR)/%.otf: $(FONTDIR)/static/%.otf | $(INSTALLDIR)
+	cp -a $^ $@
+
+$(INSTALLDIR)/%.var.ttf: $(FONTDIR)/var/%.var.ttf | $(INSTALLDIR)
+	cp -a $^ $@
+
+$(INSTALLDIR):
+	mkdir -p $@
+
+.PHONY: install
+
+# ---------------------------------------------------------------------------------
+# misc
 
 clean:
 	rm -rf build/tmp build/fonts build/ufo build/googlefonts
 
-.PHONY: clean
+docs:
+	$(MAKE) -C docs serve
+
+# update_ucd downloads the latest Unicode data (Nothing depends on this target)
+ucd_version := 12.1.0
+update_ucd:
+	@echo "# Unicode $(ucd_version)" > misc/UnicodeData.txt
+	curl '-#' "https://www.unicode.org/Public/$(ucd_version)/ucd/UnicodeData.txt" \
+	>> misc/UnicodeData.txt
+
+.PHONY: clean docs update_ucd
 
 # ---------------------------------------------------------------------------------
 # list make targets
@@ -387,6 +432,7 @@ list:
 	&& $(MAKE) -pRrq -f build/etc/Makefile-list : 2>/dev/null \
 	 | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' \
 	 | sort \
+	 | egrep -v -e '^_|/' \
 	 | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
 
 .PHONY: list
