@@ -115,8 +115,7 @@ $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hint
 		--no-info "$<" "$@"
 
 $(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf
-	@echo "TODO: port 'fontbuild rename' to dedicated script"
-	misc/fontbuild rename --family "Inter V" -o $@ $<
+	$(BIN)/python3 misc/tools/rename.py --family "Inter V" -o $@ $<
 
 $(FONTDIR)/var/%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var
 	$(BIN)/fontmake -o variable -m $< --output-path $@ \
