@@ -336,7 +336,7 @@ dist_preflight:
 	@git status --short | grep -qv '??' && (\
 		echo "Warning: uncommitted changes:" >&2; git status --short | grep -v '??' ;\
 		[ -t 1 ] || exit 1 ; \
-		printf "Press ENTER to continue or ^C to cancel " ; read X)
+		printf "Press ENTER to continue or ^C to cancel " ; read X) || true
 	@#
 
 dist_step1: clean
