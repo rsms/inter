@@ -1,7 +1,28 @@
-import sys, os, os.path
+import sys, os, os.path, re
 import defcon
 from multiprocessing import Pool
 from fontTools.designspaceLib import DesignSpaceDocument
+from datetime import datetime
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'tools')))
+from common import getGitHash, getVersion
+
+def update_version(ufo):
+  version = getVersion()
+  buildtag, buildtagErrs = getGitHash()
+  now = datetime.utcnow()
+  if buildtag == "" or len(buildtagErrs) > 0:
+    buildtag = "src"
+    print("warning: getGitHash() failed: %r" % buildtagErrs, file=sys.stderr)
+  versionMajor, versionMinor = [int(num) for num in version.split(".")]
+  ufo.info.versionMajor = versionMajor
+  ufo.info.versionMinor = versionMinor
+  ufo.info.year = now.year
+  ufo.info.openTypeNameVersion = "Version %d.%03d;git-%s" % (versionMajor, versionMinor, buildtag)
+  psFamily = re.sub(r'\s', '', ufo.info.familyName)
+  psStyle = re.sub(r'\s', '', ufo.info.styleName)
+  ufo.info.openTypeNameUniqueID = "%s-%s:%d:%s" % (psFamily, psStyle, now.year, buildtag)
+  ufo.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
 
 def fix_opsz_maximum(designspace):
   for a in designspace.axes:
@@ -45,6 +66,7 @@ def set_ufo_filter(ufo, **filter_dict):
 def update_source_ufo(ufo_file, glyphs_to_decompose):
   print("update %s" % os.path.basename(ufo_file))
   ufo = defcon.Font(ufo_file)
+  update_version(ufo)
   set_ufo_filter(ufo, name="decomposeComponents", include=glyphs_to_decompose)
   ufo.save(ufo_file)
 
