@@ -5,13 +5,15 @@
 # To list all targets:
 #   make list
 #
-FONTDIR = build/fonts
-UFODIR  = build/ufo
+FONTDIR  := build/fonts
+UFODIR   := build/ufo
+BIN      := $(PWD)/build/venv/bin
+VERSION  := $(shell cat version.txt)
+MAKEFILE := $(lastword $(MAKEFILE_LIST))
 
-default: $(FONTDIR)/var/Inter.var.ttf
-
-BIN := $(PWD)/build/venv/bin
 export PATH := $(BIN):$(PATH)
+
+default: all
 
 # ---------------------------------------------------------------------------------
 # intermediate sources
@@ -36,7 +38,7 @@ $(UFODIR)/Inter-italic.designspace: $(UFODIR)/Inter.designspace
 $(UFODIR)/%.designspace: src/%.glyphs $(UFODIR)/features
 	$(BIN)/fontmake -o ufo -g $< --designspace-path $@ \
 		--master-dir $(UFODIR) --instance-dir $(UFODIR)
-	$(BIN)/python3 misc/tools/fix-designspace-opsz.py $@
+	$(BIN)/python3 misc/tools/postprocess-designspace.py $@
 
 # master UFOs are byproducts of building Inter.designspace
 $(UFODIR)/Inter-Black.ufo:       $(UFODIR)/Inter.designspace
@@ -295,7 +297,75 @@ build/fbreport-var.txt: $(FONTDIR)/var/Inter.var.ttf
 
 zip: all
 	bash misc/makezip2.sh -reveal-in-finder \
-		"build/release/Inter-$(shell cat version.txt)-$(shell git rev-parse --short=10 HEAD).zip"
+		"build/release/Inter-$(VERSION)-$(shell git rev-parse --short=10 HEAD).zip"
+
+.PHONY: zip
+
+# ---------------------------------------------------------------------------------
+# website (docs)
+
+docs:
+	$(BIN)/python3 misc/tools/patch-version.py docs/lab/index.html
+
+.PHONY: docs
+
+# ---------------------------------------------------------------------------------
+# distribution
+# - preflight checks for existing version archive and dirty git state.
+# - step1 rebuilds from scratch, since font version & ID is based on git hash.
+# - step2 runs tests, then makes a zip archive and updates the website (docs/ dir.)
+
+DIST_ZIP = build/release/Inter-${VERSION}.zip
+
+dist: dist_preflight
+	@# rebuild since font version & ID is based on git hash
+	$(MAKE) -f $(MAKEFILE) -j$(nproc) dist_step1
+	$(MAKE) -f $(MAKEFILE) -j$(nproc) dist_step2
+	$(MAKE) -f $(MAKEFILE) dist_postflight
+
+dist_preflight:
+	@echo "——————————————————————————————————————————————————————————————————"
+	@echo "Creating distribution for version ${VERSION}"
+	@echo "——————————————————————————————————————————————————————————————————"
+	@# check for existing version archive
+	@if [ -f "${DIST_ZIP}" ]; then \
+		echo "${DIST_ZIP} already exists. Bump version or rm zip file to continue." >&2; \
+		exit 1; \
+	fi
+	@# check for uncommitted changes
+	@git status --short | grep -qv '??' && (\
+		echo "Warning: uncommitted changes:" >&2; git status --short | grep -v '??' ;\
+		[ -t 1 ] || exit 1 ; \
+		printf "Press ENTER to continue or ^C to cancel " ; read X)
+	@#
+
+dist_step1: clean
+	$(MAKE) -f $(MAKEFILE) -j$(nproc) all
+
+dist_step2: test
+	$(MAKE) -f $(MAKEFILE) -j$(nproc) dist_zip docs
+
+dist_zip:
+	$(BIN)/python3 misc/tools/patch-version.py misc/dist/inter.css
+	bash misc/makezip2.sh -reveal-in-finder "$(DIST_ZIP)"
+
+dist_postflight:
+	@echo "——————————————————————————————————————————————————————————————————"
+	@echo ""
+	@echo "Next steps:"
+	@echo ""
+	@echo "1) Commit & push changes"
+	@echo ""
+	@echo "2) Create new release with ${DIST_ZIP} at"
+	@echo "   https://github.com/rsms/inter/releases/new?tag=v${VERSION}"
+	@echo ""
+	@echo "3) Bump version in version.txt (to the next future version)"
+	@echo "   and commit & push changes"
+	@echo ""
+	@echo "——————————————————————————————————————————————————————————————————"
+
+.PHONY: dist dist_preflight dist_step1 dist_step2 dist_zip dist_postflight
+
 
 # ---------------------------------------------------------------------------------
 # clean
@@ -310,12 +380,13 @@ clean:
 #
 # We copy the Makefile (first in MAKEFILE_LIST) and disable the include to only list
 # primary targets, avoiding the generated targets.
-.PHONY: list  list_all
 list:
 	@mkdir -p build/etc \
-	&& cat $(firstword $(MAKEFILE_LIST)) \
+	&& cat $(MAKEFILE) \
 	 | sed 's/include /#include /g' > build/etc/Makefile-list \
 	&& $(MAKE) -pRrq -f build/etc/Makefile-list : 2>/dev/null \
 	 | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' \
 	 | sort \
 	 | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
+
+.PHONY: list
