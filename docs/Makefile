@@ -44,6 +44,7 @@ lab/glyphinfo.json: ../misc/tools/gen-glyphinfo.py \
 glyphs/metrics.json: ../misc/tools/gen-metrics-and-svgs.py \
                      ../build/ufo/Inter-Regular.ufo
 	$(BIN)/python3 ../misc/tools/gen-metrics-and-svgs.py ../build/ufo/Inter-Regular.ufo
+	@# Note: this also patches glyphs/index.html
 
 font-files/Inter-Regular.otf: fonts
 
