@@ -23,10 +23,10 @@ info: _data/fontinfo.json \
       glyphs/metrics.json
 
 fonts:
-	rm -rf font-files
-	mkdir font-files
-	cp -a $(FONTDIR)/static/*.woff2 \
-	      $(FONTDIR)/static/*.otf \
+	rm -rf font-files/Inter-* font-files/Inter.var*
+	mkdir -p font-files
+	cp -a $(FONTDIR)/static/Inter-*.woff2 \
+	      $(FONTDIR)/static/Inter-*.otf \
 	      $(FONTDIR)/var/Inter.var.* \
 	      $(FONTDIR)/var/Inter-roman.var.* \
 	      $(FONTDIR)/var/Inter-italic.var.* \
