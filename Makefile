@@ -120,6 +120,7 @@ $(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf
 $(FONTDIR)/var/%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var
 	$(BIN)/fontmake -o variable -m $< --output-path $@ \
 		--overlaps-backend pathops --production-names
+	$(BIN)/python3 misc/tools/postprocess-vf.py $@
 	$(BIN)/gftools fix-unwanted-tables -t MVAR $@
 
 $(FONTDIR)/var/%.var.otf: $(UFODIR)/%.designspace | $(FONTDIR)/var
@@ -247,8 +248,9 @@ var: \
 	$(FONTDIR)/var/Inter-V.var.ttf
 
 var_no_slnt_axis: \
-	$(FONTDIR)/var/Inter-roman.var.ttf \
-	$(FONTDIR)/var/Inter-italic.var.ttf
+	  $(FONTDIR)/var/Inter-roman.var.ttf \
+	  $(FONTDIR)/var/Inter-italic.var.ttf
+	$(BIN)/python3 misc/tools/postprocess-single-axis-vfs.py $^
 
 var_web: \
 	$(FONTDIR)/var/Inter.var.woff2 \
@@ -369,8 +371,7 @@ dist_postflight:
 
 INSTALLDIR := $(HOME)/Library/Fonts/Inter
 
-install: \
-  $(INSTALLDIR)/Inter-V.var.ttf \
+install: install_var \
   $(INSTALLDIR)/Inter-Black.otf \
   $(INSTALLDIR)/Inter-BlackItalic.otf \
   $(INSTALLDIR)/Inter-Regular.otf \
@@ -390,6 +391,8 @@ install: \
   $(INSTALLDIR)/Inter-ExtraBold.otf \
   $(INSTALLDIR)/Inter-ExtraBoldItalic.otf
 
+install_var: $(INSTALLDIR)/Inter-V.var.ttf
+
 $(INSTALLDIR)/%.otf: $(FONTDIR)/static/%.otf | $(INSTALLDIR)
 	cp -a $^ $@
 
@@ -399,7 +402,7 @@ $(INSTALLDIR)/%.var.ttf: $(FONTDIR)/var/%.var.ttf | $(INSTALLDIR)
 $(INSTALLDIR):
 	mkdir -p $@
 
-.PHONY: install
+.PHONY: install install_var
 
 # ---------------------------------------------------------------------------------
 # misc

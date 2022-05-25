@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 #
 # from gftools
 # https://github.com/googlefonts/gftools/blob/

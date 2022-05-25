@@ -7,16 +7,18 @@ from fontTools.designspaceLib import DesignSpaceDocument
 def subset_designspace(designspace, filename):
   italic = filename.find('italic') != -1
 
+  rmlist = []
   for a in designspace.axes:
-    if a.tag == "slnt" or a.tag == "ital":
-      designspace.axes.remove(a)
-      break
+    if a.tag == "slnt" or a.tag == "ital" or a.tag == "opsz":
+      rmlist.append(a)
+  for a in rmlist:
+    designspace.axes.remove(a)
 
   rmlist = []
   hasDefault = not italic
   for source in designspace.sources:
     isitalic = source.name.find('Italic') != -1
-    if italic != isitalic:
+    if italic != isitalic or source.name.endswith('Display') or source.name.endswith('opsz'):
       rmlist.append(source)
     elif italic and not hasDefault:
       source.copyLib = True
