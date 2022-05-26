@@ -316,6 +316,7 @@ else
   fi
 
 
+  # note: ttfautohint is no longer used by the new Makefile
   AUTOHINT_VERSION=1.8.2
   AUTOHINT_SRC_VERSION=1.8.2.8
   LINK=false

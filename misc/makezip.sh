@@ -138,6 +138,7 @@ fi
 # copy misc stuff
 cp misc/dist/install*.txt        "$ZIPDIR/"
 cp LICENSE.txt                   "$ZIPDIR/"
+mkdir -p "$(dirname "$OUTFILE_ABS")"
 
 # wait for processes to finish
 wait

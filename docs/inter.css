@@ -7,7 +7,7 @@ Font families defined by this CSS:
 
 - "Inter"                  static "traditional" fonts for older web browsers
 - "Inter var"              single-axis variable fonts for all modern browsers
-- "Inter var experimental" multi-axis variable fonts for modern web browsers
+- "Inter var experimental" multi-axis variable fonts for some modern web browsers
 
 Use like this in your CSS:
 
@@ -20,11 +20,6 @@ Use like this in your CSS:
 {% include Inter-static.css %}
 
 /* ----------------------- variable ----------------------- */
-
-{%- comment -%}
-{% include Inter-italic.var.css %}
-{% include Inter-roman.var.css %}
-{%- endcomment %}
 
 @font-face {
   font-family: 'Inter var';

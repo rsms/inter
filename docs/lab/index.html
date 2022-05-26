@@ -37,7 +37,7 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     <div class="options">
 
       <div class="flex-x">
-        <label title="Use variable font instead of constant font files">
+        <label title="Use variable font instead of static font files">
           <span>VF</span>
           <input type="checkbox" name="varfont">
         </label>
@@ -64,18 +64,24 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 
       <!-- Variable font controls (hidden when not using variable fonts) -->
       <label class="label-and-value varfontControl">
-        <span>Weight:</span>
+        <span title="Weight">wght:</span>
         <input type="range" value="400" step="1" min="100" max="900" name="varWeight">
         <input type="number" value="400" step="1" min="100" max="900" name="varWeightNum">
       </label>
 
       <label class="label-and-value varfontControl">
-        <span>Slant:</span>
+        <span title="Slant">slnt:</span>
         <input type="range" value="0" step="0.01" min="0" max="10" name="varSlant">
         <input type="number" value="0" step="0.01" min="0" max="10" name="varSlantNum">
       </label>
 
-      <label class="label-and-value constfontControl">
+      <label class="label-and-value varfontControl">
+        <span title="Optical size">opsz:</span>
+        <input type="range" value="0" step="0.01" min="16" max="72" name="varOpsz">
+        <input type="number" value="0" step="0.01" min="16" max="72" name="varOpszNum">
+      </label>
+
+      <label class="label-and-value staticfontControl">
         <span>Weight:</span>
         <select name="weight" style="max-width:100px">
           <option value="100">Thin (100)</option>
@@ -828,9 +834,10 @@ function main() {
 
   let usingVarFont = false
   let usingFontFamily = "text"
-  var varWeightRange, varSlantRange
+  var varWeightRange, varSlantRange, varOpszRange
   var varWeightSettingValueImpl = false
   var varSlantSettingValueImpl = false
+  var varOpszSettingValueImpl = false
 
   function getFontFamily(overrideFamily) {
     return (
@@ -866,6 +873,7 @@ function main() {
   let varState = {
     weight: 400, // 400..900
     slant: 0,    // 0..-10
+    opsz: 16,    // 16..72
   }
 
   function updateVarFont() {
@@ -880,7 +888,7 @@ function main() {
       varSlantSettingValueImpl = false
       setCSSProp(
         "font-variation-settings",
-        `"wght" ${varState.weight}, "slnt" ${-varState.slant}`
+        `"wght" ${varState.weight}, "slnt" ${-varState.slant}, "opsz" ${varState.opsz}`
       )
     } else {
       setCSSProp("font-variation-settings", null)
@@ -892,7 +900,7 @@ function main() {
     document.body.classList.toggle('varfont', on)
     if (on) {
       if (!isInitial) {
-        // copy value of const weight to var weight
+        // copy value of static weight to var weight
         let w = parseInt(varWeight.getValue())
         if (!isNaN(w) && varWeightRange && !varWeightSettingValueImpl) {
           varWeightRange.setValue(w)
@@ -904,7 +912,7 @@ function main() {
       // )
     } else {
       if (!isInitial && varWeightRange) {
-        // copy value of var weight to const weight
+        // copy value of var weight to static weight
         let w = varWeightRange.getValue()
         if (!isNaN(w)) {
           vars.setValue("weight", Math.round(w / 100) * 100)
@@ -920,15 +928,18 @@ function main() {
   })
 
   let varWeightNum = vars.bind('varWeightNum', (e, v) => {
-    if (varWeightRange && !varWeightSettingValueImpl) {
+    if (varWeightRange && !varWeightSettingValueImpl)
       varWeightRange.setValue(v)
-    }
   })
 
   let varSlantNum = vars.bind('varSlantNum', (e, v) => {
-    if (varSlantRange && !varSlantSettingValueImpl) {
+    if (varSlantRange && !varSlantSettingValueImpl)
       varSlantRange.setValue(v)
-    }
+  })
+
+  let varOpszNum = vars.bind('varOpszNum', (e, v) => {
+    if (varOpszRange && !varOpszSettingValueImpl)
+      varOpszRange.setValue(v)
   })
 
   varWeightRange = vars.bind('varWeight', (e, v) => {
@@ -953,6 +964,19 @@ function main() {
     varSlantSettingValueImpl = true
     varSlantNum.setValue(v)
     varSlantSettingValueImpl = false
+    updateVarFont()
+  }, (e, prevValue, ev) => {
+    if (prevValue === undefined) {
+      return 0
+    }
+    return e.valueAsNumber !== undefined ? e.valueAsNumber : e.value
+  })
+
+  varOpszRange = vars.bind('varOpsz', (e, v) => {
+    varState.opsz = v
+    varOpszSettingValueImpl = true
+    varOpszNum.setValue(v)
+    varOpszSettingValueImpl = false
     updateVarFont()
   }, (e, prevValue, ev) => {
     if (prevValue === undefined) {
