@@ -14,8 +14,11 @@ default: all
 # intermediate sources
 
 # short-circuit Make for performance
-src/Inter.glyphs:
+src/Inter.glyphspackage:
 	@true
+
+$(UFODIR)/Inter.glyphs: src/Inter.glyphspackage | $(UFODIR)
+	$(BIN)/python3 build/venv/bin/glyphspkg -o $(dir $@) $^
 
 # features
 src/features: $(wildcard src/features/*)
@@ -30,7 +33,7 @@ $(UFODIR)/Inter-roman.designspace: $(UFODIR)/Inter.designspace
 	$(BIN)/python3 misc/tools/subset-designspace.py $^ $@
 $(UFODIR)/Inter-italic.designspace: $(UFODIR)/Inter.designspace
 	$(BIN)/python3 misc/tools/subset-designspace.py $^ $@
-$(UFODIR)/%.designspace: src/%.glyphs $(UFODIR)/features
+$(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features
 	$(BIN)/fontmake -o ufo -g $< --designspace-path $@ \
 		--master-dir $(UFODIR) --instance-dir $(UFODIR)
 	$(BIN)/python3 misc/tools/postprocess-designspace.py $@
@@ -141,6 +144,8 @@ $(FONTDIR)/static:
 $(FONTDIR)/static-hinted:
 	mkdir -p $@
 $(FONTDIR)/var:
+	mkdir -p $@
+$(UFODIR):
 	mkdir -p $@
 
 static_otf: \
