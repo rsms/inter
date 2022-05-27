@@ -32,8 +32,8 @@ def process_glyph(g, axes):
   # print("existing_opsz_layers %r" % existing_opsz_layers)
 
   for master in g.parent.masters:
-    if master.name.startswith("Regular"):
-      # Regular uses dedicated master for opsz
+    if not master.name.startswith("Thin"):
+      # Only thin uses brace layers for opsz
       continue
     layer = g.layers[master.id]
     # print("%s" % layer.name)
