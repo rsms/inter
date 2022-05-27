@@ -3,7 +3,7 @@ SCRIPT_FILE=${BASH_SOURCE[0]}
 [ -n "$SCRIPT_FILE" ] || SCRIPT_FILE=${(%):-%N}  # zsh
 SRCDIR=$(dirname "$(realpath "$SCRIPT_FILE")")
 
-BUILD_DIR=$SRCDIR/build
+BUILD_DIR=${BUILD_DIR:-$SRCDIR/build}
 
 if [[ "${BUILD_DIR:0:2}" == "./" ]]; then
   BUILD_DIR=${BUILD_DIR:2}
