@@ -365,3 +365,20 @@ sub @Numeral @Whitespace @Whitespace x' @Whitespace @Whitespace @Numeral by mult
 
 # END NxN
 # -------------------------------------------------------------------------------------
+# BEGIN /t/t => /t/t.1  (horizonal stem on left side cut short)
+
+lookup sub_tt {
+  # glyphs that when followed by SUB_TT_SRC triggers substitution of the 2nd glyph
+  @SUB_TT_PREV1 = [
+    f
+    r
+    t tbar tcaron tccurl tcedilla
+    tcircumflexbelow tcommaaccent tcurl tdieresis
+    tdotaccent tdotbelow tlinebelow tpalatalhook trthook
+    t.1
+  ];
+  @SUB_TT_SRC = [
+    t
+  ];
+  sub @SUB_TT_PREV1 @SUB_TT_SRC' lookup sub_tt2;
+} sub_tt;

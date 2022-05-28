@@ -980,6 +980,7 @@ germandbls,
 germandbls.1,
 _part.t_base,
 t,
+t.1,
 tpalatalhook,
 trthook,
 tcurl,
@@ -2159,6 +2160,14 @@ languagesystem latn MOL;
 languagesystem latn CAT;
 ";
 name = Languagesystems;
+},
+{
+code = "# used by calt
+lookup sub_tt2 {
+  sub t by t.1;
+} sub_tt2;
+";
+name = Subs;
 }
 );
 features = (
@@ -2613,6 +2622,11 @@ pos = (0,1304);
 locked = 1;
 name = "p bottom";
 pos = (0,-418);
+},
+{
+locked = 1;
+name = "Top mark center";
+pos = (0,1368);
 }
 );
 id = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -2892,6 +2906,11 @@ pos = (0,1510);
 locked = 1;
 name = "Top anchors";
 pos = (0,1304);
+},
+{
+locked = 1;
+name = "Top mark center";
+pos = (0,1420);
 }
 );
 id = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
@@ -3445,6 +3464,11 @@ pos = (0,-418);
 locked = 1;
 name = "Top anchors";
 pos = (0,1676);
+},
+{
+locked = 1;
+name = "Top mark center";
+pos = (0,1416);
 }
 );
 iconName = Bold;
@@ -3547,12 +3571,6 @@ size = "-16";
 );
 guides = (
 {
-orientation = center;
-angle = 90;
-locked = 1;
-pos = (890,0);
-},
-{
 locked = 1;
 name = "Cap height";
 pos = (0,1490);
@@ -3581,6 +3599,11 @@ pos = (0,744);
 locked = 1;
 name = "Top anchors";
 pos = (0,1676);
+},
+{
+locked = 1;
+name = "Top mark center";
+pos = (0,1336);
 }
 );
 iconName = Bold;
@@ -23047,7 +23070,7 @@ zeta = -128;
 "@MMK_R_Z" = -69.81818;
 "@MMK_R_a" = -52.36364;
 "@MMK_R_a.sups" = 69.81818;
-"@MMK_R_c" = -64;
+"@MMK_R_c" = -24;
 "@MMK_R_comma" = -128;
 "@MMK_R_eight.sups" = 34.90909;
 "@MMK_R_f" = 46.54546;
