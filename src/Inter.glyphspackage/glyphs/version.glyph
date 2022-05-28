@@ -22,54 +22,32 @@ pos = (1280,0);
 ref = period;
 }
 );
-width = 3616;
+width = 3614;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 shapes = (
 {
-pos = (1514,0);
+pos = (1513,0);
 ref = one;
 },
 {
-pos = (42,0);
+pos = (41,0);
 ref = three;
 },
 {
-pos = (2378,0);
+pos = (2377,0);
 ref = five;
 },
 {
-pos = (1282,0);
+pos = (1281,0);
 ref = period;
 }
 );
-width = 3618;
+width = 3616;
 },
 {
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
-shapes = (
-{
-pos = (1502,0);
-ref = one;
-},
-{
-pos = (30,0);
-ref = three;
-},
-{
-pos = (2366,0);
-ref = five;
-},
-{
-pos = (1268,0);
-ref = period;
-}
-);
-width = 3656;
-},
-{
-layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 shapes = (
 {
 pos = (1500,0);
@@ -88,7 +66,29 @@ pos = (1266,0);
 ref = period;
 }
 );
-width = 3656;
+width = 3658;
+},
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+shapes = (
+{
+pos = (1499,0);
+ref = one;
+},
+{
+pos = (27,0);
+ref = three;
+},
+{
+pos = (2363,0);
+ref = five;
+},
+{
+pos = (1265,0);
+ref = period;
+}
+);
+width = 3653;
 },
 {
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -132,32 +132,10 @@ pos = (1254,0);
 ref = period;
 }
 );
-width = 3742;
+width = 3740;
 },
 {
 layerId = m007;
-shapes = (
-{
-pos = (1502,0);
-ref = one;
-},
-{
-pos = (30,0);
-ref = three;
-},
-{
-pos = (2366,0);
-ref = five;
-},
-{
-pos = (1268,0);
-ref = period;
-}
-);
-width = 3656;
-},
-{
-layerId = m008;
 shapes = (
 {
 pos = (1500,0);
@@ -177,6 +155,28 @@ ref = period;
 }
 );
 width = 3656;
+},
+{
+layerId = m008;
+shapes = (
+{
+pos = (1499,0);
+ref = one;
+},
+{
+pos = (27,0);
+ref = three;
+},
+{
+pos = (2363,0);
+ref = five;
+},
+{
+pos = (1265,0);
+ref = period;
+}
+);
+width = 3653;
 },
 {
 layerId = m009;
@@ -204,23 +204,23 @@ width = 3746;
 layerId = m010;
 shapes = (
 {
-pos = (1486,0);
+pos = (1485,0);
 ref = one;
 },
 {
-pos = (14,0);
+pos = (13,0);
 ref = three;
 },
 {
-pos = (2350,0);
+pos = (2349,0);
 ref = five;
 },
 {
-pos = (1254,0);
+pos = (1253,0);
 ref = period;
 }
 );
-width = 3742;
+width = 3739;
 }
 );
 metricLeft = H;
