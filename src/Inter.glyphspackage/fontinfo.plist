@@ -2162,7 +2162,7 @@ languagesystem latn CAT;
 name = Languagesystems;
 },
 {
-code = "# used by calt
+code = "# used by ss05
 lookup sub_tt2 {
   sub t by t.1;
 } sub_tt2;
@@ -2423,8 +2423,25 @@ tag = ss03;
 {
 code = "include(features/ss04-disambiguation.fea);
 ";
+labels = (
+{
+language = dflt;
+value = "";
+}
+);
 notes = "Name: ";
 tag = ss04;
+},
+{
+code = "include(features/ss05-tt.fea);
+";
+labels = (
+{
+language = dflt;
+value = "";
+}
+);
+tag = ss05;
 },
 {
 code = "include(features/cv01-one.fea);";
