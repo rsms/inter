@@ -308,7 +308,7 @@ zip: all
 	bash misc/makezip2.sh -reveal-in-finder \
 		"build/release/Inter-$(VERSION)-$(shell git rev-parse --short=10 HEAD).zip"
 
-zip_opsz_beta: $(FONTDIR)/var/Inter-V.var.ttf
+zip_opsz_beta: $(FONTDIR)/var/Inter-V.var.ttf $(FONTDIR)/var/Inter-V.var.woff2
 	mkdir -p build/release
 	zip -j -q -X \
 	"build/release/Inter-opsz-beta-$(VERSION)-$(shell git rev-parse --short=10 HEAD).zip" \
