@@ -215,7 +215,7 @@ pos = (32,0);
 ref = tshecyrillic;
 }
 );
-width = 1212;
+width = 1148;
 },
 {
 layerId = m008;
@@ -246,7 +246,7 @@ pos = (32,0);
 ref = tshecyrillic;
 }
 );
-width = 1213;
+width = 1149;
 },
 {
 layerId = m009;
@@ -277,7 +277,7 @@ pos = (16,0);
 ref = tshecyrillic;
 }
 );
-width = 1330;
+width = 1298;
 },
 {
 layerId = m010;
@@ -308,11 +308,14 @@ pos = (20,0);
 ref = tshecyrillic;
 }
 );
-width = 1333;
+width = 1301;
 }
 );
 metricLeft = tshecyrillic;
 metricRight = tshecyrillic;
+tags = (
+"TODO-opsz"
+);
 unicode = 1106;
 userData = {
 interface.gridadjust.original = "{'width': 1552, 'leftMargin': -33, 'rightMargin': 16}";

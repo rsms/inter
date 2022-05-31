@@ -322,19 +322,19 @@ width = 1168;
 anchors = (
 {
 name = cross;
-pos = (318,788);
+pos = (325,788);
 },
 {
 name = cyrtic;
-pos = (600,162);
+pos = (607,162);
 },
 {
 name = right;
-pos = (380,0);
+pos = (387,0);
 },
 {
 name = top;
-pos = (808,1676);
+pos = (815,1676);
 }
 );
 layerId = m010;
@@ -342,20 +342,23 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(234,1490,l),
-(-14,0,l),
-(392,0,l),
-(584,1164,l),
-(1226,1164,l),
-(1282,1490,l)
+(241,1490,l),
+(-7,0,l),
+(399,0,l),
+(591,1164,l),
+(1233,1164,l),
+(1289,1490,l)
 );
 }
 );
-width = 1168;
+width = 1175;
 }
 );
 metricLeft = H;
 metricRight = T;
+tags = (
+"TODO-opsz"
+);
 unicode = 915;
 userData = {
 interface.gridadjust.original = "{'width': 1569, 'leftMargin': 242, 'rightMargin': 92}";

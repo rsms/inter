@@ -138,18 +138,17 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(1396,-418,l),
-(1466,0,l),
-(1300,0,l),
-(1230,-418,l)
+(1428,-418,l),
+(1498,0,l),
+(1332,0,l),
+(1262,-418,l)
 );
 },
 {
-pos = (-32,0);
 ref = mturn;
 }
 );
-width = 1783;
+width = 1719;
 },
 {
 layerId = m009;
@@ -176,22 +175,24 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(1626,-418,l),
-(1696,0,l),
-(1314,0,l),
-(1246,-418,l)
+(1642,-418,l),
+(1712,0,l),
+(1330,0,l),
+(1262,-418,l)
 );
 },
 {
-pos = (-16,0);
 ref = mturn;
 }
 );
-width = 1930;
+width = 1898;
 }
 );
 metricLeft = mturn;
 metricRight = mturn;
+tags = (
+"TODO-opsz"
+);
 unicode = 624;
 userData = {
 interface.gridadjust.original = "{'width': 2463, 'leftMargin': 188, 'rightMargin': 189}";

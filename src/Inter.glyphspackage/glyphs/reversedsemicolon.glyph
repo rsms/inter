@@ -305,7 +305,7 @@ nodes = (
 );
 }
 );
-width = 574;
+width = 510;
 },
 {
 layerId = m009;
@@ -343,7 +343,7 @@ nodes = (
 );
 }
 );
-width = 652;
+width = 620;
 },
 {
 layerId = m010;
@@ -381,10 +381,13 @@ nodes = (
 );
 }
 );
-width = 652;
+width = 620;
 }
 );
 metricWidth = semicolon;
+tags = (
+"TODO-opsz"
+);
 unicode = 8271;
 userData = {
 interface.gridadjust.original = "{'width': 726.0, 'leftMargin': 199, 'rightMargin': 91.0}";
