@@ -186,21 +186,21 @@ width = 558;
 anchors = (
 {
 name = dnom;
-pos = (514,792);
+pos = (482,792);
 },
 {
 name = numr;
-pos = (50,698);
+pos = (18,698);
 }
 );
 guides = (
 {
 orientation = center;
 angle = 90;
-pos = (492,1748);
+pos = (-2179,1748);
 },
 {
-pos = (568,1024);
+pos = (276,1024);
 }
 );
 layerId = m007;
@@ -208,24 +208,24 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-148,0,l),
-(876,1490,l),
-(710,1490,l),
-(-314,0,l)
+(-180,0,l),
+(844,1490,l),
+(678,1490,l),
+(-346,0,l)
 );
 }
 );
-width = 562;
+width = 498;
 },
 {
 anchors = (
 {
 name = dnom;
-pos = (568,792);
+pos = (536,792);
 },
 {
 name = numr;
-pos = (58,698);
+pos = (26,698);
 }
 );
 layerId = m008;
@@ -233,34 +233,34 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-238,0,l),
-(1034,1490,l),
-(860,1490,l),
-(-412,0,l)
+(-270,0,l),
+(1002,1490,l),
+(828,1490,l),
+(-444,0,l)
 );
 }
 );
-width = 576;
+width = 512;
 },
 {
 anchors = (
 {
 name = dnom;
-pos = (532,792);
+pos = (516,792);
 },
 {
 name = numr;
-pos = (24,698);
+pos = (8,698);
 }
 );
 guides = (
 {
-pos = (-44,1024);
+pos = (-140,1024);
 },
 {
 orientation = center;
 angle = 90;
-pos = (-44,764);
+pos = (-1479,764);
 }
 );
 layerId = m009;
@@ -268,32 +268,32 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-130,0,l),
-(894,1490,l),
-(686,1490,l),
-(-338,0,l)
+(-146,0,l),
+(878,1490,l),
+(670,1490,l),
+(-354,0,l)
 );
 }
 );
-width = 558;
+width = 526;
 },
 {
 anchors = (
 {
 name = dnom;
-pos = (580,792);
+pos = (564,792);
 },
 {
 name = numr;
-pos = (36,698);
+pos = (20,698);
 }
 );
 guides = (
 {
-pos = (284,1240);
+pos = (252,1240);
 },
 {
-pos = (-30,764);
+pos = (-62,764);
 }
 );
 layerId = m010;
@@ -301,14 +301,14 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-218,0,l),
-(1054,1490,l),
-(834,1490,l),
-(-436,0,l)
+(-234,0,l),
+(1038,1490,l),
+(818,1490,l),
+(-452,0,l)
 );
 }
 );
-width = 576;
+width = 544;
 }
 );
 note = "Anchor numr should be at the basline rightmost position in .numr and dnom should be at top leftmost in .dnomf";

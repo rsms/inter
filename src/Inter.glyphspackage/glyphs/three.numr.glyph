@@ -110,10 +110,44 @@ width = 760;
 anchors = (
 {
 name = _numr;
-pos = (776,744);
+pos = (744,744);
 }
 );
 layerId = m007;
+shapes = (
+{
+alignment = -1;
+pos = (0,744);
+ref = three.dnomf;
+}
+);
+width = 734;
+},
+{
+anchors = (
+{
+name = _numr;
+pos = (774,744);
+}
+);
+layerId = m008;
+shapes = (
+{
+alignment = -1;
+pos = (124,744);
+ref = three.dnomf;
+}
+);
+width = 736;
+},
+{
+anchors = (
+{
+name = _numr;
+pos = (772,744);
+}
+);
+layerId = m009;
 shapes = (
 {
 alignment = -1;
@@ -127,41 +161,7 @@ width = 798;
 anchors = (
 {
 name = _numr;
-pos = (806,744);
-}
-);
-layerId = m008;
-shapes = (
-{
-alignment = -1;
-pos = (124,744);
-ref = three.dnomf;
-}
-);
-width = 800;
-},
-{
-anchors = (
-{
-name = _numr;
-pos = (788,744);
-}
-);
-layerId = m009;
-shapes = (
-{
-alignment = -1;
-pos = (0,744);
-ref = three.dnomf;
-}
-);
-width = 830;
-},
-{
-anchors = (
-{
-name = _numr;
-pos = (818,744);
+pos = (802,744);
 }
 );
 layerId = m010;
@@ -172,7 +172,7 @@ pos = (124,744);
 ref = three.dnomf;
 }
 );
-width = 830;
+width = 798;
 }
 );
 unicode = 57552;

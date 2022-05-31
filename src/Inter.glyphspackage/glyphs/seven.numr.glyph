@@ -110,10 +110,44 @@ width = 678;
 anchors = (
 {
 name = _numr;
-pos = (550,744);
+pos = (518,744);
 }
 );
 layerId = m007;
+shapes = (
+{
+alignment = -1;
+pos = (0,744);
+ref = seven.dnomf;
+}
+);
+width = 654;
+},
+{
+anchors = (
+{
+name = _numr;
+pos = (536,744);
+}
+);
+layerId = m008;
+shapes = (
+{
+alignment = -1;
+pos = (124,744);
+ref = seven.dnomf;
+}
+);
+width = 652;
+},
+{
+anchors = (
+{
+name = _numr;
+pos = (566,744);
+}
+);
+layerId = m009;
 shapes = (
 {
 alignment = -1;
@@ -127,41 +161,7 @@ width = 718;
 anchors = (
 {
 name = _numr;
-pos = (568,744);
-}
-);
-layerId = m008;
-shapes = (
-{
-alignment = -1;
-pos = (124,744);
-ref = seven.dnomf;
-}
-);
-width = 716;
-},
-{
-anchors = (
-{
-name = _numr;
 pos = (582,744);
-}
-);
-layerId = m009;
-shapes = (
-{
-alignment = -1;
-pos = (0,744);
-ref = seven.dnomf;
-}
-);
-width = 750;
-},
-{
-anchors = (
-{
-name = _numr;
-pos = (598,744);
 }
 );
 layerId = m010;
@@ -172,7 +172,7 @@ pos = (124,744);
 ref = seven.dnomf;
 }
 );
-width = 748;
+width = 716;
 }
 );
 unicode = 57556;

@@ -87,11 +87,11 @@ shapes = (
 ref = afii10025;
 },
 {
-pos = (380,0);
+pos = (412,0);
 ref = cedilla;
 }
 );
-width = 1304;
+width = 1240;
 },
 {
 layerId = m008;
@@ -100,27 +100,14 @@ shapes = (
 ref = afii10025;
 },
 {
-pos = (398,0);
+pos = (430,0);
 ref = cedilla;
 }
 );
-width = 1304;
+width = 1240;
 },
 {
 layerId = m009;
-shapes = (
-{
-ref = afii10025;
-},
-{
-pos = (240,0);
-ref = cedilla;
-}
-);
-width = 1382;
-},
-{
-layerId = m010;
 shapes = (
 {
 ref = afii10025;
@@ -130,7 +117,20 @@ pos = (256,0);
 ref = cedilla;
 }
 );
-width = 1382;
+width = 1350;
+},
+{
+layerId = m010;
+shapes = (
+{
+ref = afii10025;
+},
+{
+pos = (272,0);
+ref = cedilla;
+}
+);
+width = 1350;
 }
 );
 unicode = 1176;

@@ -49,7 +49,7 @@ nodes = (
 );
 }
 );
-width = 542;
+width = 540;
 },
 {
 anchors = (
@@ -279,33 +279,33 @@ width = 511;
 anchors = (
 {
 name = bottom;
-pos = (270,0);
+pos = (238,0);
 },
 {
 name = cross;
-pos = (270,768);
+pos = (238,768);
 },
 {
 name = ogonek;
-pos = (360,0);
+pos = (328,0);
 },
 {
 name = right;
-pos = (376,0);
+pos = (344,0);
 },
 {
 name = tonos;
-pos = (180,1490);
+pos = (148,1490);
 },
 {
 name = top;
-pos = (270,1676);
+pos = (238,1676);
 }
 );
 guides = (
 {
 angle = 90;
-pos = (372,1848);
+pos = (80,1848);
 }
 );
 layerId = m007;
@@ -313,46 +313,46 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(180,1490,l),
-(180,0,l),
-(360,0,l),
-(360,1490,l)
+(148,1490,l),
+(148,0,l),
+(328,0,l),
+(328,1490,l)
 );
 }
 );
-width = 540;
+width = 476;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (180,0);
+pos = (153,0);
 },
 {
 name = cross;
-pos = (306,768);
+pos = (279,768);
 },
 {
 name = ogonek;
-pos = (268,0);
+pos = (241,0);
 },
 {
 name = right;
-pos = (282,0);
+pos = (255,0);
 },
 {
 name = tonos;
-pos = (334,1490);
+pos = (307,1490);
 },
 {
 name = top;
-pos = (454,1676);
+pos = (427,1676);
 }
 );
 guides = (
 {
 angle = -99.4;
-pos = (552,1852);
+pos = (493,1852);
 }
 );
 layerId = m008;
@@ -360,47 +360,47 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(334,1490,l),
-(88,0,l),
-(268,0,l),
-(514,1490,l)
+(307,1490,l),
+(61,0,l),
+(241,0,l),
+(487,1490,l)
 );
 }
 );
-width = 540;
+width = 476;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (304,0);
+pos = (288,0);
 },
 {
 name = cross;
-pos = (304,788);
+pos = (288,788);
 },
 {
 name = ogonek;
-pos = (512,0);
+pos = (496,0);
 },
 {
 name = right;
-pos = (538,0);
+pos = (522,0);
 },
 {
 name = tonos;
-pos = (96,1490);
+pos = (80,1490);
 },
 {
 name = top;
-pos = (304,1676);
+pos = (288,1676);
 }
 );
 guides = (
 {
 orientation = center;
 angle = 90;
-pos = (0,1240);
+pos = (-1560,1240);
 }
 );
 layerId = m009;
@@ -408,46 +408,46 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(96,1490,l),
-(96,0,l),
-(512,0,l),
-(512,1490,l)
+(80,1490,l),
+(80,0,l),
+(496,0,l),
+(496,1490,l)
 );
 }
 );
-width = 608;
+width = 576;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (206,0);
+pos = (190,0);
 },
 {
 name = cross;
-pos = (334,788);
+pos = (318,788);
 },
 {
 name = ogonek;
-pos = (408,0);
+pos = (392,0);
 },
 {
 name = right;
-pos = (434,0);
+pos = (418,0);
 },
 {
 name = tonos;
-pos = (250,1490);
+pos = (234,1490);
 },
 {
 name = top;
-pos = (486,1676);
+pos = (470,1676);
 }
 );
 guides = (
 {
 angle = -99.4;
-pos = (604,1356);
+pos = (572,1356);
 }
 );
 layerId = m010;
@@ -455,14 +455,14 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(250,1490,l),
-(2,0,l),
-(408,0,l),
-(654,1490,l)
+(234,1490,l),
+(-14,0,l),
+(392,0,l),
+(638,1490,l)
 );
 }
 );
-width = 596;
+width = 564;
 }
 );
 metricLeft = H;

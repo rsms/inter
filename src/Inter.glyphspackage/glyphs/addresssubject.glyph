@@ -117,7 +117,7 @@ shapes = (
 ref = a.sups;
 },
 {
-pos = (776,0);
+pos = (712,0);
 ref = fraction;
 },
 {
@@ -126,10 +126,28 @@ pos = (1298,256);
 ref = s.subs;
 }
 );
-width = 2036;
+width = 1940;
 },
 {
 layerId = m008;
+shapes = (
+{
+ref = a.sups;
+},
+{
+pos = (712,0);
+ref = fraction;
+},
+{
+alignment = -1;
+pos = (1332,256);
+ref = s.subs;
+}
+);
+width = 1968;
+},
+{
+layerId = m009;
 shapes = (
 {
 ref = a.sups;
@@ -140,29 +158,11 @@ ref = fraction;
 },
 {
 alignment = -1;
-pos = (1332,256);
-ref = s.subs;
-}
-);
-width = 2032;
-},
-{
-layerId = m009;
-shapes = (
-{
-ref = a.sups;
-},
-{
-pos = (808,0);
-ref = fraction;
-},
-{
-alignment = -1;
 pos = (1250,256);
 ref = s.subs;
 }
 );
-width = 2048;
+width = 2000;
 },
 {
 layerId = m010;
@@ -171,7 +171,7 @@ shapes = (
 ref = a.sups;
 },
 {
-pos = (812,0);
+pos = (780,0);
 ref = fraction;
 },
 {
@@ -180,7 +180,7 @@ pos = (1344,256);
 ref = s.subs;
 }
 );
-width = 2095;
+width = 2063;
 }
 );
 metricLeft = a.sups;
