@@ -1057,15 +1057,14 @@ function main() {
   }
 
   let letterSpacingVar = vars.bind('letterSpacing', (el, v) => {
-    resetLetterSpacingButton.classList.toggle("disabled", !v)
-    if (v) {
+    resetLetterSpacingButton.classList.toggle("disabled", v === '')
+    if (v !== '') {
       resetLetterSpacingButton.tabIndex = null
     } else {
       resetLetterSpacingButton.tabIndex = -1
     }
-    if (!v) {
+    if (v === '')
       v = calcImplicitLetterSpacing(sizeVar.getValue(), el)
-    }
     setCSSProp('letter-spacing', (v / 100) + 'em')
   }, (el, prevValue, ev) => {
     if (ev && !ev.inputType && !prevValue) {
