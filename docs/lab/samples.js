@@ -865,7 +865,7 @@ I ausete Spereg al ints, leas tat ted bion be ingur Buthed Leactat ging al leado
 
 
 samples.set('Danish', `
-Byen ligger på Sjællands østkyst og strækker sig ind over dele af Amager. En række broer og en tunnel forbinder de sjællandske og amagerske bydele.[a] København og Malmø har fra 1. juli 2000 været forbundet af Øresundsforbindelsen.
+Byen ligger på Sjællands østkyst og strækker sig ind over dele af Amager. En række broer og en tunnel forbinder de sjællandske og amagerske bydele. København og Malmø har fra 1. juli 2000 været forbundet af Øresundsforbindelsen.
 
 Københavns historie kan føres tilbage til omkring år 800, hvor der lå et mindre fiskerleje, hvor byens centrum nu er. Fra 1300-tallet blev byen Danmarks rigeste og mest betydningsfulde – en status som den har fastholdt lige siden. Efterhånden har byen spredt sig ud i både det åbne land og har indesluttet en række mindre landsbysamfund som fx Valby og Kongens Lyngby. I dag bor ca. 23 % af Danmarks befolkning i Københavns byområde. Efter en økonomisk nedgangstid omkring 1973-1995 har byen de sidste årtier oplevet økonomisk og kulturel fremgang og står nu stærkere både nationalt og internationalt. København er således i dag blandt Nordeuropas økonomiske centre og hjemsted for en række store internationale virksomheder som A.P. Møller-Mærsk, Carlsberg, Novo Nordisk, Danske Bank og ISS.
 
