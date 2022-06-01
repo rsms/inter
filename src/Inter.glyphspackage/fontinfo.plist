@@ -3307,10 +3307,6 @@ locked = 1;
 pos = (632,1676);
 },
 {
-locked = 1;
-pos = (0,558);
-},
-{
 pos = (542,1132);
 },
 {
@@ -3329,6 +3325,11 @@ pos = (0,1490);
 locked = 1;
 name = "Top anchors";
 pos = (0,1262);
+},
+{
+locked = 1;
+name = "Low center";
+pos = (0,528);
 }
 );
 id = m008;
@@ -3430,11 +3431,6 @@ size = "-16";
 );
 guides = (
 {
-orientation = center;
-locked = 1;
-pos = (1934,744);
-},
-{
 locked = 1;
 name = "Top anchors";
 pos = (0,1304);
@@ -3444,10 +3440,6 @@ orientation = center;
 angle = 90;
 locked = 1;
 pos = (890,0);
-},
-{
-locked = 1;
-pos = (0,558);
 },
 {
 locked = 1;
@@ -3468,6 +3460,16 @@ pos = (0,1676);
 locked = 1;
 name = "Top mark center";
 pos = (0,1416);
+},
+{
+locked = 1;
+name = "Low center";
+pos = (0,558);
+},
+{
+locked = 1;
+name = "Cap center";
+pos = (0,744);
 }
 );
 iconName = Bold;
