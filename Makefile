@@ -26,7 +26,8 @@ src/features: $(wildcard src/features/*)
 	@true
 $(UFODIR)/features: src/features
 	@mkdir -p $(UFODIR)
-	@ln -sf ../../src/features $(UFODIR)/features
+	@rm -f $(UFODIR)/features
+	@ln -s ../../src/features $(UFODIR)/features
 
 # designspace
 $(UFODIR)/Inter-roman.designspace: $(UFODIR)/Inter.designspace
