@@ -2748,48 +2748,34 @@ guides = (
 pos = (0,2758);
 },
 {
-orientation = center;
-locked = 1;
-pos = (1670,744);
-},
-{
-orientation = center;
-locked = 1;
-pos = (632,1676);
-},
-{
-orientation = center;
-angle = 90;
-locked = 1;
-pos = (1172,558);
-},
-{
-locked = 1;
-pos = (0,558);
-},
-{
-locked = 1;
-pos = (0,1134);
-},
-{
 locked = 1;
 name = "Cap height";
 pos = (0,1490);
 },
 {
 locked = 1;
+name = "Cap center";
+pos = (0,744);
+},
+{
+locked = 1;
+name = "Low center";
+pos = (0,528);
+},
+{
+locked = 1;
 name = "Top anchors";
-pos = (0,1304);
+pos = (0,1676);
+},
+{
+locked = 1;
+name = "Top anchors";
+pos = (0,1262);
 },
 {
 locked = 1;
 name = "p bottom";
 pos = (0,-418);
-},
-{
-locked = 1;
-name = "Top mark center";
-pos = (0,1368);
 }
 );
 id = m011;
@@ -3068,11 +3054,6 @@ pos = (0,744);
 locked = 1;
 name = "Low center";
 pos = (0,528);
-},
-{
-locked = 1;
-name = Overshoot;
-pos = (0,-16);
 },
 {
 locked = 1;
