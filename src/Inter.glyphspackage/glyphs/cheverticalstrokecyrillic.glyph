@@ -184,6 +184,44 @@ ref = checyrillic;
 }
 );
 width = 1212;
+},
+{
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(542,756,l),
+(542,290,l),
+(590,290,l),
+(590,756,l)
+);
+},
+{
+alignment = -1;
+ref = checyrillic;
+}
+);
+width = 1146;
+},
+{
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(576,756,l),
+(500,290,l),
+(546,290,l),
+(622,756,l)
+);
+},
+{
+alignment = -1;
+ref = checyrillic;
+}
+);
+width = 1146;
 }
 );
 metricLeft = checyrillic;

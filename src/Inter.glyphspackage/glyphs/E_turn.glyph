@@ -251,6 +251,56 @@ ref = E;
 }
 );
 width = 1249;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (600,0);
+},
+{
+name = cedilla;
+pos = (602,0);
+},
+{
+name = top;
+pos = (634,1676);
+}
+);
+layerId = m011;
+shapes = (
+{
+angle = 180;
+pos = (1196,1490);
+ref = E;
+}
+);
+width = 1196;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (506,0);
+},
+{
+name = cedilla;
+pos = (510,0);
+},
+{
+name = top;
+pos = (818,1676);
+}
+);
+layerId = m012;
+shapes = (
+{
+angle = 180;
+pos = (1258,1490);
+ref = E;
+}
+);
+width = 1196;
 }
 );
 unicode = 398;

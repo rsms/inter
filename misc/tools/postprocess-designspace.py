@@ -28,7 +28,7 @@ def fix_opsz_maximum(designspace):
   for a in designspace.axes:
     if a.tag == "opsz":
       # TODO: find maximum by looking at the source
-      a.maximum = 72
+      a.maximum = 32
       break
   return designspace
 

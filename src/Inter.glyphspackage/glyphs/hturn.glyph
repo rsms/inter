@@ -252,6 +252,54 @@ ref = h;
 }
 );
 width = 1297;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (942,-372);
+},
+{
+name = top;
+pos = (582,1304);
+}
+);
+layerId = m011;
+shapes = (
+{
+angle = 180;
+pos = (1164,1118);
+ref = h;
+}
+);
+width = 1164;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (788,-372);
+},
+{
+name = top;
+pos = (708,1304);
+}
+);
+guides = (
+{
+angle = -99.4;
+pos = (954,1674);
+}
+);
+layerId = m012;
+shapes = (
+{
+angle = 180;
+pos = (1163,1118);
+ref = h;
+}
+);
+width = 1163;
 }
 );
 metricLeft = u;

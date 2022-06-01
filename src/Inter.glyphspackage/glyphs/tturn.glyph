@@ -242,6 +242,54 @@ ref = t;
 }
 );
 width = 798;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (422,-268);
+},
+{
+name = top;
+pos = (334,1304);
+}
+);
+layerId = m011;
+shapes = (
+{
+angle = 180;
+pos = (712,1118);
+ref = t;
+}
+);
+width = 712;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (286,-268);
+},
+{
+name = top;
+pos = (444,1304);
+}
+);
+guides = (
+{
+angle = -99.4;
+pos = (772,1674);
+}
+);
+layerId = m012;
+shapes = (
+{
+angle = 180;
+pos = (712,1118);
+ref = t;
+}
+);
+width = 712;
 }
 );
 unicode = 647;

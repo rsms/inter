@@ -10,7 +10,6 @@ shapes = (
 ref = n;
 },
 {
-pos = (158,0);
 ref = _part.top_r_hook;
 }
 );
@@ -63,7 +62,6 @@ alignment = -1;
 ref = n;
 },
 {
-pos = (198,0);
 ref = _part.top_r_hook;
 }
 );
@@ -166,6 +164,34 @@ ref = n;
 }
 );
 width = 1198;
+},
+{
+layerId = m011;
+shapes = (
+{
+alignment = -1;
+ref = n;
+},
+{
+pos = (198,0);
+ref = _part.top_r_hook;
+}
+);
+width = 1164;
+},
+{
+layerId = m012;
+shapes = (
+{
+alignment = -1;
+ref = n;
+},
+{
+pos = (199,0);
+ref = _part.top_r_hook;
+}
+);
+width = 1163;
 }
 );
 metricLeft = n;

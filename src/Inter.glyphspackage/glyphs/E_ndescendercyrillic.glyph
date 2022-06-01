@@ -151,6 +151,39 @@ ref = cyrillictic.cn;
 }
 );
 width = 1844;
+},
+{
+layerId = m011;
+metricRight = "=H";
+shapes = (
+{
+alignment = -1;
+ref = H;
+},
+{
+anchor = right;
+pos = (1218,0);
+ref = cyrillictic.cn;
+}
+);
+width = 1550;
+},
+{
+layerId = m012;
+metricRight = "=H";
+shapes = (
+{
+alignment = -1;
+pos = (0,-2);
+ref = H;
+},
+{
+anchor = right;
+pos = (1216,-2);
+ref = cyrillictic.cn;
+}
+);
+width = 1548;
 }
 );
 metricLeft = H;

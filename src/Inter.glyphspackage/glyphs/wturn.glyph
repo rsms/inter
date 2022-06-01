@@ -234,6 +234,48 @@ ref = w;
 }
 );
 width = 1760;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (808,0);
+},
+{
+name = top;
+pos = (808,1304);
+}
+);
+layerId = m011;
+shapes = (
+{
+angle = 180;
+pos = (1618,1118);
+ref = w;
+}
+);
+width = 1618;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (716,0);
+},
+{
+name = top;
+pos = (930,1304);
+}
+);
+layerId = m012;
+shapes = (
+{
+angle = 180;
+pos = (1618,1118);
+ref = w;
+}
+);
+width = 1618;
 }
 );
 unicode = 653;

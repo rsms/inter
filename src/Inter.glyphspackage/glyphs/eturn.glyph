@@ -292,6 +292,64 @@ ref = e;
 }
 );
 width = 1215;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (582,0);
+},
+{
+name = cedilla;
+pos = (584,0);
+},
+{
+name = ogonek;
+pos = (652,-30);
+},
+{
+name = top;
+pos = (590,1304);
+}
+);
+layerId = m011;
+shapes = (
+{
+angle = 180;
+pos = (1180,1118);
+ref = e;
+}
+);
+width = 1180;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (488,0);
+},
+{
+name = cedilla;
+pos = (492,0);
+},
+{
+name = ogonek;
+pos = (552,-30);
+},
+{
+name = top;
+pos = (712,1304);
+}
+);
+layerId = m012;
+shapes = (
+{
+angle = 180;
+pos = (1179,1118);
+ref = e;
+}
+);
+width = 1179;
 }
 );
 unicode = 477;

@@ -228,6 +228,40 @@ nodes = (
 }
 );
 width = 752;
+},
+{
+guides = (
+{
+orientation = center;
+pos = (1016,816);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(770,594,l),
+(442,792,l),
+(442,396,l)
+);
+}
+);
+width = 1152;
+},
+{
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(776,594,l),
+(480,792,l),
+(414,396,l)
+);
+}
+);
+width = 1152;
 }
 );
 metricWidth = bullet;

@@ -435,6 +435,102 @@ ref = I;
 }
 );
 width = 1002;
+},
+{
+anchors = (
+{
+name = ogonek;
+pos = (590,0);
+},
+{
+name = right;
+pos = (600,0);
+},
+{
+name = tonos;
+pos = (126,1490);
+}
+);
+guides = (
+{
+angle = 90;
+pos = (812,104);
+},
+{
+angle = 90;
+pos = (172,104);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(590,1442,l),
+(590,1490,l),
+(126,1490,l),
+(126,1442,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(590,0,l),
+(590,46,l),
+(126,46,l),
+(126,0,l)
+);
+},
+{
+alignment = -1;
+pos = (102,0);
+ref = I;
+}
+);
+width = 714;
+},
+{
+anchors = (
+{
+name = ogonek;
+pos = (497,0);
+},
+{
+name = right;
+pos = (505,0);
+},
+{
+name = tonos;
+pos = (279,1490);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(737,1442,l),
+(743,1490,l),
+(279,1490,l),
+(273,1442,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(497,0,l),
+(505,46,l),
+(39,46,l),
+(31,0,l)
+);
+},
+{
+alignment = -1;
+pos = (101,0);
+ref = I;
+}
+);
+width = 715;
 }
 );
 metricLeft = T;

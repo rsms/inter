@@ -176,6 +176,46 @@ ref = equal.subs;
 }
 );
 width = 0;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (-590,0);
+}
+);
+layerId = m011;
+shapes = (
+{
+alignment = -1;
+pos = (-1024,-524);
+ref = equal.subs;
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (-686,0);
+}
+);
+guides = (
+{
+angle = -99.4;
+pos = (-980,-960);
+}
+);
+layerId = m012;
+shapes = (
+{
+alignment = -1;
+pos = (-1114,-524);
+ref = equal.subs;
+}
+);
+width = 0;
 }
 );
 tags = (

@@ -10,7 +10,7 @@ shapes = (
 ref = g;
 },
 {
-pos = (926,0);
+pos = (768,0);
 ref = _part.top_r_hook;
 }
 );
@@ -62,7 +62,7 @@ shapes = (
 ref = g;
 },
 {
-pos = (946,0);
+pos = (748,0);
 ref = _part.top_r_hook;
 }
 );
@@ -132,6 +132,32 @@ ref = _part.top_r_hook;
 }
 );
 width = 1293;
+},
+{
+layerId = m011;
+shapes = (
+{
+ref = g;
+},
+{
+pos = (946,0);
+ref = _part.top_r_hook;
+}
+);
+width = 1190;
+},
+{
+layerId = m012;
+shapes = (
+{
+ref = g;
+},
+{
+pos = (947,0);
+ref = _part.top_r_hook;
+}
+);
+width = 1190;
 }
 );
 metricLeft = d;

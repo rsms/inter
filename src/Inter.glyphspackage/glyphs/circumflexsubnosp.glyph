@@ -291,6 +291,64 @@ ref = circumflex;
 }
 );
 width = 0;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (-512,0);
+}
+);
+guides = (
+{
+orientation = center;
+pos = (-666,-320);
+},
+{
+orientation = center;
+pos = (92,0);
+}
+);
+layerId = m011;
+shapes = (
+{
+alignment = -1;
+pos = (-942,-1630);
+ref = circumflex;
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (-612,0);
+}
+);
+guides = (
+{
+orientation = center;
+pos = (-676,-320);
+},
+{
+orientation = center;
+pos = (82,0);
+},
+{
+angle = -99.4;
+pos = (-852,-64);
+}
+);
+layerId = m012;
+shapes = (
+{
+alignment = -1;
+pos = (-1216,-1630);
+ref = circumflex;
+}
+);
+width = 0;
 }
 );
 tags = (

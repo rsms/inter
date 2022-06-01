@@ -211,6 +211,48 @@ nodes = (
 }
 );
 width = 0;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (0,1304);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-586,1396,l),
+(-586,1350,l),
+(586,1350,l),
+(586,1396,l)
+);
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (124,1304);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-448,1396,l),
+(-456,1350,l),
+(718,1350,l),
+(724,1396,l)
+);
+}
+);
+width = 0;
 }
 );
 tags = (

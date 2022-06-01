@@ -411,122 +411,6 @@ width = 1320;
 anchors = (
 {
 name = bottom;
-pos = (632,0);
-},
-{
-name = ogonek;
-pos = (1196,0);
-},
-{
-name = tonos;
-pos = (526,1490);
-},
-{
-name = top;
-pos = (632,1676);
-}
-);
-associatedMasterId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
-attr = {
-coordinates = (
-100,
-0,
-72
-);
-};
-guides = (
-{
-angle = 90;
-pos = (631,1408);
-}
-);
-layerId = "89AD5D5C-55F5-40D3-81D3-6F1E15864FB3";
-name = opsz;
-shapes = (
-{
-closed = 1;
-nodes = (
-(638,1460,l),
-(624,1460,l),
-(1146,0,l),
-(1196,0,l),
-(663,1490,l),
-(599,1490,l),
-(66,0,l),
-(116,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(286,512,l),
-(978,512,l),
-(978,558,l),
-(286,558,l)
-);
-}
-);
-width = 1262;
-},
-{
-anchors = (
-{
-name = bottom;
-pos = (538,0);
-},
-{
-name = ogonek;
-pos = (1102,0);
-},
-{
-name = tonos;
-pos = (680,1490);
-},
-{
-name = top;
-pos = (818,1676);
-}
-);
-associatedMasterId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
-attr = {
-coordinates = (
-100,
--10,
-72
-);
-};
-layerId = "9E4F2A32-B1DC-41B4-84A5-02881CF9FE33";
-name = opsz;
-shapes = (
-{
-closed = 1;
-nodes = (
-(774,1432,l),
-(780,1432,l),
-(1054,0,l),
-(1102,0,l),
-(818,1490,l),
-(754,1490,l),
-(-26,0,l),
-(24,0,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(276,504,l),
-(968,504,l),
-(978,550,l),
-(286,550,l)
-);
-}
-);
-width = 1262;
-},
-{
-anchors = (
-{
-name = bottom;
 pos = (568,0);
 },
 {
@@ -683,6 +567,106 @@ nodes = (
 }
 );
 width = 1598;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (632,0);
+},
+{
+name = ogonek;
+pos = (1196,0);
+},
+{
+name = tonos;
+pos = (526,1490);
+},
+{
+name = top;
+pos = (632,1676);
+}
+);
+guides = (
+{
+angle = 90;
+pos = (631,1408);
+}
+);
+layerId = m011;
+name = "Thin Display";
+shapes = (
+{
+closed = 1;
+nodes = (
+(638,1460,l),
+(624,1460,l),
+(1146,0,l),
+(1196,0,l),
+(663,1490,l),
+(599,1490,l),
+(66,0,l),
+(116,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(286,512,l),
+(978,512,l),
+(978,558,l),
+(286,558,l)
+);
+}
+);
+width = 1262;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (538,0);
+},
+{
+name = ogonek;
+pos = (1102,0);
+},
+{
+name = tonos;
+pos = (680,1490);
+},
+{
+name = top;
+pos = (818,1676);
+}
+);
+layerId = m012;
+name = "Thin Italic Display";
+shapes = (
+{
+closed = 1;
+nodes = (
+(774,1432,l),
+(780,1432,l),
+(1054,0,l),
+(1102,0,l),
+(818,1490,l),
+(754,1490,l),
+(-26,0,l),
+(24,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(276,504,l),
+(968,504,l),
+(978,550,l),
+(286,550,l)
+);
+}
+);
+width = 1262;
 }
 );
 unicode = 65;

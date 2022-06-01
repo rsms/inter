@@ -211,6 +211,48 @@ nodes = (
 }
 );
 width = 40;
+},
+{
+anchors = (
+{
+name = _marktop;
+pos = (-794,1170);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-1076,1414,l),
+(-1076,1368,l),
+(-512,1368,l),
+(-512,1414,l)
+);
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _marktop;
+pos = (-692,1170);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-934,1414,l),
+(-942,1368,l),
+(-378,1368,l),
+(-370,1414,l)
+);
+}
+);
+width = 0;
 }
 );
 tags = (

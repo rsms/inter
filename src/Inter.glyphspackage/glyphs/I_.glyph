@@ -463,6 +463,88 @@ nodes = (
 }
 );
 width = 566;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (256,0);
+},
+{
+name = cross;
+pos = (256,768);
+},
+{
+name = ogonek;
+pos = (280,0);
+},
+{
+name = right;
+pos = (288,0);
+},
+{
+name = tonos;
+pos = (232,1490);
+},
+{
+name = top;
+pos = (256,1676);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(232,1490,l),
+(232,0,l),
+(280,0,l),
+(280,1490,l)
+);
+}
+);
+width = 512;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (162,0);
+},
+{
+name = cross;
+pos = (290,768);
+},
+{
+name = ogonek;
+pos = (186,0);
+},
+{
+name = right;
+pos = (194,0);
+},
+{
+name = tonos;
+pos = (386,1490);
+},
+{
+name = top;
+pos = (442,1676);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(386,1490,l),
+(140,0,l),
+(186,0,l),
+(434,1490,l)
+);
+}
+);
+width = 511;
 }
 );
 metricLeft = H;

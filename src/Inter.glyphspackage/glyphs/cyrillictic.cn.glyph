@@ -211,6 +211,48 @@ nodes = (
 }
 );
 width = 678;
+},
+{
+anchors = (
+{
+name = _cyrtic;
+pos = (76,6);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(54,50,l),
+(54,-364,l),
+(100,-364,l),
+(100,50,l)
+);
+}
+);
+width = 152;
+},
+{
+anchors = (
+{
+name = _cyrtic;
+pos = (-14,6);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-30,50,l),
+(-96,-364,l),
+(-52,-364,l),
+(14,50,l)
+);
+}
+);
+width = 152;
 }
 );
 tags = (

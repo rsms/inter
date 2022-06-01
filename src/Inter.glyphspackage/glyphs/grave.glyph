@@ -251,6 +251,56 @@ nodes = (
 }
 );
 width = 986;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (606,1304);
+},
+{
+name = top;
+pos = (602,1676);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(630,1280,l),
+(426,1594,l),
+(368,1594,l),
+(584,1280,l)
+);
+}
+);
+width = 1018;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (728,1304);
+},
+{
+name = top;
+pos = (788,1676);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(748,1280,l),
+(596,1594,l),
+(542,1594,l),
+(704,1280,l)
+);
+}
+);
+width = 1018;
 }
 );
 metricWidth = acute;

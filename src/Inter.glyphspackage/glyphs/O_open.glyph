@@ -160,6 +160,38 @@ ref = C;
 }
 );
 width = 1543;
+},
+{
+layerId = m011;
+shapes = (
+{
+angle = 180;
+pos = (1480,1490);
+ref = C;
+}
+);
+width = 1480;
+},
+{
+background = {
+shapes = (
+{
+pos = (-54,0);
+ref = C;
+}
+);
+};
+layerId = m012;
+metricLeft = "=|C";
+metricRight = "=|C";
+shapes = (
+{
+angle = 180;
+pos = (1542,1490);
+ref = C;
+}
+);
+width = 1480;
 }
 );
 metricRight = O;

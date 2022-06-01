@@ -234,6 +234,54 @@ ref = _part.f_base;
 }
 );
 width = 793;
+},
+{
+guides = (
+{
+angle = 90;
+pos = (400,-48);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(484,1068,l),
+(484,1118,l,{
+name = hr00;
+}),
+(140,962,l),
+(140,914,l)
+);
+},
+{
+pos = (-34,0);
+ref = _part.f_base;
+}
+);
+width = 644;
+},
+{
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(568,1068,l),
+(578,1118,l,{
+name = hr00;
+}),
+(208,962,l),
+(198,914,l)
+);
+},
+{
+pos = (-34,0);
+ref = _part.f_base;
+}
+);
+width = 644;
 }
 );
 metricLeft = f;

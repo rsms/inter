@@ -309,6 +309,56 @@ nodes = (
 }
 );
 width = 544;
+},
+{
+anchors = (
+{
+name = dnom;
+pos = (512,792);
+},
+{
+name = numr;
+pos = (46,698);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-204,0,l),
+(818,1490,l),
+(762,1490,l),
+(-258,0,l)
+);
+}
+);
+width = 558;
+},
+{
+anchors = (
+{
+name = dnom;
+pos = (546,792);
+},
+{
+name = numr;
+pos = (82,698);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-230,0,l),
+(908,1490,l),
+(850,1490,l),
+(-288,0,l)
+);
+}
+);
+width = 558;
 }
 );
 note = "Anchor numr should be at the basline rightmost position in .numr and dnom should be at top leftmost in .dnomf";

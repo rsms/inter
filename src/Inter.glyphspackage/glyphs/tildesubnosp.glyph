@@ -233,6 +233,46 @@ ref = tilde;
 }
 );
 width = 0;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (-486,0);
+}
+);
+layerId = m011;
+shapes = (
+{
+alignment = -1;
+pos = (-994,-1590);
+ref = tilde;
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (-752,0);
+}
+);
+guides = (
+{
+angle = 81;
+pos = (-994,256);
+}
+);
+layerId = m012;
+shapes = (
+{
+alignment = -1;
+pos = (-1434,-1588);
+ref = tilde;
+}
+);
+width = 0;
 }
 );
 tags = (

@@ -312,14 +312,26 @@ nodes = (
 width = 1248;
 },
 {
-associatedMasterId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
-attr = {
-coordinates = (
-100,
-0,
-72
+layerId = m012;
+shapes = (
+{
+alignment = -1;
+pos = (1,2);
+ref = o;
+},
+{
+closed = 1;
+nodes = (
+(1095,1120,l),
+(1057,1146,l),
+(95,-2,l),
+(131,-30,l)
 );
-};
+}
+);
+width = 1187;
+},
+{
 guides = (
 {
 pos = (0,2);
@@ -328,8 +340,8 @@ pos = (0,2);
 pos = (1069,557);
 }
 );
-layerId = "BA95A671-190C-40CE-BD3D-3B60D506707E";
-name = opsz;
+layerId = m011;
+name = "Thin Display";
 shapes = (
 {
 ref = o;
@@ -341,35 +353,6 @@ nodes = (
 (1019,1104,l),
 (130,44,l),
 (167,11,l)
-);
-}
-);
-width = 1186;
-},
-{
-associatedMasterId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
-attr = {
-coordinates = (
-100,
--10,
-72
-);
-};
-layerId = "9FEECBEF-ABE9-4139-9709-F1CF1EED797F";
-name = opsz;
-shapes = (
-{
-alignment = -1;
-pos = (1,2);
-ref = o;
-},
-{
-closed = 1;
-nodes = (
-(1054,1076,l),
-(1019,1104,l),
-(130,44,l),
-(165,13,l)
 );
 }
 );

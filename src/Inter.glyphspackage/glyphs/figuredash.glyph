@@ -200,6 +200,48 @@ nodes = (
 }
 );
 width = 1410;
+},
+{
+guides = (
+{
+orientation = center;
+pos = (1102,878);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(0,662,l),
+(0,616,l),
+(1210,616,l),
+(1210,662,l)
+);
+}
+);
+width = 1210;
+},
+{
+guides = (
+{
+orientation = center;
+pos = (1102,878);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(18,662,l),
+(10,616,l),
+(1218,616,l),
+(1226,662,l)
+);
+}
+);
+width = 1210;
 }
 );
 metricWidth = zero.tf;

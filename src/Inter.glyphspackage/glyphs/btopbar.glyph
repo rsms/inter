@@ -198,6 +198,48 @@ ref = b;
 }
 );
 width = 1290;
+},
+{
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(256,1490,l),
+(256,1442,l),
+(978,1442,l),
+(978,1490,l,{
+name = hr00;
+})
+);
+},
+{
+alignment = -1;
+ref = b;
+}
+);
+width = 1190;
+},
+{
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(410,1490,l),
+(402,1442,l),
+(1122,1442,l),
+(1132,1490,l,{
+name = hr00;
+})
+);
+},
+{
+alignment = -1;
+ref = b;
+}
+);
+width = 1188;
 }
 );
 metricLeft = b;

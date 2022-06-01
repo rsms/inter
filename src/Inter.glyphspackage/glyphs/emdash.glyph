@@ -200,6 +200,48 @@ nodes = (
 }
 );
 width = 2048;
+},
+{
+guides = (
+{
+orientation = center;
+pos = (1102,878);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(0,662,l),
+(0,616,l),
+(2048,616,l),
+(2048,662,l)
+);
+}
+);
+width = 2048;
+},
+{
+guides = (
+{
+orientation = center;
+pos = (1102,878);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(16,662,l),
+(8,616,l),
+(2058,616,l),
+(2066,662,l)
+);
+}
+);
+width = 2048;
 }
 );
 tags = (

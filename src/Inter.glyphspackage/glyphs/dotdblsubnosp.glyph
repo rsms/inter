@@ -285,6 +285,50 @@ ref = dotbelow;
 }
 );
 width = 12;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (-578,0);
+}
+);
+layerId = m011;
+shapes = (
+{
+alignment = -1;
+pos = (-152,0);
+ref = dotbelow;
+},
+{
+alignment = -1;
+pos = (192,0);
+ref = dotbelow;
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (-514,0);
+}
+);
+layerId = m012;
+shapes = (
+{
+alignment = -1;
+pos = (-152,0);
+ref = dotbelow;
+},
+{
+alignment = -1;
+pos = (184,0);
+ref = dotbelow;
+}
+);
+width = 0;
 }
 );
 tags = (

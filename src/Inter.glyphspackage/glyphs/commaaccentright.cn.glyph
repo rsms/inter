@@ -211,6 +211,48 @@ nodes = (
 }
 );
 width = 480;
+},
+{
+anchors = (
+{
+name = _raccent;
+pos = (260,1490);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(298,1182,l),
+(312,1560,l),
+(260,1560,l),
+(260,1182,l)
+);
+}
+);
+width = 568;
+},
+{
+anchors = (
+{
+name = _raccent;
+pos = (416,1490);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(402,1182,l),
+(478,1560,l),
+(428,1560,l),
+(366,1182,l)
+);
+}
+);
+width = 568;
 }
 );
 tags = (

@@ -210,6 +210,48 @@ ref = v;
 }
 );
 width = 1208;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (536,0);
+},
+{
+name = top;
+pos = (536,1304);
+}
+);
+layerId = m011;
+shapes = (
+{
+angle = 180;
+pos = (1070,1118);
+ref = v;
+}
+);
+width = 1070;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (442,0);
+},
+{
+name = top;
+pos = (658,1304);
+}
+);
+layerId = m012;
+shapes = (
+{
+angle = 180;
+pos = (1070,1118);
+ref = v;
+}
+);
+width = 1070;
 }
 );
 unicode = 652;

@@ -498,6 +498,96 @@ nodes = (
 }
 );
 width = 1374;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (628,0);
+},
+{
+name = cedilla;
+pos = (628,-6);
+},
+{
+name = cross;
+pos = (628,768);
+},
+{
+name = cyrtic;
+pos = (672,6);
+},
+{
+name = right;
+pos = (640,0);
+},
+{
+name = top;
+pos = (628,1676);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(606,1442,l),
+(606,0,l),
+(652,0,l),
+(652,1442,l),
+(1132,1442,l),
+(1132,1490,l),
+(126,1490,l),
+(126,1442,l)
+);
+}
+);
+width = 1256;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (536,0);
+},
+{
+name = cedilla;
+pos = (534,-6);
+},
+{
+name = cross;
+pos = (664,768);
+},
+{
+name = cyrtic;
+pos = (580,6);
+},
+{
+name = right;
+pos = (546,0);
+},
+{
+name = top;
+pos = (814,1676);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(750,1442,l),
+(512,0,l),
+(558,0,l),
+(798,1442,l),
+(1278,1442,l),
+(1286,1490,l),
+(280,1490,l),
+(270,1442,l)
+);
+}
+);
+width = 1256;
 }
 );
 unicode = 84;

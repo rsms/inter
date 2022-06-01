@@ -341,6 +341,62 @@ ref = Lambda;
 }
 );
 width = 1600;
+},
+{
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1192,792,l),
+(1192,838,l),
+(70,838,l),
+(70,792,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(1192,442,l),
+(1192,488,l),
+(70,488,l),
+(70,442,l)
+);
+},
+{
+alignment = -1;
+ref = Lambda;
+}
+);
+width = 1262;
+},
+{
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1230,792,l),
+(1240,838,l),
+(116,838,l),
+(108,792,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(1172,442,l),
+(1182,488,l),
+(58,488,l),
+(50,442,l)
+);
+},
+{
+alignment = -1;
+ref = Lambda;
+}
+);
+width = 1262;
 }
 );
 metricLeft = A;

@@ -215,6 +215,44 @@ ref = downtackmod;
 }
 );
 width = 0;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (-590,0);
+}
+);
+layerId = m011;
+shapes = (
+{
+pos = (-922,-590);
+ref = downtackmod;
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (-674,0);
+}
+);
+guides = (
+{
+angle = -99.4;
+pos = (-778,274);
+}
+);
+layerId = m012;
+shapes = (
+{
+pos = (-1012,-590);
+ref = downtackmod;
+}
+);
+width = 0;
 }
 );
 note = "align under x";

@@ -186,6 +186,46 @@ ref = cyrillichook;
 }
 );
 width = 930;
+},
+{
+layerId = m011;
+shapes = (
+{
+alignment = -1;
+ref = gecyrillic;
+},
+{
+alignment = -1;
+pos = (-210,-152);
+ref = crossbar;
+},
+{
+alignment = -1;
+pos = (-144,0);
+ref = cyrillichook;
+}
+);
+width = 932;
+},
+{
+layerId = m012;
+shapes = (
+{
+alignment = -1;
+ref = gecyrillic;
+},
+{
+alignment = -1;
+pos = (-236,-152);
+ref = crossbar;
+},
+{
+alignment = -1;
+pos = (-142,0);
+ref = cyrillichook;
+}
+);
+width = 932;
 }
 );
 metricRight = tecyrillic;

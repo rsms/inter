@@ -109,54 +109,6 @@ ref = dotaccent;
 width = 682;
 },
 {
-associatedMasterId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
-attr = {
-coordinates = (
-100,
-0,
-72
-);
-};
-layerId = "1601CC5D-A3A7-4610-833C-CF4E2229D959";
-name = opsz;
-shapes = (
-{
-alignment = 1;
-ref = _part.f_base;
-},
-{
-alignment = 1;
-pos = (140,372);
-ref = dotaccent;
-}
-);
-width = 678;
-},
-{
-associatedMasterId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
-attr = {
-coordinates = (
-100,
--10,
-72
-);
-};
-layerId = "2702EE28-F27A-4D48-8D86-559855B776E5";
-name = opsz;
-shapes = (
-{
-alignment = 1;
-ref = _part.f_base;
-},
-{
-alignment = 1;
-pos = (204,372);
-ref = dotaccent;
-}
-);
-width = 678;
-},
-{
 layerId = m008;
 shapes = (
 {
@@ -200,6 +152,36 @@ ref = dotaccent;
 }
 );
 width = 808;
+},
+{
+layerId = m011;
+shapes = (
+{
+alignment = 1;
+ref = _part.f_base;
+},
+{
+alignment = 1;
+pos = (140,372);
+ref = dotaccent;
+}
+);
+width = 678;
+},
+{
+layerId = m012;
+shapes = (
+{
+alignment = 1;
+ref = _part.f_base;
+},
+{
+alignment = 1;
+pos = (204,372);
+ref = dotaccent;
+}
+);
+width = 678;
 }
 );
 metricLeft = i;

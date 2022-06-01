@@ -352,6 +352,76 @@ nodes = (
 }
 );
 width = 1175;
+},
+{
+anchors = (
+{
+name = cross;
+pos = (258,756);
+},
+{
+name = cyrtic;
+pos = (300,6);
+},
+{
+name = right;
+pos = (268,0);
+},
+{
+name = top;
+pos = (632,1740);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(232,1490,l),
+(232,0,l),
+(280,0,l),
+(280,1442,l),
+(1044,1442,l),
+(1044,1490,l)
+);
+}
+);
+width = 1168;
+},
+{
+anchors = (
+{
+name = cross;
+pos = (290,756);
+},
+{
+name = cyrtic;
+pos = (210,6);
+},
+{
+name = right;
+pos = (174,0);
+},
+{
+name = top;
+pos = (830,1740);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(386,1490,l),
+(140,0,l),
+(186,0,l),
+(426,1442,l),
+(1192,1442,l),
+(1198,1490,l)
+);
+}
+);
+width = 1170;
 }
 );
 metricLeft = H;

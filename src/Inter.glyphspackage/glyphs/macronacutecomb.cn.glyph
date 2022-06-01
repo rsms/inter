@@ -266,6 +266,64 @@ ref = macron;
 }
 );
 width = 0;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (-372,1676);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-348,1838,l),
+(-164,2024,l),
+(-232,2024,l),
+(-402,1838,l)
+);
+},
+{
+alignment = -1;
+pos = (-672,308);
+ref = macron;
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (-188,1676);
+}
+);
+guides = (
+{
+angle = -99.4;
+pos = (-278,2174);
+}
+);
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-142,1838,l),
+(72,2024,l),
+(4,2024,l),
+(-198,1838,l)
+);
+},
+{
+alignment = -1;
+pos = (-622,308);
+ref = macron;
+}
+);
+width = 0;
 }
 );
 tags = (

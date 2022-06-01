@@ -19,6 +19,7 @@ shapes = (
 ref = U;
 },
 {
+pos = (1000,0);
 ref = _part.rtophorn;
 }
 );
@@ -31,6 +32,7 @@ shapes = (
 ref = U;
 },
 {
+pos = (876,0);
 ref = _part.rtophorn;
 }
 );
@@ -49,6 +51,7 @@ shapes = (
 ref = U;
 },
 {
+pos = (1001,0);
 ref = _part.rtophorn;
 }
 );
@@ -61,6 +64,7 @@ shapes = (
 ref = U;
 },
 {
+pos = (876,0);
 ref = _part.rtophorn;
 }
 );
@@ -78,6 +82,7 @@ shapes = (
 ref = U;
 },
 {
+pos = (1058,0);
 ref = _part.rtophorn;
 }
 );
@@ -90,6 +95,7 @@ shapes = (
 ref = U;
 },
 {
+pos = (1059,0);
 ref = _part.rtophorn;
 }
 );
@@ -108,6 +114,7 @@ shapes = (
 ref = U;
 },
 {
+pos = (1000,0);
 ref = _part.rtophorn;
 }
 );
@@ -126,6 +133,7 @@ shapes = (
 ref = U;
 },
 {
+pos = (1007,0);
 ref = _part.rtophorn;
 }
 );
@@ -138,6 +146,7 @@ shapes = (
 ref = U;
 },
 {
+pos = (876,0);
 ref = _part.rtophorn;
 }
 );
@@ -150,56 +159,40 @@ shapes = (
 ref = U;
 },
 {
-pos = (7,0);
+pos = (883,0);
 ref = _part.rtophorn;
 }
 );
 width = 1446;
 },
 {
-associatedMasterId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
-attr = {
-coordinates = (
-100,
-0,
-72
-);
-};
 guides = (
 {
 pos = (1933,1776);
 }
 );
-layerId = "7DD48B9F-233C-42B3-A44C-01D692221484";
-name = opsz;
+layerId = m011;
+name = "Thin Display";
 shapes = (
 {
 ref = U;
 },
 {
-pos = (-43,0);
+pos = (1015,0);
 ref = _part.rtophorn;
 }
 );
 width = 1450;
 },
 {
-associatedMasterId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
-attr = {
-coordinates = (
-100,
--10,
-72
-);
-};
-layerId = "32F03991-CE3C-4826-A9E4-0A73038469CD";
-name = opsz;
+layerId = m012;
+name = "Thin Italic Display";
 shapes = (
 {
 ref = U;
 },
 {
-pos = (-42,0);
+pos = (1017,0);
 ref = _part.rtophorn;
 }
 );

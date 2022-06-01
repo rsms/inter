@@ -200,6 +200,48 @@ ref = y;
 }
 );
 width = 1230;
+},
+{
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(132,808,l),
+(132,762,l),
+(954,762,l),
+(954,808,l,{
+name = hr00;
+})
+);
+},
+{
+alignment = -1;
+ref = y;
+}
+);
+width = 1070;
+},
+{
+layerId = m012;
+shapes = (
+{
+closed = 1;
+nodes = (
+(184,808,l),
+(170,762,l),
+(994,762,l),
+(1004,808,l,{
+name = hr00;
+})
+);
+},
+{
+alignment = -1;
+ref = y;
+}
+);
+width = 1070;
 }
 );
 metricLeft = y;

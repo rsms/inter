@@ -209,6 +209,50 @@ ref = period;
 }
 );
 width = 1216;
+},
+{
+guides = (
+{
+orientation = center;
+pos = (608,992);
+}
+);
+layerId = m011;
+shapes = (
+{
+alignment = -1;
+pos = (0,298);
+ref = period;
+},
+{
+alignment = -1;
+pos = (0,1058);
+ref = period;
+}
+);
+width = 518;
+},
+{
+guides = (
+{
+orientation = center;
+pos = (608,992);
+}
+);
+layerId = m012;
+shapes = (
+{
+alignment = -1;
+pos = (50,300);
+ref = period;
+},
+{
+alignment = -1;
+pos = (174,1058);
+ref = period;
+}
+);
+width = 520;
 }
 );
 metricWidth = colon;
