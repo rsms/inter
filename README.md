@@ -50,7 +50,7 @@ html { font-family: 'Inter', sans-serif; }
 
 ### Derivative versions
 
-- [Inter with Shavian character support](https://github.com/Shavian-info/inter)
+- [Inter with Shavian character support](https://github.com/Shavian-info/interalia)
 
 
 ## Notable projects using Inter
