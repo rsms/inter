@@ -13,11 +13,7 @@ default: all
 # ---------------------------------------------------------------------------------
 # intermediate sources
 
-# short-circuit Make for performance
-src/Inter.glyphspackage:
-	@true
-
-$(UFODIR)/Inter.glyphs: src/Inter.glyphspackage | $(UFODIR)
+$(UFODIR)/%.glyphs: src/%.glyphspackage | $(UFODIR)
 	$(BIN)/python3 build/venv/bin/glyphspkg -o $(dir $@) $^
 
 # features
