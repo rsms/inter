@@ -22,11 +22,11 @@ Atm, the script will work well for single axis fonts and families which
 have a single vf for Roman and another for Italic/Condensed, both using the wght
 axis (covers 95% of GF cases).
 """
+import os, sys
 from argparse import ArgumentParser
 from fontTools.ttLib import TTFont, newTable
 from fontTools.ttLib.tables import otTables
-import os
-import sys
+
 if sys.version_info.major == 3:
   unicode = str
 
@@ -158,8 +158,9 @@ def _get_vf_types(ttfonts):
 
 
 def _get_vf_type(ttfont):
-  style = ttfont['name'].getName(2, 3, 1, 1033).toUnicode()
-  return 'Italic' if 'Italic' in style else 'Roman'
+  if ttfont['head'].macStyle & 0b10:
+    return 'Italic'
+  return 'Roman'
 
 
 def _get_vf_default_style(ttfont):
