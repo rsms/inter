@@ -455,6 +455,8 @@ build/venv/config.stamp: requirements.txt
 	@mkdir -p build
 	test -d build/venv || python3 -m venv build/venv
 	. $(VENV) ; pip install -Ur requirements.txt
+	rm -f build/venv/lib/python
+	ln -sf $$(basename $$(readlink build/venv/bin/python)) build/venv/lib/python
 	touch $@
 
 reset: clean
