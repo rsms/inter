@@ -19,31 +19,16 @@ By contributing work to the Inter font project you agree to have all work contri
   [GitHub pull requests](https://github.com/rsms/inter/pulls)
   or comments in the issue.
 
-- Improvements to the Display subfamily...
+- Improvements to the Display "opsz" designs...
 
-### Improvements to the Display subfamily
 
-Source file: ([`src/InterDisplay.glyphs`](https://github.com/rsms/inter/blob/master/src/InterDisplay.glyphs))
+### Improvements to the Display "opsz" designs
 
-The Display subfamily was derived from the text family ("Inter") and scaled to a different UPM (2048). It also had all of its kerning reduced.
+The Display (`opsz=32`) designs was derived from the text family ("Inter") and scaled to a different UPM (2048). It also had all of its kerning reduced.
 
-Inter Display has a lower x-height compared to the text subfamily — this is the biggest difference in terms of work needed.
+Inter Display has a lower x-height compared to the text (`opsz=16`) designs — this is the biggest difference in terms of work needed.
 
 ![](misc/readme/display-x-height-cmp.png)
-
-The contributions wanted for Inter Display are as follows:
-
-- Diacritic glyph improvements. In most cases you should import the corresponding glyph from Inter (text) and scale it to 2048 UPM as Inter (text) has seen a lot of improvements to diacritic designs since it was forked into Inter Display.
-
-- Diacritic anchor placement
-
-- Glyph design. Keep the following in mind:
-  - Raise/fix x-height for "low" glyghs.
-  - If fixing up an existing glyph, reduce optical tricks for small scale like tapered diagonal stems and ink traps/bridges.
-  - If makin a glyph from scratch, use a minimum (or no) optical tricks like tapered diagonal stems and ink traps/bridges.
-  - Stems should all have 90° or 0° terminals (Inter text has variable angles.) Compare /a of Inter (text) and Inter Display for an example of what this means.
-  - [Kerning](#Kerning) (use kerning groups!)
-
 
 > Please do not email Rasmus with issues and contributions but use GitHub 🙏
 
@@ -69,37 +54,34 @@ The Inter toolchain is a collection of programs setup to build everything
 in a high-quality and reliable way. It can be fully automated and requires no
 paid software.
 
-TL;DR: to make & test everything:
+To build everything:
 
 ```
-make -j test
+make -j all
+```
+
+Run QA tests:
+
+```
+make test
 ```
 
 Currently the toolchain has only been tested on macOS and Linux. All you need to have preinstalled is [Python 3](https://www.python.org/downloads/).
 
-The first step is to initialize the toolchain itself:
 
-```
-./init.sh
-```
+### Recommended development workflow
 
-This will fetch, setup and configure everything needed to build and test Inter.
+Open two terminals: in one, run a local web server with `./docs/lab/serve.py`. In the other run `make`:
 
-> When running in a git repository, `init.sh` installs git hooks to automate running itself when you pull in new changes or switch branches.
+1. Edit in Glyphs.app
+2. Run `make var_web`
+3. Reload the lab at `http://localhost:3003/`
+4. Repeat
 
-We can now run `make` to build all font files:
+Before submitting a Pull Request or otherwise contribute your changes:
 
-```
-$ make -j Regular SemiBoldItalic
-```
-
-This may take a long time (a few minutes) the first time as it generates "font instances" (i.e. all styles that are derived through interpolation from the master styles) in addition to compiling the actual font files (OTF, TTF, etc.)
-
-The toolchain comes with a few other useful actions, one of them is `test` which runs some checks on the compiled font files to make sure they behave as intended:
-
-```
-$ make -j test
-```
+1. `make clean && make -j all` then thoroughly inspect your changes in a variety of different settings using the lab and in any relevant software.
+2. Run QA tests using `make -j test`
 
 
 ### Try & sample as you go
@@ -108,7 +90,7 @@ When making changes to the typeface and its source files, it's a good idea to sa
 
 There are two things in particular that will help you with this:
 
-- `make -j STYLE_FORMAT` to quickly compile only a particular style
+- `make -j build/fonts/FILENAME` to quickly compile only a particular font file
 - Interactive "Lab"
 
 You can invoke `make` with either names of styles, names of styles and file formats, or even specific filenames. Here are a few examples:
@@ -125,28 +107,18 @@ All resulting font files are written to the `build` directory with `Inter-` as t
 [**The interactive Lab**](#interactive-lab) is a great tool for quickly exploring your font files. It's a web-based tool which you start in a terminal by running:
 
 ```
-python docs/lab/serve.py
+./docs/lab/serve.py
 ```
 
-Open up the URL printed on the screen and you can now explore your font files. Simply `make -j STYLE_web` (or `make -j all_web` for all styles) and reload the web page to try a new build.
+Open up the URL printed on the screen and you can now explore your font files.
 
 See [Interactive Lab](#interactive-lab) for more details.
 
 
 ### Editing source files
 
-This font is stored and authored primarily in a unified [Glyphs](https://glyphsapp.com/) `.glyphs` file. However, if you prefer to use a different font editor, the master styles are also maintained as [UFO (Unified Font Object)](http://unifiedfontobject.org/) files and can be edited by lots of font software, like the free and open-source [FontForge](https://fontforge.github.io/) or commercial apps like [RoboFont](http://robofont.com/).
-
-> **—Important—** The UFO source files are generated from the Glyphs source file. Editing the Glyphs file will cause the UFO files to be over-written. You have to commit to editing _either_ the .glyphs file _or_ the .ufo files.
-
-To make life easier for you, configure your editor as follows:
-
-- Set the grid to 128 units. This means that each grid square equals one pixel at 2x scale.
-- Set "Snap points to" to a reasonably high number that's a power-of-two, like 8.
-- Set "SHIFT increment" to 16
-- Set "CMD SHIFT increment" to 128
-
-Note: If you're using Glyphs, this will already be the case as this information is stored in the .glyphs file.
+This font is stored and authored primarily in the [Glyphs](https://glyphsapp.com/)
+`Inter.glyphspackage` directory (a macOS "bundle.")
 
 
 ### Interactive Lab
@@ -170,10 +142,10 @@ This project comes with a simple web-based application for debugging and preview
 To start the lab, simply run this in a terminal (and keep the terminal running.)
 
 ```
-python docs/lab/serve.py
+./docs/lab/serve.py
 ```
 
-You can now visit the URL printed on the screen to use the lab. Simply `make -j STYLE_web` (or `make -j all_web` for all styles) and reload the web page to try a new build.
+You can now visit the URL printed on the screen to use the lab. Simply `make -j web` for all styles or `make var_web` for quickly building only the variable font. Then reload the web page to try the new build.
 
 An online version of the lab is available at <https://rsms.me/inter/lab/> with the most recent official release of the Inter font files.
 
@@ -255,7 +227,7 @@ misc/tools/fontinfo.py -h
 
 ## FAQ
 
-> Do I need Glyphs or RoboFont to build font files?
+> Do I need Glyphs to build font files?
 
 No, you don't. To build font files, all you need is Python. To edit the font files, you need something that can edit .glyphs or UFO files.
 
@@ -263,5 +235,5 @@ No, you don't. To build font files, all you need is Python. To edit the font fil
 
 > I'm getting errors when running `make` in my terminal
 
-This probably means that you need to run `./init.sh`
+Try `make reset`
 

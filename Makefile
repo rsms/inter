@@ -3,6 +3,7 @@ SRCDIR   := $(abspath $(lastword $(MAKEFILE_LIST))/..)
 FONTDIR  := build/fonts
 UFODIR   := build/ufo
 BIN      := $(SRCDIR)/build/venv/bin
+VENV     := build/venv/bin/activate
 VERSION  := $(shell cat version.txt)
 MAKEFILE := $(lastword $(MAKEFILE_LIST))
 
@@ -13,8 +14,8 @@ default: all
 # ---------------------------------------------------------------------------------
 # intermediate sources
 
-$(UFODIR)/%.glyphs: src/%.glyphspackage | $(UFODIR)
-	$(BIN)/python3 build/venv/bin/glyphspkg -o $(dir $@) $^
+$(UFODIR)/%.glyphs: src/%.glyphspackage | $(UFODIR) venv
+	. $(VENV) ; build/venv/bin/glyphspkg -o $(dir $@) $^
 
 # features
 src/features: $(wildcard src/features/*)
@@ -26,14 +27,14 @@ $(UFODIR)/features: src/features
 	@ln -s ../../src/features $(UFODIR)/features
 
 # designspace
-$(UFODIR)/Inter-roman.designspace: $(UFODIR)/Inter.designspace
-	$(BIN)/python3 misc/tools/subset-designspace.py $^ $@
-$(UFODIR)/Inter-italic.designspace: $(UFODIR)/Inter.designspace
-	$(BIN)/python3 misc/tools/subset-designspace.py $^ $@
-$(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features
-	$(BIN)/fontmake -o ufo -g $< --designspace-path $@ \
+$(UFODIR)/Inter-roman.designspace: $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; python misc/tools/subset-designspace.py $^ $@
+$(UFODIR)/Inter-italic.designspace: $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; python misc/tools/subset-designspace.py $^ $@
+$(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
+	. $(VENV) ; fontmake -o ufo -g $< --designspace-path $@ \
 		--master-dir $(UFODIR) --instance-dir $(UFODIR)
-	$(BIN)/python3 misc/tools/postprocess-designspace.py $@
+	. $(VENV) ; python misc/tools/postprocess-designspace.py $@
 
 # master UFOs are byproducts of building Inter.designspace
 $(UFODIR)/Inter-Black.ufo:       $(UFODIR)/Inter.designspace
@@ -50,32 +51,32 @@ $(UFODIR)/Inter-ThinItalic.ufo:  $(UFODIR)/Inter.designspace
 	touch $@
 
 # instance UFOs are generated on demand
-$(UFODIR)/Inter-Light.ufo:            $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Light"
-$(UFODIR)/Inter-LightItalic.ufo:      $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Light Italic"
-$(UFODIR)/Inter-ExtraLight.ufo:       $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Light"
-$(UFODIR)/Inter-ExtraLightItalic.ufo: $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Light Italic"
-$(UFODIR)/Inter-Medium.ufo:           $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Medium"
-$(UFODIR)/Inter-MediumItalic.ufo:     $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Medium Italic"
-$(UFODIR)/Inter-SemiBold.ufo:         $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Semi Bold"
-$(UFODIR)/Inter-SemiBoldItalic.ufo:   $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Semi Bold Italic"
-$(UFODIR)/Inter-Bold.ufo:             $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Bold"
-$(UFODIR)/Inter-BoldItalic.ufo:       $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Bold Italic"
-$(UFODIR)/Inter-ExtraBold.ufo:        $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Bold"
-$(UFODIR)/Inter-ExtraBoldItalic.ufo:  $(UFODIR)/Inter.designspace
-	$(BIN)/fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Bold Italic"
+$(UFODIR)/Inter-Light.ufo:            $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Light"
+$(UFODIR)/Inter-LightItalic.ufo:      $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Light Italic"
+$(UFODIR)/Inter-ExtraLight.ufo:       $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Light"
+$(UFODIR)/Inter-ExtraLightItalic.ufo: $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Light Italic"
+$(UFODIR)/Inter-Medium.ufo:           $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Medium"
+$(UFODIR)/Inter-MediumItalic.ufo:     $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Medium Italic"
+$(UFODIR)/Inter-SemiBold.ufo:         $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Semi Bold"
+$(UFODIR)/Inter-SemiBoldItalic.ufo:   $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Semi Bold Italic"
+$(UFODIR)/Inter-Bold.ufo:             $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Bold"
+$(UFODIR)/Inter-BoldItalic.ufo:       $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Bold Italic"
+$(UFODIR)/Inter-ExtraBold.ufo:        $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Bold"
+$(UFODIR)/Inter-ExtraBoldItalic.ufo:  $(UFODIR)/Inter.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Bold Italic"
 
-# make sure intermediate files are not gc'd by make
+# make sure intermediate files are not rm'd by make
 .PRECIOUS: \
 	$(UFODIR)/Inter-Black.ufo \
 	$(UFODIR)/Inter-BlackItalic.ufo \
@@ -95,6 +96,7 @@ $(UFODIR)/Inter-ExtraBoldItalic.ufo:  $(UFODIR)/Inter.designspace
 	$(UFODIR)/Inter-BoldItalic.ufo \
 	$(UFODIR)/Inter-ExtraBold.ufo \
 	$(UFODIR)/Inter-ExtraBoldItalic.ufo \
+	$(UFODIR)/Inter.glyphs \
 	$(UFODIR)/Inter.designspace \
 	$(UFODIR)/Inter-roman.designspace \
 	$(UFODIR)/Inter-italic.designspace
@@ -102,39 +104,33 @@ $(UFODIR)/Inter-ExtraBoldItalic.ufo:  $(UFODIR)/Inter.designspace
 # ---------------------------------------------------------------------------------
 # products
 
-$(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo | $(FONTDIR)/static
-	$(BIN)/fontmake -u $< -o otf --output-path $@ \
-	--overlaps-backend pathops --production-names
+$(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo | $(FONTDIR)/static venv
+	. $(VENV) ; fontmake -u $< -o otf --output-path $@ \
+		--overlaps-backend pathops --production-names
 
-$(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo | $(FONTDIR)/static
-	$(BIN)/fontmake -u $< -o ttf --output-path $@ \
-	--overlaps-backend pathops --production-names
+$(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo | $(FONTDIR)/static venv
+	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ \
+		--overlaps-backend pathops --production-names
 
-$(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hinted
-	$(BIN)/python3 $(PWD)/build/venv/lib/python/site-packages/ttfautohint \
+$(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python $(PWD)/build/venv/lib/python/site-packages/ttfautohint \
 		--no-info "$<" "$@"
 
-$(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf
-	$(BIN)/python3 misc/tools/rename.py --family "Inter V" -o $@ $<
+$(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf venv
+	. $(VENV) ; python misc/tools/rename.py --family "Inter V" -o $@ $<
 
-$(FONTDIR)/var/%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var
-	$(BIN)/fontmake -o variable -m $< --output-path $@ \
+$(FONTDIR)/var/%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
+	. $(VENV) ; fontmake -o variable -m $< --output-path $@ \
 		--overlaps-backend pathops --production-names
-	$(BIN)/python3 misc/tools/postprocess-vf.py $@
-	$(BIN)/gftools fix-unwanted-tables -t MVAR $@
+	. $(VENV) ; python misc/tools/postprocess-vf.py $@
+	. $(VENV) ; gftools fix-unwanted-tables -t MVAR $@
 
-$(FONTDIR)/var/%.var.otf: $(UFODIR)/%.designspace | $(FONTDIR)/var
-	$(BIN)/fontmake -o variable-cff2 -m $< --output-path $@ \
+$(FONTDIR)/var/%.var.otf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
+	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ \
 		--overlaps-backend pathops --production-names
 
-# $(FONTDIR)/var-hinted/%.ttf: $(FONTDIR)/var/%.ttf
-# 	mkdir -p "$(dir $@)"
-# 	$(BIN)/python3 $(PWD)/build/venv/lib/python/site-packages/ttfautohint \
-# 		--no-info "$<" "$@"
-
-
-%.woff2: %.ttf
-	$(BIN)/woff2_compress "$<"
+%.woff2: %.ttf | venv
+	. $(VENV) ; misc/tools/woff2 compress -o "$@" "$<"
 
 $(FONTDIR)/static:
 	mkdir -p $@
@@ -249,22 +245,25 @@ var: \
 	$(FONTDIR)/var/Inter.var.ttf \
 	$(FONTDIR)/var/Inter-V.var.ttf
 
-var_no_slnt_axis: \
+var_no_slnt_axis: | venv \
 	  $(FONTDIR)/var/Inter-roman.var.ttf \
 	  $(FONTDIR)/var/Inter-italic.var.ttf
-	$(BIN)/python3 misc/tools/postprocess-single-axis-vfs.py $^
+	. $(VENV) ; python misc/tools/postprocess-single-axis-vfs.py $^
 
-var_web: \
-	$(FONTDIR)/var/Inter.var.woff2 \
+var_web: $(FONTDIR)/var/Inter.var.woff2
+
+var_web_all: var_web \
 	$(FONTDIR)/var/Inter-V.var.woff2 \
 	$(FONTDIR)/var/Inter-roman.var.woff2 \
 	$(FONTDIR)/var/Inter-italic.var.woff2
 
+web: var_web_all static_web
+
 all:        static_otf static_ttf static_ttf_hinted static_web static_web_hinted \
-            var var_web var_no_slnt_axis
+            var var_web_all var_no_slnt_axis
 
 .PHONY: all static_otf static_ttf static_ttf_hinted static_web static_web_hinted \
-            var var_web var_no_slnt_axis
+            var var_web var_web_all var_no_slnt_axis web
 
 # ---------------------------------------------------------------------------------
 # testing
@@ -282,16 +281,16 @@ FBAKE_ARGS := check-universal \
               -j \
               -x com.google.fonts/check/family/win_ascent_and_descent
 
-build/fontbakery-report-var.txt: $(FONTDIR)/var/Inter.var.ttf
+build/fontbakery-report-var.txt: $(FONTDIR)/var/Inter.var.ttf | venv
 	@echo "fontbakery Inter.var.ttf > $(@) ..."
-	@$(BIN)/fontbakery \
+	@. $(VENV) ; fontbakery \
 		$(FBAKE_ARGS) -x com.google.fonts/check/STAT_strings \
 		$^ > $@ \
 		|| (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 
-build/fontbakery-report-static.txt: $(wildcard $(FONTDIR)/static/Inter-*.otf)
+build/fontbakery-report-static.txt: $(wildcard $(FONTDIR)/static/Inter-*.otf) | venv
 	@echo "fontbakery static/Inter-*.otf > $(@) ..."
-	@$(BIN)/fontbakery \
+	@. $(VENV) ; fontbakery \
 		$(FBAKE_ARGS) -x com.google.fonts/check/family/underline_thickness \
 		$^ > $@ \
 		|| (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
@@ -349,8 +348,8 @@ dist_step1: clean
 dist_step2: test
 	$(MAKE) -f $(MAKEFILE) -j$(nproc) dist_zip dist_docs
 
-dist_zip:
-	$(BIN)/python3 misc/tools/patch-version.py misc/dist/inter.css
+dist_zip: | venv
+	. $(VENV) ; python misc/tools/patch-version.py misc/dist/inter.css
 	bash misc/makezip2.sh -reveal-in-finder "$(DIST_ZIP)"
 
 dist_docs:
@@ -446,3 +445,19 @@ list:
 	 | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
 
 .PHONY: list
+
+# ---------------------------------------------------------------------------------
+# initialize toolchain
+
+venv: build/venv/config.stamp
+
+build/venv/config.stamp: requirements.txt
+	@mkdir -p build
+	test -d build/venv || python3 -m venv build/venv
+	. $(VENV) ; pip install -Ur requirements.txt
+	touch $@
+
+reset: clean
+	rm -rf build/venv
+
+.PHONY: venv reset
