@@ -95,11 +95,11 @@ There are two things in particular that will help you with this:
 
 You can invoke `make` with either names of styles, names of styles and file formats, or even specific filenames. Here are a few examples:
 
-```
-make -j Regular BoldItalic    # Regular and Bold Italic
-make -j all_ttf               # All styles but only TTF files
-make -j MediumItalic_web      # Medium Italic as TTF, WOFF and WOFF2
-make -j build/hinted/Bold.ttf # Bold TTF with autohints
+```sh
+make -j build/fonts/static/Inter-Regular.otf \
+        build/fonts/static/Inter-MediumItalic.woff2
+make -j static_otf  # all non-variable OTF fonts
+make -j build/fonts/static-hinted/Inter-ExtraLight.woff2
 ```
 
 All resulting font files are written to the `build` directory with `Inter-` as the filename prefix. The `Makefile` file contains information about more possibilities of `make`.
