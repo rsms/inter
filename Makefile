@@ -245,9 +245,10 @@ var: \
 	$(FONTDIR)/var/Inter.var.ttf \
 	$(FONTDIR)/var/Inter-V.var.ttf
 
-var_no_slnt_axis: | venv \
+var_no_slnt_axis: \
 	  $(FONTDIR)/var/Inter-roman.var.ttf \
-	  $(FONTDIR)/var/Inter-italic.var.ttf
+	  $(FONTDIR)/var/Inter-italic.var.ttf \
+	  | venv
 	. $(VENV) ; python misc/tools/postprocess-single-axis-vfs.py $^
 
 var_web: $(FONTDIR)/var/Inter.var.woff2
