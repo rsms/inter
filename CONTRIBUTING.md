@@ -75,7 +75,7 @@ Open two terminals: in one, run a local web server with `./docs/lab/serve.py`. I
 
 1. Edit in Glyphs.app
 2. Run `make var_web`
-3. Reload the lab at `http://localhost:3003/`
+3. Reload the lab at `http://localhost:3003/?varfont=1`
 4. Repeat
 
 Before submitting a Pull Request or otherwise contribute your changes:
