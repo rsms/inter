@@ -77,8 +77,8 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 
       <label class="label-and-value varfontControl">
         <span title="Optical size">opsz:</span>
-        <input type="range" value="0" step="0.01" min="16" max="72" name="varOpsz">
-        <input type="number" value="0" step="0.01" min="16" max="72" name="varOpszNum">
+        <input type="range" value="0" step="0.01" min="16" max="32" name="varOpsz">
+        <input type="number" value="0" step="0.01" min="16" max="32" name="varOpszNum">
       </label>
 
       <label class="label-and-value staticfontControl">
@@ -873,7 +873,7 @@ function main() {
   let varState = {
     weight: 400, // 400..900
     slant: 0,    // 0..-10
-    opsz: 16,    // 16..72
+    opsz: 16,    // 16..32
   }
 
   function updateVarFont() {
