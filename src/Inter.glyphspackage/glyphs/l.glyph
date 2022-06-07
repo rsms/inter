@@ -206,34 +206,36 @@ width = 442;
 anchors = (
 {
 name = bottom;
-pos = (210,0);
+pos = (212,0);
 },
 {
 name = cross;
-pos = (210,768);
+pos = (212,768);
 },
 {
 name = raccent;
-pos = (440,1490);
+pos = (442,1490);
 },
 {
 name = top;
-pos = (210,1676);
+pos = (212,1676);
 }
 );
 layerId = m007;
+metricLeft = "=H-20";
+metricRight = "=H-20";
 shapes = (
 {
 closed = 1;
 nodes = (
-(126,1490,l),
-(126,0,l),
-(296,0,l),
-(296,1490,l)
+(128,1490,l),
+(128,0,l),
+(298,0,l),
+(298,1490,l)
 );
 }
 );
-width = 422;
+width = 426;
 },
 {
 anchors = (
