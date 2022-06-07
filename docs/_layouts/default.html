@@ -10,10 +10,6 @@ assign url_root = "/inter/" %}{% endif %}{%
 
 assign release_version = site.data.fontinfo[0].version %}{%
 
-capture download_url
-  %}https://github.com/rsms/inter/releases/download/v{{ release_version }}/Inter-{{ release_version }}.zip{%
-endcapture %}{%
-
 for file in site.static_files %}{%
   assign _path = file.path | remove_first: "/inter" %}{%
   if _path == "/res/base.css" %}{%
@@ -88,7 +84,7 @@ endfor
         <li class="nav-dynmetrics"><a href="{{url_root}}dynmetrics/" {% if page.url contains "/dynmetrics/" %}class="active"{% endif %}>Metrics</a></li>
         <li class="nav-lab"><a href="{{url_root}}lab/" {% if page.url contains "/lab/" %}class="active"{% endif %}>Lab</a></li>
         <!-- <li class="nav-source"><a href="https://github.com/rsms/inter/">Source</a></li> -->
-        <li class="nav-download"><a href="{{ download_url }}">Download &darr;</a></li>
+        <li class="nav-download"><a href="{{url_root}}download/" {% if page.url contains "/download/" %}class="active"{% endif %}>Download &darr;</a></li>
       </ul>
     </div>
 

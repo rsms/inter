@@ -1,0 +1,211 @@
+---
+layout: default
+title: Download Inter
+---
+{%
+
+assign release_version = site.data.fontinfo[0].version %}{%
+
+capture download_filename
+  %}Inter-{{ release_version }}.zip{%
+endcapture %}{%
+
+capture download_url
+  %}https://github.com/rsms/inter/releases/download/v{{ release_version }}/{{ download_filename }}{%
+endcapture %}{%
+
+if site.safe == false %}{%
+assign url_root = "/" %}{% else %}{%
+assign url_root = "/inter/" %}{% endif %}{%
+
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/samples/index.css" %}{%
+    assign index_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/bindings.js" %}{%
+    assign bindings_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/graphplot.js" %}{%
+    assign graphplot_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor
+
+%}
+<meta http-equiv="refresh" content="0;url={{ download_url }}" />
+<style type="text/css">
+body {
+  background: white;
+}
+div.row.download {
+  font-weight: 460;
+}
+.dim { opacity:0.4; text-decoration: none }
+.dim:hover { opacity:1 }
+.large {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+form.large { zoom: 1.2 }
+.download ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+.install-instructions {
+  max-width: 40em;
+  display: none;
+}
+.install-instructions.active {
+  display: block;
+}
+
+</style>
+<div class="row download"><div>
+  <p class="large">
+    Downloading Inter version {{ release_version }} ...<br>
+    <a href="{{ download_url }}" class="dim">If the download is not starting automatically, click here</a>
+  </p>
+
+  <!-- <h2>Support Inter</h2> -->
+  <p class="large">
+    Inter is <a href="https://github.com/rsms/inter">open source</a>.<br>
+    Please consider giving us a small donation to keep this project alive!
+  </p>
+  <p class="large">
+    <a id="sponsor-button"
+       title="Help Inter by becoming a sponsor and donating a coffee or two"
+       href="https://github.com/sponsors/rsms">
+       <span>Support Inter...</span>
+    </a>
+  </p>
+
+  <form class="large" action="https://www.paypal.com/donate" method="post" target="_top">
+     <input type="hidden" name="business" value="rsms@notion.se">
+     <input type="hidden" name="no_recurring" value="0">
+     <input type="hidden" name="item_name" value="Inter typeface">
+     <!-- <input type="hidden" name="item_number" value="Fall Cleanup Campaign"> -->
+     <input type="hidden" name="currency_code" value="USD">
+     <input type="submit" name="submit" value="One-time donation via PayPal...">
+  </form>
+
+  <h2>How to install</h2>
+  <p>
+    Show instructions for
+    <select id="install-menu">
+      <option value="mac">macOS</option>
+      <option value="windows">Windows</option>
+      <option value="linux">Linux (Ubuntu-like)</option>
+    </select>
+  </p>
+
+  <div id="install-mac" class="install-instructions active">
+    <h3>Using Font Book</h3>
+    <ol>
+      <li>Open the "Font Book" application</li>
+      <li>In the main menu, select File, then "Add Fonts..."</li>
+      <li>Find the "Inter Desktop" folder, select the folder and press the Open button</li>
+    </ol>
+    <h3>Using Finder</h3>
+    <ol>
+      <li>Copy the "Inter Desktop" folder</li>
+      <li>Press ⇧⌘G in Finder and go to:  ~/Library/Fonts</li>
+      <li>Delete any existing "Inter" files and folders</li>
+      <li>Paste the "Inter Desktop" folder</li>
+    </ol>
+  </div>
+
+  <div id="install-windows" class="install-instructions">
+    <ol>
+      <li>Copy the "Inter Desktop" folder in the zip file to your Desktop</li>
+      <li>Open the "Inter Desktop" folder on your Desktop</li>
+      <li>Select all font files</li>
+      <li>Right-click the selected files and choose "Install for all users"</li>
+    </ol>
+    <p>
+      If you have a previous installation of Inter, you should make sure
+      to remove those fonts files before installing new ones. You need to
+      install the font for all users, as some software requires fonts to be
+      global.
+    </p>
+    <h3>ClearType-hinted fonts</h3>
+    <p>
+    Inter also comes with a version that has TrueType hints used by ClearType
+    on Windows. This changes the appearance of the fonts when rendered on a
+    system with ClearType enabled and can in some cases increase the legibility
+    of text. However, the hints for Inter are automatically generated and are
+    not always a good thing.
+    </p>
+    <p>
+    If you do prefer to use the version with hints, use the font files in the
+    "Inter Hinted for Windows/Desktop" folder instead of "Inter Desktop".
+    </p>
+  </div>
+
+  <div id="install-linux" class="install-instructions">
+    <p>
+      There are many different Linux distributions and some handle font management
+      differently. These instructions are for the most common Linux distributions.
+    </p>
+    <ol>
+      <li>
+        Create a folder called ".fonts" in your home directory.<br>
+        Example: <tt>mkdir -p ~/.fonts</tt>
+      </li>
+      <li>
+        Copy the otf files in the "Inter Desktop" folder into your
+        <tt>.fonts</tt> directory.<br>
+        Example: <tt>cp "Inter Desktop"/*.otf ~/.fonts/</tt>
+      </li>
+    </ol>
+    <p>
+      You may have to restart apps and/or your window server session.
+    </p>
+    <p>
+      Again, these instructions are for the most common Linux distributuons like
+      Ubuntu and might not apply to you. Refer to the documentation for your
+      distribution for more details on how to manage fonts in your OS.
+    </p>
+    <h3>Linux Q&amp;A</h3>
+    <p>
+      Q: I installed the fonts but they don't show up<br>
+      A: Try rebuilding the font database:<br>
+      <tt>sudo fc-cache -f -v</tt><br>
+      Then restart your program(s).
+    </p>
+    <p>
+      Q: Is there a way to tell if Inter was actually installed?<br>
+      A: Try running: <tt>fc-list | grep "Inter"</tt>
+    </p>
+    <p>
+      Q: <tt>~/.fonts</tt> is an old thing.
+      The new thing is <tt>~/.local/share/fonts</tt><br>
+      A: Yes, that is true for recent distributions.
+      These distros usually support
+      <tt>~/.fonts</tt> as well making these instructions work for everyone.
+    </p>
+  </div>
+
+
+</div></div>
+<script type="text/javascript">(function(){
+
+let activeInstructions = document.querySelector('.install-instructions.active')
+
+function activateInstructions(id) {
+  activeInstructions.classList.remove("active")
+  activeInstructions = document.querySelector('#install-' + id)
+  activeInstructions.classList.add("active")
+}
+
+let installMenu = document.querySelector('#install-menu')
+installMenu.onchange = ev => {
+  activateInstructions(installMenu.value)
+}
+
+if (/linux/i.test(navigator.userAgent)) {
+  activateInstructions('linux')
+} else if (/windows/i.test(navigator.userAgent)) {
+  activateInstructions('windows')
+} else if (/mac os/i.test(navigator.userAgent)) {
+  activateInstructions('mac')
+}
+
+})();</script>

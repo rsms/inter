@@ -3,12 +3,6 @@ layout: default
 ---
 {%
 
-assign release_version = site.data.fontinfo[0].version %}{%
-
-capture download_url
-  %}https://github.com/rsms/inter/releases/download/v{{ release_version }}/Inter-{{ release_version }}.zip{%
-endcapture %}{%
-
 for file in site.static_files %}{%
   assign _path = file.path | remove_first: "/inter" %}{%
   if _path == "/index.css" %}{%
@@ -89,7 +83,7 @@ endfor
     <c span=3.. span-s=row>
       <p>
         Using Inter is as easy as
-        <a class="download-link" href="{{download_url}}">downloading &amp; installing</a>
+        <a class="download-link" href="download/">downloading &amp; installing</a>
         the font files. If you're making a web thing, you can use the following CSS.
         <!-- or get it from <a href="https://fonts.google.com/specimen/Inter">Google Fonts</a>. -->
       </p>
