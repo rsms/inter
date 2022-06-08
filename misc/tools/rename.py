@@ -6,13 +6,14 @@ from fontTools.ttLib import TTFont
 WINDOWS_ENGLISH_IDS = 3, 1, 0x409
 MAC_ROMAN_IDS = 1, 0, 0
 
-LEGACY_FAMILY      = 1
-TRUETYPE_UNIQUE_ID = 3
-FULL_NAME          = 4
-POSTSCRIPT_NAME    = 6
-PREFERRED_FAMILY   = 16
-SUBFAMILY_NAME     = 17
-WWS_FAMILY         = 21
+LEGACY_FAMILY       = 1
+SUBFAMILY_NAME      = 2
+TRUETYPE_UNIQUE_ID  = 3
+FULL_NAME           = 4
+POSTSCRIPT_NAME     = 6
+PREFERRED_FAMILY    = 16
+TYPO_SUBFAMILY_NAME = 17
+WWS_FAMILY          = 21
 
 
 FAMILY_RELATED_IDS = set([
@@ -31,12 +32,12 @@ def removeWhitespace(s):
   return whitespace_re.sub("", s)
 
 
-def setFullName(font, fullName):
+def set_full_name(font, fullName, fullNamePs):
   nameTable = font["name"]
   nameTable.setName(fullName, FULL_NAME, 1, 0, 0)     # mac
   nameTable.setName(fullName, FULL_NAME, 3, 1, 0x409) # windows
-  nameTable.setName(fullName, POSTSCRIPT_NAME, 1, 0, 0)     # mac
-  nameTable.setName(fullName, POSTSCRIPT_NAME, 3, 1, 0x409) # windows
+  nameTable.setName(fullNamePs, POSTSCRIPT_NAME, 1, 0, 0)     # mac
+  nameTable.setName(fullNamePs, POSTSCRIPT_NAME, 3, 1, 0x409) # windows
 
 
 def getFamilyName(font):
@@ -78,13 +79,25 @@ def renameStylesGoogleFonts(font):
         # fixup e.g. "ExtraBoldItalic" -> "ExtraBold Italic"
         s = s[:len(s) - len("Italic")] + " Italic"
       rec.string = s.strip()
-    if rid in (SUBFAMILY_NAME,) or rid in vfInstanceSubfamilyNameIds:
+    if rid in (SUBFAMILY_NAME, TYPO_SUBFAMILY_NAME) or rid in vfInstanceSubfamilyNameIds:
       s = removeWhitespace(rec.toUnicode())
       if s != "Italic" and s.endswith("Italic"):
         # fixup e.g. "ExtraBoldItalic" -> "ExtraBold Italic"
         s = s[:len(s) - len("Italic")] + " Italic"
       rec.string = s.strip()
     # else: ignore standard names unrelated to style
+
+
+def setStyleName(font, newStyleName):
+  newFullName = getFamilyName(font).strip() + " " + newStyleName
+  newFullNamePs = removeWhitespace(newFullName)
+  set_full_name(font, newFullName, newFullNamePs)
+
+  nameTable = font["name"]
+  for rec in nameTable.names:
+    rid = rec.nameID
+    if rid in (SUBFAMILY_NAME, TYPO_SUBFAMILY_NAME):
+      rec.string = newStyleName
 
 
 def setFamilyName(font, nextFamilyName):
@@ -136,6 +149,8 @@ def main():
     help='Output font file. Defaults to input file (overwrite)')
   a('--family', metavar='<name>',
     help='Rename family to <name>')
+  a('--style', metavar='<name>',
+    help='Rename style to <name>')
   a('--google-style', action='store_true',
     help='Rename style names to Google Fonts standards')
   a('input', metavar='<file>',
@@ -151,6 +166,10 @@ def main():
     if args.family:
       editCount += 1
       setFamilyName(font, args.family)
+
+    if args.style:
+      editCount += 1
+      setStyleName(font, args.style)
 
     if args.google_style:
       editCount += 1
