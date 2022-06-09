@@ -19,19 +19,6 @@ nodes = (
 width = 606;
 },
 {
-background = {
-shapes = (
-{
-closed = 1;
-nodes = (
-(630,1490,l),
-(474,880,l),
-(199,880,l),
-(260,1490,l)
-);
-}
-);
-};
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
@@ -299,10 +286,7 @@ width = 494;
 );
 metricLeft = quoteleft;
 metricRight = quoteleft;
-tags = (
-"TODO-opsz"
-);
-unicode = 8217;
+unicode = (8217,700);
 userData = {
 "interface.width-adjustments" = (
 -16
