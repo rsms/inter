@@ -943,77 +943,6 @@ width = 1058;
 anchors = (
 {
 name = bottom;
-pos = (562,0);
-},
-{
-name = ogonek;
-pos = (690,0);
-},
-{
-name = top;
-pos = (562,1262);
-},
-{
-name = tophorn;
-pos = (844,774);
-}
-);
-associatedMasterId = m007;
-guides = (
-{
-orientation = center;
-angle = 90;
-pos = (-8686,1208);
-},
-{
-angle = 90;
-pos = (562,1120);
-}
-);
-layerId = "EC13963A-F54F-4DA5-A56A-827114BAE8E2";
-name = "Jun 8, 22, 15:55";
-shapes = (
-{
-closed = 1;
-nodes = (
-(855,-24,o),
-(1052,204,o),
-(1052,526,cs),
-(1052,850,o),
-(855,1080,o),
-(562,1080,cs),
-(269,1080,o),
-(72,850,o),
-(72,526,cs),
-(72,204,o),
-(269,-24,o),
-(562,-24,cs)
-);
-},
-{
-closed = 1;
-nodes = (
-(362,130,o),
-(246,286,o),
-(246,526,cs),
-(246,768,o),
-(363,926,o),
-(562,926,cs),
-(761,926,o),
-(878,767,o),
-(878,526,cs),
-(878,287,o),
-(762,130,o),
-(562,130,cs)
-);
-}
-);
-width = 1124;
-},
-{
-anchors = (
-{
-name = bottom;
 pos = (582,0);
 },
 {
@@ -1029,6 +958,7 @@ name = tophorn;
 pos = (864,774);
 }
 );
+associatedMasterId = m007;
 guides = (
 {
 orientation = center;
@@ -1040,8 +970,8 @@ angle = 90;
 pos = (582,1120);
 }
 );
-layerId = m007;
-name = "Regular Display";
+layerId = "EF05C08A-C8AF-4681-AF29-09D19ED87332";
+name = "Jun 8, 22, 16:01";
 shapes = (
 {
 closed = 1;
@@ -1079,6 +1009,76 @@ nodes = (
 }
 );
 width = 1164;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (562,0);
+},
+{
+name = ogonek;
+pos = (690,0);
+},
+{
+name = top;
+pos = (562,1262);
+},
+{
+name = tophorn;
+pos = (844,774);
+}
+);
+guides = (
+{
+orientation = center;
+angle = 90;
+pos = (-8686,1208);
+},
+{
+angle = 90;
+pos = (562,1120);
+}
+);
+layerId = m007;
+name = "Regular Display";
+shapes = (
+{
+closed = 1;
+nodes = (
+(855,-24,o),
+(1052,204,o),
+(1052,526,cs),
+(1052,850,o),
+(855,1080,o),
+(562,1080,cs),
+(269,1080,o),
+(72,850,o),
+(72,526,cs),
+(72,204,o),
+(269,-24,o),
+(562,-24,cs)
+);
+},
+{
+closed = 1;
+nodes = (
+(362,130,o),
+(244,286,o),
+(244,526,cs),
+(244,768,o),
+(363,926,o),
+(562,926,cs),
+(761,926,o),
+(880,767,o),
+(880,526,cs),
+(880,287,o),
+(762,130,o),
+(562,130,cs)
+);
+}
+);
+width = 1124;
 }
 );
 unicode = 111;
