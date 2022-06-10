@@ -118,7 +118,7 @@ nodes = (
 );
 }
 );
-width = 1630;
+width = 1628;
 },
 {
 anchors = (
@@ -170,7 +170,7 @@ nodes = (
 );
 }
 );
-width = 1384;
+width = 1386;
 },
 {
 anchors = (
@@ -645,25 +645,25 @@ width = 1598;
 anchors = (
 {
 name = bottom;
-pos = (798,0);
+pos = (768,0);
 },
 {
 name = ogonek;
-pos = (1566,0);
+pos = (1536,0);
 },
 {
 name = tonos;
-pos = (444,1490);
+pos = (414,1490);
 },
 {
 name = top;
-pos = (798,1676);
+pos = (768,1676);
 }
 );
 guides = (
 {
 angle = 90;
-pos = (798,1575);
+pos = (768,1575);
 }
 );
 layerId = m009;
@@ -672,29 +672,30 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(790,1080,l),
-(794,1080,l),
-(1125,0,l),
-(1566,0,l),
-(1050,1490,l),
-(546,1490,l),
-(30,0,l),
-(458,0,l)
+(760,1080,l),
+(764,1080,l),
+(1095,0,l),
+(1536,0,l),
+(1020,1490,l),
+(516,1490,l),
+(0,0,l),
+(428,0,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(386,270,l),
-(1206,270,l),
-(1206,572,l),
-(386,572,l)
+(356,270,l),
+(1176,270,l),
+(1176,572,l),
+(356,572,l)
 );
 }
 );
-width = 1596;
+width = 1536;
 }
 );
+metricRight = "=|A";
 unicode = 65;
 userData = {
 com.typemytype.robofont.guideline.magnetic.9EkLRXjahr = 5;
