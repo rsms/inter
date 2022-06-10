@@ -82,10 +82,10 @@
   --highlight-bg: #ddd;
   --guide-color: rgba(255,0,255,0.15);
 
-  --icon-minimize: url(../res/icons/minimize-black.svg);
-  --icon-popup: url(../res/icons/popup-black.svg);
-  --icon-reset: url(../res/icons/reset-black.svg);
-  --icon-settings: url(../res/icons/settings-black.svg);
+  --icon-minimize: url(icons/minimize-black.svg);
+  --icon-popup: url(icons/popup-black.svg);
+  --icon-reset: url(icons/reset-black.svg);
+  --icon-settings: url(icons/settings-black.svg);
 }
 
 :root.color-scheme-dark {
@@ -116,10 +116,10 @@
   --highlight-bg: #333;
   --guide-color: rgba(255,100,255,0.15);
 
-  --icon-minimize: url(../res/icons/minimize.svg);
-  --icon-popup: url(../res/icons/popup.svg);
-  --icon-reset: url(../res/icons/reset.svg);
-  --icon-settings: url(../res/icons/settings.svg);
+  --icon-minimize: url(icons/minimize.svg);
+  --icon-popup: url(icons/popup.svg);
+  --icon-reset: url(icons/reset.svg);
+  --icon-settings: url(icons/settings.svg);
 }
 
 /* document ———————————————————————————————————————————————————————————————————————————— */
@@ -129,7 +129,7 @@ body {
   --fgColorMax: var(--fgColor);
   background-color: var(--bgColor);
   color: var(--fgColor);
-  font: 11px var(--font-family), sans-serif;
+  font: 11px var(--font-family),-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   font-weight:400; /*300=light, 400=regular, 500=medium, 600=semibold*/
   transition: all 168ms cubic-bezier(0.17, 0.65, 0.48, 1);
   transition-property: color, background;
@@ -175,6 +175,10 @@ label {
   margin: 2px 0;
 }
 
+input[type="number"], input[type="text"] {
+  font: inherit;
+}
+
 input[type="number"] {
   width:50px;
   background: none;
@@ -183,6 +187,8 @@ input[type="number"] {
   padding: 4px;
   border-radius: 2px;
   background: var(--input-color-bg);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
 }
 
 select {
@@ -200,7 +206,9 @@ select {
   background-position: right center;
 }
 /* fix for Firefox issue:; */
-select option { font-family:var(--font-family),Inter; }
+select option {
+  font-family:var(--font-family),Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+}
 
 input[type="number"]:focus,
 input[type="text"]:focus,
@@ -444,7 +452,7 @@ body.sidebar-minimized #sidebar-button {
   background: var(--bgColor);
   padding: 16px 24px 24px 24px;
   user-select:none; -moz-user-select: none; -webkit-user-select:none;
-  font-family: var(--font-family), sans-serif;
+  font-family: var(--font-family),-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   overflow: auto;
   letter-spacing:0.012em;
   transform-origin:100% 0%;
@@ -492,9 +500,6 @@ body.sidebar-minimized .options {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  /*.options select[name="sample"] {
-    width:225px;
-  }*/
   .options input::placeholder {
     color: var(--fgColor);
     opacity: 0.4;
@@ -504,10 +509,11 @@ body.sidebar-minimized .options {
   }
   .options .label-and-value {
     display: flex;
-    flex-wrap: nowrap;
+    /*flex-wrap: nowrap;*/
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    height: var(--fieldHeight);
+    min-height: var(--fieldHeight);
   }
   .options .label-and-value > *:first-child {
     flex: 0 0 auto;
@@ -515,18 +521,26 @@ body.sidebar-minimized .options {
     text-align: left;
     margin-right:6px;
   }
+  .options .label-and-value select {
+    width:90px;
+  }
   .options .label-and-value input {
     width: 50px;
     max-height: var(--fieldHeight);
     box-sizing: border-box;
   }
+  .options .label-and-value.with-slider input[type="number"] {
+    width: auto;
+    flex: 1 1 auto;
+    border: none;
+    padding: 2px;
+    margin-left: -2px;
+    background: transparent;
+  }
   .options label input[type="checkbox"] + * {
     display: inline-block;
     min-width:50%;
   }
-  /*.options label input[type="checkbox"] + *:hover {
-    color: var(--fgColorMax);
-  }*/
   .options label.rasterizePhrase {
     margin-left:20px;
     margin-bottom:20px;
@@ -542,46 +556,39 @@ body.sidebar-minimized .options {
   .options input[type="checkbox"] + * {
     user-select: none; -moz-user-select: none; -webkit-user-select:none;
   }
+  .options .label-and-value.with-slider {
+    display: flex;
+    height: calc(var(--fieldHeight) * 2);
+    margin-bottom: var(--rowBottomMargin);
+  }
   .options .varfontControl,
   .options .staticfontControl {
     transition: all 168ms cubic-bezier(0.17, 0.65, 0.48, 1);
     transition-property: opacity, height, margin;
   }
-  .options .varfontControl,
+  .options .label-and-value.with-slider.varfontControl,
   body.varfont .options .staticfontControl {
+    display: block;
     pointer-events:none;
     overflow: hidden;
-    opacity:0;
+    opacity: 0;
     height: 0;
+    min-height: 0;
     margin: 0;
   }
-  body.varfont .options .varfontControl {
+  body.varfont .options .label-and-value.with-slider.varfontControl {
+    display: flex;
     overflow: visible;
     pointer-events:all;
     opacity:1;
-    height: var(--fieldHeight);
+    height: calc(var(--fieldHeight) * 2);
     margin-bottom: var(--rowBottomMargin);
   }
-  /*body.varfont .options .staticfontControl {
-    display: none;
-  }*/
-  .options .varfontControl .label-and-value {
-    display: flex;
-  }
-  /*body.varfont .options select[name="weight"] {
-    pointer-events: none;
-    opacity: 0.4;
-  }*/
   .options input[type="range"] {
     flex: 1 1 auto;
   }
-  .options input[type="range"] + input[type="number"] {
-    flex: 0 1 auto;
-    width: 40px;
-    border: none;
-    padding: 2px;
-    margin-left: 4px;
-    background: transparent;
+  .options input[type="number"] + input[type="range"] {
+    flex: 0 0 100%;
   }
   .options .label-and-value input + note,
   .options .label-and-value select + note {

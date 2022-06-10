@@ -32,14 +32,14 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     <link href="lab.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese">
   </head>
-  <body class="init-anim">
+  <body class="init-anim varfont">
     <div id="sidebar-button"></div>
     <div class="options">
 
       <div class="flex-x">
         <label title="Use variable font instead of static font files">
           <span>VF</span>
-          <input type="checkbox" name="varfont">
+          <input type="checkbox" name="varfont" checked>
         </label>
         <label class="italic-setting" title="Italic">
           <span>I</span>
@@ -55,30 +55,31 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         </label>
       </div>
 
-      <label class="label-and-value">
+      <label class="label-and-value with-slider">
         <span>Size:</span>
-        <input type="range" value="22" step="1" min="4" max="128" name="_sizeRange">
-        <input type="number" value="22" step="1" min="4" max="1024" name="size">
+        <input type="number" value="22" step="1" min="6" max="1024" name="size">
+        <input type="range" value="22" step="1" min="6" max="256" name="_sizeRange">
         <!-- <note><span class="unit">dp</span></note> -->
       </label>
 
       <!-- Variable font controls (hidden when not using variable fonts) -->
-      <label class="label-and-value varfontControl">
-        <span title="Weight">wght:</span>
-        <input type="range" value="400" step="1" min="100" max="900" name="varWeight">
-        <input type="number" value="400" step="1" min="100" max="900" name="varWeightNum">
-      </label>
 
-      <label class="label-and-value varfontControl">
-        <span title="Slant">slnt:</span>
-        <input type="range" value="0" step="0.01" min="0" max="10" name="varSlant">
-        <input type="number" value="0" step="0.01" min="0" max="10" name="varSlantNum">
-      </label>
-
-      <label class="label-and-value varfontControl">
+      <label class="label-and-value with-slider varfontControl">
         <span title="Optical size">opsz:</span>
-        <input type="range" value="0" step="0.01" min="16" max="32" name="varOpsz">
-        <input type="number" value="0" step="0.01" min="16" max="32" name="varOpszNum">
+        <input type="number" value="0" step="1" min="14" max="32" name="varOpszNum">
+        <input type="range" value="0" step="0.01" min="14" max="32" name="varOpsz">
+      </label>
+
+      <label class="label-and-value with-slider varfontControl">
+        <span title="Weight">wght:</span>
+        <input type="number" value="400" step="1" min="100" max="900" name="varWeightNum">
+        <input type="range" value="400" step="1" min="100" max="900" name="varWeight">
+      </label>
+
+      <label class="label-and-value with-slider varfontControl">
+        <span title="Slant">slnt:</span>
+        <input type="number" value="0" step="0.1" min="0" max="10" name="varSlantNum">
+        <input type="range" value="0" step="0.01" min="0" max="10" name="varSlant">
       </label>
 
       <label class="label-and-value staticfontControl">
@@ -378,7 +379,7 @@ class BoundVar {
 
   getValue(ev) {
     return this.valueGetter ? this.valueGetter(this.e, this.lastValue, ev)
-         : this.isCheckbox ? (this.e.checked || null)
+         : this.isCheckbox ? this.e.checked
          : this.isNumber ? this.e.valueAsNumber
          : this.e.value
   }
@@ -500,7 +501,7 @@ class Vars {
 
   refreshValue(name) {
     let v = this.vars.get(name)
-    return v ? this._refreshValue(v) : null
+    return v === undefined || v === null ? null : this._refreshValue(v)
   }
 
   _refreshValue(v, ev) {
@@ -593,7 +594,9 @@ class Vars {
       if (v.isNumber) {
         existingValue = parseFloat(existingValue)
       } else if (v.isCheckbox) {
-        existingValue = existingValue != '0' && existingValue != 'false' && existingValue != 'off'
+        existingValue = existingValue != '0' &&
+                        existingValue != 'false' &&
+                        existingValue != 'off'
       }
       v.setValue(existingValue)
     } else {
@@ -873,7 +876,7 @@ function main() {
   let varState = {
     weight: 400, // 400..900
     slant: 0,    // 0..-10
-    opsz: 16,    // 16..32
+    opsz: 14,    // 14..32
   }
 
   function updateVarFont() {
@@ -927,62 +930,59 @@ function main() {
     updateVarFont()
   })
 
-  let varWeightNum = vars.bind('varWeightNum', (e, v) => {
+  let varWeightNum = vars.bind('_wght', '[name="varWeightNum"]', (e, v) => {
     if (varWeightRange && !varWeightSettingValueImpl)
-      varWeightRange.setValue(v)
+      vars.setValue("wght", v)
   })
 
-  let varSlantNum = vars.bind('varSlantNum', (e, v) => {
+  let varSlantNum = vars.bind('_slnt', '[name="varSlantNum"]', (e, v) => {
     if (varSlantRange && !varSlantSettingValueImpl)
-      varSlantRange.setValue(v)
+      vars.setValue("slnt", v)
   })
 
-  let varOpszNum = vars.bind('varOpszNum', (e, v) => {
+  let varOpszNum = vars.bind('_opsz', '[name="varOpszNum"]', (e, v) => {
     if (varOpszRange && !varOpszSettingValueImpl)
-      varOpszRange.setValue(v)
+      vars.setValue("opsz", v)
   })
 
-  varWeightRange = vars.bind('varWeight', (e, v) => {
+  function snapValue(v, factor) {
+    if (shiftKeyPressed && (keyPressed == "" || keyPressed == "Shift"))
+      v = Math.round(v / factor) * factor
+    return v
+  }
+
+  varWeightRange = vars.bind('wght', '[name="varWeight"]', (e, v) => {
     varState.weight = v
     varWeightSettingValueImpl = true
     varWeightNum.setValue(v)
     varWeightSettingValueImpl = false
     updateVarFont()
   }, (e, prevValue, ev) => {
-    if (prevValue === undefined) {
+    if (prevValue === undefined)
       return 400
-    }
-    v = e.valueAsNumber
-    if (shiftKeyPressed && (keyPressed == "" || keyPressed == "Shift")) {
-      v = Math.round(v / 100) * 100
-    }
-    return v
+    return snapValue(e.valueAsNumber, 100)
   })
 
-  varSlantRange = vars.bind('varSlant', (e, v) => {
+  varSlantRange = vars.bind('slnt', '[name="varSlant"]', (e, v) => {
     varState.slant = v
     varSlantSettingValueImpl = true
     varSlantNum.setValue(v)
     varSlantSettingValueImpl = false
     updateVarFont()
   }, (e, prevValue, ev) => {
-    if (prevValue === undefined) {
+    if (prevValue === undefined)
       return 0
-    }
-    return e.valueAsNumber !== undefined ? e.valueAsNumber : e.value
+    return snapValue(e.valueAsNumber, 1)
   })
 
-  varOpszRange = vars.bind('varOpsz', (e, v) => {
+  varOpszRange = vars.bind('opsz', '[name="varOpsz"]', (e, v) => {
     varState.opsz = v
     varOpszSettingValueImpl = true
     varOpszNum.setValue(v)
     varOpszSettingValueImpl = false
     updateVarFont()
   }, (e, prevValue, ev) => {
-    if (prevValue === undefined) {
-      return 0
-    }
-    return e.valueAsNumber !== undefined ? e.valueAsNumber : e.value
+    return snapValue(e.valueAsNumber, 1)
   })
 
 
