@@ -123,7 +123,7 @@ $(FONTDIR)/var/%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable -m $< --output-path $@ \
 		--overlaps-backend pathops --production-names
 	. $(VENV) ; python misc/tools/postprocess-vf.py $@
-	. $(VENV) ; gftools fix-unwanted-tables -t MVAR $@
+	@#. $(VENV) ; gftools fix-unwanted-tables -t MVAR $@
 
 $(FONTDIR)/var/%.var.otf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ \
