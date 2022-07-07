@@ -1,4 +1,5 @@
 {
+color = 4;
 glyphname = blackSmallSquare.case;
 layers = (
 {
@@ -17,7 +18,7 @@ layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 shapes = (
 {
 alignment = -1;
-pos = (30,152);
+pos = (25,152);
 ref = blackSmallSquare;
 }
 );
@@ -38,6 +39,8 @@ width = 1152;
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 shapes = (
 {
+alignment = -1;
+pos = (25,152);
 ref = blackSmallSquare;
 }
 );
@@ -47,6 +50,8 @@ width = 1152;
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+alignment = -1;
+pos = (0,152);
 ref = blackSmallSquare;
 }
 );
@@ -56,6 +61,8 @@ width = 816;
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 shapes = (
 {
+alignment = -1;
+pos = (25,152);
 ref = blackSmallSquare;
 }
 );
@@ -76,6 +83,8 @@ width = 1024;
 layerId = m008;
 shapes = (
 {
+alignment = -1;
+pos = (25,152);
 ref = blackSmallSquare;
 }
 );
@@ -85,6 +94,8 @@ width = 1024;
 layerId = m009;
 shapes = (
 {
+alignment = -1;
+pos = (0,152);
 ref = blackSmallSquare;
 }
 );
@@ -94,6 +105,8 @@ width = 752;
 layerId = m010;
 shapes = (
 {
+alignment = -1;
+pos = (25,152);
 ref = blackSmallSquare;
 }
 );
@@ -115,14 +128,15 @@ layerId = m012;
 shapes = (
 {
 alignment = -1;
-pos = (30,152);
+pos = (25,152);
 ref = blackSmallSquare;
 }
 );
 width = 896;
 }
 );
-metricWidth = bullet;
+metricLeft = blackSmallSquare;
+metricWidth = blackSmallSquare;
 tags = (
 "TODO-opsz"
 );

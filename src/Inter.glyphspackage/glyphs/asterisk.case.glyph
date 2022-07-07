@@ -34,6 +34,8 @@ pos = (708,1708);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
+alignment = -1;
+pos = (0,-326);
 ref = asterisk;
 }
 );
@@ -52,6 +54,8 @@ pos = (1544,1024);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+alignment = -1;
+pos = (0,-326);
 ref = asterisk;
 }
 );
@@ -60,25 +64,27 @@ width = 1246;
 {
 guides = (
 {
-pos = (1200,1024);
+pos = (1146,1024);
 },
 {
-pos = (1468,1448);
+pos = (1414,1448);
 },
 {
-pos = (980,460);
+pos = (926,460);
 },
 {
-pos = (732,352);
+pos = (678,352);
 },
 {
 angle = 90;
-pos = (1236,1708);
+pos = (1182,1708);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 shapes = (
 {
+alignment = -1;
+pos = (-54,-326);
 ref = asterisk;
 }
 );
@@ -88,15 +94,17 @@ width = 1024;
 guides = (
 {
 angle = 90;
-pos = (804,636);
+pos = (751,636);
 },
 {
-pos = (1552,1024);
+pos = (1499,1024);
 }
 );
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 shapes = (
 {
+alignment = -1;
+pos = (-53,-326);
 ref = asterisk;
 }
 );
@@ -118,7 +126,7 @@ layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 shapes = (
 {
 alignment = -1;
-pos = (-52,-326);
+pos = (-53,-326);
 ref = asterisk;
 }
 );
@@ -154,6 +162,8 @@ pos = (416,1708);
 layerId = m007;
 shapes = (
 {
+alignment = -1;
+pos = (0,-326);
 ref = asterisk;
 }
 );
@@ -162,25 +172,27 @@ width = 960;
 {
 guides = (
 {
-pos = (1136,1024);
+pos = (1082,1024);
 },
 {
-pos = (1404,1448);
+pos = (1350,1448);
 },
 {
-pos = (916,460);
+pos = (862,460);
 },
 {
-pos = (668,352);
+pos = (614,352);
 },
 {
 angle = 90;
-pos = (1172,1708);
+pos = (1118,1708);
 }
 );
 layerId = m008;
 shapes = (
 {
+alignment = -1;
+pos = (-54,-326);
 ref = asterisk;
 }
 );
@@ -199,6 +211,8 @@ pos = (1448,1024);
 layerId = m009;
 shapes = (
 {
+alignment = -1;
+pos = (0,-326);
 ref = asterisk;
 }
 );
@@ -208,15 +222,17 @@ width = 1214;
 guides = (
 {
 angle = 90;
-pos = (772,636);
+pos = (718,636);
 },
 {
-pos = (1520,1024);
+pos = (1466,1024);
 }
 );
 layerId = m010;
 shapes = (
 {
+alignment = -1;
+pos = (-54,-326);
 ref = asterisk;
 }
 );
@@ -238,13 +254,14 @@ layerId = m012;
 shapes = (
 {
 alignment = -1;
-pos = (-52,-326);
+pos = (-54,-326);
 ref = asterisk;
 }
 );
 width = 896;
 }
 );
+metricLeft = asterisk;
 metricWidth = asterisk;
 note = "\012Recipe:\0121. make horizontal rect\0122. copy rect and paste\0123. rotate by 60 deg\0124. enter transform mode and center it\0125. copy the rotated piece and paste\0126. flip on vertical axis\0127. enter transform mode and center it\012";
 tags = (
