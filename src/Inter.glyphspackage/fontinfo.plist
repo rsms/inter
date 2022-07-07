@@ -2586,25 +2586,6 @@ guides = (
 pos = (0,2758);
 },
 {
-orientation = center;
-locked = 1;
-pos = (632,1676);
-},
-{
-orientation = center;
-angle = 90;
-locked = 1;
-pos = (1172,558);
-},
-{
-locked = 1;
-pos = (0,558);
-},
-{
-locked = 1;
-pos = (0,1134);
-},
-{
 locked = 1;
 name = "Cap height";
 pos = (0,1490);
@@ -2627,7 +2608,12 @@ pos = (0,1368);
 {
 locked = 1;
 name = "Cap center";
-pos = (0,744);
+pos = (0,745);
+},
+{
+locked = 1;
+name = "Top anchors";
+pos = (0,1676);
 }
 );
 id = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -2738,11 +2724,6 @@ pos = (0,1490);
 },
 {
 locked = 1;
-name = "Cap center";
-pos = (0,744);
-},
-{
-locked = 1;
 name = "Low center";
 pos = (0,528);
 },
@@ -2760,6 +2741,11 @@ pos = (0,1262);
 locked = 1;
 name = "p bottom";
 pos = (0,-418);
+},
+{
+locked = 1;
+name = "Cap center";
+pos = (0,745);
 }
 );
 id = m011;
@@ -2866,7 +2852,7 @@ pos = (0,2758);
 {
 locked = 1;
 name = "Cap center";
-pos = (0,744);
+pos = (0,745);
 },
 {
 locked = 1;
@@ -3015,11 +3001,6 @@ pos = (0,1490);
 },
 {
 locked = 1;
-name = "Cap center";
-pos = (0,744);
-},
-{
-locked = 1;
 name = "Low center";
 pos = (0,528);
 },
@@ -3027,6 +3008,11 @@ pos = (0,528);
 locked = 1;
 name = "Top anchors";
 pos = (0,1676);
+},
+{
+locked = 1;
+name = "Cap center";
+pos = (0,745);
 }
 );
 id = m007;
@@ -3159,7 +3145,7 @@ pos = (0,558);
 {
 locked = 1;
 name = "Cap center";
-pos = (0,744);
+pos = (0,745);
 }
 );
 iconName = Bold;
@@ -3283,11 +3269,6 @@ pos = (0,528);
 },
 {
 locked = 1;
-name = "Cap center";
-pos = (0,744);
-},
-{
-locked = 1;
 name = "Top anchors";
 pos = (0,1676);
 },
@@ -3295,6 +3276,11 @@ pos = (0,1676);
 locked = 1;
 name = "Top mark center";
 pos = (0,1336);
+},
+{
+locked = 1;
+name = "Cap center";
+pos = (0,745);
 }
 );
 iconName = Bold;
@@ -3397,14 +3383,18 @@ size = "-16";
 );
 guides = (
 {
+pos = (0,2758);
+},
+{
 orientation = center;
 locked = 1;
 pos = (632,1676);
 },
 {
 orientation = center;
+angle = 90;
 locked = 1;
-pos = (614,1304);
+pos = (1172,558);
 },
 {
 locked = 1;
@@ -3416,17 +3406,28 @@ pos = (0,1134);
 },
 {
 locked = 1;
-pos = (594,-418);
-},
-{
-locked = 1;
 name = "Cap height";
 pos = (0,1490);
 },
 {
 locked = 1;
+name = "Top anchors";
+pos = (0,1304);
+},
+{
+locked = 1;
+name = "p bottom";
+pos = (0,-418);
+},
+{
+locked = 1;
+name = "Top mark center";
+pos = (0,1368);
+},
+{
+locked = 1;
 name = "Cap center";
-pos = (0,744);
+pos = (0,745);
 }
 );
 id = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
@@ -3529,22 +3530,7 @@ size = "-16";
 );
 guides = (
 {
-orientation = center;
-locked = 1;
-pos = (632,1676);
-},
-{
-orientation = center;
-locked = 1;
-pos = (614,1304);
-},
-{
-locked = 1;
-pos = (0,1134);
-},
-{
-locked = 1;
-pos = (594,-418);
+pos = (0,2758);
 },
 {
 locked = 1;
@@ -3553,13 +3539,28 @@ pos = (0,1490);
 },
 {
 locked = 1;
-name = "Cap center";
-pos = (0,744);
+name = "Low center";
+pos = (0,528);
 },
 {
 locked = 1;
-name = "Low center";
-pos = (0,528);
+name = "Top anchors";
+pos = (0,1676);
+},
+{
+locked = 1;
+name = "Top anchors";
+pos = (0,1262);
+},
+{
+locked = 1;
+name = "p bottom";
+pos = (0,-418);
+},
+{
+locked = 1;
+name = "Cap center";
+pos = (0,745);
 }
 );
 id = m012;
@@ -3662,24 +3663,22 @@ size = "-16";
 );
 guides = (
 {
-orientation = center;
-locked = 1;
-pos = (1670,744);
-},
-{
-orientation = center;
-locked = 1;
-pos = (632,1676);
+pos = (0,2758);
 },
 {
 locked = 1;
+name = "Cap center";
+pos = (0,745);
+},
+{
+locked = 1;
+name = "Top anchors";
+pos = (0,1676);
+},
+{
+locked = 1;
+name = "Low center";
 pos = (0,558);
-},
-{
-pos = (542,1132);
-},
-{
-pos = (1216,1510);
 },
 {
 locked = 1;
@@ -3694,6 +3693,11 @@ pos = (0,1490);
 locked = 1;
 name = "Top anchors";
 pos = (0,1304);
+},
+{
+locked = 1;
+name = "Top mark center";
+pos = (0,1420);
 }
 );
 id = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
@@ -3795,26 +3799,7 @@ size = "-16";
 );
 guides = (
 {
-orientation = center;
-locked = 1;
-pos = (1670,744);
-},
-{
-orientation = center;
-locked = 1;
-pos = (632,1676);
-},
-{
-pos = (542,1132);
-},
-{
-locked = 1;
-pos = (594,-418);
-},
-{
-locked = 1;
-name = "Cap height";
-pos = (0,1490);
+pos = (0,2758);
 },
 {
 locked = 1;
@@ -3823,8 +3808,28 @@ pos = (0,1262);
 },
 {
 locked = 1;
+name = "p bottom";
+pos = (0,-418);
+},
+{
+locked = 1;
+name = "Cap height";
+pos = (0,1490);
+},
+{
+locked = 1;
 name = "Low center";
 pos = (0,528);
+},
+{
+locked = 1;
+name = "Top anchors";
+pos = (0,1676);
+},
+{
+locked = 1;
+name = "Cap center";
+pos = (0,745);
 }
 );
 id = m008;
@@ -3926,22 +3931,9 @@ size = "-16";
 );
 guides = (
 {
-orientation = center;
 locked = 1;
-pos = (1934,744);
-},
-{
-orientation = center;
-locked = 1;
-pos = (632,1676);
-},
-{
-locked = 1;
-pos = (0,558);
-},
-{
-locked = 1;
-pos = (594,-418);
+name = "Top anchors";
+pos = (0,1304);
 },
 {
 locked = 1;
@@ -3950,8 +3942,28 @@ pos = (0,1490);
 },
 {
 locked = 1;
+name = "p bottom";
+pos = (0,-418);
+},
+{
+locked = 1;
 name = "Top anchors";
-pos = (0,1304);
+pos = (0,1676);
+},
+{
+locked = 1;
+name = "Top mark center";
+pos = (0,1416);
+},
+{
+locked = 1;
+name = "Low center";
+pos = (0,558);
+},
+{
+locked = 1;
+name = "Cap center";
+pos = (0,745);
 }
 );
 id = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
@@ -4053,24 +4065,6 @@ size = "-16";
 );
 guides = (
 {
-orientation = center;
-locked = 1;
-pos = (1934,744);
-},
-{
-orientation = center;
-locked = 1;
-pos = (632,1676);
-},
-{
-locked = 1;
-pos = (0,558);
-},
-{
-locked = 1;
-pos = (594,-418);
-},
-{
 locked = 1;
 name = "Cap height";
 pos = (0,1490);
@@ -4079,6 +4073,31 @@ pos = (0,1490);
 locked = 1;
 name = "Top anchors";
 pos = (0,1262);
+},
+{
+locked = 1;
+name = "p bottom";
+pos = (0,-418);
+},
+{
+locked = 1;
+name = "Low center";
+pos = (0,528);
+},
+{
+locked = 1;
+name = "Top anchors";
+pos = (0,1676);
+},
+{
+locked = 1;
+name = "Top mark center";
+pos = (0,1336);
+},
+{
+locked = 1;
+name = "Cap center";
+pos = (0,745);
 }
 );
 id = m010;
