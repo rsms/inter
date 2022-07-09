@@ -673,6 +673,7 @@ sub equal enclosingcirclecomb by equal.circled;
 sub plus enclosingcirclecomb by plus.circled;
 sub minus enclosingcirclecomb by minus.circled;
 sub multiply enclosingcirclecomb by multiply.circled;
+sub [ fraction slash ] enclosingcirclecomb by fraction.circled;
 sub divide enclosingcirclecomb by divide.circled;
 sub upArrow enclosingcirclecomb by upArrow.circled;
 sub downArrow enclosingcirclecomb by downArrow.circled;
@@ -697,6 +698,7 @@ sub dngb_ballotx enclosingcirclecomb by dngb_ballotx.circled;
   plus
   minus
   multiply
+  fraction slash
   divide
   upArrow
   downArrow
