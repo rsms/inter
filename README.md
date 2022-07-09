@@ -64,6 +64,7 @@ html { font-family: 'Inter', sans-serif; }
 - [GitHub brand and documentation](https://github.com/about)
 - [Pixar Presto](https://en.wikipedia.org/wiki/Presto_(animation_software))
 - [Minimalissimo magazine](https://minimalissimo.com/)
+- [JetBrains IntelliJ New UI](https://blog.jetbrains.com/idea/2022/05/take-part-in-the-new-ui-preview-for-your-jetbrains-ide/)
 
 
 > **Have you made something nice with Inter?**<br>
