@@ -612,6 +612,7 @@ sub equal enclosingsquarecomb by equal.squared;
 sub plus enclosingsquarecomb by plus.squared;
 sub minus enclosingsquarecomb by minus.squared;
 sub multiply enclosingsquarecomb by multiply.squared;
+sub [ fraction slash ] enclosingsquarecomb by fraction.squared;
 sub divide enclosingsquarecomb by divide.squared;
 sub upArrow enclosingsquarecomb by upArrow.squared;
 sub downArrow enclosingsquarecomb by downArrow.squared;
