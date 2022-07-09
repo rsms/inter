@@ -1895,8 +1895,6 @@ pageup,
 pagedown,
 largeCircle,
 whiteLargeSquare,
-enclosingcirclecomb,
-enclosingsquarecomb,
 A.circled,
 B.circled,
 C.circled,
@@ -5932,8 +5930,6 @@ afii10041 = -81;
 afii10044 = -69;
 };
 D = {
-enclosingcirclecomb = -87;
-enclosingsquarecomb = -87;
 };
 DZ = {
 idblgrave = 69;
@@ -5945,8 +5941,6 @@ Dzcaron_ = {
 "@MMK_R_T" = -81;
 };
 E = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 Ecedillabreve = {
 idblgrave = 69;
@@ -5994,8 +5988,6 @@ Etildebelow = {
 idblgrave = 69;
 };
 F = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 Fdotaccent = {
 "@MMK_R_comma" = -81;
@@ -6037,8 +6029,6 @@ xi = -116;
 zeta = -162;
 };
 H = {
-enclosingcirclecomb = -157;
-enclosingsquarecomb = -157;
 };
 Hbar = {
 "@MMK_R_dagger" = 81;
@@ -6052,8 +6042,6 @@ Hdotaccent = {
 idblgrave = 69;
 };
 I = {
-enclosingcirclecomb = 349;
-enclosingsquarecomb = 349;
 };
 Icaron = {
 idblgrave = 81;
@@ -6094,8 +6082,6 @@ lslash = 69;
 ubar = 69;
 };
 K = {
-enclosingcirclecomb = -72;
-enclosingsquarecomb = -72;
 };
 Kacute = {
 idblgrave = 93;
@@ -6113,8 +6099,6 @@ Klinebelow = {
 idblgrave = 81;
 };
 L = {
-enclosingcirclecomb = 29;
-enclosingsquarecomb = 29;
 };
 Lacute = {
 "@MMK_R_asciicircum" = -93;
@@ -6183,8 +6167,6 @@ Yhookabove = -69;
 Ytilde = -69;
 };
 M = {
-enclosingcirclecomb = -292;
-enclosingsquarecomb = -292;
 };
 Macute = {
 idblgrave = 69;
@@ -6193,8 +6175,6 @@ Mdotaccent = {
 idblgrave = 69;
 };
 N = {
-enclosingcirclecomb = -189;
-enclosingsquarecomb = -189;
 };
 Ndotaccent = {
 idblgrave = 69;
@@ -6225,8 +6205,6 @@ idblgrave = 93;
 rdblgrave.1 = 69;
 };
 P = {
-enclosingcirclecomb = -29;
-enclosingsquarecomb = -29;
 };
 Pacute = {
 "@MMK_R_comma" = -81;
@@ -6515,12 +6493,8 @@ asterisk.case = {
 "@MMK_R_T" = -69;
 };
 at = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 at.case = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -6603,90 +6577,10 @@ idblgrave = 93;
 ellipsis = {
 quotedblreversed = -372;
 };
-enclosingcirclecomb = {
-"@MMK_R_A" = -14;
-"@MMK_R_B" = -58;
-"@MMK_R_C" = -151;
-"@MMK_R_J" = 58;
-"@MMK_R_S" = -14;
-"@MMK_R_T" = -14;
-"@MMK_R_U" = -176;
-"@MMK_R_V" = -43;
-"@MMK_R_W" = -311;
-"@MMK_R_Y" = -50;
-"@MMK_R_Z" = -29;
-"@MMK_R_approxequal" = -58;
-"@MMK_R_emdash" = -411;
-"@MMK_R_endash" = 101;
-"@MMK_R_four" = -29;
-"@MMK_R_hyphen" = 174;
-"@MMK_R_one" = 174;
-"@MMK_R_six" = -14;
-"@MMK_R_three" = -14;
-D = -87;
-E = -14;
-F = -14;
-H = -157;
-I = 349;
-K = -72;
-L = 29;
-M = -292;
-N = -189;
-P = -29;
-at = -378;
-at.case = -378;
-exclam = 349;
-nine = -14;
-numbersign = -43;
-plus = -69;
-question = 154;
-seven = 72;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -14;
-"@MMK_R_B" = -58;
-"@MMK_R_C" = -151;
-"@MMK_R_J" = 58;
-"@MMK_R_S" = -14;
-"@MMK_R_T" = -14;
-"@MMK_R_U" = -176;
-"@MMK_R_V" = -43;
-"@MMK_R_W" = -311;
-"@MMK_R_Y" = -50;
-"@MMK_R_Z" = -29;
-"@MMK_R_approxequal" = -58;
-"@MMK_R_emdash" = -411;
-"@MMK_R_endash" = 101;
-"@MMK_R_four" = -29;
-"@MMK_R_hyphen" = 174;
-"@MMK_R_one" = 174;
-"@MMK_R_six" = -14;
-"@MMK_R_three" = -14;
-D = -87;
-E = -14;
-F = -14;
-H = -157;
-I = 349;
-K = -72;
-L = 29;
-M = -292;
-N = -189;
-P = -29;
-at = -378;
-at.case = -378;
-exclam = 349;
-nine = -14;
-numbersign = -43;
-plus = -69;
-question = 154;
-seven = 72;
-};
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 349;
-enclosingsquarecomb = 349;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -6953,8 +6847,6 @@ afii10049 = -93;
 tenge = -69;
 };
 nine = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 nj = {
 idblgrave = 69;
@@ -6966,8 +6858,6 @@ ntilde = {
 "@MMK_R_T" = -104;
 };
 numbersign = {
-enclosingcirclecomb = -43;
-enclosingsquarecomb = -43;
 };
 ocircumflexacute = {
 "@MMK_R_B" = 69;
@@ -7009,14 +6899,10 @@ pi = {
 "@MMK_R_zero.subs" = 69;
 };
 plus = {
-enclosingcirclecomb = -69;
-enclosingsquarecomb = -69;
 };
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 154;
-enclosingsquarecomb = 154;
 };
 questiondown = {
 "@MMK_R_gammagreek" = -69;
@@ -7076,8 +6962,6 @@ seven = {
 "@MMK_R_zero.subs" = -186;
 ampersand = -93;
 eight = -29;
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 five = -20;
 four = -119;
 four.ss01 = -128;
@@ -8456,8 +8340,6 @@ afii10041 = -81;
 afii10044 = -69;
 };
 D = {
-enclosingcirclecomb = -87;
-enclosingsquarecomb = -87;
 };
 DZ = {
 idblgrave = 69;
@@ -8469,8 +8351,6 @@ Dzcaron_ = {
 "@MMK_R_T" = -81;
 };
 E = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 Ecedillabreve = {
 idblgrave = 69;
@@ -8518,8 +8398,6 @@ Etildebelow = {
 idblgrave = 69;
 };
 F = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 Fdotaccent = {
 "@MMK_R_comma" = -81;
@@ -8561,8 +8439,6 @@ xi = -116;
 zeta = -162;
 };
 H = {
-enclosingcirclecomb = -157;
-enclosingsquarecomb = -157;
 };
 Hbar = {
 "@MMK_R_dagger" = 81;
@@ -8576,8 +8452,6 @@ Hdotaccent = {
 idblgrave = 69;
 };
 I = {
-enclosingcirclecomb = 349;
-enclosingsquarecomb = 349;
 };
 Icaron = {
 idblgrave = 81;
@@ -8618,8 +8492,6 @@ lslash = 69;
 ubar = 69;
 };
 K = {
-enclosingcirclecomb = -72;
-enclosingsquarecomb = -72;
 };
 Kacute = {
 idblgrave = 93;
@@ -8637,8 +8509,6 @@ Klinebelow = {
 idblgrave = 81;
 };
 L = {
-enclosingcirclecomb = 29;
-enclosingsquarecomb = 29;
 };
 Lacute = {
 "@MMK_R_asciicircum" = -93;
@@ -8707,8 +8577,6 @@ Yhookabove = -69;
 Ytilde = -69;
 };
 M = {
-enclosingcirclecomb = -292;
-enclosingsquarecomb = -292;
 };
 Macute = {
 idblgrave = 69;
@@ -8717,8 +8585,6 @@ Mdotaccent = {
 idblgrave = 69;
 };
 N = {
-enclosingcirclecomb = -189;
-enclosingsquarecomb = -189;
 };
 Ndotaccent = {
 idblgrave = 69;
@@ -8749,8 +8615,6 @@ idblgrave = 93;
 rdblgrave.1 = 69;
 };
 P = {
-enclosingcirclecomb = -29;
-enclosingsquarecomb = -29;
 };
 Pacute = {
 "@MMK_R_comma" = -81;
@@ -9039,12 +8903,8 @@ asterisk.case = {
 "@MMK_R_T" = -69;
 };
 at = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 at.case = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -9127,90 +8987,10 @@ idblgrave = 93;
 ellipsis = {
 quotedblreversed = -372;
 };
-enclosingcirclecomb = {
-"@MMK_R_A" = -14;
-"@MMK_R_B" = -58;
-"@MMK_R_C" = -151;
-"@MMK_R_J" = 58;
-"@MMK_R_S" = -14;
-"@MMK_R_T" = -14;
-"@MMK_R_U" = -176;
-"@MMK_R_V" = -43;
-"@MMK_R_W" = -311;
-"@MMK_R_Y" = -50;
-"@MMK_R_Z" = -29;
-"@MMK_R_approxequal" = -58;
-"@MMK_R_emdash" = -411;
-"@MMK_R_endash" = 101;
-"@MMK_R_four" = -29;
-"@MMK_R_hyphen" = 174;
-"@MMK_R_one" = 174;
-"@MMK_R_six" = -14;
-"@MMK_R_three" = -14;
-D = -87;
-E = -14;
-F = -14;
-H = -157;
-I = 349;
-K = -72;
-L = 29;
-M = -292;
-N = -189;
-P = -29;
-at = -378;
-at.case = -378;
-exclam = 349;
-nine = -14;
-numbersign = -43;
-plus = -69;
-question = 154;
-seven = 72;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -14;
-"@MMK_R_B" = -58;
-"@MMK_R_C" = -151;
-"@MMK_R_J" = 58;
-"@MMK_R_S" = -14;
-"@MMK_R_T" = -14;
-"@MMK_R_U" = -176;
-"@MMK_R_V" = -43;
-"@MMK_R_W" = -311;
-"@MMK_R_Y" = -50;
-"@MMK_R_Z" = -29;
-"@MMK_R_approxequal" = -58;
-"@MMK_R_emdash" = -411;
-"@MMK_R_endash" = 101;
-"@MMK_R_four" = -29;
-"@MMK_R_hyphen" = 174;
-"@MMK_R_one" = 174;
-"@MMK_R_six" = -14;
-"@MMK_R_three" = -14;
-D = -87;
-E = -14;
-F = -14;
-H = -157;
-I = 349;
-K = -72;
-L = 29;
-M = -292;
-N = -189;
-P = -29;
-at = -378;
-at.case = -378;
-exclam = 349;
-nine = -14;
-numbersign = -43;
-plus = -69;
-question = 154;
-seven = 72;
-};
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 349;
-enclosingsquarecomb = 349;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -9477,8 +9257,6 @@ afii10049 = -93;
 tenge = -69;
 };
 nine = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 nj = {
 idblgrave = 69;
@@ -9490,8 +9268,6 @@ ntilde = {
 "@MMK_R_T" = -104;
 };
 numbersign = {
-enclosingcirclecomb = -43;
-enclosingsquarecomb = -43;
 };
 ocircumflexacute = {
 "@MMK_R_B" = 69;
@@ -9533,14 +9309,10 @@ pi = {
 "@MMK_R_zero.subs" = 69;
 };
 plus = {
-enclosingcirclecomb = -69;
-enclosingsquarecomb = -69;
 };
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 154;
-enclosingsquarecomb = 154;
 };
 questiondown = {
 "@MMK_R_gammagreek" = -69;
@@ -9600,8 +9372,6 @@ seven = {
 "@MMK_R_zero.subs" = -186;
 ampersand = -93;
 eight = -29;
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 five = -20;
 four = -119;
 four.ss01 = -128;
@@ -11078,8 +10848,6 @@ xi = -116;
 zeta = -162;
 };
 H = {
-enclosingcirclecomb = -101;
-enclosingsquarecomb = -101;
 };
 Hbar = {
 "@MMK_R_dagger" = 81;
@@ -11093,8 +10861,6 @@ Hdotaccent = {
 idblgrave = 69;
 };
 I = {
-enclosingcirclecomb = 378;
-enclosingsquarecomb = 378;
 };
 Icaron = {
 idblgrave = 81;
@@ -11135,8 +10901,6 @@ lslash = 69;
 ubar = 69;
 };
 K = {
-enclosingcirclecomb = -29;
-enclosingsquarecomb = -29;
 };
 Kacute = {
 idblgrave = 93;
@@ -11154,8 +10918,6 @@ Klinebelow = {
 idblgrave = 81;
 };
 L = {
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 };
 Lacute = {
 "@MMK_R_asciicircum" = -93;
@@ -11224,8 +10986,6 @@ Yhookabove = -69;
 Ytilde = -69;
 };
 M = {
-enclosingcirclecomb = -258;
-enclosingsquarecomb = -258;
 };
 Macute = {
 idblgrave = 69;
@@ -11234,8 +10994,6 @@ Mdotaccent = {
 idblgrave = 69;
 };
 N = {
-enclosingcirclecomb = -126;
-enclosingsquarecomb = -126;
 };
 Ndotaccent = {
 idblgrave = 69;
@@ -11552,12 +11310,8 @@ asterisk.case = {
 "@MMK_R_T" = -69;
 };
 at = {
-enclosingcirclecomb = -305;
-enclosingsquarecomb = -305;
 };
 at.case = {
-enclosingcirclecomb = -306;
-enclosingsquarecomb = -306;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -11640,78 +11394,10 @@ idblgrave = 93;
 ellipsis = {
 quotedblreversed = -372;
 };
-enclosingcirclecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_C" = -116;
-"@MMK_R_J" = 72;
-"@MMK_R_U" = -112;
-"@MMK_R_V" = -36;
-"@MMK_R_W" = -306;
-"@MMK_R_Y" = -58;
-"@MMK_R_Z" = 14;
-"@MMK_R_approxequal" = -14;
-"@MMK_R_emdash" = -366;
-"@MMK_R_endash" = 174;
-"@MMK_R_four" = -14;
-"@MMK_R_hyphen" = 218;
-"@MMK_R_one" = 160;
-"@MMK_R_six" = 14;
-"@MMK_R_two" = 43;
-H = -101;
-I = 378;
-K = -29;
-L = 72;
-M = -258;
-N = -126;
-at = -305;
-at.case = -306;
-exclam = 363;
-five = 24;
-greater = 43;
-less = -58;
-nine = 14;
-question = 161;
-seven = 101;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_C" = -116;
-"@MMK_R_J" = 72;
-"@MMK_R_U" = -112;
-"@MMK_R_V" = -36;
-"@MMK_R_W" = -306;
-"@MMK_R_Y" = -58;
-"@MMK_R_Z" = 14;
-"@MMK_R_approxequal" = -14;
-"@MMK_R_emdash" = -366;
-"@MMK_R_endash" = 174;
-"@MMK_R_four" = -14;
-"@MMK_R_hyphen" = 218;
-"@MMK_R_one" = 160;
-"@MMK_R_six" = 14;
-"@MMK_R_two" = 43;
-H = -101;
-I = 378;
-K = -29;
-L = 72;
-M = -258;
-N = -126;
-at = -305;
-at.case = -306;
-exclam = 363;
-five = 24;
-greater = 43;
-less = -58;
-nine = 14;
-question = 161;
-seven = 101;
-};
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 363;
-enclosingsquarecomb = 363;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -11730,8 +11416,6 @@ feng = {
 five = {
 "@MMK_R_comma" = -55;
 "@MMK_R_registered" = -11;
-enclosingcirclecomb = 24;
-enclosingsquarecomb = 24;
 };
 florin = {
 "@MMK_R_idotless" = 69;
@@ -11774,8 +11458,6 @@ greater = {
 Psi = -186;
 afii10024 = -104;
 afii10044 = -151;
-enclosingcirclecomb = 43;
-enclosingsquarecomb = 43;
 seven = -151;
 tenge = -151;
 };
@@ -11930,8 +11612,6 @@ ldotbelowmacron = {
 idblgrave = 81;
 };
 less = {
-enclosingcirclecomb = -58;
-enclosingsquarecomb = -58;
 };
 lj = {
 idblgrave = 69;
@@ -11986,8 +11666,6 @@ afii10049 = -93;
 tenge = -69;
 };
 nine = {
-enclosingcirclecomb = 14;
-enclosingsquarecomb = 14;
 };
 nj = {
 idblgrave = 69;
@@ -12040,8 +11718,6 @@ pi = {
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 161;
-enclosingsquarecomb = 161;
 };
 questiondown = {
 "@MMK_R_gammagreek" = -69;
@@ -12101,8 +11777,6 @@ seven = {
 "@MMK_R_zero.subs" = -186;
 ampersand = -93;
 eight = -29;
-enclosingcirclecomb = 101;
-enclosingsquarecomb = 101;
 five = -20;
 four = -119;
 four.ss01 = -128;
@@ -12450,8 +12124,6 @@ underscore = -69;
 Dcroat = 81;
 Idieresisacute = 93;
 Istroke = 81;
-enclosingcirclecomb = -101;
-enclosingsquarecomb = -101;
 itildebelow = 81;
 jcircumflex = 81;
 llinebelow = 93;
@@ -12482,8 +12154,6 @@ underscore = -104;
 "@MMK_R_u" = -69;
 "@MMK_R_v" = -81;
 "@MMK_R_w" = -128;
-enclosingcirclecomb = -29;
-enclosingsquarecomb = -29;
 idblgrave = 93;
 idieresisacute = 170;
 infinity = -69;
@@ -12513,8 +12183,6 @@ periodcentered = -93;
 asciitilde = -81;
 asterisk = -81;
 degree = -93;
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 hyphen = -104;
 logicalnot = -267;
 periodcentered = -128;
@@ -13160,8 +12828,6 @@ logicalnot = -139;
 "@MMK_R_quotedblbase" = -104;
 "@MMK_R_quotedblleft" = -93;
 Psi = -69;
-enclosingcirclecomb = 14;
-enclosingsquarecomb = 14;
 seven = -40;
 underscore = -93;
 };
@@ -13405,8 +13071,6 @@ ampersand = -69;
 "@MMK_R_three" = -34;
 "@MMK_R_zero.subs" = -186;
 ampersand = -93;
-enclosingcirclecomb = 101;
-enclosingsquarecomb = 101;
 five = -20;
 four.ss01 = -128;
 less = -186;
@@ -13609,8 +13273,6 @@ Gamma = {
 underscore = -139;
 };
 I = {
-enclosingcirclecomb = 378;
-enclosingsquarecomb = 378;
 };
 Icaron = {
 "@MMK_R_idblgrave" = 81;
@@ -13661,12 +13323,8 @@ Lslash = {
 "@MMK_R_quotedblright" = -69;
 };
 M = {
-enclosingcirclecomb = -258;
-enclosingsquarecomb = -258;
 };
 N = {
-enclosingcirclecomb = -126;
-enclosingsquarecomb = -126;
 };
 Psi = {
 "@MMK_R_Alphagreek" = -128;
@@ -13783,12 +13441,8 @@ asciitilde = {
 "@MMK_R_X" = -69;
 };
 at = {
-enclosingcirclecomb = -305;
-enclosingsquarecomb = -305;
 };
 at.case = {
-enclosingcirclecomb = -306;
-enclosingsquarecomb = -306;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -13830,78 +13484,10 @@ dyogh = {
 ellipsis = {
 quotedblreversed = -372;
 };
-enclosingcirclecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = -101;
-"@MMK_R_C" = -116;
-"@MMK_R_J" = 72;
-"@MMK_R_U" = -112;
-"@MMK_R_V" = -36;
-"@MMK_R_W" = -306;
-"@MMK_R_Y" = -58;
-"@MMK_R_Z" = 14;
-"@MMK_R_approxequal" = -14;
-"@MMK_R_emdash" = -366;
-"@MMK_R_endash" = 174;
-"@MMK_R_four" = -14;
-"@MMK_R_hyphen" = 218;
-"@MMK_R_one" = 160;
-"@MMK_R_six" = 14;
-"@MMK_R_two" = 43;
-I = 378;
-K = -29;
-L = 72;
-M = -258;
-N = -126;
-at = -305;
-at.case = -306;
-exclam = 363;
-five = 24;
-greater = 43;
-less = -58;
-nine = 14;
-question = 161;
-seven = 101;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = -101;
-"@MMK_R_C" = -116;
-"@MMK_R_J" = 72;
-"@MMK_R_U" = -112;
-"@MMK_R_V" = -36;
-"@MMK_R_W" = -306;
-"@MMK_R_Y" = -58;
-"@MMK_R_Z" = 14;
-"@MMK_R_approxequal" = -14;
-"@MMK_R_emdash" = -366;
-"@MMK_R_endash" = 174;
-"@MMK_R_four" = -14;
-"@MMK_R_hyphen" = 218;
-"@MMK_R_one" = 160;
-"@MMK_R_six" = 14;
-"@MMK_R_two" = 43;
-I = 378;
-K = -29;
-L = 72;
-M = -258;
-N = -126;
-at = -305;
-at.case = -306;
-exclam = 363;
-five = 24;
-greater = 43;
-less = -58;
-nine = 14;
-question = 161;
-seven = 101;
-};
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 363;
-enclosingsquarecomb = 363;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -13916,8 +13502,6 @@ feng = {
 five = {
 "@MMK_R_comma" = -55;
 "@MMK_R_registered" = -11;
-enclosingcirclecomb = 24;
-enclosingsquarecomb = 24;
 };
 florin = {
 "@MMK_R_idblgrave" = 93;
@@ -13948,8 +13532,6 @@ greater = {
 Psi = -186;
 afii10024 = -104;
 afii10044 = -151;
-enclosingcirclecomb = 43;
-enclosingsquarecomb = 43;
 seven = -151;
 tenge = -151;
 };
@@ -14052,8 +13634,6 @@ ldotbelowmacron = {
 "@MMK_R_idblgrave" = 81;
 };
 less = {
-enclosingcirclecomb = -58;
-enclosingsquarecomb = -58;
 };
 llinebelow = {
 "@MMK_R_idotless" = 81;
@@ -14110,8 +13690,6 @@ pi = {
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 161;
-enclosingsquarecomb = 161;
 };
 questiondown = {
 "@MMK_R_T" = -139;
@@ -15379,8 +14957,6 @@ uni023E = -81;
 "@MMK_R_c.sups" = -21;
 };
 D = {
-enclosingcirclecomb = 58;
-enclosingsquarecomb = 58;
 };
 DZ = {
 idblgrave = 69;
@@ -15437,8 +15013,6 @@ Etildebelow = {
 idblgrave = 69;
 };
 F = {
-enclosingcirclecomb = 130;
-enclosingsquarecomb = 130;
 };
 Fdotaccent = {
 "@MMK_R_comma" = -81;
@@ -15478,7 +15052,6 @@ xi = -116;
 zeta = -162;
 };
 H = {
-enclosingsquarecomb = -14;
 };
 Hbar = {
 "@MMK_R_dagger" = 81;
@@ -15492,8 +15065,6 @@ Hdotaccent = {
 idblgrave = 69;
 };
 I = {
-enclosingcirclecomb = 461;
-enclosingsquarecomb = 461;
 };
 Icaron = {
 idblgrave = 81;
@@ -15555,8 +15126,6 @@ Klinebelow = {
 idblgrave = 81;
 };
 L = {
-enclosingcirclecomb = 174;
-enclosingsquarecomb = 174;
 };
 Lacute = {
 "@MMK_R_asciicircum" = -93;
@@ -15622,8 +15191,6 @@ Yhookabove = -69;
 Ytilde = -69;
 };
 M = {
-enclosingcirclecomb = -174;
-enclosingsquarecomb = -174;
 };
 Macute = {
 idblgrave = 69;
@@ -15632,8 +15199,6 @@ Mdotaccent = {
 idblgrave = 69;
 };
 N = {
-enclosingcirclecomb = 32;
-enclosingsquarecomb = 32;
 };
 Ndotaccent = {
 idblgrave = 69;
@@ -15942,12 +15507,8 @@ asterisk.case = {
 "@MMK_R_T" = -69;
 };
 at = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 at.case = {
-enclosingcirclecomb = -344;
-enclosingsquarecomb = -344;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -16029,97 +15590,14 @@ ecircumflexhookabove = {
 idblgrave = 93;
 };
 eight = {
-enclosingcirclecomb = 69;
-enclosingsquarecomb = 69;
 };
 ellipsis = {
 quotedblreversed = -372;
-};
-enclosingcirclecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = 87;
-"@MMK_R_C" = -40;
-"@MMK_R_J" = 173;
-"@MMK_R_S" = 87;
-"@MMK_R_T" = 72;
-"@MMK_R_U" = 43;
-"@MMK_R_V" = -58;
-"@MMK_R_W" = -343;
-"@MMK_R_X" = -14;
-"@MMK_R_Y" = -5;
-"@MMK_R_Z" = 61;
-"@MMK_R_approxequal" = 58;
-"@MMK_R_emdash" = -244;
-"@MMK_R_endash" = 261;
-"@MMK_R_four" = 29;
-"@MMK_R_hyphen" = 292;
-"@MMK_R_one" = 218;
-"@MMK_R_six" = 29;
-"@MMK_R_three" = 91;
-"@MMK_R_two" = 110;
-D = 58;
-F = 130;
-I = 461;
-L = 174;
-M = -174;
-N = 32;
-at = -378;
-at.case = -344;
-eight = 69;
-exclam = 397;
-five = 66;
-nine = 93;
-numbersign = 110;
-plus = 72;
-question = 184;
-seven = 162;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = 87;
-"@MMK_R_C" = -40;
-"@MMK_R_J" = 173;
-"@MMK_R_S" = 87;
-"@MMK_R_T" = 72;
-"@MMK_R_U" = 43;
-"@MMK_R_V" = -58;
-"@MMK_R_W" = -343;
-"@MMK_R_X" = -14;
-"@MMK_R_Y" = -5;
-"@MMK_R_Z" = 61;
-"@MMK_R_approxequal" = 58;
-"@MMK_R_emdash" = -244;
-"@MMK_R_endash" = 261;
-"@MMK_R_four" = 29;
-"@MMK_R_hyphen" = 292;
-"@MMK_R_one" = 218;
-"@MMK_R_six" = 29;
-"@MMK_R_three" = 91;
-"@MMK_R_two" = 110;
-D = 58;
-F = 130;
-H = -14;
-I = 461;
-L = 174;
-M = -174;
-N = 32;
-at = -378;
-at.case = -344;
-eight = 69;
-exclam = 397;
-five = 66;
-nine = 93;
-numbersign = 110;
-plus = 72;
-question = 184;
-seven = 162;
 };
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 397;
-enclosingsquarecomb = 397;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -16138,8 +15616,6 @@ feng = {
 five = {
 "@MMK_R_comma" = -40;
 "@MMK_R_registered" = -11;
-enclosingcirclecomb = 66;
-enclosingsquarecomb = 66;
 };
 florin = {
 "@MMK_R_idotless" = 69;
@@ -16388,8 +15864,6 @@ afii10049 = -93;
 tenge = -69;
 };
 nine = {
-enclosingcirclecomb = 93;
-enclosingsquarecomb = 93;
 };
 nj = {
 idblgrave = 69;
@@ -16401,8 +15875,6 @@ ntilde = {
 "@MMK_R_T" = -104;
 };
 numbersign = {
-enclosingcirclecomb = 110;
-enclosingsquarecomb = 110;
 };
 ocircumflexacute = {
 "@MMK_R_B" = 69;
@@ -16436,14 +15908,10 @@ pi = {
 "@MMK_R_quotedblleft" = -81;
 };
 plus = {
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 };
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 184;
-enclosingsquarecomb = 184;
 };
 questiondown = {
 "@MMK_R_V" = -116;
@@ -16505,8 +15973,6 @@ seven = {
 "@MMK_R_three" = -34;
 ampersand = -93;
 eight = -29;
-enclosingcirclecomb = 162;
-enclosingsquarecomb = 162;
 five = -20;
 four = -119;
 four.ss01 = -128;
@@ -16809,8 +16275,6 @@ underscore = -81;
 "@MMK_R_registered" = -11;
 "@MMK_R_slash" = -81;
 afii10024 = -104;
-enclosingcirclecomb = 58;
-enclosingsquarecomb = 58;
 underscore = -81;
 };
 "@MMK_L_Decyrillic" = {
@@ -16842,8 +16306,6 @@ underscore = -81;
 "@MMK_R_v" = -69;
 "@MMK_R_z" = -69;
 ellipsis = -174;
-enclosingcirclecomb = 130;
-enclosingsquarecomb = 130;
 idblgrave = 81;
 period = -69;
 underscore = -69;
@@ -16935,8 +16397,6 @@ Ytilde = -69;
 asciitilde = -81;
 asterisk = -81;
 degree = -93;
-enclosingcirclecomb = 174;
-enclosingsquarecomb = 174;
 logicalnot = -267;
 periodcentered = -128;
 quotedblreversed = -93;
@@ -17357,8 +16817,6 @@ uni023E = -162;
 "@MMK_R_comma" = -40;
 "@MMK_R_guillemetleft" = -69;
 "@MMK_R_quotedblbase" = -104;
-enclosingcirclecomb = 69;
-enclosingsquarecomb = 69;
 };
 "@MMK_L_eight.sups" = {
 "@MMK_R_A" = -186;
@@ -17485,8 +16943,6 @@ seven = -104;
 "@MMK_R_v" = -60;
 "@MMK_R_x" = -46;
 afii10024 = -69;
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 seven = -69;
 };
 "@MMK_L_idieresis" = {
@@ -17578,8 +17034,6 @@ less = -174;
 "@MMK_R_quotedblbase" = -104;
 "@MMK_R_quotedblleft" = -93;
 Psi = -69;
-enclosingcirclecomb = 93;
-enclosingsquarecomb = 93;
 seven = -40;
 underscore = -93;
 };
@@ -17824,8 +17278,6 @@ ampersand = -69;
 "@MMK_R_six.1" = -69;
 "@MMK_R_three" = -34;
 ampersand = -93;
-enclosingcirclecomb = 162;
-enclosingsquarecomb = 162;
 five = -20;
 four.ss01 = -128;
 less = -186;
@@ -18007,7 +17459,6 @@ Gamma = {
 underscore = -139;
 };
 I = {
-enclosingsquarecomb = 461;
 };
 Icaron = {
 "@MMK_R_idblgrave" = 81;
@@ -18063,12 +17514,8 @@ Lslash = {
 "@MMK_R_quotedblright" = -69;
 };
 M = {
-enclosingcirclecomb = -174;
-enclosingsquarecomb = -174;
 };
 N = {
-enclosingcirclecomb = 32;
-enclosingsquarecomb = 32;
 };
 Psi = {
 "@MMK_R_Alphagreek" = -128;
@@ -18182,12 +17629,8 @@ ampersand = {
 Psi = -151;
 };
 at = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 at.case = {
-enclosingcirclecomb = -344;
-enclosingsquarecomb = -344;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -18226,91 +17669,10 @@ dyogh = {
 ellipsis = {
 quotedblreversed = -372;
 };
-enclosingcirclecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = 87;
-"@MMK_R_C" = -40;
-"@MMK_R_J" = 173;
-"@MMK_R_S" = 87;
-"@MMK_R_T" = 72;
-"@MMK_R_U" = 43;
-"@MMK_R_V" = -58;
-"@MMK_R_W" = -343;
-"@MMK_R_X" = -14;
-"@MMK_R_Y" = -5;
-"@MMK_R_Z" = 61;
-"@MMK_R_approxequal" = 58;
-"@MMK_R_eight" = 69;
-"@MMK_R_emdash" = -244;
-"@MMK_R_endash" = 261;
-"@MMK_R_four" = 29;
-"@MMK_R_hyphen" = 292;
-"@MMK_R_one" = 218;
-"@MMK_R_six" = 29;
-"@MMK_R_three" = 91;
-"@MMK_R_two" = 110;
-D = 58;
-F = 130;
-I = 461;
-L = 174;
-M = -174;
-N = 32;
-at = -378;
-at.case = -344;
-exclam = 397;
-five = 66;
-nine = 93;
-numbersign = 110;
-plus = 72;
-question = 184;
-seven = 162;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = 87;
-"@MMK_R_C" = -40;
-"@MMK_R_J" = 173;
-"@MMK_R_S" = 87;
-"@MMK_R_T" = 72;
-"@MMK_R_U" = 43;
-"@MMK_R_V" = -58;
-"@MMK_R_W" = -343;
-"@MMK_R_X" = -14;
-"@MMK_R_Y" = -5;
-"@MMK_R_Z" = 61;
-"@MMK_R_approxequal" = 58;
-"@MMK_R_eight" = 69;
-"@MMK_R_emdash" = -244;
-"@MMK_R_endash" = 261;
-"@MMK_R_four" = 29;
-"@MMK_R_hyphen" = 292;
-"@MMK_R_one" = 218;
-"@MMK_R_six" = 29;
-"@MMK_R_three" = 91;
-"@MMK_R_two" = 110;
-D = 58;
-F = 130;
-H = -14;
-I = 461;
-L = 174;
-M = -174;
-N = 32;
-at = -378;
-at.case = -344;
-exclam = 397;
-five = 66;
-nine = 93;
-numbersign = 110;
-plus = 72;
-question = 184;
-seven = 162;
-};
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 397;
-enclosingsquarecomb = 397;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -18325,8 +17687,6 @@ feng = {
 five = {
 "@MMK_R_comma" = -40;
 "@MMK_R_registered" = -11;
-enclosingcirclecomb = 66;
-enclosingsquarecomb = 66;
 };
 florin = {
 "@MMK_R_idblgrave" = 93;
@@ -18490,8 +17850,6 @@ ntilde = {
 "@MMK_R_T" = -104;
 };
 numbersign = {
-enclosingcirclecomb = 110;
-enclosingsquarecomb = 110;
 };
 ocircumflexhookabove = {
 "@MMK_R_idblgrave" = 93;
@@ -18513,8 +17871,6 @@ pi = {
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 184;
-enclosingsquarecomb = 184;
 };
 questiondown = {
 "@MMK_R_T" = -139;
@@ -19815,8 +19171,6 @@ afii10041 = -81;
 afii10044 = -69;
 };
 D = {
-enclosingcirclecomb = -87;
-enclosingsquarecomb = -87;
 };
 DZ = {
 idblgrave = 69;
@@ -19828,8 +19182,6 @@ Dzcaron_ = {
 "@MMK_R_T" = -81;
 };
 E = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 Ecedillabreve = {
 idblgrave = 69;
@@ -19877,8 +19229,6 @@ Etildebelow = {
 idblgrave = 69;
 };
 F = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 Fdotaccent = {
 "@MMK_R_comma" = -81;
@@ -19920,8 +19270,6 @@ xi = -116;
 zeta = -162;
 };
 H = {
-enclosingcirclecomb = -157;
-enclosingsquarecomb = -157;
 };
 Hbar = {
 "@MMK_R_dagger" = 81;
@@ -19935,8 +19283,6 @@ Hdotaccent = {
 idblgrave = 69;
 };
 I = {
-enclosingcirclecomb = 349;
-enclosingsquarecomb = 349;
 };
 Icaron = {
 idblgrave = 81;
@@ -19977,8 +19323,6 @@ lslash = 69;
 ubar = 69;
 };
 K = {
-enclosingcirclecomb = -72;
-enclosingsquarecomb = -72;
 };
 Kacute = {
 idblgrave = 93;
@@ -19996,8 +19340,6 @@ Klinebelow = {
 idblgrave = 81;
 };
 L = {
-enclosingcirclecomb = 29;
-enclosingsquarecomb = 29;
 };
 Lacute = {
 "@MMK_R_asciicircum" = -93;
@@ -20066,8 +19408,6 @@ Yhookabove = -69;
 Ytilde = -69;
 };
 M = {
-enclosingcirclecomb = -292;
-enclosingsquarecomb = -292;
 };
 Macute = {
 idblgrave = 69;
@@ -20076,8 +19416,6 @@ Mdotaccent = {
 idblgrave = 69;
 };
 N = {
-enclosingcirclecomb = -189;
-enclosingsquarecomb = -189;
 };
 Ndotaccent = {
 idblgrave = 69;
@@ -20108,8 +19446,6 @@ idblgrave = 93;
 rdblgrave.1 = 69;
 };
 P = {
-enclosingcirclecomb = -29;
-enclosingsquarecomb = -29;
 };
 Pacute = {
 "@MMK_R_comma" = -81;
@@ -20398,12 +19734,8 @@ asterisk.case = {
 "@MMK_R_T" = -69;
 };
 at = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 at.case = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -20486,90 +19818,10 @@ idblgrave = 93;
 ellipsis = {
 quotedblreversed = -372;
 };
-enclosingcirclecomb = {
-"@MMK_R_A" = -14;
-"@MMK_R_B" = -58;
-"@MMK_R_C" = -151;
-"@MMK_R_J" = 58;
-"@MMK_R_S" = -14;
-"@MMK_R_T" = -14;
-"@MMK_R_U" = -176;
-"@MMK_R_V" = -43;
-"@MMK_R_W" = -311;
-"@MMK_R_Y" = -50;
-"@MMK_R_Z" = -29;
-"@MMK_R_approxequal" = -58;
-"@MMK_R_emdash" = -411;
-"@MMK_R_endash" = 101;
-"@MMK_R_four" = -29;
-"@MMK_R_hyphen" = 174;
-"@MMK_R_one" = 174;
-"@MMK_R_six" = -14;
-"@MMK_R_three" = -14;
-D = -87;
-E = -14;
-F = -14;
-H = -157;
-I = 349;
-K = -72;
-L = 29;
-M = -292;
-N = -189;
-P = -29;
-at = -378;
-at.case = -378;
-exclam = 349;
-nine = -14;
-numbersign = -43;
-plus = -69;
-question = 154;
-seven = 72;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -14;
-"@MMK_R_B" = -58;
-"@MMK_R_C" = -151;
-"@MMK_R_J" = 58;
-"@MMK_R_S" = -14;
-"@MMK_R_T" = -14;
-"@MMK_R_U" = -176;
-"@MMK_R_V" = -43;
-"@MMK_R_W" = -311;
-"@MMK_R_Y" = -50;
-"@MMK_R_Z" = -29;
-"@MMK_R_approxequal" = -58;
-"@MMK_R_emdash" = -411;
-"@MMK_R_endash" = 101;
-"@MMK_R_four" = -29;
-"@MMK_R_hyphen" = 174;
-"@MMK_R_one" = 174;
-"@MMK_R_six" = -14;
-"@MMK_R_three" = -14;
-D = -87;
-E = -14;
-F = -14;
-H = -157;
-I = 349;
-K = -72;
-L = 29;
-M = -292;
-N = -189;
-P = -29;
-at = -378;
-at.case = -378;
-exclam = 349;
-nine = -14;
-numbersign = -43;
-plus = -69;
-question = 154;
-seven = 72;
-};
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 349;
-enclosingsquarecomb = 349;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -20836,8 +20088,6 @@ afii10049 = -93;
 tenge = -69;
 };
 nine = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 nj = {
 idblgrave = 69;
@@ -20849,8 +20099,6 @@ ntilde = {
 "@MMK_R_T" = -104;
 };
 numbersign = {
-enclosingcirclecomb = -43;
-enclosingsquarecomb = -43;
 };
 ocircumflexacute = {
 "@MMK_R_B" = 69;
@@ -20892,14 +20140,10 @@ pi = {
 "@MMK_R_zero.subs" = 69;
 };
 plus = {
-enclosingcirclecomb = -69;
-enclosingsquarecomb = -69;
 };
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 154;
-enclosingsquarecomb = 154;
 };
 questiondown = {
 "@MMK_R_gammagreek" = -69;
@@ -20959,8 +20203,6 @@ seven = {
 "@MMK_R_zero.subs" = -186;
 ampersand = -93;
 eight = -29;
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 five = -20;
 four = -119;
 four.ss01 = -128;
@@ -22339,8 +21581,6 @@ afii10041 = -81;
 afii10044 = -69;
 };
 D = {
-enclosingcirclecomb = -87;
-enclosingsquarecomb = -87;
 };
 DZ = {
 idblgrave = 69;
@@ -22352,8 +21592,6 @@ Dzcaron_ = {
 "@MMK_R_T" = -81;
 };
 E = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 Ecedillabreve = {
 idblgrave = 69;
@@ -22401,8 +21639,6 @@ Etildebelow = {
 idblgrave = 69;
 };
 F = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 Fdotaccent = {
 "@MMK_R_comma" = -81;
@@ -22444,8 +21680,6 @@ xi = -116;
 zeta = -162;
 };
 H = {
-enclosingcirclecomb = -157;
-enclosingsquarecomb = -157;
 };
 Hbar = {
 "@MMK_R_dagger" = 81;
@@ -22459,8 +21693,6 @@ Hdotaccent = {
 idblgrave = 69;
 };
 I = {
-enclosingcirclecomb = 349;
-enclosingsquarecomb = 349;
 };
 Icaron = {
 idblgrave = 81;
@@ -22501,8 +21733,6 @@ lslash = 69;
 ubar = 69;
 };
 K = {
-enclosingcirclecomb = -72;
-enclosingsquarecomb = -72;
 };
 Kacute = {
 idblgrave = 93;
@@ -22520,8 +21750,6 @@ Klinebelow = {
 idblgrave = 81;
 };
 L = {
-enclosingcirclecomb = 29;
-enclosingsquarecomb = 29;
 };
 Lacute = {
 "@MMK_R_asciicircum" = -93;
@@ -22590,8 +21818,6 @@ Yhookabove = -69;
 Ytilde = -69;
 };
 M = {
-enclosingcirclecomb = -292;
-enclosingsquarecomb = -292;
 };
 Macute = {
 idblgrave = 69;
@@ -22600,8 +21826,6 @@ Mdotaccent = {
 idblgrave = 69;
 };
 N = {
-enclosingcirclecomb = -189;
-enclosingsquarecomb = -189;
 };
 Ndotaccent = {
 idblgrave = 69;
@@ -22632,8 +21856,6 @@ idblgrave = 93;
 rdblgrave.1 = 69;
 };
 P = {
-enclosingcirclecomb = -29;
-enclosingsquarecomb = -29;
 };
 Pacute = {
 "@MMK_R_comma" = -81;
@@ -22922,12 +22144,8 @@ asterisk.case = {
 "@MMK_R_T" = -69;
 };
 at = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 at.case = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -23010,90 +22228,10 @@ idblgrave = 93;
 ellipsis = {
 quotedblreversed = -372;
 };
-enclosingcirclecomb = {
-"@MMK_R_A" = -14;
-"@MMK_R_B" = -58;
-"@MMK_R_C" = -151;
-"@MMK_R_J" = 58;
-"@MMK_R_S" = -14;
-"@MMK_R_T" = -14;
-"@MMK_R_U" = -176;
-"@MMK_R_V" = -43;
-"@MMK_R_W" = -311;
-"@MMK_R_Y" = -50;
-"@MMK_R_Z" = -29;
-"@MMK_R_approxequal" = -58;
-"@MMK_R_emdash" = -411;
-"@MMK_R_endash" = 101;
-"@MMK_R_four" = -29;
-"@MMK_R_hyphen" = 174;
-"@MMK_R_one" = 174;
-"@MMK_R_six" = -14;
-"@MMK_R_three" = -14;
-D = -87;
-E = -14;
-F = -14;
-H = -157;
-I = 349;
-K = -72;
-L = 29;
-M = -292;
-N = -189;
-P = -29;
-at = -378;
-at.case = -378;
-exclam = 349;
-nine = -14;
-numbersign = -43;
-plus = -69;
-question = 154;
-seven = 72;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -14;
-"@MMK_R_B" = -58;
-"@MMK_R_C" = -151;
-"@MMK_R_J" = 58;
-"@MMK_R_S" = -14;
-"@MMK_R_T" = -14;
-"@MMK_R_U" = -176;
-"@MMK_R_V" = -43;
-"@MMK_R_W" = -311;
-"@MMK_R_Y" = -50;
-"@MMK_R_Z" = -29;
-"@MMK_R_approxequal" = -58;
-"@MMK_R_emdash" = -411;
-"@MMK_R_endash" = 101;
-"@MMK_R_four" = -29;
-"@MMK_R_hyphen" = 174;
-"@MMK_R_one" = 174;
-"@MMK_R_six" = -14;
-"@MMK_R_three" = -14;
-D = -87;
-E = -14;
-F = -14;
-H = -157;
-I = 349;
-K = -72;
-L = 29;
-M = -292;
-N = -189;
-P = -29;
-at = -378;
-at.case = -378;
-exclam = 349;
-nine = -14;
-numbersign = -43;
-plus = -69;
-question = 154;
-seven = 72;
-};
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 349;
-enclosingsquarecomb = 349;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -23360,8 +22498,6 @@ afii10049 = -93;
 tenge = -69;
 };
 nine = {
-enclosingcirclecomb = -14;
-enclosingsquarecomb = -14;
 };
 nj = {
 idblgrave = 69;
@@ -23373,8 +22509,6 @@ ntilde = {
 "@MMK_R_T" = -104;
 };
 numbersign = {
-enclosingcirclecomb = -43;
-enclosingsquarecomb = -43;
 };
 ocircumflexacute = {
 "@MMK_R_B" = 69;
@@ -23416,14 +22550,10 @@ pi = {
 "@MMK_R_zero.subs" = 69;
 };
 plus = {
-enclosingcirclecomb = -69;
-enclosingsquarecomb = -69;
 };
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 154;
-enclosingsquarecomb = 154;
 };
 questiondown = {
 "@MMK_R_gammagreek" = -69;
@@ -23483,8 +22613,6 @@ seven = {
 "@MMK_R_zero.subs" = -186;
 ampersand = -93;
 eight = -29;
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 five = -20;
 four = -119;
 four.ss01 = -128;
@@ -24961,8 +24089,6 @@ xi = -116;
 zeta = -162;
 };
 H = {
-enclosingcirclecomb = -101;
-enclosingsquarecomb = -101;
 };
 Hbar = {
 "@MMK_R_dagger" = 81;
@@ -24976,8 +24102,6 @@ Hdotaccent = {
 idblgrave = 69;
 };
 I = {
-enclosingcirclecomb = 378;
-enclosingsquarecomb = 378;
 };
 Icaron = {
 idblgrave = 81;
@@ -25018,8 +24142,6 @@ lslash = 69;
 ubar = 69;
 };
 K = {
-enclosingcirclecomb = -29;
-enclosingsquarecomb = -29;
 };
 Kacute = {
 idblgrave = 93;
@@ -25037,8 +24159,6 @@ Klinebelow = {
 idblgrave = 81;
 };
 L = {
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 };
 Lacute = {
 "@MMK_R_asciicircum" = -93;
@@ -25107,8 +24227,6 @@ Yhookabove = -69;
 Ytilde = -69;
 };
 M = {
-enclosingcirclecomb = -258;
-enclosingsquarecomb = -258;
 };
 Macute = {
 idblgrave = 69;
@@ -25117,8 +24235,6 @@ Mdotaccent = {
 idblgrave = 69;
 };
 N = {
-enclosingcirclecomb = -126;
-enclosingsquarecomb = -126;
 };
 Ndotaccent = {
 idblgrave = 69;
@@ -25435,12 +24551,8 @@ asterisk.case = {
 "@MMK_R_T" = -69;
 };
 at = {
-enclosingcirclecomb = -305;
-enclosingsquarecomb = -305;
 };
 at.case = {
-enclosingcirclecomb = -306;
-enclosingsquarecomb = -306;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -25523,78 +24635,10 @@ idblgrave = 93;
 ellipsis = {
 quotedblreversed = -372;
 };
-enclosingcirclecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_C" = -116;
-"@MMK_R_J" = 72;
-"@MMK_R_U" = -112;
-"@MMK_R_V" = -36;
-"@MMK_R_W" = -306;
-"@MMK_R_Y" = -58;
-"@MMK_R_Z" = 14;
-"@MMK_R_approxequal" = -14;
-"@MMK_R_emdash" = -366;
-"@MMK_R_endash" = 174;
-"@MMK_R_four" = -14;
-"@MMK_R_hyphen" = 218;
-"@MMK_R_one" = 160;
-"@MMK_R_six" = 14;
-"@MMK_R_two" = 43;
-H = -101;
-I = 378;
-K = -29;
-L = 72;
-M = -258;
-N = -126;
-at = -305;
-at.case = -306;
-exclam = 363;
-five = 24;
-greater = 43;
-less = -58;
-nine = 14;
-question = 161;
-seven = 101;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_C" = -116;
-"@MMK_R_J" = 72;
-"@MMK_R_U" = -112;
-"@MMK_R_V" = -36;
-"@MMK_R_W" = -306;
-"@MMK_R_Y" = -58;
-"@MMK_R_Z" = 14;
-"@MMK_R_approxequal" = -14;
-"@MMK_R_emdash" = -366;
-"@MMK_R_endash" = 174;
-"@MMK_R_four" = -14;
-"@MMK_R_hyphen" = 218;
-"@MMK_R_one" = 160;
-"@MMK_R_six" = 14;
-"@MMK_R_two" = 43;
-H = -101;
-I = 378;
-K = -29;
-L = 72;
-M = -258;
-N = -126;
-at = -305;
-at.case = -306;
-exclam = 363;
-five = 24;
-greater = 43;
-less = -58;
-nine = 14;
-question = 161;
-seven = 101;
-};
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 363;
-enclosingsquarecomb = 363;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -25613,8 +24657,6 @@ feng = {
 five = {
 "@MMK_R_comma" = -55;
 "@MMK_R_registered" = -11;
-enclosingcirclecomb = 24;
-enclosingsquarecomb = 24;
 };
 florin = {
 "@MMK_R_idotless" = 69;
@@ -25657,8 +24699,6 @@ greater = {
 Psi = -186;
 afii10024 = -104;
 afii10044 = -151;
-enclosingcirclecomb = 43;
-enclosingsquarecomb = 43;
 seven = -151;
 tenge = -151;
 };
@@ -25813,8 +24853,6 @@ ldotbelowmacron = {
 idblgrave = 81;
 };
 less = {
-enclosingcirclecomb = -58;
-enclosingsquarecomb = -58;
 };
 lj = {
 idblgrave = 69;
@@ -25869,8 +24907,6 @@ afii10049 = -93;
 tenge = -69;
 };
 nine = {
-enclosingcirclecomb = 14;
-enclosingsquarecomb = 14;
 };
 nj = {
 idblgrave = 69;
@@ -25923,8 +24959,6 @@ pi = {
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 161;
-enclosingsquarecomb = 161;
 };
 questiondown = {
 "@MMK_R_gammagreek" = -69;
@@ -25984,8 +25018,6 @@ seven = {
 "@MMK_R_zero.subs" = -186;
 ampersand = -93;
 eight = -29;
-enclosingcirclecomb = 101;
-enclosingsquarecomb = 101;
 five = -20;
 four = -119;
 four.ss01 = -128;
@@ -26332,8 +25364,6 @@ underscore = -69;
 Dcroat = 81;
 Idieresisacute = 93;
 Istroke = 81;
-enclosingcirclecomb = -101;
-enclosingsquarecomb = -101;
 itildebelow = 81;
 jcircumflex = 81;
 llinebelow = 93;
@@ -26364,8 +25394,6 @@ underscore = -104;
 "@MMK_R_u" = -69;
 "@MMK_R_v" = -81;
 "@MMK_R_w" = -128;
-enclosingcirclecomb = -29;
-enclosingsquarecomb = -29;
 idblgrave = 93;
 idieresisacute = 170;
 infinity = -69;
@@ -26395,8 +25423,6 @@ periodcentered = -93;
 asciitilde = -81;
 asterisk = -81;
 degree = -93;
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 hyphen = -104;
 logicalnot = -267;
 periodcentered = -128;
@@ -27038,8 +26064,6 @@ logicalnot = -139;
 "@MMK_R_quotedblbase" = -104;
 "@MMK_R_quotedblleft" = -93;
 Psi = -69;
-enclosingcirclecomb = 14;
-enclosingsquarecomb = 14;
 seven = -40;
 underscore = -93;
 };
@@ -27283,8 +26307,6 @@ ampersand = -69;
 "@MMK_R_three" = -34;
 "@MMK_R_zero.subs" = -186;
 ampersand = -93;
-enclosingcirclecomb = 101;
-enclosingsquarecomb = 101;
 five = -20;
 four.ss01 = -128;
 less = -186;
@@ -27486,8 +26508,6 @@ Gamma = {
 underscore = -139;
 };
 I = {
-enclosingcirclecomb = 378;
-enclosingsquarecomb = 378;
 };
 Icaron = {
 "@MMK_R_idblgrave" = 81;
@@ -27538,12 +26558,8 @@ Lslash = {
 "@MMK_R_quotedblright" = -69;
 };
 M = {
-enclosingcirclecomb = -258;
-enclosingsquarecomb = -258;
 };
 N = {
-enclosingcirclecomb = -126;
-enclosingsquarecomb = -126;
 };
 Psi = {
 "@MMK_R_Alphagreek" = -128;
@@ -27660,12 +26676,8 @@ asciitilde = {
 "@MMK_R_X" = -69;
 };
 at = {
-enclosingcirclecomb = -305;
-enclosingsquarecomb = -305;
 };
 at.case = {
-enclosingcirclecomb = -306;
-enclosingsquarecomb = -306;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -27707,78 +26719,10 @@ dyogh = {
 ellipsis = {
 quotedblreversed = -372;
 };
-enclosingcirclecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = -101;
-"@MMK_R_C" = -116;
-"@MMK_R_J" = 72;
-"@MMK_R_U" = -112;
-"@MMK_R_V" = -36;
-"@MMK_R_W" = -306;
-"@MMK_R_Y" = -58;
-"@MMK_R_Z" = 14;
-"@MMK_R_approxequal" = -14;
-"@MMK_R_emdash" = -366;
-"@MMK_R_endash" = 174;
-"@MMK_R_four" = -14;
-"@MMK_R_hyphen" = 218;
-"@MMK_R_one" = 160;
-"@MMK_R_six" = 14;
-"@MMK_R_two" = 43;
-I = 378;
-K = -29;
-L = 72;
-M = -258;
-N = -126;
-at = -305;
-at.case = -306;
-exclam = 363;
-five = 24;
-greater = 43;
-less = -58;
-nine = 14;
-question = 161;
-seven = 101;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = -101;
-"@MMK_R_C" = -116;
-"@MMK_R_J" = 72;
-"@MMK_R_U" = -112;
-"@MMK_R_V" = -36;
-"@MMK_R_W" = -306;
-"@MMK_R_Y" = -58;
-"@MMK_R_Z" = 14;
-"@MMK_R_approxequal" = -14;
-"@MMK_R_emdash" = -366;
-"@MMK_R_endash" = 174;
-"@MMK_R_four" = -14;
-"@MMK_R_hyphen" = 218;
-"@MMK_R_one" = 160;
-"@MMK_R_six" = 14;
-"@MMK_R_two" = 43;
-I = 378;
-K = -29;
-L = 72;
-M = -258;
-N = -126;
-at = -305;
-at.case = -306;
-exclam = 363;
-five = 24;
-greater = 43;
-less = -58;
-nine = 14;
-question = 161;
-seven = 101;
-};
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 363;
-enclosingsquarecomb = 363;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -27793,8 +26737,6 @@ feng = {
 five = {
 "@MMK_R_comma" = -55;
 "@MMK_R_registered" = -11;
-enclosingcirclecomb = 24;
-enclosingsquarecomb = 24;
 };
 florin = {
 "@MMK_R_idblgrave" = 93;
@@ -27825,8 +26767,6 @@ greater = {
 Psi = -186;
 afii10024 = -104;
 afii10044 = -151;
-enclosingcirclecomb = 43;
-enclosingsquarecomb = 43;
 seven = -151;
 tenge = -151;
 };
@@ -27929,8 +26869,6 @@ ldotbelowmacron = {
 "@MMK_R_idblgrave" = 81;
 };
 less = {
-enclosingcirclecomb = -58;
-enclosingsquarecomb = -58;
 };
 llinebelow = {
 "@MMK_R_idotless" = 81;
@@ -27987,8 +26925,6 @@ pi = {
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 161;
-enclosingsquarecomb = 161;
 };
 questiondown = {
 "@MMK_R_T" = -139;
@@ -29256,8 +28192,6 @@ uni023E = -81;
 "@MMK_R_c.sups" = -21;
 };
 D = {
-enclosingcirclecomb = 58;
-enclosingsquarecomb = 58;
 };
 DZ = {
 idblgrave = 69;
@@ -29314,8 +28248,6 @@ Etildebelow = {
 idblgrave = 69;
 };
 F = {
-enclosingcirclecomb = 130;
-enclosingsquarecomb = 130;
 };
 Fdotaccent = {
 "@MMK_R_comma" = -81;
@@ -29355,7 +28287,6 @@ xi = -116;
 zeta = -162;
 };
 H = {
-enclosingsquarecomb = -14;
 };
 Hbar = {
 "@MMK_R_dagger" = 81;
@@ -29369,8 +28300,6 @@ Hdotaccent = {
 idblgrave = 69;
 };
 I = {
-enclosingcirclecomb = 461;
-enclosingsquarecomb = 461;
 };
 Icaron = {
 idblgrave = 81;
@@ -29432,8 +28361,6 @@ Klinebelow = {
 idblgrave = 81;
 };
 L = {
-enclosingcirclecomb = 174;
-enclosingsquarecomb = 174;
 };
 Lacute = {
 "@MMK_R_asciicircum" = -93;
@@ -29499,8 +28426,6 @@ Yhookabove = -69;
 Ytilde = -69;
 };
 M = {
-enclosingcirclecomb = -174;
-enclosingsquarecomb = -174;
 };
 Macute = {
 idblgrave = 69;
@@ -29509,8 +28434,6 @@ Mdotaccent = {
 idblgrave = 69;
 };
 N = {
-enclosingcirclecomb = 32;
-enclosingsquarecomb = 32;
 };
 Ndotaccent = {
 idblgrave = 69;
@@ -29819,12 +28742,8 @@ asterisk.case = {
 "@MMK_R_T" = -69;
 };
 at = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 at.case = {
-enclosingcirclecomb = -344;
-enclosingsquarecomb = -344;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -29906,97 +28825,14 @@ ecircumflexhookabove = {
 idblgrave = 93;
 };
 eight = {
-enclosingcirclecomb = 69;
-enclosingsquarecomb = 69;
 };
 ellipsis = {
 quotedblreversed = -372;
-};
-enclosingcirclecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = 87;
-"@MMK_R_C" = -40;
-"@MMK_R_J" = 173;
-"@MMK_R_S" = 87;
-"@MMK_R_T" = 72;
-"@MMK_R_U" = 43;
-"@MMK_R_V" = -58;
-"@MMK_R_W" = -343;
-"@MMK_R_X" = -14;
-"@MMK_R_Y" = -5;
-"@MMK_R_Z" = 61;
-"@MMK_R_approxequal" = 58;
-"@MMK_R_emdash" = -244;
-"@MMK_R_endash" = 261;
-"@MMK_R_four" = 29;
-"@MMK_R_hyphen" = 292;
-"@MMK_R_one" = 218;
-"@MMK_R_six" = 29;
-"@MMK_R_three" = 91;
-"@MMK_R_two" = 110;
-D = 58;
-F = 130;
-I = 461;
-L = 174;
-M = -174;
-N = 32;
-at = -378;
-at.case = -344;
-eight = 69;
-exclam = 397;
-five = 66;
-nine = 93;
-numbersign = 110;
-plus = 72;
-question = 184;
-seven = 162;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = 87;
-"@MMK_R_C" = -40;
-"@MMK_R_J" = 173;
-"@MMK_R_S" = 87;
-"@MMK_R_T" = 72;
-"@MMK_R_U" = 43;
-"@MMK_R_V" = -58;
-"@MMK_R_W" = -343;
-"@MMK_R_X" = -14;
-"@MMK_R_Y" = -5;
-"@MMK_R_Z" = 61;
-"@MMK_R_approxequal" = 58;
-"@MMK_R_emdash" = -244;
-"@MMK_R_endash" = 261;
-"@MMK_R_four" = 29;
-"@MMK_R_hyphen" = 292;
-"@MMK_R_one" = 218;
-"@MMK_R_six" = 29;
-"@MMK_R_three" = 91;
-"@MMK_R_two" = 110;
-D = 58;
-F = 130;
-H = -14;
-I = 461;
-L = 174;
-M = -174;
-N = 32;
-at = -378;
-at.case = -344;
-eight = 69;
-exclam = 397;
-five = 66;
-nine = 93;
-numbersign = 110;
-plus = 72;
-question = 184;
-seven = 162;
 };
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 397;
-enclosingsquarecomb = 397;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -30015,8 +28851,6 @@ feng = {
 five = {
 "@MMK_R_comma" = -40;
 "@MMK_R_registered" = -11;
-enclosingcirclecomb = 66;
-enclosingsquarecomb = 66;
 };
 florin = {
 "@MMK_R_idotless" = 69;
@@ -30265,8 +29099,6 @@ afii10049 = -93;
 tenge = -69;
 };
 nine = {
-enclosingcirclecomb = 93;
-enclosingsquarecomb = 93;
 };
 nj = {
 idblgrave = 69;
@@ -30278,8 +29110,6 @@ ntilde = {
 "@MMK_R_T" = -104;
 };
 numbersign = {
-enclosingcirclecomb = 110;
-enclosingsquarecomb = 110;
 };
 ocircumflexacute = {
 "@MMK_R_B" = 69;
@@ -30313,14 +29143,10 @@ pi = {
 "@MMK_R_quotedblleft" = -81;
 };
 plus = {
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 };
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 184;
-enclosingsquarecomb = 184;
 };
 questiondown = {
 "@MMK_R_V" = -116;
@@ -30382,8 +29208,6 @@ seven = {
 "@MMK_R_three" = -34;
 ampersand = -93;
 eight = -29;
-enclosingcirclecomb = 162;
-enclosingsquarecomb = 162;
 five = -20;
 four = -119;
 four.ss01 = -128;
@@ -30687,8 +29511,6 @@ underscore = -81;
 "@MMK_R_registered" = -11;
 "@MMK_R_slash" = -81;
 afii10024 = -104;
-enclosingcirclecomb = 58;
-enclosingsquarecomb = 58;
 underscore = -81;
 };
 "@MMK_L_Decyrillic" = {
@@ -30720,8 +29542,6 @@ underscore = -81;
 "@MMK_R_v" = -69;
 "@MMK_R_z" = -69;
 ellipsis = -174;
-enclosingcirclecomb = 130;
-enclosingsquarecomb = 130;
 idblgrave = 81;
 period = -69;
 underscore = -69;
@@ -30753,8 +29573,6 @@ Dcroat = 81;
 Idieresisacute = 93;
 Iogonek = 69;
 Istroke = 81;
-enclosingcirclecomb = 461;
-enclosingsquarecomb = -14;
 florin = 69;
 itildebelow = 81;
 jcircumflex = 81;
@@ -30823,8 +29641,6 @@ Ytilde = -69;
 asciitilde = -81;
 asterisk = -81;
 degree = -93;
-enclosingcirclecomb = 174;
-enclosingsquarecomb = 174;
 logicalnot = -267;
 periodcentered = -128;
 quotedblreversed = -93;
@@ -31244,8 +30060,6 @@ uni023E = -162;
 "@MMK_R_comma" = -40;
 "@MMK_R_guillemetleft" = -69;
 "@MMK_R_quotedblbase" = -104;
-enclosingcirclecomb = 69;
-enclosingsquarecomb = 69;
 };
 "@MMK_L_eight.sups" = {
 "@MMK_R_A" = -186;
@@ -31372,8 +30186,6 @@ seven = -104;
 "@MMK_R_v" = -60;
 "@MMK_R_x" = -46;
 afii10024 = -69;
-enclosingcirclecomb = 72;
-enclosingsquarecomb = 72;
 seven = -69;
 };
 "@MMK_L_idieresis" = {
@@ -31465,8 +30277,6 @@ less = -174;
 "@MMK_R_quotedblbase" = -104;
 "@MMK_R_quotedblleft" = -93;
 Psi = -69;
-enclosingcirclecomb = 93;
-enclosingsquarecomb = 93;
 seven = -40;
 underscore = -93;
 };
@@ -31711,8 +30521,6 @@ ampersand = -69;
 "@MMK_R_six.1" = -69;
 "@MMK_R_three" = -34;
 ampersand = -93;
-enclosingcirclecomb = 162;
-enclosingsquarecomb = 162;
 five = -20;
 four.ss01 = -128;
 less = -186;
@@ -31894,7 +30702,6 @@ Gamma = {
 underscore = -139;
 };
 I = {
-enclosingsquarecomb = 461;
 };
 Icaron = {
 "@MMK_R_idblgrave" = 81;
@@ -31950,12 +30757,8 @@ Lslash = {
 "@MMK_R_quotedblright" = -69;
 };
 M = {
-enclosingcirclecomb = -174;
-enclosingsquarecomb = -174;
 };
 N = {
-enclosingcirclecomb = 32;
-enclosingsquarecomb = 32;
 };
 Psi = {
 "@MMK_R_Alphagreek" = -128;
@@ -32072,12 +30875,8 @@ ampersand = {
 Psi = -151;
 };
 at = {
-enclosingcirclecomb = -378;
-enclosingsquarecomb = -378;
 };
 at.case = {
-enclosingcirclecomb = -344;
-enclosingsquarecomb = -344;
 };
 backslash = {
 "@MMK_R_T" = -81;
@@ -32117,91 +30916,10 @@ dyogh = {
 ellipsis = {
 quotedblreversed = -372;
 };
-enclosingcirclecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = 87;
-"@MMK_R_C" = -40;
-"@MMK_R_J" = 173;
-"@MMK_R_S" = 87;
-"@MMK_R_T" = 72;
-"@MMK_R_U" = 43;
-"@MMK_R_V" = -58;
-"@MMK_R_W" = -343;
-"@MMK_R_X" = -14;
-"@MMK_R_Y" = -5;
-"@MMK_R_Z" = 61;
-"@MMK_R_approxequal" = 58;
-"@MMK_R_eight" = 69;
-"@MMK_R_emdash" = -244;
-"@MMK_R_endash" = 261;
-"@MMK_R_four" = 29;
-"@MMK_R_hyphen" = 292;
-"@MMK_R_one" = 218;
-"@MMK_R_six" = 29;
-"@MMK_R_three" = 91;
-"@MMK_R_two" = 110;
-D = 58;
-F = 130;
-I = 461;
-L = 174;
-M = -174;
-N = 32;
-at = -378;
-at.case = -344;
-exclam = 397;
-five = 66;
-nine = 93;
-numbersign = 110;
-plus = 72;
-question = 184;
-seven = 162;
-};
-enclosingsquarecomb = {
-"@MMK_R_A" = -43;
-"@MMK_R_B" = 87;
-"@MMK_R_C" = -40;
-"@MMK_R_J" = 173;
-"@MMK_R_S" = 87;
-"@MMK_R_T" = 72;
-"@MMK_R_U" = 43;
-"@MMK_R_V" = -58;
-"@MMK_R_W" = -343;
-"@MMK_R_X" = -14;
-"@MMK_R_Y" = -5;
-"@MMK_R_Z" = 61;
-"@MMK_R_approxequal" = 58;
-"@MMK_R_eight" = 69;
-"@MMK_R_emdash" = -244;
-"@MMK_R_endash" = 261;
-"@MMK_R_four" = 29;
-"@MMK_R_hyphen" = 292;
-"@MMK_R_one" = 218;
-"@MMK_R_six" = 29;
-"@MMK_R_three" = 91;
-"@MMK_R_two" = 110;
-D = 58;
-F = 130;
-H = -14;
-I = 461;
-L = 174;
-M = -174;
-N = 32;
-at = -378;
-at.case = -344;
-exclam = 397;
-five = 66;
-nine = 93;
-numbersign = 110;
-plus = 72;
-question = 184;
-seven = 162;
-};
 eturn = {
 "@MMK_R_T" = -162;
 };
 exclam = {
-enclosingcirclecomb = 397;
-enclosingsquarecomb = 397;
 };
 exclamdown = {
 "@MMK_R_T" = -139;
@@ -32216,8 +30934,6 @@ feng = {
 five = {
 "@MMK_R_comma" = -40;
 "@MMK_R_registered" = -11;
-enclosingcirclecomb = 66;
-enclosingsquarecomb = 66;
 };
 florin = {
 "@MMK_R_idblgrave" = 93;
@@ -32383,8 +31099,6 @@ ntilde = {
 "@MMK_R_T" = -104;
 };
 numbersign = {
-enclosingcirclecomb = 110;
-enclosingsquarecomb = 110;
 };
 ocircumflexhookabove = {
 "@MMK_R_idblgrave" = 93;
@@ -32406,8 +31120,6 @@ pi = {
 question = {
 "@MMK_R_A" = -128;
 "@MMK_R_Alphagreek" = -128;
-enclosingcirclecomb = 184;
-enclosingsquarecomb = 184;
 };
 questiondown = {
 "@MMK_R_T" = -139;
