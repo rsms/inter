@@ -308,7 +308,7 @@ zip: all
 zip_opsz_beta: $(FONTDIR)/var/Inter-V.var.ttf $(FONTDIR)/var/Inter-V.var.woff2
 	mkdir -p build/release
 	zip -j -q -X \
-	"build/release/Inter-opsz-beta-$(VERSION)-$(shell git rev-parse --short=10 HEAD).zip" \
+	"build/release/Inter_opsz_beta-$(VERSION)-$(shell date '+%Y%m%d_%H%M')-$(shell git rev-parse --short=10 HEAD).zip" \
 	$^
 
 .PHONY: zip zip_opsz_beta
