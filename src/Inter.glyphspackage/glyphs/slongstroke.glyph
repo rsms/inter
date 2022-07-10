@@ -169,23 +169,30 @@ ref = _part.f_base;
 width = 594;
 },
 {
+guides = (
+{
+angle = 80.6;
+pos = (92,-44);
+}
+);
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(577,946,l),
-(607,1118,l),
-(83,930,l),
-(55,760,l)
+(593.199,946,l),
+(621.674,1118,l),
+(98.551,930,l),
+(70.407,760,l)
 );
 },
 {
-pos = (-47,0);
+pos = (-38,0);
 ref = _part.f_base;
 }
 );
-width = 627;
+width = 594;
 },
 {
 guides = (
@@ -215,25 +222,32 @@ ref = _part.f_base;
 width = 810;
 },
 {
+guides = (
+{
+angle = 80.6;
+pos = (424,-84);
+}
+);
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(799,814,l),
-(849,1118,l,{
+(811.347,814,l),
+(861.674,1118,l,{
 name = hr00;
 }),
-(61,878,l),
-(11,574,l)
+(73.942,878,l),
+(23.615,574,l)
 );
 },
 {
-pos = (-17,0);
+pos = (-8,0);
 ref = _part.f_base;
 }
 );
-width = 793;
+width = 810;
 },
 {
 guides = (
@@ -263,17 +277,24 @@ ref = _part.f_base;
 width = 516;
 },
 {
+guides = (
+{
+angle = 80.6;
+pos = (272,-48);
+}
+);
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(504,1068,l),
-(514,1118,l,{
+(509.396,1068,l),
+(517.674,1118,l,{
 name = hr00;
 }),
-(144,962,l),
-(134,914,l)
+(147.848,962,l),
+(139.902,914,l)
 );
 },
 {

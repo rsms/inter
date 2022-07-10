@@ -182,14 +182,29 @@ nodes = (
 width = 1024;
 },
 {
+background = {
+shapes = (
+{
+ref = bullet;
+}
+);
+};
+guides = (
+{
+orientation = center;
+angle = -9.4;
+pos = (-4222,816);
+}
+);
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(848,594,l),
-(364,920,l),
-(256,268,l)
+(866.926,594,l),
+(382.895,920,l),
+(274.957,268,l)
 );
 }
 );
@@ -216,14 +231,22 @@ nodes = (
 width = 752;
 },
 {
+guides = (
+{
+orientation = center;
+angle = -9.4;
+pos = (-976,816);
+}
+);
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(696,594,l),
-(210,920,l),
-(104,268,l)
+(700.926,594,l),
+(216.895,920,l),
+(108.957,268,l)
 );
 }
 );
@@ -250,14 +273,22 @@ nodes = (
 width = 896;
 },
 {
+guides = (
+{
+orientation = center;
+angle = -9.4;
+pos = (-200,816);
+}
+);
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(712,594,l),
-(416,792,l),
-(350,396,l)
+(716.926,594,l),
+(421.705,792,l),
+(356.148,396,l)
 );
 }
 );
