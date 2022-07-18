@@ -29,11 +29,20 @@ several [OpenType features](https://rsms.me/inter/#features), like contextual al
 - To use Inter on a web page, use the official
 [CDN distribution:](https://rsms.me/inter/inter.css)
 
+```html
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+```
+
 ```css
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
+html {
+  font-family: 'Inter', sans-serif;
+}
+
 @supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
 }
 ```
 
@@ -149,4 +158,3 @@ Translating between EM units and pixels:
 - Rasterized at 11px: 1px = 256 units
 - Rasterized at 22px: 1px = 128 units
 - Rasterized at 44px: 1px =  64 units
-

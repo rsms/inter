@@ -87,10 +87,16 @@ endfor
         the font files. If you're making a web thing, you can use the following CSS.
         <!-- or get it from <a href="https://fonts.google.com/specimen/Inter">Google Fonts</a>. -->
       </p>
-      <pre>@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
+      <pre>&lt;link rel=&quot;preconnect&quot; href=&quot;https://rsms.me/&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://rsms.me/inter/inter.css&quot;&gt;</pre>
+      <pre>html {
+  font-family: 'Inter', sans-serif;
+}
+
 @supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
 }</pre>
     </c>
 
