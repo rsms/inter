@@ -1,4 +1,5 @@
 {
+case = minor;
 color = 4;
 glyphname = leftLongArrow.case;
 kernRight = hyphen;
@@ -16,6 +17,8 @@ pos = (668,1008);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
+alignment = 1;
+pos = (0,93);
 ref = leftLongArrow;
 }
 );
@@ -31,6 +34,8 @@ pos = (904,832);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+alignment = 1;
+pos = (0,94);
 ref = leftLongArrow;
 }
 );
@@ -39,16 +44,18 @@ width = 2746;
 {
 guides = (
 {
-pos = (294,896);
+pos = (296,896);
 },
 {
 angle = 90;
-pos = (690,1008);
+pos = (692,1008);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 shapes = (
 {
+alignment = 1;
+pos = (15,93);
 ref = leftLongArrow;
 }
 );
@@ -58,12 +65,14 @@ width = 2746;
 guides = (
 {
 angle = 90;
-pos = (890,832);
+pos = (860,832);
 }
 );
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 shapes = (
 {
+alignment = 1;
+pos = (18,108);
 ref = leftLongArrow;
 }
 );
@@ -73,8 +82,8 @@ width = 2744;
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
-alignment = -1;
-pos = (0,94);
+alignment = 1;
+pos = (0,93);
 ref = leftLongArrow;
 }
 );
@@ -84,26 +93,19 @@ width = 2746;
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 shapes = (
 {
-alignment = -1;
-pos = (16,94);
+alignment = 1;
+pos = (15,93);
 ref = leftLongArrow;
 }
 );
 width = 2746;
 },
 {
-guides = (
-{
-pos = (-20,896);
-},
-{
-angle = 90;
-pos = (376,1008);
-}
-);
 layerId = m007;
 shapes = (
 {
+alignment = 1;
+pos = (0,93);
 ref = leftLongArrow;
 }
 );
@@ -112,16 +114,18 @@ width = 2682;
 {
 guides = (
 {
-pos = (229,896);
+pos = (230,896);
 },
 {
 angle = 90;
-pos = (625,1008);
+pos = (626,1008);
 }
 );
 layerId = m008;
 shapes = (
 {
+alignment = 1;
+pos = (15,93);
 ref = leftLongArrow;
 }
 );
@@ -131,12 +135,14 @@ width = 2682;
 guides = (
 {
 angle = 90;
-pos = (808,832);
+pos = (821,832);
 }
 );
 layerId = m009;
 shapes = (
 {
+alignment = 1;
+pos = (0,94);
 ref = leftLongArrow;
 }
 );
@@ -146,23 +152,25 @@ width = 2714;
 guides = (
 {
 angle = 90;
-pos = (857,832);
+pos = (836,832);
 }
 );
 layerId = m010;
 shapes = (
 {
+alignment = 1;
+pos = (18,108);
 ref = leftLongArrow;
 }
 );
-width = 2712;
+width = 2714;
 },
 {
 layerId = m011;
 shapes = (
 {
-alignment = -1;
-pos = (0,94);
+alignment = 1;
+pos = (0,93);
 ref = leftLongArrow;
 }
 );
@@ -172,19 +180,16 @@ width = 2618;
 layerId = m012;
 shapes = (
 {
-alignment = -1;
-pos = (15,94);
+alignment = 1;
+pos = (15,93);
 ref = leftLongArrow;
 }
 );
 width = 2618;
 }
 );
-metricLeft = leftArrow;
+metricLeft = leftLongArrow;
 metricWidth = leftLongArrow;
-tags = (
-"TODO-opsz"
-);
 userData = {
 com.typemytype.robofont.guideline.magnetic.I1jGOeaIne = 5;
 com.typemytype.robofont.guideline.magnetic.j1R7bzZtA3 = 5;

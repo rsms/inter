@@ -1,4 +1,4 @@
-#MenuTitle: Copy guides from Regular & Italic to other masters
+#MenuTitle: Copy global guides from roman to italic masters
 # -*- coding: utf-8 -*-
 import GlyphsApp
 import copy
@@ -6,38 +6,21 @@ import copy
 Glyphs.clearLog()
 font = Glyphs.font
 
-romanMasterName = "Regular"
-italicMasterName = "Italic"
+romanMasters = [m for m in font.masters if m.italicAngle == 0.0]
+#print(romanMasters)
 
-guidesRoman = None
-guidesItalic = None
+def find_matching_roman(im):
+  wght = im.axes[0]
+  opsz = im.axes[2]
+  for rm in romanMasters:
+    if wght == rm.axes[0] and opsz == rm.axes[2]:
+      return rm
 
-guideNames = [
-  "cap center",  # 0
-  "low center",  # 1
-  "",
-  "",
-]
-
-for master in font.masters:
-  if master.name == "Regular":
-    guidesRoman = master.guides
-  if master.name == "Italic":
-    guidesItalic = master.guides
-
-# rename guides (order is horizontal top to bottom, then vertical)
-for i in range(0, len(guidesRoman)):
-  guidesRoman[i].name = guideNames[i]
-  guidesItalic[i].name = guideNames[i]
-
-if regularGuides is None:
-  print("mainMasterName=%r master not found" % mainMasterName)
-else:
-  for master in font.masters:
-    print(master.name)
-    if master.name.find("Italic") != -1:
-      if master.name != guidesItalic:
-        master.guides = [copy.copy(u) for u in guidesItalic]
-    else:
-      if master.name != guidesRoman:
-        master.guides = [copy.copy(u) for u in guidesRoman]
+for im in font.masters:
+  if im.italicAngle == 0.0:
+    continue
+  rm = find_matching_roman(im)
+  if rm is None:
+    raise Exception("rm not found (im=%r)" % im.name)
+  print(im.name, '<-', rm.name)
+  im.guides = [copy.copy(g) for g in rm.guides]

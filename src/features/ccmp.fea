@@ -612,6 +612,7 @@ sub equal enclosingsquarecomb by equal.squared;
 sub plus enclosingsquarecomb by plus.squared;
 sub minus enclosingsquarecomb by minus.squared;
 sub multiply enclosingsquarecomb by multiply.squared;
+sub [ fraction slash ] enclosingsquarecomb by fraction.squared;
 sub divide enclosingsquarecomb by divide.squared;
 sub upArrow enclosingsquarecomb by upArrow.squared;
 sub downArrow enclosingsquarecomb by downArrow.squared;
@@ -673,6 +674,7 @@ sub equal enclosingcirclecomb by equal.circled;
 sub plus enclosingcirclecomb by plus.circled;
 sub minus enclosingcirclecomb by minus.circled;
 sub multiply enclosingcirclecomb by multiply.circled;
+sub [ fraction slash ] enclosingcirclecomb by fraction.circled;
 sub divide enclosingcirclecomb by divide.circled;
 sub upArrow enclosingcirclecomb by upArrow.circled;
 sub downArrow enclosingcirclecomb by downArrow.circled;
@@ -680,30 +682,3 @@ sub leftArrow enclosingcirclecomb by leftArrow.circled;
 sub rightArrow enclosingcirclecomb by rightArrow.circled;
 sub dngb_check enclosingcirclecomb by dngb_check.circled;
 sub dngb_ballotx enclosingcirclecomb by dngb_ballotx.circled;
-
-# enclosingsquarecomb * -> "hey you got the wrong order"
-# See https://github.com/rsms/inter/issues/335
-@ENCLOSED_BASE = [
-  A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-  zero one two three four five six seven eight nine
-  zero.slash one.ss01 three.1 four.ss01 six.ss01 nine.ss01
-  exclam
-  question
-  numbersign
-  hyphen
-  less
-  greater
-  equal
-  plus
-  minus
-  multiply
-  divide
-  upArrow
-  downArrow
-  leftArrow
-  rightArrow
-  dngb_check
-  dngb_ballotx
-];
-sub enclosingsquarecomb' @ENCLOSED_BASE by whiteLargeSquare;
-sub enclosingcirclecomb' @ENCLOSED_BASE by largeCircle;

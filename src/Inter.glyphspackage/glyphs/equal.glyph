@@ -5,6 +5,12 @@ kernLeft = approxequal;
 kernRight = approxequal;
 layers = (
 {
+anchors = (
+{
+name = _center;
+pos = (675,582);
+}
+);
 background = {
 shapes = (
 {
@@ -41,6 +47,12 @@ nodes = (
 width = 1350;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (710,605);
+}
+);
 guides = (
 {
 orientation = center;
@@ -71,6 +83,12 @@ nodes = (
 width = 1420;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (678.808,582);
+}
+);
 guides = (
 {
 pos = (406,896);
@@ -100,6 +118,12 @@ nodes = (
 width = 1350;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (717.615,605);
+}
+);
 guides = (
 {
 pos = (724,896);
@@ -129,6 +153,12 @@ nodes = (
 width = 1420;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (652,582);
+}
+);
 guides = (
 {
 pos = (268,800);
@@ -158,6 +188,12 @@ nodes = (
 width = 1304;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (655.808,582);
+}
+);
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 shapes = (
 {
@@ -182,6 +218,12 @@ nodes = (
 width = 1304;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (643,582);
+}
+);
 background = {
 shapes = (
 {
@@ -218,35 +260,56 @@ nodes = (
 width = 1286;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (651.94,582);
+}
+);
+background = {
+shapes = (
+{
+ref = plus;
+}
+);
+};
 guides = (
 {
-pos = (342,896);
+angle = -9.4;
+pos = (-24,800);
 }
 );
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(1118,718,l),
-(1144,876,l),
-(248,876,l),
-(222,718,l)
+(1121.454,718,l),
+(1147.611,876,l),
+(251.611,876,l),
+(225.454,718,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(1046,288,l),
-(1072,446,l),
-(176,446,l),
-(150,288,l)
+(1050.268,288,l),
+(1076.425,446,l),
+(180.425,446,l),
+(154.268,288,l)
 );
 }
 );
 width = 1286;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (694,605);
+}
+);
 guides = (
 {
 orientation = center;
@@ -277,35 +340,50 @@ nodes = (
 width = 1388;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (706.747,605);
+}
+);
 guides = (
 {
-pos = (692,896);
+orientation = center;
+angle = -9.4;
+pos = (-3182,832);
 }
 );
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(1256,702,l),
-(1310,1026,l),
-(234,1026,l),
-(178,702,l)
+(1260.806,702,l),
+(1314.443,1026,l),
+(238.443,1026,l),
+(184.806,702,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(1170,184,l),
-(1224,510,l),
-(146,510,l),
-(94,184,l)
+(1175.051,184,l),
+(1229.02,510,l),
+(153.02,510,l),
+(99.051,184,l)
 );
 }
 );
 width = 1388;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (588,582);
+}
+);
 guides = (
 {
 pos = (140,800);
@@ -335,24 +413,37 @@ nodes = (
 width = 1176;
 },
 {
+anchors = (
+{
+name = _center;
+pos = (596.94,582);
+}
+);
+guides = (
+{
+angle = -9.4;
+pos = (140,800);
+}
+);
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(966,754,l),
-(974,800,l),
-(282,800,l),
-(274,754,l)
+(971.414,754,l),
+(979.029,800,l),
+(287.029,800,l),
+(279.414,754,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(902,364,l),
-(910,410,l),
-(218,410,l),
-(210,364,l)
+(906.85,364,l),
+(914.465,410,l),
+(222.465,410,l),
+(214.85,364,l)
 );
 }
 );

@@ -1,4 +1,5 @@
 {
+case = minor;
 color = 4;
 glyphname = endash.case;
 kernLeft = endash;
@@ -8,6 +9,8 @@ layers = (
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
+alignment = 1;
+pos = (0,107);
 ref = endash;
 }
 );
@@ -17,6 +20,8 @@ width = 1024;
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+alignment = 1;
+pos = (0,152);
 ref = endash;
 }
 );
@@ -26,6 +31,8 @@ width = 1024;
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 shapes = (
 {
+alignment = 1;
+pos = (18,107);
 ref = endash;
 }
 );
@@ -35,6 +42,8 @@ width = 1024;
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 shapes = (
 {
+alignment = 1;
+pos = (25,152);
 ref = endash;
 }
 );
@@ -44,7 +53,7 @@ width = 1024;
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 pos = (0,106);
 ref = endash;
 }
@@ -55,7 +64,7 @@ width = 1024;
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 pos = (18,106);
 ref = endash;
 }
@@ -66,6 +75,8 @@ width = 1024;
 layerId = m007;
 shapes = (
 {
+alignment = 1;
+pos = (0,137);
 ref = endash;
 }
 );
@@ -75,6 +86,8 @@ width = 1024;
 layerId = m008;
 shapes = (
 {
+alignment = 1;
+pos = (18,107);
 ref = endash;
 }
 );
@@ -84,6 +97,8 @@ width = 1024;
 layerId = m009;
 shapes = (
 {
+alignment = 1;
+pos = (0,176);
 ref = endash;
 }
 );
@@ -93,6 +108,8 @@ width = 1024;
 layerId = m010;
 shapes = (
 {
+alignment = 1;
+pos = (25,152);
 ref = endash;
 }
 );
@@ -102,7 +119,7 @@ width = 1024;
 layerId = m011;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 pos = (0,106);
 ref = endash;
 }
@@ -113,7 +130,7 @@ width = 1024;
 layerId = m012;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 pos = (18,106);
 ref = endash;
 }
@@ -121,8 +138,6 @@ ref = endash;
 width = 1024;
 }
 );
+metricLeft = endash;
 metricWidth = endash;
-tags = (
-"TODO-opsz"
-);
 }
