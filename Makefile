@@ -105,12 +105,10 @@ $(UFODIR)/Inter-ExtraBoldItalic.ufo:  $(UFODIR)/Inter.designspace | venv
 # products
 
 $(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o otf --output-path $@ \
-		--overlaps-backend pathops --production-names
+	. $(VENV) ; fontmake -u $< -o otf --output-path $@ --overlaps-backend pathops --production-names
 
 $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ \
-		--overlaps-backend pathops --production-names
+	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ --overlaps-backend pathops --production-names
 
 $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hinted venv
 	. $(VENV) ; python -m ttfautohint --no-info "$<" "$@"
@@ -119,14 +117,12 @@ $(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf venv
 	. $(VENV) ; python misc/tools/rename.py --family "Inter V" -o $@ $<
 
 $(FONTDIR)/var/%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
-	. $(VENV) ; fontmake -o variable -m $< --output-path $@ \
-		--overlaps-backend pathops --production-names
+	. $(VENV) ; fontmake -o variable -m $< --output-path $@ --overlaps-backend pathops --production-names
 	. $(VENV) ; python misc/tools/postprocess-vf.py $@
 	@#. $(VENV) ; gftools fix-unwanted-tables -t MVAR $@
 
 $(FONTDIR)/var/%.var.otf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
-	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ \
-		--overlaps-backend pathops --production-names
+	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ --overlaps-backend pathops --production-names
 
 %.woff2: %.ttf | venv
 	. $(VENV) ; misc/tools/woff2 compress -o "$@" "$<"
