@@ -55,40 +55,30 @@ rm -f  build/tmp/a.zip
 
 # create directories
 mkdir -p \
-  "$ZIPDIR/Inter Desktop" \
-  "$ZIPDIR/Inter Hinted for Windows/Desktop" \
-  "$ZIPDIR/Inter Hinted for Windows/Web" \
-  "$ZIPDIR/Inter Variable" \
-  "$ZIPDIR/Inter Variable/Single axis" \
-  "$ZIPDIR/Inter Web"
+  "$ZIPDIR/Desktop" \
+  "$ZIPDIR/Desktop with TrueType hints" \
+  "$ZIPDIR/Variable" \
+  "$ZIPDIR/Web"
 
 # copy font files
 # ----------------------------------------------------------------------------
 
-# Inter Desktop
-cp $FONTDIR/static/Inter-*.otf  "$ZIPDIR/Inter Desktop/" &
-cp $FONTDIR/var/Inter-V.var.ttf "$ZIPDIR/Inter Desktop/Inter-V.ttf" &
+# Desktop
+cp $FONTDIR/static/Inter-*.otf         "$ZIPDIR/Desktop/" &
 
-# Inter Hinted for Windows
-cp "misc/dist/about hinted fonts.txt"   "$ZIPDIR/Inter Hinted for Windows/" &
-cp $FONTDIR/static-hinted/Inter-*.ttf   "$ZIPDIR/Inter Hinted for Windows/Desktop/" &
-cp $FONTDIR/static-hinted/Inter-*.woff* "$ZIPDIR/Inter Hinted for Windows/Web/" &
-cp misc/dist/inter.css                  "$ZIPDIR/Inter Hinted for Windows/Web/" &
+# Hinted for Windows
+cp "misc/dist/about hinted fonts.txt"  "$ZIPDIR/Desktop with TrueType hints/" &
+cp $FONTDIR/static-hinted/Inter-*.ttf  "$ZIPDIR/Desktop with TrueType hints/" &
 
-# Inter Variable
-cp $FONTDIR/var/Inter.var.ttf \
-  "$ZIPDIR/Inter Variable/Inter.ttf" &
-cp $FONTDIR/var/Inter-roman.var.ttf \
-  "$ZIPDIR/Inter Variable/Single axis/Inter-roman.ttf" &
-cp $FONTDIR/var/Inter-italic.var.ttf \
-  "$ZIPDIR/Inter Variable/Single axis/Inter-italic.ttf" &
+# Variable ("Inter" and "Inter V")
+cp $FONTDIR/var/Inter*.var.ttf         "$ZIPDIR/Variable/" &
 
-# Inter Web
-cp $FONTDIR/static/Inter-*.woff*       "$ZIPDIR/Inter Web/" &
-cp $FONTDIR/var/Inter.var.woff2        "$ZIPDIR/Inter Web/" &
-cp $FONTDIR/var/Inter-roman.var.woff2  "$ZIPDIR/Inter Web/" &
-cp $FONTDIR/var/Inter-italic.var.woff2 "$ZIPDIR/Inter Web/" &
-cp misc/dist/inter.css                 "$ZIPDIR/Inter Web/" &
+# Web
+cp $FONTDIR/static/Inter-*.woff*       "$ZIPDIR/Web/" &
+cp $FONTDIR/var/Inter.var.woff2        "$ZIPDIR/Web/" &
+cp $FONTDIR/var/Inter-italic.var.woff2 "$ZIPDIR/Web/" &
+cp misc/dist/inter.css                 "$ZIPDIR/Web/" &
+
 # ----------------------------------------------------------------------------
 
 # copy misc stuff

@@ -1,0 +1,144 @@
+{
+glyphname = slashshortcomb.uc;
+layers = (
+{
+anchors = (
+{
+name = _cross;
+pos = (191,768);
+}
+);
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+shapes = (
+{
+closed = 1;
+nodes = (
+(709,1081,l),
+(709,1134,l),
+(0,724,l),
+(0,671,l)
+);
+}
+);
+width = 709;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (191,768);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(709,1081,l),
+(709,1134,l),
+(0,724,l),
+(0,671,l)
+);
+}
+);
+width = 709;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (256,768);
+}
+);
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+shapes = (
+{
+closed = 1;
+nodes = (
+(736,967,l),
+(736,1150,l),
+(0,725,l),
+(0,542,l)
+);
+}
+);
+width = 736;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (256,768);
+}
+);
+guides = (
+{
+angle = 30;
+pos = (192,528);
+}
+);
+layerId = m007;
+shapes = (
+{
+closed = 1;
+nodes = (
+(736,913,l),
+(736,1096,l),
+(0,671,l),
+(0,488,l)
+);
+}
+);
+width = 736;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (326,788);
+}
+);
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+shapes = (
+{
+closed = 1;
+nodes = (
+(936,920,l),
+(936,1247,l),
+(0,707,l),
+(0,380,l)
+);
+}
+);
+width = 936;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (326,788);
+}
+);
+guides = (
+{
+angle = 30;
+pos = (0,332);
+}
+);
+layerId = m009;
+shapes = (
+{
+closed = 1;
+nodes = (
+(936,872,l),
+(936,1199,l),
+(0,659,l),
+(0,332,l)
+);
+}
+);
+width = 936;
+}
+);
+note = "_cross x pos should match that of _cross anchor in /slashshortcomb";
+}

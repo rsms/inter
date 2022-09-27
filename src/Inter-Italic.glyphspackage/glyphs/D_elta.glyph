@@ -1,0 +1,200 @@
+{
+glyphname = Delta;
+kernLeft = Alphagreek;
+kernRight = Alphagreek;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+shapes = (
+{
+closed = 1;
+nodes = (
+(1240,0,l),
+(940,1490,l),
+(754,1490,l),
+(-40,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(802,1254,l),
+(814,1254,l),
+(1018,160,l),
+(232,160,l)
+);
+}
+);
+width = 1386;
+},
+{
+guides = (
+{
+pos = (476,1240);
+},
+{
+pos = (8,764);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+shapes = (
+{
+closed = 1;
+nodes = (
+(1490,0,l),
+(1246,1490,l),
+(692,1490,l),
+(-46,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(896,1080,l),
+(908,1080,l),
+(1010,326,l),
+(544,326,l)
+);
+}
+);
+width = 1630;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+shapes = (
+{
+closed = 1;
+nodes = (
+(1102,0,l),
+(798,1490,l),
+(774,1490,l),
+(-26,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(768,1382,l),
+(770,1382,l),
+(1046,46,l),
+(50,46,l)
+);
+}
+);
+width = 1262;
+},
+{
+background = {
+shapes = (
+{
+ref = Lambda;
+}
+);
+};
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1212.59,0,l),
+(913.258,1490,l),
+(727.258,1490,l),
+(-67.41,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(774.189,1254,l),
+(786.189,1254,l),
+(993.078,160,l),
+(207.078,160,l)
+);
+}
+);
+width = 1320;
+},
+{
+background = {
+shapes = (
+{
+pos = (-30,0);
+ref = Lambda;
+}
+);
+};
+guides = (
+{
+orientation = center;
+angle = 80.6;
+pos = (-5039,1240);
+},
+{
+angle = -9.4;
+pos = (-222,764);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1448.59,0,l),
+(1203.258,1490,l),
+(651.258,1490,l),
+(-87.41,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(853.383,1080,l),
+(865.383,1080,l),
+(968.559,326,l),
+(502.559,326,l)
+);
+}
+);
+width = 1536;
+},
+{
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1044.59,0,l),
+(737.258,1490,l),
+(715.258,1490,l),
+(-85.41,0,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(707.379,1382,l),
+(709.379,1382,l),
+(984.205,46,l),
+(-9.795,46,l)
+);
+}
+);
+width = 1134;
+}
+);
+metricLeft = A;
+metricRight = A;
+tags = (
+"TODO-opsz"
+);
+unicode = (916,8710);
+userData = {
+interface.gridadjust.original = "{'width': 1991.0, 'leftMargin': 40, 'rightMargin': 66.0}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

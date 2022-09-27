@@ -24,11 +24,20 @@ def update_version(ufo):
   ufo.info.openTypeNameUniqueID = "%s-%s:%d:%s" % (psFamily, psStyle, now.year, buildtag)
   ufo.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
 
-def fix_opsz_maximum(designspace):
+def fix_opsz_range(designspace):
+  # TODO: find extremes by looking at the source
   for a in designspace.axes:
     if a.tag == "opsz":
-      # TODO: find maximum by looking at the source
+      a.minimum = 14
       a.maximum = 32
+      break
+  return designspace
+
+def fix_wght_range(designspace):
+  for a in designspace.axes:
+    if a.tag == "wght":
+      a.minimum = 100
+      a.maximum = 900
       break
   return designspace
 
@@ -83,7 +92,8 @@ def update_sources(designspace):
 def main(argv):
   designspace_file = argv[1]
   designspace = DesignSpaceDocument.fromfile(designspace_file)
-  designspace = fix_opsz_maximum(designspace)
+  designspace = fix_opsz_range(designspace)
+  designspace = fix_wght_range(designspace)
   designspace = update_sources(designspace)
   designspace.write(designspace_file)
 

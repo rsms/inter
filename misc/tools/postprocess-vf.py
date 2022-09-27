@@ -28,7 +28,7 @@ FAMILY_RELATED_IDS = set([
 whitespace_re = re.compile(r'\s+')
 
 
-def removeWhitespace(s):
+def remove_whitespace(s):
   return whitespace_re.sub("", s)
 
 
@@ -57,19 +57,19 @@ def get_family_name(font):
 
 def fix_fullname(font):
   fullName = get_family_name(font)
-  fullNamePs = removeWhitespace(fullName)
+  fullNamePs = remove_whitespace(fullName)
   set_full_name(font, fullName, fullNamePs)
   return fullName
 
 
-def clear_subfamily_name(font):
-  nameTable = font["name"]
-  rmrecs = []
-  for rec in nameTable.names:
-    if rec.nameID == SUBFAMILY_NAME or rec.nameID == TYPO_SUBFAMILY_NAME:
-      rmrecs.append(rec)
-  for rec in rmrecs:
-    nameTable.removeNames(rec.nameID, rec.platformID, rec.platEncID, rec.langID)
+# def clear_subfamily_name(font):
+#   nameTable = font["name"]
+#   rmrecs = []
+#   for rec in nameTable.names:
+#     if rec.nameID == SUBFAMILY_NAME or rec.nameID == TYPO_SUBFAMILY_NAME:
+#       rmrecs.append(rec)
+#   for rec in rmrecs:
+#     nameTable.removeNames(rec.nameID, rec.platformID, rec.platEncID, rec.langID)
 
 
 def fix_unique_id(font, fullName):
@@ -80,7 +80,7 @@ def fix_unique_id(font, fullName):
     if rec.nameID == TRUETYPE_UNIQUE_ID:
       if newId == '':
         oldId = rec.toUnicode()
-        newId = removeWhitespace(fullName)
+        newId = remove_whitespace(fullName)
         p = oldId.find(':')
         if p > -1:
           newId += oldId[p:]
@@ -105,7 +105,7 @@ def main():
 
   fullName = fix_fullname(font)
   fix_unique_id(font, fullName)
-  clear_subfamily_name(font)
+  #clear_subfamily_name(font)
 
   font.save(outfile)
   font.close()

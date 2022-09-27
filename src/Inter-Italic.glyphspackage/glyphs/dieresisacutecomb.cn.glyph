@@ -1,0 +1,195 @@
+{
+glyphname = dieresisacutecomb.cn;
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (-195,1676);
+}
+);
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-74,1944,l),
+(224,2164,l),
+(22,2164,l),
+(-226,1944,l)
+);
+},
+{
+pos = (-991,-52);
+ref = casedieresis.cn;
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (-234,1676);
+}
+);
+background = {
+shapes = (
+{
+pos = (-16,0);
+ref = tildeacutecomb.uc;
+}
+);
+};
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-63,1972,l),
+(236,2254,l),
+(-92,2254,l),
+(-333,1972,l)
+);
+},
+{
+alignment = -1;
+pos = (-873,148);
+ref = casedieresis.cn;
+scale = (0.9346,0.9028);
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (-183,1676);
+}
+);
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-132,1838,l),
+(83,2024,l),
+(15,2024,l),
+(-186,1838,l)
+);
+},
+{
+alignment = -1;
+pos = (-1052,-18);
+ref = casedieresis.cn;
+}
+);
+width = 4;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (-222,1676);
+}
+);
+background = {
+shapes = (
+{
+pos = (-2,0);
+ref = tildeacutecomb.uc;
+}
+);
+};
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-101,1944,l),
+(197,2164,l),
+(-5,2164,l),
+(-253,1944,l)
+);
+},
+{
+pos = (-986,-52);
+ref = casedieresis.cn;
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (-245,1676);
+}
+);
+background = {
+shapes = (
+{
+pos = (-11,0);
+ref = tildeacutecomb.uc;
+}
+);
+};
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-74,1972,l),
+(225,2254,l),
+(-103,2254,l),
+(-344,1972,l)
+);
+},
+{
+alignment = -1;
+pos = (-869,148);
+ref = casedieresis.cn;
+scale = (0.9346,0.9028);
+}
+);
+width = 0;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (-242,1676);
+}
+);
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-191,1838,l),
+(24,2024,l),
+(-44,2024,l),
+(-245,1838,l)
+);
+},
+{
+alignment = -1;
+pos = (-1047,-18);
+ref = casedieresis.cn;
+}
+);
+width = 4;
+}
+);
+tags = (
+"TODO-opsz"
+);
+unicode = 57633;
+}

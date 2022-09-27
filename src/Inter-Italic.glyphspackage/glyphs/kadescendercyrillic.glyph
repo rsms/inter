@@ -1,0 +1,101 @@
+{
+glyphname = kadescendercyrillic;
+kernLeft = m;
+kernRight = k;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+shapes = (
+{
+alignment = -1;
+ref = kacyrillic;
+},
+{
+pos = (842,0);
+ref = cyrillictic.cn;
+}
+);
+width = 1188;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+shapes = (
+{
+alignment = -1;
+ref = kacyrillic;
+},
+{
+pos = (924,0);
+ref = cyrillictic.cn;
+}
+);
+width = 1514;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+shapes = (
+{
+ref = kacyrillic;
+},
+{
+pos = (814,18);
+ref = cyrillictic.cn;
+}
+);
+width = 972;
+},
+{
+layerId = m008;
+shapes = (
+{
+alignment = -1;
+ref = kacyrillic;
+},
+{
+pos = (847,0);
+ref = cyrillictic.cn;
+}
+);
+width = 1126;
+},
+{
+layerId = m010;
+shapes = (
+{
+alignment = -1;
+ref = kacyrillic;
+},
+{
+pos = (931,0);
+ref = cyrillictic.cn;
+}
+);
+width = 1492;
+},
+{
+layerId = m012;
+shapes = (
+{
+ref = kacyrillic;
+},
+{
+pos = (819,18);
+ref = cyrillictic.cn;
+}
+);
+width = 844;
+}
+);
+metricLeft = m;
+metricRight = t;
+tags = (
+"TODO-opsz"
+);
+unicode = 1179;
+userData = {
+interface.gridadjust.original = "{'width': 1680, 'leftMargin': 213, 'rightMargin': 71}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

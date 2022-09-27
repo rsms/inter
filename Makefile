@@ -27,79 +27,136 @@ $(UFODIR)/features: src/features
 	@ln -s ../../src/features $(UFODIR)/features
 
 # designspace
-$(UFODIR)/Inter-roman.designspace: $(UFODIR)/Inter.designspace | venv
-	. $(VENV) ; python misc/tools/subset-designspace.py $^ $@
-$(UFODIR)/Inter-italic.designspace: $(UFODIR)/Inter.designspace | venv
-	. $(VENV) ; python misc/tools/subset-designspace.py $^ $@
 $(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
 	. $(VENV) ; fontmake -o ufo -g $< --designspace-path $@ \
 		--master-dir $(UFODIR) --instance-dir $(UFODIR)
 	. $(VENV) ; python misc/tools/postprocess-designspace.py $@
 
 # master UFOs are byproducts of building Inter.designspace
-$(UFODIR)/Inter-Black.ufo:       $(UFODIR)/Inter.designspace
+$(UFODIR)/Inter-Thin.ufo:        $(UFODIR)/Inter-Roman.designspace
 	touch $@
-$(UFODIR)/Inter-BlackItalic.ufo: $(UFODIR)/Inter.designspace
+$(UFODIR)/Inter-Regular.ufo:     $(UFODIR)/Inter-Roman.designspace
 	touch $@
-$(UFODIR)/Inter-Regular.ufo:     $(UFODIR)/Inter.designspace
+$(UFODIR)/Inter-Black.ufo:       $(UFODIR)/Inter-Roman.designspace
 	touch $@
-$(UFODIR)/Inter-Italic.ufo:      $(UFODIR)/Inter.designspace
+$(UFODIR)/Inter-ThinItalic.ufo:  $(UFODIR)/Inter-Italic.designspace
 	touch $@
-$(UFODIR)/Inter-Thin.ufo:        $(UFODIR)/Inter.designspace
+$(UFODIR)/Inter-Italic.ufo:      $(UFODIR)/Inter-Italic.designspace
 	touch $@
-$(UFODIR)/Inter-ThinItalic.ufo:  $(UFODIR)/Inter.designspace
+$(UFODIR)/Inter-BlackItalic.ufo: $(UFODIR)/Inter-Italic.designspace
+	touch $@
+$(UFODIR)/Inter-DisplayThin.ufo:        $(UFODIR)/Inter-Roman.designspace
+	touch $@
+$(UFODIR)/Inter-DisplayRegular.ufo:     $(UFODIR)/Inter-Roman.designspace
+	touch $@
+$(UFODIR)/Inter-DisplayBlack.ufo:       $(UFODIR)/Inter-Roman.designspace
+	touch $@
+$(UFODIR)/Inter-DisplayThinItalic.ufo:  $(UFODIR)/Inter-Italic.designspace
+	touch $@
+$(UFODIR)/Inter-DisplayItalic.ufo:      $(UFODIR)/Inter-Italic.designspace
+	touch $@
+$(UFODIR)/Inter-DisplayBlackItalic.ufo: $(UFODIR)/Inter-Italic.designspace
 	touch $@
 
 # instance UFOs are generated on demand
-$(UFODIR)/Inter-Light.ufo:            $(UFODIR)/Inter.designspace | venv
+$(UFODIR)/Inter-Light.ufo: $(UFODIR)/Inter-Roman.designspace | venv
 	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Light"
-$(UFODIR)/Inter-LightItalic.ufo:      $(UFODIR)/Inter.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Light Italic"
-$(UFODIR)/Inter-ExtraLight.ufo:       $(UFODIR)/Inter.designspace | venv
+$(UFODIR)/Inter-ExtraLight.ufo: $(UFODIR)/Inter-Roman.designspace | venv
 	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Light"
-$(UFODIR)/Inter-ExtraLightItalic.ufo: $(UFODIR)/Inter.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Light Italic"
-$(UFODIR)/Inter-Medium.ufo:           $(UFODIR)/Inter.designspace | venv
+$(UFODIR)/Inter-Medium.ufo: $(UFODIR)/Inter-Roman.designspace | venv
 	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Medium"
-$(UFODIR)/Inter-MediumItalic.ufo:     $(UFODIR)/Inter.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Medium Italic"
-$(UFODIR)/Inter-SemiBold.ufo:         $(UFODIR)/Inter.designspace | venv
+$(UFODIR)/Inter-SemiBold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
 	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Semi Bold"
-$(UFODIR)/Inter-SemiBoldItalic.ufo:   $(UFODIR)/Inter.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Semi Bold Italic"
-$(UFODIR)/Inter-Bold.ufo:             $(UFODIR)/Inter.designspace | venv
+$(UFODIR)/Inter-Bold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
 	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Bold"
-$(UFODIR)/Inter-BoldItalic.ufo:       $(UFODIR)/Inter.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Bold Italic"
-$(UFODIR)/Inter-ExtraBold.ufo:        $(UFODIR)/Inter.designspace | venv
+$(UFODIR)/Inter-ExtraBold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
 	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Bold"
-$(UFODIR)/Inter-ExtraBoldItalic.ufo:  $(UFODIR)/Inter.designspace | venv
+
+$(UFODIR)/Inter-LightItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Light Italic"
+$(UFODIR)/Inter-ExtraLightItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Light Italic"
+$(UFODIR)/Inter-MediumItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Medium Italic"
+$(UFODIR)/Inter-SemiBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Semi Bold Italic"
+$(UFODIR)/Inter-BoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Bold Italic"
+$(UFODIR)/Inter-ExtraBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
 	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Bold Italic"
+
+$(UFODIR)/Inter-DisplayLight.ufo: $(UFODIR)/Inter-Roman.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Light"
+$(UFODIR)/Inter-DisplayExtraLight.ufo: $(UFODIR)/Inter-Roman.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Extra Light"
+$(UFODIR)/Inter-DisplayMedium.ufo: $(UFODIR)/Inter-Roman.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Medium"
+$(UFODIR)/Inter-DisplaySemiBold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Semi Bold"
+$(UFODIR)/Inter-DisplayBold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Bold"
+$(UFODIR)/Inter-DisplayExtraBold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Extra Bold"
+
+$(UFODIR)/Inter-DisplayLightItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Light Italic"
+$(UFODIR)/Inter-DisplayExtraLightItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Extra Light Italic"
+$(UFODIR)/Inter-DisplayMediumItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Medium Italic"
+$(UFODIR)/Inter-DisplaySemiBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Semi Bold Italic"
+$(UFODIR)/Inter-DisplayBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Bold Italic"
+$(UFODIR)/Inter-DisplayExtraBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Extra Bold Italic"
 
 # make sure intermediate files are not rm'd by make
 .PRECIOUS: \
 	$(UFODIR)/Inter-Black.ufo \
-	$(UFODIR)/Inter-BlackItalic.ufo \
 	$(UFODIR)/Inter-Regular.ufo \
-	$(UFODIR)/Inter-Italic.ufo \
 	$(UFODIR)/Inter-Thin.ufo \
-	$(UFODIR)/Inter-ThinItalic.ufo \
 	$(UFODIR)/Inter-Light.ufo \
-	$(UFODIR)/Inter-LightItalic.ufo \
 	$(UFODIR)/Inter-ExtraLight.ufo \
-	$(UFODIR)/Inter-ExtraLightItalic.ufo \
 	$(UFODIR)/Inter-Medium.ufo \
-	$(UFODIR)/Inter-MediumItalic.ufo \
 	$(UFODIR)/Inter-SemiBold.ufo \
-	$(UFODIR)/Inter-SemiBoldItalic.ufo \
 	$(UFODIR)/Inter-Bold.ufo \
-	$(UFODIR)/Inter-BoldItalic.ufo \
 	$(UFODIR)/Inter-ExtraBold.ufo \
+	\
+	$(UFODIR)/Inter-BlackItalic.ufo \
+	$(UFODIR)/Inter-Italic.ufo \
+	$(UFODIR)/Inter-ThinItalic.ufo \
+	$(UFODIR)/Inter-LightItalic.ufo \
+	$(UFODIR)/Inter-ExtraLightItalic.ufo \
+	$(UFODIR)/Inter-MediumItalic.ufo \
+	$(UFODIR)/Inter-SemiBoldItalic.ufo \
+	$(UFODIR)/Inter-BoldItalic.ufo \
 	$(UFODIR)/Inter-ExtraBoldItalic.ufo \
-	$(UFODIR)/Inter.glyphs \
-	$(UFODIR)/Inter.designspace \
-	$(UFODIR)/Inter-roman.designspace \
-	$(UFODIR)/Inter-italic.designspace
+	\
+	$(UFODIR)/Inter-DisplayBlack.ufo \
+	$(UFODIR)/Inter-DisplayRegular.ufo \
+	$(UFODIR)/Inter-DisplayThin.ufo \
+	$(UFODIR)/Inter-DisplayLight.ufo \
+	$(UFODIR)/Inter-DisplayExtraLight.ufo \
+	$(UFODIR)/Inter-DisplayMedium.ufo \
+	$(UFODIR)/Inter-DisplaySemiBold.ufo \
+	$(UFODIR)/Inter-DisplayBold.ufo \
+	$(UFODIR)/Inter-DisplayExtraBold.ufo \
+	\
+	$(UFODIR)/Inter-DisplayBlackItalic.ufo \
+	$(UFODIR)/Inter-DisplayItalic.ufo \
+	$(UFODIR)/Inter-DisplayThinItalic.ufo \
+	$(UFODIR)/Inter-DisplayLightItalic.ufo \
+	$(UFODIR)/Inter-DisplayExtraLightItalic.ufo \
+	$(UFODIR)/Inter-DisplayMediumItalic.ufo \
+	$(UFODIR)/Inter-DisplaySemiBoldItalic.ufo \
+	$(UFODIR)/Inter-DisplayBoldItalic.ufo \
+	$(UFODIR)/Inter-DisplayExtraBoldItalic.ufo \
+	\
+	$(UFODIR)/Inter-Roman.glyphs \
+	$(UFODIR)/Inter-Italic.glyphs \
+	$(UFODIR)/Inter-Roman.designspace \
+	$(UFODIR)/Inter-Italic.designspace
 
 # ---------------------------------------------------------------------------------
 # products
@@ -113,16 +170,14 @@ $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo | $(FONTDIR)/static venv
 $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hinted venv
 	. $(VENV) ; python -m ttfautohint --no-info "$<" "$@"
 
-$(FONTDIR)/var/Inter-V.var.ttf: $(FONTDIR)/var/Inter.var.ttf venv
-	. $(VENV) ; python misc/tools/rename.py --family "Inter V" -o $@ $<
-
-$(FONTDIR)/var/%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
-	. $(VENV) ; fontmake -o variable -m $< --output-path $@ --overlaps-backend pathops --production-names
+$(FONTDIR)/var/_%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
+	. $(VENV) ; fontmake -o variable -m $< --output-path $@ \
+	              --overlaps-backend pathops --production-names
 	. $(VENV) ; python misc/tools/postprocess-vf.py $@
-	@#. $(VENV) ; gftools fix-unwanted-tables -t MVAR $@
 
-$(FONTDIR)/var/%.var.otf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
-	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ --overlaps-backend pathops --production-names
+$(FONTDIR)/var/_%.var.otf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
+	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ \
+	              --overlaps-backend pathops --production-names
 
 %.woff2: %.ttf | venv
 	. $(VENV) ; misc/tools/woff2 compress -o "$@" "$<"
@@ -135,6 +190,41 @@ $(FONTDIR)/var:
 	mkdir -p $@
 $(UFODIR):
 	mkdir -p $@
+
+# roman + italic
+$(FONTDIR)/var/inter-roman-and-italic.stamp: \
+	  $(FONTDIR)/var/_Inter-Roman.var.ttf \
+	  $(FONTDIR)/var/_Inter-Italic.var.ttf \
+	  | venv
+	@#. $(VENV) ; python misc/tools/postprocess-vf2.py $^
+	mkdir $(FONTDIR)/var/gen-stat
+	. $(VENV) ; gftools gen-stat --out $(FONTDIR)/var/gen-stat $^
+	mv $(FONTDIR)/var/gen-stat/_Inter-Roman.var.ttf $(FONTDIR)/var/Inter.var.ttf
+	mv $(FONTDIR)/var/gen-stat/_Inter-Italic.var.ttf $(FONTDIR)/var/Inter-Italic.var.ttf
+	rm -rf $(FONTDIR)/var/gen-stat
+	touch $@
+
+$(FONTDIR)/var/Inter.var.ttf: $(FONTDIR)/var/inter-roman-and-italic.stamp
+	touch $@
+$(FONTDIR)/var/Inter-Italic.var.ttf: $(FONTDIR)/var/inter-roman-and-italic.stamp
+	touch $@
+
+$(FONTDIR)/var/InterV.var.ttf: $(FONTDIR)/var/Inter.var.ttf | venv
+	. $(VENV) ; python misc/tools/rename.py --family "Inter V" -o $@ $<
+$(FONTDIR)/var/InterV-Italic.var.ttf: $(FONTDIR)/var/Inter-Italic.var.ttf | venv
+	. $(VENV) ; python misc/tools/rename.py --family "Inter V" -o $@ $<
+
+var: \
+	$(FONTDIR)/var/Inter.var.ttf \
+	$(FONTDIR)/var/Inter-Italic.var.ttf \
+	$(FONTDIR)/var/InterV.var.ttf \
+	$(FONTDIR)/var/InterV-Italic.var.ttf
+
+var_web: \
+	$(FONTDIR)/var/Inter.var.woff2 \
+	$(FONTDIR)/var/Inter-Italic.var.woff2
+
+web: var_web static_web
 
 static_otf: \
 	$(FONTDIR)/static/Inter-Black.otf \
@@ -154,7 +244,25 @@ static_otf: \
 	$(FONTDIR)/static/Inter-Bold.otf \
 	$(FONTDIR)/static/Inter-BoldItalic.otf \
 	$(FONTDIR)/static/Inter-ExtraBold.otf \
-	$(FONTDIR)/static/Inter-ExtraBoldItalic.otf
+	$(FONTDIR)/static/Inter-ExtraBoldItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayBlack.otf \
+	$(FONTDIR)/static/Inter-DisplayBlackItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayRegular.otf \
+	$(FONTDIR)/static/Inter-DisplayItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayThin.otf \
+	$(FONTDIR)/static/Inter-DisplayThinItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayLight.otf \
+	$(FONTDIR)/static/Inter-DisplayLightItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayExtraLight.otf \
+	$(FONTDIR)/static/Inter-DisplayExtraLightItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayMedium.otf \
+	$(FONTDIR)/static/Inter-DisplayMediumItalic.otf \
+	$(FONTDIR)/static/Inter-DisplaySemiBold.otf \
+	$(FONTDIR)/static/Inter-DisplaySemiBoldItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayBold.otf \
+	$(FONTDIR)/static/Inter-DisplayBoldItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayExtraBold.otf \
+	$(FONTDIR)/static/Inter-DisplayExtraBoldItalic.otf
 
 static_ttf: \
 	$(FONTDIR)/static/Inter-Black.ttf \
@@ -174,7 +282,25 @@ static_ttf: \
 	$(FONTDIR)/static/Inter-Bold.ttf \
 	$(FONTDIR)/static/Inter-BoldItalic.ttf \
 	$(FONTDIR)/static/Inter-ExtraBold.ttf \
-	$(FONTDIR)/static/Inter-ExtraBoldItalic.ttf
+	$(FONTDIR)/static/Inter-ExtraBoldItalic.ttf \
+	$(FONTDIR)/static/Inter-DisplayBlack.ttf \
+	$(FONTDIR)/static/Inter-DisplayBlackItalic.ttf \
+	$(FONTDIR)/static/Inter-DisplayRegular.ttf \
+	$(FONTDIR)/static/Inter-DisplayItalic.ttf \
+	$(FONTDIR)/static/Inter-DisplayThin.ttf \
+	$(FONTDIR)/static/Inter-DisplayThinItalic.ttf \
+	$(FONTDIR)/static/Inter-DisplayLight.ttf \
+	$(FONTDIR)/static/Inter-DisplayLightItalic.ttf \
+	$(FONTDIR)/static/Inter-DisplayExtraLight.ttf \
+	$(FONTDIR)/static/Inter-DisplayExtraLightItalic.ttf \
+	$(FONTDIR)/static/Inter-DisplayMedium.ttf \
+	$(FONTDIR)/static/Inter-DisplayMediumItalic.ttf \
+	$(FONTDIR)/static/Inter-DisplaySemiBold.ttf \
+	$(FONTDIR)/static/Inter-DisplaySemiBoldItalic.ttf \
+	$(FONTDIR)/static/Inter-DisplayBold.ttf \
+	$(FONTDIR)/static/Inter-DisplayBoldItalic.ttf \
+	$(FONTDIR)/static/Inter-DisplayExtraBold.ttf \
+	$(FONTDIR)/static/Inter-DisplayExtraBoldItalic.ttf
 
 static_ttf_hinted: \
 	$(FONTDIR)/static-hinted/Inter-Black.ttf \
@@ -194,7 +320,25 @@ static_ttf_hinted: \
 	$(FONTDIR)/static-hinted/Inter-Bold.ttf \
 	$(FONTDIR)/static-hinted/Inter-BoldItalic.ttf \
 	$(FONTDIR)/static-hinted/Inter-ExtraBold.ttf \
-	$(FONTDIR)/static-hinted/Inter-ExtraBoldItalic.ttf
+	$(FONTDIR)/static-hinted/Inter-ExtraBoldItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayBlack.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayBlackItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayRegular.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayThin.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayThinItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayLight.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayLightItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraLight.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraLightItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayMedium.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayMediumItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplaySemiBold.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplaySemiBoldItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayBold.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayBoldItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraBold.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraBoldItalic.ttf
 
 static_web: \
 	$(FONTDIR)/static/Inter-Black.woff2 \
@@ -214,7 +358,25 @@ static_web: \
 	$(FONTDIR)/static/Inter-Bold.woff2 \
 	$(FONTDIR)/static/Inter-BoldItalic.woff2 \
 	$(FONTDIR)/static/Inter-ExtraBold.woff2 \
-	$(FONTDIR)/static/Inter-ExtraBoldItalic.woff2
+	$(FONTDIR)/static/Inter-ExtraBoldItalic.woff2 \
+	$(FONTDIR)/static/Inter-DisplayBlack.woff2 \
+	$(FONTDIR)/static/Inter-DisplayBlackItalic.woff2 \
+	$(FONTDIR)/static/Inter-DisplayRegular.woff2 \
+	$(FONTDIR)/static/Inter-DisplayItalic.woff2 \
+	$(FONTDIR)/static/Inter-DisplayThin.woff2 \
+	$(FONTDIR)/static/Inter-DisplayThinItalic.woff2 \
+	$(FONTDIR)/static/Inter-DisplayLight.woff2 \
+	$(FONTDIR)/static/Inter-DisplayLightItalic.woff2 \
+	$(FONTDIR)/static/Inter-DisplayExtraLight.woff2 \
+	$(FONTDIR)/static/Inter-DisplayExtraLightItalic.woff2 \
+	$(FONTDIR)/static/Inter-DisplayMedium.woff2 \
+	$(FONTDIR)/static/Inter-DisplayMediumItalic.woff2 \
+	$(FONTDIR)/static/Inter-DisplaySemiBold.woff2 \
+	$(FONTDIR)/static/Inter-DisplaySemiBoldItalic.woff2 \
+	$(FONTDIR)/static/Inter-DisplayBold.woff2 \
+	$(FONTDIR)/static/Inter-DisplayBoldItalic.woff2 \
+	$(FONTDIR)/static/Inter-DisplayExtraBold.woff2 \
+	$(FONTDIR)/static/Inter-DisplayExtraBoldItalic.woff2
 
 static_web_hinted: \
 	$(FONTDIR)/static-hinted/Inter-Black.woff2 \
@@ -234,32 +396,31 @@ static_web_hinted: \
 	$(FONTDIR)/static-hinted/Inter-Bold.woff2 \
 	$(FONTDIR)/static-hinted/Inter-BoldItalic.woff2 \
 	$(FONTDIR)/static-hinted/Inter-ExtraBold.woff2 \
-	$(FONTDIR)/static-hinted/Inter-ExtraBoldItalic.woff2
+	$(FONTDIR)/static-hinted/Inter-ExtraBoldItalic.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayBlack.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayBlackItalic.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayRegular.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayItalic.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayThin.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayThinItalic.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayLight.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayLightItalic.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraLight.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraLightItalic.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayMedium.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayMediumItalic.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplaySemiBold.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplaySemiBoldItalic.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayBold.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayBoldItalic.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraBold.woff2 \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraBoldItalic.woff2
 
-var: \
-	$(FONTDIR)/var/Inter.var.ttf \
-	$(FONTDIR)/var/Inter-V.var.ttf
 
-var_no_slnt_axis: \
-	  $(FONTDIR)/var/Inter-roman.var.ttf \
-	  $(FONTDIR)/var/Inter-italic.var.ttf \
-	  | venv
-	. $(VENV) ; python misc/tools/postprocess-single-axis-vfs.py $^
+all: var web static_otf static_ttf static_ttf_hinted
 
-var_web: $(FONTDIR)/var/Inter.var.woff2
-
-var_web_all: var_web \
-	$(FONTDIR)/var/Inter-V.var.woff2 \
-	$(FONTDIR)/var/Inter-roman.var.woff2 \
-	$(FONTDIR)/var/Inter-italic.var.woff2
-
-web: var_web_all static_web
-
-all:        static_otf static_ttf static_ttf_hinted static_web static_web_hinted \
-            var var_web_all var_no_slnt_axis
-
-.PHONY: all static_otf static_ttf static_ttf_hinted static_web static_web_hinted \
-            var var_web var_web_all var_no_slnt_axis web
+.PHONY: all var var_web static_otf static_ttf static_ttf_hinted static_web static_web_hinted \
+        var_web web
 
 # ---------------------------------------------------------------------------------
 # testing
@@ -277,8 +438,11 @@ FBAKE_ARGS := check-universal \
               -j \
               -x com.google.fonts/check/family/win_ascent_and_descent
 
-build/fontbakery-report-var.txt: $(FONTDIR)/var/Inter.var.ttf | venv
-	@echo "fontbakery Inter.var.ttf > $(@) ..."
+build/fontbakery-report-var.txt: \
+		$(FONTDIR)/var/Inter.var.ttf \
+		$(FONTDIR)/var/Inter-Italic.var.ttf \
+		| venv
+	@echo "fontbakery {Inter,Inter-Italic}.var.ttf > $(@) ..."
 	@. $(VENV) ; fontbakery \
 		$(FBAKE_ARGS) -x com.google.fonts/check/STAT_strings \
 		$^ > $@ \
@@ -300,13 +464,15 @@ zip: all
 	bash misc/makezip2.sh -reveal-in-finder \
 		"build/release/Inter-$(VERSION)-$(shell git rev-parse --short=10 HEAD).zip"
 
-zip_opsz_beta: $(FONTDIR)/var/Inter-V.var.ttf $(FONTDIR)/var/Inter-V.var.woff2
+zip_beta: \
+		$(FONTDIR)/var/InterV.var.ttf \
+		$(FONTDIR)/var/InterV.var.woff2 \
+		$(FONTDIR)/var/InterV-Italic.var.ttf \
+		$(FONTDIR)/var/InterV-Italic.var.woff2
 	mkdir -p build/release
-	zip -j -q -X \
-	"build/release/Inter_opsz_beta-$(VERSION)-$(shell date '+%Y%m%d_%H%M')-$(shell git rev-parse --short=10 HEAD).zip" \
-	$^
+	zip -j -q -X "build/release/Inter_beta-$(VERSION)-$(shell date '+%Y%m%d_%H%M')-$(shell git rev-parse --short=10 HEAD).zip" $^
 
-.PHONY: zip zip_opsz_beta
+.PHONY: zip zip_beta
 
 # ---------------------------------------------------------------------------------
 # distribution
@@ -392,9 +558,29 @@ install: install_var \
   $(INSTALLDIR)/Inter-Bold.otf \
   $(INSTALLDIR)/Inter-BoldItalic.otf \
   $(INSTALLDIR)/Inter-ExtraBold.otf \
-  $(INSTALLDIR)/Inter-ExtraBoldItalic.otf
+  $(INSTALLDIR)/Inter-ExtraBoldItalic.otf \
+  $(INSTALLDIR)/Inter-DisplayBlack.otf \
+  $(INSTALLDIR)/Inter-DisplayBlackItalic.otf \
+  $(INSTALLDIR)/Inter-DisplayRegular.otf \
+  $(INSTALLDIR)/Inter-DisplayItalic.otf \
+  $(INSTALLDIR)/Inter-DisplayThin.otf \
+  $(INSTALLDIR)/Inter-DisplayThinItalic.otf \
+  $(INSTALLDIR)/Inter-DisplayLight.otf \
+  $(INSTALLDIR)/Inter-DisplayLightItalic.otf \
+  $(INSTALLDIR)/Inter-DisplayExtraLight.otf \
+  $(INSTALLDIR)/Inter-DisplayExtraLightItalic.otf \
+  $(INSTALLDIR)/Inter-DisplayMedium.otf \
+  $(INSTALLDIR)/Inter-DisplayMediumItalic.otf \
+  $(INSTALLDIR)/Inter-DisplaySemiBold.otf \
+  $(INSTALLDIR)/Inter-DisplaySemiBoldItalic.otf \
+  $(INSTALLDIR)/Inter-DisplayBold.otf \
+  $(INSTALLDIR)/Inter-DisplayBoldItalic.otf \
+  $(INSTALLDIR)/Inter-DisplayExtraBold.otf \
+  $(INSTALLDIR)/Inter-DisplayExtraBoldItalic.otf
 
-install_var: $(INSTALLDIR)/Inter-V.var.ttf
+install_var: \
+	$(INSTALLDIR)/InterV.var.ttf \
+	$(INSTALLDIR)/InterV-Italic.var.ttf
 
 $(INSTALLDIR)/%.otf: $(FONTDIR)/static/%.otf | $(INSTALLDIR)
 	cp -a $^ $@

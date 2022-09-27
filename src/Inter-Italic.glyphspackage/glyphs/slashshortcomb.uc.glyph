@@ -1,0 +1,150 @@
+{
+glyphname = slashshortcomb.uc;
+layers = (
+{
+anchors = (
+{
+name = _cross;
+pos = (226,768);
+}
+);
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(796,1081,l),
+(805,1134,l),
+(28,724,l),
+(19,671,l)
+);
+}
+);
+width = 710;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (231,768);
+}
+);
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(800.958,1081,l),
+(809.732,1134,l),
+(32.857,724,l),
+(24.083,671,l)
+);
+}
+);
+width = 710;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (290,768);
+}
+);
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(803,967,l),
+(833,1150,l),
+(27,725,l),
+(-3,542,l)
+);
+}
+);
+width = 735;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (296,768);
+}
+);
+guides = (
+{
+angle = 30;
+pos = (192,528);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(800.146,913,l),
+(830.442,1096,l),
+(24.083,671,l),
+(-6.212,488,l)
+);
+}
+);
+width = 736;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (364,788);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(996,920,l),
+(1050,1247,l),
+(25,707,l),
+(-29,380,l)
+);
+}
+);
+width = 936;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (369,788);
+}
+);
+guides = (
+{
+angle = 30;
+pos = (0,332);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(993.359,872,l),
+(1047.493,1199,l),
+(22.097,659,l),
+(-32.038,332,l)
+);
+}
+);
+width = 936;
+}
+);
+note = "_cross x pos should match that of _cross anchor in /slashshortcomb";
+}

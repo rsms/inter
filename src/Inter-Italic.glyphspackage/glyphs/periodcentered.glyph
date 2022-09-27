@@ -1,0 +1,122 @@
+{
+case = minor;
+glyphname = periodcentered;
+kernLeft = hyphen;
+kernRight = hyphen;
+layers = (
+{
+guides = (
+{
+pos = (771,896);
+}
+);
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (97,586);
+ref = period;
+}
+);
+width = 586;
+},
+{
+guides = (
+{
+pos = (761,896);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (87,526);
+ref = period;
+}
+);
+width = 770;
+},
+{
+guides = (
+{
+pos = (674,896);
+}
+);
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (108,653);
+ref = period;
+}
+);
+width = 554;
+},
+{
+guides = (
+{
+pos = (382,896);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (99,601);
+ref = period;
+}
+);
+width = 440;
+},
+{
+guides = (
+{
+pos = (578,896);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (85,516);
+ref = period;
+}
+);
+width = 544;
+},
+{
+guides = (
+{
+pos = (546,896);
+}
+);
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (108,653);
+ref = period;
+}
+);
+width = 400;
+}
+);
+metricLeft = period;
+metricWidth = period;
+note = "Sits right in between center of x-height and center of cap height";
+tags = (
+"TODO-opsz"
+);
+unicode = 183;
+userData = {
+"interface.width-adjustments" = (
+-16
+);
+};
+}

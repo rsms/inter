@@ -1,0 +1,173 @@
+{
+glyphname = control;
+layers = (
+{
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+shapes = (
+{
+closed = 1;
+nodes = (
+(814,1438,l),
+(1378,874,l),
+(1410,908,l),
+(814,1504,l),
+(218,908,l),
+(250,874,l)
+);
+}
+);
+width = 1630;
+},
+{
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+shapes = (
+{
+closed = 1;
+nodes = (
+(814,1282,l),
+(1300,798,l),
+(1410,908,l),
+(814,1504,l),
+(218,908,l),
+(328,798,l)
+);
+}
+);
+width = 1630;
+},
+{
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+shapes = (
+{
+closed = 1;
+nodes = (
+(814,1092,l),
+(1252,656,l),
+(1458,862,l),
+(814,1504,l),
+(172,862,l),
+(378,656,l)
+);
+}
+);
+width = 1630;
+},
+{
+associatedMasterId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+layerId = "228C83D3-EB10-4D05-AB30-2E94473D5405";
+name = wire;
+shapes = (
+{
+closed = 0;
+nodes = (
+(1410,908,l),
+(814,1504,l),
+(218,908,l)
+);
+}
+);
+width = 1630;
+},
+{
+associatedMasterId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+layerId = "1DC58F1D-BBA4-4C15-9ECF-322970F611F9";
+name = wire;
+shapes = (
+{
+closed = 0;
+nodes = (
+(1458,862,l),
+(814,1504,l),
+(172,862,l)
+);
+}
+);
+width = 1630;
+},
+{
+layerId = m007;
+shapes = (
+{
+closed = 1;
+nodes = (
+(782,1282,l),
+(1268,798,l),
+(1378,908,l),
+(782,1504,l),
+(186,908,l),
+(296,798,l)
+);
+}
+);
+width = 1566;
+},
+{
+associatedMasterId = m007;
+layerId = "86B512F1-1CD7-43DD-A964-D25CB55C97C1";
+name = wire;
+shapes = (
+{
+closed = 0;
+nodes = (
+(1410,908,l),
+(814,1504,l),
+(218,908,l)
+);
+}
+);
+width = 1630;
+},
+{
+layerId = m009;
+shapes = (
+{
+closed = 1;
+nodes = (
+(798,1092,l),
+(1236,656,l),
+(1442,862,l),
+(798,1504,l),
+(156,862,l),
+(362,656,l)
+);
+}
+);
+width = 1598;
+},
+{
+associatedMasterId = m009;
+layerId = "86525CF3-B962-442C-B62B-CE5F104E617F";
+name = wire;
+shapes = (
+{
+closed = 0;
+nodes = (
+(1458,862,l),
+(814,1504,l),
+(172,862,l)
+);
+}
+);
+width = 1630;
+},
+{
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(750,1438,l),
+(1314,874,l),
+(1346,908,l),
+(750,1504,l),
+(154,908,l),
+(186,874,l)
+);
+}
+);
+width = 1502;
+}
+);
+note = "stroke:\012L: 32,32,100%\012R: 108,108,100%\012B: 200,200,100%";
+unicode = 8963;
+}
