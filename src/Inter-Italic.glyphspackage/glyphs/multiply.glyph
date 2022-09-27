@@ -1,0 +1,226 @@
+{
+color = (204,240,242,1);
+glyphname = multiply;
+kernLeft = bullet;
+kernRight = bullet;
+layers = (
+{
+anchors = (
+{
+name = _center;
+pos = (677.98,577);
+}
+);
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+shapes = (
+{
+closed = 1;
+nodes = (
+(1076,218,l),
+(392,1038,l),
+(274,936,l),
+(958,116,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(1198,916,l),
+(1096,1036,l),
+(162,238,l),
+(264,120,l)
+);
+}
+);
+width = 1350;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (717.615,605);
+}
+);
+guides = (
+{
+orientation = center;
+pos = (492,832);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+shapes = (
+{
+closed = 1;
+nodes = (
+(1236,276,l),
+(482,1178,l),
+(198,930,l),
+(952,32,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(1344,930,l),
+(1140,1178,l),
+(90,276,l),
+(294,32,l)
+);
+}
+);
+width = 1420;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (655.808,582);
+}
+);
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+shapes = (
+{
+closed = 1;
+nodes = (
+(1016,186,l),
+(332,1006,l),
+(296,978,l),
+(980,158,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(1150,974,l),
+(1120,1010,l),
+(162,190,l),
+(192,154,l)
+);
+}
+);
+width = 1304;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (651.94,582);
+}
+);
+guides = (
+{
+angle = -9.4;
+pos = (-24,800);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1058.004,226,l),
+(374.085,1048,l),
+(245.544,936,l),
+(929.794,116,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(1175.544,936,l),
+(1084.085,1048,l),
+(128.004,226,l),
+(219.794,116,l)
+);
+}
+);
+width = 1286;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (706.747,605);
+}
+);
+guides = (
+{
+orientation = center;
+angle = -9.4;
+pos = (-3182,832);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1224.282,276,l),
+(473.607,1178,l),
+(186.551,930,l),
+(939.888,32,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(1332.551,930,l),
+(1129.607,1178,l),
+(78.282,276,l),
+(283.888,32,l)
+);
+}
+);
+width = 1388;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (596.774,581);
+}
+);
+guides = (
+{
+angle = -9.4;
+pos = (140,800);
+}
+);
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(957.713,188,l),
+(273.463,1008,l),
+(234.166,976,l),
+(920.085,154,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(1088.166,976,l),
+(1061.463,1008,l),
+(103.713,188,l),
+(132.085,154,l)
+);
+}
+);
+width = 1176;
+}
+);
+metricWidth = plus;
+tags = (
+"TODO-opsz"
+);
+unicode = 215;
+userData = {
+"interface.width-adjustments" = (
+-16
+);
+};
+}

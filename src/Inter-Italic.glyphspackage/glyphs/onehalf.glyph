@@ -1,0 +1,151 @@
+{
+color = 3;
+glyphname = onehalf;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+shapes = (
+{
+alignment = -1;
+pos = (580,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (-8,-46);
+ref = one.numr;
+},
+{
+alignment = 1;
+pos = (1092,0);
+ref = two.dnomf;
+}
+);
+width = 1878;
+},
+{
+guides = (
+{
+pos = (298,2860);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+shapes = (
+{
+alignment = -1;
+pos = (572,0);
+ref = fraction;
+},
+{
+pos = (-8,-46);
+ref = one.numr;
+},
+{
+alignment = 1;
+pos = (1104,0);
+ref = two.dnomf;
+}
+);
+width = 1878;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+shapes = (
+{
+alignment = -1;
+pos = (478,0);
+ref = fraction;
+},
+{
+pos = (-8,-46);
+ref = one.numr;
+},
+{
+alignment = 1;
+pos = (978,0);
+ref = two.dnomf;
+}
+);
+width = 1734;
+},
+{
+layerId = m008;
+shapes = (
+{
+alignment = -1;
+pos = (580,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (-8,-46);
+ref = one.numr;
+},
+{
+alignment = 1;
+pos = (1092,0);
+ref = two.dnomf;
+}
+);
+width = 1814;
+},
+{
+guides = (
+{
+pos = (266,2860);
+}
+);
+layerId = m010;
+shapes = (
+{
+alignment = -1;
+pos = (572,0);
+ref = fraction;
+},
+{
+pos = (-8,-46);
+ref = one.numr;
+},
+{
+alignment = 1;
+pos = (1104,0);
+ref = two.dnomf;
+}
+);
+width = 1846;
+},
+{
+layerId = m012;
+shapes = (
+{
+alignment = -1;
+pos = (478,0);
+ref = fraction;
+},
+{
+pos = (-8,-46);
+ref = one.numr;
+},
+{
+alignment = 1;
+pos = (978,0);
+ref = two.dnomf;
+}
+);
+width = 1606;
+}
+);
+metricLeft = one.numr;
+metricRight = two.dnomf;
+note = "numers should be auto-aligned, but not the slash";
+tags = (
+"TODO-opsz"
+);
+unicode = 189;
+userData = {
+interface.gridadjust.original = "{'width': 2197, 'leftMargin': 187, 'rightMargin': 146}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

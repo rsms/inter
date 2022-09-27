@@ -1,0 +1,91 @@
+{
+glyphname = ydieresis;
+kernLeft = v;
+kernRight = v;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+shapes = (
+{
+ref = y;
+},
+{
+pos = (-34,0);
+ref = dieresis;
+}
+);
+width = 1140;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+shapes = (
+{
+ref = y;
+},
+{
+pos = (108,0);
+ref = dieresis;
+}
+);
+width = 1240;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+shapes = (
+{
+ref = y;
+},
+{
+pos = (-140,0);
+ref = dieresis;
+}
+);
+width = 1070;
+},
+{
+layerId = m008;
+shapes = (
+{
+ref = y;
+},
+{
+pos = (-42,-42);
+ref = dieresis;
+}
+);
+width = 1064;
+},
+{
+layerId = m010;
+shapes = (
+{
+ref = y;
+},
+{
+pos = (104,0);
+ref = dieresis;
+}
+);
+width = 1192;
+},
+{
+layerId = m012;
+shapes = (
+{
+ref = y;
+},
+{
+pos = (-134,0);
+ref = dieresis;
+}
+);
+width = 942;
+}
+);
+unicode = 255;
+userData = {
+"interface.width-adjustments" = (
+-16
+);
+};
+}
