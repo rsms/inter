@@ -9,6 +9,10 @@ name = bottom;
 pos = (380,0);
 },
 {
+name = bottomr;
+pos = (604,0);
+},
+{
 name = top;
 pos = (518,1304);
 }
@@ -28,6 +32,10 @@ anchors = (
 {
 name = bottom;
 pos = (450,0);
+},
+{
+name = bottomr;
+pos = (786,0);
 },
 {
 name = top;
@@ -51,6 +59,10 @@ name = bottom;
 pos = (344,0);
 },
 {
+name = bottomr;
+pos = (468,0);
+},
+{
 name = top;
 pos = (444,1304);
 }
@@ -69,11 +81,15 @@ width = 666;
 anchors = (
 {
 name = bottom;
-pos = (380,0);
+pos = (353,0);
+},
+{
+name = bottomr;
+pos = (534,0);
 },
 {
 name = top;
-pos = (518,1304);
+pos = (447,1262);
 }
 );
 layerId = m007;
@@ -90,11 +106,15 @@ width = 660;
 anchors = (
 {
 name = bottom;
-pos = (450,0);
+pos = (428,0);
+},
+{
+name = bottomr;
+pos = (766,0);
 },
 {
 name = top;
-pos = (586,1304);
+pos = (575,1262);
 }
 );
 layerId = m009;
@@ -111,18 +131,22 @@ width = 852;
 anchors = (
 {
 name = bottom;
-pos = (344,0);
+pos = (278,0);
+},
+{
+name = bottomr;
+pos = (404,0);
 },
 {
 name = top;
-pos = (444,1304);
+pos = (381,1262);
 }
 );
 layerId = m011;
 shapes = (
 {
 angle = 180;
-pos = (538,1056);
+pos = (538,1118);
 ref = r;
 }
 );

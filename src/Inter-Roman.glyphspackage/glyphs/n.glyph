@@ -1,7 +1,6 @@
 {
 color = (219,235,247,1);
 glyphname = n;
-kernLeft = m;
 kernRight = a;
 layers = (
 {
@@ -9,6 +8,10 @@ anchors = (
 {
 name = bottom;
 pos = (600,0);
+},
+{
+name = bottomr;
+pos = (1042,0);
 },
 {
 name = top;
@@ -62,6 +65,10 @@ anchors = (
 {
 name = bottom;
 pos = (664,0);
+},
+{
+name = bottomr;
+pos = (1228,0);
 },
 {
 name = top;
@@ -166,6 +173,10 @@ anchors = (
 {
 name = bottom;
 pos = (582,0);
+},
+{
+name = bottomr;
+pos = (966,0);
 },
 {
 name = top;
@@ -301,6 +312,10 @@ name = bottom;
 pos = (568,0);
 },
 {
+name = bottomr;
+pos = (1010,0);
+},
+{
 name = top;
 pos = (568,1262);
 },
@@ -351,6 +366,10 @@ anchors = (
 {
 name = bottom;
 pos = (648,0);
+},
+{
+name = bottomr;
+pos = (1212,0);
 },
 {
 name = top;
@@ -404,6 +423,10 @@ anchors = (
 {
 name = bottom;
 pos = (518,0);
+},
+{
+name = bottomr;
+pos = (902,0);
 },
 {
 name = top;

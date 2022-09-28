@@ -1,7 +1,6 @@
 {
 color = (219,235,247,1);
 glyphname = l;
-kernLeft = B;
 kernRight = H;
 layers = (
 {
@@ -9,6 +8,10 @@ anchors = (
 {
 name = bottom;
 pos = (242,0);
+},
+{
+name = bottomr;
+pos = (328,0);
 },
 {
 name = cross;
@@ -44,6 +47,10 @@ name = bottom;
 pos = (302,0);
 },
 {
+name = bottomr;
+pos = (504,0);
+},
+{
 name = cross;
 pos = (302,768);
 },
@@ -75,6 +82,10 @@ anchors = (
 {
 name = bottom;
 pos = (222,0);
+},
+{
+name = bottomr;
+pos = (244,0);
 },
 {
 name = cross;
@@ -110,6 +121,10 @@ name = bottom;
 pos = (212,0);
 },
 {
+name = bottomr;
+pos = (298,0);
+},
+{
 name = cross;
 pos = (212,768);
 },
@@ -142,7 +157,11 @@ width = 426;
 anchors = (
 {
 name = bottom;
-pos = (286,0);
+pos = (285,0);
+},
+{
+name = bottomr;
+pos = (486,0);
 },
 {
 name = cross;
@@ -150,7 +169,7 @@ pos = (286,768);
 },
 {
 name = raccent;
-pos = (604,1490);
+pos = (602,1490);
 },
 {
 name = top;
@@ -164,18 +183,22 @@ closed = 1;
 nodes = (
 (86,1490,l),
 (86,0,l),
-(488,0,l),
-(488,1490,l)
+(486,0,l),
+(486,1490,l)
 );
 }
 );
-width = 574;
+width = 572;
 },
 {
 anchors = (
 {
 name = bottom;
 pos = (158,0);
+},
+{
+name = bottomr;
+pos = (180,0);
 },
 {
 name = cross;
