@@ -11,6 +11,10 @@ name = bottom;
 pos = (546,0);
 },
 {
+name = bottomr;
+pos = (1000,0);
+},
+{
 name = cross;
 pos = (552,558);
 },
@@ -56,6 +60,10 @@ anchors = (
 {
 name = bottom;
 pos = (610,0);
+},
+{
+name = bottomr;
+pos = (1094,0);
 },
 {
 name = cross;
@@ -113,6 +121,10 @@ name = bottom;
 pos = (504,0);
 },
 {
+name = bottomr;
+pos = (914,0);
+},
+{
 name = cross;
 pos = (520,558);
 },
@@ -160,6 +172,10 @@ name = bottom;
 pos = (489,0);
 },
 {
+name = bottomr;
+pos = (886,0);
+},
+{
 name = cross;
 pos = (512,558);
 },
@@ -168,27 +184,6 @@ name = top;
 pos = (488,1262);
 }
 );
-background = {
-shapes = (
-{
-closed = 1;
-nodes = (
-(972,0,l),
-(972,160,l),
-(336,160,l),
-(336,172,l),
-(952,980,l),
-(952,1118,l),
-(118,1118,l),
-(118,958,l),
-(732,958,l),
-(732,946,l),
-(98,130,l),
-(98,0,l)
-);
-}
-);
-};
 guides = (
 {
 angle = 90;
@@ -236,6 +231,10 @@ name = bottom;
 pos = (582,0);
 },
 {
+name = bottomr;
+pos = (1066,0);
+},
+{
 name = cross;
 pos = (582,528);
 },
@@ -244,27 +243,6 @@ name = top;
 pos = (582,1262);
 }
 );
-background = {
-shapes = (
-{
-closed = 1;
-nodes = (
-(1094,0,l),
-(1094,306,l),
-(632,306,l),
-(632,312,l),
-(1076,872,l),
-(1076,1118,l),
-(130,1118,l),
-(130,812,l),
-(602,812,l),
-(602,806,l),
-(114,222,l),
-(114,0,l)
-);
-}
-);
-};
 guides = (
 {
 angle = 90;
@@ -302,6 +280,10 @@ anchors = (
 {
 name = bottom;
 pos = (440,0);
+},
+{
+name = bottomr;
+pos = (850,0);
 },
 {
 name = cross;

@@ -472,6 +472,7 @@ Phook,
 Rho,
 uni1FEC,
 Q,
+Q_rthook,
 R,
 Racute,
 Rcommaaccent,
@@ -928,7 +929,6 @@ ercyrillic,
 q,
 qhook,
 qrthook,
-Q_rthook,
 r,
 rrthook,
 uni024D,
@@ -2867,7 +2867,8 @@ pos = (0,559);
 },
 {
 locked = 1;
-pos = (594,-418);
+name = "p bottom";
+pos = (0,-418);
 },
 {
 locked = 1;
@@ -3964,7 +3965,6 @@ underscore = -69;
 "@MMK_R_idblgrave" = 69;
 "@MMK_R_idieresis" = 151;
 "@MMK_R_idotless" = 93;
-"@MMK_R_m" = 93;
 Dcroat = 69;
 Istroke = 69;
 };
@@ -7831,7 +7831,6 @@ less = -128;
 periodcentered = -69;
 };
 "@MMK_L_a" = {
-"@MMK_R_B" = 69;
 "@MMK_R_T" = -93;
 "@MMK_R_T.sc" = -87;
 "@MMK_R_V" = -104;
