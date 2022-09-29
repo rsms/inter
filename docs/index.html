@@ -84,19 +84,17 @@ endfor
       <p>
         Using Inter is as easy as
         <a class="download-link" href="download/">downloading &amp; installing</a>
-        the font files. If you're making a web thing, you can use the following CSS.
-        <!-- or get it from <a href="https://fonts.google.com/specimen/Inter">Google Fonts</a>. -->
+        the font files.<br>
+        If you're making a web thing, you can use the following HTML and CSS:
       </p>
-      <pre>&lt;link rel=&quot;preconnect&quot; href=&quot;https://rsms.me/&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://rsms.me/inter/inter.css&quot;&gt;</pre>
-      <pre>html {
-  font-family: 'Inter', sans-serif;
-}
+      <pre>&lt;!-- HTML in your document's head --&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://rsms.me/&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://rsms.me/inter/inter.css&quot;&gt;
 
+/* CSS */
+:root { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
-  html {
-    font-family: 'Inter var', sans-serif;
-  }
+  :root { font-family: 'Inter var', sans-serif; }
 }</pre>
     </c>
 
