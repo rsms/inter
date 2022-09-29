@@ -4,7 +4,14 @@ kernLeft = B;
 kernRight = a;
 layers = (
 {
+anchors = (
+{
+name = lfthook;
+pos = (779,0);
+}
+);
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 ref = n;
@@ -16,7 +23,14 @@ ref = _part.top_r_hook;
 width = 1201;
 },
 {
+anchors = (
+{
+name = lfthook;
+pos = (733,0);
+}
+);
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 ref = n;
@@ -28,7 +42,14 @@ ref = _part.top_r_hook;
 width = 1331;
 },
 {
+anchors = (
+{
+name = lfthook;
+pos = (827,0);
+}
+);
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 ref = n;
@@ -40,7 +61,14 @@ ref = _part.top_r_hook;
 width = 1165;
 },
 {
+anchors = (
+{
+name = lfthook;
+pos = (753,0);
+}
+);
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
 ref = n;
@@ -53,7 +81,14 @@ ref = _part.top_r_hook;
 width = 1137;
 },
 {
+anchors = (
+{
+name = lfthook;
+pos = (725,0);
+}
+);
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
 ref = n;
@@ -65,16 +100,24 @@ ref = _part.top_r_hook;
 width = 1298;
 },
 {
+anchors = (
+{
+name = lfthook;
+pos = (763,0);
+}
+);
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
 ref = n;
 },
 {
+pos = (-5,0);
 ref = _part.top_r_hook;
 }
 );
-width = 1036;
+width = 1037;
 }
 );
 metricLeft = n;
