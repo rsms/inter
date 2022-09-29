@@ -6,12 +6,21 @@ export PATH := $(BIN):$(PATH)
 default:
 	@echo "Please specify a target: build, serve or dist" >&2
 
-build:
+build: .ruby-bundle
 	rm -rf _site
 	bundle exec jekyll build
 
-serve:
+serve: .ruby-bundle
 	./_scripts/serve.sh
+
+.ruby-bundle: Gemfile Gemfile.lock
+	@if ! (command -v bundle >/dev/null && command -v jekyll >/dev/null); then \
+	  echo "Please install Ruby bundle and jekyll: gem install bundler jekyll" >&2; \
+	  exit 1; \
+	fi
+	bundle update
+	bundle install
+	touch .ruby-bundle
 
 # -----------------------------------------------------------------------
 
