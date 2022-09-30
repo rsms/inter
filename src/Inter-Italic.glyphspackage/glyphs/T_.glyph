@@ -8,23 +8,27 @@ layers = (
 anchors = (
 {
 name = _center;
-pos = (687.792,745);
+pos = (688,745);
 },
 {
 name = bottom;
-pos = (564,0);
+pos = (566,0);
+},
+{
+name = bottomr;
+pos = (656,0);
 },
 {
 name = cedilla;
-pos = (584,0);
+pos = (588,0);
 },
 {
 name = cross;
-pos = (692,768);
+pos = (693,768);
 },
 {
 name = cyrtic;
-pos = (748,64);
+pos = (749,64);
 },
 {
 name = right;
@@ -32,42 +36,228 @@ pos = (606,0);
 },
 {
 name = top;
-pos = (844,1676);
+pos = (843,1676);
 }
 );
 guides = (
 {
-angle = -99.4;
-pos = (804,176);
+orientation = center;
+angle = 80.6;
+pos = (608,176);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
 (696,1330,l),
-(474,0,l),
-(654,0,l),
+(476,0,l),
+(656,0,l),
 (876,1330,l),
 (1344,1330,l),
-(1370,1490,l),
-(254,1490,l),
+(1371,1490,l),
+(253,1490,l),
 (226,1330,l)
 );
 }
 );
-width = 1314;
+width = 1315;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (733.792,745);
+pos = (733,745);
+},
+{
+name = bottom;
+pos = (610,0);
+},
+{
+name = bottomr;
+pos = (812,0);
+},
+{
+name = cedilla;
+pos = (603,0);
+},
+{
+name = cross;
+pos = (720,666);
+},
+{
+name = cyrtic;
+pos = (1010,162);
+},
+{
+name = right;
+pos = (763,0);
+},
+{
+name = top;
+pos = (887,1676);
+}
+);
+guides = (
+{
+orientation = center;
+angle = 80.6;
+pos = (269,956);
+},
+{
+angle = 80.6;
+pos = (703,703);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(601,1164,l),
+(408,0,l),
+(812,0,l),
+(1005,1164,l),
+(1450,1164,l),
+(1504,1490,l),
+(210,1490,l),
+(156,1164,l)
+);
+}
+);
+width = 1406;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (661,745);
+},
+{
+name = bottom;
+pos = (538,0);
+},
+{
+name = bottomr;
+pos = (562,0);
+},
+{
+name = cedilla;
+pos = (537,-6);
+},
+{
+name = cross;
+pos = (665,768);
+},
+{
+name = cyrtic;
+pos = (583,6);
+},
+{
+name = right;
+pos = (550,0);
+},
+{
+name = top;
+pos = (815,1676);
+}
+);
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(755,1444,l),
+(516,0,l),
+(562,0,l),
+(801,1444,l),
+(1281,1444,l),
+(1289,1490,l),
+(283,1490,l),
+(275,1444,l)
+);
+}
+);
+width = 1263;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (661,745);
+},
+{
+name = bottom;
+pos = (539,0);
+},
+{
+name = bottomr;
+pos = (629,0);
+},
+{
+name = cedilla;
+pos = (561,0);
+},
+{
+name = cross;
+pos = (666,768);
+},
+{
+name = cyrtic;
+pos = (722,64);
+},
+{
+name = right;
+pos = (579,0);
+},
+{
+name = top;
+pos = (817,1676);
+}
+);
+guides = (
+{
+orientation = center;
+angle = 80.6;
+pos = (-5415,176);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(669,1330,l),
+(449,0,l),
+(629,0,l),
+(849,1330,l),
+(1317,1330,l),
+(1344,1490,l),
+(226,1490,l),
+(199,1330,l)
+);
+}
+);
+width = 1251;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (732,745);
 },
 {
 name = bottom;
 pos = (608,0);
+},
+{
+name = bottomr;
+pos = (817,0);
 },
 {
 name = cedilla;
@@ -79,7 +269,7 @@ pos = (718,666);
 },
 {
 name = cyrtic;
-pos = (1010,162);
+pos = (1009,162);
 },
 {
 name = right;
@@ -87,168 +277,7 @@ pos = (762,0);
 },
 {
 name = top;
-pos = (890,1676);
-}
-);
-guides = (
-{
-angle = -99.4;
-pos = (998,960);
-}
-);
-layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
-shapes = (
-{
-closed = 1;
-nodes = (
-(602,1164,l),
-(410,0,l),
-(808,0,l),
-(1000,1164,l),
-(1448,1164,l),
-(1504,1490,l),
-(210,1490,l),
-(154,1164,l)
-);
-}
-);
-width = 1406;
-},
-{
-anchors = (
-{
-name = _center;
-pos = (658.792,745);
-},
-{
-name = bottom;
-pos = (536,0);
-},
-{
-name = cedilla;
-pos = (534,-6);
-},
-{
-name = cross;
-pos = (664,768);
-},
-{
-name = cyrtic;
-pos = (580,6);
-},
-{
-name = right;
-pos = (546,0);
-},
-{
-name = top;
-pos = (814,1676);
-}
-);
-layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
-shapes = (
-{
-closed = 1;
-nodes = (
-(750,1442,l),
-(512,0,l),
-(558,0,l),
-(798,1442,l),
-(1278,1442,l),
-(1286,1490,l),
-(280,1490,l),
-(270,1442,l)
-);
-}
-);
-width = 1256;
-},
-{
-anchors = (
-{
-name = _center;
-pos = (660.924,745);
-},
-{
-name = bottom;
-pos = (538.59,0);
-},
-{
-name = cedilla;
-pos = (560.59,0);
-},
-{
-name = cross;
-pos = (665.732,768);
-},
-{
-name = cyrtic;
-pos = (721.185,64);
-},
-{
-name = right;
-pos = (578.59,0);
-},
-{
-name = top;
-pos = (816.05,1676);
-}
-);
-guides = (
-{
-orientation = center;
-angle = 80.6;
-pos = (-4791,176);
-}
-);
-layerId = m008;
-name = ital_gen;
-shapes = (
-{
-closed = 1;
-nodes = (
-(668.77,1330,l),
-(448.59,0,l),
-(628.59,0,l),
-(848.77,1330,l),
-(1316.77,1330,l),
-(1343.258,1490,l),
-(225.258,1490,l),
-(198.77,1330,l)
-);
-}
-);
-width = 1250;
-},
-{
-anchors = (
-{
-name = _center;
-pos = (731.924,745);
-},
-{
-name = bottom;
-pos = (607.59,0);
-},
-{
-name = cedilla;
-pos = (601.59,0);
-},
-{
-name = cross;
-pos = (717.846,666);
-},
-{
-name = cyrtic;
-pos = (1008.409,162);
-},
-{
-name = right;
-pos = (761.59,0);
-},
-{
-name = top;
-pos = (887.05,1676);
+pos = (888,1676);
 }
 );
 layerId = m010;
@@ -257,48 +286,52 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(588.985,1138,l),
-(400.59,0,l),
-(816.59,0,l),
-(1004.985,1138,l),
-(1452.985,1138,l),
-(1511.258,1490,l),
-(199.258,1490,l),
-(140.985,1138,l)
+(589,1138,l),
+(401,0,l),
+(817,0,l),
+(1005,1138,l),
+(1453,1138,l),
+(1512,1490,l),
+(200,1490,l),
+(141,1138,l)
 );
 }
 );
-width = 1392;
+width = 1393;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (599.924,745);
+pos = (593,745);
 },
 {
 name = bottom;
-pos = (476.59,0);
+pos = (470,0);
+},
+{
+name = bottomr;
+pos = (494,0);
 },
 {
 name = cedilla;
-pos = (475.597,-6);
+pos = (469,-6);
 },
 {
 name = cross;
-pos = (603.732,768);
+pos = (597,768);
 },
 {
 name = cyrtic;
-pos = (521.583,6);
+pos = (515,6);
 },
 {
 name = right;
-pos = (488.59,0);
+pos = (482,0);
 },
 {
 name = top;
-pos = (754.05,1676);
+pos = (747,1676);
 }
 );
 layerId = m012;
@@ -307,18 +340,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(693.312,1442,l),
-(454.59,0,l),
-(500.59,0,l),
-(739.312,1442,l),
-(1219.312,1442,l),
-(1227.258,1490,l),
-(221.258,1490,l),
-(213.312,1442,l)
+(687,1444,l),
+(448,0,l),
+(494,0,l),
+(733,1444,l),
+(1213,1444,l),
+(1221,1490,l),
+(215,1490,l),
+(207,1444,l)
 );
 }
 );
-width = 1128;
+width = 1127;
 }
 );
 unicode = 84;
