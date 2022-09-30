@@ -15,6 +15,10 @@ name = bottom;
 pos = (678,0);
 },
 {
+name = cross;
+pos = (1119,390);
+},
+{
 name = top;
 pos = (959,1676);
 },
@@ -162,6 +166,10 @@ name = bottom;
 pos = (709,0);
 },
 {
+name = cross;
+pos = (1200,434);
+},
+{
 name = top;
 pos = (990,1676);
 },
@@ -177,6 +185,20 @@ ref = C;
 }
 );
 };
+guides = (
+{
+angle = 7.9575;
+pos = (1036,1320);
+},
+{
+orientation = center;
+angle = 80.6;
+pos = (1036,528);
+},
+{
+pos = (1372,756);
+}
+);
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 name = ital_gen;
 shapes = (
@@ -315,6 +337,10 @@ name = bottom;
 pos = (664,0);
 },
 {
+name = cross;
+pos = (1027,354);
+},
+{
 name = top;
 pos = (941,1676);
 },
@@ -378,6 +404,10 @@ pos = (784,745);
 {
 name = bottom;
 pos = (671,0);
+},
+{
+name = cross;
+pos = (1130,392);
 },
 {
 name = top;
@@ -531,6 +561,10 @@ pos = (794,745);
 {
 name = bottom;
 pos = (666,6);
+},
+{
+name = cross;
+pos = (1160,432);
 },
 {
 name = top;
@@ -692,6 +726,10 @@ pos = (728,745);
 {
 name = bottom;
 pos = (605,0);
+},
+{
+name = cross;
+pos = (968,354);
 },
 {
 name = top;
