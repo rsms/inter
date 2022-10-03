@@ -1,0 +1,215 @@
+{
+export = 0;
+glyphname = _part.rtophorn.o;
+layers = (
+{
+anchors = (
+{
+name = _tophorn;
+pos = (690,1134);
+}
+);
+background = {
+shapes = (
+{
+pos = (1,0);
+ref = o;
+}
+);
+};
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(980,1090,o),
+(1158,1171,o),
+(1196,1400,c),
+(1150,1400,l),
+(1116,1197,o),
+(960,1134,o),
+(690,1134,c),
+(682,1090,l)
+);
+}
+);
+width = 1187;
+},
+{
+anchors = (
+{
+name = _tophorn;
+pos = (626,1134);
+}
+);
+background = {
+shapes = (
+{
+pos = (1,0);
+ref = o;
+}
+);
+};
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(916,1090,o),
+(1094,1171,o),
+(1132,1400,c),
+(1086,1400,l),
+(1052,1197,o),
+(896,1134,o),
+(626,1134,c),
+(618,1090,l)
+);
+}
+);
+width = 1059;
+},
+{
+anchors = (
+{
+name = _tophorn;
+pos = (705,1132);
+}
+);
+background = {
+shapes = (
+{
+pos = (1,0);
+ref = o;
+}
+);
+};
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(997,1013,o),
+(1195,1142,o),
+(1238,1404,c),
+(1073,1404,l),
+(1046,1236,o),
+(909,1132,o),
+(705,1132,c),
+(686,1013,l)
+);
+}
+);
+width = 1222;
+},
+{
+anchors = (
+{
+name = _tophorn;
+pos = (654,1080);
+}
+);
+background = {
+shapes = (
+{
+pos = (1,0);
+ref = o;
+}
+);
+};
+guides = (
+{
+pos = (915,1342);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(944,957,o),
+(1142,1068,o),
+(1187,1342,c),
+(1020,1342,l),
+(990,1162,o),
+(866,1080,o),
+(654,1080,c),
+(633,957,l)
+);
+}
+);
+width = 1124;
+},
+{
+anchors = (
+{
+name = _tophorn;
+pos = (734,1132);
+}
+);
+background = {
+shapes = (
+{
+ref = o;
+}
+);
+};
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1035,946,o),
+(1299,1063,o),
+(1358,1384,c),
+(1059,1384,l),
+(1017,1178,o),
+(952,1132,o),
+(735,1132,c),
+(704,946,l)
+);
+}
+);
+width = 1279;
+},
+{
+anchors = (
+{
+name = _tophorn;
+pos = (714,1080);
+}
+);
+background = {
+shapes = (
+{
+pos = (1,0);
+ref = o;
+}
+);
+};
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1039,878,o),
+(1280,959,o),
+(1344,1344,c),
+(1005,1344,l),
+(970,1138,o),
+(923,1080,o),
+(714,1080,c),
+(680,878,l)
+);
+}
+);
+width = 1245;
+}
+);
+note = "Custom italic design";
+}

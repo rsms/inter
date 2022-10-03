@@ -4,31 +4,13 @@ kernLeft = o;
 kernRight = ohorn;
 layers = (
 {
-background = {
-shapes = (
-{
-closed = 1;
-nodes = (
-(1065,1059,o),
-(1044,963,o),
-(898,962,c),
-(898,840,l),
-(1140,841,o),
-(1225,980,o),
-(1224,1202,c),
-(1064,1202,l)
-);
-}
-);
-};
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
 ref = o;
 },
 {
-pos = (671,-288);
-ref = _part.otophorn;
+ref = _part.rtophorn.o;
 }
 );
 width = 1222;
@@ -40,68 +22,31 @@ shapes = (
 ref = o;
 },
 {
-pos = (818,-324);
-ref = _part.otophorn;
+ref = _part.rtophorn.o;
 }
 );
 width = 1280;
 },
 {
-background = {
-shapes = (
-{
-closed = 1;
-nodes = (
-(1069,1069,o),
-(1027,999,o),
-(898,988,c),
-(898,942,l),
-(1055,953,o),
-(1116,1047,o),
-(1116,1220,c),
-(1070,1220,l)
-);
-}
-);
-};
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
 ref = o;
 },
 {
-pos = (659,-219);
-ref = _part.otophorn;
+ref = _part.rtophorn.o;
 }
 );
 width = 1186;
 },
 {
-background = {
-shapes = (
-{
-closed = 1;
-nodes = (
-(1013,1009,o),
-(993,918,o),
-(853,917,c),
-(853,800,l),
-(1084,801,o),
-(1165,934,o),
-(1164,1146,c),
-(1012,1146,l)
-);
-}
-);
-};
 layerId = m007;
 shapes = (
 {
 ref = o;
 },
 {
-pos = (621,-282);
-ref = _part.otophorn;
+ref = _part.rtophorn.o;
 }
 );
 width = 1124;
@@ -113,8 +58,7 @@ shapes = (
 ref = o;
 },
 {
-pos = (806,-358);
-ref = _part.otophorn;
+ref = _part.rtophorn.o;
 }
 );
 width = 1244;
@@ -126,8 +70,7 @@ shapes = (
 ref = o;
 },
 {
-pos = (595,-141);
-ref = _part.otophorn;
+ref = _part.rtophorn.o;
 }
 );
 width = 1058;
