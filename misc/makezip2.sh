@@ -1,4 +1,5 @@
-#!/bin/bash -e
+#!/bin/bash
+set -e
 cd "$(dirname "$0")/.."
 
 OPT_HELP=false
@@ -76,7 +77,7 @@ cp $FONTDIR/var/Inter*.var.ttf         "$ZIPDIR/Variable/" &
 # Web
 cp $FONTDIR/static/Inter-*.woff*       "$ZIPDIR/Web/" &
 cp $FONTDIR/var/Inter.var.woff2        "$ZIPDIR/Web/" &
-cp $FONTDIR/var/Inter-italic.var.woff2 "$ZIPDIR/Web/" &
+cp $FONTDIR/var/Inter-Italic.var.woff2 "$ZIPDIR/Web/" &
 cp misc/dist/inter.css                 "$ZIPDIR/Web/" &
 
 # ----------------------------------------------------------------------------
