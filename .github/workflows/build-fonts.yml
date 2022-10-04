@@ -1,0 +1,93 @@
+# Builds fonts either when a prerelease version tag (e.g. v1.2-foo)
+# is created, or when source is changed.
+#
+# When a version tag is created, a pre-release is automatically created.
+#
+# Otherwise, when source changes without a tag being created,
+# the build artifacts are uploaded to github and saved for 1 day.
+# They can be found at https://github.com/rsms/inter/actions/runs/RUNID
+name: Build fonts
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - "src/**"
+      - Makefile
+      - requirements.txt
+      - version.txt
+      - misc/makezip2.sh
+      - "misc/tools/**"
+    tags:
+      - "v*-*"
+  pull_request:
+    branches: [master]
+    paths:
+      - "src/**"
+      - Makefile
+      - requirements.txt
+      - version.txt
+      - misc/makezip2.sh
+      - "misc/tools/**"
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install utilities
+        run: sudo apt-get install -y zip
+
+      - name: Setup python venv
+        run: make venv
+
+      - name: Define version (tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          VERSION=${{ github.ref }}
+          VERSION=${VERSION:11}  # refs/tags/v1.2.3 => 1.2.3
+          echo "inter_version=$VERSION" >> $GITHUB_ENV
+
+      - name: Define version (branch)
+        if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
+        run: |
+          GITSHA=${{ github.sha }}
+          VERSION=$(cat version.txt)
+          echo "inter_version=${VERSION}-${GITSHA:0:10}" >> $GITHUB_ENV
+
+      - name: make zip
+        run: |
+          ARCHIVE=Inter-${{ env.inter_version }}.zip
+          echo "rsm_archive=$ARCHIVE" >> $GITHUB_ENV
+          make -j zip
+          mv build/release/*.zip "$ARCHIVE"
+
+      - name: Upload archive (unless tag)
+        if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: "${{ env.rsm_archive }}"
+          path: "${{ env.rsm_archive }}"
+          retention-days: 1
+
+      - name: Publish release (if tag)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v1
+        prerelease: true
+        with:
+          name: "${{ env.inter_version }}"
+          body: "This release was automatically created"
+          files: "${{ env.rsm_archive }}"
