@@ -20,34 +20,11 @@ pos = (658,744);
 },
 {
 name = cyrtic;
-pos = (1228,64);
-},
-{
-name = right;
-pos = (1128,0);
+pos = (1196,0);
 },
 {
 name = top;
 pos = (658,1676);
-}
-);
-guides = (
-{
-angle = 90;
-pos = (1724,2180);
-},
-{
-orientation = center;
-angle = 90;
-pos = (896,1372);
-},
-{
-angle = 90;
-pos = (68,2060);
-},
-{
-orientation = center;
-pos = (1352,1024);
 }
 );
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
@@ -72,7 +49,7 @@ nodes = (
 );
 }
 );
-width = 1314;
+width = 1316;
 },
 {
 anchors = (
@@ -90,34 +67,11 @@ pos = (780,744);
 },
 {
 name = cyrtic;
-pos = (1426,162);
-},
-{
-name = right;
-pos = (1292,0);
+pos = (1478,0);
 },
 {
 name = top;
 pos = (780,1676);
-}
-);
-guides = (
-{
-orientation = center;
-angle = 90;
-pos = (996,2152);
-},
-{
-angle = 90;
-pos = (96,2084);
-},
-{
-angle = 90;
-pos = (1896,2080);
-},
-{
-orientation = center;
-pos = (1156,1024);
 }
 );
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -142,7 +96,7 @@ nodes = (
 );
 }
 );
-width = 1562;
+width = 1564;
 },
 {
 anchors = (
@@ -160,11 +114,7 @@ pos = (600,744);
 },
 {
 name = cyrtic;
-pos = (1126,6);
-},
-{
-name = right;
-pos = (1080,0);
+pos = (1096,0);
 },
 {
 name = top;
@@ -358,11 +308,7 @@ pos = (626,744);
 },
 {
 name = cyrtic;
-pos = (1196,64);
-},
-{
-name = right;
-pos = (1096,0);
+pos = (1164,0);
 },
 {
 name = top;
@@ -371,21 +317,9 @@ pos = (626,1676);
 );
 guides = (
 {
-angle = 90;
-pos = (1432,2180);
-},
-{
 orientation = center;
 angle = 90;
 pos = (-5159,1372);
-},
-{
-angle = 90;
-pos = (-224,2060);
-},
-{
-orientation = center;
-pos = (-4703,1024);
 }
 );
 layerId = m007;
@@ -410,7 +344,7 @@ nodes = (
 );
 }
 );
-width = 1250;
+width = 1252;
 },
 {
 anchors = (
@@ -428,11 +362,7 @@ pos = (761,744);
 },
 {
 name = cyrtic;
-pos = (1406,162);
-},
-{
-name = right;
-pos = (1187,0);
+pos = (1454,0);
 },
 {
 name = top;
@@ -448,18 +378,6 @@ pos = (-3719,2152);
 {
 angle = 90;
 pos = (-4,2084);
-},
-{
-angle = 90;
-pos = (1796,2080);
-},
-{
-orientation = center;
-pos = (-3559,1024);
-},
-{
-angle = 90;
-pos = (682,1520);
 }
 );
 layerId = m009;
@@ -502,11 +420,7 @@ pos = (536,744);
 },
 {
 name = cyrtic;
-pos = (1062,6);
-},
-{
-name = right;
-pos = (1016,0);
+pos = (1032,0);
 },
 {
 name = top;
@@ -685,6 +599,7 @@ nodes = (
 width = 1164;
 }
 );
+metricRight = "=|X";
 note = "recipe: offset curve 32, no auto";
 unicode = 88;
 userData = {

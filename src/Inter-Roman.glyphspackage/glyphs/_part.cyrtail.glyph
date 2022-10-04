@@ -1,12 +1,12 @@
 {
 color = 4;
-glyphname = cyrillictic.cn;
+glyphname = _part.cyrtail;
 layers = (
 {
 anchors = (
 {
 name = _cyrtic;
-pos = (180,64);
+pos = (280,0);
 }
 );
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
@@ -14,20 +14,22 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(96,160,l),
-(96,-360,l),
-(268,-360,l),
-(268,160,l)
+(331,-320,l),
+(474,160,l),
+(192,160,l),
+(192,0,l),
+(256,0,l),
+(161,-320,l)
 );
 }
 );
-width = 360;
+width = 564;
 },
 {
 anchors = (
 {
 name = _cyrtic;
-pos = (354,162);
+pos = (432,0);
 }
 );
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -35,20 +37,22 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(162,250,l),
-(162,-358,l),
-(550,-358,l),
-(550,250,l)
+(418,-320,l),
+(618,300,l),
+(64,300,l),
+(64,0,l),
+(160,0,l),
+(56,-320,l)
 );
 }
 );
-width = 710;
+width = 638;
 },
 {
 anchors = (
 {
 name = _cyrtic;
-pos = (76,6);
+pos = (96,0);
 }
 );
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -56,20 +60,22 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(54,50,l),
-(54,-364,l),
-(100,-364,l),
-(100,50,l)
+(109,-320,l),
+(257,46,l),
+(64,46,l),
+(64,0,l),
+(190,0,l),
+(62,-320,l)
 );
 }
 );
-width = 152;
+width = 512;
 },
 {
 anchors = (
 {
 name = _cyrtic;
-pos = (148,64);
+pos = (280,0);
 }
 );
 layerId = m007;
@@ -77,20 +83,22 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(64,160,l),
-(64,-360,l),
-(236,-360,l),
-(236,160,l)
+(331,-320,l),
+(474,160,l),
+(192,160,l),
+(192,0,l),
+(256,0,l),
+(161,-320,l)
 );
 }
 );
-width = 296;
+width = 500;
 },
 {
 anchors = (
 {
 name = _cyrtic;
-pos = (338,162);
+pos = (432,0);
 }
 );
 layerId = m009;
@@ -98,20 +106,22 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(146,250,l),
-(146,-358,l),
-(534,-358,l),
-(534,250,l)
+(418,-320,l),
+(618,300,l),
+(64,300,l),
+(64,0,l),
+(160,0,l),
+(56,-320,l)
 );
 }
 );
-width = 678;
+width = 606;
 },
 {
 anchors = (
 {
 name = _cyrtic;
-pos = (12,6);
+pos = (96,0);
 }
 );
 layerId = m011;
@@ -119,23 +129,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-10,50,l),
-(-10,-364,l),
-(36,-364,l),
-(36,50,l)
+(109,-320,l),
+(257,46,l),
+(64,46,l),
+(64,0,l),
+(190,0,l),
+(62,-320,l)
 );
 }
 );
-width = 24;
+width = 384;
 }
 );
 tags = (
 "TODO-opsz"
 );
-userData = {
-interface.gridadjust.original = "{'width': 551, 'leftMargin': 131, 'rightMargin': 145}";
-"interface.width-adjustments" = (
--16
-);
-};
 }

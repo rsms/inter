@@ -1,6 +1,6 @@
 {
 glyphname = tetsecyrillic;
-kernRight = t;
+kernLeft = t;
 layers = (
 {
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
@@ -15,20 +15,8 @@ nodes = (
 );
 },
 {
-closed = 1;
-nodes = (
-(1118,160,l),
-(1118,0,l),
-(1176,0,l),
-(1176,-320,l),
-(1352,-320,l),
-(1374,160,l)
-);
-},
-{
-angle = 180;
-pos = (1396,1118);
-ref = pecyrillic;
+pos = (201,0);
+ref = tsecyrillic;
 }
 );
 width = 1454;
@@ -46,20 +34,8 @@ nodes = (
 );
 },
 {
-closed = 1;
-nodes = (
-(1022,300,l),
-(1022,0,l),
-(1132,0,l),
-(1132,-320,l),
-(1490,-320,l),
-(1506,300,l)
-);
-},
-{
-angle = 180;
-pos = (1420,1118);
-ref = pecyrillic;
+pos = (174,0);
+ref = tsecyrillic;
 }
 );
 width = 1548;
@@ -77,21 +53,8 @@ nodes = (
 );
 },
 {
-closed = 1;
-nodes = (
-(1116,46,l),
-(1116,0,l),
-(1244,0,l),
-(1244,-322,l),
-(1272,-322,l),
-(1292,46,l)
-);
-},
-{
-alignment = -1;
-angle = 180;
-pos = (1382,1118);
-ref = pecyrillic;
+pos = (205,0);
+ref = tsecyrillic;
 }
 );
 width = 1390;
@@ -102,27 +65,15 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(62,1118,l),
-(62,958,l),
-(770,958,l),
-(770,1118,l)
+(62,1056,l),
+(62,896,l),
+(770,896,l),
+(770,1056,l)
 );
 },
 {
-closed = 1;
-nodes = (
-(1086,160,l),
-(1086,0,l),
-(1144,0,l),
-(1144,-320,l),
-(1320,-320,l),
-(1342,160,l)
-);
-},
-{
-angle = 180;
-pos = (1332,1118);
-ref = pecyrillic;
+pos = (201,0);
+ref = tsecyrillic;
 }
 );
 width = 1398;
@@ -133,27 +84,15 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(78,1118,l),
-(78,814,l),
-(818,814,l),
-(818,1118,l)
+(89,1056,l),
+(89,752,l),
+(829,752,l),
+(829,1056,l)
 );
 },
 {
-closed = 1;
-nodes = (
-(1006,300,l),
-(1006,0,l),
-(1116,0,l),
-(1116,-320,l),
-(1474,-320,l),
-(1490,300,l)
-);
-},
-{
-angle = 180;
-pos = (1388,1118);
-ref = pecyrillic;
+pos = (175,0);
+ref = tsecyrillic;
 }
 );
 width = 1538;
@@ -171,27 +110,13 @@ nodes = (
 );
 },
 {
-closed = 1;
-nodes = (
-(1052,46,l),
-(1052,0,l),
-(1180,0,l),
-(1180,-322,l),
-(1208,-322,l),
-(1228,46,l)
-);
-},
-{
-alignment = -1;
-angle = 180;
-pos = (1254,1118);
-ref = pecyrillic;
+pos = (206,0);
+ref = tsecyrillic;
 }
 );
 width = 1262;
 }
 );
-metricRight = t;
 tags = (
 "TODO-opsz"
 );
