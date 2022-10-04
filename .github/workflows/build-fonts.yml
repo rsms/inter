@@ -86,8 +86,8 @@ jobs:
       - name: Publish release (if tag)
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v1
-        prerelease: true
         with:
+          prerelease: true
           name: "${{ env.inter_version }}"
           body: "This release was automatically created"
           files: "${{ env.rsm_archive }}"
