@@ -72,11 +72,12 @@ def set_ufo_filter(ufo, **filter_dict):
       return
   filters.append(filter_dict)
 
-def update_source_ufo(ufo_file, glyphs_to_decompose):
-  print("update %s" % os.path.basename(ufo_file))
+def update_source_ufo(ufo_file, weight, glyphs_to_decompose):
+  print(f"update {os.path.basename(ufo_file)} (weight={weight})")
   ufo = defcon.Font(ufo_file)
   update_version(ufo)
   set_ufo_filter(ufo, name="decomposeComponents", include=glyphs_to_decompose)
+  ufo.info.openTypeOS2WeightClass = int(weight)
   ufo.save(ufo_file)
 
 def update_sources(designspace):
@@ -84,9 +85,10 @@ def update_sources(designspace):
   #print("glyphs marked to be decomposed: %s" % ', '.join(glyphs_to_decompose))
   sources = [source for source in designspace.sources]
   # sources = [s for s in sources if s.name == "Inter Thin"] # DEBUG
-  source_files = list(set([s.path for s in sources]))
+  source_files = list(set([(s.path, s.location["Weight"]) for s in sources]))
   with Pool(len(source_files)) as p:
-    p.starmap(update_source_ufo, [(file, glyphs_to_decompose) for file in source_files])
+    p.starmap(update_source_ufo,
+      [(t[0], t[1], glyphs_to_decompose) for t in source_files])
   return designspace
 
 def main(argv):
