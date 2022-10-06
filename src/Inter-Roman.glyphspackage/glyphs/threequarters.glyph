@@ -1,138 +1,116 @@
 {
-color = 3;
 glyphname = threequarters;
 layers = (
-{
-layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
-shapes = (
-{
-alignment = -1;
-pos = (726,0);
-ref = fraction;
-},
-{
-alignment = 1;
-pos = (1132,0);
-ref = four.dnomf;
-},
-{
-pos = (0,-46);
-ref = three.numr;
-}
-);
-width = 1940;
-},
-{
-layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
-shapes = (
-{
-alignment = -1;
-pos = (764,0);
-ref = fraction;
-},
-{
-alignment = 1;
-pos = (1130,0);
-ref = four.dnomf;
-},
-{
-pos = (0,-46);
-ref = three.numr;
-}
-);
-width = 1996;
-},
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
-alignment = -1;
-pos = (724,0);
+ref = three.numr;
+},
+{
+pos = (659,0);
 ref = fraction;
 },
 {
 alignment = 1;
-pos = (1098,0);
-ref = four.dnomf;
-},
-{
-pos = (0,-46);
-ref = three.numr;
+pos = (790,0);
+ref = four.dnom;
 }
 );
-width = 1842;
-},
-{
-layerId = m007;
-shapes = (
-{
-alignment = -1;
-pos = (726,0);
-ref = fraction;
-},
-{
-alignment = 1;
-pos = (1132,0);
-ref = four.dnomf;
-},
-{
-pos = (0,-46);
-ref = three.numr;
-}
-);
-width = 1876;
-},
-{
-layerId = m009;
-shapes = (
-{
-alignment = -1;
-pos = (764,0);
-ref = fraction;
-},
-{
-alignment = 1;
-pos = (1130,0);
-ref = four.dnomf;
-},
-{
-pos = (0,-46);
-ref = three.numr;
-}
-);
-width = 1964;
+width = 1534;
 },
 {
 layerId = m011;
 shapes = (
 {
-alignment = -1;
-pos = (724,0);
+ref = three.numr;
+},
+{
+pos = (659,0);
 ref = fraction;
 },
 {
 alignment = 1;
-pos = (1098,0);
-ref = four.dnomf;
-},
-{
-pos = (0,-46);
-ref = three.numr;
+pos = (775,0);
+ref = four.dnom;
 }
 );
-width = 1714;
+width = 1391;
+},
+{
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+shapes = (
+{
+ref = three.numr;
+},
+{
+pos = (809,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (894,0);
+ref = four.dnom;
+}
+);
+width = 1702;
+},
+{
+layerId = m007;
+shapes = (
+{
+ref = three.numr;
+},
+{
+pos = (769,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (762,0);
+ref = four.dnom;
+}
+);
+width = 1506;
+},
+{
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+shapes = (
+{
+ref = three.numr;
+},
+{
+pos = (861,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (940,0);
+ref = four.dnom;
+}
+);
+width = 1806;
+},
+{
+layerId = m009;
+shapes = (
+{
+ref = three.numr;
+},
+{
+pos = (841,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (841,0);
+ref = four.dnom;
+}
+);
+width = 1675;
 }
 );
 metricLeft = three.numr;
-metricRight = four.dnomf;
-tags = (
-"TODO-opsz"
-);
+metricRight = three.numr;
 unicode = 190;
-userData = {
-interface.gridadjust.original = "{'width': 2192, 'leftMargin': 153, 'rightMargin': 105}";
-"interface.width-adjustments" = (
--16
-);
-};
 }

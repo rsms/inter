@@ -1,5 +1,4 @@
 {
-color = 3;
 glyphname = onethird;
 layers = (
 {
@@ -9,89 +8,16 @@ shapes = (
 ref = one.numr;
 },
 {
-alignment = -1;
-pos = (506,0);
+pos = (582,0);
 ref = fraction;
 },
 {
 alignment = 1;
-pos = (1064,0);
-ref = three.dnomf;
+pos = (858,0);
+ref = three.dnom;
 }
 );
-width = 1824;
-},
-{
-layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
-shapes = (
-{
-ref = one.numr;
-},
-{
-pos = (574,0);
-ref = fraction;
-},
-{
-alignment = 1;
-pos = (1136,0);
-ref = three.dnomf;
-}
-);
-width = 1934;
-},
-{
-layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
-shapes = (
-{
-ref = one.numr;
-},
-{
-pos = (606,0);
-ref = fraction;
-},
-{
-alignment = 1;
-pos = (1164,0);
-ref = three.dnomf;
-}
-);
-width = 1994;
-},
-{
-layerId = m007;
-shapes = (
-{
-ref = one.numr;
-},
-{
-pos = (510,0);
-ref = fraction;
-},
-{
-alignment = 1;
-pos = (1008,0);
-ref = three.dnomf;
-}
-);
-width = 1742;
-},
-{
-layerId = m009;
-shapes = (
-{
-ref = one.numr;
-},
-{
-pos = (574,0);
-ref = fraction;
-},
-{
-alignment = 1;
-pos = (1100,0);
-ref = three.dnomf;
-}
-);
-width = 1898;
+width = 1546;
 },
 {
 layerId = m011;
@@ -100,23 +26,91 @@ shapes = (
 ref = one.numr;
 },
 {
-alignment = -1;
-pos = (506,0);
+pos = (542,0);
 ref = fraction;
 },
 {
 alignment = 1;
-pos = (1064,0);
-ref = three.dnomf;
+pos = (818,0);
+ref = three.dnom;
 }
 );
-width = 1696;
+width = 1506;
+},
+{
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+shapes = (
+{
+ref = one.numr;
+},
+{
+pos = (674,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (904,0);
+ref = three.dnom;
+}
+);
+width = 1742;
+},
+{
+layerId = m007;
+shapes = (
+{
+ref = one.numr;
+},
+{
+pos = (634,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (772,0);
+ref = three.dnom;
+}
+);
+width = 1570;
+},
+{
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+shapes = (
+{
+ref = one.numr;
+},
+{
+pos = (734,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (958,0);
+ref = three.dnom;
+}
+);
+width = 1848;
+},
+{
+layerId = m009;
+shapes = (
+{
+ref = one.numr;
+},
+{
+pos = (734,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (874,0);
+ref = three.dnom;
+}
+);
+width = 1744;
 }
 );
 metricLeft = one.numr;
-metricRight = three.dnomf;
-tags = (
-"TODO-opsz"
-);
+metricRight = one.numr;
 unicode = 8531;
 }

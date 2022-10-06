@@ -1,11 +1,13 @@
 {
+case = minor;
 glyphname = parenright.dnom;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 pos = (-162,-980);
 ref = parenright.numr;
 }
@@ -14,9 +16,10 @@ width = 480;
 },
 {
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 pos = (-162,-980);
 ref = parenright.numr;
 }
@@ -25,32 +28,35 @@ width = 538;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 pos = (-168,-1016);
 ref = parenright.numr;
 }
 );
-width = 398;
+width = 399;
 },
 {
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 pos = (-162,-980);
 ref = parenright.numr;
 }
 );
-width = 416;
+width = 417;
 },
 {
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
-pos = (-162,-980);
+alignment = 1;
+pos = (-163,-980);
 ref = parenright.numr;
 }
 );
@@ -58,14 +64,15 @@ width = 506;
 },
 {
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 pos = (-168,-1016);
 ref = parenright.numr;
 }
 );
-width = 270;
+width = 271;
 }
 );
 unicode = 57548;

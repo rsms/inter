@@ -8,25 +8,7 @@ layers = (
 anchors = (
 {
 name = _center;
-pos = (281,745);
-},
-{
-name = dnom;
-pos = (514,792);
-},
-{
-name = numr;
-pos = (50,698);
-}
-);
-guides = (
-{
-orientation = center;
-angle = 90;
-pos = (492,1748);
-},
-{
-pos = (568,1024);
+pos = (115,745);
 }
 );
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
@@ -34,38 +16,30 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-148,0,l),
-(876,1490,l),
+(-314,0,l),
 (710,1490,l),
-(-314,0,l)
+(544,1490,l),
+(-480,0,l)
 );
 }
 );
-width = 562;
+width = 230;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (279,745);
-},
-{
-name = dnom;
-pos = (532,792);
-},
-{
-name = numr;
-pos = (24,698);
+pos = (113,745);
 }
 );
 guides = (
 {
-pos = (-44,1024);
+pos = (-226,1024);
 },
 {
 orientation = center;
 angle = 90;
-pos = (-44,764);
+pos = (-980,764);
 }
 );
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -73,28 +47,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-130,0,l),
-(894,1490,l),
-(686,1490,l),
-(-338,0,l)
+(-280,0,l),
+(744,1490,l),
+(504,1490,l),
+(-520,0,l)
 );
 }
 );
-width = 558;
+width = 224;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (279,745);
-},
-{
-name = dnom;
-pos = (512,792);
-},
-{
-name = numr;
-pos = (46,698);
+pos = (137,745);
 }
 );
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -102,38 +68,27 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-204,0,l),
-(818,1490,l),
-(762,1490,l),
-(-258,0,l)
+(-346,0,l),
+(676,1490,l),
+(620,1490,l),
+(-400,0,l)
 );
 }
 );
-width = 558;
+width = 276;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (249,745);
-},
-{
-name = dnom;
-pos = (482,792);
-},
-{
-name = numr;
-pos = (18,698);
+pos = (69,745);
 }
 );
 guides = (
 {
 orientation = center;
 angle = 90;
-pos = (-2179,1748);
-},
-{
-pos = (276,1024);
+pos = (-3801,1748);
 }
 );
 layerId = m007;
@@ -141,38 +96,27 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-180,0,l),
-(844,1490,l),
-(678,1490,l),
-(-346,0,l)
+(-356,0,l),
+(668,1490,l),
+(494,1490,l),
+(-530,0,l)
 );
 }
 );
-width = 498;
+width = 138;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (263,745);
-},
-{
-name = dnom;
-pos = (516,792);
-},
-{
-name = numr;
-pos = (8,698);
+pos = (70,745);
 }
 );
 guides = (
 {
-pos = (-140,1024);
-},
-{
 orientation = center;
 angle = 90;
-pos = (-1479,764);
+pos = (-2321,764);
 }
 );
 layerId = m009;
@@ -180,28 +124,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-146,0,l),
-(878,1490,l),
-(670,1490,l),
-(-354,0,l)
+(-314,0,l),
+(710,1490,l),
+(454,1490,l),
+(-570,0,l)
 );
 }
 );
-width = 526;
+width = 140;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (215,745);
-},
-{
-name = dnom;
-pos = (448,792);
-},
-{
-name = numr;
-pos = (-18,698);
+pos = (137,745);
 }
 );
 layerId = m011;
@@ -209,14 +145,14 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-268,0,l),
-(754,1490,l),
-(698,1490,l),
-(-322,0,l)
+(-346,0,l),
+(676,1490,l),
+(620,1490,l),
+(-400,0,l)
 );
 }
 );
-width = 430;
+width = 276;
 }
 );
 note = "Anchor numr should be at the basline rightmost position in .numr and dnom should be at top leftmost in .dnomf";

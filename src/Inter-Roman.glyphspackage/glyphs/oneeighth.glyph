@@ -1,131 +1,116 @@
 {
-color = 3;
 glyphname = oneeighth;
 layers = (
-{
-layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
-shapes = (
-{
-alignment = -1;
-pos = (592,0);
-ref = fraction;
-},
-{
-pos = (0,-46);
-ref = one.numr;
-},
-{
-pos = (1106,0);
-ref = eight.dnomf;
-}
-);
-width = 1906;
-},
-{
-layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
-shapes = (
-{
-alignment = -1;
-pos = (560,0);
-ref = fraction;
-},
-{
-pos = (0,-46);
-ref = one.numr;
-},
-{
-pos = (1086,0);
-ref = eight.dnomf;
-}
-);
-width = 1910;
-},
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
-alignment = -1;
-pos = (490,0);
-ref = fraction;
+ref = one.numr;
 },
 {
-pos = (0,-46);
-ref = one.numr;
+pos = (582,0);
+ref = fraction;
 },
 {
 alignment = 1;
-pos = (996,0);
-ref = eight.dnomf;
+pos = (858,0);
+ref = eight.dnom;
 }
 );
-width = 1738;
-},
-{
-layerId = m007;
-shapes = (
-{
-alignment = -1;
-pos = (592,0);
-ref = fraction;
-},
-{
-pos = (0,-46);
-ref = one.numr;
-},
-{
-pos = (1106,0);
-ref = eight.dnomf;
-}
-);
-width = 1842;
-},
-{
-layerId = m009;
-shapes = (
-{
-alignment = -1;
-pos = (560,0);
-ref = fraction;
-},
-{
-pos = (0,-46);
-ref = one.numr;
-},
-{
-pos = (1086,0);
-ref = eight.dnomf;
-}
-);
-width = 1878;
+width = 1604;
 },
 {
 layerId = m011;
 shapes = (
 {
-alignment = -1;
-pos = (490,0);
-ref = fraction;
-},
-{
-pos = (0,-46);
 ref = one.numr;
 },
 {
+pos = (542,0);
+ref = fraction;
+},
+{
 alignment = 1;
-pos = (996,0);
-ref = eight.dnomf;
+pos = (818,0);
+ref = eight.dnom;
 }
 );
-width = 1610;
+width = 1448;
+},
+{
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+shapes = (
+{
+ref = one.numr;
+},
+{
+pos = (674,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (904,0);
+ref = eight.dnom;
+}
+);
+width = 1732;
+},
+{
+layerId = m007;
+shapes = (
+{
+ref = one.numr;
+},
+{
+pos = (634,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (772,0);
+ref = eight.dnom;
+}
+);
+width = 1550;
+},
+{
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+shapes = (
+{
+ref = one.numr;
+},
+{
+pos = (734,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (958,0);
+ref = eight.dnom;
+}
+);
+width = 1822;
+},
+{
+layerId = m009;
+shapes = (
+{
+ref = one.numr;
+},
+{
+pos = (734,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (874,0);
+ref = eight.dnom;
+}
+);
+width = 1708;
 }
 );
 metricLeft = one.numr;
-metricRight = eight.dnomf;
-tags = (
-"TODO-opsz"
-);
+metricRight = one.numr;
 unicode = 8539;
-userData = {
-interface.gridadjust.original = "{'width': 2167.0, 'leftMargin': 196, 'rightMargin': 154.0}";
-};
 }

@@ -8,191 +8,157 @@ layers = (
 anchors = (
 {
 name = _center;
-pos = (318.792,745);
-},
-{
-name = dnom;
-pos = (568,792);
-},
-{
-name = numr;
-pos = (58,698);
+pos = (145,745);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(-238,0,l),
-(1034,1490,l),
-(860,1490,l),
-(-412,0,l)
+(-407,0,l),
+(864,1490,l),
+(698,1490,l),
+(-573,0,l)
 );
 }
 );
-width = 576;
+width = 230;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (318.792,745);
-},
-{
-name = dnom;
-pos = (580,792);
-},
-{
-name = numr;
-pos = (36,698);
+pos = (143,745);
 }
 );
 guides = (
 {
-pos = (284,1240);
+pos = (-226,1024);
 },
 {
-pos = (-30,764);
+orientation = center;
+angle = 80.6;
+pos = (-1092,764);
 }
 );
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(-218,0,l),
-(1054,1490,l),
-(834,1490,l),
-(-436,0,l)
+(-373,0,l),
+(898,1490,l),
+(658,1490,l),
+(-613,0,l)
 );
 }
 );
-width = 576;
+width = 224;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (309.792,745);
-},
-{
-name = dnom;
-pos = (546,792);
-},
-{
-name = numr;
-pos = (82,698);
+pos = (167,745);
 }
 );
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(-230,0,l),
-(908,1490,l),
-(850,1490,l),
-(-288,0,l)
+(-439,0,l),
+(830,1490,l),
+(774,1490,l),
+(-493,0,l)
 );
 }
 );
-width = 558;
+width = 276;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (291.924,745);
-},
-{
-name = dnom;
-pos = (536,792);
-},
-{
-name = numr;
-pos = (26,698);
-}
-);
-layerId = m008;
-shapes = (
-{
-closed = 1;
-nodes = (
-(-270,0,l),
-(1002,1490,l),
-(828,1490,l),
-(-444,0,l)
-);
-}
-);
-width = 512;
-},
-{
-anchors = (
-{
-name = _center;
-pos = (307.924,745);
-},
-{
-name = dnom;
-pos = (564,792);
-},
-{
-name = numr;
-pos = (20,698);
+pos = (105,745);
 }
 );
 guides = (
 {
-pos = (252,1240);
-},
-{
-pos = (-62,764);
+orientation = center;
+angle = 80.6;
+pos = (-3869,1748);
 }
 );
-layerId = m010;
+layerId = m008;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(-234,0,l),
-(1038,1490,l),
-(818,1490,l),
-(-452,0,l)
+(-443,0,l),
+(828,1490,l),
+(654,1490,l),
+(-617,0,l)
 );
 }
 );
-width = 544;
+width = 139;
 },
 {
 anchors = (
 {
 name = _center;
-pos = (250.924,745);
-},
-{
-name = dnom;
-pos = (482,792);
-},
-{
-name = numr;
-pos = (18,698);
+pos = (106,745);
 }
 );
-layerId = m012;
+guides = (
+{
+orientation = center;
+angle = 80.6;
+pos = (-2390,764);
+}
+);
+layerId = m010;
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(-294,0,l),
-(844,1490,l),
-(786,1490,l),
-(-352,0,l)
+(-401,0,l),
+(870,1490,l),
+(614,1490,l),
+(-657,0,l)
 );
 }
 );
-width = 430;
+width = 141;
+},
+{
+anchors = (
+{
+name = _center;
+pos = (167,745);
+}
+);
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(-439,0,l),
+(830,1490,l),
+(774,1490,l),
+(-493,0,l)
+);
+}
+);
+width = 276;
 }
 );
 note = "Anchor numr should be at the basline rightmost position in .numr and dnom should be at top leftmost in .dnomf";

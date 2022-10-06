@@ -1,79 +1,300 @@
 {
-color = (227,245,235,1);
+color = 3;
 glyphname = one.dnom;
-kernLeft = zero.subs;
-kernRight = zero.subs;
+kernLeft = one.dnomf;
+kernRight = one.dnomf;
 layers = (
 {
-layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+background = {
 shapes = (
 {
-alignment = -1;
-pos = (-40,-250);
-ref = one.dnomf;
+closed = 1;
+nodes = (
+(325,792,l),
+(323,736,o),
+(244,657,o),
+(133,658,c),
+(133,536,l),
+(233,535,o),
+(297,582,o),
+(315,606,c),
+(323,606,l),
+(323,0,l),
+(475,0,l),
+(475,792,l)
+);
 }
 );
-width = 562;
+};
+guides = (
+{
+orientation = center;
+pos = (-229,1088);
+}
+);
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(382,0,l),
+(513,792,l),
+(361,792,l),
+(137,658,l),
+(111,504,l),
+(327,632,l),
+(335,632,l),
+(230,0,l)
+);
+}
+);
+userData = {
+RMXScaler = {
+height = 53.15;
+weight = -60;
+width = 60;
+};
+};
+width = 675;
 },
 {
-layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+background = {
 shapes = (
 {
-alignment = -1;
-pos = (-40,-242);
-ref = one.dnomf;
+closed = 1;
+nodes = (
+(320,792,l),
+(317,736,o),
+(247,660,o),
+(120,664,c),
+(120,478,l),
+(218,474,o),
+(282,477,o),
+(302,506,c),
+(312,506,l),
+(312,0,l),
+(544,0,l),
+(544,792,l)
+);
 }
 );
-width = 606;
+};
+guides = (
+{
+pos = (128,544);
+},
+{
+pos = (164,1104);
+},
+{
+pos = (164,1088);
+},
+{
+pos = (152,-16);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(451,0,l),
+(582,792,l),
+(368,792,l),
+(137,664,l),
+(104,464,l),
+(309,578,l),
+(315,578,l),
+(219,0,l)
+);
+}
+);
+userData = {
+RMXScaler = {
+height = 53.15;
+weight = -370;
+width = 60;
+};
+};
+width = 734;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
-pos = (-42,-256);
-ref = one.dnomf;
+closed = 1;
+nodes = (
+(289,0,l),
+(420,792,l),
+(356,792,l),
+(136,658,l),
+(126.992,604,l),
+(358,742,l),
+(366,742,l),
+(243,0,l)
+);
 }
 );
-width = 506;
+userData = {
+RMXScaler = {
+height = 53.15;
+width = 60;
+};
+};
+width = 582;
 },
 {
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(337,792,l),
+(335,736,o),
+(256,657,o),
+(145,658,c),
+(145,536,l),
+(245,535,o),
+(309,582,o),
+(327,606,c),
+(335,606,l),
+(335,0,l),
+(487,0,l),
+(487,792,l)
+);
+}
+);
+};
+guides = (
+{
+orientation = center;
+pos = (-2805,1088);
+}
+);
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
-pos = (-40,-250);
-ref = one.dnomf;
+closed = 1;
+nodes = (
+(367,0,l),
+(498,792,l),
+(346,792,l),
+(122,658,l),
+(96,504,l),
+(312,632,l),
+(320,632,l),
+(215,0,l)
+);
 }
 );
-width = 498;
+userData = {
+RMXScaler = {
+height = 53.15;
+weight = -60;
+width = 60;
+};
+};
+width = 634;
 },
 {
-layerId = m010;
+background = {
 shapes = (
 {
-alignment = -1;
-pos = (-40,-242);
-ref = one.dnomf;
+closed = 1;
+nodes = (
+(337,792,l),
+(334,736,o),
+(264,660,o),
+(137,664,c),
+(137,478,l),
+(235,474,o),
+(299,477,o),
+(319,506,c),
+(329,506,l),
+(329,0,l),
+(561,0,l),
+(561,792,l)
+);
 }
 );
-width = 574;
+};
+guides = (
+{
+pos = (49,544);
+},
+{
+pos = (85,1104);
+},
+{
+pos = (85,1088);
+},
+{
+pos = (73,-16);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(457,0,l),
+(588,792,l),
+(374,792,l),
+(143,664,l),
+(110,464,l),
+(315,578,l),
+(321,578,l),
+(225,0,l)
+);
+}
+);
+userData = {
+RMXScaler = {
+height = 53.15;
+weight = -370;
+width = 60;
+};
+};
+width = 734;
 },
 {
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
-pos = (-42,-256);
-ref = one.dnomf;
+closed = 1;
+nodes = (
+(269,0,l),
+(400,792,l),
+(336,792,l),
+(116,658,l),
+(106.992,604,l),
+(338,742,l),
+(346,742,l),
+(223,0,l)
+);
 }
 );
-width = 378;
-}
-);
-unicode = 57535;
 userData = {
-interface.gridadjust.original = "{'width': 1037, 'leftMargin': 252, 'rightMargin': 265}";
+RMXScaler = {
+height = 53.15;
+width = 60;
+};
+};
+width = 542;
+}
+);
+unicode = 57525;
+userData = {
+RMXScaler = {
+source = one;
+};
+interface.gridadjust.original = "{'width': 1037, 'leftMargin': 168, 'rightMargin': 347}";
 "interface.width-adjustments" = (
 -16
 );

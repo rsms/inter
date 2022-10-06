@@ -1,78 +1,374 @@
 {
-color = (227,245,235,1);
+color = 3;
 glyphname = zero.dnom;
-kernLeft = zero.subs;
-kernRight = zero.subs;
+kernLeft = six.dnomf;
+kernRight = nine.dnomf;
 layers = (
 {
-layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
-shapes = (
+guides = (
 {
-alignment = -1;
-pos = (-40,-250);
-ref = zero.dnomf;
+pos = (592,544);
 }
 );
-width = 824;
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(527,-17,o),
+(683,137,o),
+(727,396,cs),
+(768,652,o),
+(663,803,o),
+(450,802,cs),
+(238,803,o),
+(82,652,o),
+(39,396,cs),
+(-3,137,o),
+(102,-17,o),
+(314,-18,cs)
+);
 },
 {
-layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
-shapes = (
-{
-alignment = -1;
-pos = (-40,-242);
-ref = zero.dnomf;
+closed = 1;
+nodes = (
+(222,108,o),
+(165,207,o),
+(197,396,cs),
+(227,579,o),
+(316,678,o),
+(429,678,cs),
+(543,678,o),
+(599,579,o),
+(569,396,cs),
+(537,207,o),
+(449,108,o),
+(335,108,cs)
+);
 }
 );
+userData = {
+RMXScaler = {
+height = 53.15;
+weight = -60;
+width = 60;
+};
+};
+width = 820;
+},
+{
+guides = (
+{
+pos = (40,544);
+},
+{
+orientation = center;
+angle = 80.6;
+pos = (140,412);
+},
+{
+pos = (76,1104);
+},
+{
+pos = (76,1088);
+},
+{
+pos = (64,-16);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(579,-17,o),
+(748,128,o),
+(793,396,cs),
+(836,657,o),
+(715,803,o),
+(476,802,cs),
+(238,803,o),
+(68,657,o),
+(25,396,cs),
+(-19,131,o),
+(99,-17,o),
+(340,-18,cs)
+);
+},
+{
+closed = 1;
+nodes = (
+(282,177,o),
+(238,244,o),
+(263,396,cs),
+(288,544,o),
+(357,608,o),
+(444,608,cs),
+(532,608,o),
+(576,541,o),
+(551,396,cs),
+(526,241,o),
+(460,177,o),
+(372,178,cs)
+);
+}
+);
+userData = {
+RMXScaler = {
+height = 53.15;
+weight = -370;
+width = 60;
+};
+};
 width = 872;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
-pos = (-42,-256);
-ref = zero.dnomf;
+closed = 1;
+nodes = (
+(449,-12,o),
+(580.005,145,o),
+(621,396,cs),
+(663,649,o),
+(581,803,o),
+(406,802,cs),
+(232,803,o),
+(98,649,o),
+(57,396,cs),
+(15.005,145,o),
+(94,-12,o),
+(271,-12,cs)
+);
+},
+{
+closed = 1;
+nodes = (
+(130,32,o),
+(63,169,o),
+(101,396,cs),
+(138,625,o),
+(254,759,o),
+(399,760,cs),
+(545,759,o),
+(615,625,o),
+(579,396,cs),
+(540,169,o),
+(427,32,o),
+(278,32,cs)
+);
 }
 );
+userData = {
+RMXScaler = {
+height = 53.15;
+width = 60;
+};
+};
 width = 734;
 },
 {
-layerId = m008;
-shapes = (
+guides = (
 {
-alignment = -1;
-pos = (-40,-250);
-ref = zero.dnomf;
-}
-);
-width = 760;
+orientation = center;
+pos = (-3570,1088);
 },
 {
-layerId = m010;
-shapes = (
+orientation = center;
+pos = (-3570,1104);
+},
 {
-alignment = -1;
-pos = (-40,-242);
-ref = zero.dnomf;
+orientation = center;
+angle = 80.6;
+pos = (-3666,676);
+},
+{
+angle = 80.6;
+pos = (28,676);
+},
+{
+angle = 80.6;
+pos = (412,676);
+},
+{
+pos = (300,544);
+},
+{
+orientation = center;
+pos = (-3570,-16);
 }
 );
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(500,-17,o),
+(656,137,o),
+(700,396,cs),
+(741,652,o),
+(636,803,o),
+(423,802,cs),
+(211,803,o),
+(55,652,o),
+(12,396,cs),
+(-30,137,o),
+(75,-17,o),
+(287,-18,cs)
+);
+},
+{
+closed = 1;
+nodes = (
+(195,108,o),
+(138,207,o),
+(170,396,cs),
+(200,579,o),
+(289,678,o),
+(402,678,cs),
+(516,678,o),
+(572,579,o),
+(542,396,cs),
+(510,207,o),
+(422,108,o),
+(308,108,cs)
+);
+}
+);
+userData = {
+RMXScaler = {
+height = 53.15;
+weight = -60;
+width = 60;
+};
+};
+width = 756;
+},
+{
+guides = (
+{
+pos = (-56,544);
+},
+{
+orientation = center;
+angle = 80.6;
+pos = (-2064,412);
+},
+{
+pos = (-20,1104);
+},
+{
+pos = (-20,1088);
+},
+{
+pos = (-32,-16);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(568,-17,o),
+(737,128,o),
+(782,396,cs),
+(825,657,o),
+(704,803,o),
+(465,802,cs),
+(227,803,o),
+(57,657,o),
+(14,396,cs),
+(-30,131,o),
+(88,-17,o),
+(329,-18,cs)
+);
+},
+{
+closed = 1;
+nodes = (
+(271,177,o),
+(227,244,o),
+(252,396,cs),
+(277,544,o),
+(346,608,o),
+(433,608,cs),
+(521,608,o),
+(565,541,o),
+(540,396,cs),
+(515,241,o),
+(449,177,o),
+(361,178,cs)
+);
+}
+);
+userData = {
+RMXScaler = {
+height = 53.15;
+weight = -370;
+width = 60;
+};
+};
 width = 840;
 },
 {
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
-pos = (-42,-256);
-ref = zero.dnomf;
+closed = 1;
+nodes = (
+(385,-12,o),
+(516.005,145,o),
+(557,396,cs),
+(599,649,o),
+(517,803,o),
+(342,802,cs),
+(168,803,o),
+(34,649,o),
+(-7,396,cs),
+(-48.995,145,o),
+(30,-12,o),
+(207,-12,cs)
+);
+},
+{
+closed = 1;
+nodes = (
+(66,32,o),
+(-1,169,o),
+(37,396,cs),
+(74,625,o),
+(190,759,o),
+(335,760,cs),
+(481,759,o),
+(551,625,o),
+(515,396,cs),
+(476,169,o),
+(363,32,o),
+(214,32,cs)
+);
 }
 );
+userData = {
+RMXScaler = {
+height = 53.15;
+width = 60;
+};
+};
 width = 606;
 }
 );
-unicode = 57534;
+unicode = 57524;
 userData = {
+RMXScaler = {
+source = zero;
+};
 interface.gridadjust.original = "{'width': 1037, 'leftMargin': 109, 'rightMargin': 110}";
 "interface.width-adjustments" = (
 -16
