@@ -47,7 +47,7 @@ $(UFODIR)/Inter-BlackItalic.ufo: $(UFODIR)/Inter-Italic.designspace
 	touch $@
 $(UFODIR)/Inter-DisplayThin.ufo:        $(UFODIR)/Inter-Roman.designspace
 	touch $@
-$(UFODIR)/Inter-DisplayRegular.ufo:     $(UFODIR)/Inter-Roman.designspace
+$(UFODIR)/Inter-Display.ufo:            $(UFODIR)/Inter-Roman.designspace
 	touch $@
 $(UFODIR)/Inter-DisplayBlack.ufo:       $(UFODIR)/Inter-Roman.designspace
 	touch $@
@@ -134,7 +134,7 @@ $(UFODIR)/Inter-DisplayExtraBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace |
 	$(UFODIR)/Inter-ExtraBoldItalic.ufo \
 	\
 	$(UFODIR)/Inter-DisplayBlack.ufo \
-	$(UFODIR)/Inter-DisplayRegular.ufo \
+	$(UFODIR)/Inter-Display.ufo \
 	$(UFODIR)/Inter-DisplayThin.ufo \
 	$(UFODIR)/Inter-DisplayLight.ufo \
 	$(UFODIR)/Inter-DisplayExtraLight.ufo \
@@ -247,7 +247,7 @@ static_otf: \
 	$(FONTDIR)/static/Inter-ExtraBoldItalic.otf \
 	$(FONTDIR)/static/Inter-DisplayBlack.otf \
 	$(FONTDIR)/static/Inter-DisplayBlackItalic.otf \
-	$(FONTDIR)/static/Inter-DisplayRegular.otf \
+	$(FONTDIR)/static/Inter-Display.otf \
 	$(FONTDIR)/static/Inter-DisplayItalic.otf \
 	$(FONTDIR)/static/Inter-DisplayThin.otf \
 	$(FONTDIR)/static/Inter-DisplayThinItalic.otf \
@@ -285,7 +285,7 @@ static_ttf: \
 	$(FONTDIR)/static/Inter-ExtraBoldItalic.ttf \
 	$(FONTDIR)/static/Inter-DisplayBlack.ttf \
 	$(FONTDIR)/static/Inter-DisplayBlackItalic.ttf \
-	$(FONTDIR)/static/Inter-DisplayRegular.ttf \
+	$(FONTDIR)/static/Inter-Display.ttf \
 	$(FONTDIR)/static/Inter-DisplayItalic.ttf \
 	$(FONTDIR)/static/Inter-DisplayThin.ttf \
 	$(FONTDIR)/static/Inter-DisplayThinItalic.ttf \
@@ -323,7 +323,7 @@ static_ttf_hinted: \
 	$(FONTDIR)/static-hinted/Inter-ExtraBoldItalic.ttf \
 	$(FONTDIR)/static-hinted/Inter-DisplayBlack.ttf \
 	$(FONTDIR)/static-hinted/Inter-DisplayBlackItalic.ttf \
-	$(FONTDIR)/static-hinted/Inter-DisplayRegular.ttf \
+	$(FONTDIR)/static-hinted/Inter-Display.ttf \
 	$(FONTDIR)/static-hinted/Inter-DisplayItalic.ttf \
 	$(FONTDIR)/static-hinted/Inter-DisplayThin.ttf \
 	$(FONTDIR)/static-hinted/Inter-DisplayThinItalic.ttf \
@@ -361,7 +361,7 @@ static_web: \
 	$(FONTDIR)/static/Inter-ExtraBoldItalic.woff2 \
 	$(FONTDIR)/static/Inter-DisplayBlack.woff2 \
 	$(FONTDIR)/static/Inter-DisplayBlackItalic.woff2 \
-	$(FONTDIR)/static/Inter-DisplayRegular.woff2 \
+	$(FONTDIR)/static/Inter-Display.woff2 \
 	$(FONTDIR)/static/Inter-DisplayItalic.woff2 \
 	$(FONTDIR)/static/Inter-DisplayThin.woff2 \
 	$(FONTDIR)/static/Inter-DisplayThinItalic.woff2 \
@@ -399,7 +399,7 @@ static_web_hinted: \
 	$(FONTDIR)/static-hinted/Inter-ExtraBoldItalic.woff2 \
 	$(FONTDIR)/static-hinted/Inter-DisplayBlack.woff2 \
 	$(FONTDIR)/static-hinted/Inter-DisplayBlackItalic.woff2 \
-	$(FONTDIR)/static-hinted/Inter-DisplayRegular.woff2 \
+	$(FONTDIR)/static-hinted/Inter-Display.woff2 \
 	$(FONTDIR)/static-hinted/Inter-DisplayItalic.woff2 \
 	$(FONTDIR)/static-hinted/Inter-DisplayThin.woff2 \
 	$(FONTDIR)/static-hinted/Inter-DisplayThinItalic.woff2 \
@@ -561,7 +561,7 @@ install: install_var \
   $(INSTALLDIR)/Inter-ExtraBoldItalic.otf \
   $(INSTALLDIR)/Inter-DisplayBlack.otf \
   $(INSTALLDIR)/Inter-DisplayBlackItalic.otf \
-  $(INSTALLDIR)/Inter-DisplayRegular.otf \
+  $(INSTALLDIR)/Inter-Display.otf \
   $(INSTALLDIR)/Inter-DisplayItalic.otf \
   $(INSTALLDIR)/Inter-DisplayThin.otf \
   $(INSTALLDIR)/Inter-DisplayThinItalic.otf \

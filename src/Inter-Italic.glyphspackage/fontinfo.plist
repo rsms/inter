@@ -3809,8 +3809,8 @@ instanceInterpolations = {
 m008 = 1;
 };
 isItalic = 1;
-linkStyle = "Display Regular";
-name = "Display Regular Italic";
+linkStyle = Display;
+name = "Display Italic";
 },
 {
 axesValues = (
@@ -3912,8 +3912,9 @@ instanceInterpolations = {
 m008 = 0.4;
 m010 = 0.6;
 };
+isBold = 1;
 isItalic = 1;
-linkStyle = "Display Bold";
+linkStyle = Display;
 name = "Display Bold Italic";
 weightClass = 700;
 },
