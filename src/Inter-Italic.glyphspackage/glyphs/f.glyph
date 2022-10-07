@@ -89,97 +89,62 @@ width = 824;
 anchors = (
 {
 name = bottom;
-pos = (266,0);
-}
-);
-guides = (
-{
-angle = 80.6;
-pos = (389,1317);
+pos = (187,0);
 }
 );
 layerId = m008;
-metricLeft = "=t";
 metricRight = "=t";
 name = ital_gen;
 shapes = (
 {
-pos = (65,0);
+pos = (-14,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(198,1056,l),
-(174,910,l),
-(712,910,l),
-(736,1056,l)
+(119,1056,l),
+(95,910,l),
+(633,910,l),
+(657,1056,l)
 );
 }
 );
-width = 706;
+width = 627;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (308,0);
+pos = (298,0);
 }
 );
 background = {
 shapes = (
 {
-closed = 1;
-nodes = (
-(819,761,l),
-(819,1069,l),
-(68,1069,l),
-(68,761,l)
-);
-},
-{
-closed = 1;
-nodes = (
-(619,0,l),
-(619,1075,ls),
-(619,1153,o),
-(648,1182,o),
-(728,1182,cs),
-(764,1182,o),
-(797,1182,o),
-(819,1182,c),
-(819,1490,l),
-(783,1490,o),
-(708,1490,o),
-(617,1490,cs),
-(337,1490,o),
-(214,1385,o),
-(214,1146,cs),
-(214,0,l)
-);
+ref = t;
 }
 );
 };
 layerId = m010;
-metricLeft = "=t";
 metricRight = "=t";
 name = ital_gen;
 shapes = (
 {
-pos = (29,0);
+pos = (19,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(122,1056,l),
-(72,752,l),
-(852,752,l),
-(902,1056,l)
+(112,1056,l),
+(62,752,l),
+(842,752,l),
+(892,1056,l)
 );
 }
 );
-width = 863;
+width = 853;
 },
 {
 anchors = (
