@@ -13,15 +13,24 @@ ref = one.tf;
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
+pos = (184,0);
 ref = one.ss01;
 }
 );
 width = 1326;
 },
 {
+background = {
+shapes = (
+{
+ref = one.tf;
+}
+);
+};
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+pos = (227,0);
 ref = one.ss01;
 }
 );
@@ -70,6 +79,13 @@ ref = one.ss01;
 width = 1442;
 },
 {
+background = {
+shapes = (
+{
+ref = one.tf;
+}
+);
+};
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
@@ -91,6 +107,7 @@ ref = one.tf;
 layerId = m007;
 shapes = (
 {
+pos = (159,0);
 ref = one.ss01;
 }
 );
@@ -118,9 +135,17 @@ ref = one.ss01;
 width = 1222;
 },
 {
+background = {
+shapes = (
+{
+ref = one.tf;
+}
+);
+};
 layerId = m009;
 shapes = (
 {
+pos = (209,0);
 ref = one.ss01;
 }
 );
@@ -148,6 +173,13 @@ ref = one.ss01;
 width = 1442;
 },
 {
+background = {
+shapes = (
+{
+ref = one.tf;
+}
+);
+};
 layerId = m011;
 shapes = (
 {

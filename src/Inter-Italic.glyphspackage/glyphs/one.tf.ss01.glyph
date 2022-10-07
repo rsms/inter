@@ -3,18 +3,36 @@ color = 7;
 glyphname = one.tf.ss01;
 layers = (
 {
-layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+background = {
 shapes = (
 {
+ref = one.tf;
+}
+);
+};
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+pos = (184,0);
 ref = one.ss01;
 }
 );
 width = 1326;
 },
 {
-layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+background = {
 shapes = (
 {
+ref = one.tf;
+}
+);
+};
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+pos = (227,0);
 ref = one.ss01;
 }
 );
@@ -63,7 +81,15 @@ ref = one.ss01;
 width = 1442;
 },
 {
+background = {
+shapes = (
+{
+ref = one.tf;
+}
+);
+};
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
@@ -74,9 +100,18 @@ ref = one.ss01;
 width = 1210;
 },
 {
-layerId = m008;
+background = {
 shapes = (
 {
+ref = one.tf;
+}
+);
+};
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+pos = (159,0);
 ref = one.ss01;
 }
 );
@@ -104,9 +139,18 @@ ref = one.ss01;
 width = 1222;
 },
 {
-layerId = m010;
+background = {
 shapes = (
 {
+ref = one.tf;
+}
+);
+};
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+pos = (209,0);
 ref = one.ss01;
 }
 );
@@ -134,7 +178,15 @@ ref = one.ss01;
 width = 1442;
 },
 {
+background = {
+shapes = (
+{
+ref = one.tf;
+}
+);
+};
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
