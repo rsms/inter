@@ -77,7 +77,6 @@ def update_source_ufo(ufo_file, weight, glyphs_to_decompose):
   ufo = defcon.Font(ufo_file)
   update_version(ufo)
   set_ufo_filter(ufo, name="decomposeComponents", include=glyphs_to_decompose)
-  ufo.info.openTypeOS2WeightClass = int(weight)
   ufo.save(ufo_file)
 
 def update_sources(designspace):
