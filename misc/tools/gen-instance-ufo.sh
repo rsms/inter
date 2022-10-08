@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 PROG=${0##*/}
 DESIGNSPACE=$1

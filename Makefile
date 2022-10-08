@@ -34,9 +34,9 @@ $(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
 
 # UFOs from designspace
 $(UFODIR)/Inter-%Italic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; ./misc/tools/gen-instance-ufo.sh $< $@
+	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
 $(UFODIR)/Inter-%.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; ./misc/tools/gen-instance-ufo.sh $< $@
+	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
 
 # make sure intermediate files are not rm'd by make
 .PRECIOUS: \
