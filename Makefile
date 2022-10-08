@@ -32,84 +32,11 @@ $(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
 		--master-dir $(UFODIR) --instance-dir $(UFODIR)
 	. $(VENV) ; python misc/tools/postprocess-designspace.py $@
 
-# master UFOs are byproducts of building Inter.designspace
-$(UFODIR)/Inter-Thin.ufo:        $(UFODIR)/Inter-Roman.designspace
-	touch $@
-$(UFODIR)/Inter-Regular.ufo:     $(UFODIR)/Inter-Roman.designspace
-	touch $@
-$(UFODIR)/Inter-Black.ufo:       $(UFODIR)/Inter-Roman.designspace
-	touch $@
-$(UFODIR)/Inter-ThinItalic.ufo:  $(UFODIR)/Inter-Italic.designspace
-	touch $@
-$(UFODIR)/Inter-Italic.ufo:      $(UFODIR)/Inter-Italic.designspace
-	touch $@
-$(UFODIR)/Inter-BlackItalic.ufo: $(UFODIR)/Inter-Italic.designspace
-	touch $@
-$(UFODIR)/Inter-DisplayThin.ufo:        $(UFODIR)/Inter-Roman.designspace
-	touch $@
-$(UFODIR)/Inter-Display.ufo:            $(UFODIR)/Inter-Roman.designspace
-	touch $@
-$(UFODIR)/Inter-DisplayBlack.ufo:       $(UFODIR)/Inter-Roman.designspace
-	touch $@
-$(UFODIR)/Inter-DisplayThinItalic.ufo:  $(UFODIR)/Inter-Italic.designspace
-	touch $@
-$(UFODIR)/Inter-DisplayItalic.ufo:      $(UFODIR)/Inter-Italic.designspace
-	touch $@
-$(UFODIR)/Inter-DisplayBlackItalic.ufo: $(UFODIR)/Inter-Italic.designspace
-	touch $@
-
-# instance UFOs are generated on demand
-$(UFODIR)/Inter-Light.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Light"
-$(UFODIR)/Inter-ExtraLight.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Light"
-$(UFODIR)/Inter-Medium.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Medium"
-$(UFODIR)/Inter-SemiBold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Semi Bold"
-$(UFODIR)/Inter-Bold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Bold"
-$(UFODIR)/Inter-ExtraBold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Bold"
-
-$(UFODIR)/Inter-LightItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Light Italic"
-$(UFODIR)/Inter-ExtraLightItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Light Italic"
-$(UFODIR)/Inter-MediumItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Medium Italic"
-$(UFODIR)/Inter-SemiBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Semi Bold Italic"
-$(UFODIR)/Inter-BoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Bold Italic"
-$(UFODIR)/Inter-ExtraBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Extra Bold Italic"
-
-$(UFODIR)/Inter-DisplayLight.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Light"
-$(UFODIR)/Inter-DisplayExtraLight.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Extra Light"
-$(UFODIR)/Inter-DisplayMedium.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Medium"
-$(UFODIR)/Inter-DisplaySemiBold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Semi Bold"
-$(UFODIR)/Inter-DisplayBold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Bold"
-$(UFODIR)/Inter-DisplayExtraBold.ufo: $(UFODIR)/Inter-Roman.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Extra Bold"
-
-$(UFODIR)/Inter-DisplayLightItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Light Italic"
-$(UFODIR)/Inter-DisplayExtraLightItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Extra Light Italic"
-$(UFODIR)/Inter-DisplayMediumItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Medium Italic"
-$(UFODIR)/Inter-DisplaySemiBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Semi Bold Italic"
-$(UFODIR)/Inter-DisplayBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Bold Italic"
-$(UFODIR)/Inter-DisplayExtraBoldItalic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
-	. $(VENV) ; fontmake -o ufo -m $< --output-path $@ -i "Inter Display Extra Bold Italic"
+# UFOs from designspace
+$(UFODIR)/Inter-%Italic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+	. $(VENV) ; ./misc/tools/gen-instance-ufo.sh $< $@
+$(UFODIR)/Inter-%.ufo: $(UFODIR)/Inter-Roman.designspace | venv
+	. $(VENV) ; ./misc/tools/gen-instance-ufo.sh $< $@
 
 # make sure intermediate files are not rm'd by make
 .PRECIOUS: \

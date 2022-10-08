@@ -6,6 +6,8 @@ from datetime import datetime
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'tools')))
 from common import getGitHash, getVersion
+from postprocess_instance_ufo import ufo_set_wws
+
 
 def update_version(ufo):
   version = getVersion()
@@ -24,6 +26,7 @@ def update_version(ufo):
   ufo.info.openTypeNameUniqueID = "%s-%s:%d:%s" % (psFamily, psStyle, now.year, buildtag)
   ufo.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
 
+
 def fix_opsz_range(designspace):
   # TODO: find extremes by looking at the source
   for a in designspace.axes:
@@ -33,6 +36,7 @@ def fix_opsz_range(designspace):
       break
   return designspace
 
+
 def fix_wght_range(designspace):
   for a in designspace.axes:
     if a.tag == "wght":
@@ -40,6 +44,7 @@ def fix_wght_range(designspace):
       a.maximum = 900
       break
   return designspace
+
 
 def should_decompose_glyph(g):
   # A trivial glyph is one that does not use components or where component transformation
@@ -58,11 +63,13 @@ def should_decompose_glyph(g):
         return True
   return False
 
+
 def find_glyphs_to_decompose(designspace):
   source = designspace.sources[int(len(designspace.sources)/2)]
   print("find_glyphs_to_decompose sourcing from %r" % source.name)
   ufo = defcon.Font(source.path)
   return sorted([g.name for g in ufo if should_decompose_glyph(g)])
+
 
 def set_ufo_filter(ufo, **filter_dict):
   filters = ufo.lib.setdefault("com.github.googlei18n.ufo2ft.filters", [])
@@ -72,23 +79,26 @@ def set_ufo_filter(ufo, **filter_dict):
       return
   filters.append(filter_dict)
 
-def update_source_ufo(ufo_file, weight, glyphs_to_decompose):
-  print(f"update {os.path.basename(ufo_file)} (weight={weight})")
+
+def update_source_ufo(ufo_file, glyphs_to_decompose):
+  print(f"update {os.path.basename(ufo_file)}")
   ufo = defcon.Font(ufo_file)
   update_version(ufo)
   set_ufo_filter(ufo, name="decomposeComponents", include=glyphs_to_decompose)
+  ufo_set_wws(ufo) # Fix missing WWS entries for Display fonts
   ufo.save(ufo_file)
+
 
 def update_sources(designspace):
   glyphs_to_decompose = find_glyphs_to_decompose(designspace)
   #print("glyphs marked to be decomposed: %s" % ', '.join(glyphs_to_decompose))
   sources = [source for source in designspace.sources]
   # sources = [s for s in sources if s.name == "Inter Thin"] # DEBUG
-  source_files = list(set([(s.path, s.location["Weight"]) for s in sources]))
+  source_files = list(set([s.path for s in sources]))
   with Pool(len(source_files)) as p:
-    p.starmap(update_source_ufo,
-      [(t[0], t[1], glyphs_to_decompose) for t in source_files])
+    p.starmap(update_source_ufo, [(path, glyphs_to_decompose) for path in source_files])
   return designspace
+
 
 def main(argv):
   designspace_file = argv[1]
@@ -97,6 +107,7 @@ def main(argv):
   designspace = fix_wght_range(designspace)
   designspace = update_sources(designspace)
   designspace.write(designspace_file)
+
 
 if __name__ == '__main__':
   main(sys.argv)
