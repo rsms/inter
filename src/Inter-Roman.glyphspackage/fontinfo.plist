@@ -3743,12 +3743,26 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
 m011 = 1;
 };
 name = "Display Thin";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = Thin;
+}
+);
 weightClass = 100;
 },
 {
@@ -3771,6 +3785,10 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3778,6 +3796,16 @@ m007 = 0.33333;
 m011 = 0.66667;
 };
 name = "Display Extra Light";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Extra Light";
+}
+);
 weightClass = 200;
 },
 {
@@ -3800,6 +3828,10 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3807,6 +3839,16 @@ m007 = 0.66667;
 m011 = 0.33333;
 };
 name = "Display Light";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = Light;
+}
+);
 weightClass = 300;
 },
 {
@@ -3829,12 +3871,26 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
 m007 = 1;
 };
 name = Display;
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = Regular;
+}
+);
 },
 {
 axesValues = (
@@ -3856,6 +3912,10 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3863,6 +3923,16 @@ m007 = 0.8;
 m009 = 0.2;
 };
 name = "Display Medium";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = Medium;
+}
+);
 weightClass = 500;
 },
 {
@@ -3885,6 +3955,10 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3892,6 +3966,16 @@ m007 = 0.6;
 m009 = 0.4;
 };
 name = "Display Semi Bold";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Semi Bold";
+}
+);
 weightClass = 600;
 },
 {
@@ -3914,6 +3998,10 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3923,6 +4011,16 @@ m009 = 0.6;
 isBold = 1;
 linkStyle = Display;
 name = "Display Bold";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = Bold;
+}
+);
 weightClass = 700;
 },
 {
@@ -3945,6 +4043,10 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3952,6 +4054,16 @@ m007 = 0.2;
 m009 = 0.8;
 };
 name = "Display Extra Bold";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Extra Bold";
+}
+);
 weightClass = 800;
 },
 {
@@ -3974,12 +4086,26 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
 m009 = 1;
 };
 name = "Display Black";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = Black;
+}
+);
 weightClass = 900;
 }
 );

@@ -3799,6 +3799,10 @@ value = (
 {
 name = italicAngle;
 value = "9.4";
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3807,6 +3811,16 @@ m012 = 1;
 isItalic = 1;
 linkStyle = "Display Thin";
 name = "Display Thin Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Thin Italic";
+}
+);
 },
 {
 axesValues = (
@@ -3832,6 +3846,10 @@ value = (
 {
 name = italicAngle;
 value = "9.4";
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3841,6 +3859,16 @@ m012 = 0.66667;
 isItalic = 1;
 linkStyle = "Display Extra Light";
 name = "Display Extra Light Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Extra Light Italic";
+}
+);
 weightClass = 200;
 },
 {
@@ -3867,6 +3895,10 @@ value = (
 {
 name = italicAngle;
 value = "9.4";
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3876,6 +3908,16 @@ m012 = 0.33333;
 isItalic = 1;
 linkStyle = "Display Light";
 name = "Display Light Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Light Italic";
+}
+);
 weightClass = 300;
 },
 {
@@ -3902,6 +3944,10 @@ value = (
 {
 name = italicAngle;
 value = "9.4";
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3910,6 +3956,16 @@ m008 = 1;
 isItalic = 1;
 linkStyle = Display;
 name = "Display Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = Italic;
+}
+);
 },
 {
 axesValues = (
@@ -3935,6 +3991,10 @@ value = (
 {
 name = italicAngle;
 value = "9.4";
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3944,6 +4004,16 @@ m010 = 0.2;
 isItalic = 1;
 linkStyle = "Display Medium";
 name = "Display Medium Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Medium Italic";
+}
+);
 weightClass = 500;
 },
 {
@@ -3970,6 +4040,10 @@ value = (
 {
 name = italicAngle;
 value = "9.4";
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -3979,6 +4053,16 @@ m010 = 0.4;
 isItalic = 1;
 linkStyle = "Display Semi Bold";
 name = "Display Semi Bold Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Semi Bold Italic";
+}
+);
 weightClass = 600;
 },
 {
@@ -4005,6 +4089,10 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -4015,6 +4103,16 @@ isBold = 1;
 isItalic = 1;
 linkStyle = Display;
 name = "Display Bold Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Bold Italic";
+}
+);
 weightClass = 700;
 },
 {
@@ -4041,6 +4139,10 @@ value = (
 {
 name = italicAngle;
 value = "9.4";
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -4050,6 +4152,16 @@ m010 = 0.8;
 isItalic = 1;
 linkStyle = "Display Extra Bold";
 name = "Display Extra Bold Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Extra Bold Italic";
+}
+);
 weightClass = 800;
 },
 {
@@ -4076,6 +4188,10 @@ value = (
 0,
 4
 );
+},
+{
+name = "Has WWS Names";
+value = 0;
 }
 );
 instanceInterpolations = {
@@ -4084,6 +4200,16 @@ m010 = 1;
 isItalic = 1;
 linkStyle = "Display Black";
 name = "Display Black Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Black Italic";
+}
+);
 weightClass = 900;
 }
 );
