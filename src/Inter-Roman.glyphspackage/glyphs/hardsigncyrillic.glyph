@@ -1,6 +1,6 @@
 {
 glyphname = hardsigncyrillic;
-kernLeft = T.sc;
+kernLeft = t;
 kernRight = bsmcyrillic;
 layers = (
 {
@@ -9,18 +9,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(52,1118,l),
-(52,958,l),
-(364,958,l),
-(364,1118,l)
+(376,972,l),
+(376,1118,l),
+(64,1118,l),
+(64,972,l)
 );
 },
 {
-pos = (206,0);
+pos = (218,0);
 ref = softsigncyrillic;
 }
 );
-width = 1340;
+width = 1352;
 },
 {
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -28,18 +28,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(94,1118,l),
-(94,814,l),
-(364,814,l),
-(364,1118,l)
+(302,826,l),
+(302,1118,l),
+(32,1118,l),
+(32,826,l)
 );
 },
 {
-pos = (262,0);
+pos = (200,0);
 ref = softsigncyrillic;
 }
 );
-width = 1508;
+width = 1462;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -47,19 +47,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(30,1118,l),
-(30,1070,l),
-(378,1070,l),
-(378,1118,l)
+(382,1072,l),
+(382,1118,l),
+(104,1118,l),
+(104,1072,l)
 );
 },
 {
 alignment = -1;
-pos = (174,0);
+pos = (184,0);
 ref = softsigncyrillic;
 }
 );
-width = 1240;
+width = 1250;
 },
 {
 layerId = m007;
@@ -67,18 +67,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(20,1118,l),
-(20,958,l),
-(332,958,l),
-(332,1118,l)
+(344,910,l),
+(344,1056,l),
+(32,1056,l),
+(32,910,l)
 );
 },
 {
-pos = (206,0);
+pos = (218,0);
 ref = softsigncyrillic;
 }
 );
-width = 1276;
+width = 1288;
 },
 {
 layerId = m009;
@@ -86,18 +86,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(78,1118,l),
-(78,814,l),
-(348,814,l),
-(348,1118,l)
+(294,752,l),
+(294,1056,l),
+(24,1056,l),
+(24,752,l)
 );
 },
 {
-pos = (262,0);
+pos = (208,0);
 ref = softsigncyrillic;
 }
 );
-width = 1476;
+width = 1340;
 },
 {
 layerId = m011;
@@ -105,21 +105,22 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-34,1118,l),
-(-34,1070,l),
-(314,1070,l),
-(314,1118,l)
+(318,1072,l),
+(318,1118,l),
+(40,1118,l),
+(40,1072,l)
 );
 },
 {
 alignment = -1;
-pos = (174,0);
+pos = (184,0);
 ref = softsigncyrillic;
 }
 );
-width = 1112;
+width = 1122;
 }
 );
+metricLeft = t;
 metricRight = b;
 tags = (
 "TODO-opsz"

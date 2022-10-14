@@ -5,50 +5,53 @@ kernRight = o;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
 (666,1330,l),
-(692,1490,l),
-(254,1490,l),
+(693,1490,l),
+(253,1490,l),
 (226,1330,l)
 );
 },
 {
-pos = (326,0);
-ref = afii10046;
+pos = (327,0);
+ref = "Softsign-cy";
 }
 );
-width = 1663;
+width = 1665;
 },
 {
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(760,1186,l),
-(808,1490,l),
-(210,1490,l),
+(758,1186,l),
+(809,1490,l),
+(211,1490,l),
 (160,1186,l)
 );
 },
 {
-pos = (344,0);
-ref = afii10046;
+pos = (345,0);
+ref = "Softsign-cy";
 }
 );
-width = 1686;
+width = 1685;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(646,1442,l),
-(654,1490,l),
+(704,1442,l),
+(712,1490,l),
 (282,1490,l),
 (274,1442,l)
 );
@@ -56,10 +59,10 @@ nodes = (
 {
 alignment = -1;
 pos = (320,0);
-ref = afii10046;
+ref = "Softsign-cy";
 }
 );
-width = 1656;
+width = 1657;
 },
 {
 layerId = m008;
@@ -68,18 +71,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(638.77,1330,l),
-(665.258,1490,l),
-(225.258,1490,l),
-(198.77,1330,l)
+(639,1330,l),
+(666,1490,l),
+(226,1490,l),
+(199,1330,l)
 );
 },
 {
-pos = (326,0);
-ref = afii10046;
+pos = (327,0);
+ref = "Softsign-cy";
 }
 );
-width = 1600;
+width = 1602;
 },
 {
 layerId = m010;
@@ -88,18 +91,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(746.931,1186,l),
-(797.258,1490,l),
-(199.258,1490,l),
-(148.931,1186,l)
+(747,1186,l),
+(798,1490,l),
+(200,1490,l),
+(149,1186,l)
 );
 },
 {
-pos = (344,0);
-ref = afii10046;
+pos = (345,0);
+ref = "Softsign-cy";
 }
 );
-width = 1652;
+width = 1657;
 },
 {
 layerId = m012;
@@ -116,11 +119,11 @@ nodes = (
 },
 {
 alignment = -1;
-pos = (311,0);
-ref = afii10046;
+pos = (316,0);
+ref = "Softsign-cy";
 }
 );
-width = 1521;
+width = 1525;
 }
 );
 metricLeft = T;
