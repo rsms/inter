@@ -5,124 +5,128 @@ kernRight = k;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
+{
+pos = (219,0);
+ref = kacyrillic;
+},
 {
 closed = 1;
 nodes = (
-(186,1118,l),
-(160,958,l),
-(680,958,l),
-(706,1118,l)
+(533,972,l),
+(557,1118,l),
+(157,1118,l),
+(133,972,l)
 );
-},
-{
-pos = (338,0);
-ref = kacyrillic;
 }
 );
-width = 1438;
+width = 1319;
 },
 {
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
+{
+pos = (201,0);
+ref = kacyrillic;
+},
 {
 closed = 1;
 nodes = (
-(140,1118,l),
-(90,814,l),
-(704,814,l),
-(754,1118,l)
+(475,826,l),
+(523,1118,l),
+(125,1118,l),
+(77,826,l)
 );
-},
-{
-pos = (332,0);
-ref = kacyrillic;
 }
 );
-width = 1598;
+width = 1467;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
+{
+alignment = -1;
+pos = (185,0);
+ref = kacyrillic;
+},
 {
 closed = 1;
 nodes = (
-(216,1118,l),
-(208,1070,l),
-(656,1070,l),
-(666,1118,l)
+(491,1072,l),
+(499,1118,l),
+(197,1118,l),
+(189,1072,l)
 );
-},
-{
-alignment = -1;
-pos = (340,0);
-ref = kacyrillic;
 }
 );
-width = 1314;
+width = 1159;
 },
 {
 layerId = m008;
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(159.674,1118,l),
-(133.186,958,l),
-(653.186,958,l),
-(679.674,1118,l)
-);
+pos = (218,0);
+ref = kacyrillic;
 },
 {
-pos = (338,0);
-ref = kacyrillic;
+closed = 1;
+nodes = (
+(503,910,l),
+(527,1056,l),
+(119,1056,l),
+(95,910,l)
+);
 }
 );
-width = 1372;
+width = 1252;
 },
 {
 layerId = m010;
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(127.674,1118,l),
-(77.347,814,l),
-(691.347,814,l),
-(741.674,1118,l)
-);
+pos = (209,0);
+ref = kacyrillic;
 },
 {
-pos = (354,0);
-ref = kacyrillic;
+closed = 1;
+nodes = (
+(459,752,l),
+(510,1056,l),
+(112,1056,l),
+(61,752,l)
+);
 }
 );
-width = 1592;
+width = 1447;
 },
 {
 layerId = m012;
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(155.674,1118,l),
-(147.728,1070,l),
-(583.728,1070,l),
-(591.674,1118,l)
-);
+alignment = -1;
+pos = (185,0);
+ref = kacyrillic;
 },
 {
-alignment = -1;
-pos = (328,0);
-ref = kacyrillic;
+closed = 1;
+nodes = (
+(427,1072,l),
+(435,1118,l),
+(133,1118,l),
+(125,1072,l)
+);
 }
 );
-width = 1167;
+width = 1024;
 }
 );
+metricLeft = t;
 metricRight = k;
 unicode = 1185;
 userData = {
