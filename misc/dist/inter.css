@@ -8,16 +8,18 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  src: url("Inter.var.woff2?v=3.19") format("woff2") tech("variations"),
-       url("Inter.var.woff2?v=3.19") format("woff2-variations");
+  src: url("Inter.var.woff2?v=3.19") format("woff2-variations"),
+       url("Inter.var.woff2?v=3.19") format("woff2");
+  src: url("Inter.var.woff2?v=3.19") format("woff2") tech("variations");
 }
 @font-face {
   font-family: "InterVar";
   font-weight: 100 900;
   font-display: swap;
   font-style: italic;
-  src: url("Inter-Italic.var.woff2?v=3.19") format("woff2") tech("variations"),
-       url("Inter-Italic.var.woff2?v=3.19") format("woff2-variations");
+  src: url("Inter-Italic.var.woff2?v=3.19") format("woff2-variations"),
+       url("Inter-Italic.var.woff2?v=3.19") format("woff2");
+  src: url("Inter-Italic.var.woff2?v=3.19") format("woff2") tech("variations");
 }
 /* static fonts "Inter" */
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 100; font-display: swap; src: url("Inter-Thin.woff2?v=3.19") format("woff2"); }
