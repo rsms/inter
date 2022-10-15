@@ -15,12 +15,27 @@ def ufo_set_wws(ufo):
   ufo.info.openTypeNameWWSSubfamilyName = subfamily
 
 
+# See https://github.com/rsms/inter/issues/508
+# TODO: Remove when https://github.com/googlefonts/glyphsLib/issues/821 is fixed
+def fix_fractional_advance_width(ufo):
+  for g in ufo:
+    g.width = round(g.width)
+
+
 def main(argv):
   ufo_file = argv[1]
-  if ufo_file.find("Display") == -1:
-    return  # skip fonts of "default" family
+
+  # TODO: Uncomment when https://github.com/googlefonts/glyphsLib/issues/821 is fixed
+  # if ufo_file.find("Display") == -1:
+  #   return  # skip fonts of "default" family
+
   ufo = defcon.Font(ufo_file)
-  ufo_set_wws(ufo)
+
+  if ufo_file.find("Display") != -1:
+    ufo_set_wws(ufo)
+
+  fix_fractional_advance_width(ufo)
+
   ufo.save(ufo_file)
 
 
