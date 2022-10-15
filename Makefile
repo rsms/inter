@@ -100,7 +100,6 @@ $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hint
 $(FONTDIR)/var/_%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable -m $< --output-path $@ \
 	              --overlaps-backend pathops --production-names
-	. $(VENV) ; python misc/tools/postprocess-vf.py $@
 
 $(FONTDIR)/var/_%.var.otf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ \
