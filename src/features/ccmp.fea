@@ -27,11 +27,10 @@
   uniFE20 uniFE21 uniFE22 uniFE23 uniFE24 uniFE25 uniFE26
 ];
 
-# /idieresis /idieresis -> /idieresis.narrow /idieresis.narrow
-lookup double_idiaeresis {
-  sub [idieresis yi-cy]' [idieresis yi-cy] by [idieresis.narrow idieresis.narrow];
-  sub idieresis.narrow [idieresis yi-cy]' by [idieresis.narrow idieresis.narrow];
-} double_idiaeresis;
+# /idieresis /idieresis -> /idieresis.double
+lookup idieresis_double {
+  sub [idieresis yi-cy] [idieresis yi-cy] by idieresis.double;
+} idieresis_double;
 
 # Transpose sequences like /i /gravecomb -> /idotless /gravecomb
 lookup ccmp02 {
