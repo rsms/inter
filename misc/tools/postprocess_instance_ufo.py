@@ -20,11 +20,12 @@ def ufo_set_wws(ufo):
 def fix_fractional_advance_width(ufo):
   for g in ufo:
     w = int(round(g.width))
-    # set twice to work around bug or weird behavior in defcon.
-    # If we don't do this, then fractional widths with .0 fraction are
-    # not updated to integer values.
-    g.width = w + 1
-    g.width = w
+    if w != g.width:
+      # set twice to work around bug or weird behavior in defcon.
+      # If we don't do this, then fractional widths with .0 fraction are
+      # not updated to integer values.
+      g.width = w + 1
+      g.width = w
 
 
 def main(argv):
