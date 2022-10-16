@@ -117,7 +117,7 @@ $(FONTDIR)/var:
 $(UFODIR):
 	mkdir -p $@
 
-# roman + italic
+# roman + italic with STAT
 $(FONTDIR)/var/inter-roman-and-italic.stamp: \
 	  $(FONTDIR)/var/_Inter-Roman.var.ttf \
 	  $(FONTDIR)/var/_Inter-Italic.var.ttf \
