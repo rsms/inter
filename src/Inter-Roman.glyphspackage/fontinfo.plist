@@ -3168,11 +3168,11 @@ stemValues = (
 );
 userData = {
 GSCornerRadius = 320;
-GSOffsetHorizontal = 79;
+GSOffsetHorizontal = 90;
 GSOffsetKeepCompatible = 1;
 GSOffsetMakeStroke = 1;
-GSOffsetProportional = 1;
-GSOffsetVertical = 100;
+GSOffsetPosition = 1;
+GSOffsetVertical = 84;
 };
 },
 {
@@ -3460,11 +3460,13 @@ stemValues = (
 );
 userData = {
 GSCornerRadius = 16;
-GSOffsetHorizontal = 74;
+GSExtrudeAngle = 30;
+GSExtrudeOffset = 15;
+GSOffsetHorizontal = 210;
 GSOffsetKeepCompatible = 1;
 GSOffsetMakeStroke = 1;
-GSOffsetProportional = 1;
-GSOffsetVertical = 200;
+GSOffsetPosition = 1;
+GSOffsetVertical = 180;
 };
 }
 );
