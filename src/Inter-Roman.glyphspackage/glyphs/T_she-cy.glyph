@@ -1,5 +1,5 @@
 {
-glyphname = afii10060;
+glyphname = "Tshe-cy";
 kernLeft = T;
 kernRight = a;
 layers = (
@@ -9,18 +9,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
+(1216,1330,l),
+(1216,1490,l),
 (98,1490,l),
-(98,1330,l),
-(1230,1330,l),
-(1230,1490,l)
+(98,1330,l)
 );
 },
 {
-pos = (366,0);
+alignment = -1;
+pos = (388,0);
 ref = Shhacyrillic;
 }
 );
-width = 1828;
+width = 1836;
 },
 {
 guides = (
@@ -34,18 +35,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
+(1350,1164,l),
+(1350,1490,l),
 (56,1490,l),
-(56,1176,l),
-(1208,1176,l),
-(1208,1490,l)
+(56,1164,l)
 );
 },
 {
-pos = (250,0);
+alignment = -1;
+pos = (405,0);
 ref = Shhacyrillic;
 }
 );
-width = 1808;
+width = 1873;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -53,19 +55,19 @@ shapes = (
 {
 closed = 1;
 nodes = (
+(1134,1444,l),
+(1134,1490,l),
 (128,1490,l),
-(128,1442,l),
-(1248,1442,l),
-(1248,1490,l)
+(128,1444,l)
 );
 },
 {
 alignment = -1;
-pos = (438,0);
+pos = (376,0);
 ref = Shhacyrillic;
 }
 );
-width = 1844;
+width = 1814;
 },
 {
 layerId = m007;
@@ -73,43 +75,39 @@ shapes = (
 {
 closed = 1;
 nodes = (
+(1184,1330,l),
+(1184,1490,l),
 (66,1490,l),
-(66,1330,l),
-(1198,1330,l),
-(1198,1490,l)
+(66,1330,l)
 );
 },
 {
-pos = (366,0);
+alignment = -1;
+pos = (388,0);
 ref = Shhacyrillic;
 }
 );
-width = 1764;
+width = 1772;
 },
 {
-guides = (
-{
-angle = 90;
-pos = (772,2096);
-}
-);
 layerId = m009;
 shapes = (
 {
 closed = 1;
 nodes = (
+(1352,1138,l),
+(1352,1490,l),
 (40,1490,l),
-(40,1176,l),
-(1192,1176,l),
-(1192,1490,l)
+(40,1138,l)
 );
 },
 {
-pos = (250,0);
+alignment = -1;
+pos = (408,0);
 ref = Shhacyrillic;
 }
 );
-width = 1766;
+width = 1844;
 },
 {
 layerId = m011;
@@ -117,23 +115,24 @@ shapes = (
 {
 closed = 1;
 nodes = (
+(1066,1444,l),
+(1066,1490,l),
 (60,1490,l),
-(60,1442,l),
-(1180,1442,l),
-(1180,1490,l)
+(60,1444,l)
 );
 },
 {
 alignment = -1;
-pos = (434,0);
+pos = (372,0);
 ref = Shhacyrillic;
 }
 );
-width = 1706;
+width = 1682;
 }
 );
 metricLeft = T;
-metricRight = Shhacyrillic;
+metricRight = H;
+note = "Top copied from /T";
 tags = (
 "TODO-opsz"
 );

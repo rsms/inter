@@ -5,6 +5,7 @@ kernRight = t;
 layers = (
 {
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+metricRight = "=+64";
 shapes = (
 {
 ref = H;
@@ -14,10 +15,11 @@ pos = (1180,0);
 ref = _part.cyrtic;
 }
 );
-width = 1514;
+width = 1578;
 },
 {
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+metricRight = "=+80";
 shapes = (
 {
 ref = H;
@@ -28,11 +30,10 @@ pos = (1040,0);
 ref = _part.cyrtic;
 }
 );
-width = 1536;
+width = 1616;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
-metricRight = "=H";
 shapes = (
 {
 ref = H;
@@ -47,6 +48,7 @@ width = 1506;
 },
 {
 layerId = m007;
+metricRight = "=+64";
 shapes = (
 {
 ref = H;
@@ -56,10 +58,11 @@ pos = (1148,0);
 ref = _part.cyrtic;
 }
 );
-width = 1450;
+width = 1514;
 },
 {
 layerId = m009;
+metricRight = "=+80";
 shapes = (
 {
 ref = H;
@@ -70,11 +73,11 @@ pos = (1008,0);
 ref = _part.cyrtic;
 }
 );
-width = 1488;
+width = 1568;
 },
 {
 layerId = m011;
-metricRight = "=H";
+metricRight = "=+32";
 shapes = (
 {
 ref = H;
@@ -85,10 +88,9 @@ pos = (1114,0);
 ref = _part.cyrtic;
 }
 );
-width = 1378;
+width = 1410;
 }
 );
-metricLeft = H;
 metricRight = t;
 tags = (
 "TODO-opsz"
