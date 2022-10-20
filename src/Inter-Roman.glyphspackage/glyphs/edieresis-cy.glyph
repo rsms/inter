@@ -1,84 +1,87 @@
 {
-glyphname = uni04ED;
+glyphname = "edieresis-cy";
 layers = (
 {
-layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
 ref = ereversedcyrillic;
 },
 {
-pos = (-53,0);
+pos = (-38,0);
 ref = dieresis;
 }
 );
-width = 1109;
+width = 1150;
 },
 {
-layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
 ref = ereversedcyrillic;
 },
 {
-pos = (68,0);
+pos = (91,0);
 ref = dieresis;
 }
 );
-width = 1153;
+width = 1238;
 },
 {
-layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
 ref = ereversedcyrillic;
 },
 {
-pos = (-133,0);
+pos = (-122,-42);
 ref = dieresis;
 }
 );
-width = 1082;
+width = 1126;
 },
 {
-layerId = m008;
+layerId = m007;
 shapes = (
 {
 ref = ereversedcyrillic;
 },
 {
-pos = (-48,42);
+pos = (-48,0);
 ref = dieresis;
 }
 );
-width = 1044;
+width = 1071;
 },
 {
-layerId = m010;
+layerId = m009;
 shapes = (
 {
 ref = ereversedcyrillic;
 },
 {
-pos = (70,42);
+pos = (98,0);
 ref = dieresis;
 }
 );
-width = 1118;
+width = 1194;
 },
 {
-layerId = m012;
+layerId = m011;
 shapes = (
 {
 ref = ereversedcyrillic;
 },
 {
-pos = (-126,42);
+pos = (-122,0);
 ref = dieresis;
 }
 );
-width = 954;
+width = 998;
 }
+);
+tags = (
+"TODO-opsz"
 );
 unicode = 1261;
 }
