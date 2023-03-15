@@ -14,7 +14,7 @@ while [[ $# -gt 0 ]]; do
     shift
     ;;
   -reveal-in-finder)
-    OPT_REVEAL_IN_FINDER=true
+    [ "$(uname -s)" = Darwin ] && OPT_REVEAL_IN_FINDER=true
     shift
     ;;
   -*)
