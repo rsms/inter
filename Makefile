@@ -557,15 +557,20 @@ list:
 # ---------------------------------------------------------------------------------
 # initialize toolchain
 
-venv: build/venv/config.stamp
+venv: build/venv/config2.stamp
 
-build/venv/config.stamp: requirements.txt
+build/venv/config2.stamp: Pipfile.lock Pipfile
 	@mkdir -p build
-	test -d build/venv || python3 -m venv build/venv
-	. $(VENV) ; pip install -Ur requirements.txt
+	[ ! -f build/venv/config.stamp ] || rm -rf build/venv
+	[ -d build/venv ] || python3 -m venv build/venv
+	. $(VENV) ; pip install pipenv
+	. $(VENV) ; pipenv install
 	touch $@
+
+venv-update:
+	. $(VENV) ; pipenv update
 
 reset: clean
 	rm -rf build/venv
 
-.PHONY: venv reset
+.PHONY: venv venv-update reset
