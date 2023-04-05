@@ -1,3 +1,8 @@
 # Use CRLF for line endings in the Windows install "readme" file
 misc/dist/install-win.txt text eol=crlf
 misc/dist/about[[:space:]]hinted[[:space:]]fonts.txt text eol=crlf
+
+# Exclude some stuff from diffs and stats
+# note: docs/* and examples/* are considered "linguist-documentation" by default
+misc/ttf2woff/* linguist-vendored
+misc/UnicodeData.txt linguist-generated
