@@ -25,13 +25,13 @@ several [OpenType features](https://rsms.me/inter/#features), like contextual al
 
 ## Using & installing Inter
 
-- [**Download the latest font files…**](https://github.com/rsms/inter/releases/latest)
-- To use Inter on a web page, use the official
-  [CDN distribution](https://rsms.me/inter/inter.css) with the following HTML and CSS:
+[**Download the latest font files…**](https://github.com/rsms/inter/releases/latest)
+
+Using Inter on a web page:
 
 ```html
-<link rel="preconnect" href="https://rsms.me/">
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<link rel="preconnect" href="https://your-font-file-host/">
+<link rel="stylesheet" href="https://your-font-file-host/inter.css">
 ```
 
 ```css
@@ -40,6 +40,14 @@ several [OpenType features](https://rsms.me/inter/#features), like contextual al
   :root { font-family: 'Inter var', sans-serif; }
 }
 ```
+
+For web pages, there's an official [CDN distribution](https://rsms.me/inter/inter.css) that you can use directly without having to host the font files yourself:
+
+```html
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+```
+
 
 ### Alternate distributions
 
@@ -59,15 +67,16 @@ several [OpenType features](https://rsms.me/inter/#features), like contextual al
 
 ## Notable projects using Inter
 
-- [Figma](https://figma.com/)
-- [Unity](https://unity.com/)
-- [ElementaryOS](https://elementary.io/)
-- [Zurich Airport](https://flughafen-zuerich.ch/)
 - [Element software suite](https://element.io/)
-- [Mozilla brand](https://mozilla.design/firefox/typography/)
-- [GitHub brand and documentation](https://github.com/about)
-- [Pixar Presto](https://en.wikipedia.org/wiki/Presto_(animation_software))
+- [ElementaryOS](https://elementary.io/)
+- [Figma](https://figma.com/)
+- [GitLab](https://gitlab.com)
 - [Minimalissimo magazine](https://minimalissimo.com/)
+- [Mozilla brand](https://mozilla.design/firefox/typography/)
+- [NASA](https://www.nasa.gov/specials/artemis-ii/)
+- [Pixar Presto](https://en.wikipedia.org/wiki/Presto_(animation_software))
+- [Unity](https://unity.com/)
+- [Zurich Airport](https://flughafen-zuerich.ch/)
 
 
 > **Have you made something nice with Inter?**<br>
