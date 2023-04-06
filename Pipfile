@@ -14,5 +14,8 @@ brotli = "==1.0.*"
 
 [dev-packages]
 
+# Mainly due to https://pypi.org/project/fonttools/
+# > FontTools requires Python 3.8 or later. We try to follow the same schedule
+# > of minimum Python version support as NumPy (see NEP 29).
 [requires]
-python_version = "3.7"
+python_version = "3.8"
