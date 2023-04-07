@@ -111,7 +111,7 @@ width = 896;
 anchors = (
 {
 name = _cross;
-pos = (520,721);
+pos = (496,721);
 }
 );
 layerId = m009;
@@ -119,14 +119,14 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(910,613,l),
-(910,829,l),
-(128,829,l),
-(128,613,l)
+(926,613,l),
+(926,829,l),
+(64,829,l),
+(64,613,l)
 );
 }
 );
-width = 1006;
+width = 990;
 },
 {
 anchors = (
@@ -148,6 +148,29 @@ nodes = (
 }
 );
 width = 722;
+},
+{
+anchors = (
+{
+name = _cross;
+pos = (520,721);
+}
+);
+associatedMasterId = m009;
+layerId = "717EA9D1-8D19-49FD-82C7-E237B4672D6F";
+name = "Apr 7, 23, 15:08";
+shapes = (
+{
+closed = 1;
+nodes = (
+(910,613,l),
+(910,829,l),
+(128,829,l),
+(128,613,l)
+);
+}
+);
+width = 1006;
 }
 );
 tags = (

@@ -6,24 +6,21 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (-688,0);
+pos = (-716,0);
 }
 );
 guides = (
 {
-angle = 90;
-pos = (-864,-996);
-},
-{
-angle = -99.4;
-pos = (-1024,-304);
+angle = 80.6;
+pos = (-863,-996);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-1375,-1620);
+pos = (-1404,-1620);
 ref = tilde;
 }
 );
@@ -33,43 +30,39 @@ width = 0;
 anchors = (
 {
 name = _bottom;
-pos = (-512,0);
+pos = (-812,0);
 }
 );
 guides = (
 {
-angle = -99.4;
-pos = (-756,-396);
+angle = 80.6;
+pos = (-991,-1088);
 }
 );
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-1209,-1676);
+pos = (-1509,-1676);
 ref = tilde;
 }
 );
-width = 0;
+width = 30;
 },
 {
 anchors = (
 {
 name = _bottom;
-pos = (-752,0);
-}
-);
-guides = (
-{
-angle = 81;
-pos = (-994,256);
+pos = (-579,0);
 }
 );
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-1431,-1588);
+pos = (-1258,-1590);
 ref = tilde;
 }
 );
@@ -79,24 +72,21 @@ width = 0;
 anchors = (
 {
 name = _bottom;
-pos = (-703,0);
+pos = (-743,0);
 }
 );
 guides = (
 {
-angle = 90;
-pos = (-928,-996);
-},
-{
-angle = -99.4;
-pos = (-1088,-304);
+angle = 80.6;
+pos = (-1155,-996);
 }
 );
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-1365,-1620);
+pos = (-1412,-1662);
 ref = tilde;
 }
 );
@@ -106,20 +96,21 @@ width = 0;
 anchors = (
 {
 name = _bottom;
-pos = (-528,0);
+pos = (-808,0);
 }
 );
 guides = (
 {
-angle = -99.4;
-pos = (-788,-396);
+angle = 80.6;
+pos = (-1088,-1088);
 }
 );
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-1209,-1676);
+pos = (-1498,-1602);
 ref = tilde;
 }
 );
@@ -129,20 +120,15 @@ width = 0;
 anchors = (
 {
 name = _bottom;
-pos = (-816,0);
-}
-);
-guides = (
-{
-angle = 81;
-pos = (-1122,256);
+pos = (-634,0);
 }
 );
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-1431,-1588);
+pos = (-1265,-1633);
 ref = tilde;
 }
 );

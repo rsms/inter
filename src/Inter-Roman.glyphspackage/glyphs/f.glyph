@@ -5,12 +5,6 @@ kernLeft = f;
 kernRight = f;
 layers = (
 {
-anchors = (
-{
-name = bottom;
-pos = (318,0);
-}
-);
 guides = (
 {
 angle = 90;
@@ -119,12 +113,6 @@ nodes = (
 width = 678;
 },
 {
-anchors = (
-{
-name = bottom;
-pos = (320,0);
-}
-);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
@@ -143,12 +131,6 @@ nodes = (
 width = 738;
 },
 {
-anchors = (
-{
-name = bottom;
-pos = (274,0);
-}
-);
 guides = (
 {
 angle = 90;
@@ -176,12 +158,6 @@ nodes = (
 width = 626;
 },
 {
-anchors = (
-{
-name = bottom;
-pos = (372,0);
-}
-);
 guides = (
 {
 pos = (-24,1228);
@@ -210,12 +186,6 @@ nodes = (
 width = 832;
 },
 {
-anchors = (
-{
-name = bottom;
-pos = (384,0);
-}
-);
 background = {
 shapes = (
 {
@@ -250,18 +220,6 @@ nodes = (
 }
 );
 };
-guides = (
-{
-pos = (-92,1228);
-},
-{
-pos = (-92,256);
-},
-{
-angle = 90;
-pos = (724,1161);
-}
-);
 layerId = m009;
 metricLeft = "=t";
 metricRight = "=t";
@@ -284,18 +242,6 @@ nodes = (
 width = 852;
 },
 {
-anchors = (
-{
-name = bottom;
-pos = (254,0);
-}
-);
-guides = (
-{
-angle = 90;
-pos = (308,1024);
-}
-);
 layerId = m011;
 shapes = (
 {
@@ -304,10 +250,10 @@ ref = longs;
 {
 closed = 1;
 nodes = (
-(76,1118,l),
-(76,1072,l),
-(518,1072,l),
-(518,1118,l)
+(66,1056,l),
+(66,1010,l),
+(508,1010,l),
+(508,1056,l)
 );
 }
 );

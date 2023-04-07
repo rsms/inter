@@ -131,12 +131,6 @@ name = top;
 pos = (335,1262);
 }
 );
-guides = (
-{
-angle = 80.6;
-pos = (-46,1073);
-}
-);
 layerId = m008;
 name = ital_gen;
 shapes = (
@@ -171,17 +165,6 @@ name = top;
 pos = (408,1262);
 }
 );
-guides = (
-{
-orientation = center;
-angle = 80.6;
-pos = (-1763,1504);
-},
-{
-angle = 80.6;
-pos = (207,1088);
-}
-);
 layerId = m010;
 name = ital_gen;
 shapes = (
@@ -209,7 +192,7 @@ pos = (166,582);
 },
 {
 name = ogonek;
-pos = (94,0);
+pos = (93,0);
 },
 {
 name = top;
@@ -222,14 +205,14 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(94,0,l),
-(279,1118,l),
-(233,1118,l),
-(48,0,l)
+(93,0,l),
+(268,1056,l),
+(222,1056,l),
+(47,0,l)
 );
 }
 );
-width = 327;
+width = 315;
 }
 );
 metricLeft = l;

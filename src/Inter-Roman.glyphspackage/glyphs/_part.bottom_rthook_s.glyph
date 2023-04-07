@@ -1,6 +1,6 @@
 {
 export = 0;
-glyphname = _part.bottom_srthook;
+glyphname = _part.bottom_rthook_s;
 layers = (
 {
 anchors = (
@@ -39,7 +39,7 @@ width = 384;
 anchors = (
 {
 name = _rthook;
-pos = (64,256);
+pos = (64,316);
 }
 );
 layerId = m011;
@@ -57,8 +57,8 @@ nodes = (
 (152,-372,o),
 (110,-329,o),
 (110,-220,cs),
-(110,256,l),
-(64,256,l),
+(110,316,l),
+(64,316,l),
 (64,-220,ls),
 (64,-356,o),
 (125,-418,o),
@@ -201,4 +201,5 @@ nodes = (
 width = 748;
 }
 );
+note = "Based on /_part.bottom_rthook";
 }
