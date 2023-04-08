@@ -106,6 +106,34 @@ refer to [**CONTRIBUTING.md**](CONTRIBUTING.md).
 Inter is licensed under the [SIL Open Font License](LICENSE.txt)
 
 
+## Creating derivative fonts
+
+Inter is open source which means you can make your own versions with your own changes.
+However when doing so, please [**read LICENSE.txt carefully.**](LICENSE.txt) It is a standard **SIL Open Font License 1.1**:
+
+> The goals of the Open Font License (OFL) are to stimulate worldwide
+> development of collaborative font projects, to support the font creation
+> efforts of academic and linguistic communities, and to provide a free and
+> open framework in which fonts may be shared and improved in partnership
+> with others.
+>
+> The OFL allows the licensed fonts to be used, studied, modified and
+> redistributed freely as long as they are not sold by themselves. The
+> fonts, including any derivative works, can be bundled, embedded,
+> redistributed and/or sold with any software provided that any reserved
+> names are not used by derivative works. The fonts and derivatives,
+> however, cannot be released under any other type of license. The
+> requirement for fonts to remain under this license does not apply
+> to any document created using the fonts or their derivatives.
+
+While you are allowed to use Inter commercially, i.e. bundled with product or service which makes you money, you are NOT allowed to sell Inter itself or derivatives of Inter. If you would like to do so, please [reach out](https://github.com/rsms) and we can talk about it.
+
+Inter a trademark of Rasmus Andersson (DBA: RSMS)
+
+"Inter" is a Reserved Font Name by Rasmus Andersson
+([font vendor code RSMS.](https://learn.microsoft.com/en-us/typography/vendors/#r))
+
+
 ## Design
 
 _This section discusses some of the design choices made for Inter._
