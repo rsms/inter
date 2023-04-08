@@ -92,14 +92,11 @@ endfor
 
     {% comment %}{% include eji-banner.html %}{% endcomment %}
 
-    {% if site.safe == true %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105091131-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-105091131-2');
-    </script>
-    {% endif %}
+    <footer class="row">
+      <p>
+        Inter a trademark of <a href="https://rsms.me/">Rasmus Andersson</a>.
+        Font vendor ID: <a href="https://learn.microsoft.com/en-us/typography/vendors/#r">RSMS</a>
+      </p>
+    </footer>
   </body>
 </html>

@@ -3,6 +3,8 @@ layout: default
 ---
 {%
 
+assign release_version = site.data.fontinfo[0].version %}{%
+
 for file in site.static_files %}{%
   assign _path = file.path | remove_first: "/inter" %}{%
   if _path == "/index.css" %}{%
@@ -96,6 +98,8 @@ endfor
 @supports (font-variation-settings: normal) {
   :root { font-family: 'Inter var', sans-serif; }
 }</pre>
+      <p>Global <abbr title="Content Delivery Network">CDN</abbr>
+        sponsored by <a href="https://cloudflare.com/">Cloudflare</a></p>
     </c>
 
     <c class="spacer"></c>
@@ -130,7 +134,7 @@ endfor
       <p>
         Inter is a <a href="https://github.com/rsms/inter">free and open source</a> font family.<br>
         You are free to use this font in almost any way imaginable.<br>
-        Refer to the <a href="https://choosealicense.com/licenses/ofl-1.1/">SIL Open Font License 1.1</a> for exact details on what the conditions and restrictions are.
+        Refer to the <a href="https://raw.githubusercontent.com/rsms/inter/v{{release_version}}/LICENSE.txt">SIL Open Font License 1.1</a> for exact details on what the conditions and restrictions are.
       </p>
       <p>
         <a id="sponsor-button"
