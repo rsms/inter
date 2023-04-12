@@ -1,5 +1,7 @@
 {
 glyphname = vturn;
+kernLeft = A;
+kernRight = A;
 layers = (
 {
 anchors = (
@@ -9,7 +11,7 @@ pos = (570,0);
 },
 {
 name = top;
-pos = (570,1304);
+pos = (570,1118);
 }
 );
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
@@ -30,7 +32,7 @@ pos = (620,0);
 },
 {
 name = top;
-pos = (620,1304);
+pos = (620,1118);
 }
 );
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -47,11 +49,11 @@ width = 1240;
 anchors = (
 {
 name = bottom;
-pos = (536,0);
+pos = (534,0);
 },
 {
 name = top;
-pos = (536,1304);
+pos = (534,1118);
 }
 );
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -68,11 +70,11 @@ width = 1068;
 anchors = (
 {
 name = bottom;
-pos = (570,0);
+pos = (532,0);
 },
 {
 name = top;
-pos = (570,1304);
+pos = (532,1056);
 }
 );
 layerId = m007;
@@ -89,11 +91,11 @@ width = 1064;
 anchors = (
 {
 name = bottom;
-pos = (620,0);
+pos = (596,0);
 },
 {
 name = top;
-pos = (620,1304);
+pos = (596,1056);
 }
 );
 layerId = m009;
@@ -110,11 +112,11 @@ width = 1192;
 anchors = (
 {
 name = bottom;
-pos = (536,0);
+pos = (488,0);
 },
 {
 name = top;
-pos = (536,1304);
+pos = (488,1056);
 }
 );
 layerId = m011;

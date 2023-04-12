@@ -8,11 +8,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-pos = (546,0);
+pos = (548,0);
 },
 {
 name = cedilla;
-pos = (544,0);
+pos = (545,0);
 },
 {
 name = rthook;
@@ -20,13 +20,13 @@ pos = (108,268);
 },
 {
 name = top;
-pos = (552,1304);
+pos = (548,1118);
 }
 );
 guides = (
 {
 angle = 90;
-pos = (752,328);
+pos = (548,1202);
 }
 );
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
@@ -83,11 +83,11 @@ width = 1070;
 anchors = (
 {
 name = bottom;
-pos = (606,0);
+pos = (604,0);
 },
 {
 name = cedilla;
-pos = (614,0);
+pos = (608,0);
 },
 {
 name = rthook;
@@ -95,12 +95,13 @@ pos = (52,360);
 },
 {
 name = top;
-pos = (602,1304);
+pos = (604,1118);
 }
 );
 guides = (
 {
-pos = (-4,2280);
+angle = 90;
+pos = (604,1202);
 }
 );
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -157,11 +158,11 @@ width = 1204;
 anchors = (
 {
 name = bottom;
-pos = (514,0);
+pos = (518,0);
 },
 {
 name = cedilla;
-pos = (512,0);
+pos = (516,0);
 },
 {
 name = rthook;
@@ -169,13 +170,13 @@ pos = (136,256);
 },
 {
 name = top;
-pos = (518,1304);
+pos = (518,1118);
 }
 );
 guides = (
 {
 angle = 90;
-pos = (712,1620);
+pos = (518,1202);
 }
 );
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -279,11 +280,11 @@ width = 990;
 anchors = (
 {
 name = bottom;
-pos = (514,0);
+pos = (487,0);
 },
 {
 name = cedilla;
-pos = (512,0);
+pos = (494,0);
 },
 {
 name = rthook;
@@ -291,7 +292,13 @@ pos = (76,316);
 },
 {
 name = top;
-pos = (487,1262);
+pos = (487,1056);
+}
+);
+guides = (
+{
+angle = 90;
+pos = (487,1183);
 }
 );
 layerId = m007;
@@ -348,11 +355,11 @@ width = 972;
 anchors = (
 {
 name = bottom;
-pos = (590,0);
+pos = (576,0);
 },
 {
 name = cedilla;
-pos = (598,0);
+pos = (573,0);
 },
 {
 name = rthook;
@@ -360,12 +367,13 @@ pos = (36,345);
 },
 {
 name = top;
-pos = (572,1262);
+pos = (576,1056);
 }
 );
 guides = (
 {
-pos = (-100,2280);
+angle = 90;
+pos = (576,1202);
 }
 );
 layerId = m009;
@@ -617,11 +625,11 @@ width = 1160;
 anchors = (
 {
 name = bottom;
-pos = (460,0);
+pos = (461,0);
 },
 {
 name = cedilla;
-pos = (460,0);
+pos = (453,0);
 },
 {
 name = rthook;
@@ -629,7 +637,7 @@ pos = (80,316);
 },
 {
 name = top;
-pos = (461,1262);
+pos = (461,1056);
 }
 );
 background = {
@@ -681,6 +689,12 @@ nodes = (
 }
 );
 };
+guides = (
+{
+angle = 90;
+pos = (461,1183);
+}
+);
 layerId = m011;
 shapes = (
 {

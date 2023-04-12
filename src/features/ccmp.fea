@@ -2,9 +2,9 @@
   gravecomb acutecomb tildecomb brevetildecomb.cn brevehookcomb.cn
   breveacutecomb.cn circumflextildecomb.cn circumflexhookcomb.cn
   circumflexgravecomb.cn circumflexacutecomb.cn brevegravecomb.cn
-  macroncomb dieresismacroncomb.cn dieresisacutecomb.cn
-  dieresiscaroncomb.cn dieresisgravecomb.cn dotmacroncomb.cn
-  tildeacutecomb macrongravecomb.cn macronacutecomb.cn
+  macroncomb dieresismacroncomb.uc dieresisacutecomb.uc
+  dieresiscaroncomb.uc dieresisgravecomb.uc dotmacroncomb.uc
+  tildeacutecomb.uc macrongravecomb.cn macronacutecomb.cn
   macrondieresiscomb.cn acutedotcomb.cn carondotcomb.cn
   tildemacroncomb.cn tildedieresiscomb.cn circumflexnosp overscorenosp
   brevenosp dotnosp dieresisnosp hookabovecmb ringnosp acutedblnosp caroncmb
@@ -340,24 +340,24 @@ lookup ccmp03 {
   sub o caroncmb by ocaron;
   sub U caroncmb by Ucaron;
   sub u caroncmb by ucaron;
-  #sub U dieresismacroncomb.cn by uni01D5;
+  #sub U dieresismacroncomb.uc by uni01D5;
   sub U dieresisnosp macroncomb by Udieresismacron;
-  sub u dieresismacroncomb.cn by udieresismacron;
-  #sub U dieresisacutecomb.cn by uni01D7;
+  sub u dieresismacroncomb.uc by udieresismacron;
+  #sub U dieresisacutecomb.uc by uni01D7;
   sub U dieresisnosp acutecomb by Udieresisacute;
-  sub u dieresisacutecomb.cn by udieresisacute;
-  #sub U dieresiscaroncomb.cn by uni01D9;
+  sub u dieresisacutecomb.uc by udieresisacute;
+  #sub U dieresiscaroncomb.uc by uni01D9;
   sub U dieresisnosp caroncmb by Udieresiscaron;
-  sub u dieresiscaroncomb.cn by udieresiscaron;
-  #sub U dieresisgravecomb.cn by uni01DB;
+  sub u dieresiscaroncomb.uc by udieresiscaron;
+  #sub U dieresisgravecomb.uc by uni01DB;
   sub U dieresisnosp gravecomb by Udieresisgrave;
-  sub u dieresisgravecomb.cn by udieresisgrave;
-  #sub A dieresismacroncomb.cn by uni01DE;
+  sub u dieresisgravecomb.uc by udieresisgrave;
+  #sub A dieresismacroncomb.uc by uni01DE;
   sub A dieresisnosp macroncomb by Adieresismacron;
-  sub a dieresismacroncomb.cn by adieresismacron;
-  #sub A dotmacroncomb.cn by uni01E0;
+  sub a dieresismacroncomb.uc by adieresismacron;
+  #sub A dotmacroncomb.uc by uni01E0;
   sub A dotnosp macroncomb by Adotmacron;
-  sub a dotmacroncomb.cn by adotmacron;
+  sub a dotmacroncomb.uc by adotmacron;
   sub AE macroncomb by AEmacron;
   sub ae macroncomb by aemacron;
   sub G caroncmb by Gcaron;
@@ -400,17 +400,17 @@ lookup ccmp03 {
   sub a dotnosp by uni0227;
   sub E cedillanosp by uni0228;
   sub e cedillanosp by uni0229;
-  #sub O dieresismacroncomb.cn by uni022A;
+  #sub O dieresismacroncomb.uc by uni022A;
   sub O dieresisnosp macroncomb by uni022A;
-  sub o dieresismacroncomb.cn by uni022B;
+  sub o dieresismacroncomb.uc by uni022B;
   #sub O tildemacroncomb.cn by uni022C;
   sub O tildecomb macroncomb by uni022C;
   sub o tildemacroncomb.cn by uni022D;
   sub O dotnosp by uni022E;
   sub o dotnosp by uni022F;
-  #sub O dotmacroncomb.cn by uni0230;
+  #sub O dotmacroncomb.uc by uni0230;
   sub O dotnosp macroncomb by uni0230;
-  sub o dotmacroncomb.cn by uni0231;
+  sub o dotmacroncomb.uc by uni0231;
   sub Y macroncomb by uni0232;
   sub y macroncomb by uni0233;
   sub Upsilonhooksymbol acutecomb by Upsilonacutehooksymbolgreek;
@@ -455,9 +455,9 @@ lookup ccmp03 {
   sub h brevesubnosp by hbrevebelow;
   sub I tildesubnosp by Itildebelow;
   sub i tildesubnosp by itildebelow;
-  #sub I dieresisacutecomb.cn by Idieresisacute;
+  #sub I dieresisacutecomb.uc by Idieresisacute;
   sub I dieresisnosp acutecomb by Idieresisacute;
-  sub idotless dieresisacutecomb.cn by idieresisacute;
+  sub idotless dieresisacutecomb.uc by idieresisacute;
   sub K acutecomb by Kacute;
   sub k acutecomb by kacute;
   sub K dotbelow by Kdotbelow;
@@ -484,9 +484,9 @@ lookup ccmp03 {
   sub n macronsubnosp by nlinebelow;
   sub N circumflexsubnosp by Ncircumflexbelow;
   sub n circumflexsubnosp by ncircumflexbelow;
-  #sub O tildeacutecomb.cn by uni1E4C;
+  #sub O tildeacutecomb.uc by uni1E4C;
   sub O tildecomb acutecomb by Otildeacute;
-  sub o tildeacutecomb by otildeacute;
+  sub o tildeacutecomb.uc by otildeacute;
   #sub O tildedieresiscomb.cn by uni1E4E;
   sub O tildecomb dieresisnosp by Otildedieresis;
   sub o tildedieresiscomb.cn by otildedieresis;
@@ -530,9 +530,9 @@ lookup ccmp03 {
   sub u tildesubnosp by utildebelow;
   sub U circumflexsubnosp by Ucircumflexbelow;
   sub u circumflexsubnosp by ucircumflexbelow;
-  #sub U tildeacutecomb.cn by uni1E78;
+  #sub U tildeacutecomb.uc by uni1E78;
   sub U tildecomb acutecomb by Utildeacute;
-  sub u tildeacutecomb by utildeacute;
+  sub u tildeacutecomb.uc by utildeacute;
   #sub U macrondieresiscomb.cn by uni1E7A;
   sub U macroncomb dieresisnosp by Umacrondieresis;
   sub u macrondieresiscomb.cn by umacrondieresis;

@@ -7,10 +7,6 @@ anchors = (
 {
 name = cedilla;
 pos = (660,0);
-},
-{
-name = top;
-pos = (658,1676);
 }
 );
 guides = (
@@ -34,23 +30,11 @@ anchors = (
 {
 name = cedilla;
 pos = (696,0);
-},
-{
-name = top;
-pos = (692,1676);
 }
 );
 guides = (
 {
 pos = (-36,2280);
-},
-{
-pos = (-36,764);
-},
-{
-orientation = center;
-angle = 90;
-pos = (896,1076);
 }
 );
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -67,10 +51,6 @@ anchors = (
 {
 name = cedilla;
 pos = (640,0);
-},
-{
-name = top;
-pos = (634,1676);
 }
 );
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -86,11 +66,7 @@ width = 1256;
 anchors = (
 {
 name = cedilla;
-pos = (660,0);
-},
-{
-name = top;
-pos = (658,1676);
+pos = (616,0);
 }
 );
 guides = (
@@ -103,7 +79,6 @@ pos = (916,1044);
 layerId = m007;
 shapes = (
 {
-alignment = 1;
 ref = three;
 }
 );
@@ -114,10 +89,6 @@ anchors = (
 {
 name = cedilla;
 pos = (696,0);
-},
-{
-name = top;
-pos = (692,1676);
 }
 );
 guides = (
@@ -126,11 +97,6 @@ pos = (-36,2280);
 },
 {
 pos = (-36,764);
-},
-{
-orientation = center;
-angle = 90;
-pos = (896,1076);
 }
 );
 layerId = m009;
@@ -147,10 +113,6 @@ anchors = (
 {
 name = cedilla;
 pos = (640,0);
-},
-{
-name = top;
-pos = (634,1676);
 }
 );
 layerId = m011;

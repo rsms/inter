@@ -2,92 +2,97 @@
 glyphname = dieresismacroncomb.lc;
 layers = (
 {
-guides = (
-{
-pos = (354,1984);
-}
-);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
-alignment = -1;
-pos = (0,-354);
-ref = dieresismacroncomb.cn;
-}
-);
-width = 0;
+alignment = 1;
+ref = dieresis;
 },
 {
-guides = (
-{
-pos = (656,1948);
+alignment = -1;
+pos = (0,308);
+ref = macron;
 }
 );
+width = 1200;
+},
+{
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+alignment = 1;
+ref = dieresis;
+},
+{
 alignment = -1;
-pos = (0,-340);
-ref = dieresismacroncomb.cn;
+pos = (0,367);
+ref = macron;
 }
 );
-width = 0;
+width = 1330;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
-alignment = -1;
-pos = (-128,-326);
-ref = dieresismacroncomb.cn;
-}
-);
-width = 0;
+alignment = 1;
+ref = dieresis;
 },
 {
-guides = (
-{
-pos = (62,1984);
+alignment = -1;
+pos = (0,232);
+ref = macron;
 }
 );
+width = 1164;
+},
+{
 layerId = m007;
 shapes = (
 {
-alignment = -1;
-pos = (0,-354);
-ref = dieresismacroncomb.cn;
-}
-);
-width = 0;
+alignment = 1;
+ref = dieresis;
 },
 {
-guides = (
-{
-pos = (560,1948);
+alignment = -1;
+pos = (0,318);
+ref = macron;
 }
 );
+width = 1136;
+},
+{
 layerId = m009;
 shapes = (
 {
+alignment = 1;
+ref = dieresis;
+},
+{
 alignment = -1;
-pos = (0,-340);
-ref = dieresismacroncomb.cn;
+pos = (0,360);
+ref = macron;
 }
 );
-width = 0;
+width = 1298;
 },
 {
 layerId = m011;
 shapes = (
 {
+alignment = 1;
+ref = dieresis;
+},
+{
 alignment = -1;
-pos = (-128,-326);
-ref = dieresismacroncomb.cn;
+pos = (0,250);
+ref = macron;
 }
 );
-width = 0;
+width = 1068;
 }
 );
+metricWidth = dieresis;
 tags = (
 "TODO-opsz"
 );

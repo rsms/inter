@@ -5,18 +5,7 @@ layers = (
 anchors = (
 {
 name = _cross;
-pos = (487,721);
-}
-);
-guides = (
-{
-orientation = center;
-angle = 80.6;
-pos = (449,1168);
-},
-{
-orientation = center;
-pos = (117,992);
+pos = (491,745);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
@@ -25,10 +14,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(796,654,l),
-(818,788,l),
-(178,788,l),
-(156,654,l)
+(800,678,l),
+(822,812,l),
+(182,812,l),
+(160,678,l)
 );
 }
 );
@@ -38,7 +27,7 @@ width = 920;
 anchors = (
 {
 name = _cross;
-pos = (547,721);
+pos = (551,745);
 }
 );
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
@@ -47,10 +36,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(919,613,l),
-(955,829,l),
-(173,829,l),
-(137,613,l)
+(923,637,l),
+(959,853,l),
+(177,853,l),
+(141,637,l)
 );
 }
 );
@@ -60,7 +49,7 @@ width = 1038;
 anchors = (
 {
 name = _cross;
-pos = (451,722);
+pos = (455,745);
 }
 );
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
@@ -69,10 +58,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(726,698,l),
-(733,744,l),
-(179,744,l),
-(172,698,l)
+(730,722,l),
+(737,768,l),
+(183,768,l),
+(176,722,l)
 );
 }
 );
@@ -82,18 +71,7 @@ width = 851;
 anchors = (
 {
 name = _cross;
-pos = (480,720);
-}
-);
-guides = (
-{
-orientation = center;
-angle = 80.6;
-pos = (-4233,1168);
-},
-{
-orientation = center;
-pos = (-4565,992);
+pos = (484,745);
 }
 );
 layerId = m008;
@@ -102,10 +80,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(788,647,l),
-(812,793,l),
-(172,793,l),
-(148,647,l)
+(792,672,l),
+(816,818,l),
+(176,818,l),
+(152,672,l)
 );
 }
 );
@@ -115,7 +93,7 @@ width = 896;
 anchors = (
 {
 name = _cross;
-pos = (552,721);
+pos = (532,745);
 }
 );
 layerId = m010;
@@ -124,20 +102,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(924,613,l),
-(960,829,l),
-(178,829,l),
-(142,613,l)
+(944,637,l),
+(980,853,l),
+(118,853,l),
+(82,637,l)
 );
 }
 );
-width = 1006;
+width = 990;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (387,722);
+pos = (396,745);
 }
 );
 layerId = m012;
@@ -146,17 +124,16 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(662,698,l),
-(669,744,l),
-(115,744,l),
-(108,698,l)
+(671,722,l),
+(678,768,l),
+(124,768,l),
+(117,722,l)
 );
 }
 );
 width = 723;
 }
 );
-unicode = 57603;
 userData = {
 "interface.width-adjustments" = (
 -16
