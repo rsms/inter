@@ -140,19 +140,23 @@ pos = (384,1056);
 guides = (
 {
 pos = (0,1696);
+},
+{
+pos = (0,1318);
 }
 );
 layerId = m009;
 shapes = (
 {
 alignment = -1;
-pos = (0,8);
+pos = (0,-2);
 ref = macron;
 },
 {
 alignment = -1;
-pos = (-265,352);
+pos = (-200,486);
 ref = dieresis;
+scale = (0.9,0.9);
 }
 );
 width = 768;
