@@ -33,7 +33,7 @@ ref = dieresis;
 {
 alignment = -1;
 pos = (367,333);
-ref = acute;
+ref = acute_compact;
 }
 );
 width = 1200;
@@ -60,7 +60,7 @@ ref = dieresis;
 {
 alignment = -1;
 pos = (416,627);
-ref = acute;
+ref = acute_compact;
 scale = (0.8,0.8);
 }
 );
@@ -94,7 +94,7 @@ ref = dieresis;
 {
 alignment = -1;
 pos = (378,333);
-ref = acute;
+ref = acute_compact;
 }
 );
 width = 1164;
@@ -108,10 +108,10 @@ pos = (568,1056);
 );
 guides = (
 {
-pos = (0,1552);
+pos = (0,1328);
 },
 {
-pos = (0,1328);
+pos = (0,1520);
 }
 );
 layerId = m007;
@@ -123,8 +123,8 @@ ref = dieresis;
 },
 {
 alignment = -1;
-pos = (413,311);
-ref = acute;
+pos = (413,279);
+ref = acute_compact;
 }
 );
 width = 1136;
@@ -138,7 +138,7 @@ pos = (649,1056);
 );
 guides = (
 {
-pos = (0,1584);
+pos = (0,1552);
 }
 );
 layerId = m009;
@@ -149,8 +149,8 @@ ref = dieresis;
 },
 {
 alignment = -1;
-pos = (468,521);
-ref = acute;
+pos = (467,489);
+ref = acute_compact;
 scale = (0.9,0.9);
 }
 );
@@ -165,13 +165,10 @@ pos = (534,1056);
 );
 guides = (
 {
-pos = (0,1552);
-},
-{
 pos = (0,1328);
 },
 {
-pos = (0,1625);
+pos = (0,1520);
 }
 );
 layerId = m011;
@@ -183,8 +180,8 @@ ref = dieresis;
 },
 {
 alignment = -1;
-pos = (406,311);
-ref = acute;
+pos = (406,279);
+ref = acute_compact;
 }
 );
 width = 1068;

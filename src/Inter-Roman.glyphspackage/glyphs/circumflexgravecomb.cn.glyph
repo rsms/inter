@@ -33,7 +33,7 @@ ref = circumflex;
 {
 alignment = -1;
 pos = (254,333);
-ref = grave;
+ref = grave_compact;
 }
 );
 width = 832;
@@ -70,7 +70,7 @@ ref = circumflex;
 {
 alignment = -1;
 pos = (489,627);
-ref = grave;
+ref = grave_compact;
 scale = (0.8,0.8);
 }
 );
@@ -108,7 +108,7 @@ ref = circumflex;
 {
 alignment = -1;
 pos = (312,333);
-ref = grave;
+ref = grave_compact;
 }
 );
 width = 864;
@@ -121,34 +121,28 @@ pos = (400,1056);
 },
 {
 name = top;
-pos = (400,1826);
+pos = (400,1764);
 }
 );
 guides = (
 {
-pos = (0,1552);
-},
-{
-pos = (0,1552);
-},
-{
 pos = (0,1328);
 },
 {
-pos = (0,1676);
+pos = (0,1490);
 }
 );
 layerId = m007;
 shapes = (
 {
 alignment = -1;
-pos = (0,-50);
+pos = (0,-26);
 ref = circumflex;
 },
 {
 alignment = -1;
-pos = (317,311);
-ref = grave;
+pos = (317,249);
+ref = grave_compact;
 }
 );
 width = 866;
@@ -161,12 +155,12 @@ pos = (432,1056);
 },
 {
 name = top;
-pos = (432,1877);
+pos = (432,1829);
 }
 );
 guides = (
 {
-pos = (0,1584);
+pos = (0,1536);
 }
 );
 layerId = m009;
@@ -177,9 +171,9 @@ ref = circumflex;
 },
 {
 alignment = -1;
-pos = (289,521);
-ref = grave;
-scale = (0.9,0.9);
+pos = (355,473);
+ref = grave_compact;
+scale = (0.8,0.9);
 }
 );
 width = 890;
@@ -192,18 +186,12 @@ pos = (352,1056);
 },
 {
 name = top;
-pos = (352,1826);
+pos = (352,1764);
 }
 );
 guides = (
 {
-pos = (0,1552);
-},
-{
 pos = (0,1328);
-},
-{
-pos = (0,1625);
 }
 );
 layerId = m011;
@@ -215,8 +203,8 @@ ref = circumflex;
 },
 {
 alignment = -1;
-pos = (275,311);
-ref = grave;
+pos = (275,249);
+ref = grave_compact;
 }
 );
 width = 704;

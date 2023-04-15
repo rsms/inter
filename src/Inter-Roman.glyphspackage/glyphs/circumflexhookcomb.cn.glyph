@@ -29,7 +29,7 @@ ref = circumflex;
 {
 alignment = -1;
 pos = (355,333);
-ref = hookabove;
+ref = hookabove_compact;
 }
 );
 width = 832;
@@ -62,7 +62,7 @@ ref = circumflex;
 {
 alignment = -1;
 pos = (521,627);
-ref = hookabove;
+ref = hookabove_compact;
 scale = (0.8,0.8);
 }
 );
@@ -96,7 +96,7 @@ ref = circumflex;
 {
 alignment = -1;
 pos = (378,333);
-ref = hookabove;
+ref = hookabove_compact;
 }
 );
 width = 864;
@@ -110,7 +110,7 @@ pos = (400,1056);
 );
 guides = (
 {
-pos = (0,1552);
+pos = (0,1490);
 },
 {
 pos = (0,1328);
@@ -120,13 +120,13 @@ layerId = m007;
 shapes = (
 {
 alignment = -1;
-pos = (0,-50);
+pos = (0,-26);
 ref = circumflex;
 },
 {
 alignment = -1;
-pos = (325,311);
-ref = hookabove;
+pos = (331,249);
+ref = hookabove_compact;
 }
 );
 width = 800;
@@ -138,9 +138,19 @@ name = _top;
 pos = (432,1056);
 }
 );
+background = {
+shapes = (
+{
+alignment = -1;
+pos = (507,473);
+ref = acute;
+scale = (0.8,0.9);
+}
+);
+};
 guides = (
 {
-pos = (0,1587);
+pos = (0,1536);
 }
 );
 layerId = m009;
@@ -151,9 +161,9 @@ ref = circumflex;
 },
 {
 alignment = -1;
-pos = (392,524);
-ref = hookabove;
-scale = (0.9,0.9);
+pos = (406,473);
+ref = hookabove_compact;
+scale = (0.8,0.9);
 }
 );
 width = 864;
@@ -167,13 +177,7 @@ pos = (352,1056);
 );
 guides = (
 {
-pos = (0,1552);
-},
-{
 pos = (0,1328);
-},
-{
-pos = (0,1625);
 }
 );
 layerId = m011;
@@ -185,8 +189,8 @@ ref = circumflex;
 },
 {
 alignment = -1;
-pos = (296,311);
-ref = hookabove;
+pos = (296,249);
+ref = hookabove_compact;
 }
 );
 width = 704;

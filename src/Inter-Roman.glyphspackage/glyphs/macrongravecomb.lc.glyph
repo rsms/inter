@@ -29,7 +29,7 @@ ref = macron;
 {
 alignment = -1;
 pos = (70,333);
-ref = grave;
+ref = grave_compact;
 }
 );
 width = 976;
@@ -62,7 +62,7 @@ ref = macron;
 {
 alignment = -1;
 pos = (17,627);
-ref = grave;
+ref = grave_compact;
 scale = (0.8,0.8);
 }
 );
@@ -96,7 +96,7 @@ ref = macron;
 {
 alignment = -1;
 pos = (36,333);
-ref = grave;
+ref = grave_compact;
 }
 );
 width = 800;
@@ -110,10 +110,10 @@ pos = (416,1056);
 );
 guides = (
 {
-pos = (0,1552);
+pos = (0,1328);
 },
 {
-pos = (0,1328);
+pos = (0,1520);
 }
 );
 layerId = m007;
@@ -125,8 +125,8 @@ ref = macron;
 },
 {
 alignment = -1;
-pos = (76,311);
-ref = grave;
+pos = (76,279);
+ref = grave_compact;
 }
 );
 width = 832;
@@ -140,7 +140,7 @@ pos = (384,1056);
 );
 guides = (
 {
-pos = (0,1584);
+pos = (0,1552);
 }
 );
 layerId = m009;
@@ -152,8 +152,8 @@ ref = macron;
 },
 {
 alignment = -1;
-pos = (-68,521);
-ref = grave;
+pos = (-68,489);
+ref = grave_compact;
 scale = (0.9,0.9);
 }
 );
@@ -168,13 +168,10 @@ pos = (384,1056);
 );
 guides = (
 {
-pos = (0,1552);
-},
-{
 pos = (0,1328);
 },
 {
-pos = (0,1625);
+pos = (0,1520);
 }
 );
 layerId = m011;
@@ -186,8 +183,8 @@ ref = macron;
 },
 {
 alignment = -1;
-pos = (63,311);
-ref = grave;
+pos = (63,279);
+ref = grave_compact;
 }
 );
 width = 768;

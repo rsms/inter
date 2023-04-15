@@ -30,7 +30,7 @@ ref = breve;
 {
 alignment = -1;
 pos = (154,333);
-ref = acute;
+ref = acute_compact;
 }
 );
 width = 768;
@@ -64,7 +64,7 @@ ref = breve;
 {
 alignment = -1;
 pos = (237,627);
-ref = acute;
+ref = acute_compact;
 scale = (0.8,0.8);
 }
 );
@@ -102,7 +102,7 @@ ref = breve;
 {
 alignment = -1;
 pos = (149,333);
-ref = acute;
+ref = acute_compact;
 }
 );
 width = 704;
@@ -120,7 +120,7 @@ pos = (400,1826);
 );
 guides = (
 {
-pos = (0,1552);
+pos = (0,1490);
 },
 {
 pos = (0,1328);
@@ -133,13 +133,13 @@ layerId = m007;
 shapes = (
 {
 alignment = -1;
-pos = (0,-50);
+pos = (0,-26);
 ref = breve;
 },
 {
 alignment = -1;
-pos = (250,311);
-ref = acute;
+pos = (242,248);
+ref = acute_compact;
 }
 );
 width = 800;
@@ -152,18 +152,15 @@ pos = (480,1056);
 },
 {
 name = top;
-pos = (480,1878);
+pos = (480,1830);
 }
 );
 guides = (
 {
-pos = (0,1584);
-},
-{
 pos = (0,1507);
 },
 {
-pos = (0,1728);
+pos = (0,1536);
 }
 );
 layerId = m009;
@@ -174,9 +171,9 @@ ref = breve;
 },
 {
 alignment = -1;
-pos = (305,521);
-ref = acute;
-scale = (0.9,0.9);
+pos = (321,473);
+ref = acute_compact;
+scale = (0.8,0.9);
 }
 );
 width = 960;
@@ -189,7 +186,7 @@ pos = (352,1056);
 },
 {
 name = top;
-pos = (352,1826);
+pos = (352,1764);
 }
 );
 background = {
@@ -207,26 +204,20 @@ nodes = (
 };
 guides = (
 {
-pos = (0,1625);
-},
-{
 pos = (0,1465);
-},
-{
-pos = (0,1552);
 }
 );
 layerId = m011;
 shapes = (
 {
 alignment = -1;
-pos = (0,-50);
+pos = (0,-42);
 ref = breve;
 },
 {
 alignment = -1;
-pos = (219,311);
-ref = acute;
+pos = (219,249);
+ref = acute_compact;
 }
 );
 width = 704;

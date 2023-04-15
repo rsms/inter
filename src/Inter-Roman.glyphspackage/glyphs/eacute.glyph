@@ -43,19 +43,6 @@ ref = acute;
 width = 1172;
 },
 {
-layerId = m007;
-shapes = (
-{
-ref = e;
-},
-{
-pos = (386,0);
-ref = acute;
-}
-);
-width = 1098;
-},
-{
 layerId = m009;
 shapes = (
 {
@@ -80,6 +67,54 @@ ref = acute;
 }
 );
 width = 1048;
+},
+{
+anchors = (
+{
+name = top;
+pos = (550,1490);
+}
+);
+associatedMasterId = m007;
+background = {
+shapes = (
+{
+pos = (386,0);
+ref = acute;
+}
+);
+};
+layerId = "11FC975D-4ED9-4702-B946-60B0F0408EE0";
+name = "Apr 15, 23, 11:58";
+shapes = (
+{
+ref = e;
+},
+{
+closed = 1;
+nodes = (
+(620,1193,l),
+(812,1490,l),
+(622,1490,l),
+(482,1193,l)
+);
+}
+);
+width = 1098;
+},
+{
+layerId = m007;
+name = Display;
+shapes = (
+{
+ref = e;
+},
+{
+pos = (386,0);
+ref = acute;
+}
+);
+width = 1098;
 }
 );
 unicode = 233;
