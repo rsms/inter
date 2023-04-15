@@ -47,28 +47,35 @@ def fix_wght_range(designspace):
 
 
 def should_decompose_glyph(g):
-  # A trivial glyph is one that does not use components or where component transformation
-  # does not include mirroring (i.e. "flipped").
   if g.components and len(g.components) > 0:
     for c in g.components:
-      # has non-trivial transformation? (i.e. scaled)
-      # Example of optimally trivial transformation:
-      #   (1, 0, 0, 1, 0, 0)  no scale or offset
+      # Does the component have non-trivial transformation? (i.e. scaled or skewed)
+      # Example of no transformation: (identity matrix)
+      #   (1, 0, 0, 1, 0, 0)    no scale or offset
+      # Example of simple offset transformation matrix:
+      #   (1, 0, 0, 1, 20, 30)  20 x offset, 30 y offset
       # Example of scaled transformation matrix:
       #   (-1.0, 0, 0.3311, 1, 1464.0, 0)  flipped x axis, sheered and offset
-      xScale = c.transformation[0]
-      yScale = c.transformation[3]
-      # If glyph is reflected along x or y axes, it won't slant well.
-      if xScale < 0 or yScale < 0:
+      # Matrix order:
+      #   (x_scale, x_skew, y_skew, y_scale, x_pos, y_pos)
+
+      # if g.name == 'dotmacron.lc':
+      #   print(f"{g.name} cn {c.baseGlyph}", c.transformation)
+      # Check if transformation is not identity (ignoring x & y offset)
+      m = c.transformation
+      if m[0] + m[1] + m[2] + m[3] != 2.0:
         return True
   return False
 
 
-def find_glyphs_to_decompose(designspace):
-  source = designspace.sources[int(len(designspace.sources)/2)]
-  print("find_glyphs_to_decompose sourcing from %r" % source.name)
-  ufo = defcon.Font(source.path)
-  return sorted([g.name for g in ufo if should_decompose_glyph(g)])
+def find_glyphs_to_decompose(designspace_source):
+  glyph_names = set()
+  # print("find_glyphs_to_decompose inspecting %r" % designspace_source.name)
+  ufo = defcon.Font(designspace_source.path)
+  for g in ufo:
+    if should_decompose_glyph(g):
+      glyph_names.add(g.name)
+  return list(glyph_names)
 
 
 def set_ufo_filter(ufo, **filter_dict):
@@ -90,12 +97,15 @@ def update_source_ufo(ufo_file, glyphs_to_decompose):
 
 
 def update_sources(designspace):
-  glyphs_to_decompose = find_glyphs_to_decompose(designspace)
-  #print("glyphs marked to be decomposed: %s" % ', '.join(glyphs_to_decompose))
-  sources = [source for source in designspace.sources]
-  # sources = [s for s in sources if s.name == "Inter Thin"] # DEBUG
-  source_files = list(set([s.path for s in sources]))
-  with Pool(len(source_files)) as p:
+  with Pool() as p:
+    sources = [source for source in designspace.sources]
+    # sources = [s for s in sources if s.name == "Inter Thin"] # DEBUG
+    glyphs_to_decompose = set()
+    for glyph_names in p.map(find_glyphs_to_decompose, sources):
+      glyphs_to_decompose.update(glyph_names)
+    glyphs_to_decompose = list(glyphs_to_decompose)
+    # print("glyphs marked to be decomposed: %s" % ', '.join(glyphs_to_decompose))
+    source_files = list(set([s.path for s in sources]))
     p.starmap(update_source_ufo, [(path, glyphs_to_decompose) for path in source_files])
   return designspace
 
