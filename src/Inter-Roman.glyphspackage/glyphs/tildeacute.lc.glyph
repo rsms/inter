@@ -2,84 +2,190 @@
 glyphname = tildeacute.lc;
 layers = (
 {
+anchors = (
+{
+name = _top;
+pos = (512,1118);
+}
+);
+guides = (
+{
+pos = (0,1616);
+},
+{
+pos = (0,1392);
+},
+{
+pos = (0,1717);
+}
+);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
+alignment = -1;
+pos = (0,-27);
 ref = tilde;
 },
 {
 alignment = -1;
-pos = (169,333);
+pos = (271,333);
 ref = acute;
 }
 );
 width = 1024;
 },
 {
+anchors = (
+{
+name = _top;
+pos = (512,1118);
+}
+);
+guides = (
+{
+pos = (0,1632);
+},
+{
+pos = (0,1392);
+},
+{
+pos = (0,1765);
+}
+);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+alignment = -1;
+pos = (0,-24);
 ref = tilde;
 },
 {
 alignment = -1;
-pos = (130,365);
+pos = (260,627);
 ref = acute;
+scale = (0.8,0.8);
 }
 );
 width = 1024;
 },
 {
+anchors = (
+{
+name = _top;
+pos = (504,1118);
+}
+);
+guides = (
+{
+pos = (0,1616);
+},
+{
+pos = (0,1392);
+},
+{
+pos = (0,1681);
+}
+);
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
+alignment = -1;
+pos = (0,-28);
 ref = tilde;
 },
 {
 alignment = -1;
-pos = (209,239);
+pos = (296,333);
 ref = acute;
 }
 );
 width = 1018;
 },
 {
+anchors = (
+{
+name = _top;
+pos = (481,1056);
+}
+);
+guides = (
+{
+pos = (0,1552);
+},
+{
+pos = (0,1328);
+}
+);
 layerId = m007;
 shapes = (
 {
+alignment = -1;
+pos = (0,-49);
 ref = tilde;
 },
 {
 alignment = -1;
-pos = (147,343);
+pos = (319,311);
 ref = acute;
 }
 );
 width = 960;
 },
 {
+anchors = (
+{
+name = _top;
+pos = (512,1056);
+}
+);
+guides = (
+{
+pos = (0,1584);
+}
+);
 layerId = m009;
 shapes = (
 {
+alignment = -1;
 ref = tilde;
 },
 {
 alignment = -1;
-pos = (124,369);
+pos = (315,521);
 ref = acute;
+scale = (0.9,0.9);
 }
 );
 width = 992;
 },
 {
+anchors = (
+{
+name = _top;
+pos = (448,1056);
+}
+);
+guides = (
+{
+pos = (0,1552);
+},
+{
+pos = (0,1328);
+},
+{
+pos = (0,1625);
+}
+);
 layerId = m011;
 shapes = (
 {
+alignment = -1;
+pos = (0,-50);
 ref = tilde;
 },
 {
 alignment = -1;
-pos = (161,323);
+pos = (316,311);
 ref = acute;
 }
 );

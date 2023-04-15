@@ -2,130 +2,193 @@
 glyphname = macrondieresiscomb.lc;
 layers = (
 {
-background = {
-shapes = (
+anchors = (
 {
-ref = dieresismacroncomb.lc;
+name = _top;
+pos = (488,1118);
 }
 );
-};
+guides = (
+{
+pos = (0,1717);
+},
+{
+pos = (0,1392);
+},
+{
+pos = (0,1717);
+}
+);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
+alignment = -1;
+pos = (0,-28);
 ref = macron;
 },
 {
 alignment = -1;
-pos = (-1,308);
+pos = (-112,297);
 ref = dieresis;
 }
 );
-width = 1200;
+width = 976;
 },
 {
-background = {
-shapes = (
+anchors = (
 {
-ref = dieresismacroncomb.lc;
+name = _top;
+pos = (416,1118);
 }
 );
-};
+guides = (
+{
+pos = (0,1765);
+},
+{
+pos = (0,1392);
+},
+{
+pos = (0,1765);
+}
+);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+alignment = -1;
+pos = (0,-24);
 ref = macron;
 },
 {
 alignment = -1;
-pos = (0,372);
+pos = (-249,349);
 ref = dieresis;
 }
 );
-width = 1330;
+width = 832;
 },
 {
-background = {
-shapes = (
+anchors = (
 {
-ref = dieresismacroncomb.lc;
+name = _top;
+pos = (400,1118);
 }
 );
-};
+guides = (
+{
+pos = (0,1681);
+},
+{
+pos = (0,1392);
+},
+{
+pos = (0,1681);
+}
+);
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
+alignment = -1;
+pos = (0,-28);
 ref = macron;
 },
 {
 alignment = -1;
-pos = (1,232);
+pos = (-182,261);
 ref = dieresis;
 }
 );
-width = 1164;
+width = 800;
 },
 {
-background = {
-shapes = (
+anchors = (
 {
-ref = dieresismacroncomb.lc;
+name = _top;
+pos = (416,1056);
 }
 );
-};
+guides = (
+{
+pos = (0,1676);
+},
+{
+pos = (0,1328);
+}
+);
 layerId = m007;
 shapes = (
 {
+alignment = -1;
+pos = (0,-18);
 ref = macron;
 },
 {
 alignment = -1;
-pos = (-1,318);
+pos = (-152,298);
 ref = dieresis;
 }
 );
-width = 1136;
+width = 832;
 },
 {
-background = {
-shapes = (
+anchors = (
 {
-ref = dieresismacroncomb.lc;
+name = _top;
+pos = (384,1056);
 }
 );
-};
+guides = (
+{
+pos = (0,1728);
+}
+);
 layerId = m009;
 shapes = (
 {
+alignment = -1;
+pos = (0,8);
 ref = macron;
 },
 {
 alignment = -1;
-pos = (0,360);
+pos = (-265,384);
 ref = dieresis;
 }
 );
-width = 1298;
+width = 768;
 },
 {
-background = {
-shapes = (
+anchors = (
 {
-ref = dieresismacroncomb.lc;
+name = _top;
+pos = (384,1056);
 }
 );
-};
+guides = (
+{
+pos = (0,1625);
+},
+{
+pos = (0,1328);
+},
+{
+pos = (0,1625);
+}
+);
 layerId = m011;
 shapes = (
 {
+alignment = -1;
+pos = (0,-50);
 ref = macron;
 },
 {
 alignment = -1;
-pos = (1,250);
+pos = (-150,247);
 ref = dieresis;
 }
 );
-width = 1068;
+width = 768;
 },
 {
 anchors = (

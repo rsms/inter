@@ -2,93 +2,216 @@
 glyphname = brevehookcomb.cn;
 layers = (
 {
+anchors = (
+{
+name = _top;
+pos = (384,1118);
+}
+);
+guides = (
+{
+pos = (0,1616);
+},
+{
+pos = (0,1529);
+}
+);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
+alignment = -1;
+pos = (0,-28);
 ref = breve;
 },
 {
 alignment = -1;
-pos = (971,346);
-ref = hookabovecmb;
+pos = (124,333);
+ref = hookabove;
 }
 );
 width = 768;
 },
 {
+anchors = (
+{
+name = _top;
+pos = (480,1118);
+}
+);
+guides = (
+{
+pos = (0,1632);
+},
+{
+pos = (0,1555);
+}
+);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+alignment = -1;
+pos = (0,-27);
 ref = breve;
 },
 {
 alignment = -1;
-pos = (1144,362);
-ref = hookabovecmb;
+pos = (233,627);
+ref = hookabove;
+scale = (0.8,0.8);
 }
 );
 width = 960;
 },
 {
+anchors = (
+{
+name = _top;
+pos = (352,1118);
+}
+);
+guides = (
+{
+pos = (0,1616);
+},
+{
+pos = (0,1529);
+},
+{
+pos = (0,1681);
+}
+);
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
+alignment = -1;
+pos = (0,-28);
 ref = breve;
 },
 {
 alignment = -1;
-pos = (874,306);
-ref = hookabovecmb;
+pos = (134,333);
+ref = hookabove;
 }
 );
 width = 704;
 },
 {
+anchors = (
+{
+name = _top;
+pos = (400,1056);
+}
+);
 guides = (
 {
-pos = (559,1839);
+pos = (0,1552);
+},
+{
+pos = (0,1328);
+},
+{
+pos = (0,1465);
 }
 );
 layerId = m007;
 shapes = (
 {
+alignment = -1;
+pos = (0,-50);
 ref = breve;
 },
 {
 alignment = -1;
-pos = (953,306);
-ref = hookabovecmb;
+pos = (137,311);
+ref = hookabove;
 }
 );
 width = 800;
 },
 {
+anchors = (
+{
+name = _top;
+pos = (480,1056);
+}
+);
+guides = (
+{
+pos = (0,1584);
+},
+{
+pos = (0,1507);
+}
+);
 layerId = m009;
 shapes = (
 {
+alignment = -1;
 ref = breve;
 },
 {
 alignment = -1;
-pos = (1134,370);
-ref = hookabovecmb;
+pos = (192,521);
+ref = hookabove;
+scale = (0.9,0.9);
 }
 );
 width = 960;
 },
 {
+anchors = (
+{
+name = _top;
+pos = (352,1056);
+}
+);
+guides = (
+{
+pos = (0,1552);
+},
+{
+pos = (0,1625);
+},
+{
+pos = (0,1465);
+}
+);
 layerId = m011;
+shapes = (
+{
+alignment = -1;
+pos = (0,-50);
+ref = breve;
+},
+{
+alignment = -1;
+pos = (128,311);
+ref = hookabove;
+}
+);
+width = 704;
+},
+{
+associatedMasterId = m009;
+guides = (
+{
+pos = (0,1587);
+}
+);
+layerId = "F0B23CB4-1F9E-4F92-BD34-4A491A3DBC73";
+name = "Apr 13, 23, 08:46";
 shapes = (
 {
 ref = breve;
 },
 {
 alignment = -1;
-pos = (856,306);
-ref = hookabovecmb;
+pos = (1066,614);
+ref = hookabove;
+scale = (0.9,0.8);
 }
 );
-width = 704;
+width = 960;
 }
 );
 tags = (
