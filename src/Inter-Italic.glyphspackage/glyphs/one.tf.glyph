@@ -4,10 +4,20 @@ glyphname = one.tf;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
+closed = 1;
+nodes = (
+(1070,0,l),
+(1096,160,l),
+(175,160,l),
+(149,0,l)
+);
+},
+{
 alignment = -1;
-pos = (186,0);
+pos = (175,0);
 ref = one;
 }
 );
@@ -15,10 +25,20 @@ width = 1326;
 },
 {
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
+closed = 1;
+nodes = (
+(1208,0,l),
+(1261,322,l),
+(182,322,l),
+(129,0,l)
+);
+},
+{
 alignment = -1;
-pos = (230,0);
+pos = (174,0);
 ref = one;
 }
 );
@@ -26,10 +46,20 @@ width = 1442;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
+closed = 1;
+nodes = (
+(957,0,l),
+(965,46,l),
+(148,46,l),
+(140,0,l)
+);
+},
+{
 alignment = -1;
-pos = (174,0);
+pos = (166,0);
 ref = one;
 }
 );
@@ -37,7 +67,17 @@ width = 1210;
 },
 {
 layerId = m008;
+name = ital_gen;
 shapes = (
+{
+closed = 1;
+nodes = (
+(1050,0,l),
+(1076,160,l),
+(155,160,l),
+(129,0,l)
+);
+},
 {
 alignment = -1;
 pos = (186,0);
@@ -48,10 +88,20 @@ width = 1262;
 },
 {
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
+closed = 1;
+nodes = (
+(1167,0,l),
+(1220,322,l),
+(189,322,l),
+(136,0,l)
+);
+},
+{
 alignment = -1;
-pos = (230,0);
+pos = (206,0);
 ref = one;
 }
 );
@@ -59,10 +109,20 @@ width = 1410;
 },
 {
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
+closed = 1;
+nodes = (
+(915,0,l),
+(923,46,l),
+(106,46,l),
+(98,0,l)
+);
+},
+{
 alignment = -1;
-pos = (174,0);
+pos = (175,0);
 ref = one;
 }
 );
