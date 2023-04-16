@@ -329,7 +329,7 @@ sub @CASE_L' @CASE_L @CASE_L @CASE_L @CASE_L @Whitespace @Whitespace [ @CASE_R @
 # X(_)
 sub @CASE_DELIM_R @Punctuation @CASE_DELIM_L' by @CASE_DELIM_R;
 
-# in between number position adjustment, e.g. 3x4 -> 3×4
+# in between number position adjustment, e.g. 3 /multiply 4 -> 3 multiply.case 4
 @between_num_L = [
   multiply
   asterisk

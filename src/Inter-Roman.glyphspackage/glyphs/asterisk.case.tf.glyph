@@ -1,0 +1,158 @@
+{
+case = minor;
+color = 8;
+glyphname = asterisk.case.tf;
+kernLeft = bullet;
+kernRight = bullet;
+layers = (
+{
+background = {
+shapes = (
+{
+pos = (-208,0);
+ref = N;
+}
+);
+};
+guides = (
+{
+pos = (864,1024);
+},
+{
+pos = (924,1448);
+},
+{
+pos = (924,460);
+},
+{
+pos = (732,352);
+},
+{
+angle = 90;
+pos = (560,1708);
+}
+);
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+shapes = (
+{
+alignment = 1;
+pos = (0,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+},
+{
+guides = (
+{
+angle = 90;
+pos = (758,636);
+},
+{
+pos = (1506,1024);
+}
+);
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+shapes = (
+{
+alignment = 1;
+pos = (0,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+},
+{
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+shapes = (
+{
+alignment = 1;
+pos = (0,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+},
+{
+background = {
+shapes = (
+{
+pos = (-240,0);
+ref = N;
+}
+);
+};
+guides = (
+{
+pos = (540,1024);
+},
+{
+pos = (600,1448);
+},
+{
+pos = (600,460);
+},
+{
+pos = (408,352);
+},
+{
+angle = 90;
+pos = (236,1708);
+}
+);
+layerId = m007;
+shapes = (
+{
+alignment = 1;
+pos = (0,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+},
+{
+guides = (
+{
+angle = 90;
+pos = (646,636);
+},
+{
+pos = (1394,1024);
+}
+);
+layerId = m009;
+shapes = (
+{
+alignment = 1;
+pos = (0,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+},
+{
+layerId = m011;
+shapes = (
+{
+alignment = 1;
+pos = (0,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+}
+);
+metricLeft = asterisk;
+metricWidth = asterisk;
+note = "\012Recipe:\0121. make horizontal rect\0122. copy rect and paste\0123. rotate by 60 deg\0124. enter transform mode and center it\0125. copy the rotated piece and paste\0126. flip on vertical axis\0127. enter transform mode and center it\012";
+tags = (
+"TODO-opsz"
+);
+userData = {
+com.typemytype.robofont.guideline.magnetic.8kyvXg1lkX = 5;
+com.typemytype.robofont.guideline.magnetic.G9ZB6lXRAP = 5;
+com.typemytype.robofont.guideline.magnetic.NTqmofmBPi = 5;
+com.typemytype.robofont.guideline.magnetic.WeNGZHYYeV = 5;
+com.typemytype.robofont.guideline.magnetic.lFKw8dAZO7 = 5;
+};
+}

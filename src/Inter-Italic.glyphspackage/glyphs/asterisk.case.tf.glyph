@@ -1,0 +1,161 @@
+{
+case = minor;
+color = 8;
+glyphname = asterisk.case.tf;
+kernLeft = bullet;
+kernRight = bullet;
+layers = (
+{
+background = {
+shapes = (
+{
+pos = (93,0);
+ref = N;
+}
+);
+};
+guides = (
+{
+pos = (1165,1024);
+},
+{
+pos = (1225,1448);
+},
+{
+pos = (1225,460);
+},
+{
+pos = (1033,352);
+},
+{
+angle = 80.6;
+pos = (861,1708);
+}
+);
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-54,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+},
+{
+guides = (
+{
+angle = 80.6;
+pos = (799,636);
+},
+{
+pos = (1547,1024);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-54,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-54,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+},
+{
+background = {
+shapes = (
+{
+pos = (120,0);
+ref = N;
+}
+);
+};
+guides = (
+{
+pos = (900,1024);
+},
+{
+pos = (960,1448);
+},
+{
+pos = (960,460);
+},
+{
+pos = (768,352);
+},
+{
+angle = 80.6;
+pos = (596,1708);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-54,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+},
+{
+guides = (
+{
+angle = 80.6;
+pos = (752,636);
+},
+{
+pos = (1500,1024);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-54,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+},
+{
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-54,-326);
+ref = asterisk.tf;
+}
+);
+width = 1320;
+}
+);
+metricLeft = asterisk;
+metricWidth = asterisk;
+note = "\012Recipe:\0121. make horizontal rect\0122. copy rect and paste\0123. rotate by 60 deg\0124. enter transform mode and center it\0125. copy the rotated piece and paste\0126. flip on vertical axis\0127. enter transform mode and center it\012";
+userData = {
+com.typemytype.robofont.guideline.magnetic.8kyvXg1lkX = 5;
+com.typemytype.robofont.guideline.magnetic.G9ZB6lXRAP = 5;
+com.typemytype.robofont.guideline.magnetic.NTqmofmBPi = 5;
+com.typemytype.robofont.guideline.magnetic.WeNGZHYYeV = 5;
+com.typemytype.robofont.guideline.magnetic.lFKw8dAZO7 = 5;
+};
+}

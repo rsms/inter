@@ -4,79 +4,94 @@ glyphname = zero.tf.slash;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
+alignment = -1;
+pos = (20,0);
 ref = zero.slash;
 }
 );
-width = 1326;
+width = 1320;
 },
 {
 guides = (
 {
-pos = (20,1240);
+pos = (24,1240);
 },
 {
-pos = (20,764);
+pos = (24,764);
 }
 );
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
-shapes = (
-{
-ref = zero.slash;
-}
-);
-width = 1442;
-},
-{
-layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (2,0);
+pos = (-88,0);
 ref = zero.slash;
 }
 );
-width = 1210;
+width = 1320;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (55,0);
+ref = zero.slash;
+}
+);
+width = 1320;
 },
 {
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
+alignment = -1;
+pos = (32,0);
 ref = zero.slash;
 }
 );
-width = 1262;
+width = 1320;
 },
 {
 guides = (
 {
-pos = (-12,1240);
+pos = (-110,1240);
 },
 {
-pos = (-12,764);
+pos = (-110,764);
 }
 );
 layerId = m010;
-shapes = (
-{
-ref = zero.slash;
-}
-);
-width = 1410;
-},
-{
-layerId = m012;
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (2,0);
+pos = (-38,0);
 ref = zero.slash;
 }
 );
-width = 1082;
+width = 1320;
+},
+{
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (119,0);
+ref = zero.slash;
 }
 );
+width = 1320;
+}
+);
+metricLeft = zero.tf;
 metricWidth = zero.tf;
 unicode = 57467;
 }

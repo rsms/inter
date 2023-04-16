@@ -6,7 +6,7 @@ layers = (
 background = {
 shapes = (
 {
-pos = (1,0);
+pos = (-15,0);
 ref = one.tf;
 }
 );
@@ -15,26 +15,27 @@ layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 name = ital_gen;
 shapes = (
 {
-pos = (185,0);
+alignment = -1;
+pos = (169,0);
 ref = one.ss01;
 },
 {
 closed = 1;
 nodes = (
-(1070,0,l),
-(1096,160,l),
-(175,160,l),
-(149,0,l)
+(1054,0,l),
+(1080,160,l),
+(159,160,l),
+(133,0,l)
 );
 }
 );
-width = 1326;
+width = 1320;
 },
 {
 background = {
 shapes = (
 {
-pos = (1,0);
+pos = (-43,0);
 ref = one.tf;
 }
 );
@@ -43,20 +44,21 @@ layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 name = ital_gen;
 shapes = (
 {
-pos = (180,0);
+alignment = -1;
+pos = (96,0);
 ref = one.ss01;
 },
 {
 closed = 1;
 nodes = (
-(1208,0,l),
-(1261,322,l),
-(182,322,l),
-(129,0,l)
+(1124,0,l),
+(1177,322,l),
+(98,322,l),
+(45,0,l)
 );
 }
 );
-width = 1442;
+width = 1320;
 },
 {
 associatedMasterId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
@@ -104,6 +106,7 @@ width = 1442;
 background = {
 shapes = (
 {
+pos = (18,0);
 ref = one.tf;
 }
 );
@@ -113,26 +116,26 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (174,0);
+pos = (192,0);
 ref = one.ss01;
 },
 {
 closed = 1;
 nodes = (
-(957,0,l),
-(965,46,l),
-(148,46,l),
-(140,0,l)
+(975,0,l),
+(983,46,l),
+(166,46,l),
+(158,0,l)
 );
 }
 );
-width = 1210;
+width = 1320;
 },
 {
 background = {
 shapes = (
 {
-pos = (1,0);
+pos = (7,0);
 ref = one.tf;
 }
 );
@@ -141,20 +144,21 @@ layerId = m008;
 name = ital_gen;
 shapes = (
 {
-pos = (181,0);
+alignment = -1;
+pos = (187,0);
 ref = one.ss01;
 },
 {
 closed = 1;
 nodes = (
-(1048,0,l),
-(1074,160,l),
-(153,160,l),
-(127,0,l)
+(1054,0,l),
+(1080,160,l),
+(159,160,l),
+(133,0,l)
 );
 }
 );
-width = 1262;
+width = 1320;
 },
 {
 associatedMasterId = m008;
@@ -181,7 +185,7 @@ width = 1222;
 background = {
 shapes = (
 {
-pos = (1,0);
+pos = (-53,0);
 ref = one.tf;
 }
 );
@@ -190,20 +194,21 @@ layerId = m010;
 name = ital_gen;
 shapes = (
 {
-pos = (191,0);
+alignment = -1;
+pos = (137,0);
 ref = one.ss01;
 },
 {
 closed = 1;
 nodes = (
-(1167,0,l),
-(1220,322,l),
-(189,322,l),
-(136,0,l)
+(1113,0,l),
+(1166,322,l),
+(135,322,l),
+(82,0,l)
 );
 }
 );
-width = 1410;
+width = 1320;
 },
 {
 associatedMasterId = m010;
@@ -230,7 +235,7 @@ width = 1442;
 background = {
 shapes = (
 {
-pos = (1,0);
+pos = (66,0);
 ref = one.tf;
 }
 );
@@ -240,22 +245,23 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (183,0);
+pos = (248,0);
 ref = one.ss01;
 },
 {
 closed = 1;
 nodes = (
-(915,0,l),
-(923,46,l),
-(106,46,l),
-(98,0,l)
+(980,0,l),
+(988,46,l),
+(171,46,l),
+(163,0,l)
 );
 }
 );
-width = 1082;
+width = 1320;
 }
 );
+metricLeft = one.tf;
 metricWidth = zero.tf;
 unicode = 57468;
 }
