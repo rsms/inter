@@ -5,55 +5,42 @@ kernRight = o;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(232,632,l),
-(208,484,l),
-(990,484,l),
-(1014,632,l)
-);
+ref = o;
 },
 {
-ref = o;
+pos = (-1,0);
+ref = "_part.fita-cy_bar";
 }
 );
 width = 1222;
 },
 {
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(316,662,l),
-(280,456,l),
-(964,456,l),
-(1000,662,l)
-);
+ref = o;
 },
 {
-ref = o;
+pos = (-1,0);
+ref = "_part.fita-cy_bar";
 }
 );
 width = 1280;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(168,582,l),
-(148,536,l),
-(1022,536,l),
-(1042,582,l)
-);
+ref = o;
 },
 {
-alignment = -1;
-ref = o;
+pos = (25,0);
+ref = "_part.fita-cy_bar";
 }
 );
 width = 1186;
@@ -63,16 +50,11 @@ layerId = m008;
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(205.217,632,l),
-(180.716,484,l),
-(962.716,484,l),
-(987.217,632,l)
-);
+ref = o;
 },
 {
-ref = o;
+pos = (3,0);
+ref = "_part.fita-cy_bar";
 }
 );
 width = 1124;
@@ -82,16 +64,11 @@ layerId = m010;
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(304.184,662,l),
-(270.08,456,l),
-(954.08,456,l),
-(988.184,662,l)
-);
+ref = o;
 },
 {
-ref = o;
+pos = (5,0);
+ref = "_part.fita-cy_bar";
 }
 );
 width = 1244;
@@ -101,24 +78,16 @@ layerId = m012;
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(104.94,582,l),
-(97.324,536,l),
-(967.324,536,l),
-(974.94,582,l)
-);
+ref = o;
 },
 {
-alignment = -1;
-ref = o;
+pos = (-1,0);
+ref = "_part.fita-cy_bar";
 }
 );
-width = 1048;
+width = 1058;
 }
 );
-metricLeft = o;
-metricRight = o;
 note = "crossbar height match /e\012Note: Glyph reused for /obar";
 unicode = 1139;
 userData = {

@@ -91,6 +91,8 @@ lookup ccmp03 {
   sub a ringnosp by aring;
   sub a ringacute.lc by aringacute;
   sub c cedillanosp by ccedilla;
+  sub C slashlongcomb by Cstroke;
+  sub c slashlongcomb by cstroke;
   sub e gravecomb by egrave;
   sub e acutecomb by eacute;
   sub e circumflexnosp by ecircumflex;
@@ -167,6 +169,9 @@ lookup ccmp03 {
   sub l commaaccent by lcommaaccent;
   sub L dotnosp by Ldot;
   sub l dotnosp by ldot;
+  sub L slashlongcomb by Lslash;
+  sub l slashlongcomb by lslash;
+  sub l.ss02 slashlongcomb by lslash.ss02;
   sub N acutecomb by Nacute;
   sub n acutecomb by nacute;
   sub N commaaccent by Ncommaaccent;
@@ -179,6 +184,8 @@ lookup ccmp03 {
   sub o brevenosp by obreve;
   sub O acutedblnosp by Ohungarumlaut;
   sub o acutedblnosp by ohungarumlaut;
+  sub O slashlongcomb by Oslash;
+  sub o slashlongcomb by oslash;
   sub R acutecomb by Racute;
   sub r acutecomb by racute;
   sub R commaaccent by Rcommaaccent;
@@ -563,6 +570,8 @@ lookup ccmp03 {
   sub longs dotnosp by slongdotaccent;
   sub A ringsubnosp by Aringbelow;
   sub a ringsubnosp by aringbelow;
+  sub zero slashlongcomb by zero.slash;
+  sub zero.tf slashlongcomb by zero.tf.slash;
 } ccmp03;
 
 # * enclosingsquarecomb -> composite
