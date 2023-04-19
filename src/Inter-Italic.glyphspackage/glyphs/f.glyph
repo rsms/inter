@@ -8,49 +8,65 @@ layers = (
 anchors = (
 {
 name = bottom;
-pos = (224,0);
+pos = (136,0);
 }
 );
+background = {
+shapes = (
+{
+ref = t;
+}
+);
+};
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 shapes = (
 {
+pos = (-88,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(232,1118,l),
-(224,1070,l),
-(666,1070,l),
-(674,1118,l)
+(144,1118,l),
+(136,1070,l),
+(578,1070,l),
+(586,1118,l)
 );
 }
 );
-width = 678;
+width = 582;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (226,0);
+pos = (212,0);
 }
 );
+background = {
+shapes = (
+{
+ref = t;
+}
+);
+};
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 shapes = (
 {
+pos = (-14,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(146,1118,l),
-(122,972,l),
-(724,972,l),
-(748,1118,l)
+(132,1118,l),
+(108,972,l),
+(691,972,l),
+(715,1118,l)
 );
 }
 );
-width = 738;
+width = 703;
 },
 {
 anchors = (
@@ -59,6 +75,13 @@ name = bottom;
 pos = (272,0);
 }
 );
+background = {
+shapes = (
+{
+ref = t;
+}
+);
+};
 guides = (
 {
 pos = (426,1228);
@@ -83,13 +106,13 @@ nodes = (
 );
 }
 );
-width = 824;
+width = 838;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (187,0);
+pos = (157,0);
 }
 );
 layerId = m008;
@@ -97,26 +120,26 @@ metricRight = "=t";
 name = ital_gen;
 shapes = (
 {
-pos = (-14,0);
+pos = (-44,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(119,1056,l),
-(95,910,l),
-(633,910,l),
-(657,1056,l)
+(89,1056,l),
+(65,910,l),
+(603,910,l),
+(627,1056,l)
 );
 }
 );
-width = 627;
+width = 571;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (298,0);
+pos = (284,0);
 }
 );
 background = {
@@ -131,45 +154,46 @@ metricRight = "=t";
 name = ital_gen;
 shapes = (
 {
-pos = (19,0);
+pos = (5,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(112,1056,l),
-(62,752,l),
-(842,752,l),
-(892,1056,l)
+(98,1056,l),
+(48,752,l),
+(828,752,l),
+(878,1056,l)
 );
 }
 );
-width = 853;
+width = 839;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (166.59,0);
+pos = (101,0);
 }
 );
 layerId = m012;
 name = ital_gen;
 shapes = (
 {
+pos = (-66,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(154,1056,l),
-(146,1010,l),
-(588,1010,l),
-(596,1056,l)
+(88,1056,l),
+(80,1010,l),
+(522,1010,l),
+(530,1056,l)
 );
 }
 );
-width = 550;
+width = 484;
 }
 );
 unicode = 102;
