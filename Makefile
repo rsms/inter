@@ -27,15 +27,15 @@ $(UFODIR)/features: src/features
 	@ln -s ../../src/features $(UFODIR)/features
 
 # designspace
-$(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
+$(UFODIR)/%.designspace: $(UFODIR)/%.glyphs | venv
 	. $(VENV) ; fontmake -o ufo -g $< --designspace-path $@ \
 		--master-dir $(UFODIR) --instance-dir $(UFODIR)
 	. $(VENV) ; python misc/tools/postprocess-designspace.py $@
 
 # UFOs from designspace
-$(UFODIR)/Inter-%Italic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
+$(UFODIR)/Inter-%Italic.ufo: $(UFODIR)/Inter-Italic.designspace $(UFODIR)/features | venv
 	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
-$(UFODIR)/Inter-%.ufo: $(UFODIR)/Inter-Roman.designspace | venv
+$(UFODIR)/Inter-%.ufo: $(UFODIR)/Inter-Roman.designspace $(UFODIR)/features | venv
 	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
 
 # make sure intermediate files are not rm'd by make
