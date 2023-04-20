@@ -1,12 +1,16 @@
-import sys, os, os.path, re
+import sys, os, os.path, re, argparse
 import defcon
 from multiprocessing import Pool
 from fontTools.designspaceLib import DesignSpaceDocument
+from ufo2ft.filters import loadFilters
 from datetime import datetime
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'tools')))
 from common import getGitHash, getVersion
 from postprocess_instance_ufo import ufo_set_wws
+
+
+OPT_EDITABLE = False  # --editable
 
 
 def update_version(ufo):
@@ -47,34 +51,73 @@ def fix_wght_range(designspace):
 
 
 def should_decompose_glyph(g):
-  if g.components and len(g.components) > 0:
-    for c in g.components:
-      # Does the component have non-trivial transformation? (i.e. scaled or skewed)
-      # Example of no transformation: (identity matrix)
-      #   (1, 0, 0, 1, 0, 0)    no scale or offset
-      # Example of simple offset transformation matrix:
-      #   (1, 0, 0, 1, 20, 30)  20 x offset, 30 y offset
-      # Example of scaled transformation matrix:
-      #   (-1.0, 0, 0.3311, 1, 1464.0, 0)  flipped x axis, sheered and offset
-      # Matrix order:
-      #   (x_scale, x_skew, y_skew, y_scale, x_pos, y_pos)
+  if not g.components or len(g.components) == 0:
+    return False
 
-      # if g.name == 'dotmacron.lc':
-      #   print(f"{g.name} cn {c.baseGlyph}", c.transformation)
-      # Check if transformation is not identity (ignoring x & y offset)
-      m = c.transformation
-      if m[0] + m[1] + m[2] + m[3] != 2.0:
-        return True
+  # Does the component have non-trivial transformation? (i.e. scaled or skewed)
+  # Example of no transformation: (identity matrix)
+  #   (1, 0, 0, 1, 0, 0)    no scale or offset
+  # Example of simple offset transformation matrix:
+  #   (1, 0, 0, 1, 20, 30)  20 x offset, 30 y offset
+  # Example of scaled transformation matrix:
+  #   (-1.0, 0, 0.3311, 1, 1464.0, 0)  flipped x axis, sheered and offset
+  # Matrix order:
+  #   (x_scale, x_skew, y_skew, y_scale, x_offs, y_offs)
+  for cn in g.components:
+    # if g.name == 'dotmacron.lc':
+    #   print(f"{g.name} cn {cn.baseGlyph}", cn.transformation)
+    # Check if transformation is not identity (ignoring x & y offset)
+    m = cn.transformation
+    if m[0] + m[1] + m[2] + m[3] != 2.0:
+      return True
+
   return False
+
+
+def copy_component_anchors(font, g):
+  # do nothing if there are no components or if g has anchors already
+  if not g.components or len(g.anchors) > 0:
+    return
+
+  anchor_names = set()
+  for cn in g.components:
+    if cn.transformation[1] != 0.0 or cn.transformation[2] != 0.0:
+      print(f"TODO: support transformations with skew ({g.name})")
+      return
+    cn_g = font[cn.baseGlyph]
+    copy_component_anchors(font, cn_g)  # depth first
+    for a in cn_g.anchors:
+      # Check if there are multiple components with achors with the same name.
+      # Don't copy any anchors if there are duplicate "_..." anchors
+      if a.name in anchor_names and len(a.name) > 1 and a.name[0] == '_':
+        return
+      anchor_names.add(a.name)
+
+  if len(anchor_names) == 0:
+    return
+
+  anchor_names.clear()
+  for cn in g.components:
+    for a in font[cn.baseGlyph].anchors:
+      if a.name in anchor_names:
+        continue
+      anchor_names.add(a.name)
+      a2 = defcon.Anchor(glyph=g, anchorDict=a.copy())
+      m = cn.transformation # (x_scale, x_skew, y_skew, y_scale, x_offs, y_offs)
+      a2.x += m[4] * m[0]
+      a2.y += m[5] * m[3]
+      g.appendAnchor(a2)
 
 
 def find_glyphs_to_decompose(designspace_source):
   glyph_names = set()
   # print("find_glyphs_to_decompose inspecting %r" % designspace_source.name)
-  ufo = defcon.Font(designspace_source.path)
-  for g in ufo:
+  font = defcon.Font(designspace_source.path)
+  for g in font:
+    copy_component_anchors(font, g)
     if should_decompose_glyph(g):
       glyph_names.add(g.name)
+  font.save(designspace_source.path)
   return list(glyph_names)
 
 
@@ -87,11 +130,34 @@ def set_ufo_filter(ufo, **filter_dict):
   filters.append(filter_dict)
 
 
+def del_ufo_filter(ufo, name):
+  filters = ufo.lib.get("com.github.googlei18n.ufo2ft.filters")
+  if not filters:
+    return
+  for i in range(len(filters)):
+    if filters[i].get("name") == name:
+      filters.pop(i)
+      return
+
+
 def update_source_ufo(ufo_file, glyphs_to_decompose):
   print(f"update {os.path.basename(ufo_file)}")
+
   ufo = defcon.Font(ufo_file)
   update_version(ufo)
+
   set_ufo_filter(ufo, name="decomposeComponents", include=glyphs_to_decompose)
+
+  # decompose now, up front, instead of later when compiling fonts
+  if not OPT_EDITABLE:
+    preFilters, postFilters = loadFilters(ufo)
+    for filter in preFilters:
+      filter(ufo)
+    for filter in postFilters:
+      filter(ufo)
+    # del_ufo_filter(ufo, "decomposeComponents")
+    del ufo.lib["com.github.googlei18n.ufo2ft.filters"]
+
   ufo_set_wws(ufo) # Fix missing WWS entries for Display fonts
   ufo.save(ufo_file)
 
@@ -111,12 +177,20 @@ def update_sources(designspace):
 
 
 def main(argv):
-  designspace_file = argv[1]
-  designspace = DesignSpaceDocument.fromfile(designspace_file)
+  ap = argparse.ArgumentParser(description=
+    'Fixup designspace and source UFOs after they are generated by fontmake from Glyphs source')
+  ap.add_argument('--editable', action='store_true',
+    help="Generate UFOs suitable for further editing (don't apply filters)")
+  ap.add_argument("designspace", help="Path to designspace file")
+
+  args = ap.parse_args()
+  OPT_EDITABLE = args.editable
+
+  designspace = DesignSpaceDocument.fromfile(args.designspace)
   designspace = fix_opsz_range(designspace)
   designspace = fix_wght_range(designspace)
   designspace = update_sources(designspace)
-  designspace.write(designspace_file)
+  designspace.write(args.designspace)
 
 
 if __name__ == '__main__':
