@@ -121,6 +121,22 @@ This font is stored and authored primarily in the [Glyphs](https://glyphsapp.com
 `Inter.glyphspackage` directory (a macOS "bundle.")
 
 
+#### Editing UFO sources
+
+In some cases you might want to edit or inspect the fonts as UFOs.
+Inter is compiled to UFO as an intermediary step.
+
+The quickest path to UFOs is to run `make -j$(nproc) build/ufo/Inter-DisplayMedium.ufo`. Substitute "Inter-DisplayMedium.ufo" for any style.
+
+The quickest path to a designspace is to run `make -j$(nproc) build/ufo/Inter-Roman.designspace`
+
+However, if you indend to edit the fonts you probably want to use the `editable-ufos` make target instead:
+
+    make -j$(nproc) editable-ufos
+
+This generates all designspaces and UFOs, suitable for editing, in `build/ufo-editable/`. The main difference between `editable-ufos` and the intermediary UFOs in `build/ufo/` is that the "editable" ones does not have any processing applied to them: all components, anchors and paths are represented as-is in the original Glyphs source.
+
+
 ### Interactive Lab
 
 This project comes with a simple web-based application for debugging and previewing the font. It's a very useful tool to have when working on the font.

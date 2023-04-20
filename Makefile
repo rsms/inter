@@ -26,17 +26,69 @@ $(UFODIR)/features: src/features
 	@rm -f $(UFODIR)/features
 	@ln -s ../../src/features $(UFODIR)/features
 
-# designspace
-$(UFODIR)/%.designspace: $(UFODIR)/%.glyphs | venv
+# designspace & master UFOs
+$(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
 	. $(VENV) ; fontmake -o ufo -g $< --designspace-path $@ \
-		--master-dir $(UFODIR) --instance-dir $(UFODIR)
+		  --master-dir $(UFODIR) --instance-dir $(UFODIR)
 	. $(VENV) ; python misc/tools/postprocess-designspace.py $@
 
-# UFOs from designspace
+# instance UFOs from designspace
 $(UFODIR)/Inter-%Italic.ufo: $(UFODIR)/Inter-Italic.designspace $(UFODIR)/features | venv
 	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
 $(UFODIR)/Inter-%.ufo: $(UFODIR)/Inter-Roman.designspace $(UFODIR)/features | venv
 	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
+
+# designspace & master UFOs (for editing)
+build/ufo-editable/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
+	@mkdir -p $(dir $@)
+	. $(VENV) ; fontmake -o ufo -g $< --designspace-path $@ \
+		  --master-dir $(dir $@) --instance-dir $(dir $@)
+	. $(VENV) ; python misc/tools/postprocess-designspace.py --editable $@
+
+# instance UFOs from designspace (for editing)
+build/ufo-editable/Inter-%Italic.ufo: build/ufo-editable/Inter-Italic.designspace build/ufo-editable/features | venv
+	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
+build/ufo-editable/Inter-%.ufo: build/ufo-editable/Inter-Roman.designspace build/ufo-editable/features | venv
+	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
+
+editable-ufos: build/ufo-editable/.ok
+	@echo "Editable designspace & UFOs can be found here:"
+	@echo "  $(PWD)/build/ufo-editable"
+
+build/ufo-editable/.ok: build/ufo-editable/Inter-Roman.designspace build/ufo-editable/Inter-Italic.designspace
+	@mkdir -p build/ufo-editable
+	@rm -f build/ufo-editable/features
+	@ln -s ../../src/features build/ufo-editable/features
+	$(MAKE) \
+		build/ufo-editable/Inter-Light.ufo \
+		build/ufo-editable/Inter-ExtraLight.ufo \
+		build/ufo-editable/Inter-Medium.ufo \
+		build/ufo-editable/Inter-SemiBold.ufo \
+		build/ufo-editable/Inter-Bold.ufo \
+		build/ufo-editable/Inter-ExtraBold.ufo \
+		\
+		build/ufo-editable/Inter-LightItalic.ufo \
+		build/ufo-editable/Inter-ExtraLightItalic.ufo \
+		build/ufo-editable/Inter-MediumItalic.ufo \
+		build/ufo-editable/Inter-SemiBoldItalic.ufo \
+		build/ufo-editable/Inter-BoldItalic.ufo \
+		build/ufo-editable/Inter-ExtraBoldItalic.ufo \
+		\
+		build/ufo-editable/Inter-DisplayLight.ufo \
+		build/ufo-editable/Inter-DisplayExtraLight.ufo \
+		build/ufo-editable/Inter-DisplayMedium.ufo \
+		build/ufo-editable/Inter-DisplaySemiBold.ufo \
+		build/ufo-editable/Inter-DisplayBold.ufo \
+		build/ufo-editable/Inter-DisplayExtraBold.ufo \
+		\
+		build/ufo-editable/Inter-DisplayLightItalic.ufo \
+		build/ufo-editable/Inter-DisplayExtraLightItalic.ufo \
+		build/ufo-editable/Inter-DisplayMediumItalic.ufo \
+		build/ufo-editable/Inter-DisplaySemiBoldItalic.ufo \
+		build/ufo-editable/Inter-DisplayBoldItalic.ufo \
+		build/ufo-editable/Inter-DisplayExtraBoldItalic.ufo
+	@touch $@
+	@echo ""
 
 # make sure intermediate files are not rm'd by make
 .PRECIOUS: \
