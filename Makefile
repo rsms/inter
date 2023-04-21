@@ -18,7 +18,7 @@ $(UFODIR)/%.glyphs: src/%.glyphspackage | $(UFODIR) venv
 	. $(VENV) ; build/venv/bin/glyphspkg -o $(dir $@) $^
 
 # features
-src/features: $(wildcard src/features/*)
+features_data: src/features $(wildcard src/features/*)
 	@touch "$@"
 	@true
 $(UFODIR)/features: src/features
@@ -33,9 +33,9 @@ $(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
 	. $(VENV) ; python misc/tools/postprocess-designspace.py $@
 
 # instance UFOs from designspace
-$(UFODIR)/Inter-%Italic.ufo: $(UFODIR)/Inter-Italic.designspace $(UFODIR)/features | venv
+$(UFODIR)/Inter-%Italic.ufo: $(UFODIR)/Inter-Italic.designspace features_data | venv
 	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
-$(UFODIR)/Inter-%.ufo: $(UFODIR)/Inter-Roman.designspace $(UFODIR)/features | venv
+$(UFODIR)/Inter-%.ufo: $(UFODIR)/Inter-Roman.designspace features_data | venv
 	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
 
 # designspace & master UFOs (for editing)
