@@ -85,7 +85,7 @@ def copy_component_anchors(font, g):
       print(f"TODO: support transformations with skew ({g.name})")
       return
     cn_g = font[cn.baseGlyph]
-    copy_component_anchors(font, cn_g)  # depth first
+    # copy_component_anchors(font, cn_g)  # depth first
     for a in cn_g.anchors:
       # Check if there are multiple components with achors with the same name.
       # Don't copy any anchors if there are duplicate "_..." anchors
@@ -109,12 +109,52 @@ def copy_component_anchors(font, g):
       g.appendAnchor(a2)
 
 
+def copy_anchors_from_components(font, g):
+  # We use two passes here, to deduplicate anchors which appear in several components.
+  # Two assumptions are made:
+  # 1. Insertion order of Python dict() is retained (true for Python >=3.7)
+  # 2. Base components are listed first, mark/accent comonents later.
+  #    e.g. in /Ecircumflex, /E comes before /circumflexcomb, so we use "top"
+  #    anchor from /circumflexcomb rather than /E
+
+  # skip certain glyphs
+  if len(g.unicodes) == 0 or len(g.anchors) > 0 or not g.components:
+    return
+
+  add_anchors = dict()
+  names_to_copy = set(('top', 'bottom'))
+
+  for cn in g.components:
+    checked_cn_skew = False
+    #print(f"    [{g.name}] cn {cn.baseGlyph}")
+    cn_g = font[cn.baseGlyph]
+    copy_anchors_from_components(font, cn_g)  # depth first
+    for a in cn_g.anchors:
+      if a.name not in names_to_copy:
+        continue
+      #print(f"    [{g.name}] use anchor {a.name}")
+      m = cn.transformation # (x_scale, x_skew, y_skew, y_scale, x_offs, y_offs)
+      if not checked_cn_skew:
+        checked_cn_skew = True
+        if m[1] != 0.0 or m[2] != 0.0:
+          #print(f"TODO: skewed components ({cn_g.name} used by {g.name})")
+          return
+      a2 = defcon.Anchor(glyph=g, anchorDict=a.copy())
+      a2.x += m[4] * m[0]
+      a2.y += m[5] * m[3]
+      add_anchors[a.name] = a2
+
+  for a in add_anchors.values():
+    #print(f"    [{g.name}] append anchor {a.name}")
+    g.appendAnchor(a)
+
+
 def find_glyphs_to_decompose(designspace_source):
   glyph_names = set()
   # print("find_glyphs_to_decompose inspecting %r" % designspace_source.name)
   font = defcon.Font(designspace_source.path)
   for g in font:
-    # copy_component_anchors(font, g)
+    # copy_anchors_from_components(font, g)
     if should_decompose_glyph(g):
       glyph_names.add(g.name)
   font.save(designspace_source.path)
