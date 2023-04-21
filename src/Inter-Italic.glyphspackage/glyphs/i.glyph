@@ -1,5 +1,4 @@
 {
-color = (219,235,247,1);
 glyphname = i;
 kernLeft = idotless;
 kernRight = idotless;
@@ -18,7 +17,8 @@ shapes = (
 ref = idotless;
 },
 {
-ref = dotaccent;
+pos = (31,186);
+ref = dotaccentcomb;
 }
 );
 width = 487;
@@ -39,8 +39,8 @@ shapes = (
 ref = idotless;
 },
 {
-pos = (-32,0);
-ref = dotaccent;
+pos = (-1,186);
+ref = dotaccentcomb;
 }
 );
 width = 607;
@@ -53,8 +53,8 @@ shapes = (
 ref = idotless;
 },
 {
-pos = (34,0);
-ref = dotaccent;
+pos = (65,186);
+ref = dotaccentcomb;
 }
 );
 width = 443;
@@ -67,8 +67,8 @@ shapes = (
 ref = idotless;
 },
 {
-pos = (1,0);
-ref = dotaccent;
+pos = (35,206);
+ref = dotaccentcomb;
 }
 );
 width = 427;
@@ -89,8 +89,8 @@ shapes = (
 ref = idotless;
 },
 {
-pos = (-34,0);
-ref = dotaccent;
+pos = (0,206);
+ref = dotaccentcomb;
 }
 );
 width = 573;
@@ -103,8 +103,8 @@ shapes = (
 ref = idotless;
 },
 {
-pos = (41,0);
-ref = dotaccent;
+pos = (69,206);
+ref = dotaccentcomb;
 }
 );
 width = 315;

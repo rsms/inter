@@ -1,0 +1,202 @@
+{
+glyphname = brevecomb_hookabovecomb;
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (416,1118);
+}
+);
+guides = (
+{
+pos = (-60,1616);
+},
+{
+pos = (-60,1529);
+}
+);
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-65,-28);
+ref = brevecomb;
+},
+{
+alignment = -1;
+pos = (119,333);
+ref = hookabove_compact;
+}
+);
+width = 800;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (549,1118);
+}
+);
+guides = (
+{
+pos = (-23,1632);
+},
+{
+pos = (-23,1555);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-28,-27);
+ref = brevecomb;
+},
+{
+alignment = -1;
+pos = (313,627);
+ref = hookabove_compact;
+scale = (0.8,0.8);
+}
+);
+width = 976;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (300,1118);
+}
+);
+guides = (
+{
+pos = (-144,1616);
+},
+{
+pos = (-144,1529);
+},
+{
+pos = (-144,1681);
+}
+);
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-149,-28);
+ref = brevecomb;
+},
+{
+alignment = -1;
+pos = (45,333);
+ref = hookabove_compact;
+}
+);
+width = 524;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (476,1056);
+}
+);
+guides = (
+{
+pos = (-11,1490);
+},
+{
+pos = (-11,1328);
+},
+{
+pos = (-11,1465);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-20,-50);
+ref = brevecomb;
+},
+{
+alignment = -1;
+pos = (167,249);
+ref = hookabove_compact;
+}
+);
+width = 832;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (559,1056);
+}
+);
+guides = (
+{
+pos = (-8,1507);
+},
+{
+pos = (-8,1536);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-8,0);
+ref = brevecomb;
+},
+{
+alignment = -1;
+pos = (290,473);
+ref = hookabove_compact;
+scale = (0.8,0.9);
+}
+);
+width = 976;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (301,1056);
+}
+);
+guides = (
+{
+pos = (-138,1465);
+}
+);
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-145,-42);
+ref = brevecomb;
+},
+{
+alignment = -1;
+pos = (31,249);
+ref = hookabove_compact;
+}
+);
+width = 525;
+}
+);
+userData = {
+interface.gridadjust.original = "{'width': 1284, 'leftMargin': 176, 'rightMargin': 298}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

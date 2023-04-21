@@ -1,29 +1,28 @@
 {
-color = (250,227,227,1);
 glyphname = dblgravecmb;
 layers = (
 {
 anchors = (
 {
 name = _top;
-pos = (-576,1118);
+pos = (602,1118);
 },
 {
 name = top;
-pos = (-576,1557);
+pos = (602,1557);
 }
 );
 background = {
 shapes = (
 {
 alignment = -1;
-pos = (-825,0);
-ref = grave;
+pos = (353,0);
+ref = gravecomb;
 },
 {
 alignment = -1;
-pos = (-1151,0);
-ref = grave;
+pos = (27,0);
+ref = gravecomb;
 }
 );
 };
@@ -32,46 +31,46 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-341,1264,l),
-(-459,1557,l),
-(-653,1557,l),
-(-483,1264,l)
+(837,1264,l),
+(719,1557,l),
+(525,1557,l),
+(695,1264,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(-666,1264,l),
-(-834,1557,l),
-(-1028,1557,l),
-(-809,1264,l)
+(512,1264,l),
+(344,1557,l),
+(150,1557,l),
+(369,1264,l)
 );
 }
 );
-width = 0;
+width = 1007;
 },
 {
 anchors = (
 {
 name = _top;
-pos = (-656,1118);
+pos = (746,1118);
 },
 {
 name = top;
-pos = (-656,1582);
+pos = (746,1582);
 }
 );
 background = {
 shapes = (
 {
 alignment = -1;
-pos = (-922,0);
-ref = grave;
+pos = (480,0);
+ref = gravecomb;
 },
 {
 alignment = -1;
-pos = (-1310,0);
-ref = grave;
+pos = (92,0);
+ref = gravecomb;
 }
 );
 };
@@ -80,44 +79,44 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-340,1256,l),
-(-438,1582,l),
-(-764,1582,l),
-(-604,1256,l)
+(1062,1256,l),
+(964,1582,l),
+(638,1582,l),
+(798,1256,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(-702,1256,l),
-(-872,1582,l),
-(-1232,1582,l),
-(-974,1256,l)
+(700,1256,l),
+(530,1582,l),
+(170,1582,l),
+(428,1256,l)
 );
 }
 );
-width = 0;
+width = 1232;
 },
 {
 anchors = (
 {
 name = _top;
-pos = (-576,1118);
+pos = (519,1118);
 },
 {
 name = top;
-pos = (-576,1557);
+pos = (519,1557);
 }
 );
 background = {
 shapes = (
 {
-pos = (-805,0);
-ref = grave;
+pos = (290,0);
+ref = gravecomb;
 },
 {
-pos = (-1079,0);
-ref = grave;
+pos = (16,0);
+ref = gravecomb;
 }
 );
 };
@@ -126,23 +125,23 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-412,1283,l),
-(-557,1557,l),
-(-609,1557,l),
-(-458,1283,l)
+(683,1283,l),
+(538,1557,l),
+(486,1557,l),
+(637,1283,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(-686,1283,l),
-(-859,1557,l),
-(-915,1557,l),
-(-732,1283,l)
+(409,1283,l),
+(236,1557,l),
+(180,1557,l),
+(363,1283,l)
 );
 }
 );
-width = 0;
+width = 863;
 },
 {
 anchors = (
@@ -180,22 +179,22 @@ width = 582;
 anchors = (
 {
 name = _top;
-pos = (-559,1056);
+pos = (501,1056);
 },
 {
 name = top;
-pos = (-559,1490);
+pos = (501,1490);
 }
 );
 background = {
 shapes = (
 {
-pos = (-737,0);
-ref = grave;
+pos = (323,0);
+ref = gravecomb;
 },
 {
-pos = (-1045,0);
-ref = grave;
+pos = (15,0);
+ref = gravecomb;
 }
 );
 };
@@ -204,40 +203,40 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-342,1192,l),
-(-462,1490,l),
-(-656,1490,l),
-(-484,1192,l)
+(718,1192,l),
+(598,1490,l),
+(404,1490,l),
+(576,1192,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(-628,1192,l),
-(-796,1490,l),
-(-990,1490,l),
-(-774,1192,l)
+(432,1192,l),
+(264,1490,l),
+(70,1490,l),
+(286,1192,l)
 );
 }
 );
-width = 0;
+width = 808;
 },
 {
 anchors = (
 {
 name = _top;
-pos = (-640,1056);
+pos = (663,1056);
 },
 {
 name = top;
-pos = (-640,1507);
+pos = (663,1507);
 }
 );
 background = {
 shapes = (
 {
-pos = (-932,0);
-ref = grave;
+pos = (371,0);
+ref = gravecomb;
 }
 );
 };
@@ -246,23 +245,23 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-275,1181,l),
-(-421,1507,l),
-(-747,1507,l),
-(-539,1181,l)
+(1028,1181,l),
+(882,1507,l),
+(556,1507,l),
+(764,1181,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(-661,1181,l),
-(-879,1507,l),
-(-1239,1507,l),
-(-933,1181,l)
+(642,1181,l),
+(424,1507,l),
+(64,1507,l),
+(370,1181,l)
 );
 }
 );
-width = 0;
+width = 1092;
 },
 {
 anchors = (
@@ -300,24 +299,24 @@ width = 582;
 anchors = (
 {
 name = _top;
-pos = (-536,1056);
+pos = (438,1056);
 },
 {
 name = top;
-pos = (-536,1490);
+pos = (438,1490);
 }
 );
 background = {
 shapes = (
 {
 alignment = -1;
-pos = (-739,0);
-ref = grave;
+pos = (235,0);
+ref = gravecomb;
 },
 {
 alignment = -1;
-pos = (-978,0);
-ref = grave;
+pos = (-4,0);
+ref = gravecomb;
 }
 );
 };
@@ -326,25 +325,27 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-405,1192,l),
-(-511,1490,l),
-(-566,1490,l),
-(-450,1192,l)
+(569,1192,l),
+(463,1490,l),
+(408,1490,l),
+(524,1192,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(-612,1192,l),
-(-745,1490,l),
-(-801,1490,l),
-(-657,1192,l)
+(362,1192,l),
+(229,1490,l),
+(173,1490,l),
+(317,1192,l)
 );
 }
 );
-width = 0;
+width = 671;
 }
 );
+metricLeft = grave;
+metricRight = grave;
 note = "Should be designed as a balance between isolated ideal spacing (to appear as one unit, not two separate strokes) yet is must work with /dieresis as it's used for /hungarumlaut";
 unicode = 783;
 }

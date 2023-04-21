@@ -2,193 +2,71 @@
 glyphname = caron;
 layers = (
 {
-anchors = (
-{
-name = _top;
-pos = (590,1304);
-}
-);
-guides = (
-{
-pos = (755,1720);
-}
-);
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(319,1566,l),
-(317,1554,l),
-(501,1250,l),
-(659,1250,l),
-(945,1554,l),
-(947,1566,l),
-(783,1566,l),
-(599,1362,l),
-(481,1566,l)
-);
+alignment = 1;
+ref = caroncomb;
 }
 );
-width = 930;
+width = 833;
 },
 {
-anchors = (
-{
-name = _top;
-pos = (769,1304);
-}
-);
-guides = (
-{
-pos = (1248,1720);
-}
-);
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(343,1592,l),
-(341,1582,l),
-(620,1250,l),
-(900,1250,l),
-(1289,1582,l),
-(1291,1592,l),
-(959,1592,l),
-(790,1432,l),
-(675,1592,l)
-);
+alignment = 1;
+ref = caroncomb;
 }
 );
-width = 1292;
+width = 1024;
 },
 {
-anchors = (
-{
-name = _top;
-pos = (551,1288);
-}
-);
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(320,1536,l),
-(319,1530,l),
-(540,1256,l),
-(552,1256,l),
-(865,1530,l),
-(866,1536,l),
-(810,1536,l),
-(555,1312,l),
-(374,1536,l)
-);
+alignment = 1;
+ref = caroncomb;
 }
 );
-width = 862;
+width = 864;
 },
 {
-anchors = (
-{
-name = _top;
-pos = (556,1262);
-}
-);
-guides = (
-{
-pos = (463,1720);
-}
-);
 layerId = m008;
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(280,1490,l),
-(279,1486,l),
-(464,1216,l),
-(630,1216,l),
-(907,1486,l),
-(908,1490,l),
-(736,1490,l),
-(565,1314,l),
-(450,1490,l)
-);
+alignment = 1;
+ref = caroncomb;
 }
 );
-width = 867;
+width = 800;
 },
 {
-anchors = (
-{
-name = _top;
-pos = (751,1262);
-}
-);
-guides = (
-{
-pos = (1152,1720);
-}
-);
 layerId = m010;
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(315,1490,l),
-(315,1489,l),
-(555,1164,l),
-(915,1164,l),
-(1263,1489,l),
-(1263,1490,l),
-(931,1490,l),
-(761,1322,l),
-(647,1490,l)
-);
+alignment = 1;
+ref = caroncomb;
 }
 );
-width = 1260;
+width = 864;
 },
 {
-anchors = (
-{
-name = _top;
-pos = (484,1262);
-}
-);
 layerId = m012;
 name = ital_gen;
 shapes = (
 {
-closed = 1;
-nodes = (
-(247,1490,l),
-(247,1489,l),
-(453,1216,l),
-(497,1216,l),
-(797,1489,l),
-(797,1490,l),
-(738,1490,l),
-(482,1255,l),
-(307,1490,l)
-);
+alignment = 1;
+ref = caroncomb;
 }
 );
-width = 734;
+width = 704;
 }
 );
 unicode = 711;
-userData = {
-interface.gridadjust.original = "{'width': 1273, 'leftMargin': 194, 'rightMargin': 210}";
-"interface.width-adjustments" = (
--16
-);
-};
 }
