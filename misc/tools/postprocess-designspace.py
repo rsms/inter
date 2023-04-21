@@ -114,7 +114,7 @@ def find_glyphs_to_decompose(designspace_source):
   # print("find_glyphs_to_decompose inspecting %r" % designspace_source.name)
   font = defcon.Font(designspace_source.path)
   for g in font:
-    copy_component_anchors(font, g)
+    # copy_component_anchors(font, g)
     if should_decompose_glyph(g):
       glyph_names.add(g.name)
   font.save(designspace_source.path)
