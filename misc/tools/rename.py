@@ -28,8 +28,21 @@ FAMILY_RELATED_IDS = set([
 whitespace_re = re.compile(r'\s+')
 
 
-def removeWhitespace(s):
-  return whitespace_re.sub("", s)
+def remove_whitespace(s):
+  return whitespace_re.sub('', s)
+
+
+def normalize_whitespace(s):
+  return whitespace_re.sub(' ', s)
+
+
+def remove_substring(s, substr):
+  # examples of remove_substring(s, "Display"):
+  #   "Inter Display"   => "Inter"
+  #   "Display Lol"     => "Lol"
+  #   "Foo Display Lol" => "Foo Lol"
+  #   " Foo   Bar Lol " => "Foo Bar Lol"
+  return normalize_whitespace(s.strip().replace(substr, '')).strip()
 
 
 def set_full_name(font, fullName, fullNamePs):
@@ -55,6 +68,35 @@ def getFamilyName(font):
   return r.toUnicode()
 
 
+def getFamilyNames(font):
+  nameTable = font["name"]
+  r = None
+  names = dict()  # dict in Py >=3.7 maintains insertion order
+  for plat_id, enc_id, lang_id in (WINDOWS_ENGLISH_IDS, MAC_ROMAN_IDS):
+    for name_id in (PREFERRED_FAMILY, LEGACY_FAMILY):
+      r = nameTable.getName(
+        nameID=name_id, platformID=plat_id, platEncID=enc_id, langID=lang_id)
+      if r:
+        names[r.toUnicode()] = True
+  if len(names) == 0:
+    raise ValueError("family name not found")
+  names = list(names.keys())
+  names.sort()
+  names.reverse() # longest first
+  return names
+
+
+def getStyleName(font):
+  nameTable = font["name"]
+  for plat_id, enc_id, lang_id in (WINDOWS_ENGLISH_IDS, MAC_ROMAN_IDS):
+    for name_id in (TYPO_SUBFAMILY_NAME, SUBFAMILY_NAME):
+      r = nameTable.getName(
+        nameID=name_id, platformID=plat_id, platEncID=enc_id, langID=lang_id)
+      if r is not None:
+        return r.toUnicode()
+  raise ValueError("style name not found")
+
+
 def renameStylesGoogleFonts(font):
   familyName = getFamilyName(font)
 
@@ -72,15 +114,15 @@ def renameStylesGoogleFonts(font):
       s = rec.toUnicode()
       start = s.find(familyName)
       if start != -1:
-        s = familyName + " " + removeWhitespace(s[start + len(familyName):])
+        s = familyName + " " + remove_whitespace(s[start + len(familyName):])
       else:
-        s = removeWhitespace(s)
+        s = remove_whitespace(s)
       if s != "Italic" and s.endswith("Italic"):
         # fixup e.g. "ExtraBoldItalic" -> "ExtraBold Italic"
         s = s[:len(s) - len("Italic")] + " Italic"
       rec.string = s.strip()
     if rid in (SUBFAMILY_NAME, TYPO_SUBFAMILY_NAME) or rid in vfInstanceSubfamilyNameIds:
-      s = removeWhitespace(rec.toUnicode())
+      s = remove_whitespace(rec.toUnicode())
       if s != "Italic" and s.endswith("Italic"):
         # fixup e.g. "ExtraBoldItalic" -> "ExtraBold Italic"
         s = s[:len(s) - len("Italic")] + " Italic"
@@ -90,7 +132,7 @@ def renameStylesGoogleFonts(font):
 
 def setStyleName(font, newStyleName):
   newFullName = getFamilyName(font).strip() + " " + newStyleName
-  newFullNamePs = removeWhitespace(newFullName)
+  newFullNamePs = remove_whitespace(newFullName)
   set_full_name(font, newFullName, newFullNamePs)
 
   nameTable = font["name"]
@@ -101,23 +143,26 @@ def setStyleName(font, newStyleName):
 
 
 def setFamilyName(font, nextFamilyName):
-  prevFamilyName = getFamilyName(font)
-  if prevFamilyName == nextFamilyName:
-    return
-    # raise Exception("identical family name")
+  prevFamilyNames = getFamilyNames(font)
+  # if prevFamilyNames[0] == nextFamilyName:
+  #   return
+  #   # raise Exception("identical family name")
 
-  def renameRecord(nameRecord, prevFamilyName, nextFamilyName):
-    # replaces prevFamilyName with nextFamilyName in nameRecord
+  def renameRecord(nameRecord, prevFamilyNames, nextFamilyName):
+    # replaces prevFamilyNames with nextFamilyName in nameRecord
     s = nameRecord.toUnicode()
-    start = s.find(prevFamilyName)
-    if start != -1:
+    for prevFamilyName in prevFamilyNames:
+      start = s.find(prevFamilyName)
+      if start == -1:
+        continue
       end = start + len(prevFamilyName)
       nextFamilyName = s[:start] + nextFamilyName + s[end:]
-    nameRecord.string = nextFamilyName
+      nameRecord.string = nextFamilyName
+      break
     return s, nextFamilyName
 
   # postcript name can't contain spaces
-  psPrevFamilyName = prevFamilyName.replace(" ", "")
+  psPrevFamilyNames = [s.replace(" ", "") for s in prevFamilyNames]
   psNextFamilyName = nextFamilyName.replace(" ", "")
   for rec in font["name"].names:
     name_id = rec.nameID
@@ -125,18 +170,24 @@ def setFamilyName(font, nextFamilyName):
       # leave uninteresting records unmodified
       continue
     if name_id == POSTSCRIPT_NAME:
-      old, new = renameRecord(rec, psPrevFamilyName, psNextFamilyName)
+      old, new = renameRecord(rec, psPrevFamilyNames, psNextFamilyName)
     elif name_id == TRUETYPE_UNIQUE_ID:
-      # The Truetype Unique ID rec may contain either the PostScript Name or the Full Name
-      if psPrevFamilyName in rec.toUnicode():
+      # The Truetype Unique ID rec may contain either the PostScript Name
+      # or the Full Name
+      prev_psname = None
+      for s in psPrevFamilyNames:
+        if s in rec.toUnicode():
+          prev_psname = s
+          break
+      if prev_psname is not None:
         # Note: This is flawed -- a font called "Foo" renamed to "Bar Lol";
         # if this record is not a PS record, it will incorrectly be rename "BarLol".
-        # However, in practice this is not abig deal since it's just an ID.
-        old, new = renameRecord(rec, psPrevFamilyName, psNextFamilyName)
+        # However, in practice this is not a big deal since it's just an ID.
+        old, new = renameRecord(rec, [prev_psname], psNextFamilyName)
       else:
-        old, new = renameRecord(rec, prevFamilyName, nextFamilyName)
+        old, new = renameRecord(rec, prevFamilyNames, nextFamilyName)
     else:
-      old, new = renameRecord(rec, prevFamilyName, nextFamilyName)
+      old, new = renameRecord(rec, prevFamilyNames, nextFamilyName)
     # print("  %r: '%s' -> '%s'" % (rec, old, new))
 
 
@@ -153,6 +204,8 @@ def main():
     help='Rename style to <name>')
   a('--google-style', action='store_true',
     help='Rename style names to Google Fonts standards')
+  a('--scrub-display', action='store_true',
+    help='Remove "Display" from various family & style records')
   a('input', metavar='<file>',
     help='Input font file')
   args = argparser.parse_args()
@@ -161,19 +214,26 @@ def main():
   outfile = args.output or infile
 
   font = TTFont(infile, recalcBBoxes=False, recalcTimestamp=False)
+
+  if args.scrub_display:
+    if not args.family: # for setFamilyName()
+      args.family = remove_substring(getFamilyName(font), "Display")
+    if not args.style:
+      args.style = remove_substring(getStyleName(font), "Display")
+
   editCount = 0
   try:
     if args.family:
-      editCount += 1
       setFamilyName(font, args.family)
+      editCount += 1
 
     if args.style:
-      editCount += 1
       setStyleName(font, args.style)
+      editCount += 1
 
     if args.google_style:
-      editCount += 1
       renameStylesGoogleFonts(font)
+      editCount += 1
 
     if editCount == 0:
       print("no rename options provided", file=sys.stderr)
