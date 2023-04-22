@@ -139,32 +139,40 @@ build/ufo-editable/.ok: build/ufo-editable/Inter-Roman.designspace build/ufo-edi
 # ---------------------------------------------------------------------------------
 # products
 
+# arguments to fontmake
+FM_ARGS := \
+	--overlaps-backend pathops \
+	--flatten-components
+ifeq (DEBUG,)
+	FM_ARGS += --production-names --verbose WARNING
+else
+	FM_ARGS += --no-production-names
+endif
+
 $(FONTDIR)/static/Inter-Displa%.otf: $(UFODIR)/Inter-Displa%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o otf --output-path $@ --overlaps-backend pathops --production-names
+	. $(VENV) ; fontmake -u $< -o otf --output-path $@ $(FM_ARGS)
 	. $(VENV) ; python misc/tools/fix-static-display-names.py $@
 
 $(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o otf --output-path $@ --overlaps-backend pathops --production-names
+	. $(VENV) ; fontmake -u $< -o otf --output-path $@ $(FM_ARGS)
 
 
 $(FONTDIR)/static/Inter-Displa%.ttf: $(UFODIR)/Inter-Displa%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ --overlaps-backend pathops --production-names
+	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS)
 	. $(VENV) ; python misc/tools/fix-static-display-names.py $@
 
 $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ --overlaps-backend pathops --production-names
+	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS)
 
 
 $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hinted venv
 	. $(VENV) ; python -m ttfautohint --no-info "$<" "$@"
 
 $(FONTDIR)/var/_%.var.ttf: $(UFODIR)/%.designspace build/features_data | $(FONTDIR)/var venv
-	. $(VENV) ; fontmake -o variable -m $< --output-path $@ \
-	              --overlaps-backend pathops --production-names
+	. $(VENV) ; fontmake -o variable -m $< --output-path $@ $(FM_ARGS)
 
 $(FONTDIR)/var/_%.var.otf: $(UFODIR)/%.designspace build/features_data | $(FONTDIR)/var venv
-	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ \
-	              --overlaps-backend pathops --production-names
+	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ $(FM_ARGS)
 
 %.woff2: %.ttf | venv
 	. $(VENV) ; misc/tools/woff2 compress -o "$@" "$<"
