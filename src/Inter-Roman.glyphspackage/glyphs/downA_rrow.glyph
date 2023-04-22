@@ -1,11 +1,12 @@
 {
+case = minor;
 glyphname = downArrow;
 layers = (
 {
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
 pos = (1954,1490);
 ref = upArrow;
@@ -17,7 +18,7 @@ width = 1954;
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
 pos = (1954,1490);
 ref = upArrow;
@@ -29,7 +30,7 @@ width = 1954;
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
 pos = (1954,1490);
 ref = upArrow;
@@ -41,7 +42,7 @@ width = 1954;
 layerId = m007;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
 pos = (1890,1490);
 ref = upArrow;
@@ -53,7 +54,7 @@ width = 1890;
 layerId = m009;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
 pos = (1922,1490);
 ref = upArrow;
@@ -65,7 +66,7 @@ width = 1922;
 layerId = m011;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
 pos = (1826,1490);
 ref = upArrow;
@@ -74,7 +75,8 @@ ref = upArrow;
 width = 1826;
 }
 );
-metricWidth = leftArrow;
+metricLeft = upArrow;
+metricRight = upArrow;
 unicode = 8595;
 userData = {
 "interface.width-adjustments" = (
