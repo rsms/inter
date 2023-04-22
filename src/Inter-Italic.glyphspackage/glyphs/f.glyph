@@ -7,12 +7,13 @@ layers = (
 anchors = (
 {
 name = bottom;
-pos = (136,0);
+pos = (129,0);
 }
 );
 background = {
 shapes = (
 {
+pos = (-7,0);
 ref = t;
 }
 );
@@ -20,31 +21,32 @@ ref = t;
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 shapes = (
 {
-pos = (-88,0);
+pos = (-95,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(144,1118,l),
-(136,1070,l),
-(578,1070,l),
-(586,1118,l)
+(137,1118,l),
+(129,1070,l),
+(571,1070,l),
+(579,1118,l)
 );
 }
 );
-width = 582;
+width = 495;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (212,0);
+pos = (202,0);
 }
 );
 background = {
 shapes = (
 {
+pos = (-10,0);
 ref = t;
 }
 );
@@ -52,20 +54,20 @@ ref = t;
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 shapes = (
 {
-pos = (-14,0);
+pos = (-24,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(132,1118,l),
-(108,972,l),
-(691,972,l),
-(715,1118,l)
+(122,1118,l),
+(98,972,l),
+(681,972,l),
+(705,1118,l)
 );
 }
 );
-width = 703;
+width = 673;
 },
 {
 anchors = (
@@ -111,88 +113,87 @@ width = 838;
 anchors = (
 {
 name = bottom;
-pos = (157,0);
+pos = (187,0);
 }
 );
 layerId = m008;
-metricRight = "=t";
 name = ital_gen;
 shapes = (
 {
-pos = (-44,0);
+pos = (-14,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(89,1056,l),
-(65,910,l),
-(603,910,l),
-(627,1056,l)
+(119,1056,l),
+(95,910,l),
+(633,910,l),
+(657,1056,l)
 );
 }
 );
-width = 571;
+width = 611;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (284,0);
+pos = (304,0);
 }
 );
 background = {
 shapes = (
 {
+pos = (20,0);
 ref = t;
 }
 );
 };
 layerId = m010;
-metricRight = "=t";
 name = ital_gen;
 shapes = (
 {
-pos = (5,0);
+pos = (25,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(98,1056,l),
-(48,752,l),
-(828,752,l),
-(878,1056,l)
+(118,1056,l),
+(68,752,l),
+(848,752,l),
+(898,1056,l)
 );
 }
 );
-width = 839;
+width = 851;
 },
 {
 anchors = (
 {
 name = bottom;
-pos = (101,0);
+pos = (109,0);
 }
 );
 layerId = m012;
 name = ital_gen;
 shapes = (
 {
-pos = (-66,0);
+pos = (-58,0);
 ref = longs;
 },
 {
 closed = 1;
 nodes = (
-(88,1056,l),
-(80,1010,l),
-(522,1010,l),
-(530,1056,l)
+(96,1056,l),
+(88,1010,l),
+(530,1010,l),
+(538,1056,l)
 );
 }
 );
-width = 484;
+width = 431;
 }
 );
 unicode = 102;

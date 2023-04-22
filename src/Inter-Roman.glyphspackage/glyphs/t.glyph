@@ -7,26 +7,26 @@ layers = (
 anchors = (
 {
 name = raccent;
-pos = (504,1562);
+pos = (484,1562);
 }
 );
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
-pos = (-24,0);
+pos = (-44,0);
 ref = _part.t_base;
 },
 {
 closed = 1;
 nodes = (
-(40,1118,l),
-(40,972,l),
-(618,972,l),
-(618,1118,l)
+(20,1118,l),
+(20,972,l),
+(598,972,l),
+(598,1118,l)
 );
 }
 );
-width = 690;
+width = 670;
 },
 {
 anchors = (
@@ -57,26 +57,26 @@ width = 818;
 anchors = (
 {
 name = raccent;
-pos = (156,1526);
+pos = (116,1526);
 }
 );
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
-pos = (-54,0);
+pos = (-94,0);
 ref = _part.t_base;
 },
 {
 closed = 1;
 nodes = (
-(50,1118,l),
-(50,1072,l),
-(492,1072,l),
-(492,1118,l)
+(10,1118,l),
+(10,1072,l),
+(452,1072,l),
+(452,1118,l)
 );
 }
 );
-width = 567;
+width = 492;
 },
 {
 anchors = (
@@ -118,27 +118,27 @@ width = 744;
 anchors = (
 {
 name = raccent;
-pos = (704,1490);
+pos = (714,1490);
 }
 );
 layerId = m009;
 name = "Black Display";
 shapes = (
 {
-pos = (14,0);
+pos = (24,0);
 ref = _part.t_base;
 },
 {
 closed = 1;
 nodes = (
-(10,1056,l),
-(10,752,l),
-(790,752,l),
-(790,1056,l)
+(20,1056,l),
+(20,752,l),
+(800,752,l),
+(800,1056,l)
 );
 }
 );
-width = 838;
+width = 840;
 },
 {
 anchors = (
@@ -163,7 +163,7 @@ nodes = (
 );
 }
 );
-width = 492;
+width = 472;
 },
 {
 anchors = (
@@ -196,27 +196,27 @@ width = 626;
 anchors = (
 {
 name = raccent;
-pos = (450,1490);
+pos = (465,1490);
 }
 );
 layerId = m007;
 name = Display;
 shapes = (
 {
-pos = (-46,0);
+pos = (-31,0);
 ref = _part.t_base;
 },
 {
 closed = 1;
 nodes = (
-(0,1056,l),
-(0,910,l),
-(538,910,l),
-(538,1056,l)
+(15,1056,l),
+(15,910,l),
+(553,910,l),
+(553,1056,l)
 );
 }
 );
-width = 568;
+width = 603;
 }
 );
 unicode = 116;
