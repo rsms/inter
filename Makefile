@@ -18,10 +18,9 @@ $(UFODIR)/%.glyphs: src/%.glyphspackage | $(UFODIR) venv
 	. $(VENV) ; build/venv/bin/glyphspkg -o $(dir $@) $^
 
 # features
-features_data: src/features $(wildcard src/features/*)
-	@touch "$@"
-	@true
-$(UFODIR)/features: src/features
+build/features_data: $(UFODIR)/features $(wildcard src/features/*)
+	touch "$@"
+$(UFODIR)/features:
 	@mkdir -p $(UFODIR)
 	@rm -f $(UFODIR)/features
 	@ln -s ../../src/features $(UFODIR)/features
@@ -33,9 +32,9 @@ $(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
 	. $(VENV) ; python misc/tools/postprocess-designspace.py $@
 
 # instance UFOs from designspace
-$(UFODIR)/Inter-%Italic.ufo: $(UFODIR)/Inter-Italic.designspace features_data | venv
+$(UFODIR)/Inter-%Italic.ufo: $(UFODIR)/Inter-Italic.designspace | venv
 	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
-$(UFODIR)/Inter-%.ufo: $(UFODIR)/Inter-Roman.designspace features_data | venv
+$(UFODIR)/Inter-%.ufo: $(UFODIR)/Inter-Roman.designspace | venv
 	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
 
 # designspace & master UFOs (for editing)
@@ -46,9 +45,9 @@ build/ufo-editable/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
 	. $(VENV) ; python misc/tools/postprocess-designspace.py --editable $@
 
 # instance UFOs from designspace (for editing)
-build/ufo-editable/Inter-%Italic.ufo: build/ufo-editable/Inter-Italic.designspace build/ufo-editable/features | venv
+build/ufo-editable/Inter-%Italic.ufo: build/ufo-editable/Inter-Italic.designspace | venv
 	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
-build/ufo-editable/Inter-%.ufo: build/ufo-editable/Inter-Roman.designspace build/ufo-editable/features | venv
+build/ufo-editable/Inter-%.ufo: build/ufo-editable/Inter-Roman.designspace | venv
 	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
 
 editable-ufos: build/ufo-editable/.ok
@@ -140,20 +139,30 @@ build/ufo-editable/.ok: build/ufo-editable/Inter-Roman.designspace build/ufo-edi
 # ---------------------------------------------------------------------------------
 # products
 
-$(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo | $(FONTDIR)/static venv
+$(FONTDIR)/static/Inter-Displa%.otf: $(UFODIR)/Inter-Displa%.ufo build/features_data | $(FONTDIR)/static venv
+	. $(VENV) ; fontmake -u $< -o otf --output-path $@ --overlaps-backend pathops --production-names
+	. $(VENV) ; python misc/tools/fix-static-display-names.py $@
+
+$(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
 	. $(VENV) ; fontmake -u $< -o otf --output-path $@ --overlaps-backend pathops --production-names
 
-$(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo | $(FONTDIR)/static venv
+
+$(FONTDIR)/static/Inter-Displa%.ttf: $(UFODIR)/Inter-Displa%.ufo build/features_data | $(FONTDIR)/static venv
 	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ --overlaps-backend pathops --production-names
+	. $(VENV) ; python misc/tools/fix-static-display-names.py $@
+
+$(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
+	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ --overlaps-backend pathops --production-names
+
 
 $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hinted venv
 	. $(VENV) ; python -m ttfautohint --no-info "$<" "$@"
 
-$(FONTDIR)/var/_%.var.ttf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
+$(FONTDIR)/var/_%.var.ttf: $(UFODIR)/%.designspace build/features_data | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable -m $< --output-path $@ \
 	              --overlaps-backend pathops --production-names
 
-$(FONTDIR)/var/_%.var.otf: $(UFODIR)/%.designspace | $(FONTDIR)/var venv
+$(FONTDIR)/var/_%.var.otf: $(UFODIR)/%.designspace build/features_data | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ \
 	              --overlaps-backend pathops --production-names
 
