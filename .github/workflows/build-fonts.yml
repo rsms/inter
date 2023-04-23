@@ -81,6 +81,7 @@ jobs:
         if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
         uses: actions/upload-artifact@v3
         with:
+          name: "${{ env.inter_zip }}"
           path: |
             ${{ env.inter_zip }}
             ${{ env.inter_zip_extras }}
