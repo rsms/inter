@@ -27,7 +27,5 @@ sub [
   rlinebelow
 ] t' by t.1;
 
-# sub f f i by f_f_i;
-
 # /f/i -> /f.i/i
 sub f' [f i] by f.i;
