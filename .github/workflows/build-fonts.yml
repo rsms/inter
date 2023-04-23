@@ -82,11 +82,11 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           path: |
-            "${{ env.inter_zip }}"
-            "${{ env.inter_zip_extras }}"
+            ${{ env.inter_zip }}
+            ${{ env.inter_zip_extras }}
           retention-days: 1
 
-      - name: Publish release (if tag)
+      - name: Create release (if tag)
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v1
         with:
@@ -94,5 +94,5 @@ jobs:
           name: "${{ env.inter_version }}"
           body: "This release was automatically created"
           files: |
-            "${{ env.inter_zip }}"
-            "${{ env.inter_zip_extras }}"
+            ${{ env.inter_zip }}
+            ${{ env.inter_zip_extras }}
