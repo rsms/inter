@@ -38,18 +38,17 @@ fi
 
 # tmp dir
 ZIPDIR=build/tmp/zip
-FONTDIR=build/fonts
+if $OPT_EXTRAS; then
+  ZIPDIR=build/tmp/zip-extras
+fi
 
 # convert relative path to absolute if needed
 OUTFILE_ABS=$OUTFILE
 if [[ "$OUTFILE_ABS" != /* ]]; then
-  OUTFILE_ABS=$PWD/$OUTFILE_ABS
+  OUTFILE_ABS="$PWD/$OUTFILE_ABS"
 fi
 
-# cleanup any previous build
-rm -rf "$ZIPDIR" build/tmp/a.zip
-
-# create directories
+rm -rf "$ZIPDIR"
 mkdir -p "$(dirname "$OUTFILE_ABS")" "$ZIPDIR"
 
 cp LICENSE.txt "$ZIPDIR/LICENSE.txt"
