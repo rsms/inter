@@ -2,42 +2,38 @@
 set -e
 cd "$(dirname "$0")/.."
 
-OPT_HELP=false
+OPT_HELP=
 OPT_REVEAL_IN_FINDER=false
+OPT_EXTRAS=false
 OUTFILE=
 
 # parse args
 while [[ $# -gt 0 ]]; do
   case "$1" in
-  -h*|--h*)
-    OPT_HELP=true
-    shift
-    ;;
-  -reveal-in-finder)
-    [ "$(uname -s)" = Darwin ] && OPT_REVEAL_IN_FINDER=true
-    shift
-    ;;
+  -h|-help|--help)   OPT_HELP=0; shift;;
+  -reveal-in-finder) OPT_REVEAL_IN_FINDER=true; shift;;
+  -extras|--extras)  OPT_EXTRAS=true; shift;;
   -*)
     echo "$0: Unknown option $1" >&2
-    OPT_HELP=true
+    OPT_HELP=1
     shift
     ;;
   *)
     if [[ "$OUTFILE" != "" ]] && ! $OPT_HELP; then
       echo "$0: Extra unexpected argument(s) after <outfile>" >&2
-      OPT_HELP=true
+      OPT_HELP=1
     fi
     OUTFILE=$1
     shift
     ;;
   esac
 done
-if $OPT_HELP; then
+if [ -n "$OPT_HELP" ]; then
   echo "Usage: $0 [options] <outfile>"
   echo "Options:"
   echo "  -h, -help          Show help."
   echo "  -reveal-in-finder  After creating the zip file, show it in Finder"
-  exit 1
+  exit $OPT_HELP
 fi
 
 # tmp dir
@@ -51,52 +47,43 @@ if [[ "$OUTFILE_ABS" != /* ]]; then
 fi
 
 # cleanup any previous build
-rm -rf "$ZIPDIR"
-rm -f  build/tmp/a.zip
+rm -rf "$ZIPDIR" build/tmp/a.zip
 
 # create directories
-mkdir -p \
-  "$ZIPDIR/Desktop" \
-  "$ZIPDIR/Desktop with TrueType hints" \
-  "$ZIPDIR/Variable" \
-  "$ZIPDIR/Web"
+mkdir -p "$(dirname "$OUTFILE_ABS")" "$ZIPDIR"
 
-# copy font files
-# ----------------------------------------------------------------------------
+cp LICENSE.txt "$ZIPDIR/LICENSE.txt"
 
-# Desktop
-cp $FONTDIR/static/Inter-*.otf         "$ZIPDIR/Desktop/" &
+if $OPT_EXTRAS; then
+  mkdir -p "$ZIPDIR/OTF" "$ZIPDIR/TTF"
 
-# Hinted for Windows
-cp "misc/dist/about hinted fonts.txt"  "$ZIPDIR/Desktop with TrueType hints/" &
-cp $FONTDIR/static-hinted/Inter-*.ttf  "$ZIPDIR/Desktop with TrueType hints/" &
+  cp misc/dist/extras-readme.txt           "$ZIPDIR/README.txt"
+  cp build/fonts/static/Inter-*.otf        "$ZIPDIR/OTF/" &
+  cp build/fonts/static-hinted/Inter-*.ttf "$ZIPDIR/TTF/" &
+else
+  mkdir -p "$ZIPDIR/Web"
 
-# Variable ("Inter" and "Inter V")
-cp $FONTDIR/var/Inter*.var.ttf         "$ZIPDIR/Variable/" &
+  cp misc/dist/help.txt                           "$ZIPDIR/help.txt"
+  cp build/fonts/static/Inter.ttc                 "$ZIPDIR/Inter.ttc"
+  cp build/fonts/static-hinted/Inter-truetype.ttc "$ZIPDIR/Inter TrueType.ttc"
+  cp build/fonts/var/InterV.var.ttf               "$ZIPDIR/Inter Variable.ttf"
+  cp build/fonts/var/InterV-Italic.var.ttf        "$ZIPDIR/Inter Variable Italic.ttf"
 
-# Web
-cp $FONTDIR/static/Inter-*.woff*       "$ZIPDIR/Web/" &
-cp $FONTDIR/var/Inter.var.woff2        "$ZIPDIR/Web/" &
-cp $FONTDIR/var/Inter-Italic.var.woff2 "$ZIPDIR/Web/" &
-cp misc/dist/inter.css                 "$ZIPDIR/Web/" &
+  cp build/fonts/static/Inter-*.woff2 \
+     build/fonts/var/Inter.var.woff2 \
+     build/fonts/var/Inter-Italic.var.woff2 \
+     misc/dist/inter.css                       "$ZIPDIR/Web/" &
+fi
 
-# ----------------------------------------------------------------------------
-
-# copy misc stuff
-cp misc/dist/install*.txt        "$ZIPDIR/"
-cp LICENSE.txt                   "$ZIPDIR/"
 mkdir -p "$(dirname "$OUTFILE_ABS")"
-
-# wait for processes to finish
 wait
 
-# zip
 pushd "$ZIPDIR" >/dev/null
 zip -q -X -r "$OUTFILE_ABS" *
 popd >/dev/null
 rm -rf "$ZIPDIR"
 
 echo "Created $OUTFILE"
-if $OPT_REVEAL_IN_FINDER && [ -f /usr/bin/open ]; then
+if $OPT_REVEAL_IN_FINDER && [ "$(uname -s)" = Darwin ] && [ -f /usr/bin/open ]; then
   /usr/bin/open --reveal "$OUTFILE"
 fi

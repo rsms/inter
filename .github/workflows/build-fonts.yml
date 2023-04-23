@@ -70,17 +70,20 @@ jobs:
 
       - name: make zip
         run: |
-          ARCHIVE=Inter-${{ env.inter_version }}.zip
-          echo "rsm_archive=$ARCHIVE" >> $GITHUB_ENV
-          make -j zip
-          mv build/release/*.zip "$ARCHIVE"
+          ZIP=Inter-${{ env.inter_version }}.zip
+          ZIP_EXTRAS=Inter-${{ env.inter_version }}-extras.zip
+          echo "inter_zip=$ZIP" >> $GITHUB_ENV
+          echo "inter_zip_extras=$ZIP_EXTRAS" >> $GITHUB_ENV
+          make -j zip zip_extras
+          mv build/release/*.zip ./
 
       - name: Upload archive (unless tag)
         if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
         uses: actions/upload-artifact@v3
         with:
-          name: "${{ env.rsm_archive }}"
-          path: "${{ env.rsm_archive }}"
+          path: |
+            "${{ env.inter_zip }}"
+            "${{ env.inter_zip_extras }}"
           retention-days: 1
 
       - name: Publish release (if tag)
@@ -90,4 +93,6 @@ jobs:
           prerelease: true
           name: "${{ env.inter_version }}"
           body: "This release was automatically created"
-          files: "${{ env.rsm_archive }}"
+          files: |
+            "${{ env.inter_zip }}"
+            "${{ env.inter_zip_extras }}"

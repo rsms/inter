@@ -55,7 +55,6 @@ editable-ufos: build/ufo-editable/.ok
 	@echo "  $(PWD)/build/ufo-editable"
 
 build/ufo-editable/.ok: build/ufo-editable/Inter-Roman.designspace build/ufo-editable/Inter-Italic.designspace
-	@mkdir -p build/ufo-editable
 	@rm -f build/ufo-editable/features
 	@ln -s ../../src/features build/ufo-editable/features
 	$(MAKE) \
@@ -205,9 +204,9 @@ $(FONTDIR)/var/Inter-Italic.var.ttf: $(FONTDIR)/var/inter-roman-and-italic.stamp
 	touch $@
 
 $(FONTDIR)/var/InterV.var.ttf: $(FONTDIR)/var/Inter.var.ttf | venv
-	. $(VENV) ; python misc/tools/rename.py --family "Inter V" -o $@ $<
+	. $(VENV) ; python misc/tools/rename.py --family "Inter Variable" -o $@ $<
 $(FONTDIR)/var/InterV-Italic.var.ttf: $(FONTDIR)/var/Inter-Italic.var.ttf | venv
-	. $(VENV) ; python misc/tools/rename.py --family "Inter V" -o $@ $<
+	. $(VENV) ; python misc/tools/rename.py --family "Inter Variable" -o $@ $<
 
 var: \
 	$(FONTDIR)/var/Inter.var.ttf \
@@ -220,6 +219,88 @@ var_web: \
 	$(FONTDIR)/var/Inter-Italic.var.woff2
 
 web: var_web static_web
+
+static: \
+	$(FONTDIR)/static/Inter.ttc \
+	$(FONTDIR)/static-hinted/Inter-truetype.ttc
+
+$(FONTDIR)/static/Inter.ttc: \
+	$(FONTDIR)/static/Inter-Regular.otf \
+	$(FONTDIR)/static/Inter-Black.otf \
+	$(FONTDIR)/static/Inter-BlackItalic.otf \
+	$(FONTDIR)/static/Inter-Italic.otf \
+	$(FONTDIR)/static/Inter-Thin.otf \
+	$(FONTDIR)/static/Inter-ThinItalic.otf \
+	$(FONTDIR)/static/Inter-Light.otf \
+	$(FONTDIR)/static/Inter-LightItalic.otf \
+	$(FONTDIR)/static/Inter-ExtraLight.otf \
+	$(FONTDIR)/static/Inter-ExtraLightItalic.otf \
+	$(FONTDIR)/static/Inter-Medium.otf \
+	$(FONTDIR)/static/Inter-MediumItalic.otf \
+	$(FONTDIR)/static/Inter-SemiBold.otf \
+	$(FONTDIR)/static/Inter-SemiBoldItalic.otf \
+	$(FONTDIR)/static/Inter-Bold.otf \
+	$(FONTDIR)/static/Inter-BoldItalic.otf \
+	$(FONTDIR)/static/Inter-ExtraBold.otf \
+	$(FONTDIR)/static/Inter-ExtraBoldItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayBlack.otf \
+	$(FONTDIR)/static/Inter-DisplayBlackItalic.otf \
+	$(FONTDIR)/static/Inter-Display.otf \
+	$(FONTDIR)/static/Inter-DisplayItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayThin.otf \
+	$(FONTDIR)/static/Inter-DisplayThinItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayLight.otf \
+	$(FONTDIR)/static/Inter-DisplayLightItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayExtraLight.otf \
+	$(FONTDIR)/static/Inter-DisplayExtraLightItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayMedium.otf \
+	$(FONTDIR)/static/Inter-DisplayMediumItalic.otf \
+	$(FONTDIR)/static/Inter-DisplaySemiBold.otf \
+	$(FONTDIR)/static/Inter-DisplaySemiBoldItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayBold.otf \
+	$(FONTDIR)/static/Inter-DisplayBoldItalic.otf \
+	$(FONTDIR)/static/Inter-DisplayExtraBold.otf \
+	$(FONTDIR)/static/Inter-DisplayExtraBoldItalic.otf
+	. $(VENV) ; python -m fontTools.ttLib.__init__ -o $@ $^
+
+$(FONTDIR)/static-hinted/Inter-truetype.ttc: \
+	$(FONTDIR)/static-hinted/Inter-Regular.ttf \
+	$(FONTDIR)/static-hinted/Inter-Black.ttf \
+	$(FONTDIR)/static-hinted/Inter-BlackItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-Italic.ttf \
+	$(FONTDIR)/static-hinted/Inter-Thin.ttf \
+	$(FONTDIR)/static-hinted/Inter-ThinItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-Light.ttf \
+	$(FONTDIR)/static-hinted/Inter-LightItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-ExtraLight.ttf \
+	$(FONTDIR)/static-hinted/Inter-ExtraLightItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-Medium.ttf \
+	$(FONTDIR)/static-hinted/Inter-MediumItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-SemiBold.ttf \
+	$(FONTDIR)/static-hinted/Inter-SemiBoldItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-Bold.ttf \
+	$(FONTDIR)/static-hinted/Inter-BoldItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-ExtraBold.ttf \
+	$(FONTDIR)/static-hinted/Inter-ExtraBoldItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayBlack.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayBlackItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-Display.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayThin.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayThinItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayLight.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayLightItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraLight.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraLightItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayMedium.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayMediumItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplaySemiBold.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplaySemiBoldItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayBold.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayBoldItalic.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraBold.ttf \
+	$(FONTDIR)/static-hinted/Inter-DisplayExtraBoldItalic.ttf
+	. $(VENV) ; python -m fontTools.ttLib.__init__ -o $@ $^
 
 static_otf: \
 	$(FONTDIR)/static/Inter-Black.otf \
@@ -412,10 +493,11 @@ static_web_hinted: \
 	$(FONTDIR)/static-hinted/Inter-DisplayExtraBoldItalic.woff2
 
 
-all: var web static_otf static_ttf static_ttf_hinted
+all: var static web static_otf static_ttf static_ttf_hinted
 
-.PHONY: all var var_web static_otf static_ttf static_ttf_hinted static_web static_web_hinted \
-        var_web web
+.PHONY: \
+	all var var_web web \
+	static static_otf static_ttf static_ttf_hinted static_web static_web_hinted
 
 # ---------------------------------------------------------------------------------
 # testing
@@ -458,6 +540,10 @@ build/fontbakery-report-static.txt: $(wildcard $(FONTDIR)/static/Inter-*.otf) | 
 zip: all
 	bash misc/makezip2.sh -reveal-in-finder \
 		"build/release/Inter-$(VERSION)-$(shell git rev-parse --short=10 HEAD).zip"
+
+zip_extras: all
+	bash misc/makezip2.sh -extras -reveal-in-finder \
+		"build/release/Inter-$(VERSION)-$(shell git rev-parse --short=10 HEAD)-extras.zip"
 
 zip_beta: \
 		$(FONTDIR)/var/InterV.var.ttf \
@@ -535,47 +621,16 @@ dist_postflight:
 
 INSTALLDIR := $(HOME)/Library/Fonts/Inter
 
-install: install_var \
-  $(INSTALLDIR)/Inter-Black.otf \
-  $(INSTALLDIR)/Inter-BlackItalic.otf \
-  $(INSTALLDIR)/Inter-Regular.otf \
-  $(INSTALLDIR)/Inter-Italic.otf \
-  $(INSTALLDIR)/Inter-Thin.otf \
-  $(INSTALLDIR)/Inter-ThinItalic.otf \
-  $(INSTALLDIR)/Inter-Light.otf \
-  $(INSTALLDIR)/Inter-LightItalic.otf \
-  $(INSTALLDIR)/Inter-ExtraLight.otf \
-  $(INSTALLDIR)/Inter-ExtraLightItalic.otf \
-  $(INSTALLDIR)/Inter-Medium.otf \
-  $(INSTALLDIR)/Inter-MediumItalic.otf \
-  $(INSTALLDIR)/Inter-SemiBold.otf \
-  $(INSTALLDIR)/Inter-SemiBoldItalic.otf \
-  $(INSTALLDIR)/Inter-Bold.otf \
-  $(INSTALLDIR)/Inter-BoldItalic.otf \
-  $(INSTALLDIR)/Inter-ExtraBold.otf \
-  $(INSTALLDIR)/Inter-ExtraBoldItalic.otf \
-  $(INSTALLDIR)/Inter-DisplayBlack.otf \
-  $(INSTALLDIR)/Inter-DisplayBlackItalic.otf \
-  $(INSTALLDIR)/Inter-Display.otf \
-  $(INSTALLDIR)/Inter-DisplayItalic.otf \
-  $(INSTALLDIR)/Inter-DisplayThin.otf \
-  $(INSTALLDIR)/Inter-DisplayThinItalic.otf \
-  $(INSTALLDIR)/Inter-DisplayLight.otf \
-  $(INSTALLDIR)/Inter-DisplayLightItalic.otf \
-  $(INSTALLDIR)/Inter-DisplayExtraLight.otf \
-  $(INSTALLDIR)/Inter-DisplayExtraLightItalic.otf \
-  $(INSTALLDIR)/Inter-DisplayMedium.otf \
-  $(INSTALLDIR)/Inter-DisplayMediumItalic.otf \
-  $(INSTALLDIR)/Inter-DisplaySemiBold.otf \
-  $(INSTALLDIR)/Inter-DisplaySemiBoldItalic.otf \
-  $(INSTALLDIR)/Inter-DisplayBold.otf \
-  $(INSTALLDIR)/Inter-DisplayBoldItalic.otf \
-  $(INSTALLDIR)/Inter-DisplayExtraBold.otf \
-  $(INSTALLDIR)/Inter-DisplayExtraBoldItalic.otf
+install: install_var $(INSTALLDIR)/Inter.ttc
+	@# Remove any old pre ttc fonts
+	rm -rf $(INSTALLDIR)/Inter*.otf
 
 install_var: \
 	$(INSTALLDIR)/InterV.var.ttf \
 	$(INSTALLDIR)/InterV-Italic.var.ttf
+
+$(INSTALLDIR)/%.ttc: $(FONTDIR)/static/%.ttc | $(INSTALLDIR)
+	cp -a $^ $@
 
 $(INSTALLDIR)/%.otf: $(FONTDIR)/static/%.otf | $(INSTALLDIR)
 	cp -a $^ $@
