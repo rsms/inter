@@ -196,11 +196,46 @@ width = 626;
 anchors = (
 {
 name = raccent;
+pos = (499,1490);
+}
+);
+background = {
+shapes = (
+{
+pos = (5,0);
+ref = f;
+}
+);
+};
+layerId = m007;
+name = Display;
+shapes = (
+{
+pos = (3,0);
+ref = _part.t_base;
+},
+{
+closed = 1;
+nodes = (
+(15,1056,l),
+(15,910,l),
+(587,910,l),
+(587,1056,l)
+);
+}
+);
+width = 637;
+},
+{
+anchors = (
+{
+name = raccent;
 pos = (465,1490);
 }
 );
-layerId = m007;
-name = Display;
+associatedMasterId = m007;
+layerId = "9E86C8E7-0BD5-41AD-A627-2083D0D71199";
+name = "Apr 23, 23, 09:02";
 shapes = (
 {
 pos = (-31,0);

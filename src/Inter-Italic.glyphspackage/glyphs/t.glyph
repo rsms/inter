@@ -85,14 +85,22 @@ width = 494;
 anchors = (
 {
 name = raccent;
-pos = (624,1490);
+pos = (658,1490);
 }
 );
+background = {
+shapes = (
+{
+pos = (5,0);
+ref = f;
+}
+);
+};
 layerId = m008;
 name = ital_gen;
 shapes = (
 {
-pos = (-31,0);
+pos = (3,0);
 ref = _part.t_base;
 },
 {
@@ -100,12 +108,12 @@ closed = 1;
 nodes = (
 (102,1056,l),
 (78,910,l),
-(616,910,l),
-(640,1056,l)
+(650,910,l),
+(674,1056,l)
 );
 }
 );
-width = 603;
+width = 637;
 },
 {
 anchors = (

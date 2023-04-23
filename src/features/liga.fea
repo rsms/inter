@@ -1,4 +1,33 @@
 # Standard Ligatures
 # https://learn.microsoft.com/en-us/typography/opentype/spec/features_ko#liga
 
-sub r t' by t.1;
+# Set IgnoreMarks to skip over marks in lookups.
+# For example, if we have /f/acutecomb/i, treat lookup as /f/i
+# https://learn.microsoft.com/en-us/typography/opentype/spec/chapter2#lookup-table
+lookupflag IgnoreMarks;
+
+# /r/t -> /r/t.1
+sub [
+  r
+  rrthook
+  uni024D
+  rturn
+  rturnrthook
+  rfishhookrev
+  rfishhook
+  rdescend
+  racute
+  rcommaaccent
+  rcaron
+  rdblgrave
+  rinvertedbreve
+  rdotaccent
+  rdotbelow
+  rdotbelowmacron
+  rlinebelow
+] t' by t.1;
+
+# sub f f i by f_f_i;
+
+# /f/i -> /f.i/i
+sub f' [f i] by f.i;
