@@ -1,5 +1,9 @@
-# Standard Ligatures
+# Standard Ligatures (also available via ss06)
 # https://learn.microsoft.com/en-us/typography/opentype/spec/features_ko#liga
+#
+# Note: this code is included for both liga and ss06, thus classes like LIGA_L_t
+# are defined in a separate file: liga-classes.fea (classes are not namespaced)
+#
 
 # Set IgnoreMarks to skip over marks in lookups.
 # For example, if we have /f/acutecomb/i, treat lookup as /f/i
@@ -18,15 +22,5 @@ sub f' [
 ] by f.i;
 
 # tt, ft, rt, tf, ff, ft, etc.
-# left side "trigger" glyph for t.1 and f.1 sub
-@LIGA_L_t = [
-  f f.1 fdotaccent feng
-
-  r rrthook uni024D rfishhook rdescend racute rcommaaccent rcaron
-  rdblgrave rinvertedbreve rdotaccent rdotbelow rdotbelowmacron rlinebelow
-
-  t t.1 tpalatalhook trthook tcurl tbar tcedilla tcaron tcommaaccent tdotaccent
-  tdotbelow tlinebelow tcircumflexbelow tdieresis
-];
 sub @LIGA_L_t t' by t.1;
 sub @LIGA_L_t f' by f.1;

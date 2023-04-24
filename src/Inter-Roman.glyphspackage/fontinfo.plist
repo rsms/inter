@@ -2440,7 +2440,8 @@ code = "include(features/calt.fea);
 tag = calt;
 },
 {
-code = "include(features/liga.fea);
+code = "include(features/liga-classes.fea);
+include(features/liga.fea);
 ";
 tag = liga;
 },
@@ -2653,6 +2654,17 @@ value = "";
 }
 );
 tag = ss05;
+},
+{
+code = "include(features/liga.fea);
+";
+labels = (
+{
+language = dflt;
+value = "Force enable ligatures";
+}
+);
+tag = ss06;
 },
 {
 code = "include(features/cv01-one.fea);";
@@ -4239,12 +4251,13 @@ kerningLTR = {
 "@MMK_R_hyphen" = -69;
 "@MMK_R_idotless" = 11;
 "@MMK_R_nine.1" = -20;
+"@MMK_R_o" = -30;
 "@MMK_R_one" = -69;
 "@MMK_R_quotedbl" = -162;
 "@MMK_R_quotedblleft" = -267;
 "@MMK_R_quotedblright" = -209;
 "@MMK_R_registered" = -145;
-"@MMK_R_t" = -69;
+"@MMK_R_t" = -10;
 "@MMK_R_v" = -139;
 "@MMK_R_w" = -139;
 Psi = -81;
@@ -5279,7 +5292,7 @@ underscore = -93;
 "@MMK_R_o" = -11;
 "@MMK_R_quotedblleft" = -81;
 "@MMK_R_s" = -20;
-"@MMK_R_t" = -80;
+"@MMK_R_t" = -40;
 "@MMK_R_zero.subs" = 69;
 less = -58;
 };
@@ -5908,7 +5921,7 @@ m011 = {
 "@MMK_R_quotedblleft" = -267;
 "@MMK_R_quotedblright" = -209;
 "@MMK_R_registered" = -145;
-"@MMK_R_t" = -69;
+"@MMK_R_t" = -40;
 "@MMK_R_v" = -139;
 "@MMK_R_w" = -139;
 Psi = -81;
