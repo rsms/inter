@@ -6,26 +6,27 @@
 # https://learn.microsoft.com/en-us/typography/opentype/spec/chapter2#lookup-table
 lookupflag IgnoreMarks;
 
-# /r/t -> /r/t.1
-sub [
-  r
-  rrthook
-  uni024D
-  rturn
-  rturnrthook
-  rfishhookrev
-  rfishhook
-  rdescend
-  racute
-  rcommaaccent
-  rcaron
-  rdblgrave
-  rinvertedbreve
-  rdotaccent
-  rdotbelow
-  rdotbelowmacron
-  rlinebelow
-] t' by t.1;
+# ffi
+sub f f' i by f.i.1;
 
-# /f/i -> /f.i/i
-sub f' [f i] by f.i;
+# fi
+sub f' [
+  i idotless idotless.double itildebelow ibar igrave iacute iogonek
+  ihookabove idotbelow icyrillic ij i.sc
+
+  j jdotless jdotlessbar uni0249 uni0249.ccmp jcrosstail yotgreek jecyrillic
+] by f.i;
+
+# tt, ft, rt, tf, ff, ft, etc.
+# left side "trigger" glyph for t.1 and f.1 sub
+@LIGA_L_t = [
+  f f.1 fdotaccent feng
+
+  r rrthook uni024D rfishhook rdescend racute rcommaaccent rcaron
+  rdblgrave rinvertedbreve rdotaccent rdotbelow rdotbelowmacron rlinebelow
+
+  t t.1 tpalatalhook trthook tcurl tbar tcedilla tcaron tcommaaccent tdotaccent
+  tdotbelow tlinebelow tcircumflexbelow tdieresis
+];
+sub @LIGA_L_t t' by t.1;
+sub @LIGA_L_t f' by f.1;
