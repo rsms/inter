@@ -59,8 +59,11 @@ var fontFamilyName,
     w(`  font-display: block;`)
     w(`  src:`)
     if (includeLabLocalFiles) {
-      w(`  url("fonts/${filepath}/${filename}.woff2?${fontVersion}") format("woff2"),`)
-      w(`  url("fonts/${filepath}/${filename}.woff?${fontVersion}") format("woff"),`)
+      let filename2 = filename.replace("InterDisplay-", "Inter-Display")
+      if (filename2 == "Inter-DisplayRegular")
+        filename2 = "Inter-Display"
+      w(`  url("fonts/${filepath}/${filename2}.woff2?${fontVersion}") format("woff2"),`)
+      w(`  url("fonts/${filepath}/${filename2}.woff?${fontVersion}") format("woff"),`)
     }
     w(`  url("../font-files/${filename}.woff2?${fontVersion}") format("woff2"),`)
     w(`  url("../font-files/${filename}.woff?${fontVersion}") format("woff2");`)
