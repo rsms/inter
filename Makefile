@@ -11,6 +11,12 @@ export PATH := $(BIN):$(PATH)
 
 default: all
 
+# arguments to fontmake
+FM_ARGS :=
+ifndef DEBUG
+	FM_ARGS += --verbose WARNING
+endif
+
 # ---------------------------------------------------------------------------------
 # intermediate sources
 
@@ -27,7 +33,7 @@ $(UFODIR)/features:
 
 # designspace & master UFOs
 $(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
-	. $(VENV) ; fontmake -o ufo -g $< --designspace-path $@ \
+	. $(VENV) ; fontmake $(FM_ARGS) -o ufo -g $< --designspace-path $@ \
 		  --master-dir $(UFODIR) --instance-dir $(UFODIR)
 	. $(VENV) ; python misc/tools/postprocess-designspace.py $@
 
@@ -40,7 +46,7 @@ $(UFODIR)/Inter-%.ufo: $(UFODIR)/Inter-Roman.designspace | venv
 # designspace & master UFOs (for editing)
 build/ufo-editable/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
 	@mkdir -p $(dir $@)
-	. $(VENV) ; fontmake -o ufo -g $< --designspace-path $@ \
+	. $(VENV) ; fontmake $(FM_ARGS) -o ufo -g $< --designspace-path $@ \
 		  --master-dir $(dir $@) --instance-dir $(dir $@)
 	. $(VENV) ; python misc/tools/postprocess-designspace.py --editable $@
 
@@ -139,39 +145,39 @@ build/ufo-editable/.ok: build/ufo-editable/Inter-Roman.designspace build/ufo-edi
 # products
 
 # arguments to fontmake
-FM_ARGS := \
+FM_ARGS_2 := $(FM_ARGS) \
 	--overlaps-backend pathops \
 	--flatten-components
-ifeq (DEBUG,)
-	FM_ARGS += --production-names --verbose WARNING
+ifndef DEBUG
+	FM_ARGS_2 += --production-names
 else
-	FM_ARGS += --no-production-names
+	FM_ARGS_2 += --no-production-names
 endif
 
 $(FONTDIR)/static/Inter-Displa%.otf: $(UFODIR)/Inter-Displa%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o otf --output-path $@ $(FM_ARGS)
+	. $(VENV) ; fontmake -u $< -o otf --output-path $@ $(FM_ARGS_2)
 	. $(VENV) ; python misc/tools/fix-static-display-names.py $@
 
 $(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o otf --output-path $@ $(FM_ARGS)
+	. $(VENV) ; fontmake -u $< -o otf --output-path $@ $(FM_ARGS_2)
 
 
 $(FONTDIR)/static/Inter-Displa%.ttf: $(UFODIR)/Inter-Displa%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS)
+	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
 	. $(VENV) ; python misc/tools/fix-static-display-names.py $@
 
 $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS)
+	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
 
 
 $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hinted venv
 	. $(VENV) ; python -m ttfautohint --no-info "$<" "$@"
 
 $(FONTDIR)/var/_%.var.ttf: $(UFODIR)/%.designspace build/features_data | $(FONTDIR)/var venv
-	. $(VENV) ; fontmake -o variable -m $< --output-path $@ $(FM_ARGS)
+	. $(VENV) ; fontmake -o variable -m $< --output-path $@ $(FM_ARGS_2)
 
 $(FONTDIR)/var/_%.var.otf: $(UFODIR)/%.designspace build/features_data | $(FONTDIR)/var venv
-	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ $(FM_ARGS)
+	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ $(FM_ARGS_2)
 
 %.woff2: %.ttf | venv
 	. $(VENV) ; misc/tools/woff2 compress -o "$@" "$<"
