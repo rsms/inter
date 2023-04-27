@@ -9,17 +9,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(678,1394,l),
-(678,958,l),
-(850,958,l),
-(850,1394,l)
+(846,1118,l),
+(846,1390,l),
+(676,1390,l),
+(676,1118,l)
 );
 },
 {
+alignment = -1;
 ref = "ge-cy";
 }
 );
-width = 900;
+width = 946;
 },
 {
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -27,17 +28,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(616,1402,l),
-(616,818,l),
-(974,818,l),
-(974,1402,l)
+(924,1118,l),
+(924,1416,l),
+(566,1416,l),
+(566,1118,l)
 );
 },
 {
+alignment = -1;
 ref = "ge-cy";
 }
 );
-width = 1022;
+width = 1008;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -45,10 +47,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(768,1350,l),
-(768,1070,l),
-(814,1070,l),
-(814,1350,l)
+(812,1118,l),
+(812,1374,l),
+(766,1374,l),
+(766,1118,l)
 );
 },
 {
@@ -56,7 +58,7 @@ alignment = -1;
 ref = "ge-cy";
 }
 );
-width = 934;
+width = 892;
 },
 {
 layerId = m007;
@@ -64,46 +66,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(646,1394,l),
-(646,958,l),
-(818,958,l),
-(818,1394,l)
-);
-},
-{
-ref = "ge-cy";
-}
-);
-width = 880;
-},
-{
-layerId = m009;
-shapes = (
-{
-closed = 1;
-nodes = (
-(600,1402,l),
-(600,818,l),
-(958,818,l),
-(958,1402,l)
-);
-},
-{
-ref = "ge-cy";
-}
-);
-width = 990;
-},
-{
-layerId = m011;
-shapes = (
-{
-closed = 1;
-nodes = (
-(704,1350,l),
-(704,1070,l),
-(750,1070,l),
-(750,1350,l)
+(814,1056,l),
+(814,1344,l),
+(644,1344,l),
+(644,1056,l)
 );
 },
 {
@@ -111,11 +77,49 @@ alignment = -1;
 ref = "ge-cy";
 }
 );
-width = 806;
+width = 914;
+},
+{
+layerId = m009;
+shapes = (
+{
+closed = 1;
+nodes = (
+(908,1056,l),
+(908,1344,l),
+(524,1344,l),
+(524,1056,l)
+);
+},
+{
+alignment = -1;
+ref = "ge-cy";
+}
+);
+width = 988;
+},
+{
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(748,1056,l),
+(748,1312,l),
+(702,1312,l),
+(702,1056,l)
+);
+},
+{
+alignment = -1;
+ref = "ge-cy";
+}
+);
+width = 808;
 }
 );
 metricLeft = m;
-metricRight = "ge-cy";
+metricRight = "=ge-cy*2";
 unicode = 1169;
 userData = {
 interface.gridadjust.original = "{'width': 1260, 'leftMargin': 154, 'rightMargin': 110}";
