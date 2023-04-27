@@ -75,6 +75,7 @@ For web pages, there's an official [CDN distribution](https://rsms.me/inter/inte
 - [Mozilla brand](https://mozilla.design/firefox/typography/)
 - [NASA](https://www.nasa.gov/specials/artemis-ii/)
 - [Pixar Presto](https://en.wikipedia.org/wiki/Presto_(animation_software))
+- [Postman](https://www.postman.com)
 - [Unity](https://unity.com/)
 - [Zurich Airport](https://flughafen-zuerich.ch/)
 
