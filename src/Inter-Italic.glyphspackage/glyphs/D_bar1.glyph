@@ -5,31 +5,35 @@ kernRight = D;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+metricLeft = "=+27";
 name = ital_gen;
 shapes = (
 {
+pos = (27,0);
 ref = D;
 },
 {
-pos = (-187,23);
-ref = crossbar;
-}
-);
-width = 1472;
-},
-{
-layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
-name = ital_gen;
-shapes = (
-{
-ref = D;
-},
-{
-pos = (-225,0);
-ref = crossbar;
+pos = (-153,23);
+ref = crossbar.uc;
 }
 );
 width = 1499;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+metricLeft = "=+120";
+name = ital_gen;
+shapes = (
+{
+pos = (120,0);
+ref = D;
+},
+{
+pos = (-94,0);
+ref = crossbar.uc;
+}
+);
+width = 1619;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
@@ -39,53 +43,59 @@ shapes = (
 ref = D;
 },
 {
-pos = (-167,11);
-ref = crossbar;
+pos = (-150,11);
+ref = crossbar.uc;
 }
 );
 width = 1461;
 },
 {
 layerId = m008;
+metricLeft = "=+69";
 name = ital_gen;
 shapes = (
 {
+pos = (69,0);
 ref = D;
 },
 {
-pos = (-206,23);
-ref = crossbar;
+pos = (-143,23);
+ref = crossbar.uc;
 }
 );
-width = 1413;
+width = 1482;
 },
 {
 layerId = m010;
+metricLeft = "=+123";
 name = ital_gen;
 shapes = (
 {
+pos = (123,0);
 ref = D;
 },
 {
-pos = (-208,0);
-ref = crossbar;
+pos = (-119,0);
+ref = crossbar.uc;
 }
 );
-width = 1456;
+width = 1579;
 },
 {
 layerId = m012;
+metricLeft = "=+18";
 name = ital_gen;
 shapes = (
 {
+pos = (18,0);
 ref = D;
 },
 {
-pos = (-166,11);
-ref = crossbar;
+pos = (-194,11);
+ref = crossbar.uc;
 }
 );
-width = 1339;
+width = 1357;
 }
 );
 unicode = 393;

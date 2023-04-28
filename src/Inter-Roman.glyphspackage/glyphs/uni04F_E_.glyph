@@ -10,8 +10,13 @@ shapes = (
 ref = X;
 },
 {
-pos = (246,23);
-ref = _part.crossbar_compact;
+closed = 1;
+nodes = (
+(1225,677,l),
+(1225,811,l),
+(187,811,l),
+(187,677,l)
+);
 }
 );
 width = 1412;
@@ -23,8 +28,13 @@ shapes = (
 ref = X;
 },
 {
-pos = (249,24);
-ref = _part.crossbar_compact;
+closed = 1;
+nodes = (
+(1417,651,l),
+(1417,839,l),
+(123,839,l),
+(123,651,l)
+);
 }
 );
 width = 1540;
@@ -36,8 +46,13 @@ shapes = (
 ref = X;
 },
 {
-pos = (238,22);
-ref = _part.crossbar_compact;
+closed = 1;
+nodes = (
+(1142,722,l),
+(1142,766,l),
+(180,766,l),
+(180,722,l)
+);
 }
 );
 width = 1322;
@@ -49,8 +64,13 @@ shapes = (
 ref = X;
 },
 {
-pos = (194,24);
-ref = _part.crossbar_compact;
+closed = 1;
+nodes = (
+(1159,671,l),
+(1159,817,l),
+(125,817,l),
+(125,671,l)
+);
 }
 );
 width = 1284;
@@ -62,8 +82,13 @@ shapes = (
 ref = X;
 },
 {
-pos = (206,24);
-ref = _part.crossbar_compact;
+closed = 1;
+nodes = (
+(1344,632,l),
+(1344,856,l),
+(108,856,l),
+(108,632,l)
+);
 }
 );
 width = 1452;
@@ -75,12 +100,19 @@ shapes = (
 ref = X;
 },
 {
-pos = (210,22);
-ref = _part.crossbar_compact;
+closed = 1;
+nodes = (
+(1039,722,l),
+(1039,766,l),
+(99,766,l),
+(99,722,l)
+);
 }
 );
 width = 1138;
 }
 );
+metricLeft = X;
+metricRight = X;
 unicode = 1278;
 }

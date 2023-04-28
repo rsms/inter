@@ -5,18 +5,7 @@ layers = (
 anchors = (
 {
 name = _cross;
-pos = (487,721);
-}
-);
-guides = (
-{
-orientation = center;
-angle = 80.6;
-pos = (449,1168);
-},
-{
-orientation = center;
-pos = (117,992);
+pos = (391,745);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
@@ -25,20 +14,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(796,654,l),
-(818,788,l),
-(178,788,l),
-(156,654,l)
+(700,678,l),
+(722,812,l),
+(82,812,l),
+(60,678,l)
 );
 }
 );
-width = 920;
+width = 720;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (546,720);
+pos = (462,745);
 }
 );
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
@@ -47,20 +36,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(929,672,l),
-(945,768,l),
-(163,768,l),
-(147,672,l)
+(844,689,l),
+(863,801,l),
+(81,801,l),
+(62,689,l)
 );
 }
 );
-width = 1038;
+width = 863;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (451,722);
+pos = (299,745);
 }
 );
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
@@ -69,31 +58,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(726,698,l),
-(733,744,l),
-(179,744,l),
-(172,698,l)
+(525,723,l),
+(532,767,l),
+(74,767,l),
+(67,723,l)
 );
 }
 );
-width = 851;
+width = 538;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (480,720);
-}
-);
-guides = (
-{
-orientation = center;
-angle = 80.6;
-pos = (-4233,1168);
-},
-{
-orientation = center;
-pos = (-4565,992);
+pos = (380,745);
 }
 );
 layerId = m008;
@@ -102,26 +80,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(788,647,l),
-(812,793,l),
-(172,793,l),
-(148,647,l)
+(672,672,l),
+(696,818,l),
+(88,818,l),
+(64,672,l)
 );
 }
 );
-width = 896;
+width = 688;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (551,720);
-}
-);
-guides = (
-{
-angle = 80.6;
-pos = (424,928);
+pos = (435,745);
 }
 );
 layerId = m010;
@@ -130,20 +102,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(934,672,l),
-(950,768,l),
-(168,768,l),
-(152,672,l)
+(782,673,l),
+(806,817,l),
+(88,817,l),
+(64,673,l)
 );
 }
 );
-width = 1038;
+width = 798;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (387,722);
+pos = (281,745);
 }
 );
 layerId = m012;
@@ -152,16 +124,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(662,698,l),
-(669,744,l),
-(115,744,l),
-(108,698,l)
+(483,723,l),
+(490,767,l),
+(80,767,l),
+(73,723,l)
 );
 }
 );
-width = 723;
+width = 491;
 }
 );
+metricLeft = "=40";
+metricRight = "=40";
 note = "based on /crossbar with thinner stem for wght=900";
 userData = {
 "interface.width-adjustments" = (

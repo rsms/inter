@@ -5,29 +5,31 @@ kernRight = J;
 layers = (
 {
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+metricRight = "=+70";
 shapes = (
 {
 ref = J;
 },
 {
-pos = (380,139);
-ref = crossbar;
+pos = (480,139);
+ref = _part.crossbar_compact;
 }
 );
-width = 1110;
+width = 1180;
 },
 {
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+metricRight = "=+100";
 shapes = (
 {
 ref = J;
 },
 {
-pos = (384,139);
-ref = crossbar;
+pos = (473,139);
+ref = _part.crossbar_compact;
 }
 );
-width = 1204;
+width = 1304;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -36,52 +38,56 @@ shapes = (
 ref = J;
 },
 {
-pos = (384,139);
-ref = crossbar;
+pos = (539,139);
+ref = _part.crossbar_compact;
 }
 );
 width = 1064;
 },
 {
 layerId = m007;
+metricRight = "=+80";
 shapes = (
 {
 ref = J;
 },
 {
-pos = (360,139);
-ref = crossbar;
+pos = (464,139);
+ref = _part.crossbar_compact;
 }
 );
-width = 1046;
+width = 1126;
 },
 {
 layerId = m009;
+metricRight = "=+90";
 shapes = (
 {
 ref = J;
 },
 {
-pos = (386,139);
-ref = crossbar;
+pos = (483,139);
+ref = _part.crossbar_compact;
 }
 );
-width = 1170;
+width = 1260;
 },
 {
 layerId = m011;
+metricRight = "=+13";
 shapes = (
 {
 ref = J;
 },
 {
-pos = (384,139);
-ref = crossbar;
+pos = (499,139);
+ref = _part.crossbar_compact;
 }
 );
-width = 936;
+width = 949;
 }
 );
+note = "RSB should match RSB of /Istroke";
 unicode = 584;
 userData = {
 interface.gridadjust.original = "{'width': 1683.0, 'leftMargin': 128, 'rightMargin': 41.0}";

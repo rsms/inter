@@ -11,7 +11,7 @@ ref = B;
 },
 {
 alignment = 1;
-pos = (-190,-302);
+pos = (-20,-326);
 ref = _part.crossbar_compact;
 }
 );
@@ -19,17 +19,19 @@ width = 1332;
 },
 {
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+metricLeft = "=+80";
 shapes = (
 {
+pos = (80,0);
 ref = B;
 },
 {
 alignment = 1;
-pos = (-221,-240);
+pos = (-29,-265);
 ref = _part.crossbar_compact;
 }
 );
-width = 1368;
+width = 1448;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -39,7 +41,7 @@ ref = B;
 },
 {
 alignment = 1;
-pos = (-168,-332);
+pos = (27,-355);
 ref = _part.crossbar_compact;
 }
 );
@@ -47,31 +49,35 @@ width = 1312;
 },
 {
 layerId = m007;
+metricLeft = "=+30";
 shapes = (
 {
+pos = (30,0);
 ref = B;
 },
 {
 alignment = 1;
-pos = (-210,-301);
+pos = (-42,-326);
 ref = _part.crossbar_compact;
 }
 );
-width = 1268;
+width = 1298;
 },
 {
 layerId = m009;
+metricLeft = "=+60";
 shapes = (
 {
+pos = (60,0);
 ref = B;
 },
 {
 alignment = 1;
-pos = (-237,-261);
+pos = (-27,-286);
 ref = _part.crossbar_compact;
 }
 );
-width = 1328;
+width = 1388;
 },
 {
 layerId = m011;
@@ -81,7 +87,7 @@ ref = B;
 },
 {
 alignment = 1;
-pos = (-170,-332);
+pos = (-31,-355);
 ref = _part.crossbar_compact;
 }
 );
@@ -90,6 +96,7 @@ width = 1182;
 );
 metricLeft = t;
 metricRight = B;
+note = "effective LSB should be a little less than LSB of /t";
 unicode = 579;
 userData = {
 interface.gridadjust.original = "{'width': 1851, 'leftMargin': 41, 'rightMargin': 100}";

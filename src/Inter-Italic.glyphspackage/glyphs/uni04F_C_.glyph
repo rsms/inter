@@ -5,6 +5,82 @@ kernRight = X;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+metricRight = "=+40";
+name = ital_gen;
+shapes = (
+{
+ref = X;
+},
+{
+pos = (893,0);
+ref = _part.cyrtic_hook;
+}
+);
+width = 1356;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+metricRight = "=+160";
+name = ital_gen;
+shapes = (
+{
+ref = X;
+},
+{
+pos = (987,0);
+ref = _part.cyrtic_hook;
+}
+);
+width = 1724;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+metricRight = "=+20";
+name = ital_gen;
+shapes = (
+{
+ref = X;
+},
+{
+pos = (924,0);
+ref = _part.cyrtic_hook;
+}
+);
+width = 1218;
+},
+{
+layerId = m008;
+metricRight = "=+80";
+name = ital_gen;
+shapes = (
+{
+ref = X;
+},
+{
+pos = (876,0);
+ref = _part.cyrtic_hook;
+}
+);
+width = 1333;
+},
+{
+layerId = m010;
+metricRight = "=+160";
+name = ital_gen;
+shapes = (
+{
+ref = X;
+},
+{
+pos = (941,0);
+ref = _part.cyrtic_hook;
+}
+);
+width = 1684;
+},
+{
+layerId = m012;
+metricRight = "=+60";
 name = ital_gen;
 shapes = (
 {
@@ -15,77 +91,7 @@ pos = (864,0);
 ref = _part.cyrtic_hook;
 }
 );
-width = 1316;
-},
-{
-layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
-name = ital_gen;
-shapes = (
-{
-ref = X;
-},
-{
-pos = (869,0);
-ref = _part.cyrtic_hook;
-}
-);
-width = 1564;
-},
-{
-layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
-name = ital_gen;
-shapes = (
-{
-ref = X;
-},
-{
-pos = (848,0);
-ref = _part.cyrtic_hook;
-}
-);
-width = 1198;
-},
-{
-layerId = m008;
-name = ital_gen;
-shapes = (
-{
-ref = X;
-},
-{
-pos = (832,0);
-ref = _part.cyrtic_hook;
-}
-);
-width = 1253;
-},
-{
-layerId = m010;
-name = ital_gen;
-shapes = (
-{
-ref = X;
-},
-{
-pos = (902,0);
-ref = _part.cyrtic_hook;
-}
-);
-width = 1524;
-},
-{
-layerId = m012;
-name = ital_gen;
-shapes = (
-{
-ref = X;
-},
-{
-pos = (855,0);
-ref = _part.cyrtic_hook;
-}
-);
-width = 1070;
+width = 1130;
 }
 );
 unicode = 1276;

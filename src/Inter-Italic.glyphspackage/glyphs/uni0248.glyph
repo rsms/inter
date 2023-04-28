@@ -5,31 +5,33 @@ kernRight = J;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+metricRight = "=+70";
 name = ital_gen;
 shapes = (
 {
 ref = J;
 },
 {
-pos = (403,139);
-ref = crossbar;
+pos = (503,139);
+ref = _part.crossbar_compact;
 }
 );
-width = 1110;
+width = 1180;
 },
 {
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+metricRight = "=+100";
 name = ital_gen;
 shapes = (
 {
 ref = J;
 },
 {
-pos = (407,139);
-ref = crossbar;
+pos = (496,139);
+ref = _part.crossbar_compact;
 }
 );
-width = 1204;
+width = 1304;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
@@ -39,53 +41,56 @@ shapes = (
 ref = J;
 },
 {
-pos = (407,139);
-ref = crossbar;
+pos = (563,139);
+ref = _part.crossbar_compact;
 }
 );
 width = 1064;
 },
 {
 layerId = m008;
+metricRight = "=+80";
 name = ital_gen;
 shapes = (
 {
 ref = J;
 },
 {
-pos = (383,139);
-ref = crossbar;
+pos = (487,139);
+ref = _part.crossbar_compact;
 }
 );
-width = 1046;
+width = 1126;
 },
 {
 layerId = m010;
+metricRight = "=+90";
 name = ital_gen;
 shapes = (
 {
 ref = J;
 },
 {
-pos = (409,139);
-ref = crossbar;
+pos = (506,139);
+ref = _part.crossbar_compact;
 }
 );
-width = 1170;
+width = 1260;
 },
 {
 layerId = m012;
+metricRight = "=+13";
 name = ital_gen;
 shapes = (
 {
 ref = J;
 },
 {
-pos = (407,139);
-ref = crossbar;
+pos = (522,139);
+ref = _part.crossbar_compact;
 }
 );
-width = 936;
+width = 949;
 }
 );
 unicode = 584;

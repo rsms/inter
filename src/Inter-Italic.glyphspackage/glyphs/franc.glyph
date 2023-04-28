@@ -3,31 +3,35 @@ glyphname = franc;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+metricLeft = "=+27";
 name = ital_gen;
 shapes = (
 {
+pos = (27,0);
 ref = F;
 },
 {
-pos = (-256,-395);
-ref = crossbar;
+pos = (-129,-395);
+ref = _part.crossbar_compact;
 }
 );
-width = 1202;
+width = 1229;
 },
 {
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+metricLeft = "=+80";
 name = ital_gen;
 shapes = (
 {
+pos = (80,0);
 ref = F;
 },
 {
-pos = (-306,-495);
-ref = crossbar;
+pos = (-136,-495);
+ref = _part.crossbar_compact;
 }
 );
-width = 1196;
+width = 1276;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
@@ -37,39 +41,43 @@ shapes = (
 ref = F;
 },
 {
-pos = (-225,-335);
-ref = crossbar;
+pos = (-69,-335);
+ref = _part.crossbar_compact;
 }
 );
 width = 1196;
 },
 {
 layerId = m008;
+metricLeft = "=+69";
 name = ital_gen;
 shapes = (
 {
+pos = (69,0);
 ref = F;
 },
 {
-pos = (-275,-395);
-ref = crossbar;
+pos = (-102,-395);
+ref = _part.crossbar_compact;
 }
 );
-width = 1139;
+width = 1205;
 },
 {
 layerId = m010;
+metricLeft = "=+50";
 name = ital_gen;
 shapes = (
 {
+pos = (50,0);
 ref = F;
 },
 {
-pos = (-298,-495);
-ref = crossbar;
+pos = (-151,-495);
+ref = _part.crossbar_compact;
 }
 );
-width = 1193;
+width = 1243;
 },
 {
 layerId = m012;
@@ -79,11 +87,11 @@ shapes = (
 ref = F;
 },
 {
-pos = (-224,-335);
-ref = crossbar;
+pos = (-109,-335);
+ref = _part.crossbar_compact;
 }
 );
-width = 1074;
+width = 1091;
 }
 );
 unicode = 8355;
