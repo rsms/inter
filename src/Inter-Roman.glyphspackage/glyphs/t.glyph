@@ -118,14 +118,14 @@ width = 744;
 anchors = (
 {
 name = raccent;
-pos = (714,1490);
+pos = (730,1490);
 }
 );
 layerId = m009;
 name = "Black Display";
 shapes = (
 {
-pos = (24,0);
+pos = (40,0);
 ref = _part.t_base;
 },
 {
@@ -133,12 +133,12 @@ closed = 1;
 nodes = (
 (20,1056,l),
 (20,752,l),
-(800,752,l),
-(800,1056,l)
+(816,752,l),
+(816,1056,l)
 );
 }
 );
-width = 840;
+width = 856;
 },
 {
 anchors = (
@@ -252,6 +252,33 @@ nodes = (
 }
 );
 width = 603;
+},
+{
+anchors = (
+{
+name = raccent;
+pos = (714,1490);
+}
+);
+associatedMasterId = m009;
+layerId = "92A3CA67-A0B2-48AD-82F5-711E27AB7F42";
+name = "May 2, 23, 10:24";
+shapes = (
+{
+pos = (24,0);
+ref = _part.t_base;
+},
+{
+closed = 1;
+nodes = (
+(20,1056,l),
+(20,752,l),
+(800,752,l),
+(800,1056,l)
+);
+}
+);
+width = 840;
 }
 );
 unicode = 116;
