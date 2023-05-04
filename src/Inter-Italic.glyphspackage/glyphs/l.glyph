@@ -121,41 +121,39 @@ width = 442;
 anchors = (
 {
 name = bottom;
-pos = (125,0);
+pos = (123,0);
 },
 {
 name = bottomr;
-pos = (211,0);
+pos = (209,0);
 },
 {
 name = cross;
-pos = (252,768);
+pos = (250,768);
 },
 {
 name = raccent;
-pos = (601,1490);
+pos = (599,1490);
 },
 {
 name = top;
-pos = (402,1676);
+pos = (400,1676);
 }
 );
 layerId = m008;
-metricLeft = "=H-20";
-metricRight = "=H-20";
 name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(287.668,1490,l),
-(41,0,l),
-(211,0,l),
-(457.668,1490,l)
+(286,1490,l),
+(39,0,l),
+(209,0,l),
+(456,1490,l)
 );
 }
 );
-width = 427;
+width = 423;
 },
 {
 anchors = (
@@ -234,7 +232,8 @@ nodes = (
 width = 315;
 }
 );
-metricRight = "=|l";
+metricLeft = n;
+metricRight = "=|n";
 unicode = 108;
 userData = {
 "interface.width-adjustments" = (

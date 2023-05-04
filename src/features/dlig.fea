@@ -1,6 +1,11 @@
 # Discretionary Ligatures
 # https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#dlig
 
+# Set IgnoreMarks to skip over marks in lookups.
+# For example, if we have /f/acutecomb/i, treat lookup as /f/i
+# https://learn.microsoft.com/en-us/typography/opentype/spec/chapter2#lookup-table
+lookupflag IgnoreMarks;
+
 sub exclam question by interrobang;
 sub question exclam by interrobang;
 sub exclamdown questiondown by invertedinterrobang;
