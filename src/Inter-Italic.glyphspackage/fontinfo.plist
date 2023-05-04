@@ -2226,31 +2226,19 @@ code = "include(features/ccmp.fea);
 tag = ccmp;
 },
 {
+automatic = 1;
 code = "feature locl;
-feature frac;
+feature sinf;
 feature numr;
 feature dnom;
+feature frac;
 feature case;
-feature calt;
-feature tnum;
 feature pnum;
-feature zero;
-feature sups;
+feature tnum;
 feature subs;
 feature ordn;
-feature salt;
-feature ss01;
-feature ss02;
-feature cv01;
-feature cv02;
-feature cv03;
-feature cv04;
-feature cv05;
-feature cv07;
-feature cv08;
-feature cv09;
-feature cv10;
-feature cv11;
+feature c2sc;
+feature smcp;
 ";
 tag = aalt;
 },
