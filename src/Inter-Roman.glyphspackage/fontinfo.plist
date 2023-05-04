@@ -6027,7 +6027,6 @@ underscore = -69;
 "@MMK_R_idieresis" = 151;
 "@MMK_R_iotadieresisgreek" = 140;
 "@MMK_R_parenright" = 69;
-"@MMK_R_v" = 10;
 Dcroat = 81;
 Iogonek = 69;
 Istroke = 81;
@@ -6732,6 +6731,21 @@ logicalnot = -139;
 };
 "@MMK_L_k.sups" = {
 "@MMK_R_c.sups" = -31;
+};
+"@MMK_L_ltail" = {
+"@MMK_R_asciicircum" = -45;
+"@MMK_R_eight" = -20;
+"@MMK_R_f" = -45;
+"@MMK_R_four" = -45;
+"@MMK_R_hyphen" = -45;
+"@MMK_R_nine.1" = -45;
+"@MMK_R_o" = -30;
+"@MMK_R_quotedbl" = -45;
+"@MMK_R_quotedblright" = -45;
+"@MMK_R_six" = -40;
+"@MMK_R_six.1" = -40;
+"@MMK_R_t" = -45;
+"@MMK_R_w" = -45;
 };
 "@MMK_L_nine" = {
 "@MMK_R_Y" = -69;
@@ -7502,7 +7516,7 @@ iinvertedbreve = 81;
 itilde = 81;
 };
 l.ss02 = {
-"@MMK_R_v" = -30;
+"@MMK_R_v" = -45;
 };
 lacute = {
 "@MMK_R_idblgrave" = 81;
@@ -7586,6 +7600,9 @@ pi = {
 "@MMK_R_deltagreek" = -69;
 "@MMK_R_quotedblleft" = -81;
 "@MMK_R_zero.subs" = 69;
+};
+qhook = {
+"@MMK_R_t" = 0;
 };
 question = {
 "@MMK_R_A" = -128;
@@ -7717,9 +7734,6 @@ zeta = {
 "@MMK_R_iotadieresisgreek" = -69;
 Psi = -93;
 underscore = 139;
-};
-qhook = {
-"@MMK_R_t" = 0;
 };
 };
 "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265" = {
@@ -8504,6 +8518,21 @@ logicalnot = -139;
 "@MMK_L_k.sups" = {
 "@MMK_R_c.sups" = -31;
 };
+"@MMK_L_ltail" = {
+"@MMK_R_asciicircum" = -60;
+"@MMK_R_eight" = -20;
+"@MMK_R_f" = -50;
+"@MMK_R_four" = -50;
+"@MMK_R_hyphen" = -60;
+"@MMK_R_nine.1" = -50;
+"@MMK_R_o" = -30;
+"@MMK_R_quotedbl" = -60;
+"@MMK_R_quotedblright" = -60;
+"@MMK_R_six" = -20;
+"@MMK_R_six.1" = -30;
+"@MMK_R_t" = -50;
+"@MMK_R_w" = -50;
+};
 "@MMK_L_nine" = {
 "@MMK_R_Y" = -69;
 "@MMK_R_comma" = -52;
@@ -8846,6 +8875,7 @@ uni023E = -151;
 };
 "@MMK_L_v" = {
 "@MMK_R_A" = -139;
+"@MMK_R_B" = 10;
 "@MMK_R_J" = -128;
 "@MMK_R_T" = -69;
 "@MMK_R_Y" = -69;
@@ -9239,7 +9269,7 @@ iinvertedbreve = 81;
 itilde = 81;
 };
 l.ss02 = {
-"@MMK_R_v" = -50;
+"@MMK_R_v" = -40;
 };
 lacute = {
 "@MMK_R_idblgrave" = 81;
@@ -9299,6 +9329,9 @@ pi = {
 "@MMK_R_deltagreek" = -69;
 "@MMK_R_quotedblleft" = -81;
 "@MMK_R_zero.subs" = 69;
+};
+qhook = {
+"@MMK_R_t" = 0;
 };
 question = {
 "@MMK_R_A" = -128;
@@ -9417,9 +9450,6 @@ zeta = {
 "@MMK_R_iotadieresisgreek" = -69;
 Psi = -93;
 underscore = 139;
-};
-qhook = {
-"@MMK_R_t" = 0;
 };
 };
 m007 = {
@@ -10226,6 +10256,22 @@ logicalnot = -139;
 "@MMK_L_k.sups" = {
 "@MMK_R_c.sups" = -31;
 };
+"@MMK_L_ltail" = {
+"@MMK_R_asciicircum" = -48;
+"@MMK_R_eight" = -20;
+"@MMK_R_f" = -48;
+"@MMK_R_four" = -40;
+"@MMK_R_hyphen" = -48;
+"@MMK_R_nine.1" = -48;
+"@MMK_R_o" = -20;
+"@MMK_R_quotedbl" = -48;
+"@MMK_R_quotedblright" = -48;
+"@MMK_R_six" = -30;
+"@MMK_R_six.1" = -20;
+"@MMK_R_t" = -48;
+"@MMK_R_v" = -38;
+"@MMK_R_w" = -48;
+};
 "@MMK_L_nine" = {
 "@MMK_R_Y" = -69;
 "@MMK_R_comma" = -52;
@@ -10574,6 +10620,7 @@ uni023E = -151;
 };
 "@MMK_L_v" = {
 "@MMK_R_A" = -139;
+"@MMK_R_B" = 10;
 "@MMK_R_J" = -128;
 "@MMK_R_T" = -69;
 "@MMK_R_Y" = -69;
@@ -10986,9 +11033,6 @@ jcircumflex = {
 iinvertedbreve = 81;
 itilde = 81;
 };
-l.ss02 = {
-"@MMK_R_v" = -35;
-};
 lacute = {
 "@MMK_R_idblgrave" = 81;
 };
@@ -11053,6 +11097,9 @@ pi = {
 "@MMK_R_deltagreek" = -69;
 "@MMK_R_quotedblleft" = -81;
 "@MMK_R_zero.subs" = 69;
+};
+qhook = {
+"@MMK_R_t" = 0;
 };
 question = {
 "@MMK_R_A" = -128;
@@ -11172,9 +11219,6 @@ zeta = {
 "@MMK_R_iotadieresisgreek" = -69;
 Psi = -93;
 underscore = 139;
-};
-qhook = {
-"@MMK_R_t" = 0;
 };
 };
 "5C20EF92-B63D-42A8-8878-93C2863E0093" = {
@@ -11969,6 +12013,20 @@ less = -174;
 "@MMK_L_k.sups" = {
 "@MMK_R_c.sups" = -31;
 "@MMK_R_v.sups" = 19;
+};
+"@MMK_L_ltail" = {
+"@MMK_R_asciicircum" = -80;
+"@MMK_R_eight" = -20;
+"@MMK_R_f" = -80;
+"@MMK_R_hyphen" = -80;
+"@MMK_R_nine.1" = -80;
+"@MMK_R_o" = -50;
+"@MMK_R_quotedbl" = -80;
+"@MMK_R_quotedblright" = -80;
+"@MMK_R_six" = -50;
+"@MMK_R_six.1" = -10;
+"@MMK_R_t" = -80;
+"@MMK_R_w" = -80;
 };
 "@MMK_L_nine" = {
 "@MMK_R_Y" = -69;
@@ -12775,6 +12833,9 @@ pi = {
 "@MMK_R_deltagreek" = -69;
 "@MMK_R_quotedblleft" = -81;
 };
+qhook = {
+"@MMK_R_t" = 0;
+};
 question = {
 "@MMK_R_A" = -128;
 };
@@ -12901,9 +12962,6 @@ zeta = {
 Psi = -93;
 underscore = 139;
 };
-qhook = {
-"@MMK_R_t" = 0;
-};
 };
 m009 = {
 "@MMK_L_A" = {
@@ -13018,7 +13076,7 @@ underscore = -69;
 "@MMK_R_iotadieresisgreek" = 90;
 "@MMK_R_parenright" = 69;
 "@MMK_R_t" = 10;
-"@MMK_R_v" = 30;
+"@MMK_R_v" = 20;
 Dcroat = 69;
 Istroke = 69;
 };
@@ -13687,6 +13745,21 @@ less = -174;
 "@MMK_R_c.sups" = -31;
 "@MMK_R_v.sups" = 19;
 };
+"@MMK_L_ltail" = {
+"@MMK_R_asciicircum" = -60;
+"@MMK_R_eight" = -20;
+"@MMK_R_f" = -60;
+"@MMK_R_four" = -30;
+"@MMK_R_hyphen" = -60;
+"@MMK_R_nine.1" = -60;
+"@MMK_R_o" = -40;
+"@MMK_R_quotedbl" = -60;
+"@MMK_R_quotedblright" = -60;
+"@MMK_R_six" = -60;
+"@MMK_R_t" = -60;
+"@MMK_R_w" = -60;
+nine = -30;
+};
 "@MMK_L_nine" = {
 "@MMK_R_Y" = -69;
 "@MMK_R_comma" = -66;
@@ -14034,6 +14107,7 @@ uni023E = -151;
 };
 "@MMK_L_v" = {
 "@MMK_R_A" = -139;
+"@MMK_R_B" = 20;
 "@MMK_R_J" = -128;
 "@MMK_R_T" = -69;
 "@MMK_R_Y" = -69;
@@ -14414,7 +14488,7 @@ jcircumflex = {
 "@MMK_R_idblgrave" = 81;
 };
 l.ss02 = {
-"@MMK_R_v" = -50;
+"@MMK_R_v" = -40;
 };
 lacute = {
 "@MMK_R_idblgrave" = 81;
@@ -14471,6 +14545,9 @@ percent = {
 pi = {
 "@MMK_R_deltagreek" = -69;
 "@MMK_R_quotedblleft" = -81;
+};
+qhook = {
+"@MMK_R_t" = 0;
 };
 question = {
 "@MMK_R_A" = -128;
@@ -14590,9 +14667,6 @@ zeta = {
 "@MMK_R_iotadieresisgreek" = -69;
 Psi = -93;
 underscore = 139;
-};
-qhook = {
-"@MMK_R_t" = 0;
 };
 };
 };
