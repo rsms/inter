@@ -2221,11 +2221,6 @@ name = Subs;
 );
 features = (
 {
-code = "include(features/ccmp.fea);
-";
-tag = ccmp;
-},
-{
 automatic = 1;
 code = "feature locl;
 feature sinf;
@@ -2241,6 +2236,11 @@ feature c2sc;
 feature smcp;
 ";
 tag = aalt;
+},
+{
+code = "include(features/ccmp.fea);
+";
+tag = ccmp;
 },
 {
 automatic = 1;
@@ -2675,6 +2675,11 @@ code = "include(features/cv05-l-tail.fea);";
 tag = cv05;
 },
 {
+code = "include(features/cv06-u.fea);
+";
+tag = cv06;
+},
+{
 code = "include(features/cv07-germandbls.fea);";
 tag = cv07;
 },
@@ -2689,11 +2694,6 @@ tag = cv09;
 {
 code = "include(features/cv10-g-spur.fea);";
 tag = cv10;
-},
-{
-code = "include(features/cv12-u.fea);
-";
-tag = cv12;
 },
 {
 automatic = 1;
