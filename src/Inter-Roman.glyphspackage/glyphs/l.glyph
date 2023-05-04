@@ -130,44 +130,42 @@ width = 442;
 anchors = (
 {
 name = bottom;
-pos = (212,0);
+pos = (210,0);
 },
 {
 name = bottomr;
-pos = (298,0);
+pos = (296,0);
 },
 {
 name = centerr;
-pos = (298,745);
+pos = (296,745);
 },
 {
 name = cross;
-pos = (212,768);
+pos = (210,768);
 },
 {
 name = raccent;
-pos = (442,1490);
+pos = (440,1490);
 },
 {
 name = top;
-pos = (213,1490);
+pos = (211,1490);
 }
 );
 layerId = m007;
-metricLeft = "=H-20";
-metricRight = "=H-20";
 shapes = (
 {
 closed = 1;
 nodes = (
-(128,1490,l),
-(128,0,l),
-(298,0,l),
-(298,1490,l)
+(126,1490,l),
+(126,0,l),
+(296,0,l),
+(296,1490,l)
 );
 }
 );
-width = 426;
+width = 422;
 },
 {
 anchors = (
@@ -252,6 +250,7 @@ nodes = (
 width = 314;
 }
 );
+metricLeft = n;
 metricRight = "=|l";
 unicode = 108;
 userData = {
