@@ -7,6 +7,7 @@ layers = (
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
+alignment = -1;
 ref = g;
 },
 {
@@ -14,12 +15,13 @@ pos = (650,-181);
 ref = _part.crossbar_compact;
 }
 );
-width = 1248;
+width = 1380;
 },
 {
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+alignment = -1;
 ref = g;
 },
 {
@@ -27,12 +29,13 @@ pos = (589,-177);
 ref = _part.crossbar_compact;
 }
 );
-width = 1326;
+width = 1453;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
+alignment = -1;
 ref = g;
 },
 {
@@ -40,38 +43,41 @@ pos = (699,-187);
 ref = _part.crossbar_compact;
 }
 );
-width = 1190;
+width = 1237;
 },
 {
 layerId = m007;
 shapes = (
 {
+alignment = -1;
 ref = g;
 },
 {
-pos = (586,-181);
+pos = (608,-181);
 ref = _part.crossbar_compact;
 }
 );
-width = 1136;
+width = 1306;
 },
 {
 layerId = m009;
 shapes = (
 {
+alignment = -1;
 ref = g;
 },
 {
-pos = (562,-177);
+pos = (590,-177);
 ref = _part.crossbar_compact;
 }
 );
-width = 1252;
+width = 1388;
 },
 {
 layerId = m011;
 shapes = (
 {
+alignment = -1;
 ref = g;
 },
 {
@@ -79,9 +85,11 @@ pos = (715,-217);
 ref = _part.crossbar_compact;
 }
 );
-width = 1118;
+width = 1195;
 }
 );
+metricLeft = o;
+metricRight = t;
 unicode = 485;
 userData = {
 interface.gridadjust.original = "{'width': 1585, 'leftMargin': 41, 'rightMargin': 22}";

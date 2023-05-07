@@ -9,17 +9,17 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(898,1490,l),
-(134,-418,l),
-(274,-418,l),
-(1036,1490,l)
+(319.402,-418,l),
+(1033.402,1490,l),
+(894.598,1490,l),
+(180.598,-418,l)
 );
 },
 {
 ref = c;
 }
 );
-width = 1150;
+width = 1163;
 },
 {
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -27,17 +27,17 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(818,1490,l),
-(236,-418,l),
-(440,-418,l),
-(1024,1490,l)
+(409,-418,l),
+(993,1490,l),
+(859,1490,l),
+(277,-418,l)
 );
 },
 {
 ref = c;
 }
 );
-width = 1238;
+width = 1235;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -45,19 +45,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(1006,1490,l),
-(130,-418,l),
-(184,-418,l),
-(1054,1490,l)
+(244.463,-418,l),
+(952,1536,l),
+(904,1536,l),
+(195.537,-418,l)
 );
 },
 {
 alignment = -1;
-pos = (32,0);
 ref = c;
 }
 );
-width = 1180;
+width = 1095;
 },
 {
 layerId = m007;
@@ -65,18 +64,17 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(836,1490,l),
-(72,-418,l),
-(212,-418,l),
-(974,1490,l)
+(228,-418,l),
+(990,1490,l),
+(852,1490,l),
+(88,-418,l)
 );
 },
 {
-pos = (3,0);
 ref = c;
 }
 );
-width = 1074;
+width = 1071;
 },
 {
 layerId = m009;
@@ -84,10 +82,10 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(844,1490,l),
-(262,-418,l),
-(378,-418,l),
-(962,1490,l)
+(489,-418,l),
+(961,1490,l),
+(755,1490,l),
+(285,-418,l)
 );
 },
 {
@@ -102,19 +100,90 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(942,1490,l),
-(66,-418,l),
-(120,-418,l),
-(990,1490,l)
+(207,-418,l),
+(876,1490,l),
+(828,1490,l),
+(159,-418,l)
 );
 },
 {
 alignment = -1;
-pos = (32,0);
 ref = c;
 }
 );
+width = 1018;
+},
+{
+associatedMasterId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+layerId = "72C2D725-7613-40AB-BE9F-B64195619C34";
+name = "May 6, 23, 17:40";
+shapes = (
+{
+alignment = -1;
+ref = c;
+},
+{
+attr = {
+lineCapEnd = 4;
+lineCapStart = 4;
+strokeWidth = 46;
+};
+closed = 0;
+nodes = (
+(220,-418,l),
+(928,1536,l)
+);
+}
+);
+width = 1095;
+},
+{
+associatedMasterId = m011;
+layerId = "7238245C-EA3A-464E-9170-13D681F320AB";
+name = "May 6, 23, 18:18";
+shapes = (
+{
+alignment = -1;
+pos = (32,0);
+ref = c;
+},
+{
+attr = {
+lineCapEnd = "4";
+lineCapStart = "4";
+strokeWidth = 46;
+};
+closed = 0;
+nodes = (
+(207,-418,l),
+(876,1490,l)
+);
+}
+);
 width = 1056;
+},
+{
+associatedMasterId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+layerId = "6C4D1AF4-1EFF-4445-8AC8-D609243E9FB2";
+name = "May 6, 23, 18:20";
+shapes = (
+{
+ref = c;
+},
+{
+attr = {
+lineCapEnd = 4;
+lineCapStart = 4;
+strokeWidth = 130;
+};
+closed = 0;
+nodes = (
+(250,-418,l),
+(964,1490,l)
+);
+}
+);
+width = 1163;
 }
 );
 metricLeft = c;
