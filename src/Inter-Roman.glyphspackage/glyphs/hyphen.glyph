@@ -49,6 +49,14 @@ nodes = (
 width = 972;
 },
 {
+background = {
+shapes = (
+{
+pos = (-2,0);
+ref = x;
+}
+);
+};
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
@@ -210,15 +218,23 @@ nodes = (
 width = 940;
 },
 {
+background = {
+shapes = (
+{
+pos = (-2,0);
+ref = x;
+}
+);
+};
 layerId = m011;
 shapes = (
 {
 closed = 1;
 nodes = (
-(108,662,l),
-(108,616,l),
-(664,616,l),
-(664,662,l)
+(108,630,l),
+(108,584,l),
+(664,584,l),
+(664,630,l)
 );
 }
 );

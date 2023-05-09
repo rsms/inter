@@ -4,28 +4,40 @@ kernLeft = hyphen;
 kernRight = hyphen;
 layers = (
 {
-guides = (
+background = {
+shapes = (
 {
-orientation = center;
-pos = (1102,878);
+pos = (-1,0);
+ref = x;
 }
 );
+};
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(172,718,l),
-(146,558,l),
-(798,558,l),
-(824,718,l)
+(171,718,l),
+(144,558,l),
+(796,558,l),
+(823,718,l)
 );
 }
 );
-width = 942;
+width = 941;
 },
 {
+background = {
+shapes = (
+{
+pos = (1,0);
+ref = x;
+}
+);
+};
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
@@ -40,21 +52,24 @@ nodes = (
 width = 972;
 },
 {
-guides = (
+background = {
+shapes = (
 {
-orientation = center;
-pos = (1102,878);
+pos = (-2,0);
+ref = x;
 }
 );
+};
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(190,662,l),
-(180,616,l),
-(736,616,l),
-(744,662,l)
+(189,662,l),
+(181,616,l),
+(737,616,l),
+(745,662,l)
 );
 }
 );
@@ -110,6 +125,7 @@ width = 898;
 background = {
 shapes = (
 {
+pos = (1,0);
 ref = x;
 }
 );
@@ -117,8 +133,7 @@ ref = x;
 guides = (
 {
 orientation = center;
-angle = -9.4;
-pos = (-3279,878);
+pos = (-3717,878);
 }
 );
 layerId = m008;
@@ -127,14 +142,14 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(139.488,688,l),
+(140,688,l),
 (113,528,l),
 (765,528,l),
-(791.488,688,l)
+(792,688,l)
 );
 }
 );
-width = 878;
+width = 879;
 },
 {
 associatedMasterId = m008;
@@ -163,6 +178,7 @@ width = 942;
 background = {
 shapes = (
 {
+pos = (1,0);
 ref = x;
 }
 );
@@ -170,8 +186,7 @@ ref = x;
 guides = (
 {
 orientation = center;
-angle = -9.4;
-pos = (-1366,816);
+pos = (-1835,816);
 }
 );
 layerId = m010;
@@ -180,30 +195,38 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(152.785,720,l),
-(102.79,418,l),
-(800.79,418,l),
-(850.785,720,l)
+(153,720,l),
+(103,418,l),
+(801,418,l),
+(851,720,l)
 );
 }
 );
 width = 940;
 },
 {
+background = {
+shapes = (
+{
+pos = (-1,0);
+ref = x;
+}
+);
+};
 layerId = m012;
 name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(130.184,662,l),
-(122.568,616,l),
-(678.568,616,l),
-(686.184,662,l)
+(125,630,l),
+(118,584,l),
+(674,584,l),
+(681,630,l)
 );
 }
 );
-width = 770;
+width = 771;
 },
 {
 associatedMasterId = m012;
