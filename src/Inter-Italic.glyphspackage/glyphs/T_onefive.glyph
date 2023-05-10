@@ -3,62 +3,66 @@ glyphname = Tonefive;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(224,1490,l),
-(194,1330,l),
-(518,1330,l),
-(546,1490,l,{
+(253,1490,l),
+(226,1330,l),
+(550,1330,l),
+(577,1490,l,{
 name = hr00;
 })
 );
 },
 {
+pos = (33,0);
 ref = five;
 }
 );
-width = 1222;
+width = 1266;
 },
 {
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(230,1490,l),
-(178,1166,l),
-(500,1166,l),
-(552,1490,l)
+(218,1490,l),
+(164,1166,l),
+(486,1166,l),
+(540,1490,l)
 );
 },
 {
-pos = (58,0);
+pos = (30,0);
 ref = five;
 }
 );
-width = 1356;
+width = 1415;
 },
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(222,1490,l),
-(212,1442,l),
-(448,1442,l),
-(462,1490,l)
+(275,1490,l),
+(267,1444,l),
+(507,1444,l),
+(515,1490,l)
 );
 },
 {
 alignment = -1;
-pos = (-34,0);
+pos = (33,0);
 ref = five;
 }
 );
-width = 1142;
+width = 1186;
 },
 {
 layerId = m008;
@@ -67,19 +71,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(193.258,1490,l),
-(166.77,1330,l),
-(490.77,1330,l),
-(517.258,1490,l,{
+(192,1490,l),
+(165,1330,l),
+(481,1330,l),
+(508,1490,l,{
 name = hr00;
 })
 );
 },
 {
+pos = (63,0);
 ref = five;
 }
 );
-width = 1158;
+width = 1243;
 },
 {
 layerId = m010;
@@ -88,18 +93,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(219.258,1490,l),
-(165.62,1166,l),
-(487.62,1166,l),
-(541.258,1490,l)
+(208,1490,l),
+(154,1166,l),
+(476,1166,l),
+(530,1490,l)
 );
 },
 {
-pos = (58,0);
+pos = (87,0);
 ref = five;
 }
 );
-width = 1324;
+width = 1353;
 },
 {
 layerId = m012;
@@ -108,21 +113,23 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(157.258,1490,l),
-(149.312,1442,l),
-(389.312,1442,l),
-(397.258,1490,l)
+(216,1490,l),
+(208,1444,l),
+(416,1444,l),
+(424,1490,l)
 );
 },
 {
 alignment = -1;
-pos = (-34,0);
+pos = (33,0);
 ref = five;
 }
 );
-width = 1014;
+width = 1058;
 }
 );
+metricLeft = seven;
+metricRight = five;
 unicode = 444;
 userData = {
 interface.gridadjust.original = "{'width': 1587, 'leftMargin': 89, 'rightMargin': 43}";
