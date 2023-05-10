@@ -8,28 +8,28 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (20,0);
-ref = zero.slash;
+ref = zero.tf;
+},
+{
+alignment = -1;
+pos = (21,0);
+ref = _part.zeroslash;
 }
 );
 width = 1320;
 },
 {
-guides = (
-{
-pos = (24,1240);
-},
-{
-pos = (24,764);
-}
-);
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-88,0);
-ref = zero.slash;
+ref = zero.tf;
+},
+{
+alignment = -1;
+pos = (-89,0);
+ref = _part.zeroslash;
 }
 );
 width = 1320;
@@ -40,11 +40,15 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (55,0);
-ref = zero.slash;
+ref = zero.tf;
+},
+{
+alignment = -1;
+pos = (123,0);
+ref = _part.zeroslash;
 }
 );
-width = 1320;
+width = 1366;
 },
 {
 layerId = m008;
@@ -52,28 +56,28 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (32,0);
-ref = zero.slash;
+ref = zero.tf;
+},
+{
+alignment = -1;
+pos = (58,0);
+ref = _part.zeroslash;
 }
 );
 width = 1320;
 },
 {
-guides = (
-{
-pos = (-110,1240);
-},
-{
-pos = (-110,764);
-}
-);
 layerId = m010;
 name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-38,0);
-ref = zero.slash;
+ref = zero.tf;
+},
+{
+alignment = -1;
+pos = (-68,0);
+ref = _part.zeroslash;
 }
 );
 width = 1320;
@@ -84,11 +88,15 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (119,0);
-ref = zero.slash;
+ref = zero.tf;
+},
+{
+alignment = -1;
+pos = (197,0);
+ref = _part.zeroslash;
 }
 );
-width = 1320;
+width = 1366;
 }
 );
 metricLeft = zero.tf;
