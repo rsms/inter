@@ -5,19 +5,19 @@ layers = (
 anchors = (
 {
 name = _top;
-pos = (416,1118);
+pos = (477,1118);
 },
 {
 name = top;
-pos = (544,1890);
+pos = (605,1890);
 }
 );
 guides = (
 {
-pos = (-60,1616);
+pos = (1,1616);
 },
 {
-pos = (-60,1529);
+pos = (1,1529);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
@@ -25,12 +25,124 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-65,-28);
+pos = (-4,-28);
 ref = brevecomb;
 },
 {
 alignment = -1;
-pos = (149,333);
+pos = (210,333);
+ref = acute_compact;
+}
+);
+width = 768;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (573,1118);
+},
+{
+name = top;
+pos = (701,1893);
+}
+);
+guides = (
+{
+pos = (1,1632);
+},
+{
+pos = (1,1555);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-4,-27);
+ref = brevecomb;
+},
+{
+alignment = -1;
+pos = (341,627);
+ref = acute_compact;
+scale = (0.8,0.8);
+}
+);
+width = 960;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (444,1118);
+},
+{
+name = top;
+pos = (572,1890);
+}
+);
+guides = (
+{
+pos = (0,1616);
+},
+{
+pos = (0,1529);
+},
+{
+pos = (0,1681);
+}
+);
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-5,-28);
+ref = brevecomb;
+},
+{
+alignment = -1;
+pos = (204,333);
+ref = acute_compact;
+}
+);
+width = 704;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (488,1056);
+},
+{
+name = top;
+pos = (615,1826);
+}
+);
+guides = (
+{
+pos = (1,1490);
+},
+{
+pos = (1,1328);
+},
+{
+pos = (1,1465);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-4,-26);
+ref = brevecomb;
+},
+{
+alignment = -1;
+pos = (284,248);
 ref = acute_compact;
 }
 );
@@ -40,131 +152,19 @@ width = 800;
 anchors = (
 {
 name = _top;
-pos = (549,1118);
+pos = (567,1056);
 },
 {
 name = top;
-pos = (677,1893);
+pos = (695,1830);
 }
 );
 guides = (
 {
-pos = (-23,1632);
+pos = (0,1507);
 },
 {
-pos = (-23,1555);
-}
-);
-layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
-name = ital_gen;
-shapes = (
-{
-alignment = -1;
-pos = (-28,-27);
-ref = brevecomb;
-},
-{
-alignment = -1;
-pos = (317,627);
-ref = acute_compact;
-scale = (0.8,0.8);
-}
-);
-width = 976;
-},
-{
-anchors = (
-{
-name = _top;
-pos = (282,1118);
-},
-{
-name = top;
-pos = (410,1890);
-}
-);
-guides = (
-{
-pos = (-162,1616);
-},
-{
-pos = (-162,1529);
-},
-{
-pos = (-162,1681);
-}
-);
-layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
-name = ital_gen;
-shapes = (
-{
-alignment = -1;
-pos = (-167,-28);
-ref = brevecomb;
-},
-{
-alignment = -1;
-pos = (42,333);
-ref = acute_compact;
-}
-);
-width = 506;
-},
-{
-anchors = (
-{
-name = _top;
-pos = (476,1056);
-},
-{
-name = top;
-pos = (603,1826);
-}
-);
-guides = (
-{
-pos = (-11,1490);
-},
-{
-pos = (-11,1328);
-},
-{
-pos = (-11,1465);
-}
-);
-layerId = m008;
-name = ital_gen;
-shapes = (
-{
-alignment = -1;
-pos = (-20,-50);
-ref = brevecomb;
-},
-{
-alignment = -1;
-pos = (272,248);
-ref = acute_compact;
-}
-);
-width = 832;
-},
-{
-anchors = (
-{
-name = _top;
-pos = (559,1056);
-},
-{
-name = top;
-pos = (687,1830);
-}
-);
-guides = (
-{
-pos = (-8,1507);
-},
-{
-pos = (-8,1536);
+pos = (0,1536);
 }
 );
 layerId = m010;
@@ -172,27 +172,26 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-8,0);
 ref = brevecomb;
 },
 {
 alignment = -1;
-pos = (391,473);
+pos = (399,473);
 ref = acute_compact;
 scale = (0.8,0.9);
 }
 );
-width = 976;
+width = 960;
 },
 {
 anchors = (
 {
 name = _top;
-pos = (282,1056);
+pos = (439,1056);
 },
 {
 name = top;
-pos = (399,1764);
+pos = (556,1764);
 }
 );
 background = {
@@ -200,17 +199,17 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(249,1522,l),
-(441,1764,l),
-(247,1764,l),
-(123,1522,l)
+(406,1522,l),
+(598,1764,l),
+(404,1764,l),
+(280,1522,l)
 );
 }
 );
 };
 guides = (
 {
-pos = (-157,1465);
+pos = (0,1465);
 }
 );
 layerId = m012;
@@ -218,16 +217,16 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-164,-42);
+pos = (-7,-42);
 ref = brevecomb;
 },
 {
 alignment = -1;
-pos = (103,249);
+pos = (260,249);
 ref = acute_compact;
 }
 );
-width = 506;
+width = 704;
 }
 );
 userData = {

@@ -5,18 +5,18 @@ layers = (
 anchors = (
 {
 name = _top;
-pos = (605,1118);
+pos = (604,1118);
 }
 );
 guides = (
 {
-pos = (1,1616);
+pos = (0,1616);
 },
 {
-pos = (1,1392);
+pos = (0,1392);
 },
 {
-pos = (1,1717);
+pos = (0,1717);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
@@ -24,12 +24,12 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-4,-27);
+pos = (-5,-27);
 ref = tildecomb;
 },
 {
 alignment = -1;
-pos = (327,333);
+pos = (326,333);
 ref = acute_compact;
 }
 );
@@ -68,24 +68,24 @@ ref = acute_compact;
 scale = (0.8,0.8);
 }
 );
-width = 1024;
+width = 1025;
 },
 {
 anchors = (
 {
 name = _top;
-pos = (648,1118);
+pos = (596,1118);
 }
 );
 guides = (
 {
-pos = (52,1616);
+pos = (0,1616);
 },
 {
-pos = (52,1392);
+pos = (0,1392);
 },
 {
-pos = (52,1681);
+pos = (0,1681);
 }
 );
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
@@ -93,30 +93,30 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (47,-28);
+pos = (-5,-28);
 ref = tildecomb;
 },
 {
 alignment = -1;
-pos = (403,333);
+pos = (351,333);
 ref = acute_compact;
 }
 );
-width = 1132;
+width = 1017;
 },
 {
 anchors = (
 {
 name = _top;
-pos = (569,1056);
+pos = (568,1056);
 }
 );
 guides = (
 {
-pos = (1,1328);
+pos = (0,1328);
 },
 {
-pos = (1,1520);
+pos = (0,1520);
 }
 );
 layerId = m008;
@@ -124,16 +124,16 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-8,-49);
+pos = (-9,-49);
 ref = tildecomb;
 },
 {
 alignment = -1;
-pos = (366,279);
+pos = (365,279);
 ref = acute_compact;
 }
 );
-width = 960;
+width = 959;
 },
 {
 anchors = (
@@ -143,6 +143,9 @@ pos = (599,1056);
 }
 );
 guides = (
+{
+pos = (0,1846);
+},
 {
 pos = (0,1552);
 }
@@ -161,21 +164,21 @@ ref = acute_compact;
 scale = (0.9,0.9);
 }
 );
-width = 993;
+width = 992;
 },
 {
 anchors = (
 {
 name = _top;
-pos = (541,1056);
+pos = (536,1056);
 }
 );
 guides = (
 {
-pos = (6,1328);
+pos = (1,1328);
 },
 {
-pos = (6,1520);
+pos = (1,1520);
 }
 );
 layerId = m012;
@@ -183,12 +186,12 @@ name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (-3,-50);
+pos = (-8,-50);
 ref = tildecomb;
 },
 {
 alignment = -1;
-pos = (368,279);
+pos = (363,279);
 ref = acute_compact;
 }
 );
