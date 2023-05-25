@@ -1,11 +1,42 @@
 # Discretionary Ligatures
-# https://docs.microsoft.com/en-us/typography/opentype/spec/features_ae#dlig
+# https://learn.microsoft.com/en-us/typography/opentype/spec/features_ae#dlig
 
 # Set IgnoreMarks to skip over marks in lookups.
 # For example, if we have /f/acutecomb/i, treat lookup as /f/i
 # https://learn.microsoft.com/en-us/typography/opentype/spec/chapter2#lookup-table
 lookupflag IgnoreMarks;
 
+# left side "trigger" glyph for t.1 and f.1 sub
+@DLIG_L_t = [
+  f f.1 fdotaccent feng
+
+  k khook kcommaaccent kcaron kacute kdotbelow klinebelow k.base
+
+  r rrthook uni024D rfishhook rdescend racute rcommaaccent rcaron
+  rdblgrave rinvertedbreve rdotaccent rdotbelow rdotbelowmacron rlinebelow
+
+  t t.1 tpalatalhook trthook tcurl tbar tcedilla tcaron tcommaaccent tdotaccent
+  tdotbelow tlinebelow tcircumflexbelow tdieresis
+
+  v vtilde vdotbelow
+
+  w wdieresis wcircumflex wgrave wacute wdotaccent wdotbelow wring
+
+  x xdotaccent xdieresis khacyrillic chi
+
+  y ydieresis uni024F yacute ycircumflex uni0233 ydotaccent yring ygrave ydotbelow
+  yhookabove ytilde ucyrillic ushortcyrillic umacroncyrillic udieresiscyrillic
+  uhungarumlautcyrillic yogonek y.sc
+];
+
+# ffi (note. f.i is sub'd by liga)
+sub f [ f f.i ]' i by f.i.1;
+
+# tt, ft, rt, tf, ff, ft ...
+sub @DLIG_L_t t' by t.1;
+sub @DLIG_L_t f' by f.1;
+
+# interrobang
 sub exclam question by interrobang;
 sub question exclam by interrobang;
 sub exclamdown questiondown by invertedinterrobang;

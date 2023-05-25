@@ -2428,12 +2428,12 @@ code = "include(features/calt.fea);
 tag = calt;
 },
 {
-code = "include(features/dlig.fea);";
+code = "include(features/dlig.fea);
+";
 tag = dlig;
 },
 {
-code = "include(features/liga-classes.fea);
-include(features/liga.fea);
+code = "include(features/liga.fea);
 ";
 tag = liga;
 },
@@ -2642,17 +2642,6 @@ value = "";
 }
 );
 tag = ss05;
-},
-{
-code = "include(features/liga.fea);
-";
-labels = (
-{
-language = dflt;
-value = "Force enable ligatures";
-}
-);
-tag = ss06;
 },
 {
 code = "include(features/cv01-one.fea);";

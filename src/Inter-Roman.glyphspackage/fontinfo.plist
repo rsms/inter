@@ -740,6 +740,7 @@ iebrevecyrillic,
 eturn,
 _part.f_base,
 f,
+f.1,
 longs,
 slongstroke,
 slongdotaccent,
@@ -2428,13 +2429,13 @@ code = "include(features/calt.fea);
 tag = calt;
 },
 {
-code = "include(features/liga-classes.fea);
-include(features/liga.fea);
+code = "include(features/liga.fea);
 ";
 tag = liga;
 },
 {
-code = "include(features/dlig.fea);";
+code = "include(features/dlig.fea);
+";
 tag = dlig;
 },
 {
@@ -2646,17 +2647,6 @@ value = "";
 tag = ss05;
 },
 {
-code = "include(features/liga.fea);
-";
-labels = (
-{
-language = dflt;
-value = "Force enable ligatures";
-}
-);
-tag = ss06;
-},
-{
 code = "include(features/cv01-one.fea);";
 tag = cv01;
 },
@@ -2698,7 +2688,7 @@ code = "include(features/cv10-g-spur.fea);";
 tag = cv10;
 },
 {
-code = "cvParameters { FeatUILabelNameID { name \"Single-storey a\"; }; };
+code = "cvParameters { FeatUILabelNameID { name \"Single-story a\"; }; };
 include(features/cv11-single-storey-a.fea);
 ";
 tag = cv11;
@@ -3294,10 +3284,11 @@ stemValues = (
 userData = {
 GSCornerRadius = 180;
 GSOffsetCapStyle = 3;
-GSOffsetHorizontal = 85;
+GSOffsetHorizontal = 87;
 GSOffsetKeepCompatible = 1;
 GSOffsetMakeStroke = 1;
-GSOffsetVertical = 80;
+GSOffsetPosition = 1;
+GSOffsetVertical = 85;
 };
 },
 {
@@ -3577,9 +3568,10 @@ userData = {
 GSCornerRadius = 160;
 GSExtrudeAngle = 30;
 GSExtrudeOffset = 15;
-GSOffsetHorizontal = 150;
+GSOffsetHorizontal = 180;
 GSOffsetKeepCompatible = 1;
 GSOffsetMakeStroke = 1;
+GSOffsetPosition = 1;
 GSOffsetProportional = 1;
 GSOffsetVertical = 130;
 };
@@ -10013,7 +10005,7 @@ Psi = -93;
 "@MMK_R_bullet" = -46;
 "@MMK_R_comma" = -116;
 "@MMK_R_eight.sups" = 46;
-"@MMK_R_f" = -50;
+"@MMK_R_f" = -60;
 "@MMK_R_four" = -128;
 "@MMK_R_guillemetleft" = -81;
 "@MMK_R_hyphen" = -58;
@@ -10506,7 +10498,7 @@ underscore = -93;
 "@MMK_R_Y" = -32;
 "@MMK_R_a" = 20;
 "@MMK_R_bullet" = -23;
-"@MMK_R_f" = -70;
+"@MMK_R_f" = 0;
 "@MMK_R_four" = -29;
 "@MMK_R_hyphen" = -40;
 "@MMK_R_idblgrave" = 93;
@@ -10515,7 +10507,7 @@ underscore = -93;
 "@MMK_R_quotedblleft" = -81;
 "@MMK_R_quotedblright" = 58;
 "@MMK_R_s" = -20;
-"@MMK_R_t" = -80;
+"@MMK_R_t" = -70;
 "@MMK_R_v" = 60;
 "@MMK_R_w" = 50;
 "@MMK_R_zero.subs" = 69;
