@@ -741,6 +741,10 @@ eturn,
 _part.f_base,
 f,
 f.1,
+f.i,
+f.i.1,
+fdotaccent.1,
+feng.1,
 longs,
 slongstroke,
 slongdotaccent,
@@ -979,7 +983,6 @@ germandbls,
 germandbls.1,
 _part.t_base,
 t,
-t.1,
 tpalatalhook,
 trthook,
 _part.tcurl_base,
@@ -995,6 +998,16 @@ tdotbelow,
 tlinebelow,
 tcircumflexbelow,
 tdieresis,
+t.1,
+tpalatalhook.1,
+tcedilla.1,
+tcaron.1,
+tcommaaccent.1,
+tdotaccent.1,
+tdotbelow.1,
+tlinebelow.1,
+tcircumflexbelow.1,
+tdieresis.1,
 u,
 udieresis,
 utilde,
@@ -2692,6 +2705,17 @@ code = "cvParameters { FeatUILabelNameID { name \"Single-story a\"; }; };
 include(features/cv11-single-storey-a.fea);
 ";
 tag = cv11;
+},
+{
+code = "cvParameters { FeatUILabelNameID { name \"Compact f\"; }; };
+include(features/cv12-compact-f.fea);";
+tag = cv12;
+},
+{
+code = "cvParameters { FeatUILabelNameID { name \"Compact t\"; }; };
+include(features/cv13-compact-t.fea);
+";
+tag = cv13;
 },
 {
 automatic = 1;

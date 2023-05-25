@@ -6,17 +6,31 @@
 # https://learn.microsoft.com/en-us/typography/opentype/spec/chapter2#lookup-table
 lookupflag IgnoreMarks;
 
+# ff -> ff'
+@DLIG_f_L = [ f fdotaccent feng ];
+@DLIG_f_R = [ f.1 fdotaccent.1 feng.1 ];
+
+# tt -> tt'
+@DLIG_t_L = [
+  t tpalatalhook tcedilla tcaron tcommaaccent tdotaccent tdotbelow
+  tlinebelow tcircumflexbelow tdieresis
+];
+
+@DLIG_t_R = [
+  t.1 tpalatalhook.1 tcedilla.1 tcaron.1 tcommaaccent.1 tdotaccent.1 tdotbelow.1
+  tlinebelow.1 tcircumflexbelow.1 tdieresis.1
+];
+
 # left side "trigger" glyph for t.1 and f.1 sub
-@DLIG_L_t = [
-  f f.1 fdotaccent feng
+@DLIG_t1_L = [
+  @DLIG_f_L @DLIG_f_R
 
   k khook kcommaaccent kcaron kacute kdotbelow klinebelow k.base
 
   r rrthook uni024D rfishhook rdescend racute rcommaaccent rcaron
   rdblgrave rinvertedbreve rdotaccent rdotbelow rdotbelowmacron rlinebelow
 
-  t t.1 tpalatalhook trthook tcurl tbar tcedilla tcaron tcommaaccent tdotaccent
-  tdotbelow tlinebelow tcircumflexbelow tdieresis
+  @DLIG_t_L @DLIG_t_R
 
   v vtilde vdotbelow
 
@@ -29,12 +43,13 @@ lookupflag IgnoreMarks;
   uhungarumlautcyrillic yogonek y.sc
 ];
 
+
 # ffi (note. f.i is sub'd by liga)
 sub f [ f f.i ]' i by f.i.1;
 
 # tt, ft, rt, tf, ff, ft ...
-sub @DLIG_L_t t' by t.1;
-sub @DLIG_L_t f' by f.1;
+sub @DLIG_t1_L @DLIG_t_L' by @DLIG_t_R;
+sub @DLIG_t1_L @DLIG_f_L' by @DLIG_f_R;
 
 # interrobang
 sub exclam question by interrobang;
