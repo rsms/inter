@@ -5,51 +5,48 @@ layers = (
 anchors = (
 {
 name = _bottom;
-pos = (402,158);
-}
-);
-guides = (
-{
-angle = -99.4;
-pos = (496,-116);
+pos = (398,158);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(-96,0,l),
-(-122,-160,l),
-(808,-160,l),
-(834,0,l)
+(-93,0,l),
+(-119,-160,l),
+(811,-160,l),
+(837,0,l)
 );
 }
 );
-width = 926;
+width = 930;
 },
 {
 anchors = (
 {
 name = _bottom;
-pos = (434,126);
+pos = (433,126);
 }
 );
 guides = (
 {
-angle = -99.4;
-pos = (532,-212);
+orientation = center;
+angle = 80.6;
+pos = (880,132);
 }
 );
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(-94,0,l),
+(-93,0,l),
 (-140,-286,l),
 (870,-286,l),
-(916,0,l)
+(917,0,l)
 );
 }
 );
@@ -59,28 +56,29 @@ width = 1010;
 anchors = (
 {
 name = _bottom;
-pos = (384,178);
+pos = (379,178);
 }
 );
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(-98,0,l),
-(-108,-46,l),
-(780,-46,l),
-(786,0,l)
+(-92,0,l),
+(-100,-46,l),
+(784,-46,l),
+(792,0,l)
 );
 }
 );
-width = 874;
+width = 885;
 },
 {
 anchors = (
 {
 name = _bottom;
-pos = (366.747,158);
+pos = (404,158);
 }
 );
 layerId = m008;
@@ -89,27 +87,27 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-121.41,0,l),
-(-147.898,-160,l),
-(782.102,-160,l),
-(808.59,0,l)
+(-87,0,l),
+(-113,-160,l),
+(817,-160,l),
+(843,0,l)
 );
 }
 );
-width = 862;
+width = 931;
 },
 {
 anchors = (
 {
 name = _bottom;
-pos = (423.449,126);
+pos = (439,126);
 }
 );
 guides = (
 {
 orientation = center;
 angle = 80.6;
-pos = (-1685,132);
+pos = (-2662,132);
 }
 );
 layerId = m010;
@@ -118,20 +116,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-103.41,0,l),
-(-150.757,-286,l),
-(859.243,-286,l),
-(906.59,0,l)
+(-87,0,l),
+(-134,-286,l),
+(876,-286,l),
+(923,0,l)
 );
 }
 );
-width = 978;
+width = 1011;
 },
 {
 anchors = (
 {
 name = _bottom;
-pos = (312.058,178);
+pos = (383,178);
 }
 );
 layerId = m012;
@@ -140,15 +138,17 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-157.41,0,l),
-(-165.025,-46,l),
-(718.975,-46,l),
-(726.59,0,l)
+(-87,0,l),
+(-95,-46,l),
+(789,-46,l),
+(797,0,l)
 );
 }
 );
-width = 746;
+width = 884;
 }
 );
+metricLeft = "=0";
+metricRight = "=0";
 unicode = 95;
 }
