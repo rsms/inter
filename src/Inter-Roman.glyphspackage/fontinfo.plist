@@ -1041,6 +1041,38 @@ uhorngrave,
 uhornhookabove,
 uhorntilde,
 uhorndotbelow,
+u.1,
+uacute.1,
+ubar.1,
+ubreve.1,
+ucaron.1,
+ucircumflex.1,
+ucircumflexbelow.1,
+udblgrave.1,
+udieresis.1,
+udieresisacute.1,
+udieresisbelow.1,
+udieresiscaron.1,
+udieresisgrave.1,
+udieresismacron.1,
+udotbelow.1,
+ugrave.1,
+uhookabove.1,
+uhorn.1,
+uhornacute.1,
+uhorndotbelow.1,
+uhorngrave.1,
+uhornhookabove.1,
+uhorntilde.1,
+uhungarumlaut.1,
+uinvertedbreve.1,
+umacron.1,
+umacrondieresis.1,
+uogonek.1,
+uring.1,
+utilde.1,
+utildeacute.1,
+utildebelow.1,
 v,
 vturn,
 vtilde,
@@ -2609,8 +2641,19 @@ sub N o period by numero;
 tag = ordn;
 },
 {
-code = "include(features/salt.fea);
+code = "include(features/cv01-one.fea);
+include(features/cv02-four.fea);
+include(features/cv03-six.fea);
+include(features/cv04-nine.fea);
+include(features/cv05-l-tail.fea);
+include(features/cv06-u.fea);
+include(features/cv07-germandbls.fea);
+include(features/cv08-i-serif.fea);
+include(features/cv09-three.fea);
+include(features/cv10-g-spur.fea);
 include(features/cv11-single-storey-a.fea);
+include(features/cv12-compact-f.fea);
+include(features/cv13-compact-t.fea);
 ";
 tag = salt;
 },
@@ -2660,44 +2703,63 @@ value = "";
 tag = ss05;
 },
 {
-code = "include(features/cv01-one.fea);";
+code = "cvParameters { FeatUILabelNameID { name \"Alternate one\"; }; };
+include(features/cv01-one.fea);
+";
 tag = cv01;
 },
 {
-code = "include(features/cv02-four.fea);";
+code = "cvParameters { FeatUILabelNameID { name \"Open four\"; }; };
+include(features/cv02-four.fea);
+";
 tag = cv02;
 },
 {
-code = "include(features/cv03-six.fea);";
+code = "cvParameters { FeatUILabelNameID { name \"Open six\"; }; };
+include(features/cv03-six.fea);
+";
 tag = cv03;
 },
 {
-code = "include(features/cv04-nine.fea);";
+code = "cvParameters { FeatUILabelNameID { name \"Open nine\"; }; };
+include(features/cv04-nine.fea);
+";
 tag = cv04;
 },
 {
-code = "include(features/cv05-l-tail.fea);";
+code = "cvParameters { FeatUILabelNameID { name \"Lower-case L with tail\"; }; };
+include(features/cv05-l-tail.fea);
+";
 tag = cv05;
 },
 {
-code = "include(features/cv06-u.fea);
+code = "cvParameters { FeatUILabelNameID { name \"Simplified u\"; }; };
+include(features/cv06-u.fea);
 ";
 tag = cv06;
 },
 {
-code = "include(features/cv07-germandbls.fea);";
+code = "cvParameters { FeatUILabelNameID { name \"Alternate German double s\"; }; };
+include(features/cv07-germandbls.fea);
+";
 tag = cv07;
 },
 {
-code = "include(features/cv08-i-serif.fea);";
+code = "cvParameters { FeatUILabelNameID { name \"Upper-case i with serif\"; }; };
+include(features/cv08-i-serif.fea);
+";
 tag = cv08;
 },
 {
-code = "include(features/cv09-three.fea);";
+code = "cvParameters { FeatUILabelNameID { name \"Flat-top three\"; }; };
+include(features/cv09-three.fea);
+";
 tag = cv09;
 },
 {
-code = "include(features/cv10-g-spur.fea);";
+code = "cvParameters { FeatUILabelNameID { name \"Capital G with spur\"; }; };
+include(features/cv10-g-spur.fea);
+";
 tag = cv10;
 },
 {

@@ -1,4 +1,4 @@
-cvParameters { FeatUILabelNameID { name "Open nine"; }; };
+# Note: don't use cvParameters here since this file is included in salt
 sub nine by nine.ss01;
 sub nine.tf by nine.tf.ss01;
 sub nine.squared by nine.ss01.squared;

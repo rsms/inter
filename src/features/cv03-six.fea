@@ -1,4 +1,4 @@
-cvParameters { FeatUILabelNameID { name "Open six"; }; };
+# Note: don't use cvParameters here since this file is included in salt
 sub six by six.ss01;
 sub six.tf by six.tf.ss01;
 sub six.squared by six.ss01.squared;

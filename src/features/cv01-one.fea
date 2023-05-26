@@ -1,4 +1,4 @@
-cvParameters { FeatUILabelNameID { name "Alternate one"; }; };
+# Note: don't use cvParameters here since this file is included in salt
 sub one by one.ss01;
 sub one.tf by one.tf.ss01;
 sub one.squared by one.ss01.squared;

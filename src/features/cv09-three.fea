@@ -1,4 +1,4 @@
-cvParameters { FeatUILabelNameID { name "Flat-top three"; }; };
+# Note: don't use cvParameters here since this file is included in salt
 sub three by three.1;
 sub three.tf by three.1.tf;
 sub three.squared by three.1.squared;
