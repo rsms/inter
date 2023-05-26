@@ -10,6 +10,10 @@ pos = (950,0);
 {
 name = lfthook;
 pos = (780,0);
+},
+{
+name = top;
+pos = (693,1118);
 }
 );
 background = {
@@ -62,6 +66,10 @@ pos = (1136,0);
 {
 name = lfthook;
 pos = (736,0);
+},
+{
+name = top;
+pos = (758,1118);
 }
 );
 background = {
@@ -114,6 +122,10 @@ pos = (874,0);
 {
 name = lfthook;
 pos = (828,0);
+},
+{
+name = top;
+pos = (675,1118);
 }
 );
 background = {
@@ -166,6 +178,10 @@ pos = (923,0);
 {
 name = lfthook;
 pos = (753,0);
+},
+{
+name = top;
+pos = (656,1056);
 }
 );
 background = {
@@ -218,6 +234,10 @@ pos = (1125,0);
 {
 name = lfthook;
 pos = (725,0);
+},
+{
+name = top;
+pos = (737,1056);
 }
 );
 background = {
@@ -265,17 +285,21 @@ width = 1299;
 anchors = (
 {
 name = cyrtic;
-pos = (815,0);
+pos = (847,0);
 },
 {
 name = lfthook;
-pos = (769,0);
+pos = (801,0);
+},
+{
+name = top;
+pos = (622,1056);
 }
 );
 background = {
 shapes = (
 {
-pos = (6,0);
+pos = (1,0);
 ref = n;
 }
 );
@@ -286,32 +310,32 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(173,582,l),
-(166,536,l),
-(880,536,l),
-(887,582,l)
+(171,559,l),
+(163,513,l),
+(901,513,l),
+(909,559,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(232,1118,l),
+(222,1056,l),
 (47,0,l),
 (93,0,l),
-(278,1118,l)
+(268,1056,l)
 );
 },
 {
 closed = 1;
 nodes = (
-(954,1118,l),
-(769,0,l),
-(815,0,l),
-(1000,1118,l)
+(976,1056,l),
+(801,0,l),
+(847,0,l),
+(1022,1056,l)
 );
 }
 );
-width = 1036;
+width = 1069;
 }
 );
 metricLeft = n;
