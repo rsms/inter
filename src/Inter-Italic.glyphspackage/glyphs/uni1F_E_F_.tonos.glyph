@@ -5,70 +5,64 @@ layers = (
 anchors = (
 {
 name = _tonos;
-pos = (680,1490);
-}
-);
-guides = (
-{
-angle = -99.4;
-pos = (632,1652);
+pos = (679,1490);
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 alignment = 1;
 ref = uni1FEF;
 }
 );
-width = 546;
+width = 547;
 },
 {
 anchors = (
 {
 name = _tonos;
-pos = (670,1490);
+pos = (679,1490);
 }
 );
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
-alignment = 1;
+alignment = -1;
+pos = (17,14);
 ref = uni1FEF;
 }
 );
-width = 648;
+width = 653;
 },
 {
 anchors = (
 {
 name = _tonos;
-pos = (690,1490);
+pos = (678,1490);
 }
 );
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
-alignment = 1;
+alignment = -1;
+pos = (-10,-8);
 ref = uni1FEF;
 }
 );
-width = 416;
+width = 484;
 },
 {
 anchors = (
 {
 name = _tonos;
-pos = (680,1490);
-}
-);
-guides = (
-{
-angle = -99.4;
-pos = (632,1652);
+pos = (683,1490);
 }
 );
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
 alignment = 1;
@@ -81,36 +75,39 @@ width = 482;
 anchors = (
 {
 name = _tonos;
-pos = (670,1490);
+pos = (667,1490);
 }
 );
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
-alignment = 1;
+alignment = -1;
+pos = (16,14);
 ref = uni1FEF;
 }
 );
-width = 616;
+width = 620;
 },
 {
 anchors = (
 {
 name = _tonos;
-pos = (690,1490);
+pos = (492,1490);
 }
 );
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
-alignment = 1;
+alignment = -1;
+pos = (-9,-8);
 ref = uni1FEF;
 }
 );
-width = 288;
+width = 357;
 }
 );
-unicode = 57601;
 userData = {
 interface.gridadjust.original = "{'width': 707, 'leftMargin': 142, 'rightMargin': 121}";
 "interface.width-adjustments" = (

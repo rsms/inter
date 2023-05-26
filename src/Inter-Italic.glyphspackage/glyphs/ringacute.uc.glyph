@@ -2,163 +2,134 @@
 glyphname = ringacute.uc;
 layers = (
 {
-anchors = (
-{
-name = _top;
-pos = (408,1186);
-}
-);
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
+{
+alignment = 1;
+pos = (-66,0);
+ref = ringcomb.uc;
+},
 {
 closed = 1;
 nodes = (
-(566,1562,l),
-(784,1742,l),
-(600,1742,l),
-(424,1562,l)
+(557,2089,l),
+(775,2269,l),
+(593,2269,l),
+(417,2089,l)
 );
-},
-{
-pos = (-72,-408);
-ref = ringcomb.uc;
-scale = (1,0.95);
 }
 );
-width = 666;
+width = 534;
 },
 {
-anchors = (
-{
-name = _top;
-pos = (462,1246);
-}
-);
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
+{
+alignment = 1;
+pos = (-70,47);
+ref = ringcomb.uc;
+scale = (1,0.95);
+},
 {
 closed = 1;
 nodes = (
-(658,1652,l),
-(914,1882,l),
-(606,1882,l),
-(422,1652,l)
+(720,2029,l),
+(976,2259,l),
+(668,2259,l),
+(484,2029,l)
 );
-},
-{
-pos = (-164,-336);
-ref = ringcomb.uc;
-scale = (1,0.95);
 }
 );
-width = 698;
+width = 787;
 },
 {
-anchors = (
-{
-name = _top;
-pos = (378,1152);
-}
-);
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
+{
+alignment = 1;
+pos = (-5,0);
+ref = ringcomb.uc;
+},
 {
 closed = 1;
 nodes = (
-(442,1410,l),
-(578,1550,l),
-(520,1550,l),
-(396,1410,l)
+(504,2016,l),
+(655,2156,l),
+(597,2156,l),
+(458,2016,l)
 );
-},
-{
-pos = (-54,-446);
-ref = ringcomb.uc;
-scale = (1,0.95);
 }
 );
-width = 560;
+width = 483;
 },
 {
-anchors = (
-{
-name = _top;
-pos = (376,1186);
-}
-);
 layerId = m008;
+name = ital_gen;
 shapes = (
+{
+alignment = 1;
+pos = (-24,0);
+ref = ringcomb.uc;
+},
 {
 closed = 1;
 nodes = (
-(534,1562,l),
-(752,1742,l),
-(568,1742,l),
-(392,1562,l)
+(597,2103,l),
+(815,2283,l),
+(633,2283,l),
+(457,2103,l)
 );
-},
-{
-pos = (-72,-408);
-ref = ringcomb.uc;
-scale = (1,0.95);
 }
 );
-width = 602;
+width = 551;
 },
 {
-anchors = (
-{
-name = _top;
-pos = (446,1246);
-}
-);
 layerId = m010;
+name = ital_gen;
 shapes = (
+{
+alignment = 1;
+pos = (-34,0);
+ref = ringcomb.uc;
+scale = (1,0.95);
+},
 {
 closed = 1;
 nodes = (
-(642,1652,l),
-(898,1882,l),
-(590,1882,l),
-(406,1652,l)
+(762,2009,l),
+(1018,2239,l),
+(710,2239,l),
+(526,2009,l)
 );
-},
-{
-pos = (-164,-336);
-ref = ringcomb.uc;
-scale = (1,0.95);
 }
 );
-width = 666;
+width = 830;
 },
 {
-anchors = (
-{
-name = _top;
-pos = (314,1152);
-}
-);
 layerId = m012;
+name = ital_gen;
 shapes = (
+{
+alignment = 1;
+pos = (121,0);
+ref = ringcomb.uc;
+},
 {
 closed = 1;
 nodes = (
-(378,1410,l),
-(514,1550,l),
-(456,1550,l),
-(332,1410,l)
+(682,2027,l),
+(833,2167,l),
+(775,2167,l),
+(636,2027,l)
 );
-},
-{
-pos = (-54,-446);
-ref = ringcomb.uc;
-scale = (1,0.95);
 }
 );
-width = 432;
+width = 696;
 }
 );
-unicode = 57621;
 userData = {
 interface.gridadjust.original = "{'width': 958, 'leftMargin': 213, 'rightMargin': 92}";
 "interface.width-adjustments" = (
