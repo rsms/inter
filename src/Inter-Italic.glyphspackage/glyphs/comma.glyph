@@ -5,81 +5,109 @@ kernRight = comma;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 pos = (-244,-1282);
 ref = quoteright;
 }
 );
-width = 610;
+width = 582;
 },
 {
-guides = (
+background = {
+shapes = (
 {
-pos = (114,1240);
-},
-{
-pos = (-198,764);
+ref = period;
 }
 );
+};
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 pos = (-265,-1250);
 ref = quoteright;
 }
 );
-width = 798;
+width = 764;
 },
 {
+background = {
+shapes = (
+{
+ref = period;
+}
+);
+};
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
-pos = (-242,-1338);
+pos = (-234,-1338);
 ref = quoteright;
 }
 );
-width = 553;
+width = 554;
 },
 {
+background = {
+shapes = (
+{
+pos = (1,0);
+ref = period;
+}
+);
+};
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
-pos = (-244,-1282);
+pos = (-236,-1282);
 ref = quoteright;
 }
 );
-width = 446;
+width = 450;
 },
 {
-guides = (
+background = {
+shapes = (
 {
-pos = (80,1240);
-},
-{
-pos = (-232,764);
+pos = (1,0);
+ref = period;
 }
 );
+};
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
 pos = (-225,-1218);
 ref = quoteright;
 }
 );
-width = 567;
+width = 544;
 },
 {
-layerId = m012;
+background = {
 shapes = (
 {
-pos = (-252,-1330);
+ref = period;
+}
+);
+};
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+pos = (-236,-1330);
 ref = quoteright;
 }
 );
-width = 392;
+width = 400;
 }
 );
+metricWidth = period;
 unicode = 44;
 userData = {
 "interface.width-adjustments" = (
