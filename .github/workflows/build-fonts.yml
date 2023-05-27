@@ -75,7 +75,8 @@ jobs:
           echo "inter_zip=$ZIP" >> $GITHUB_ENV
           echo "inter_zip_extras=$ZIP_EXTRAS" >> $GITHUB_ENV
           make -j zip zip_extras
-          mv build/release/*.zip ./
+          mv build/release/*-extras.zip "$ZIP_EXTRAS"
+          mv build/release/*.zip "$ZIP"
 
       - name: Upload archive (unless tag)
         if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
