@@ -54,29 +54,32 @@ mkdir -p "$(dirname "$OUTFILE_ABS")" "$ZIPDIR"
 cp LICENSE.txt "$ZIPDIR/LICENSE.txt"
 
 if $OPT_EXTRAS; then
-  mkdir -p "$ZIPDIR/OTF" "$ZIPDIR/TTF"
+  mkdir -p "$ZIPDIR/OTF" "$ZIPDIR/TTF" "$ZIPDIR/Web with TrueType hints"
 
-  cp misc/dist/extras-readme.txt           "$ZIPDIR/README.txt"
-  cp build/fonts/static/Inter-*.otf        "$ZIPDIR/OTF/" &
-  cp build/fonts/static-hinted/Inter-*.ttf "$ZIPDIR/TTF/" &
+  cp misc/dist/extras-readme.txt             "$ZIPDIR/README.txt"
+  cp build/fonts/static/Inter-*.otf          "$ZIPDIR/OTF/" &
+  cp build/fonts/static-hinted/Inter-*.ttf   "$ZIPDIR/TTF/" &
+  cp build/fonts/static-hinted/Inter-*.woff2 "$ZIPDIR/Web with TrueType hints/" &
 else
   mkdir -p "$ZIPDIR/Web"
 
-  cp misc/dist/help.txt                           "$ZIPDIR/help.txt"
-  cp build/fonts/static/Inter.ttc                 "$ZIPDIR/Inter.ttc"
-  cp build/fonts/static-hinted/Inter-truetype.ttc "$ZIPDIR/Inter TrueType.ttc"
-  cp build/fonts/var/InterV.var.ttf               "$ZIPDIR/Inter Variable.ttf"
-  cp build/fonts/var/InterV-Italic.var.ttf        "$ZIPDIR/Inter Variable Italic.ttf"
+  cp misc/dist/help.txt                     "$ZIPDIR/help.txt"
+  cp build/fonts/static/Inter.ttc           "$ZIPDIR/Inter.ttc"
+  cp build/fonts/var/InterV.var.ttf         "$ZIPDIR/Inter Variable.ttf"
+  cp build/fonts/var/InterV-Italic.var.ttf  "$ZIPDIR/Inter Variable Italic.ttf"
+  cp build/fonts/static/Inter-*.woff2       "$ZIPDIR/Web/" &
+  cp build/fonts/var/Inter.var.woff2        "$ZIPDIR/Web/InterVariable.woff2"
+  cp build/fonts/var/Inter-Italic.var.woff2 "$ZIPDIR/Web/InterVariable-Italic.woff2"
+  cp misc/dist/inter.css                    "$ZIPDIR/Web/"
 
-  cp build/fonts/static/Inter-*.woff2 \
-     build/fonts/var/Inter.var.woff2 \
-     build/fonts/var/Inter-Italic.var.woff2 \
-     misc/dist/inter.css                       "$ZIPDIR/Web/" &
+  . build/venv/bin/activate
+  python misc/tools/patch-version.py "$ZIPDIR/Web/inter.css"
 fi
 
 mkdir -p "$(dirname "$OUTFILE_ABS")"
 wait
 
+rm -rf "$OUTFILE_ABS"
 pushd "$ZIPDIR" >/dev/null
 zip -q -X -r "$OUTFILE_ABS" *
 popd >/dev/null

@@ -32,6 +32,9 @@ $(UFODIR)/features:
 	@ln -s ../../src/features $(UFODIR)/features
 
 # designspace & master UFOs
+$(UFODIR)/%.var.designspace: $(UFODIR)/%.designspace | venv
+	. $(VENV) ; python misc/tools/gen-var-designspace.py $< $@
+
 $(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features | venv
 	. $(VENV) ; fontmake $(FM_ARGS) -o ufo -g $< --designspace-path $@ \
 		  --master-dir $(UFODIR) --instance-dir $(UFODIR)
@@ -139,7 +142,9 @@ build/ufo-editable/.ok: build/ufo-editable/Inter-Roman.designspace build/ufo-edi
 	$(UFODIR)/Inter-Roman.glyphs \
 	$(UFODIR)/Inter-Italic.glyphs \
 	$(UFODIR)/Inter-Roman.designspace \
-	$(UFODIR)/Inter-Italic.designspace
+	$(UFODIR)/Inter-Italic.designspace \
+	$(UFODIR)/Inter-Roman.var.designspace \
+	$(UFODIR)/Inter-Italic.var.designspace
 
 # ---------------------------------------------------------------------------------
 # products
@@ -173,10 +178,10 @@ $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static
 $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hinted venv
 	. $(VENV) ; python -m ttfautohint --no-info "$<" "$@"
 
-$(FONTDIR)/var/_%.var.ttf: $(UFODIR)/%.designspace build/features_data | $(FONTDIR)/var venv
+$(FONTDIR)/var/_%.var.ttf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable -m $< --output-path $@ $(FM_ARGS_2)
 
-$(FONTDIR)/var/_%.var.otf: $(UFODIR)/%.designspace build/features_data | $(FONTDIR)/var venv
+$(FONTDIR)/var/_%.var.otf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ $(FM_ARGS_2)
 
 %.woff2: %.ttf | venv
@@ -196,7 +201,6 @@ $(FONTDIR)/var/inter-roman-and-italic.stamp: \
 	  $(FONTDIR)/var/_Inter-Roman.var.ttf \
 	  $(FONTDIR)/var/_Inter-Italic.var.ttf \
 	  | venv
-	@#. $(VENV) ; python misc/tools/postprocess-vf2.py $^
 	mkdir $(FONTDIR)/var/gen-stat
 	. $(VENV) ; gftools gen-stat --out $(FONTDIR)/var/gen-stat $^
 	mv $(FONTDIR)/var/gen-stat/_Inter-Roman.var.ttf $(FONTDIR)/var/Inter.var.ttf
@@ -227,10 +231,9 @@ var_web: \
 web: var_web static_web
 
 static: \
-	$(FONTDIR)/static/Inter.ttc \
-	$(FONTDIR)/static-hinted/Inter-truetype.ttc
+	$(FONTDIR)/static/Inter.ttc
 
-$(FONTDIR)/static/Inter.ttc: \
+$(FONTDIR)/static/Inter.otc: \
 	$(FONTDIR)/static/Inter-Regular.otf \
 	$(FONTDIR)/static/Inter-Black.otf \
 	$(FONTDIR)/static/Inter-BlackItalic.otf \
@@ -269,7 +272,7 @@ $(FONTDIR)/static/Inter.ttc: \
 	$(FONTDIR)/static/Inter-DisplayExtraBoldItalic.otf
 	. $(VENV) ; python -m fontTools.ttLib.__init__ -o $@ $^
 
-$(FONTDIR)/static-hinted/Inter-truetype.ttc: \
+$(FONTDIR)/static-hinted/Inter.ttc: \
 	$(FONTDIR)/static-hinted/Inter-Regular.ttf \
 	$(FONTDIR)/static-hinted/Inter-Black.ttf \
 	$(FONTDIR)/static-hinted/Inter-BlackItalic.ttf \
@@ -499,7 +502,7 @@ static_web_hinted: \
 	$(FONTDIR)/static-hinted/Inter-DisplayExtraBoldItalic.woff2
 
 
-all: var static web static_otf static_ttf static_ttf_hinted
+all: var static web static_otf static_ttf static_ttf_hinted static_web_hinted
 
 .PHONY: \
 	all var var_web web \
@@ -568,6 +571,7 @@ zip_beta: \
 # - step2 runs tests, then makes a zip archive and updates the website (docs/ dir.)
 
 DIST_ZIP = build/release/Inter-${VERSION}.zip
+DIST_ZIP_EXTRAS = build/release/Inter-${VERSION}-extras.zip
 
 dist: dist_preflight
 	@# rebuild since font version & ID is based on git hash
@@ -599,6 +603,7 @@ dist_step2: test
 
 dist_zip: | venv
 	. $(VENV) ; python misc/tools/patch-version.py misc/dist/inter.css
+	bash misc/makezip2.sh -extras "$(DIST_ZIP_EXTRAS)"
 	bash misc/makezip2.sh -reveal-in-finder "$(DIST_ZIP)"
 
 dist_docs:
@@ -628,7 +633,7 @@ dist_postflight:
 INSTALLDIR := $(HOME)/Library/Fonts/Inter
 
 install: install_var $(INSTALLDIR)/Inter.ttc
-	@# Remove any old pre ttc fonts
+	@# Remove any old pre-ttc fonts
 	rm -rf $(INSTALLDIR)/Inter*.otf
 
 install_var: \
@@ -636,6 +641,9 @@ install_var: \
 	$(INSTALLDIR)/InterV-Italic.var.ttf
 
 $(INSTALLDIR)/%.ttc: $(FONTDIR)/static/%.ttc | $(INSTALLDIR)
+	cp -a $^ $@
+
+$(INSTALLDIR)/%.otc: $(FONTDIR)/static/%.ttc | $(INSTALLDIR)
 	cp -a $^ $@
 
 $(INSTALLDIR)/%.otf: $(FONTDIR)/static/%.otf | $(INSTALLDIR)

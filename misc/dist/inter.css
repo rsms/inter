@@ -8,20 +8,20 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
-  src: url("Inter.var.woff2?v=3.19") format("woff2-variations"),
-       url("Inter.var.woff2?v=3.19") format("woff2");
-  src: url("Inter.var.woff2?v=3.19") format("woff2") tech("variations");
+  src: url("InterVariable.woff2?v=3.19") format("woff2-variations"),
+       url("InterVariable.woff2?v=3.19") format("woff2");
+  src: url("InterVariable.woff2?v=3.19") format("woff2") tech("variations");
 }
 @font-face {
   font-family: "InterVar";
   font-weight: 100 900;
   font-display: swap;
   font-style: italic;
-  src: url("Inter-Italic.var.woff2?v=3.19") format("woff2-variations"),
-       url("Inter-Italic.var.woff2?v=3.19") format("woff2");
-  src: url("Inter-Italic.var.woff2?v=3.19") format("woff2") tech("variations");
+  src: url("InterVariable-Italic.woff2?v=3.19") format("woff2-variations"),
+       url("InterVariable-Italic.woff2?v=3.19") format("woff2");
+  src: url("InterVariable-Italic.woff2?v=3.19") format("woff2") tech("variations");
 }
-/* static fonts "Inter" */
+/* static fonts */
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 100; font-display: swap; src: url("Inter-Thin.woff2?v=3.19") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: italic; font-weight: 100; font-display: swap; src: url("Inter-ThinItalic.woff2?v=3.19") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 200; font-display: swap; src: url("Inter-ExtraLight.woff2?v=3.19") format("woff2"); }
@@ -40,7 +40,6 @@
 @font-face { font-family: "Inter"; font-style: italic; font-weight: 800; font-display: swap; src: url("Inter-ExtraBoldItalic.woff2?v=3.19") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: normal; font-weight: 900; font-display: swap; src: url("Inter-Black.woff2?v=3.19") format("woff2"); }
 @font-face { font-family: "Inter"; font-style: italic; font-weight: 900; font-display: swap; src: url("Inter-BlackItalic.woff2?v=3.19") format("woff2"); }
-/* static fonts "InterDisplay" */
 @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 100; font-display: swap; src: url("Inter-DisplayThin.woff2?v=3.19") format("woff2"); }
 @font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 100; font-display: swap; src: url("Inter-DisplayThinItalic.woff2?v=3.19") format("woff2"); }
 @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 200; font-display: swap; src: url("Inter-DisplayExtraLight.woff2?v=3.19") format("woff2"); }
