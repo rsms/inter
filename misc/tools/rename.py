@@ -215,7 +215,7 @@ def setFamilyName(font, nextFamilyName):
       old, new = renameRecord(rec, prevFamilyNames, nextFamilyName)
     else:
       old, new = renameRecord(rec, prevFamilyNames, nextFamilyName)
-    print("  %r: '%s' -> '%s'" % (rec, old, new))
+    # print("  %r: '%s' -> '%s'" % (rec, old, new))
 
   # HACK! FIXME!
   # add name ID 25 "Variations PostScript Name Prefix" if not found
