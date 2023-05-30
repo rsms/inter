@@ -231,7 +231,7 @@ var_web: \
 web: var_web static_web
 
 static: \
-	$(FONTDIR)/static/Inter.ttc
+	$(FONTDIR)/static-hinted/Inter.ttc
 
 $(FONTDIR)/static/Inter.otc: \
 	$(FONTDIR)/static/Inter-Regular.otf \
@@ -632,7 +632,9 @@ dist_postflight:
 
 INSTALLDIR := $(HOME)/Library/Fonts/Inter
 
-install: install_var $(INSTALLDIR)/Inter.ttc
+install: install_var $(INSTALLDIR)/Inter.ttc | install_clean_otf
+
+install_clean_otf:
 	@# Remove any old pre-ttc fonts
 	rm -rf $(INSTALLDIR)/Inter*.otf
 
@@ -640,10 +642,10 @@ install_var: \
 	$(INSTALLDIR)/InterV.var.ttf \
 	$(INSTALLDIR)/InterV-Italic.var.ttf
 
-$(INSTALLDIR)/%.ttc: $(FONTDIR)/static/%.ttc | $(INSTALLDIR)
+$(INSTALLDIR)/%.ttc: $(FONTDIR)/static-hinted/%.ttc | $(INSTALLDIR)
 	cp -a $^ $@
 
-$(INSTALLDIR)/%.otc: $(FONTDIR)/static/%.ttc | $(INSTALLDIR)
+$(INSTALLDIR)/%.otc: $(FONTDIR)/static/%.otc | $(INSTALLDIR)
 	cp -a $^ $@
 
 $(INSTALLDIR)/%.otf: $(FONTDIR)/static/%.otf | $(INSTALLDIR)
@@ -655,7 +657,7 @@ $(INSTALLDIR)/%.var.ttf: $(FONTDIR)/var/%.var.ttf | $(INSTALLDIR)
 $(INSTALLDIR):
 	mkdir -p $@
 
-.PHONY: install install_var
+.PHONY: install install_var install_clean_otf
 
 # ---------------------------------------------------------------------------------
 # misc
