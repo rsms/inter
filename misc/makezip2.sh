@@ -4,7 +4,6 @@ cd "$(dirname "$0")/.."
 
 OPT_HELP=
 OPT_REVEAL_IN_FINDER=false
-OPT_EXTRAS=false
 OUTFILE=
 
 # parse args
@@ -12,7 +11,6 @@ while [[ $# -gt 0 ]]; do
   case "$1" in
   -h|-help|--help)   OPT_HELP=0; shift;;
   -reveal-in-finder) OPT_REVEAL_IN_FINDER=true; shift;;
-  -extras|--extras)  OPT_EXTRAS=true; shift;;
   -*)
     echo "$0: Unknown option $1" >&2
     OPT_HELP=1
@@ -38,9 +36,6 @@ fi
 
 # tmp dir
 ZIPDIR=build/tmp/zip
-if $OPT_EXTRAS; then
-  ZIPDIR=build/tmp/zip-extras
-fi
 
 # convert relative path to absolute if needed
 OUTFILE_ABS=$OUTFILE
@@ -53,28 +48,34 @@ mkdir -p "$(dirname "$OUTFILE_ABS")" "$ZIPDIR"
 
 cp LICENSE.txt "$ZIPDIR/LICENSE.txt"
 
-if $OPT_EXTRAS; then
-  mkdir -p "$ZIPDIR/OTF" "$ZIPDIR/TTF" "$ZIPDIR/Web with TrueType hints"
 
-  cp misc/dist/extras-readme.txt             "$ZIPDIR/README.txt"
-  cp build/fonts/static/Inter-*.otf          "$ZIPDIR/OTF/" &
-  cp build/fonts/static-hinted/Inter-*.ttf   "$ZIPDIR/TTF/" &
-  cp build/fonts/static-hinted/Inter-*.woff2 "$ZIPDIR/Web with TrueType hints/" &
-else
-  mkdir -p "$ZIPDIR/Web"
+mkdir -p "$ZIPDIR/Web"
 
-  cp misc/dist/help.txt                     "$ZIPDIR/help.txt"
-  cp build/fonts/static-hinted/Inter.ttc    "$ZIPDIR/Inter.ttc"
-  cp build/fonts/var/InterV.var.ttf         "$ZIPDIR/Inter Variable.ttf"
-  cp build/fonts/var/InterV-Italic.var.ttf  "$ZIPDIR/Inter Variable Italic.ttf"
-  cp build/fonts/static/Inter-*.woff2       "$ZIPDIR/Web/" &
-  cp build/fonts/var/Inter.var.woff2        "$ZIPDIR/Web/InterVariable.woff2"
-  cp build/fonts/var/Inter-Italic.var.woff2 "$ZIPDIR/Web/InterVariable-Italic.woff2"
-  cp misc/dist/inter.css                    "$ZIPDIR/Web/"
+cp misc/dist/help.txt                     "$ZIPDIR/help.txt"
 
-  . build/venv/bin/activate
-  python misc/tools/patch-version.py "$ZIPDIR/Web/inter.css"
-fi
+cp build/fonts/static-hinted/Inter.ttc    "$ZIPDIR/Inter.ttc"
+
+cp build/fonts/var/InterV.var.ttf         "$ZIPDIR/Inter Variable.ttf"
+cp build/fonts/var/InterV-Italic.var.ttf  "$ZIPDIR/Inter Variable Italic.ttf"
+
+cp build/fonts/static/Inter-*.woff2       "$ZIPDIR/Web/" &
+cp build/fonts/var/Inter.var.woff2        "$ZIPDIR/Web/InterVariable.woff2"
+cp build/fonts/var/Inter-Italic.var.woff2 "$ZIPDIR/Web/InterVariable-Italic.woff2"
+cp misc/dist/inter.css                    "$ZIPDIR/Web/"
+
+. build/venv/bin/activate
+python misc/tools/patch-version.py "$ZIPDIR/Web/inter.css"
+
+mkdir -p "$ZIPDIR/extras/otf" \
+         "$ZIPDIR/extras/ttf" \
+         "$ZIPDIR/extras/woff with TT hints"
+
+cp misc/dist/extras-readme.txt             "$ZIPDIR/extras/README.txt"
+cp build/fonts/static/Inter-*.otf          "$ZIPDIR/extras/otf/" &
+cp build/fonts/static-hinted/Inter-*.ttf   "$ZIPDIR/extras/ttf/" &
+cp build/fonts/static-hinted/Inter-*.woff2 "$ZIPDIR/extras/woff with TT hints/" &
+
+
 
 mkdir -p "$(dirname "$OUTFILE_ABS")"
 wait

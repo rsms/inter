@@ -550,10 +550,6 @@ zip: all
 	bash misc/makezip2.sh -reveal-in-finder \
 		"build/release/Inter-$(VERSION)-$(shell git rev-parse --short=10 HEAD).zip"
 
-zip_extras: all
-	bash misc/makezip2.sh -extras -reveal-in-finder \
-		"build/release/Inter-$(VERSION)-$(shell git rev-parse --short=10 HEAD)-extras.zip"
-
 zip_beta: \
 		$(FONTDIR)/var/InterV.var.ttf \
 		$(FONTDIR)/var/InterV.var.woff2 \
@@ -571,7 +567,6 @@ zip_beta: \
 # - step2 runs tests, then makes a zip archive and updates the website (docs/ dir.)
 
 DIST_ZIP = build/release/Inter-${VERSION}.zip
-DIST_ZIP_EXTRAS = build/release/Inter-${VERSION}-extras.zip
 
 dist: dist_preflight
 	@# rebuild since font version & ID is based on git hash
@@ -603,7 +598,6 @@ dist_step2: test
 
 dist_zip: | venv
 	. $(VENV) ; python misc/tools/patch-version.py misc/dist/inter.css
-	bash misc/makezip2.sh -extras "$(DIST_ZIP_EXTRAS)"
 	bash misc/makezip2.sh -reveal-in-finder "$(DIST_ZIP)"
 
 dist_docs:

@@ -71,21 +71,15 @@ jobs:
       - name: make zip
         run: |
           ZIP=Inter-${{ env.inter_version }}.zip
-          ZIP_EXTRAS=Inter-${{ env.inter_version }}-extras.zip
           echo "inter_zip=$ZIP" >> $GITHUB_ENV
-          echo "inter_zip_extras=$ZIP_EXTRAS" >> $GITHUB_ENV
-          make -j zip zip_extras
-          mv build/release/*-extras.zip "$ZIP_EXTRAS"
-          mv build/release/*.zip "$ZIP"
+          make -j zip
+          mv build/release/Inter*.zip "$ZIP"
 
       - name: Upload archive (unless tag)
         if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
         uses: actions/upload-artifact@v3
         with:
-          name: "${{ env.inter_zip }}"
-          path: |
-            ${{ env.inter_zip }}
-            ${{ env.inter_zip_extras }}
+          path: ${{ env.inter_zip }}
           retention-days: 1
 
       - name: Create release (if tag)
@@ -94,7 +88,5 @@ jobs:
         with:
           prerelease: true
           name: "${{ env.inter_version }}"
-          body: "This release was automatically created"
-          files: |
-            ${{ env.inter_zip }}
-            ${{ env.inter_zip_extras }}
+          body: "This release was created automatically"
+          files: ${{ env.inter_zip }}
