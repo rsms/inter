@@ -17,10 +17,6 @@ def fixup_names(instance_or_source):
     instance_or_source.styleName = instance_or_source.styleName.replace('Display ', '')
 
 
-def fixup_source(designspace, source):
-  fixup_names(source)
-
-
 def fixup_instance(designspace, instance):
   fixup_names(instance)
 
@@ -61,9 +57,13 @@ def fixup_sources(designspace):
     i -= 1
     source = designspace.sources[i]
     if source.name.find('Inter Display') != -1:
-      fixup_source(designspace, source)
+      fixup_names(source)
     else:
-      del designspace.sources[i]
+      source.name = source.name + ' Text'
+      if source.styleName == 'Regular':
+        source.styleName = 'Text'
+      else:
+        source.styleName = 'Text ' + source.styleName
 
 
 def main(argv):
