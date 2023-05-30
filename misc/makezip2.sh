@@ -64,7 +64,7 @@ else
   mkdir -p "$ZIPDIR/Web"
 
   cp misc/dist/help.txt                     "$ZIPDIR/help.txt"
-  cp build/fonts/static/Inter.ttc           "$ZIPDIR/Inter.ttc"
+  cp build/fonts/static-hinted/Inter.ttc    "$ZIPDIR/Inter.ttc"
   cp build/fonts/var/InterV.var.ttf         "$ZIPDIR/Inter Variable.ttf"
   cp build/fonts/var/InterV-Italic.var.ttf  "$ZIPDIR/Inter Variable Italic.ttf"
   cp build/fonts/static/Inter-*.woff2       "$ZIPDIR/Web/" &
