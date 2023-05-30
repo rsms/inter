@@ -14,6 +14,7 @@ POSTSCRIPT_NAME     = 6
 PREFERRED_FAMILY    = 16
 TYPO_SUBFAMILY_NAME = 17
 WWS_FAMILY          = 21
+VAR_PS_NAME_PREFIX  = 25
 
 
 FAMILY_RELATED_IDS = set([
@@ -23,6 +24,7 @@ FAMILY_RELATED_IDS = set([
   POSTSCRIPT_NAME,
   PREFERRED_FAMILY,
   WWS_FAMILY,
+  VAR_PS_NAME_PREFIX,
 ])
 
 whitespace_re = re.compile(r'\s+')
@@ -131,7 +133,9 @@ def renameStylesGoogleFonts(font):
 
 
 def setStyleName(font, newStyleName):
-  newFullName = getFamilyName(font).strip() + " " + newStyleName
+  newFullName = getFamilyName(font).strip()
+  if newStyleName != 'Regular':
+    newFullName += " " + newStyleName
   newFullNamePs = remove_whitespace(newFullName)
   set_full_name(font, newFullName, newFullNamePs)
 
@@ -162,9 +166,24 @@ def setFamilyName(font, nextFamilyName):
     return s, nextFamilyName
 
   # postcript name can't contain spaces
-  psPrevFamilyNames = [s.replace(" ", "") for s in prevFamilyNames]
+  psPrevFamilyNames = []
+  for s in prevFamilyNames:
+    s = s.strip()
+    if s.find(' ') == -1:
+      psPrevFamilyNames.append(s)
+    else:
+      # Foo Bar Baz -> FooBarBaz
+      psPrevFamilyNames.append(s.replace(" ", ""))
+      # # Foo Bar Baz -> FooBar-Baz
+      p = s.rfind(' ')
+      s = s[:p] + '-' + s[p+1:]
+      psPrevFamilyNames.append(s)
+
   psNextFamilyName = nextFamilyName.replace(" ", "")
-  for rec in font["name"].names:
+  found_VAR_PS_NAME_PREFIX = False
+  nameTable = font["name"]
+
+  for rec in nameTable.names:
     name_id = rec.nameID
     if name_id not in FAMILY_RELATED_IDS:
       # leave uninteresting records unmodified
@@ -186,9 +205,24 @@ def setFamilyName(font, nextFamilyName):
         old, new = renameRecord(rec, [prev_psname], psNextFamilyName)
       else:
         old, new = renameRecord(rec, prevFamilyNames, nextFamilyName)
+    elif name_id == VAR_PS_NAME_PREFIX:
+      # Variations PostScript Name Prefix.
+      # If present in a variable font, it may be used as the family prefix in the
+      # PostScript Name Generation for Variation Fonts algorithm.
+      # The character set is restricted to ASCII-range uppercase Latin letters,
+      # lowercase Latin letters, and digits.
+      found_VAR_PS_NAME_PREFIX = True
+      old, new = renameRecord(rec, prevFamilyNames, nextFamilyName)
     else:
       old, new = renameRecord(rec, prevFamilyNames, nextFamilyName)
-    # print("  %r: '%s' -> '%s'" % (rec, old, new))
+    print("  %r: '%s' -> '%s'" % (rec, old, new))
+
+  # HACK! FIXME!
+  # add name ID 25 "Variations PostScript Name Prefix" if not found
+  if not found_VAR_PS_NAME_PREFIX and nextFamilyName.find('Variable') != -1:
+    varPSNamePrefix = remove_whitespace(nextFamilyName)
+    nameTable.setName(varPSNamePrefix, VAR_PS_NAME_PREFIX, 1, 0, 0)     # mac
+    nameTable.setName(varPSNamePrefix, VAR_PS_NAME_PREFIX, 3, 1, 0x409) # windows
 
 
 def main():
@@ -220,6 +254,8 @@ def main():
       args.family = remove_substring(getFamilyName(font), "Display")
     if not args.style:
       args.style = remove_substring(getStyleName(font), "Display")
+      if args.style == '':
+        args.style = 'Regular'
 
   editCount = 0
   try:

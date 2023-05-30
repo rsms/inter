@@ -214,9 +214,9 @@ $(FONTDIR)/var/Inter-Italic.var.ttf: $(FONTDIR)/var/inter-roman-and-italic.stamp
 	touch $@
 
 $(FONTDIR)/var/InterV.var.ttf: $(FONTDIR)/var/Inter.var.ttf | venv
-	. $(VENV) ; python misc/tools/rename.py --family "Inter Variable" -o $@ $<
+	. $(VENV) ; python misc/tools/rename.py --scrub-display --family "Inter Variable" -o $@ $<
 $(FONTDIR)/var/InterV-Italic.var.ttf: $(FONTDIR)/var/Inter-Italic.var.ttf | venv
-	. $(VENV) ; python misc/tools/rename.py --family "Inter Variable" -o $@ $<
+	. $(VENV) ; python misc/tools/rename.py --scrub-display --family "Inter Variable" -o $@ $<
 
 var: \
 	$(FONTDIR)/var/Inter.var.ttf \
