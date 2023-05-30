@@ -46,12 +46,26 @@ def update_version(ufo):
 
 
 def fix_opsz_range(designspace):
-  # TODO: find extremes by looking at the source
-  for a in designspace.axes:
-    if a.tag == "opsz":
-      a.minimum = 14
-      a.maximum = 32
+  opsz_min = 1000000
+  opsz_max = 0
+  opsz_name = ''
+  opsz_axis = None
+
+  for opsz_axis in designspace.axes:
+    if opsz_axis.tag == "opsz":
+      opsz_name = opsz_axis.name
       break
+
+  for instance in designspace.instances:
+    opsz_value = instance.location[opsz_name]
+    if opsz_value < opsz_min:
+      opsz_min = opsz_value
+    if opsz_value > opsz_max:
+      opsz_max = opsz_value
+
+  opsz_axis.minimum = opsz_min
+  opsz_axis.maximum = opsz_max
+
   return designspace
 
 
