@@ -51,7 +51,7 @@ cp LICENSE.txt "$ZIPDIR/LICENSE.txt"
 
 mkdir -p "$ZIPDIR/Web"
 
-cp misc/dist/help.txt                     "$ZIPDIR/help.txt"
+cp misc/dist/help.txt                     "$ZIPDIR/Help.txt"
 
 cp build/fonts/static-hinted/Inter.ttc    "$ZIPDIR/Inter.ttc"
 
@@ -66,14 +66,14 @@ cp misc/dist/inter.css                    "$ZIPDIR/Web/"
 . build/venv/bin/activate
 python misc/tools/patch-version.py "$ZIPDIR/Web/inter.css"
 
-mkdir -p "$ZIPDIR/extras/otf" \
-         "$ZIPDIR/extras/ttf" \
-         "$ZIPDIR/extras/woff with TT hints"
+mkdir -p "$ZIPDIR/Extras/otf" \
+         "$ZIPDIR/Extras/ttf" \
+         "$ZIPDIR/Extras/woff with TT hints"
 
-cp misc/dist/extras-readme.txt             "$ZIPDIR/extras/README.txt"
-cp build/fonts/static/Inter-*.otf          "$ZIPDIR/extras/otf/" &
-cp build/fonts/static-hinted/Inter-*.ttf   "$ZIPDIR/extras/ttf/" &
-cp build/fonts/static-hinted/Inter-*.woff2 "$ZIPDIR/extras/woff with TT hints/" &
+cp misc/dist/extras-readme.txt             "$ZIPDIR/Extras/README.txt"
+cp build/fonts/static/Inter-*.otf          "$ZIPDIR/Extras/otf/" &
+cp build/fonts/static-hinted/Inter-*.ttf   "$ZIPDIR/Extras/ttf/" &
+cp build/fonts/static-hinted/Inter-*.woff2 "$ZIPDIR/Extras/woff with TT hints/" &
 
 
 
