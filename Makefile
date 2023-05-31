@@ -152,7 +152,8 @@ build/ufo-editable/.ok: build/ufo-editable/Inter-Roman.designspace build/ufo-edi
 # arguments to fontmake
 FM_ARGS_2 := $(FM_ARGS) \
 	--overlaps-backend pathops \
-	--flatten-components
+	--flatten-components \
+	--no-autohint
 ifndef DEBUG
 	FM_ARGS_2 += --production-names
 else
@@ -178,14 +179,17 @@ $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static
 $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hinted venv
 	. $(VENV) ; python -m ttfautohint --no-info "$<" "$@"
 
+
 $(FONTDIR)/var/_%.var.ttf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable -m $< --output-path $@ $(FM_ARGS_2)
 
 $(FONTDIR)/var/_%.var.otf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ $(FM_ARGS_2)
 
+
 %.woff2: %.ttf | venv
 	. $(VENV) ; misc/tools/woff2 compress -o "$@" "$<"
+
 
 $(FONTDIR)/static:
 	mkdir -p $@
