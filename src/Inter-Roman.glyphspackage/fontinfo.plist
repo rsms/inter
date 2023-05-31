@@ -3741,7 +3741,7 @@ instanceInterpolations = {
 "B1F27B51-9973-4381-9301-4FE46FE1CA59" = 0.66667;
 "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265" = 0.33333;
 };
-name = "Extra Light";
+name = ExtraLight;
 weightClass = 200;
 },
 {
@@ -3855,7 +3855,7 @@ instanceInterpolations = {
 "5C20EF92-B63D-42A8-8878-93C2863E0093" = 0.4;
 "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265" = 0.6;
 };
-name = "Semi Bold";
+name = SemiBold;
 weightClass = 600;
 },
 {
@@ -3885,6 +3885,7 @@ instanceInterpolations = {
 "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265" = 0.4;
 };
 isBold = 1;
+linkStyle = Regular;
 name = Bold;
 weightClass = 700;
 },
@@ -3914,7 +3915,7 @@ instanceInterpolations = {
 "5C20EF92-B63D-42A8-8878-93C2863E0093" = 0.8;
 "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265" = 0.2;
 };
-name = "Extra Bold";
+name = ExtraBold;
 weightClass = 800;
 },
 {
@@ -3965,24 +3966,21 @@ value = (
 0,
 4
 );
-},
-{
-name = "Has WWS Names";
-value = 0;
 }
 );
 instanceInterpolations = {
 m011 = 1;
 };
-name = "Display Thin";
+name = Thin;
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
+key = familyNames;
+values = (
 {
-key = WWSSubfamilyName;
-value = Thin;
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 100;
@@ -4007,25 +4005,22 @@ value = (
 0,
 4
 );
-},
-{
-name = "Has WWS Names";
-value = 0;
 }
 );
 instanceInterpolations = {
 m007 = 0.33333;
 m011 = 0.66667;
 };
-name = "Display Extra Light";
+name = ExtraLight;
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
+key = familyNames;
+values = (
 {
-key = WWSSubfamilyName;
-value = "Extra Light";
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 200;
@@ -4050,25 +4045,22 @@ value = (
 0,
 4
 );
-},
-{
-name = "Has WWS Names";
-value = 0;
 }
 );
 instanceInterpolations = {
 m007 = 0.66667;
 m011 = 0.33333;
 };
-name = "Display Light";
+name = Light;
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
+key = familyNames;
+values = (
 {
-key = WWSSubfamilyName;
-value = Light;
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 300;
@@ -4093,24 +4085,21 @@ value = (
 0,
 4
 );
-},
-{
-name = "Has WWS Names";
-value = 0;
 }
 );
 instanceInterpolations = {
 m007 = 1;
 };
-name = Display;
+name = Regular;
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
+key = familyNames;
+values = (
 {
-key = WWSSubfamilyName;
-value = Regular;
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 },
@@ -4134,25 +4123,22 @@ value = (
 0,
 4
 );
-},
-{
-name = "Has WWS Names";
-value = 0;
 }
 );
 instanceInterpolations = {
 m007 = 0.8;
 m009 = 0.2;
 };
-name = "Display Medium";
+name = Medium;
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
+key = familyNames;
+values = (
 {
-key = WWSSubfamilyName;
-value = Medium;
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 500;
@@ -4177,25 +4163,22 @@ value = (
 0,
 4
 );
-},
-{
-name = "Has WWS Names";
-value = 0;
 }
 );
 instanceInterpolations = {
 m007 = 0.6;
 m009 = 0.4;
 };
-name = "Display Semi Bold";
+name = SemiBold;
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
+key = familyNames;
+values = (
 {
-key = WWSSubfamilyName;
-value = "Semi Bold";
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 600;
@@ -4220,10 +4203,6 @@ value = (
 0,
 4
 );
-},
-{
-name = "Has WWS Names";
-value = 0;
 }
 );
 instanceInterpolations = {
@@ -4231,16 +4210,17 @@ m007 = 0.4;
 m009 = 0.6;
 };
 isBold = 1;
-linkStyle = Display;
-name = "Display Bold";
+linkStyle = Regular;
+name = Bold;
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
+key = familyNames;
+values = (
 {
-key = WWSSubfamilyName;
-value = Bold;
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 700;
@@ -4265,25 +4245,22 @@ value = (
 0,
 4
 );
-},
-{
-name = "Has WWS Names";
-value = 0;
 }
 );
 instanceInterpolations = {
 m007 = 0.2;
 m009 = 0.8;
 };
-name = "Display Extra Bold";
+name = ExtraBold;
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
+key = familyNames;
+values = (
 {
-key = WWSSubfamilyName;
-value = "Extra Bold";
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 800;
@@ -4308,24 +4285,21 @@ value = (
 0,
 4
 );
-},
-{
-name = "Has WWS Names";
-value = 0;
 }
 );
 instanceInterpolations = {
 m009 = 1;
 };
-name = "Display Black";
+name = Black;
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
+key = familyNames;
+values = (
 {
-key = WWSSubfamilyName;
-value = Black;
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 900;
@@ -14862,6 +14836,7 @@ m011 = {
 HV = "46";
 };
 };
+GSDontShowVersionAlert = 1;
 UFO.lib = {
 com.fontlab.v2.tth = {
 stems = {
