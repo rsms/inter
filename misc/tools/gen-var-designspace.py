@@ -25,14 +25,16 @@ def fixup_instance(designspace, instance):
   instance.styleMapFamilyName = instance.styleMapFamilyName.replace(' Display', '')
 
   # remove WWSFamilyName and WWSSubfamilyName properties
-  del instance.lib['com.schriftgestaltung.properties']
+  if 'com.schriftgestaltung.properties' in instance.lib:
+    del instance.lib['com.schriftgestaltung.properties']
 
-  customParameters = instance.lib['com.schriftgestaltung.customParameters']
-  i = len(customParameters)
-  while i > 0:
-    i -= 1
-    if customParameters[i][0] == 'Has WWS Names':
-      del customParameters[i]
+  if 'com.schriftgestaltung.customParameters' in instance.lib:
+    customParameters = instance.lib['com.schriftgestaltung.customParameters']
+    i = len(customParameters)
+    while i > 0:
+      i -= 1
+      if customParameters[i][0] == 'Has WWS Names':
+        del customParameters[i]
 
 
 def fixup_instances(designspace):
