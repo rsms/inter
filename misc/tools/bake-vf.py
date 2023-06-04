@@ -257,7 +257,7 @@ def main():
     description='Generate STAT table for variable font family')
   a = lambda *args, **kwargs: argparser.add_argument(*args, **kwargs)
   a('--family', metavar='<name>',
-    help='Rename family to <name> instead of "Inter Display"')
+    help='Rename family to <name> instead of "Inter Variable"')
   a('-o', '--output', metavar='<file>',
     help='Output font file. Defaults to input file (overwrite)')
   a('input', metavar='<file>', help='Input font file')
@@ -269,7 +269,7 @@ def main():
 
   # set family name
   if not args.family:
-    args.family = "Inter Display"
+    args.family = "Inter Variable"
   setFamilyName(font, args.family)
 
   # set style name
