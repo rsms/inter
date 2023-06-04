@@ -51,17 +51,14 @@ cp LICENSE.txt "$ZIPDIR/LICENSE.txt"
 
 mkdir -p "$ZIPDIR/web"
 
-cp misc/dist/help.txt                     "$ZIPDIR/help.txt"
-
-cp build/fonts/static-hinted/Inter.ttc    "$ZIPDIR/Inter.ttc"
-
-cp build/fonts/var/InterV.var.ttf         "$ZIPDIR/Inter-Variable.ttf"
-cp build/fonts/var/InterV-Italic.var.ttf  "$ZIPDIR/Inter-Variable-Italic.ttf"
-
-cp build/fonts/static/Inter-*.woff2       "$ZIPDIR/web/" &
-cp build/fonts/var/Inter.var.woff2        "$ZIPDIR/web/InterVariable.woff2"
-cp build/fonts/var/Inter-Italic.var.woff2 "$ZIPDIR/web/InterVariable-Italic.woff2"
-cp misc/dist/inter.css                    "$ZIPDIR/web/"
+cp misc/dist/help.txt                          "$ZIPDIR/help.txt"
+cp build/fonts/static-hinted/Inter.ttc         "$ZIPDIR/Inter.ttc"
+cp build/fonts/var/Inter-Variable.ttf          "$ZIPDIR/Inter-Variable.ttf"
+cp build/fonts/var/Inter-Variable-Italic.ttf   "$ZIPDIR/Inter-Variable-Italic.ttf"
+cp build/fonts/static/Inter-*.woff2            "$ZIPDIR/web/" &
+cp build/fonts/var/Inter-Variable.woff2        "$ZIPDIR/web/InterVariable.woff2"
+cp build/fonts/var/Inter-Variable-Italic.woff2 "$ZIPDIR/web/InterVariable-Italic.woff2"
+cp misc/dist/inter.css                         "$ZIPDIR/web/"
 
 . build/venv/bin/activate
 python misc/tools/patch-version.py "$ZIPDIR/web/inter.css"

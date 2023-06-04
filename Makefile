@@ -176,14 +176,13 @@ $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static
 	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
 
 
-$(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint --no-info "$<" "$@"
+$(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static/Inter-Regular.ttf $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python -m ttfautohint --reference $(FONTDIR)/static/Inter-Regular.ttf --no-info "$<" "$@"
 
-
-$(FONTDIR)/var/_%.var.ttf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
+$(FONTDIR)/var/.%.var.ttf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable -m $< --output-path $@ $(FM_ARGS_2)
 
-$(FONTDIR)/var/_%.var.otf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
+$(FONTDIR)/var/.%.var.otf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ $(FM_ARGS_2)
 
 
@@ -200,37 +199,35 @@ $(FONTDIR)/var:
 $(UFODIR):
 	mkdir -p $@
 
-# roman + italic with STAT
-$(FONTDIR)/var/inter-roman-and-italic.stamp: \
-	  $(FONTDIR)/var/_Inter-Roman.var.ttf \
-	  $(FONTDIR)/var/_Inter-Italic.var.ttf \
+# Inter Variable
+$(FONTDIR)/var/.Inter-Variable.stamp: \
+	  $(FONTDIR)/var/.Inter-Roman.var.ttf \
+	  $(FONTDIR)/var/.Inter-Italic.var.ttf \
 	  | venv
+	rm -rf $(FONTDIR)/var/gen-stat
 	mkdir $(FONTDIR)/var/gen-stat
 	. $(VENV) ; gftools gen-stat --out $(FONTDIR)/var/gen-stat $^
-	mv $(FONTDIR)/var/gen-stat/_Inter-Roman.var.ttf $(FONTDIR)/var/Inter.var.ttf
-	mv $(FONTDIR)/var/gen-stat/_Inter-Italic.var.ttf $(FONTDIR)/var/Inter-Italic.var.ttf
+	. $(VENV) ; python misc/tools/rename.py --scrub-display --family "Inter Variable" \
+	              -o $(FONTDIR)/var/Inter-Variable.ttf \
+	              $(FONTDIR)/var/gen-stat/.Inter-Roman.var.ttf
+	. $(VENV) ; python misc/tools/rename.py --scrub-display --family "Inter Variable" \
+	              -o $(FONTDIR)/var/Inter-Variable-Italic.ttf \
+	              $(FONTDIR)/var/gen-stat/.Inter-Italic.var.ttf
 	rm -rf $(FONTDIR)/var/gen-stat
 	touch $@
 
-$(FONTDIR)/var/Inter.var.ttf: $(FONTDIR)/var/inter-roman-and-italic.stamp
+$(FONTDIR)/var/Inter-Variable.ttf: $(FONTDIR)/var/.Inter-Variable.stamp
 	touch $@
-$(FONTDIR)/var/Inter-Italic.var.ttf: $(FONTDIR)/var/inter-roman-and-italic.stamp
+$(FONTDIR)/var/Inter-Variable-Italic.ttf: $(FONTDIR)/var/.Inter-Variable.stamp
 	touch $@
-
-$(FONTDIR)/var/InterV.var.ttf: $(FONTDIR)/var/Inter.var.ttf | venv
-	. $(VENV) ; python misc/tools/rename.py --scrub-display --family "Inter Variable" -o $@ $<
-$(FONTDIR)/var/InterV-Italic.var.ttf: $(FONTDIR)/var/Inter-Italic.var.ttf | venv
-	. $(VENV) ; python misc/tools/rename.py --scrub-display --family "Inter Variable" -o $@ $<
 
 var: \
-	$(FONTDIR)/var/Inter.var.ttf \
-	$(FONTDIR)/var/Inter-Italic.var.ttf \
-	$(FONTDIR)/var/InterV.var.ttf \
-	$(FONTDIR)/var/InterV-Italic.var.ttf
+	$(FONTDIR)/var/Inter-Variable.ttf \
+	$(FONTDIR)/var/Inter-Variable-Italic.ttf
 
 var_web: \
-	$(FONTDIR)/var/Inter.var.woff2 \
-	$(FONTDIR)/var/Inter-Italic.var.woff2
+	$(FONTDIR)/var/Inter-Variable.woff2 \
+	$(FONTDIR)/var/Inter-Variable-Italic.woff2
 
 web: var_web static_web
 
@@ -529,10 +526,10 @@ FBAKE_ARGS := check-universal \
               -x com.google.fonts/check/family/win_ascent_and_descent
 
 build/fontbakery-report-var.txt: \
-		$(FONTDIR)/var/Inter.var.ttf \
-		$(FONTDIR)/var/Inter-Italic.var.ttf \
+		$(FONTDIR)/var/Inter-Variable.ttf \
+		$(FONTDIR)/var/Inter-Variable-Italic.ttf \
 		| venv
-	@echo "fontbakery {Inter,Inter-Italic}.var.ttf > $(@) ..."
+	@echo "fontbakery {Inter-Variable,Inter-Variable-Italic}.ttf > $(@) ..."
 	@. $(VENV) ; fontbakery \
 		$(FBAKE_ARGS) -x com.google.fonts/check/STAT_strings \
 		$^ > $@ \
@@ -555,10 +552,10 @@ zip: all
 		"build/release/Inter-$(VERSION)-$(shell git rev-parse --short=10 HEAD).zip"
 
 zip_beta: \
-		$(FONTDIR)/var/InterV.var.ttf \
-		$(FONTDIR)/var/InterV.var.woff2 \
-		$(FONTDIR)/var/InterV-Italic.var.ttf \
-		$(FONTDIR)/var/InterV-Italic.var.woff2
+		$(FONTDIR)/var/Inter-Variable.ttf \
+		$(FONTDIR)/var/Inter-Variable.woff2 \
+		$(FONTDIR)/var/Inter-Variable-Italic.ttf \
+		$(FONTDIR)/var/Inter-Variable-Italic.woff2
 	mkdir -p build/release
 	zip -j -q -X "build/release/Inter_beta-$(VERSION)-$(shell date '+%Y%m%d_%H%M')-$(shell git rev-parse --short=10 HEAD).zip" $^
 
@@ -637,8 +634,8 @@ install_clean_otf:
 	rm -rf $(INSTALLDIR)/Inter*.otf
 
 install_var: \
-	$(INSTALLDIR)/InterV.var.ttf \
-	$(INSTALLDIR)/InterV-Italic.var.ttf
+	$(INSTALLDIR)/Inter-Variable.ttf \
+	$(INSTALLDIR)/Inter-Variable-Italic.ttf
 
 $(INSTALLDIR)/%.ttc: $(FONTDIR)/static-hinted/%.ttc | $(INSTALLDIR)
 	cp -a $^ $@
@@ -646,10 +643,13 @@ $(INSTALLDIR)/%.ttc: $(FONTDIR)/static-hinted/%.ttc | $(INSTALLDIR)
 $(INSTALLDIR)/%.otc: $(FONTDIR)/static/%.otc | $(INSTALLDIR)
 	cp -a $^ $@
 
-$(INSTALLDIR)/%.otf: $(FONTDIR)/static/%.otf | $(INSTALLDIR)
+$(INSTALLDIR)/Inter-Variable.ttf: $(FONTDIR)/var/Inter-Variable.ttf | $(INSTALLDIR)
 	cp -a $^ $@
 
-$(INSTALLDIR)/%.var.ttf: $(FONTDIR)/var/%.var.ttf | $(INSTALLDIR)
+$(INSTALLDIR)/Inter-Variable-Italic.ttf: $(FONTDIR)/var/Inter-Variable-Italic.ttf | $(INSTALLDIR)
+	cp -a $^ $@
+
+$(INSTALLDIR)/%.otf: $(FONTDIR)/static/%.otf | $(INSTALLDIR)
 	cp -a $^ $@
 
 $(INSTALLDIR):
@@ -658,10 +658,26 @@ $(INSTALLDIR):
 .PHONY: install install_var install_clean_otf
 
 # ---------------------------------------------------------------------------------
+# debug
+
+build/ttx/%.ttx: $(FONTDIR)/var/%.ttf
+	mkdir -p build/ttx
+	cp $^ build/ttx/
+	ttx -x glyf -i -f -s build/ttx/$(notdir $^)
+	@echo "Dumped $(notdir $^) to build/ttx/$(basename $(notdir $^)).*.ttx"
+
+ttx_var_roman: build/ttx/Inter-Variable.ttx
+ttx_var_italic: build/ttx/Inter-Variable-Italic.ttx
+ttx_var: ttx_var_roman ttx_var_italic
+
+.PHONY: ttx_var ttx_var_roman ttx_var_italic
+
+# ---------------------------------------------------------------------------------
 # misc
 
 clean:
-	rm -rf build/tmp build/fonts build/ufo build/googlefonts
+	rm -rf build/tmp build/fonts build/ufo build/googlefonts build/ttx || true
+	rm -rf build/tmp build/fonts build/ufo build/googlefonts build/ttx
 
 docs:
 	$(MAKE) -C docs serve
