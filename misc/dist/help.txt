@@ -12,15 +12,16 @@ Contents:
 
 File index:
   Inter.ttc            Complete font family "Inter"
-  Inter Variable*.ttf  Complete font family "Inter Variable"
-  Web/*                Web fonts and CSS
+  Inter-Variable*.ttf  Complete font family "Inter Variable"
+  web/*                Web fonts and CSS
+  extras/              Alternative formats (see "Extras")
 
 ---------------------------------------------------------------------
 
 1. Installing font files
 
   Inter fonts comes in two flavors:
-  Variable (Inter Variable*.ttf) and Static (Inter.ttc)
+  Variable (Inter-Variable*.ttf) and Static (Inter.ttc)
 
   Variable fonts allow you to choose any weight and optical size in
   supported software. Variable fonts is a relatively recent new
@@ -40,8 +41,8 @@ File index:
 
   1. Open the "Font Book" application.
   2. In the main menu, select "File" → "Add Fonts..."
-  3. Select "Inter.ttc", "Inter Variable.ttf" and
-     "Inter Variable Italic.ttf"
+  3. Select "Inter.ttc", "Inter-Variable.ttf" and
+     "Inter-Variable-Italic.ttf"
   4. Press the "Open" button
 
   Alternatively, if you prefer not to use Font Book, you can move or
@@ -51,8 +52,8 @@ File index:
 1.2. Installing on Microsoft Windows
 
   1. Open the zip file you downloaded
-  2. Select "Inter.ttc", "Inter Variable.ttf" and
-     "Inter Variable Italic.ttf"
+  2. Select "Inter.ttc", "Inter-Variable.ttf" and
+     "Inter-Variable-Italic.ttf"
   3. Right-click the selected files, choose "Install for all users"
 
   If you have a previous installation of Inter, you should make sure
@@ -64,8 +65,8 @@ File index:
 1.3. Installing on Ubuntu Linux
 
   1. Create a ".fonts" directory in your home. (mkdir -p ~/.fonts)
-  2. Copy "Inter.ttc", "Inter Variable.ttf" and
-     "Inter Variable Italic.ttf" into your .fonts directory
+  2. Copy "Inter.ttc", "Inter-Variable.ttf" and
+     "Inter-Variable-Italic.ttf" into your .fonts directory
      (cp Inter.ttc *.ttf ~/.fonts/)
 
   You may have to restart apps and/or your window server session.
@@ -130,16 +131,18 @@ File index:
   change in a future release.
 
   Note that the web fonts does not contain hints to minimize file
-  size. You can get hinted web fonts from the "extras" distribution.
+  size. You can get hinted web fonts from the "extras/woff-hinted"
+  directory.
 
 ---------------------------------------------------------------------
 
 4. Extras
 
-  There's a separate zip file, available from the URL below, which
-  contains some additional content, like individual otf & ttf files.
+  The "extras" directory contains some additional "bonus" content:
 
-  Get a copy at:  https://github.com/rsms/inter/releases/latest
+  otf/          Static font files in CFF format
+  ttf/          Static font files with TrueType hints
+  woff-hinted/  Web fonts with TrueType hints
 
 ---------------------------------------------------------------------
 

@@ -49,31 +49,30 @@ mkdir -p "$(dirname "$OUTFILE_ABS")" "$ZIPDIR"
 cp LICENSE.txt "$ZIPDIR/LICENSE.txt"
 
 
-mkdir -p "$ZIPDIR/Web"
+mkdir -p "$ZIPDIR/web"
 
-cp misc/dist/help.txt                     "$ZIPDIR/Help.txt"
+cp misc/dist/help.txt                     "$ZIPDIR/help.txt"
 
 cp build/fonts/static-hinted/Inter.ttc    "$ZIPDIR/Inter.ttc"
 
-cp build/fonts/var/InterV.var.ttf         "$ZIPDIR/Inter Variable.ttf"
-cp build/fonts/var/InterV-Italic.var.ttf  "$ZIPDIR/Inter Variable Italic.ttf"
+cp build/fonts/var/InterV.var.ttf         "$ZIPDIR/Inter-Variable.ttf"
+cp build/fonts/var/InterV-Italic.var.ttf  "$ZIPDIR/Inter-Variable-Italic.ttf"
 
-cp build/fonts/static/Inter-*.woff2       "$ZIPDIR/Web/" &
-cp build/fonts/var/Inter.var.woff2        "$ZIPDIR/Web/InterVariable.woff2"
-cp build/fonts/var/Inter-Italic.var.woff2 "$ZIPDIR/Web/InterVariable-Italic.woff2"
-cp misc/dist/inter.css                    "$ZIPDIR/Web/"
+cp build/fonts/static/Inter-*.woff2       "$ZIPDIR/web/" &
+cp build/fonts/var/Inter.var.woff2        "$ZIPDIR/web/InterVariable.woff2"
+cp build/fonts/var/Inter-Italic.var.woff2 "$ZIPDIR/web/InterVariable-Italic.woff2"
+cp misc/dist/inter.css                    "$ZIPDIR/web/"
 
 . build/venv/bin/activate
-python misc/tools/patch-version.py "$ZIPDIR/Web/inter.css"
+python misc/tools/patch-version.py "$ZIPDIR/web/inter.css"
 
-mkdir -p "$ZIPDIR/Extras/otf" \
-         "$ZIPDIR/Extras/ttf" \
-         "$ZIPDIR/Extras/woff with TT hints"
+mkdir -p "$ZIPDIR/extras/otf" \
+         "$ZIPDIR/extras/ttf" \
+         "$ZIPDIR/extras/woff-hinted"
 
-cp misc/dist/extras-readme.txt             "$ZIPDIR/Extras/README.txt"
-cp build/fonts/static/Inter-*.otf          "$ZIPDIR/Extras/otf/" &
-cp build/fonts/static-hinted/Inter-*.ttf   "$ZIPDIR/Extras/ttf/" &
-cp build/fonts/static-hinted/Inter-*.woff2 "$ZIPDIR/Extras/woff with TT hints/" &
+cp build/fonts/static/Inter-*.otf          "$ZIPDIR/extras/otf/" &
+cp build/fonts/static-hinted/Inter-*.ttf   "$ZIPDIR/extras/ttf/" &
+cp build/fonts/static-hinted/Inter-*.woff2 "$ZIPDIR/extras/woff-hinted/" &
 
 
 
