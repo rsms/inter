@@ -190,6 +190,13 @@ $(FONTDIR)/var/.%.var.otf: $(UFODIR)/%.var.designspace build/features_data | $(F
 	. $(VENV) ; misc/tools/woff2 compress -o "$@" "$<"
 
 
+$(FONTDIR)/var/Inter-Variable.ttf: $(FONTDIR)/var/.Inter-Roman.var.ttf
+	. $(VENV) ; python misc/tools/bake-vf.py $^ -o $@
+
+$(FONTDIR)/var/Inter-Variable-Italic.ttf: $(FONTDIR)/var/.Inter-Italic.var.ttf
+	. $(VENV) ; python misc/tools/bake-vf.py $^ -o $@
+
+
 $(FONTDIR)/static:
 	mkdir -p $@
 $(FONTDIR)/static-hinted:
@@ -199,27 +206,6 @@ $(FONTDIR)/var:
 $(UFODIR):
 	mkdir -p $@
 
-# Inter Variable
-$(FONTDIR)/var/.Inter-Variable.stamp: \
-	  $(FONTDIR)/var/.Inter-Roman.var.ttf \
-	  $(FONTDIR)/var/.Inter-Italic.var.ttf \
-	  | venv
-	rm -rf $(FONTDIR)/var/gen-stat
-	mkdir $(FONTDIR)/var/gen-stat
-	. $(VENV) ; gftools gen-stat --out $(FONTDIR)/var/gen-stat $^
-	. $(VENV) ; python misc/tools/rename.py --scrub-display --family "Inter Variable" \
-	              -o $(FONTDIR)/var/Inter-Variable.ttf \
-	              $(FONTDIR)/var/gen-stat/.Inter-Roman.var.ttf
-	. $(VENV) ; python misc/tools/rename.py --scrub-display --family "Inter Variable" \
-	              -o $(FONTDIR)/var/Inter-Variable-Italic.ttf \
-	              $(FONTDIR)/var/gen-stat/.Inter-Italic.var.ttf
-	rm -rf $(FONTDIR)/var/gen-stat
-	touch $@
-
-$(FONTDIR)/var/Inter-Variable.ttf: $(FONTDIR)/var/.Inter-Variable.stamp
-	touch $@
-$(FONTDIR)/var/Inter-Variable-Italic.ttf: $(FONTDIR)/var/.Inter-Variable.stamp
-	touch $@
 
 var: \
 	$(FONTDIR)/var/Inter-Variable.ttf \
