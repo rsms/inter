@@ -20,8 +20,7 @@ def fixup_names(instance_or_source):
 def fixup_instance(designspace, instance):
   fixup_names(instance)
 
-  psFamilyName = 'Inter'
-  instance.postScriptFontName = psFamilyName + remove_whitespace(instance.styleName)
+  instance.postScriptFontName = 'InterVariable-' + remove_whitespace(instance.styleName)
   instance.styleMapFamilyName = instance.styleMapFamilyName.replace(' Display', '')
 
   # remove WWSFamilyName and WWSSubfamilyName properties
