@@ -3,12 +3,12 @@
 .formatVersion = 3;
 axes = (
 {
-name = Weight;
-tag = wght;
-},
-{
 name = "Optical size";
 tag = opsz;
+},
+{
+name = Weight;
+tag = wght;
 }
 );
 classes = (
@@ -2137,7 +2137,7 @@ value = (
 },
 {
 name = openTypeHeadLowestRecPPEM;
-value = 6;
+value = 3;
 },
 {
 name = codePageRanges;
@@ -2833,8 +2833,8 @@ tag = ss03;
 fontMaster = (
 {
 axesValues = (
-100,
-14
+14,
+100
 );
 customParameters = (
 {
@@ -2980,8 +2980,8 @@ GSOffsetVertical = 10;
 },
 {
 axesValues = (
-100,
-28
+28,
+100
 );
 customParameters = (
 {
@@ -3122,8 +3122,8 @@ GSOffsetVertical = 10;
 },
 {
 axesValues = (
-400,
-14
+14,
+400
 );
 customParameters = (
 {
@@ -3267,8 +3267,8 @@ GSOffsetVertical = 72;
 },
 {
 axesValues = (
-400,
-28
+28,
+400
 );
 customParameters = (
 {
@@ -3409,8 +3409,8 @@ GSOffsetVertical = 72;
 },
 {
 axesValues = (
-900,
-14
+14,
+900
 );
 customParameters = (
 {
@@ -3556,8 +3556,8 @@ GSOffsetVertical = 150;
 },
 {
 axesValues = (
-900,
-28
+28,
+900
 );
 customParameters = (
 {
@@ -3703,8 +3703,8 @@ GSOffsetVertical = 150;
 instances = (
 {
 axesValues = (
-100,
-14
+14,
+100
 );
 customParameters = (
 {
@@ -3736,8 +3736,8 @@ name = "Thin Italic";
 },
 {
 axesValues = (
-200,
-14
+14,
+200
 );
 customParameters = (
 {
@@ -3771,8 +3771,8 @@ weightClass = 200;
 },
 {
 axesValues = (
-300,
-14
+14,
+300
 );
 customParameters = (
 {
@@ -3806,8 +3806,8 @@ weightClass = 300;
 },
 {
 axesValues = (
-400,
-14
+14,
+400
 );
 customParameters = (
 {
@@ -3838,8 +3838,8 @@ name = Italic;
 },
 {
 axesValues = (
-500,
-14
+14,
+500
 );
 customParameters = (
 {
@@ -3873,8 +3873,8 @@ weightClass = 500;
 },
 {
 axesValues = (
-600,
-14
+14,
+600
 );
 customParameters = (
 {
@@ -3908,8 +3908,8 @@ weightClass = 600;
 },
 {
 axesValues = (
-700,
-14
+14,
+700
 );
 customParameters = (
 {
@@ -3943,8 +3943,8 @@ weightClass = 700;
 },
 {
 axesValues = (
-800,
-14
+14,
+800
 );
 customParameters = (
 {
@@ -3978,8 +3978,8 @@ weightClass = 800;
 },
 {
 axesValues = (
-900,
-14
+14,
+900
 );
 customParameters = (
 {
@@ -4012,8 +4012,8 @@ weightClass = 900;
 },
 {
 axesValues = (
-100,
-28
+28,
+100
 );
 customParameters = (
 {
@@ -4059,8 +4059,8 @@ value = "Thin Italic";
 },
 {
 axesValues = (
-200,
-28
+28,
+200
 );
 customParameters = (
 {
@@ -4108,8 +4108,8 @@ weightClass = 200;
 },
 {
 axesValues = (
-300,
-28
+28,
+300
 );
 customParameters = (
 {
@@ -4157,8 +4157,8 @@ weightClass = 300;
 },
 {
 axesValues = (
-400,
-28
+28,
+400
 );
 customParameters = (
 {
@@ -4204,8 +4204,8 @@ value = Italic;
 },
 {
 axesValues = (
-500,
-28
+28,
+500
 );
 customParameters = (
 {
@@ -4253,8 +4253,8 @@ weightClass = 500;
 },
 {
 axesValues = (
-600,
-28
+28,
+600
 );
 customParameters = (
 {
@@ -4302,8 +4302,8 @@ weightClass = 600;
 },
 {
 axesValues = (
-700,
-28
+28,
+700
 );
 customParameters = (
 {
@@ -4352,8 +4352,8 @@ weightClass = 700;
 },
 {
 axesValues = (
-800,
-28
+28,
+800
 );
 customParameters = (
 {
@@ -4401,8 +4401,8 @@ weightClass = 800;
 },
 {
 axesValues = (
-900,
-28
+28,
+900
 );
 customParameters = (
 {
@@ -4622,12 +4622,6 @@ tripleprime = -139;
 "@MMK_R_A" = -40;
 "@MMK_R_comma" = -90;
 };
-"@MMK_L_Omicrongreek" = {
-"@MMK_R_comma" = -93;
-"@MMK_R_quotedblleft" = -69;
-"@MMK_R_slash" = -81;
-underscore = -81;
-};
 "@MMK_L_P" = {
 "@MMK_R_A" = -151;
 "@MMK_R_J" = -197;
@@ -4655,7 +4649,6 @@ period = -69;
 "@MMK_R_C" = -61;
 "@MMK_R_Elcyrillic" = -240;
 "@MMK_R_J" = -186;
-"@MMK_R_Omicrongreek" = -104;
 "@MMK_R_T.sc" = -128;
 "@MMK_R_Y" = 40;
 "@MMK_R_a" = -150;
@@ -5711,7 +5704,6 @@ underscore = -209;
 xi = -69;
 };
 Sigma = {
-"@MMK_R_Omicrongreek" = -81;
 "@MMK_R_bullet" = -69;
 "@MMK_R_gammagreek" = -104;
 "@MMK_R_guillemetleft" = -69;
@@ -6057,7 +6049,6 @@ three.numr = {
 underscore = {
 "@MMK_R_B" = 69;
 "@MMK_R_C" = -81;
-"@MMK_R_Omicrongreek" = -81;
 "@MMK_R_T" = -116;
 "@MMK_R_U" = -81;
 "@MMK_R_V" = -162;
@@ -6310,12 +6301,6 @@ tripleprime = -139;
 "@MMK_R_A" = -40;
 "@MMK_R_comma" = -90;
 };
-"@MMK_L_Omicrongreek" = {
-"@MMK_R_comma" = -93;
-"@MMK_R_quotedblleft" = -69;
-"@MMK_R_slash" = -81;
-underscore = -81;
-};
 "@MMK_L_P" = {
 "@MMK_R_A" = -151;
 "@MMK_R_J" = -197;
@@ -6343,7 +6328,6 @@ period = -69;
 "@MMK_R_C" = -61;
 "@MMK_R_Elcyrillic" = -240;
 "@MMK_R_J" = -186;
-"@MMK_R_Omicrongreek" = -104;
 "@MMK_R_T.sc" = -128;
 "@MMK_R_Y" = 80;
 "@MMK_R_a" = -150;
@@ -7466,7 +7450,6 @@ underscore = -209;
 xi = -69;
 };
 Sigma = {
-"@MMK_R_Omicrongreek" = -81;
 "@MMK_R_bullet" = -69;
 "@MMK_R_gammagreek" = -104;
 "@MMK_R_guillemetleft" = -69;
@@ -7861,7 +7844,6 @@ tlinebelow = {
 underscore = {
 "@MMK_R_B" = 69;
 "@MMK_R_C" = -81;
-"@MMK_R_Omicrongreek" = -81;
 "@MMK_R_T" = -116;
 "@MMK_R_U" = -81;
 "@MMK_R_V" = -162;
@@ -8104,12 +8086,6 @@ tripleprime = -139;
 "@MMK_R_A" = -70;
 "@MMK_R_comma" = -90;
 };
-"@MMK_L_Omicrongreek" = {
-"@MMK_R_comma" = -93;
-"@MMK_R_quotedblleft" = -69;
-"@MMK_R_slash" = -81;
-underscore = -81;
-};
 "@MMK_L_P" = {
 "@MMK_R_A" = -151;
 "@MMK_R_J" = -197;
@@ -8137,7 +8113,6 @@ period = -69;
 "@MMK_R_C" = -61;
 "@MMK_R_Elcyrillic" = -280;
 "@MMK_R_J" = -186;
-"@MMK_R_Omicrongreek" = -104;
 "@MMK_R_T.sc" = -128;
 "@MMK_R_Y" = 40;
 "@MMK_R_a" = -150;
@@ -9219,7 +9194,6 @@ underscore = -209;
 xi = -69;
 };
 Sigma = {
-"@MMK_R_Omicrongreek" = -81;
 "@MMK_R_bullet" = -69;
 "@MMK_R_gammagreek" = -104;
 "@MMK_R_guillemetleft" = -69;
@@ -9568,7 +9542,6 @@ three.numr = {
 underscore = {
 "@MMK_R_B" = 69;
 "@MMK_R_C" = -81;
-"@MMK_R_Omicrongreek" = -81;
 "@MMK_R_T" = -116;
 "@MMK_R_U" = -81;
 "@MMK_R_V" = -162;
@@ -11575,12 +11548,6 @@ tripleprime = -139;
 "@MMK_R_A" = -80;
 "@MMK_R_comma" = -90;
 };
-"@MMK_L_Omicrongreek" = {
-"@MMK_R_comma" = -93;
-"@MMK_R_quotedblleft" = -69;
-"@MMK_R_slash" = -81;
-underscore = -81;
-};
 "@MMK_L_P" = {
 "@MMK_R_A" = -186;
 "@MMK_R_J" = -197;
@@ -11608,7 +11575,6 @@ period = -69;
 "@MMK_R_C" = -69;
 "@MMK_R_Elcyrillic" = -280;
 "@MMK_R_J" = -186;
-"@MMK_R_Omicrongreek" = -104;
 "@MMK_R_a" = -150;
 "@MMK_R_approxequal" = -69;
 "@MMK_R_bullet" = -69;
@@ -12671,7 +12637,6 @@ underscore = -209;
 xi = -69;
 };
 Sigma = {
-"@MMK_R_Omicrongreek" = -81;
 "@MMK_R_bullet" = -69;
 "@MMK_R_gammagreek" = -104;
 "@MMK_R_guillemetleft" = -69;
@@ -13044,7 +13009,6 @@ tlinebelow = {
 underscore = {
 "@MMK_R_B" = 69;
 "@MMK_R_C" = -81;
-"@MMK_R_Omicrongreek" = -81;
 "@MMK_R_T" = -116;
 "@MMK_R_U" = -81;
 "@MMK_R_V" = -162;
@@ -13297,12 +13261,6 @@ tripleprime = -139;
 "@MMK_R_A" = -60;
 "@MMK_R_comma" = -90;
 };
-"@MMK_L_Omicrongreek" = {
-"@MMK_R_comma" = -93;
-"@MMK_R_quotedblleft" = -69;
-"@MMK_R_slash" = -81;
-underscore = -81;
-};
 "@MMK_L_P" = {
 "@MMK_R_A" = -186;
 "@MMK_R_J" = -197;
@@ -13332,7 +13290,6 @@ period = -69;
 "@MMK_R_C" = -69;
 "@MMK_R_Elcyrillic" = -260;
 "@MMK_R_J" = -186;
-"@MMK_R_Omicrongreek" = -104;
 "@MMK_R_a" = -210;
 "@MMK_R_approxequal" = -69;
 "@MMK_R_bullet" = -69;
@@ -14396,7 +14353,6 @@ underscore = -209;
 xi = -69;
 };
 Sigma = {
-"@MMK_R_Omicrongreek" = -81;
 "@MMK_R_bullet" = -69;
 "@MMK_R_gammagreek" = -104;
 "@MMK_R_guillemetleft" = -69;
@@ -14738,7 +14694,6 @@ three.numr = {
 };
 underscore = {
 "@MMK_R_C" = -81;
-"@MMK_R_Omicrongreek" = -81;
 "@MMK_R_T" = -116;
 "@MMK_R_U" = -81;
 "@MMK_R_V" = -162;
