@@ -2240,6 +2240,21 @@ value = 1;
 {
 name = "Get Hints From Master";
 value = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+},
+{
+name = "Axis Mappings";
+value = {
+opsz = {
+14 = 14;
+22 = 25;
+28 = 28;
+};
+wght = {
+100 = 100;
+400 = 400;
+900 = 900;
+};
+};
 }
 );
 date = "2016-12-04 18:21:54 +0000";
@@ -3181,12 +3196,12 @@ size = "-16";
 name = "Axis Location";
 value = (
 {
-Axis = Weight;
-Location = 400;
-},
-{
 Axis = "Optical size";
 Location = 14;
+},
+{
+Axis = Weight;
+Location = 400;
 }
 );
 }
