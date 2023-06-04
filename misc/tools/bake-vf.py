@@ -32,19 +32,21 @@ STAT_AXES = [
 ]
 
 
-def stat_locations(ital):
+def stat_locations(is_italic):
+  ital = 1 if is_italic else 0
+  suffix = " Italic" if is_italic else ""
   return [
-    { "name": "Thin",       "location": { "wght": 100, "ital": ital } },
-    { "name": "ExtraLight", "location": { "wght": 200, "ital": ital } },
-    { "name": "Light",      "location": { "wght": 300, "ital": ital } },
-    { "name": "Regular",    "location": { "wght": 400, "ital": ital }, "flags": 0x2 },
-    { "name": "Medium",     "location": { "wght": 500, "ital": ital } },
-    { "name": "SemiBold",   "location": { "wght": 600, "ital": ital } },
-    { "name": "Bold",       "location": { "wght": 700, "ital": ital } },
-    { "name": "Heavy",      "location": { "wght": 800, "ital": ital } },
-    { "name": "Black",      "location": { "wght": 900, "ital": ital } },
+    { "name": "Thin"+suffix,       "location":{"wght":100, "ital":ital} },
+    { "name": "ExtraLight"+suffix, "location":{"wght":200, "ital":ital} },
+    { "name": "Light"+suffix,      "location":{"wght":300, "ital":ital} },
+    { "name": "Regular"+suffix,    "location":{"wght":400, "ital":ital}, "flags":0x2 },
+    { "name": "Medium"+suffix,     "location":{"wght":500, "ital":ital} },
+    { "name": "SemiBold"+suffix,   "location":{"wght":600, "ital":ital} },
+    { "name": "Bold"+suffix,       "location":{"wght":700, "ital":ital} },
+    { "name": "Heavy"+suffix,      "location":{"wght":800, "ital":ital} },
+    { "name": "Black"+suffix,      "location":{"wght":900, "ital":ital} },
   ]
-  # "flags": 0x2
+  # "flags":0x2
   #   Indicates that the axis value represents the “normal” value
   #   for the axis and may be omitted when composing name strings.
 
