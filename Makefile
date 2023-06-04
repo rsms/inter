@@ -647,6 +647,7 @@ $(INSTALLDIR):
 # debug
 
 build/ttx/%.ttx: $(FONTDIR)/var/%.ttf
+	rm -rf "build/ttx/$(basename $(notdir $^))".*.ttx
 	mkdir -p build/ttx
 	cp $^ build/ttx/
 	ttx -x glyf -i -f -s build/ttx/$(notdir $^)
