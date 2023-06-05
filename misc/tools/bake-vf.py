@@ -252,6 +252,19 @@ def gen_stat(ttfont):
   buildStatTable(ttfont, STAT_AXES, locations=locations)
 
 
+def fixup_fvar(ttfont):
+  fvar = ttfont['fvar']
+  for a in fvar.axes:
+    if a.axisTag == "wght":
+      a.defaultValue = 400
+      break
+
+
+def fixup_os2(ttfont):
+  os2 = ttfont['OS/2']
+  os2.usWeightClass = 400
+
+
 def main():
   argparser = argparse.ArgumentParser(
     description='Generate STAT table for variable font family')
@@ -280,6 +293,12 @@ def main():
 
   # build STAT table
   gen_stat(font)
+
+  # # fixup fvar table (set default wght value)
+  # fixup_fvar(font)
+
+  # # fixup OS/2 table (set usWeightClass)
+  # fixup_os2(font)
 
   # save font
   outfile = args.output or args.input

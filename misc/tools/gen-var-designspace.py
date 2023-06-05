@@ -45,7 +45,9 @@ def fixup_instances(designspace):
       fixup_instance(designspace, instance)
     else:
       del designspace.instances[i]
-  # change default opsz value
+
+
+def fixup_axes_defaults(designspace):
   for a in designspace.axes:
     if a.tag == "opsz":
       a.default = a.maximum
@@ -78,6 +80,7 @@ def main(argv):
   designspace = DesignSpaceDocument.fromfile(args.input_designspace)
 
   fixup_instances(designspace)
+  fixup_axes_defaults(designspace)
   fixup_sources(designspace)
 
   designspace.write(args.output_designspace)
