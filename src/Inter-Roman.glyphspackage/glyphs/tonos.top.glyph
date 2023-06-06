@@ -1,12 +1,12 @@
 {
 category = Mark;
-glyphname = tonostop;
+glyphname = tonos.top;
 layers = (
 {
 anchors = (
 {
 name = _top;
-pos = (222,1118);
+pos = (224,1118);
 }
 );
 guides = (
@@ -22,14 +22,14 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(282,1264,l),
-(382,1557,l),
-(196,1557,l),
+(287,1264,l),
+(389,1558,l),
+(196,1558,l),
 (162,1264,l)
 );
 }
 );
-width = 546;
+width = 553;
 },
 {
 anchors = (
@@ -41,6 +41,9 @@ pos = (372,1118);
 guides = (
 {
 pos = (0,1256);
+},
+{
+pos = (0,1582);
 }
 );
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -65,6 +68,9 @@ pos = (134,1118);
 }
 );
 guides = (
+{
+pos = (0,1557);
+},
 {
 pos = (0,1283);
 }

@@ -3,29 +3,74 @@ glyphname = uni1FAB;
 layers = (
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (378,0);
+pos = (626,0);
 ref = Omega;
 },
 {
-pos = (935,0);
+pos = (1182,0);
 ref = uni1FBE;
 },
 {
-pos = (-212,0);
+alignment = 1;
+pos = (8,-68);
 ref = uni1FDD.tonos;
 }
 );
-width = 1938;
+width = 2202;
 },
 {
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (462,0);
+pos = (739,0);
+ref = Omega;
+},
+{
+pos = (1303,0);
+ref = uni1FBE;
+},
+{
+alignment = 1;
+pos = (-41,-105);
+ref = uni1FDD.tonos;
+}
+);
+width = 2401;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (440,0);
+ref = Omega;
+},
+{
+pos = (1002,0);
+ref = uni1FBE;
+},
+{
+alignment = 1;
+pos = (37,-67);
+ref = uni1FDD.tonos;
+}
+);
+width = 1982;
+},
+{
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (463,0);
 ref = Omega;
 },
 {
@@ -33,92 +78,56 @@ pos = (1026,0);
 ref = uni1FBE;
 },
 {
-pos = (-105,0);
+alignment = 1;
+pos = (-31,-5);
 ref = uni1FDD.tonos;
 }
 );
-width = 2074;
-},
-{
-layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
-shapes = (
-{
-alignment = -1;
-pos = (328,0);
-ref = Omega;
-},
-{
-alignment = -1;
-pos = (888,0);
-ref = uni1FBE;
-},
-{
-alignment = -1;
-pos = (-268,0);
-ref = uni1FDD.tonos;
-}
-);
-width = 1890;
-},
-{
-layerId = m008;
-shapes = (
-{
-alignment = -1;
-pos = (378,0);
-ref = Omega;
-},
-{
-pos = (941,0);
-ref = uni1FBE;
-},
-{
-pos = (-238,0);
-ref = uni1FDD.tonos;
-}
-);
-width = 1874;
+width = 1969;
 },
 {
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (462,0);
+pos = (668,0);
 ref = Omega;
 },
 {
-pos = (998,0);
+pos = (1204,0);
 ref = uni1FBE;
 },
 {
-pos = (-133,0);
+alignment = 1;
+pos = (-47,-42);
 ref = uni1FDD.tonos;
 }
 );
-width = 2042;
+width = 2230;
 },
 {
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
 alignment = -1;
-pos = (328,0);
+pos = (447,0);
 ref = Omega;
 },
 {
-alignment = -1;
-pos = (888,0);
+pos = (1014,0);
 ref = uni1FBE;
 },
 {
-alignment = -1;
-pos = (-268,0);
+alignment = 1;
+pos = (-20,0);
 ref = uni1FDD.tonos;
 }
 );
-width = 1762;
+width = 1861;
 }
 );
+metricLeft = T;
 unicode = 8107;
 }
