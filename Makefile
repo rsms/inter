@@ -650,18 +650,63 @@ $(INSTALLDIR):
 # ---------------------------------------------------------------------------------
 # debug
 
-build/ttx/%.ttx: $(FONTDIR)/var/%.ttf
-	rm -rf "build/ttx/$(basename $(notdir $^))".*.ttx
-	mkdir -p build/ttx
-	cp $^ build/ttx/
-	ttx -x glyf -i -f -s build/ttx/$(notdir $^)
-	@echo "Dumped $(notdir $^) to build/ttx/$(basename $(notdir $^)).*.ttx"
+build/ttx/Inter-Var%: $(FONTDIR)/var/Inter-Var%.ttf
+	rm -rf "build/ttx/$(basename $(notdir $^))"
+	mkdir -p "build/ttx/$(basename $(notdir $^))"
+	cp $^ "build/ttx/$(basename $(notdir $^))/$(notdir $^)"
+	ttx -x glyf -x GPOS -x GSUB -x gvar -i -f -s \
+		"build/ttx/$(basename $(notdir $^))/$(notdir $^)"
+	@echo "Dumped $(notdir $^) to build/ttx/$(basename $(notdir $^))/"
 
-ttx_var_roman: build/ttx/Inter-Variable.ttx
-ttx_var_italic: build/ttx/Inter-Variable-Italic.ttx
+build/ttx/%: $(FONTDIR)/static/%.ttf
+	rm -rf "build/ttx/$(basename $(notdir $^))"
+	mkdir -p "build/ttx/$(basename $(notdir $^))"
+	cp $^ "build/ttx/$(basename $(notdir $^))/$(notdir $^)"
+	ttx -x glyf -x GPOS -x GSUB -i -f -s "build/ttx/$(basename $(notdir $^))/$(notdir $^)"
+	@echo "Dumped $(notdir $^) to build/ttx/$(basename $(notdir $^))/"
+
+ttx_var_roman: build/ttx/Inter-Variable
+ttx_var_italic: build/ttx/Inter-Variable-Italic
 ttx_var: ttx_var_roman ttx_var_italic
+ttx_static: \
+	build/ttx/Inter-Black.ttx \
+	build/ttx/Inter-BlackItalic.ttx \
+	build/ttx/Inter-Regular.ttx \
+	build/ttx/Inter-Italic.ttx \
+	build/ttx/Inter-Thin.ttx \
+	build/ttx/Inter-ThinItalic.ttx \
+	build/ttx/Inter-Light.ttx \
+	build/ttx/Inter-LightItalic.ttx \
+	build/ttx/Inter-ExtraLight.ttx \
+	build/ttx/Inter-ExtraLightItalic.ttx \
+	build/ttx/Inter-Medium.ttx \
+	build/ttx/Inter-MediumItalic.ttx \
+	build/ttx/Inter-SemiBold.ttx \
+	build/ttx/Inter-SemiBoldItalic.ttx \
+	build/ttx/Inter-Bold.ttx \
+	build/ttx/Inter-BoldItalic.ttx \
+	build/ttx/Inter-ExtraBold.ttx \
+	build/ttx/Inter-ExtraBoldItalic.ttx \
+	build/ttx/Inter-DisplayBlack.ttx \
+	build/ttx/Inter-DisplayBlackItalic.ttx \
+	build/ttx/Inter-Display.ttx \
+	build/ttx/Inter-DisplayItalic.ttx \
+	build/ttx/Inter-DisplayThin.ttx \
+	build/ttx/Inter-DisplayThinItalic.ttx \
+	build/ttx/Inter-DisplayLight.ttx \
+	build/ttx/Inter-DisplayLightItalic.ttx \
+	build/ttx/Inter-DisplayExtraLight.ttx \
+	build/ttx/Inter-DisplayExtraLightItalic.ttx \
+	build/ttx/Inter-DisplayMedium.ttx \
+	build/ttx/Inter-DisplayMediumItalic.ttx \
+	build/ttx/Inter-DisplaySemiBold.ttx \
+	build/ttx/Inter-DisplaySemiBoldItalic.ttx \
+	build/ttx/Inter-DisplayBold.ttx \
+	build/ttx/Inter-DisplayBoldItalic.ttx \
+	build/ttx/Inter-DisplayExtraBold.ttx \
+	build/ttx/Inter-DisplayExtraBoldItalic.ttx
 
-.PHONY: ttx_var ttx_var_roman ttx_var_italic
+.PHONY: ttx_var ttx_var_roman ttx_var_italic ttx_static
 
 # ---------------------------------------------------------------------------------
 # misc
