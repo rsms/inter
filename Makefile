@@ -177,7 +177,11 @@ $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static
 
 
 $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static/Inter-Regular.ttf $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint --reference $(FONTDIR)/static/Inter-Regular.ttf --no-info "$<" "$@"
+	. $(VENV) ; python -m ttfautohint \
+	  --windows-compatibility \
+	  --reference $(FONTDIR)/static/Inter-Regular.ttf \
+	  --no-info \
+	  "$<" "$@"
 
 $(FONTDIR)/var/.%.var.ttf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable -m $< --output-path $@ $(FM_ARGS_2)
