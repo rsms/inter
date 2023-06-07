@@ -1,0 +1,200 @@
+{
+glyphname = upsilon;
+kernLeft = m;
+kernRight = u;
+layers = (
+{
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+shapes = (
+{
+ref = u.1;
+}
+);
+width = 1211;
+},
+{
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+shapes = (
+{
+ref = u.1;
+}
+);
+width = 1328;
+},
+{
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+shapes = (
+{
+ref = u.1;
+}
+);
+width = 1196;
+},
+{
+layerId = m007;
+shapes = (
+{
+ref = u.1;
+}
+);
+width = 1120;
+},
+{
+layerId = m009;
+shapes = (
+{
+ref = u.1;
+}
+);
+width = 1266;
+},
+{
+layerId = m011;
+shapes = (
+{
+ref = u.1;
+}
+);
+width = 1068;
+},
+{
+anchors = (
+{
+name = top;
+pos = (572,1056);
+}
+);
+associatedMasterId = m009;
+layerId = "CCF10B8A-1011-4E12-84D1-716F7B475CE2";
+name = "Apr 14, 23, 12:06";
+shapes = (
+{
+closed = 1;
+nodes = (
+(86,404,l),
+(85,111,o),
+(268,-20,o),
+(552,-20,cs),
+(935,-20,o),
+(1092,221,o),
+(1092,568,c),
+(1092,791,o),
+(1039,995,o),
+(976,1118,c),
+(622,1118,l),
+(673,951,o),
+(705,753,o),
+(712,568,c),
+(711,439,o),
+(652,279,o),
+(540,280,cs),
+(501,279,o),
+(472,305,o),
+(472,402,c),
+(472,1118,l),
+(86,1118,l)
+);
+}
+);
+width = 1178;
+},
+{
+anchors = (
+{
+name = top;
+pos = (590,1118);
+}
+);
+associatedMasterId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+background = {
+shapes = (
+{
+ref = u;
+}
+);
+};
+layerId = "92724643-472A-41CE-88C7-633EDD5FC045";
+name = "May 4, 23, 12:15";
+shapes = (
+{
+closed = 1;
+nodes = (
+(855,-14,o),
+(1022,146,o),
+(1022,400,cs),
+(1022,1118,l),
+(852,1118,l),
+(852,400,ls),
+(852,237,o),
+(751,142,o),
+(590,142,cs),
+(429,142,o),
+(328,237,o),
+(328,400,cs),
+(328,1118,l),
+(158,1118,l),
+(158,400,ls),
+(158,146,o),
+(325,-14,o),
+(590,-14,cs)
+);
+}
+);
+width = 1180;
+},
+{
+anchors = (
+{
+name = top;
+pos = (578,1118);
+}
+);
+associatedMasterId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+background = {
+shapes = (
+{
+ref = u;
+}
+);
+};
+layerId = "4262FDDF-1F4C-460E-8B98-46217037FDB5";
+name = "May 4, 23, 12:17";
+shapes = (
+{
+closed = 1;
+nodes = (
+(801,-14,o),
+(958,143,o),
+(958,366,cs),
+(958,1118,l),
+(912,1118,l),
+(912,366,ls),
+(912,169,o),
+(775,32,o),
+(578,32,cs),
+(381,32,o),
+(244,169,o),
+(244,366,cs),
+(244,1118,l),
+(198,1118,l),
+(198,366,ls),
+(198,143,o),
+(355,-14,o),
+(578,-14,cs)
+);
+}
+);
+width = 1156;
+}
+);
+metricLeft = u;
+metricRight = "=|u";
+note = "https://en.wikipedia.org/wiki/Upsilon";
+unicode = 965;
+userData = {
+interface.gridadjust.original = "{'width': 1544, 'leftMargin': 194, 'rightMargin': 136}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

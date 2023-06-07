@@ -1,55 +1,74 @@
 {
+case = minor;
 glyphname = southWestArrow;
 layers = (
 {
+guides = (
+{
+pos = (-2,652);
+}
+);
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
-pos = (2017,1490);
+pos = (1985,1304);
 ref = northEastArrow;
 }
 );
-width = 1955;
+width = 1954;
 },
 {
 guides = (
 {
-angle = 90;
-pos = (1327,452);
+pos = (-1,652);
 }
 );
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
-pos = (2015,1490);
+pos = (1985,1304);
 ref = northEastArrow;
 }
 );
-width = 1953;
+width = 1954;
 },
 {
+guides = (
+{
+pos = (2,652);
+}
+);
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
-pos = (2015,1490);
+pos = (1985,1304);
 ref = northEastArrow;
 }
 );
-width = 1953;
+width = 1954;
 },
 {
+guides = (
+{
+pos = (-2,652);
+}
+);
 layerId = m008;
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
-pos = (1962,1490);
+pos = (1932,1304);
 ref = northEastArrow;
 }
 );
@@ -58,32 +77,38 @@ width = 1891;
 {
 guides = (
 {
-angle = 90;
-pos = (1306,452);
+pos = (-2,652);
 }
 );
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
-pos = (1994,1490);
+pos = (1964,1304);
 ref = northEastArrow;
 }
 );
-width = 1922;
+width = 1923;
 },
 {
+guides = (
+{
+pos = (2,652);
+}
+);
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
-alignment = -1;
+alignment = 1;
 angle = 180;
-pos = (1898,1490);
+pos = (1868,1304);
 ref = northEastArrow;
 }
 );
-width = 1826;
+width = 1827;
 }
 );
 metricLeft = "=|northEastArrow";

@@ -1,0 +1,105 @@
+{
+glyphname = Kadescendercyrillic;
+kernLeft = B;
+kernRight = K;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+metricRight = "=+40";
+name = ital_gen;
+shapes = (
+{
+ref = Kacyr;
+},
+{
+pos = (1094,0);
+ref = _part.cyrtic;
+}
+);
+width = 1416;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+metricRight = "=+100";
+name = ital_gen;
+shapes = (
+{
+ref = Kacyr;
+},
+{
+pos = (1025,0);
+ref = _part.cyrtic;
+}
+);
+width = 1655;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+metricRight = "=+30";
+name = ital_gen;
+shapes = (
+{
+ref = Kacyr;
+},
+{
+pos = (1080,0);
+ref = _part.cyrtic;
+}
+);
+width = 1301;
+},
+{
+layerId = m008;
+metricRight = "=+30";
+name = ital_gen;
+shapes = (
+{
+ref = Kacyr;
+},
+{
+pos = (1062,0);
+ref = _part.cyrtic;
+}
+);
+width = 1329;
+},
+{
+layerId = m010;
+metricRight = "=+100";
+name = ital_gen;
+shapes = (
+{
+ref = Kacyr;
+},
+{
+pos = (1001,0);
+ref = _part.cyrtic;
+}
+);
+width = 1593;
+},
+{
+layerId = m012;
+metricRight = "=+50";
+name = ital_gen;
+shapes = (
+{
+ref = Kacyr;
+},
+{
+pos = (1057,0);
+ref = _part.cyrtic;
+}
+);
+width = 1248;
+}
+);
+metricLeft = K;
+unicode = 1178;
+userData = {
+interface.gridadjust.original = "{'width': 1991.0, 'leftMargin': 240, 'rightMargin': 129.0}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

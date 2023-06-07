@@ -1,0 +1,108 @@
+{
+glyphname = Chook;
+kernLeft = C;
+kernRight = C;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+ref = C;
+},
+{
+pos = (1144,1);
+ref = _part.top_r_hook_C;
+}
+);
+width = 1495;
+},
+{
+guides = (
+{
+angle = 80.6;
+pos = (-1834,0);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+ref = C;
+},
+{
+pos = (962,16);
+ref = _part.top_r_hook_C;
+}
+);
+width = 1575;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+ref = C;
+},
+{
+pos = (1226,0);
+ref = _part.top_r_hook_C;
+}
+);
+width = 1480;
+},
+{
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+ref = C;
+},
+{
+pos = (1163,0);
+ref = _part.top_r_hook_C;
+}
+);
+width = 1479;
+},
+{
+guides = (
+{
+angle = 80.6;
+pos = (-1966,0);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+ref = C;
+},
+{
+pos = (932,0);
+ref = _part.top_r_hook_C;
+}
+);
+width = 1509;
+},
+{
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+ref = C;
+},
+{
+pos = (1167,0);
+ref = _part.top_r_hook_C;
+}
+);
+width = 1352;
+}
+);
+metricLeft = C;
+unicode = 391;
+userData = {
+interface.gridadjust.original = "{'width': 1998, 'leftMargin': 256, 'rightMargin': -44}";
+};
+}

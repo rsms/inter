@@ -1,0 +1,107 @@
+{
+glyphname = oslash;
+kernLeft = o;
+kernRight = o;
+layers = (
+{
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+shapes = (
+{
+ref = o;
+},
+{
+pos = (1,0);
+ref = _part.oslash;
+}
+);
+width = 1228;
+},
+{
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+shapes = (
+{
+ref = o;
+},
+{
+pos = (-1,0);
+ref = _part.oslash;
+}
+);
+width = 1280;
+},
+{
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+shapes = (
+{
+alignment = -1;
+pos = (0,2);
+ref = o;
+},
+{
+pos = (-16,2);
+ref = _part.oslash;
+}
+);
+width = 1186;
+},
+{
+guides = (
+{
+orientation = center;
+angle = 50;
+pos = (-7846,528);
+}
+);
+layerId = m007;
+shapes = (
+{
+ref = o;
+},
+{
+ref = _part.oslash;
+}
+);
+width = 1124;
+},
+{
+layerId = m009;
+shapes = (
+{
+ref = o;
+},
+{
+pos = (-1,0);
+ref = _part.oslash;
+}
+);
+width = 1244;
+},
+{
+layerId = m011;
+name = "Thin Display";
+shapes = (
+{
+ref = o;
+},
+{
+pos = (1,0);
+ref = _part.oslash;
+}
+);
+width = 1058;
+}
+);
+metricLeft = o;
+metricRight = o;
+unicode = 248;
+userData = {
+com.typemytype.robofont.guideline.magnetic.49COOBBAbR = 5;
+com.typemytype.robofont.guideline.magnetic.6oUqwWxpuH = 5;
+com.typemytype.robofont.guideline.magnetic.csWBhLA7NW = 5;
+com.typemytype.robofont.guideline.magnetic.yqY0voZV2N = 5;
+interface.gridadjust.original = "{'width': 1602, 'leftMargin': 236, 'rightMargin': 46}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

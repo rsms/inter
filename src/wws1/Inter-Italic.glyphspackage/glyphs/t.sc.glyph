@@ -1,0 +1,190 @@
+{
+glyphname = t.sc;
+kernLeft = t;
+kernRight = r;
+layers = (
+{
+anchors = (
+{
+name = cyrtic;
+pos = (343,0);
+},
+{
+name = top;
+pos = (505,1118);
+}
+);
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(343,0,l),
+(520,1072,l),
+(899,1072,l),
+(907,1118,l),
+(103,1118,l),
+(95,1072,l),
+(474,1072,l),
+(297,0,l)
+);
+}
+);
+width = 824;
+},
+{
+anchors = (
+{
+name = cyrtic;
+pos = (338,0);
+},
+{
+name = top;
+pos = (490,1056);
+}
+);
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(338,0,l),
+(505,1010,l),
+(884,1010,l),
+(892,1056,l),
+(88,1056,l),
+(80,1010,l),
+(459,1010,l),
+(292,0,l)
+);
+}
+);
+width = 805;
+},
+{
+anchors = (
+{
+name = cyrtic;
+pos = (476,0);
+},
+{
+name = top;
+pos = (570,1118);
+}
+);
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(476,0,l),
+(634,952,l),
+(1000,952,l),
+(1027,1118,l),
+(113,1118,l),
+(86,952,l),
+(454,952,l),
+(296,0,l)
+);
+}
+);
+width = 955;
+},
+{
+anchors = (
+{
+name = cyrtic;
+pos = (467,0);
+},
+{
+name = top;
+pos = (556,1056);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(467,0,l),
+(615,896,l),
+(982,896,l),
+(1009,1056,l),
+(103,1056,l),
+(76,896,l),
+(445,896,l),
+(297,0,l)
+);
+}
+);
+width = 937;
+},
+{
+anchors = (
+{
+name = cyrtic;
+pos = (670,0);
+},
+{
+name = top;
+pos = (654,1118);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(670,0,l),
+(805,818,l),
+(1145,818,l),
+(1195,1118,l),
+(113,1118,l),
+(63,818,l),
+(403,818,l),
+(268,0,l)
+);
+}
+);
+width = 1122;
+},
+{
+anchors = (
+{
+name = cyrtic;
+pos = (673,0);
+},
+{
+name = top;
+pos = (648,1056);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+closed = 1;
+nodes = (
+(673,0,l),
+(795,736,l),
+(1136,736,l),
+(1189,1056,l),
+(107,1056,l),
+(54,736,l),
+(395,736,l),
+(273,0,l)
+);
+}
+);
+width = 1122;
+}
+);
+metricLeft = t;
+metricRight = "=|t";
+note = "used by cyrillic glyphs";
+}

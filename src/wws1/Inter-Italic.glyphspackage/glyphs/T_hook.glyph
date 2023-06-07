@@ -1,0 +1,113 @@
+{
+glyphname = Thook;
+kernLeft = T;
+kernRight = T;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+metricLeft = "=+64";
+name = ital_gen;
+shapes = (
+{
+pos = (64,0);
+ref = Thook.base;
+},
+{
+pos = (-5,0);
+ref = _part.top_left_hook;
+}
+);
+width = 1388;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+metricLeft = "=+140";
+name = ital_gen;
+shapes = (
+{
+pos = (140,0);
+ref = Thook.base;
+},
+{
+pos = (-54,0);
+ref = _part.top_left_hook;
+}
+);
+width = 1546;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+metricLeft = "=+110";
+name = ital_gen;
+shapes = (
+{
+pos = (110,0);
+ref = Thook.base;
+},
+{
+pos = (170,0);
+ref = _part.top_left_hook;
+}
+);
+width = 1373;
+},
+{
+layerId = m008;
+metricLeft = "=+40";
+name = ital_gen;
+shapes = (
+{
+pos = (40,0);
+ref = Thook.base;
+},
+{
+pos = (-50,0);
+ref = _part.top_left_hook;
+}
+);
+width = 1275;
+},
+{
+layerId = m010;
+metricLeft = "=+120";
+name = ital_gen;
+shapes = (
+{
+pos = (120,0);
+ref = Thook.base;
+},
+{
+pos = (-18,0);
+ref = _part.top_left_hook;
+}
+);
+width = 1513;
+},
+{
+layerId = m012;
+metricLeft = "=+100";
+name = ital_gen;
+shapes = (
+{
+pos = (100,0);
+ref = Thook.base;
+},
+{
+pos = (92,0);
+ref = _part.top_left_hook;
+}
+);
+width = 1222;
+}
+);
+metricLeft = T;
+metricRight = T;
+note = "!post:RemoveOverlap";
+unicode = 428;
+userData = {
+interface.gridadjust.original = "{'width': 1772, 'leftMargin': 41, 'rightMargin': 63}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

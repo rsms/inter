@@ -1,0 +1,90 @@
+{
+case = minor;
+color = 8;
+glyphname = asterisk.case.tf;
+kernLeft = bullet;
+kernRight = bullet;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (3,0);
+ref = asterisk.case;
+}
+);
+width = 1328;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-54,0);
+ref = asterisk.case;
+}
+);
+width = 1320;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (52,0);
+ref = asterisk.case;
+}
+);
+width = 1320;
+},
+{
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (33,0);
+ref = asterisk.case;
+}
+);
+width = 1320;
+},
+{
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-36,0);
+ref = asterisk.case;
+}
+);
+width = 1320;
+},
+{
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (117,0);
+ref = asterisk.case;
+}
+);
+width = 1320;
+}
+);
+metricWidth = zero.tf;
+note = "\012Recipe:\0121. make horizontal rect\0122. copy rect and paste\0123. rotate by 60 deg\0124. enter transform mode and center it\0125. copy the rotated piece and paste\0126. flip on vertical axis\0127. enter transform mode and center it\012";
+userData = {
+com.typemytype.robofont.guideline.magnetic.8kyvXg1lkX = 5;
+com.typemytype.robofont.guideline.magnetic.G9ZB6lXRAP = 5;
+com.typemytype.robofont.guideline.magnetic.NTqmofmBPi = 5;
+com.typemytype.robofont.guideline.magnetic.WeNGZHYYeV = 5;
+com.typemytype.robofont.guideline.magnetic.lFKw8dAZO7 = 5;
+};
+}

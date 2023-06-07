@@ -1,0 +1,179 @@
+{
+glyphname = adieresis;
+kernLeft = a;
+kernRight = a;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+ref = a;
+},
+{
+pos = (22,0);
+ref = dieresiscomb;
+}
+);
+width = 1257;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+ref = a;
+},
+{
+pos = (1,0);
+ref = dieresiscomb;
+}
+);
+width = 1322;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+ref = a;
+},
+{
+pos = (-3,0);
+ref = dieresiscomb;
+}
+);
+width = 1191;
+},
+{
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+ref = a;
+},
+{
+pos = (-5,0);
+ref = dieresiscomb;
+}
+);
+width = 1158;
+},
+{
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+ref = a;
+},
+{
+pos = (3,0);
+ref = dieresiscomb;
+}
+);
+width = 1273;
+},
+{
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(577,86,o),
+(702,-16,o),
+(899,-16,cs),
+(1113,-16,o),
+(1262,93,o),
+(1315,275,c),
+(1317,275,l),
+(1317,1,l),
+(1350,1,l),
+(1350,701,ls),
+(1350,938,o),
+(1216,1072,o),
+(994,1072,cs),
+(779,1072,o),
+(631,950,o),
+(613,726,c),
+(646,726,l),
+(662,933,o),
+(796,1042,o),
+(994,1042,cs),
+(1197,1042,o),
+(1315,926,o),
+(1315,701,cs),
+(1315,633,o),
+(1252,610,o),
+(1164,595,cs),
+(881,549,ls),
+(689,522,o),
+(577,427,o),
+(577,260,c),
+(577,260,l),
+(577,260,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(725,14,o),
+(611,106,o),
+(611,262,cs),
+(611,412,o),
+(715,493,o),
+(888,522,cs),
+(1169,565,ls),
+(1228,575,o),
+(1290,594,o),
+(1315,632,c),
+(1315,461,ls),
+(1315,167,o),
+(1142,14,o),
+(899,14,c),
+(899,14,l),
+(899,14,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(1218,1495,l),
+(1183,1495,l),
+(1183,1314,l),
+(1218,1314,l),
+(1218,1314,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(810,1495,l),
+(775,1495,l),
+(775,1314,l),
+(810,1314,l),
+(810,1314,l)
+);
+}
+);
+};
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+ref = a;
+},
+{
+pos = (-5,0);
+ref = dieresiscomb;
+}
+);
+width = 1119;
+}
+);
+unicode = 228;
+userData = {
+"interface.width-adjustments" = (
+-16
+);
+};
+}

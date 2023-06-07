@@ -1,0 +1,204 @@
+{
+glyphname = circumflextildecomb.cn;
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (508,1118);
+}
+);
+guides = (
+{
+pos = (0,1392);
+},
+{
+pos = (0,1717);
+},
+{
+pos = (0,1616);
+}
+);
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-5,-28);
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (-42,330);
+ref = tildecomb;
+}
+);
+width = 832;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (605,1118);
+}
+);
+guides = (
+{
+pos = (1,1392);
+},
+{
+pos = (1,1765);
+},
+{
+pos = (1,1632);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-4,-27);
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (97,582);
+ref = tildecomb;
+scale = (1,0.83);
+}
+);
+width = 1024;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (525,1118);
+}
+);
+guides = (
+{
+pos = (1,1392);
+},
+{
+pos = (1,1681);
+}
+);
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-5,-31);
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (-16,335);
+ref = tildecomb;
+}
+);
+width = 864;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (488,1056);
+}
+);
+guides = (
+{
+pos = (1,1328);
+},
+{
+pos = (1,1765);
+},
+{
+pos = (1,1648);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-4,-26);
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (-36,271);
+ref = tildecomb;
+}
+);
+width = 800;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (519,1056);
+}
+);
+guides = (
+{
+pos = (0,1704);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (1,494);
+ref = tildecomb;
+scale = (1,0.9);
+}
+);
+width = 878;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (443,1056);
+}
+);
+guides = (
+{
+pos = (1,1328);
+},
+{
+pos = (1,1647);
+}
+);
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+alignment = -1;
+pos = (-5,-50);
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (-48,269);
+ref = tildecomb;
+}
+);
+width = 710;
+}
+);
+userData = {
+interface.gridadjust.original = "{'width': 1430.0, 'leftMargin': 143, 'rightMargin': 254.0}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

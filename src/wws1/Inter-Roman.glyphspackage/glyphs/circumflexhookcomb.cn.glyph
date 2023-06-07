@@ -1,0 +1,206 @@
+{
+category = Mark;
+glyphname = circumflexhookcomb.cn;
+layers = (
+{
+anchors = (
+{
+name = _top;
+pos = (416,1118);
+}
+);
+guides = (
+{
+pos = (0,1616);
+},
+{
+pos = (0,1392);
+},
+{
+pos = (0,1717);
+}
+);
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+shapes = (
+{
+alignment = -1;
+pos = (0,-28);
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (355,333);
+ref = hookabove_compact;
+}
+);
+width = 832;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (512,1118);
+}
+);
+guides = (
+{
+pos = (0,1632);
+},
+{
+pos = (0,1392);
+},
+{
+pos = (0,1765);
+}
+);
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+shapes = (
+{
+alignment = -1;
+pos = (0,-27);
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (521,627);
+ref = hookabove_compact;
+scale = (0.8,0.8);
+}
+);
+width = 1024;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (432,1118);
+}
+);
+guides = (
+{
+pos = (0,1616);
+},
+{
+pos = (0,1392);
+},
+{
+pos = (0,1681);
+}
+);
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+shapes = (
+{
+alignment = -1;
+pos = (0,-31);
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (378,333);
+ref = hookabove_compact;
+}
+);
+width = 864;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (400,1056);
+}
+);
+guides = (
+{
+pos = (0,1490);
+},
+{
+pos = (0,1328);
+}
+);
+layerId = m007;
+shapes = (
+{
+alignment = -1;
+pos = (0,-26);
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (331,249);
+ref = hookabove_compact;
+}
+);
+width = 800;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (432,1056);
+}
+);
+background = {
+shapes = (
+{
+alignment = -1;
+pos = (507,473);
+ref = acute;
+scale = (0.8,0.9);
+}
+);
+};
+guides = (
+{
+pos = (0,1536);
+}
+);
+layerId = m009;
+shapes = (
+{
+alignment = -1;
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (406,473);
+ref = hookabove_compact;
+scale = (0.8,0.9);
+}
+);
+width = 864;
+},
+{
+anchors = (
+{
+name = _top;
+pos = (352,1056);
+}
+);
+guides = (
+{
+pos = (0,1328);
+}
+);
+layerId = m011;
+shapes = (
+{
+alignment = -1;
+pos = (0,-50);
+ref = circumflexcomb;
+},
+{
+alignment = -1;
+pos = (296,249);
+ref = hookabove_compact;
+}
+);
+width = 704;
+}
+);
+userData = {
+interface.gridadjust.original = "{'width': 1430.0, 'leftMargin': 143, 'rightMargin': 32.0}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}
