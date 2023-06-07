@@ -278,7 +278,9 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
   if 'name' in tt:
     nameDict = {}
     for rec in tt['name'].names:
-      k = _NAME_IDS[rec.nameID] if rec.nameID in _NAME_IDS else ('#%d' % rec.nameID)
+      k = '#%d' % rec.nameID
+      if rec.nameID in _NAME_IDS:
+        k += ' ' + _NAME_IDS[rec.nameID]
       nameDict[k] = rec.toUnicode()
     if 'fontId' in nameDict:
       info['id'] = nameDict['fontId']
