@@ -2882,12 +2882,12 @@ value = 0;
 name = panose;
 value = (
 2,
-0,
+11,
 2,
 3,
+2,
 0,
-0,
-0,
+2,
 2,
 0,
 4
@@ -2922,6 +2922,14 @@ Axis = "Optical size";
 Location = 14;
 }
 );
+},
+{
+name = WWSFamilyName;
+value = Inter;
+},
+{
+name = WWSSubfamilyName;
+value = Thin;
 }
 );
 guides = (
@@ -2980,8 +2988,8 @@ pos = -494;
 );
 name = Thin;
 stemValues = (
-47,
-47
+46,
+46
 );
 userData = {
 GSCornerRadius = 230;
@@ -3063,6 +3071,14 @@ Axis = "Optical size";
 Location = 28;
 }
 );
+},
+{
+name = WWSFamilyName;
+value = "Inter Display";
+},
+{
+name = WWSSubfamilyName;
+value = Thin;
 }
 );
 guides = (
@@ -3121,8 +3137,8 @@ pos = -494;
 );
 name = "Display Thin";
 stemValues = (
-47,
-47
+46,
+46
 );
 userData = {
 GSCornerRadius = 142;
@@ -3264,7 +3280,7 @@ pos = -494;
 name = Regular;
 stemValues = (
 160,
-180
+185
 );
 userData = {
 GSCornerRadius = 250;
@@ -3486,6 +3502,14 @@ Axis = "Optical size";
 Location = 14;
 }
 );
+},
+{
+name = WWSFamilyName;
+value = Inter;
+},
+{
+name = WWSSubfamilyName;
+value = Black;
 }
 );
 guides = (
@@ -3545,7 +3569,7 @@ pos = -494;
 );
 name = Black;
 stemValues = (
-314,
+326,
 404
 );
 userData = {
@@ -3627,6 +3651,14 @@ Axis = "Optical size";
 Location = 28;
 }
 );
+},
+{
+name = WWSFamilyName;
+value = "Inter Display";
+},
+{
+name = WWSSubfamilyName;
+value = Black;
 }
 );
 guides = (
@@ -3686,8 +3718,8 @@ pos = -494;
 );
 name = "Display Black";
 stemValues = (
-314,
-404
+340,
+400
 );
 userData = {
 GSCornerRadius = 30;
@@ -3729,6 +3761,16 @@ instanceInterpolations = {
 "B1F27B51-9973-4381-9301-4FE46FE1CA59" = 1;
 };
 name = Thin;
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = Thin;
+}
+);
 weightClass = 100;
 },
 {
@@ -3758,6 +3800,16 @@ instanceInterpolations = {
 "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265" = 0.33333;
 };
 name = ExtraLight;
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = ExtraLight;
+}
+);
 weightClass = 200;
 },
 {
@@ -3787,6 +3839,16 @@ instanceInterpolations = {
 "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265" = 0.66667;
 };
 name = Light;
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = Light;
+}
+);
 weightClass = 300;
 },
 {
@@ -3843,6 +3905,16 @@ instanceInterpolations = {
 "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265" = 0.8;
 };
 name = Medium;
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = Medium;
+}
+);
 weightClass = 500;
 },
 {
@@ -3872,6 +3944,16 @@ instanceInterpolations = {
 "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265" = 0.64;
 };
 name = SemiBold;
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = SemiBold;
+}
+);
 weightClass = 600;
 },
 {
@@ -3931,6 +4013,16 @@ instanceInterpolations = {
 "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265" = 0.24;
 };
 name = ExtraBold;
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = ExtraBold;
+}
+);
 weightClass = 800;
 },
 {
@@ -3959,6 +4051,16 @@ instanceInterpolations = {
 "5C20EF92-B63D-42A8-8878-93C2863E0093" = 1;
 };
 name = Black;
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = Black;
+}
+);
 weightClass = 900;
 },
 {
@@ -4119,16 +4221,6 @@ instanceInterpolations = {
 m007 = 1;
 };
 name = Display;
-properties = (
-{
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = Regular;
-}
-);
 },
 {
 axesValues = (
@@ -4249,16 +4341,6 @@ m009 = 0.52;
 isBold = 1;
 linkStyle = Display;
 name = "Display Bold";
-properties = (
-{
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = Bold;
-}
-);
 weightClass = 700;
 },
 {
@@ -5055,6 +5137,7 @@ Dzcaron_ = 151;
 Enhookcyrillic = 151;
 "Ii-cy" = 151;
 Nhook = 151;
+Pamphyliandigamma = 151;
 Rx = 151;
 ibreve = 69;
 icaron = 69;
@@ -5068,7 +5151,6 @@ numero = 151;
 seven = 186;
 uni01F6 = 151;
 uni0246 = 151;
-Pamphyliandigamma = 151;
 uni048A = 151;
 };
 "@MMK_L_idotless" = {
@@ -6759,6 +6841,7 @@ Dzcaron_ = 151;
 Enhookcyrillic = 151;
 "Ii-cy" = 151;
 Nhook = 151;
+Pamphyliandigamma = 151;
 Rx = 151;
 "Yi-cy.1" = 90;
 ibreve = 69;
@@ -6774,7 +6857,6 @@ numero = 151;
 seven = 186;
 uni01F6 = 151;
 uni0246 = 151;
-Pamphyliandigamma = 151;
 uni048A = 151;
 };
 "@MMK_L_idotless" = {
@@ -8557,6 +8639,7 @@ Dzcaron_ = 151;
 Enhookcyrillic = 151;
 "Ii-cy" = 151;
 Nhook = 151;
+Pamphyliandigamma = 151;
 Rx = 151;
 "Yi-cy.1" = 140;
 ibreve = 69;
@@ -8570,7 +8653,6 @@ numero = 151;
 seven = 186;
 uni01F6 = 151;
 uni0246 = 151;
-Pamphyliandigamma = 151;
 uni048A = 151;
 };
 "@MMK_L_idotless" = {
@@ -10285,6 +10367,7 @@ Dzcaron_ = 151;
 Enhookcyrillic = 151;
 "Ii-cy" = 151;
 Nhook = 151;
+Pamphyliandigamma = 151;
 Rx = 151;
 "Yi-cy.1" = 170;
 ibreve = 69;
@@ -10298,7 +10381,6 @@ numero = 151;
 seven = 186;
 uni01F6 = 151;
 uni0246 = 151;
-Pamphyliandigamma = 151;
 uni048A = 151;
 };
 "@MMK_L_idotless" = {
@@ -12044,6 +12126,7 @@ Dzcaron_ = 151;
 Enhookcyrillic = 151;
 "Ii-cy" = 151;
 Nhook = 151;
+Pamphyliandigamma = 151;
 Rx = 151;
 "Yi-cy.1" = 130;
 ibreve = 69;
@@ -12057,7 +12140,6 @@ numero = 151;
 seven = 186;
 uni01F6 = 151;
 uni0246 = 151;
-Pamphyliandigamma = 151;
 uni048A = 151;
 };
 "@MMK_L_idotless" = {
@@ -13770,6 +13852,7 @@ Dzcaron_ = 151;
 Enhookcyrillic = 151;
 "Ii-cy" = 151;
 Nhook = 151;
+Pamphyliandigamma = 151;
 Rx = 151;
 "Yi-cy.1" = 140;
 ibreve = 69;
@@ -13783,7 +13866,6 @@ numero = 151;
 seven = 186;
 uni01F6 = 151;
 uni0246 = 151;
-Pamphyliandigamma = 151;
 uni048A = 151;
 };
 "@MMK_L_idotless" = {
@@ -14854,10 +14936,10 @@ keyboardIncrementHuge = 128;
 stems = (
 {
 horizontal = 1;
-name = hStem0;
+name = cap_h;
 },
 {
-name = vStem0;
+name = cap_v;
 }
 );
 unitsPerEm = 2048;

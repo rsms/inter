@@ -2917,6 +2917,14 @@ Axis = "Optical size";
 Location = 14;
 }
 );
+},
+{
+name = WWSFamilyName;
+value = Inter;
+},
+{
+name = WWSSubfamilyName;
+value = "Thin Italic";
 }
 );
 guides = (
@@ -2981,8 +2989,8 @@ pos = 9.4;
 );
 name = "Thin Italic";
 stemValues = (
-47,
-47
+46,
+46
 );
 userData = {
 GSCornerRadius = 15;
@@ -3064,6 +3072,14 @@ Axis = "Optical size";
 Location = 28;
 }
 );
+},
+{
+name = WWSFamilyName;
+value = "Inter Display";
+},
+{
+name = WWSSubfamilyName;
+value = "Thin Italic";
 }
 );
 guides = (
@@ -3123,8 +3139,8 @@ pos = 9.4;
 );
 name = "Display Thin Italic";
 stemValues = (
-47,
-47
+46,
+46
 );
 userData = {
 GSCornerRadius = 15;
@@ -3270,7 +3286,7 @@ pos = 9.4;
 name = Italic;
 stemValues = (
 160,
-172
+185
 );
 userData = {
 GSCornerRadius = 15;
@@ -3411,7 +3427,7 @@ pos = 9.4;
 name = "Display Italic";
 stemValues = (
 160,
-172
+180
 );
 userData = {
 GSCornerRadius = 15;
@@ -3493,6 +3509,14 @@ Axis = "Optical size";
 Location = 14;
 }
 );
+},
+{
+name = WWSFamilyName;
+value = Inter;
+},
+{
+name = WWSSubfamilyName;
+value = "Black Italic";
 }
 );
 guides = (
@@ -3557,8 +3581,8 @@ pos = 9.4;
 );
 name = "Black Italic";
 stemValues = (
-314,
-399
+326,
+404
 );
 userData = {
 GSExtrudeAngle = 30;
@@ -3640,6 +3664,14 @@ Axis = "Optical size";
 Location = 28;
 }
 );
+},
+{
+name = WWSFamilyName;
+value = "Inter Display";
+},
+{
+name = WWSSubfamilyName;
+value = "Black Italic";
 }
 );
 guides = (
@@ -3704,8 +3736,8 @@ pos = 9.4;
 );
 name = "Display Black Italic";
 stemValues = (
-314,
-399
+340,
+400
 );
 userData = {
 GSOffsetHorizontal = 168;
@@ -3749,6 +3781,16 @@ instanceInterpolations = {
 isItalic = 1;
 linkStyle = Thin;
 name = "Thin Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = "Thin Italic";
+}
+);
 },
 {
 axesValues = (
@@ -3783,6 +3825,16 @@ instanceInterpolations = {
 isItalic = 1;
 linkStyle = ExtraLight;
 name = "ExtraLight Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = "ExtraLight Italic";
+}
+);
 weightClass = 200;
 },
 {
@@ -3818,6 +3870,16 @@ instanceInterpolations = {
 isItalic = 1;
 linkStyle = Light;
 name = "Light Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = "Light Italic";
+}
+);
 weightClass = 300;
 },
 {
@@ -3885,6 +3947,16 @@ instanceInterpolations = {
 isItalic = 1;
 linkStyle = Medium;
 name = "Medium Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = "Medium Italic";
+}
+);
 weightClass = 500;
 },
 {
@@ -3920,6 +3992,16 @@ instanceInterpolations = {
 isItalic = 1;
 linkStyle = SemiBold;
 name = "SemiBold Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = "SemiBold Italic";
+}
+);
 weightClass = 600;
 },
 {
@@ -3990,6 +4072,16 @@ instanceInterpolations = {
 isItalic = 1;
 linkStyle = ExtraBold;
 name = "ExtraBold Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = "ExtraBold Italic";
+}
+);
 weightClass = 800;
 },
 {
@@ -4024,6 +4116,16 @@ instanceInterpolations = {
 isItalic = 1;
 linkStyle = Black;
 name = "Black Italic";
+properties = (
+{
+key = WWSFamilyName;
+value = Inter;
+},
+{
+key = WWSSubfamilyName;
+value = "Black Italic";
+}
+);
 weightClass = 900;
 },
 {
@@ -4207,16 +4309,6 @@ m008 = 1;
 isItalic = 1;
 linkStyle = Display;
 name = "Display Italic";
-properties = (
-{
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = Italic;
-}
-);
 },
 {
 axesValues = (
@@ -4354,16 +4446,6 @@ isBold = 1;
 isItalic = 1;
 linkStyle = Display;
 name = "Display Bold Italic";
-properties = (
-{
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = "Bold Italic";
-}
-);
 weightClass = 700;
 },
 {
@@ -14971,10 +15053,10 @@ keyboardIncrementHuge = 128;
 stems = (
 {
 horizontal = 1;
-name = hStem0;
+name = cap_h;
 },
 {
-name = vStem0;
+name = cap_v;
 }
 );
 unitsPerEm = 2048;
