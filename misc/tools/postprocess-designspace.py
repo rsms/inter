@@ -7,7 +7,6 @@ from datetime import datetime
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'tools')))
 from common import getGitHash, getVersion
-from postprocess_instance_ufo import ufo_set_wws
 
 
 OPT_EDITABLE = False  # --editable
@@ -43,6 +42,20 @@ def update_version(ufo):
     ufo.info.openTypeOS2VendorID,
     psFamily, psStyle)
   ufo.info.openTypeHeadCreated = now.strftime("%Y/%m/%d %H:%M:%S")
+
+
+def ufo_set_wws(ufo):
+  # Fix missing WWS entries for Display fonts:
+  # See https://github.com/googlefonts/glyphsLib/issues/820
+  subfamily = ufo.info.styleName
+  if subfamily.find("Display") == -1:
+    return
+  subfamily = subfamily[len("Display"):].strip()
+  if subfamily == "":
+    # "Display" -> "Regular"
+    subfamily = "Regular"
+  ufo.info.openTypeNameWWSFamilyName = "Inter Display"
+  ufo.info.openTypeNameWWSSubfamilyName = subfamily
 
 
 def fix_opsz_range(designspace):

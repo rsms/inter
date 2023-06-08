@@ -4096,7 +4096,7 @@ value = 0;
 instanceInterpolations = {
 m011 = 1;
 };
-name = "Display Thin";
+name = Thin;
 properties = (
 {
 key = WWSFamilyName;
@@ -4105,6 +4105,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = Thin;
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 100;
@@ -4139,7 +4148,7 @@ instanceInterpolations = {
 m007 = 0.33333;
 m011 = 0.66667;
 };
-name = "Display ExtraLight";
+name = ExtraLight;
 properties = (
 {
 key = WWSFamilyName;
@@ -4148,6 +4157,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = ExtraLight;
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 200;
@@ -4182,7 +4200,7 @@ instanceInterpolations = {
 m007 = 0.66667;
 m011 = 0.33333;
 };
-name = "Display Light";
+name = Light;
 properties = (
 {
 key = WWSFamilyName;
@@ -4191,6 +4209,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = Light;
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 300;
@@ -4224,7 +4251,26 @@ value = 0;
 instanceInterpolations = {
 m007 = 1;
 };
-name = Display;
+name = Regular;
+properties = (
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = Regular;
+}
+);
 },
 {
 axesValues = (
@@ -4256,7 +4302,7 @@ instanceInterpolations = {
 m007 = 0.8;
 m009 = 0.2;
 };
-name = "Display Medium";
+name = Medium;
 properties = (
 {
 key = WWSFamilyName;
@@ -4265,6 +4311,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = Medium;
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 500;
@@ -4299,7 +4354,7 @@ instanceInterpolations = {
 m007 = 0.64;
 m009 = 0.36;
 };
-name = "Display SemiBold";
+name = SemiBold;
 properties = (
 {
 key = WWSFamilyName;
@@ -4308,6 +4363,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = SemiBold;
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 600;
@@ -4344,7 +4408,26 @@ m009 = 0.52;
 };
 isBold = 1;
 linkStyle = Display;
-name = "Display Bold";
+name = Bold;
+properties = (
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = Bold;
+}
+);
 weightClass = 700;
 },
 {
@@ -4377,7 +4460,7 @@ instanceInterpolations = {
 m007 = 0.24;
 m009 = 0.76;
 };
-name = "Display ExtraBold";
+name = ExtraBold;
 properties = (
 {
 key = WWSFamilyName;
@@ -4386,6 +4469,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = ExtraBold;
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 800;
@@ -4419,7 +4511,7 @@ value = 0;
 instanceInterpolations = {
 m009 = 1;
 };
-name = "Display Black";
+name = Black;
 properties = (
 {
 key = WWSFamilyName;
@@ -4428,6 +4520,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = Black;
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 900;

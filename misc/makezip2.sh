@@ -55,7 +55,7 @@ cp misc/dist/help.txt                          "$ZIPDIR/help.txt"
 cp build/fonts/static-hinted/Inter.ttc         "$ZIPDIR/Inter.ttc"
 cp build/fonts/var/Inter-Variable.ttf          "$ZIPDIR/Inter-Variable.ttf"
 cp build/fonts/var/Inter-Variable-Italic.ttf   "$ZIPDIR/Inter-Variable-Italic.ttf"
-cp build/fonts/static/Inter-*.woff2            "$ZIPDIR/web/" &
+cp build/fonts/static/Inter*.woff2             "$ZIPDIR/web/" &
 cp build/fonts/var/Inter-Variable.woff2        "$ZIPDIR/web/InterVariable.woff2"
 cp build/fonts/var/Inter-Variable-Italic.woff2 "$ZIPDIR/web/InterVariable-Italic.woff2"
 cp misc/dist/inter.css                         "$ZIPDIR/web/"
@@ -67,9 +67,9 @@ mkdir -p "$ZIPDIR/extras/otf" \
          "$ZIPDIR/extras/ttf" \
          "$ZIPDIR/extras/woff-hinted"
 
-cp build/fonts/static/Inter-*.otf          "$ZIPDIR/extras/otf/" &
-cp build/fonts/static-hinted/Inter-*.ttf   "$ZIPDIR/extras/ttf/" &
-cp build/fonts/static-hinted/Inter-*.woff2 "$ZIPDIR/extras/woff-hinted/" &
+cp build/fonts/static/Inter*.otf          "$ZIPDIR/extras/otf/" &
+cp build/fonts/static-hinted/Inter*.ttf   "$ZIPDIR/extras/ttf/" &
+cp build/fonts/static-hinted/Inter*.woff2 "$ZIPDIR/extras/woff-hinted/" &
 
 
 

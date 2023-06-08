@@ -4167,7 +4167,7 @@ m012 = 1;
 };
 isItalic = 1;
 linkStyle = "Display Thin";
-name = "Display Thin Italic";
+name = "Thin Italic";
 properties = (
 {
 key = WWSFamilyName;
@@ -4176,6 +4176,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = "Thin Italic";
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 },
@@ -4215,7 +4224,7 @@ m012 = 0.66667;
 };
 isItalic = 1;
 linkStyle = "Display ExtraLight";
-name = "Display ExtraLight Italic";
+name = "ExtraLight Italic";
 properties = (
 {
 key = WWSFamilyName;
@@ -4224,6 +4233,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = "ExtraLight Italic";
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 200;
@@ -4264,7 +4282,7 @@ m012 = 0.33333;
 };
 isItalic = 1;
 linkStyle = "Display Light";
-name = "Display Light Italic";
+name = "Light Italic";
 properties = (
 {
 key = WWSFamilyName;
@@ -4273,6 +4291,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = "Light Italic";
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 300;
@@ -4312,7 +4339,26 @@ m008 = 1;
 };
 isItalic = 1;
 linkStyle = Display;
-name = "Display Italic";
+name = Italic;
+properties = (
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = Italic;
+}
+);
 },
 {
 axesValues = (
@@ -4350,7 +4396,7 @@ m010 = 0.2;
 };
 isItalic = 1;
 linkStyle = "Display Medium";
-name = "Display Medium Italic";
+name = "Medium Italic";
 properties = (
 {
 key = WWSFamilyName;
@@ -4359,6 +4405,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = "Medium Italic";
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 500;
@@ -4399,7 +4454,7 @@ m010 = 0.36;
 };
 isItalic = 1;
 linkStyle = "Display SemiBold";
-name = "Display SemiBold Italic";
+name = "SemiBold Italic";
 properties = (
 {
 key = WWSFamilyName;
@@ -4408,6 +4463,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = "SemiBold Italic";
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 600;
@@ -4449,7 +4513,26 @@ m010 = 0.52;
 isBold = 1;
 isItalic = 1;
 linkStyle = Display;
-name = "Display Bold Italic";
+name = "Bold Italic";
+properties = (
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Bold Italic";
+}
+);
 weightClass = 700;
 },
 {
@@ -4488,7 +4571,7 @@ m010 = 0.76;
 };
 isItalic = 1;
 linkStyle = "Display ExtraBold";
-name = "Display ExtraBold Italic";
+name = "ExtraBold Italic";
 properties = (
 {
 key = WWSFamilyName;
@@ -4497,6 +4580,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = "ExtraBold Italic";
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 800;
@@ -4536,7 +4628,7 @@ m010 = 1;
 };
 isItalic = 1;
 linkStyle = "Display Black";
-name = "Display Black Italic";
+name = "Black Italic";
 properties = (
 {
 key = WWSFamilyName;
@@ -4545,6 +4637,15 @@ value = "Inter Display";
 {
 key = WWSSubfamilyName;
 value = "Black Italic";
+},
+{
+key = familyNames;
+values = (
+{
+language = dflt;
+value = "Inter Display";
+}
+);
 }
 );
 weightClass = 900;
