@@ -170,7 +170,6 @@ $(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static
 
 $(FONTDIR)/static/InterDisplay-%.ttf: $(UFODIR)/InterDisplay-%.ufo build/features_data | $(FONTDIR)/static venv
 	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
-	. $(VENV) ; python misc/tools/fix-static-display-names.py $@
 
 $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
 	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)

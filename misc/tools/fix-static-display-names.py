@@ -81,6 +81,7 @@ def main():
 
   family = "Inter Display"
   style = remove_substring(getStyleName(font), "Display")
+  isItalic = style.find('Italic') != -1
   if style == '':
     style = 'Regular'
 
@@ -110,14 +111,16 @@ def main():
         id[3] = fullNamePs
         rec.string = ";".join(id)
       elif id == LEGACY_FAMILY: # ID 1
-        rec.string = family
+        rec.string = family + ' ' + style
+      elif id == SUBFAMILY_NAME: # ID 2
+        rec.string = 'Italic' if isItalic else 'Regular'
       elif id == PREFERRED_FAMILY: # ID 16
         rec.string = family
       elif id == WWS_FAMILY: # ID 21
         rec.string = family
       elif id == WWS_SUBFAMILY: # ID 22
         rec.string = style
-      elif id in (SUBFAMILY_NAME, TYPO_SUBFAMILY_NAME): # ID 2, ID 17
+      elif id == TYPO_SUBFAMILY_NAME: # ID 17
         rec.string = style
 
     # print("————————————————————————————————————————————————————")

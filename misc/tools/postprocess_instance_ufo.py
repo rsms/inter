@@ -1,5 +1,12 @@
-import sys
+import sys, re
 import defcon
+
+
+WHITESPACE_RE = re.compile(r'\s+')
+
+
+def rmspace(s):
+  return WHITESPACE_RE.sub('', s)
 
 
 # See https://github.com/rsms/inter/issues/508
@@ -19,6 +26,20 @@ def main(argv):
   ufo_file = argv[1]
   ufo = defcon.Font(ufo_file)
   fix_fractional_advance_width(ufo)
+
+  # fix legacy names to make style linking work in MS Windows
+  familyName = ufo.info.familyName  # e.g. "Inter Display"
+  styleName = ufo.info.styleName    # e.g. "ExtraBold"
+  ufo.info.openTypeNamePreferredFamilyName = familyName
+  ufo.info.openTypeNamePreferredSubfamilyName = styleName
+
+  ufo.info.familyName = familyName + ' ' + styleName
+  ufo.info.styleName = 'Regular' if styleName.find('Italic') == -1 else 'Italic'
+
+  # must also set these explicitly to avoid PostScript names like "Inter-ThinRegular":
+  # "postscriptFontName" maps to name ID 6 "postscriptName"
+  ufo.info.postscriptFontName = rmspace(familyName) + '-' + rmspace(styleName)
+
   ufo.save(ufo_file)
 
 
