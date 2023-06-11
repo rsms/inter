@@ -160,16 +160,9 @@ else
 	FM_ARGS_2 += --no-production-names
 endif
 
-$(FONTDIR)/static/InterDisplay-%.otf: $(UFODIR)/InterDisplay-%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o otf --output-path $@ $(FM_ARGS_2)
-	. $(VENV) ; python misc/tools/fix-static-display-names.py $@
 
 $(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
 	. $(VENV) ; fontmake -u $< -o otf --output-path $@ $(FM_ARGS_2)
-
-
-$(FONTDIR)/static/InterDisplay-%.ttf: $(UFODIR)/InterDisplay-%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
 
 $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
 	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
