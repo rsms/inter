@@ -33,7 +33,7 @@ def main(argv):
   ufo.info.openTypeNamePreferredFamilyName = familyName
   ufo.info.openTypeNamePreferredSubfamilyName = styleName
 
-  ufo.info.familyName = familyName + ' ' + styleName
+  ufo.info.familyName = (familyName + ' ' + styleName).replace(' Italic', '').strip()
   ufo.info.styleName = 'Regular' if styleName.find('Italic') == -1 else 'Italic'
 
   # must also set these explicitly to avoid PostScript names like "Inter-ThinRegular":
