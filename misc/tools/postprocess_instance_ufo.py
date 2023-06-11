@@ -40,6 +40,9 @@ def main(argv):
   # "postscriptFontName" maps to name ID 6 "postscriptName"
   ufo.info.postscriptFontName = rmspace(familyName) + '-' + rmspace(styleName)
 
+  # round OS/2 weight class values to even 100ths
+  ufo.info.openTypeOS2WeightClass = round(ufo.info.openTypeOS2WeightClass / 100) * 100
+
   ufo.save(ufo_file)
 
 
