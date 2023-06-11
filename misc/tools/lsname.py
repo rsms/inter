@@ -92,8 +92,27 @@ def build_table(name_tables: [{int:str}], filenames: [str], name_ids_filter: set
   return rows
 
 
+def format_table_one(header: [(int,str)], rows: [[str]], colw: [int]) -> str:
+  ncols = len(header)
+  out = []
+  row = rows[0]
+
+  w = 0
+  for id, label in header:
+    w = max(w, len(label))
+
+  for i in range(ncols):
+    id, label = header[i]
+    if id < 0:
+      out.append('%-*s     = %s' % (w, label, row[i]))
+    else:
+      out.append('%-*s %3d = %s' % (w, label, id, row[i]))
+
+  return '\n'.join(out)
+
+
 def format_table_plain(header: [(int,str)], rows: [[str]], colw: [int]) -> str:
-  ncols = len(rows[0])
+  ncols = len(header)
   out = []
 
   # print header labels
@@ -120,8 +139,7 @@ def format_table_plain(header: [(int,str)], rows: [[str]], colw: [int]) -> str:
   out.append('\n')
 
   # print data rows
-  for row_idx in range(1, len(rows)):
-    row = rows[row_idx]
+  for row in rows:
     for i in range(ncols):
       if i > 0:
         out.append(' │ ')
@@ -133,7 +151,7 @@ def format_table_plain(header: [(int,str)], rows: [[str]], colw: [int]) -> str:
 
 
 def format_table_md(header: [str], rows: [[str]], colw: [int]) -> str:
-  ncols = len(rows[0])
+  ncols = len(header)
   out = []
 
   # print header labels
@@ -149,8 +167,7 @@ def format_table_md(header: [str], rows: [[str]], colw: [int]) -> str:
   out.append('\n')
 
   # print data rows
-  for row_idx in range(1, len(rows)):
-    row = rows[row_idx]
+  for row in rows:
     out.append('|')
     for i in range(ncols):
       out.append(' %-*s |' % (colw[i], row[i]))
@@ -165,7 +182,7 @@ def csv_quote(s: str) -> str:
 
 
 def format_table_csv(header: [str], rows: [[str]]) -> str:
-  ncols = len(rows[0])
+  ncols = len(header)
   out = []
 
   # print header
@@ -175,8 +192,7 @@ def format_table_csv(header: [str], rows: [[str]]) -> str:
   out[len(out) - 1] = '\n'
 
   # print data
-  for row_idx in range(1, len(rows)):
-    row = rows[row_idx]
+  for row in rows:
     for i in range(ncols):
       out.append(csv_quote(row[i]))
       out.append(',')
@@ -209,19 +225,22 @@ def format_table(rows: [[str]], format: str) -> str:
       header[i] = ( int(id_label[0]), id_label[1] )
       i += 1
 
-  for row_idx in range(1, len(rows)):
-    row = rows[row_idx]
+  rows = rows[1:]
+
+  for row in rows:
     i = 0
     while i < ncols:
       colw[i] = max(colw[i], len(row[i]))
       i += 1
 
   if format == 'csv':
-    return format_table_csv(header, rows[1:])
+    return format_table_csv(header, rows)
   elif format == 'md':
-    return format_table_md(header, rows[1:], colw)
-  elif format == '':
-    return format_table_plain(header, rows[1:], colw)
+    return format_table_md(header, rows, colw)
+  elif format == '' and len(rows) == 1:
+    return format_table_one(header, rows, colw)
+  elif format == 't' or format == '':
+    return format_table_plain(header, rows, colw)
   else:
     raise Exception(f'unknown format "{format}"')
 
@@ -231,9 +250,10 @@ if __name__ == '__main__':
   a = lambda *args, **kwargs: argparser.add_argument(*args, **kwargs)
   a('-i', '--id', metavar='<nameID>',
     help='Only print <nameID>. Separate multiple IDs with comma.')
-  a('-a', '--all', help='Print all name entries')
-  a('--csv', help='CSV output format')
-  a('--md', help='Markdown output format')
+  a('-a', '--all', action='store_true', help='Print all name entries')
+  a('-t', action='store_true', help='Print as table even when a single font is given')
+  a('--csv', action='store_true', help='CSV output format')
+  a('--md', action='store_true', help='Markdown output format')
   a('inputs', metavar='<file>', nargs='+', help='Input fonts (ttf or otf)')
   args = argparser.parse_args()
 
@@ -253,6 +273,7 @@ if __name__ == '__main__':
 
   format = ''
   if args.csv: format = 'csv'
-  if args.md: format = 'md'
+  if args.md:  format = 'md'
+  if args.t:   format = 't'
 
   print(format_table(rows, format))
