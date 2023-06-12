@@ -27,7 +27,10 @@ def fixup_instance(designspace, instance):
   isItalic = "Italic" in instance.styleName
   psStyle = remove_whitespace(instance.styleName)
   if isItalic:
-    instance.postScriptFontName = 'InterVariableItalic-' + psStyle.replace('Italic','')
+    psStyle = psStyle.replace('Italic','')
+    if psStyle == '':
+      psStyle = 'Regular'
+    instance.postScriptFontName = 'InterVariableItalic-' + psStyle
   else:
     instance.postScriptFontName = 'InterVariable-' + psStyle
 
