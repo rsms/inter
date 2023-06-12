@@ -238,10 +238,11 @@ def setFamilyName(font, nextFamilyName):
       old, new = renameRecord(rec, prevFamilyNames, nextFamilyName)
     # print("  %r: '%s' -> '%s'" % (rec, old, new))
 
-  # HACK! FIXME!
   # add name ID 25 "Variations PostScript Name Prefix" if not found
   if not found_VAR_PS_NAME_PREFIX and nextFamilyName.find('Variable') != -1:
     varPSNamePrefix = remove_whitespace(nextFamilyName)
+    if font_is_italic(font):
+      varPSNamePrefix += 'Italic'
     nameTable.setName(varPSNamePrefix, VAR_PS_NAME_PREFIX, 1, 0, 0)     # mac
     nameTable.setName(varPSNamePrefix, VAR_PS_NAME_PREFIX, 3, 1, 0x409) # windows
 
@@ -252,17 +253,17 @@ def gen_stat(ttfont):
   buildStatTable(ttfont, STAT_AXES, locations=locations)
 
 
-def fixup_fvar(ttfont):
-  fvar = ttfont['fvar']
-  for a in fvar.axes:
-    if a.axisTag == "wght":
-      a.defaultValue = 400
-      break
+# def fixup_fvar(ttfont):
+#   fvar = ttfont['fvar']
+#   for a in fvar.axes:
+#     if a.axisTag == "wght":
+#       a.defaultValue = 400
+#       break
 
 
-def fixup_os2(ttfont):
-  os2 = ttfont['OS/2']
-  os2.usWeightClass = 400
+# def fixup_os2(ttfont):
+#   os2 = ttfont['OS/2']
+#   os2.usWeightClass = 400
 
 
 def main():

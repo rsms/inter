@@ -20,7 +20,17 @@ def fixup_names(instance_or_source):
 def fixup_instance(designspace, instance):
   fixup_names(instance)
 
-  instance.postScriptFontName = 'InterVariable-' + remove_whitespace(instance.styleName)
+  # note: these must match name ID 25 "Variations PostScript Name Prefix"
+  # which in turn must be unique for the roman vs italic fonts.
+  # If you change this, also update bake-vf.py to match.
+  # See https://github.com/rsms/inter/issues/577
+  isItalic = "Italic" in instance.styleName
+  psStyle = remove_whitespace(instance.styleName)
+  if isItalic:
+    instance.postScriptFontName = 'InterVariableItalic-' + psStyle.replace('Italic','')
+  else:
+    instance.postScriptFontName = 'InterVariable-' + psStyle
+
   instance.styleMapFamilyName = instance.styleMapFamilyName.replace(' Display', '')
 
   # remove WWSFamilyName and WWSSubfamilyName properties
