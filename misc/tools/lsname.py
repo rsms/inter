@@ -111,21 +111,24 @@ def format_table_one(header: [(int,str)], rows: [[str]], colw: [int]) -> str:
   return '\n'.join(out)
 
 
-def format_table_plain(header: [(int,str)], rows: [[str]], colw: [int]) -> str:
+def format_table_plain(header: [(int,str)], rows: [[str]], colw: [int], no_labels: bool) -> str:
   ncols = len(header)
   out = []
 
   # print header labels
-  for i in range(ncols):
-    if i > 0:
-      out.append(' │ ')
-    out.append('%-*s' % (colw[i], header[i][1]))
-  out.append('\n')
+  if not no_labels:
+    for i in range(ncols):
+      if i > 0:
+        out.append(' │ ')
+      out.append('%-*s' % (colw[i], header[i][1]))
+    out.append('\n')
   for i in range(ncols):
     id = header[i][0]
     if i > 0:
       out.append(' │ ')
-    if id < 0:
+    if isinstance(id, str):
+      out.append('%-*s' % (colw[i], id))
+    elif id < 0:
       out.append('%-*s' % (colw[i], 'name ID →'))
     else:
       out.append('%-*d' % (colw[i], id))
@@ -202,7 +205,7 @@ def format_table_csv(header: [str], rows: [[str]]) -> str:
   return ''.join(out)
 
 
-def format_table(rows: [[str]], format: str) -> str:
+def format_table(rows: [[str]], format: str, no_labels: bool) -> str:
   # calculate column widths and column header labels
   ncols = len(rows[0])
   header = [None] * ncols
@@ -211,7 +214,18 @@ def format_table(rows: [[str]], format: str) -> str:
   unified_header = format == 'md' or format == 'csv'
 
   row = rows[0]
-  if unified_header:
+  if no_labels:
+    while i < ncols:
+      id_label = row[i].split(' ', 1)
+      if len(id_label) == 1:
+        id_label = [id_label[0], '']
+      colw[i] = max(colw[i], len(id_label[0]))
+      if unified_header:
+        header[i] = id_label[0]
+      else:
+        header[i] = (id_label[0], id_label[0])
+      i += 1
+  elif unified_header:
     while i < ncols:
       colw[i] = max(colw[i], len(row[i]))
       header[i] = row[i]
@@ -240,7 +254,7 @@ def format_table(rows: [[str]], format: str) -> str:
   elif format == '' and len(rows) == 1:
     return format_table_one(header, rows, colw)
   elif format == 't' or format == '':
-    return format_table_plain(header, rows, colw)
+    return format_table_plain(header, rows, colw, no_labels)
   else:
     raise Exception(f'unknown format "{format}"')
 
@@ -251,29 +265,30 @@ if __name__ == '__main__':
   a('-i', '--id', metavar='<nameID>',
     help='Only print <nameID>. Separate multiple IDs with comma.')
   a('-a', '--all', action='store_true', help='Print all name entries')
+  a('--no-labels', action='store_true', help="Don't use nice labels, just IDs")
   a('-t', action='store_true', help='Print as table even when a single font is given')
   a('--csv', action='store_true', help='CSV output format')
   a('--md', action='store_true', help='Markdown output format')
   a('inputs', metavar='<file>', nargs='+', help='Input fonts (ttf or otf)')
-  args = argparser.parse_args()
+  cl = argparser.parse_args()
 
   name_ids_filter = set((1, 2, 4, 6, 16, 17, 18, 21, 22))
-  if args.id and len(args.id) > 0:
+  if cl.id and len(cl.id) > 0:
     name_ids_filter = set()
-    for id in args.id.split(','):
+    for id in cl.id.split(','):
       name_ids_filter.add(int(id.strip()))
-  elif args.all:
+  elif cl.all:
     name_ids_filter = AnySet()
 
   with Pool() as p:
-    name_tables = p.map(read_name_table, args.inputs)
+    name_tables = p.map(read_name_table, cl.inputs)
 
-  filenames = [os.path.basename(fn) for fn in args.inputs]
+  filenames = [os.path.basename(fn) for fn in cl.inputs]
   rows = build_table(name_tables, filenames, name_ids_filter)
 
   format = ''
-  if args.csv: format = 'csv'
-  if args.md:  format = 'md'
-  if args.t:   format = 't'
+  if cl.csv: format = 'csv'
+  if cl.md:  format = 'md'
+  if cl.t:   format = 't'
 
-  print(format_table(rows, format))
+  print(format_table(rows, format, no_labels=cl.no_labels))
