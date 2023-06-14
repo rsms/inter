@@ -25,13 +25,59 @@ from fontTools.ttLib import TTFont
 from fontTools.otlLib.builder import buildStatTable
 
 
+# stat_axes_format_2 is used for making a STAT table with format 1 & 2 records
+def stat_axes_format_2(is_italic):
+  return [
+    { "name": "Optical Size", "tag": "opsz", "ordering": 0, "values": [
+      dict(nominalValue=14, rangeMinValue=14, rangeMaxValue=21, name="14pt"),
+      dict(nominalValue=28, rangeMinValue=21, rangeMaxValue=28, name="28pt"),
+    ] },
+    { "name": "Weight", "tag": "wght", "ordering": 1, "values": [
+      dict(nominalValue=100, rangeMinValue=100, rangeMaxValue=150, name="Thin"),
+      dict(nominalValue=200, rangeMinValue=150, rangeMaxValue=250, name="ExtraLight"),
+      dict(nominalValue=300, rangeMinValue=250, rangeMaxValue=350, name="Light"),
+      dict(nominalValue=400, rangeMinValue=350, rangeMaxValue=450, name="Regular",
+           flags=0x2, linkedValue=660),
+      dict(nominalValue=500, rangeMinValue=450, rangeMaxValue=540, name="Medium"),
+      dict(nominalValue=580, rangeMinValue=540, rangeMaxValue=620, name="SemiBold"),
+      dict(nominalValue=660, rangeMinValue=620, rangeMaxValue=720, name="Bold"),
+      dict(nominalValue=780, rangeMinValue=720, rangeMaxValue=840, name="ExtraBold"),
+      dict(nominalValue=900, rangeMinValue=840, rangeMaxValue=900, name="Black"),
+    ] },
+    { "name": "Italic", "tag": "ital", "ordering": 2, "values": [
+        dict(value=1, name="Italic") if is_italic else \
+        dict(value=0, name="Roman", flags=0x2, linkedValue=1),
+    ] },
+  ]
+
+
+# stat_axes_format_3 is used for making a STAT table with format 1 & 3 records
+def stat_axes_format_3(is_italic):
+  # see https://learn.microsoft.com/en-us/typography/opentype/spec/
+  #     stat#axis-value-table-format-3
+  suffix = " Italic" if is_italic else ""
+  return [
+    { "name": "Optical Size", "tag": "opsz" },
+    { "name": "Weight", "tag": "wght", "values": [
+      { "name": "Thin"+suffix,       "value": 100, "linkedValue": 400 },
+      { "name": "ExtraLight"+suffix, "value": 200, "linkedValue": 500 },
+      { "name": "Light"+suffix,      "value": 300, "linkedValue": 580 },
+      { "name": "Regular"+suffix,    "value": 400, "linkedValue": 660, "flags":0x2 },
+      { "name": "Medium"+suffix,     "value": 500, "linkedValue": 780 },
+      { "name": "SemiBold"+suffix,   "value": 580, "linkedValue": 900 },
+      { "name": "Bold"+suffix,       "value": 660 },
+      { "name": "ExtraBold"+suffix,  "value": 780 },
+      { "name": "Black"+suffix,      "value": 900 },
+    ]},
+  ]
+
+
 # STAT_AXES is used for making a STAT table with format 4 records
 STAT_AXES = [
   { "name": "Optical Size", "tag": "opsz" },
   { "name": "Weight",       "tag": "wght" },
   { "name": "Italic",       "tag": "ital" }
 ]
-
 
 # stat_locations is used for making a STAT table with format 4 records
 def stat_locations(is_italic):
@@ -49,27 +95,6 @@ def stat_locations(is_italic):
     { "name": "Bold"+suffix,       "location":{"wght":660, "ital":ital} },
     { "name": "ExtraBold"+suffix,  "location":{"wght":780, "ital":ital} },
     { "name": "Black"+suffix,      "location":{"wght":900, "ital":ital} },
-  ]
-
-
-# stat_axes is used for making a STAT table with format 1 & 3 records
-def stat_axes(is_italic):
-  # see https://learn.microsoft.com/en-us/typography/opentype/spec/
-  #     stat#axis-value-table-format-3
-  suffix = " Italic" if is_italic else ""
-  return [
-    { "name": "Optical Size", "tag": "opsz" },
-    { "name": "Weight", "tag": "wght", "values": [
-      { "name": "Thin"+suffix,       "value": 100, "linkedValue": 400 },
-      { "name": "ExtraLight"+suffix, "value": 200, "linkedValue": 500 },
-      { "name": "Light"+suffix,      "value": 300, "linkedValue": 580 },
-      { "name": "Regular"+suffix,    "value": 400, "linkedValue": 660, "flags":0x2 },
-      { "name": "Medium"+suffix,     "value": 500, "linkedValue": 780 },
-      { "name": "SemiBold"+suffix,   "value": 580, "linkedValue": 900 },
-      { "name": "Bold"+suffix,       "value": 660 },
-      { "name": "ExtraBold"+suffix,  "value": 780 },
-      { "name": "Black"+suffix,      "value": 900 },
-    ]},
   ]
 
 
@@ -276,12 +301,15 @@ def gen_stat(ttfont):
   # We are limited to format 2 or 3 records, else Adobe products like InDesign
   # bugs out. See https://github.com/rsms/inter/issues/577
   #
+  # build a version 1.1 STAT table with format 2 records:
+  buildStatTable(ttfont, stat_axes_format_2(font_is_italic(ttfont)))
+  #
   # build a version 1.1 STAT table with format 1 and 3 records:
-  buildStatTable(ttfont, stat_axes(font_is_italic(ttfont)))
+  #buildStatTable(ttfont, stat_axes_format_3(font_is_italic(ttfont)))
   #
   # build a version 1.2 STAT table with format 4 records:
-  # locations = stat_locations(font_is_italic(ttfont))
-  # buildStatTable(ttfont, STAT_AXES, locations=locations)
+  #locations = stat_locations(font_is_italic(ttfont))
+  #buildStatTable(ttfont, STAT_AXES, locations=locations)
 
 
 # def fixup_fvar(ttfont):
