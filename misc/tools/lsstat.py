@@ -188,7 +188,7 @@ if __name__ == '__main__':
   with Pool() as p:
     tables = p.map(read_stat_table, cl.inputs)
 
-  print(pprint.PrettyPrinter(indent=2).pformat(tables[0]))
+  # print(pprint.PrettyPrinter(indent=2).pformat(tables[0]))
 
   filenames = [os.path.basename(fn) for fn in cl.inputs]
   print(format_stat(tables, filenames, cl))
