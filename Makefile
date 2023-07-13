@@ -162,7 +162,9 @@ endif
 
 
 $(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o otf --output-path $@ $(FM_ARGS_2)
+	. $(VENV) ; fontmake -u $< -o otf --output-path $@.tmp.otf $(FM_ARGS_2)
+	. $(VENV) ; psautohint -o $@ $@.tmp.otf
+	@rm $@.tmp.otf
 
 $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
 	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
@@ -170,7 +172,7 @@ $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static
 
 $(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static/Inter-Regular.ttf $(FONTDIR)/static-hinted venv
 	. $(VENV) ; python -m ttfautohint \
-	  --windows-compatibility \
+	  --stem-width-mode=qqq \
 	  --reference $(FONTDIR)/static/Inter-Regular.ttf \
 	  --no-info \
 	  "$<" "$@"
@@ -253,7 +255,7 @@ $(FONTDIR)/static/Inter.otc: \
 	$(FONTDIR)/static/InterDisplay-BoldItalic.otf \
 	$(FONTDIR)/static/InterDisplay-ExtraBold.otf \
 	$(FONTDIR)/static/InterDisplay-ExtraBoldItalic.otf
-	. $(VENV) ; python -m fontTools.ttLib.__init__ -o $@ $^
+	. $(VENV) ; python -m fontTools.ttLib.__main__ -o $@ $^
 
 $(FONTDIR)/static-hinted/Inter.ttc: \
 	$(FONTDIR)/static-hinted/Inter-Regular.ttf \
@@ -292,7 +294,7 @@ $(FONTDIR)/static-hinted/Inter.ttc: \
 	$(FONTDIR)/static-hinted/InterDisplay-BoldItalic.ttf \
 	$(FONTDIR)/static-hinted/InterDisplay-ExtraBold.ttf \
 	$(FONTDIR)/static-hinted/InterDisplay-ExtraBoldItalic.ttf
-	. $(VENV) ; python -m fontTools.ttLib.__init__ -o $@ $^
+	. $(VENV) ; python -m fontTools.ttLib.__main__ -o $@ $^
 
 static_otf: \
 	$(FONTDIR)/static/Inter-Black.otf \
@@ -609,20 +611,21 @@ dist_postflight:
 
 INSTALLDIR := $(HOME)/Library/Fonts/Inter
 
-install: install_var $(INSTALLDIR)/Inter.ttc | install_clean_otf
-
-install_clean_otf:
-	@# Remove any old pre-ttc fonts
-	rm -rf $(INSTALLDIR)/Inter*.otf
+install: install_var install_ttf
 
 install_var: \
 	$(INSTALLDIR)/Inter-Variable.ttf \
 	$(INSTALLDIR)/Inter-Variable-Italic.ttf
 
+install_ttf: $(INSTALLDIR)/Inter.ttc
+install_otf: $(INSTALLDIR)/Inter.otc
+
 $(INSTALLDIR)/%.ttc: $(FONTDIR)/static-hinted/%.ttc | $(INSTALLDIR)
+	rm -rf $(INSTALLDIR)/Inter*.otf $(INSTALLDIR)/Inter*.otc
 	cp -a $^ $@
 
 $(INSTALLDIR)/%.otc: $(FONTDIR)/static/%.otc | $(INSTALLDIR)
+	rm -rf $(INSTALLDIR)/Inter*.ttc
 	cp -a $^ $@
 
 $(INSTALLDIR)/Inter-Variable.ttf: $(FONTDIR)/var/Inter-Variable.ttf | $(INSTALLDIR)
@@ -637,7 +640,7 @@ $(INSTALLDIR)/%.otf: $(FONTDIR)/static/%.otf | $(INSTALLDIR)
 $(INSTALLDIR):
 	mkdir -p $@
 
-.PHONY: install install_var install_clean_otf
+.PHONY: install install_var install_ttf install_otf
 
 # ---------------------------------------------------------------------------------
 # debug
