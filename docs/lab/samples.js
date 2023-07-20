@@ -894,15 +894,14 @@ Un jour, alors qu'il planait près d'une vieille église, il rencontra une choue
 
 Elle raconta au corbeau l'histoire des étoiles et des constellations qui scintillent dans le ciel nocturne. Le corbeau était fasciné par les récits de la chouette et voulait en apprendre davantage sur les secrets du cosmos.
 
-La chouette enseigna au corbeau comment naviguer à travers les cieux, en utilisant les étoiles comme un guide. Elle lui montra comment reconnaître les différentes étoiles et comment elles étaient liées à d'anciennes légendes.
-
 Grâce aux enseignements de la chouette, le corbeau devint un navigateur expert dans les vastes étendues du ciel étoilé. Il pouvait maintenant voyager de nuit et découvrir des paysages célestes éblouissants.
 
 Le corbeau était devenu un oiseau sage et respecté, aimé de tous ceux qui le connaissaient. Il continuait de parcourir les cieux, partageant ses connaissances avec d'autres créatures et inspirant les rêveurs à poursuivre leurs aspirations les plus élevées.
 
-Et ainsi, le corbeau continua son voyage à travers les étoiles, découvrant d’autres planètes et portant avec lui la plume brillante qui avait changé sa vie à jamais.
+Et ainsi, le corbeau continua son voyage à travers les étoiles, portant avec lui la plume brillante qui avait changé sa vie à jamais. Dans ses yeux noirs comme la nuit, on pouvait voir briller une lueur d'émerveillement, tel un univers infini dans un simple œil.
 
 FIN
+
 `)
 
 
