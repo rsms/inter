@@ -62,7 +62,8 @@ For web pages, there's an official [CDN distribution](https://rsms.me/inter/inte
 
 ### Derivative versions
 
-- [Inter with Shavian character support](https://github.com/Shavian-info/interalia)
+- [Open Runde](https://github.com/lauridskern/open-runde) is a rounded variant of Inter
+- [Interalia](https://github.com/Shavian-info/interalia) extends Inter with Shavian characters
 
 
 ## Notable projects using Inter
