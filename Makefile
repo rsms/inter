@@ -170,7 +170,14 @@ $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static
 	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
 
 
-$(FONTDIR)/static-hinted/%.ttf: $(FONTDIR)/static/%.ttf | $(FONTDIR)/static/Inter-Regular.ttf $(FONTDIR)/static-hinted venv
+$(FONTDIR)/static-hinted/InterDisplay-%.ttf: $(FONTDIR)/static/InterDisplay-%.ttf | $(FONTDIR)/static/InterDisplay-Regular.ttf $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python -m ttfautohint \
+	  --stem-width-mode=qqq \
+	  --reference $(FONTDIR)/static/InterDisplay-Regular.ttf \
+	  --no-info \
+	  "$<" "$@"
+
+$(FONTDIR)/static-hinted/Inter-%.ttf: $(FONTDIR)/static/Inter-%.ttf | $(FONTDIR)/static/Inter-Regular.ttf $(FONTDIR)/static-hinted venv
 	. $(VENV) ; python -m ttfautohint \
 	  --stem-width-mode=qqq \
 	  --reference $(FONTDIR)/static/Inter-Regular.ttf \
