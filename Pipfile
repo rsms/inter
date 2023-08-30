@@ -5,9 +5,11 @@ name = "pypi"
 
 [packages]
 ufo2ft = "==2.30.0"
+# fontmake >=3.6.0 (until at least 3.7.1) has a bug that breaks the build.
+# see https://github.com/googlefonts/fontmake/issues/894#issuecomment-1699524088
 fontmake = "==3.5.*"
 fontbakery = "==0.8.*"
-skia-pathops = "==0.7.*"
+skia-pathops = "==0.8.*"
 gftools = "==0.9.*"
 glyphspkg = "==0.1.*"
 brotli = "==1.0.*"
