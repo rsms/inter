@@ -3,120 +3,103 @@ glyphname = projective;
 layers = (
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(1552,1442,l),
-(1560,1490,l),
-(372,1490,l),
-(366,1442,l)
+(1538,1442,l),
+(1546,1490,l),
+(360,1490,l),
+(352,1442,l)
 );
 },
 {
-pos = (-66,-372);
+pos = (-44,-267);
 ref = control;
 }
 );
-width = 1630;
+width = 1604;
 },
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(1536,1330,l),
-(1562,1490,l),
-(376,1490,l),
-(350,1330,l)
+(1521,1330,l),
+(1548,1490,l),
+(362,1490,l),
+(335,1330,l)
 );
 },
 {
-pos = (-62,-372);
+pos = (-61,-372);
 ref = control;
 }
 );
-width = 1630;
+width = 1602;
 },
 {
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(1560,1186,l),
-(1608,1490,l),
-(328,1490,l),
-(280,1186,l)
+(1589,1186,l),
+(1640,1490,l),
+(360,1490,l),
+(309,1186,l)
 );
 },
 {
-pos = (-66,-372);
+pos = (-61,-372);
 ref = control;
 }
 );
-width = 1630;
+width = 1694;
 },
 {
-guides = (
-{
-angle = 80.6;
-pos = (1644,744);
-},
-{
-angle = 80.6;
-pos = (12,744);
-}
-);
 layerId = m008;
 name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(1508.77,1330,l),
-(1535.258,1490,l),
-(349.258,1490,l),
-(322.77,1330,l)
+(1491,1330,l),
+(1518,1490,l),
+(332,1490,l),
+(305,1330,l)
 );
 },
 {
-pos = (0,-372);
+pos = (-53,-319);
 ref = control;
 }
 );
-width = 1566;
+width = 1534;
 },
 {
-guides = (
-{
-angle = 80.6;
-pos = (144,654);
-},
-{
-angle = 80.6;
-pos = (1904,654);
-}
-);
 layerId = m010;
 name = ital_gen;
 shapes = (
 {
 closed = 1;
 nodes = (
-(1546.931,1186,l),
-(1597.258,1490,l),
-(317.258,1490,l),
-(266.931,1186,l)
+(1578,1186,l),
+(1629,1490,l),
+(349,1490,l),
+(298,1186,l)
 );
 },
 {
-pos = (0,-372);
+pos = (-57,-347);
 ref = control;
 }
 );
-width = 1598;
+width = 1661;
 },
 {
 layerId = m012;
@@ -125,20 +108,22 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(1495.312,1442,l),
-(1503.258,1490,l),
-(317.258,1490,l),
-(309.312,1442,l)
+(1479,1442,l),
+(1487,1490,l),
+(301,1490,l),
+(293,1442,l)
 );
 },
 {
-pos = (0,-372);
+pos = (-39,-237);
 ref = control;
 }
 );
-width = 1502;
+width = 1476;
 }
 );
+metricLeft = leftArrow;
+metricRight = "=|leftArrow";
 note = "Based on control";
 unicode = 8965;
 }
