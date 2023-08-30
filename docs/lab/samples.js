@@ -877,6 +877,35 @@ I København findes Danmarks centrale institutioner som Folketinget, kongehuset,
 `)
 
 
+samples.set('French', `
+Lorsqu'il était jeune, le corbeau aimait se promener dans les jardins. Il se perchait sur les branches des arbres, observant les fleurs et écoutant le chant des oiseaux. Un jour, il trouva une plume brillante, et depuis ce jour-là, il rêvait de voler aussi haut que les étoiles.
+
+Mais le corbeau était un oiseau maladroit. Il essayait de voler, mais il se cognait souvent contre les murs ou les branches des arbres. Il ne perdait pas espoir, cependant. Chaque jour, il s'entraînait à battre des ailes et à prendre son envol.
+
+Et un jour, alors qu'il était perché sur une branche, il sentit une légère brise. Il étendit ses ailes et prit son courage à deux mains. Il s'élança dans les airs, battant des ailes avec force. Et pour la première fois de sa vie, le corbeau vola !
+
+Il plana dans le ciel, ressentant la liberté et l'excitation. Il survola les toits des maisons, les champs verdoyants et les rivières scintillantes. Il se sentait comme un véritable roi des airs.
+
+Depuis ce jour, le corbeau était le roi du ciel. Il aimait toujours se promener dans les jardins, mais maintenant, il le faisait en volant. Et il n'oublia jamais cette plume brillante qui lui avait donné des ailes et réalisé son rêve de voler aussi haut que les étoiles.
+
+Il rencontra de nombreux animaux dans le ciel, comme les hirondelles, les papillons, et même un hibou sage. Chaque créature avait ses propres histoires à raconter, et le corbeau apprit beaucoup de leurs aventures.
+
+Un jour, alors qu'il planait près d'une vieille église, il rencontra une chouette majestueuse. La chouette était sage et pleine de connaissances sur les mystères du ciel et de la nature.
+
+Elle raconta au corbeau l'histoire des étoiles et des constellations qui scintillent dans le ciel nocturne. Le corbeau était fasciné par les récits de la chouette et voulait en apprendre davantage sur les secrets du cosmos.
+
+Grâce aux enseignements de la chouette, le corbeau devint un navigateur expert dans les vastes étendues du ciel étoilé. Il pouvait maintenant voyager de nuit et découvrir des paysages célestes éblouissants.
+
+Le corbeau était devenu un oiseau sage et respecté, aimé de tous ceux qui le connaissaient. Il continuait de parcourir les cieux, partageant ses connaissances avec d'autres créatures et inspirant les rêveurs à poursuivre leurs aspirations les plus élevées.
+
+Et ainsi, le corbeau continua son voyage à travers les étoiles, portant avec lui la plume brillante qui avait changé sa vie à jamais. Dans ses yeux noirs comme la nuit, on pouvait voir briller une lueur d'émerveillement, tel un univers infini dans un simple œil.
+
+FIN
+
+`)
+
+
+
 samples.set('Russian', `
 А Б В Г Д Е Ё Ж З И Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ъ Ы Ь Э Ю Я
 а б в г д е ё ж з и й к л м н о п р с т у ф х ц ч ш щ ъ ы ь э ю я
