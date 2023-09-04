@@ -25,7 +25,7 @@ pos = (828,0);
 },
 {
 name = tonos;
-pos = (92,1490);
+pos = (108,1490);
 },
 {
 name = top;
@@ -123,7 +123,7 @@ pos = (673,0);
 },
 {
 name = tonos;
-pos = (120,1490);
+pos = (160,1490);
 },
 {
 name = top;
@@ -156,6 +156,153 @@ width = 768;
 anchors = (
 {
 name = bottom;
+pos = (347,0);
+},
+{
+name = cross;
+pos = (347,768);
+},
+{
+name = ogonek;
+pos = (614,0);
+},
+{
+name = right;
+pos = (630,0);
+},
+{
+name = tonos;
+pos = (96,1490);
+},
+{
+name = top;
+pos = (347,1490);
+}
+);
+layerId = m007;
+shapes = (
+{
+closed = 1;
+nodes = (
+(614,0,l),
+(614,160,l),
+(437,160,l),
+(437,1330,l),
+(614,1330,l),
+(614,1490,l),
+(80,1490,l),
+(80,1330,l),
+(257,1330,l),
+(257,160,l),
+(80,160,l),
+(80,0,l)
+);
+}
+);
+width = 694;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (447,0);
+},
+{
+name = cross;
+pos = (447,788);
+},
+{
+name = ogonek;
+pos = (844,0);
+},
+{
+name = right;
+pos = (870,0);
+},
+{
+name = tonos;
+pos = (50,1490);
+},
+{
+name = top;
+pos = (447,1490);
+}
+);
+layerId = m009;
+shapes = (
+{
+closed = 1;
+nodes = (
+(844,0,l),
+(844,326,l),
+(655,326,l),
+(655,1164,l),
+(844,1164,l),
+(844,1490,l),
+(50,1490,l),
+(50,1164,l),
+(239,1164,l),
+(239,326,l),
+(50,326,l),
+(50,0,l)
+);
+}
+);
+width = 894;
+},
+{
+anchors = (
+{
+name = bottom;
+pos = (254,0);
+},
+{
+name = cross;
+pos = (253,768);
+},
+{
+name = ogonek;
+pos = (438,0);
+},
+{
+name = right;
+pos = (448,0);
+},
+{
+name = tonos;
+pos = (118,1490);
+},
+{
+name = top;
+pos = (254,1490);
+}
+);
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(438,0,l),
+(438,46,l),
+(276,46,l),
+(276,1444,l),
+(438,1444,l),
+(438,1490,l),
+(70,1490,l),
+(70,1444,l),
+(230,1444,l),
+(230,46,l),
+(70,46,l),
+(70,0,l)
+);
+}
+);
+width = 508;
+},
+{
+anchors = (
+{
+name = bottom;
 pos = (387,0);
 },
 {
@@ -179,7 +326,9 @@ name = top;
 pos = (387,1490);
 }
 );
-layerId = m007;
+associatedMasterId = m007;
+layerId = "D8A9EE76-8335-4BDF-9DCE-FB55658D284E";
+name = "Sep 1, 23, 12:17";
 shapes = (
 {
 closed = 1;
@@ -228,7 +377,9 @@ name = top;
 pos = (495,1490);
 }
 );
-layerId = m009;
+associatedMasterId = m009;
+layerId = "E1F3AE4A-920E-4AA0-B18E-1767535EC404";
+name = "Sep 1, 23, 12:22";
 shapes = (
 {
 closed = 1;
@@ -277,7 +428,9 @@ name = top;
 pos = (302,1490);
 }
 );
-layerId = m011;
+associatedMasterId = m011;
+layerId = "37D25120-6282-489C-9688-8E5914B05634";
+name = "Sep 1, 23, 12:23";
 shapes = (
 {
 closed = 1;
