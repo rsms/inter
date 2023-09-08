@@ -275,13 +275,17 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
   #   print('table', tableName)
 
   nameDict = {}
+  version = None
   if 'name' in tt:
     nameDict = {}
     for rec in tt['name'].names:
       k = '#%d' % rec.nameID
+      value = rec.toUnicode()
       if rec.nameID in _NAME_IDS:
+        if _NAME_IDS[rec.nameID] == 'version':
+          version = value
         k += ' ' + _NAME_IDS[rec.nameID]
-      nameDict[k] = rec.toUnicode()
+      nameDict[k] = value
     if 'fontId' in nameDict:
       info['id'] = nameDict['fontId']
 
@@ -292,8 +296,7 @@ def genFontInfo(fontpath, outputType, withGlyphs=True):
     if 'subfamilyName' in nameDict:
       info['name'] += '-' + nameDict['subfamilyName'].replace(' ', '')
 
-  if 'version' in nameDict:
-    version = nameDict['version']
+  if version:
     v = re.split(r'[\s;]+', version)
     if v and len(v) > 0:
       version = v[0]
