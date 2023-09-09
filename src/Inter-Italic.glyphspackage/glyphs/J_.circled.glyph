@@ -3,6 +3,7 @@ glyphname = J.circled;
 layers = (
 {
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
 shapes = (
 {
 alignment = 1;
@@ -10,7 +11,7 @@ ref = largeCircle;
 },
 {
 alignment = -1;
-pos = (892,0);
+pos = (843,0);
 ref = J;
 }
 );
@@ -18,6 +19,7 @@ width = 2846;
 },
 {
 layerId = m012;
+name = ital_gen;
 shapes = (
 {
 alignment = 1;
@@ -25,14 +27,31 @@ ref = largeCircle;
 },
 {
 alignment = -1;
-pos = (955,0);
+pos = (883,0);
 ref = J;
 }
 );
-width = 2847;
+width = 2846;
 },
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+ref = largeCircle;
+},
+{
+alignment = -1;
+pos = (812,0);
+ref = J;
+}
+);
+width = 2846;
+},
+{
+layerId = m008;
+name = ital_gen;
 shapes = (
 {
 alignment = 1;
@@ -47,22 +66,8 @@ ref = J;
 width = 2846;
 },
 {
-layerId = m008;
-shapes = (
-{
-alignment = 1;
-ref = largeCircle;
-},
-{
-alignment = -1;
-pos = (901,0);
-ref = J;
-}
-);
-width = 2848;
-},
-{
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
 shapes = (
 {
 alignment = 1;
@@ -70,14 +75,15 @@ ref = largeCircle;
 },
 {
 alignment = -1;
-pos = (821,0);
+pos = (803,0);
 ref = J;
 }
 );
-width = 2847;
+width = 2846;
 },
 {
 layerId = m010;
+name = ital_gen;
 shapes = (
 {
 alignment = 1;
@@ -85,11 +91,11 @@ ref = largeCircle;
 },
 {
 alignment = -1;
-pos = (838,0);
+pos = (806,0);
 ref = J;
 }
 );
-width = 2847;
+width = 2846;
 }
 );
 unicode = 9407;
