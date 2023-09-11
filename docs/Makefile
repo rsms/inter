@@ -10,6 +10,14 @@ build: .ruby-bundle
 	rm -rf _site
 	bundle exec jekyll build
 
+build-archive: .ruby-bundle
+	rm -rf _site-archive/inter-website/v3
+	mkdir -p _site-archive/inter-website/v3
+	bundle exec jekyll build --safe -d _site-archive/inter-website/v3 -b /inter-website/v3/
+
+serve-archive: build-archive
+	serve-http -p 8198 _site-archive
+
 serve: .ruby-bundle
 	./_scripts/serve.sh
 
@@ -57,4 +65,4 @@ glyphs/metrics.json: ../misc/tools/gen-metrics-and-svgs.py \
 
 font-files/Inter-Regular.otf: fonts
 
-.PHONY: default build serve dist info fonts
+.PHONY: default build build-archive serve serve-archive dist info fonts
