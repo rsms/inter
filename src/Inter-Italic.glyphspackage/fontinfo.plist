@@ -2734,6 +2734,26 @@ notes = "Name: ";
 tag = ss04;
 },
 {
+code = "include(features/ss05-circled.fea);";
+labels = (
+{
+language = dflt;
+value = "";
+}
+);
+tag = ss05;
+},
+{
+code = "include(features/ss06-squared.fea);";
+labels = (
+{
+language = dflt;
+value = "";
+}
+);
+tag = ss06;
+},
+{
 code = "cvParameters { FeatUILabelNameID { name \"Alternate one\"; }; };
 include(features/cv01-one.fea);
 ";
@@ -5495,6 +5515,10 @@ Psi = -174;
 lambda = -81;
 seven = -69;
 };
+"@MMK_L_questiondown" = {
+"@MMK_R_V" = -190;
+"@MMK_R_W" = -100;
+};
 "@MMK_L_quotedbl" = {
 "@MMK_R_A" = -162;
 "@MMK_R_Elcyrillic" = -93;
@@ -6333,10 +6357,6 @@ zeta = {
 "@MMK_R_iotadieresisgreek" = -69;
 Psi = -93;
 underscore = 139;
-};
-"@MMK_L_questiondown" = {
-"@MMK_R_V" = -190;
-"@MMK_R_W" = -100;
 };
 };
 m012 = {
@@ -7248,6 +7268,10 @@ idblgrave = 197;
 Psi = -174;
 lambda = -81;
 seven = -69;
+};
+"@MMK_L_questiondown" = {
+"@MMK_R_V" = -190;
+"@MMK_R_W" = -140;
 };
 "@MMK_L_quotedbl" = {
 "@MMK_R_A" = -162;
@@ -8162,10 +8186,6 @@ zeta = {
 Psi = -93;
 underscore = 139;
 };
-"@MMK_L_questiondown" = {
-"@MMK_R_V" = -190;
-"@MMK_R_W" = -140;
-};
 };
 "11F4534A-B963-4AB5-820F-DAF9A20CD933" = {
 "@MMK_L_A" = {
@@ -9042,6 +9062,10 @@ Psi = -174;
 lambda = -81;
 seven = -69;
 };
+"@MMK_L_questiondown" = {
+"@MMK_R_V" = -160;
+"@MMK_R_W" = -150;
+};
 "@MMK_L_quotedbl" = {
 "@MMK_R_A" = -162;
 "@MMK_R_Elcyrillic" = -93;
@@ -9889,10 +9913,6 @@ zeta = {
 "@MMK_R_iotadieresisgreek" = -69;
 Psi = -93;
 underscore = 139;
-};
-"@MMK_L_questiondown" = {
-"@MMK_R_V" = -160;
-"@MMK_R_W" = -150;
 };
 };
 m008 = {
@@ -10799,6 +10819,10 @@ Psi = -174;
 lambda = -81;
 seven = -69;
 };
+"@MMK_L_questiondown" = {
+"@MMK_R_V" = -200;
+"@MMK_R_W" = -140;
+};
 "@MMK_L_quotedbl" = {
 "@MMK_R_A" = -162;
 "@MMK_R_Elcyrillic" = -93;
@@ -11672,10 +11696,6 @@ zeta = {
 "@MMK_R_iotadieresisgreek" = -69;
 Psi = -93;
 underscore = 139;
-};
-"@MMK_L_questiondown" = {
-"@MMK_R_V" = -200;
-"@MMK_R_W" = -140;
 };
 };
 "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = {
@@ -12562,6 +12582,9 @@ Psi = -174;
 lambda = -81;
 seven = -69;
 };
+"@MMK_L_questiondown" = {
+"@MMK_R_W" = -240;
+};
 "@MMK_L_quotedbl" = {
 "@MMK_R_A" = -162;
 "@MMK_R_Elcyrillic" = -93;
@@ -13419,9 +13442,6 @@ zeta = {
 "@MMK_R_iotadieresisgreek" = -69;
 Psi = -93;
 underscore = 139;
-};
-"@MMK_L_questiondown" = {
-"@MMK_R_W" = -240;
 };
 };
 m010 = {
@@ -14300,6 +14320,9 @@ Psi = -174;
 lambda = -81;
 seven = -69;
 };
+"@MMK_L_questiondown" = {
+"@MMK_R_W" = -286;
+};
 "@MMK_L_quotedbl" = {
 "@MMK_R_A" = -162;
 "@MMK_R_Elcyrillic" = -93;
@@ -15129,9 +15152,6 @@ zeta = {
 "@MMK_R_iotadieresisgreek" = -69;
 Psi = -93;
 underscore = 139;
-};
-"@MMK_L_questiondown" = {
-"@MMK_R_W" = -286;
 };
 };
 };

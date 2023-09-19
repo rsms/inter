@@ -2734,6 +2734,28 @@ notes = "Name: ";
 tag = ss04;
 },
 {
+code = "include(features/ss05-circled.fea);
+";
+labels = (
+{
+language = dflt;
+value = "";
+}
+);
+tag = ss05;
+},
+{
+code = "include(features/ss06-squared.fea);
+";
+labels = (
+{
+language = dflt;
+value = "";
+}
+);
+tag = ss06;
+},
+{
 code = "cvParameters { FeatUILabelNameID { name \"Alternate one\"; }; };
 include(features/cv01-one.fea);
 ";
@@ -2823,6 +2845,15 @@ sub OE by oe.sc;
 sub R by r.sc;
 sub T by t.sc;
 sub Y by y.sc;
+sub ghook by ghook.sc;
+sub i by i.sc;
+sub l by l.sc;
+sub n by n.sc;
+sub oe by oe.sc;
+sub r by r.sc;
+sub y by y.sc;
+sub m by m.sc;
+sub t by t.sc;
 ";
 tag = c2sc;
 },
