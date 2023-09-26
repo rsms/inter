@@ -9,16 +9,16 @@ shapes = (
 ref = one.numr;
 },
 {
-pos = (582,0);
+pos = (512,0);
 ref = fraction;
 },
 {
 alignment = 1;
-pos = (901,0);
+pos = (898,0);
 ref = seven.dnom;
 }
 );
-width = 1580;
+width = 1557;
 },
 {
 layerId = m012;
@@ -28,16 +28,16 @@ shapes = (
 ref = one.numr;
 },
 {
-pos = (542,0);
+pos = (445,0);
 ref = fraction;
 },
 {
 alignment = 1;
-pos = (890,0);
+pos = (812,0);
 ref = seven.dnom;
 }
 );
-width = 1441;
+width = 1473;
 },
 {
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
@@ -47,19 +47,38 @@ shapes = (
 ref = one.numr;
 },
 {
-pos = (678,0);
+pos = (580,0);
 ref = fraction;
 },
 {
 alignment = 1;
-pos = (954,0);
+pos = (1083,0);
 ref = seven.dnom;
 }
 );
-width = 1676;
+width = 1779;
 },
 {
 layerId = m008;
+name = ital_gen;
+shapes = (
+{
+ref = one.numr;
+},
+{
+pos = (563,0);
+ref = fraction;
+},
+{
+alignment = 1;
+pos = (952,0);
+ref = seven.dnom;
+}
+);
+width = 1624;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 name = ital_gen;
 shapes = (
 {
@@ -71,30 +90,11 @@ ref = fraction;
 },
 {
 alignment = 1;
-pos = (816,0);
+pos = (1208,0);
 ref = seven.dnom;
 }
 );
-width = 1470;
-},
-{
-layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
-name = ital_gen;
-shapes = (
-{
-ref = one.numr;
-},
-{
-pos = (734,0);
-ref = fraction;
-},
-{
-alignment = 1;
-pos = (958,0);
-ref = seven.dnom;
-}
-);
-width = 1709;
+width = 1918;
 },
 {
 layerId = m010;
@@ -104,16 +104,16 @@ shapes = (
 ref = one.numr;
 },
 {
-pos = (734,0);
+pos = (553,0);
 ref = fraction;
 },
 {
 alignment = 1;
-pos = (875,0);
+pos = (1134,0);
 ref = seven.dnom;
 }
 );
-width = 1594;
+width = 1834;
 }
 );
 metricLeft = one.numr;

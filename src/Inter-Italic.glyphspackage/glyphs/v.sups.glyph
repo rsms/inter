@@ -4,164 +4,271 @@ kernLeft = v.sups;
 kernRight = v.sups;
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (485,898);
+},
+{
+name = top;
+pos = (588,1517);
+}
+);
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 shapes = (
 {
 closed = 1;
 nodes = (
-(728,1490,l),
-(451,913,l),
-(445,913,l),
-(359,1490,l),
-(192,1490,l),
-(332,744,l),
-(511,744,l),
-(899,1490,l)
+(584,898,l),
+(963,1517,l),
+(777,1517,l),
+(586,1193,ls),
+(540,1115,o),
+(509,1035,o),
+(470,939,c),
+(504,939,l),
+(497,1033,o),
+(492,1114,o),
+(471,1194,cs),
+(386,1517,l),
+(211,1517,l),
+(385,898,l)
 );
 }
 );
 userData = {
 RMXScaler = {
-height = 66.6;
-verticalShift = 1024;
-weight = -50;
-width = 66.6;
+adjustSpace = 20;
+custom = -4;
+height = 54.5;
+verticalShift = 898;
+weight = -20;
+width = 66;
 };
 };
-width = 779;
+width = 858;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (543,886);
+},
+{
+name = top;
+pos = (656,1540);
+}
+);
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 shapes = (
 {
 closed = 1;
 nodes = (
-(696,1490,l),
-(494,1022,l),
-(486,1022,l),
-(442,1490,l),
-(162,1490,l),
-(300,744,l),
-(590,744,l),
-(978,1490,l)
+(710,886,l),
+(1090,1540,l),
+(786,1540,l),
+(650,1269,ls),
+(603,1175,o),
+(573,1083,o),
+(533,949,c),
+(562,949,l),
+(566,1085,o),
+(566,1176,o),
+(549,1269,cs),
+(499,1540,l),
+(212,1540,l),
+(373,886,l)
 );
 }
 );
 userData = {
 RMXScaler = {
-height = 66.6;
-verticalShift = 1024;
-weight = -300;
-width = 66.6;
+adjustSpace = 40;
+custom = -9;
+height = 56.5;
+verticalShift = 886;
+weight = -268;
+width = 66;
 };
 };
-width = 830;
+width = 980;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (447,916);
+},
+{
+name = top;
+pos = (543,1499);
+}
+);
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 shapes = (
 {
 closed = 1;
 nodes = (
-(760,1490,l),
-(402,802,l),
-(398,802,l),
-(268,1490,l),
-(222,1490,l),
-(364,744,l),
-(418,744,l),
-(808,1490,l)
+(475,916,l),
+(853,1499,l),
+(800,1499,l),
+(546,1110,ls),
+(507,1051,o),
+(476,990,o),
+(440,932,c),
+(455,932,l),
+(439,990,o),
+(427,1051,o),
+(408,1110,cs),
+(282,1499,l),
+(234,1499,l),
+(419,916,l)
 );
 }
 );
 userData = {
 RMXScaler = {
-height = 66.6;
-verticalShift = 1024;
-width = 66.6;
+adjustSpace = 10;
+custom = -3;
+height = 51.5;
+verticalShift = 916;
+weight = 3;
+width = 66;
 };
 };
-width = 722;
+width = 776;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (424,874);
+},
+{
+name = top;
+pos = (516,1450);
+}
+);
 layerId = m008;
 shapes = (
 {
 closed = 1;
 nodes = (
-(696,1490,l),
-(416,908,l),
-(410,908,l),
-(322,1490,l),
-(160,1490,l),
-(300,744,l),
-(474,744,l),
-(862,1490,l)
+(516,874,l),
+(848,1450,l),
+(667,1450,l),
+(513,1170,ls),
+(475,1101,o),
+(441,1028,o),
+(412,963,c),
+(453,963,l),
+(445,1031,o),
+(436,1103,o),
+(421,1170,cs),
+(359,1450,l),
+(191,1450,l),
+(332,874,l)
 );
 }
 );
 userData = {
 RMXScaler = {
-height = 66.6;
-verticalShift = 1024;
-weight = -50;
-width = 66.6;
+adjustSpace = 30;
+height = 54.5;
+verticalShift = 874;
+weight = -20;
+width = 60;
 };
 };
-width = 710;
+width = 734;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (445,854);
+},
+{
+name = top;
+pos = (536,1451);
+}
+);
 layerId = m010;
 shapes = (
 {
 closed = 1;
 nodes = (
-(680,1490,l),
-(478,1022,l),
-(470,1022,l),
-(426,1490,l),
-(146,1490,l),
-(284,744,l),
-(574,744,l),
-(962,1490,l)
+(599,854,l),
+(921,1451,l),
+(636,1451,l),
+(536,1228,ls),
+(497,1141,o),
+(463,1057,o),
+(425,965,c),
+(488,965,l),
+(480,1058,o),
+(473,1140,o),
+(462,1228,cs),
+(434,1451,l),
+(167,1451,l),
+(291,854,l)
 );
 }
 );
 userData = {
 RMXScaler = {
-height = 66.6;
-verticalShift = 1024;
+adjustSpace = 20;
+height = 56.5;
+verticalShift = 854;
 weight = -300;
-width = 66.6;
+width = 60;
 };
 };
-width = 798;
+width = 783;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (402,886);
+},
+{
+name = top;
+pos = (492,1430);
+}
+);
 layerId = m012;
 shapes = (
 {
 closed = 1;
 nodes = (
-(696,1490,l),
-(338,802,l),
-(334,802,l),
-(204,1490,l),
-(158,1490,l),
-(300,744,l),
-(354,744,l),
-(744,1490,l)
+(427,886,l),
+(775,1430,l),
+(723,1430,l),
+(497,1079,ls),
+(463,1026,o),
+(442,992,o),
+(399,922,c),
+(412,922,l),
+(397,975,o),
+(381,1031,o),
+(366,1079,cs),
+(256,1430,l),
+(209,1430,l),
+(376,886,l)
 );
 }
 );
 userData = {
 RMXScaler = {
-height = 66.6;
-verticalShift = 1024;
-width = 66.6;
+adjustSpace = 40;
+height = 51.5;
+verticalShift = 886;
+weight = 5;
+width = 60;
 };
 };
-width = 594;
+width = 686;
 }
 );
 unicode = 7515;

@@ -1,5 +1,4 @@
 {
-color = 3;
 glyphname = fraction;
 kernLeft = fraction;
 kernRight = fraction;
@@ -10,39 +9,29 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(-311,0,l),
-(713,1490,l),
-(544,1490,l),
-(-480,0,l)
+(-231,0,l),
+(793,1490,l),
+(624,1490,l),
+(-400,0,l)
 );
 }
 );
-width = 233;
+width = 393;
 },
 {
-guides = (
-{
-pos = (-226,1024);
-},
-{
-orientation = center;
-angle = 90;
-pos = (-980,764);
-}
-);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
 closed = 1;
 nodes = (
-(-280,0,l),
-(744,1490,l),
-(504,1490,l),
-(-520,0,l)
+(-160,0,l),
+(864,1490,l),
+(624,1490,l),
+(-400,0,l)
 );
 }
 );
-width = 224;
+width = 464;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -60,48 +49,34 @@ nodes = (
 width = 276;
 },
 {
-guides = (
-{
-orientation = center;
-angle = 90;
-pos = (-3801,1748);
-}
-);
 layerId = m007;
 shapes = (
 {
 closed = 1;
 nodes = (
-(-356,0,l),
-(668,1490,l),
-(494,1490,l),
-(-530,0,l)
+(-296,0,l),
+(728,1490,l),
+(554,1490,l),
+(-470,0,l)
 );
 }
 );
-width = 138;
+width = 258;
 },
 {
-guides = (
-{
-orientation = center;
-angle = 90;
-pos = (-2321,764);
-}
-);
 layerId = m009;
 shapes = (
 {
 closed = 1;
 nodes = (
-(-314,0,l),
-(710,1490,l),
-(454,1490,l),
-(-570,0,l)
+(-144,0,l),
+(880,1490,l),
+(624,1490,l),
+(-400,0,l)
 );
 }
 );
-width = 140;
+width = 480;
 },
 {
 layerId = m011;
@@ -119,6 +94,7 @@ nodes = (
 width = 276;
 }
 );
+metricRight = "=|fraction";
 note = "Anchor numr should be at the basline rightmost position in .numr and dnom should be at top leftmost in .dnomf";
 unicode = 8260;
 userData = {

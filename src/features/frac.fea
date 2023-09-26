@@ -1,197 +1,49 @@
 @figures = [
-    zero
-    one
-    two
-    three
-    four
-    five
-    six
-    seven
-    eight
-    nine
+  zero
+  one
+  two
+  three
+  four
+  five
+  six
+  seven
+  eight
+  nine
 ];
 @numerators = [
-    zero.frac
-    one.frac
-    two.frac
-    three.frac
-    four.frac
-    five.frac
-    six.frac
-    seven.frac
-    eight.frac
-    nine.frac
-];
-@numerators2 = [
-    zero.numr
-    one.numr
-    two.numr
-    three.numr
-    four.numr
-    five.numr
-    six.numr
-    seven.numr
-    eight.numr
-    nine.numr
+  zero.numr
+  one.numr
+  two.numr
+  three.numr
+  four.numr
+  five.numr
+  six.numr
+  seven.numr
+  eight.numr
+  nine.numr
 ];
 @denominators = [
-    zero.dnomf
-    one.dnomf
-    two.dnomf
-    three.dnomf
-    four.dnomf
-    five.dnomf
-    six.dnomf
-    seven.dnomf
-    eight.dnomf
-    nine.dnomf
-];
-@denominators2 = [
-    zero.dnom
-    one.dnom
-    two.dnom
-    three.dnom
-    four.dnom
-    five.dnom
-    six.dnom
-    seven.dnom
-    eight.dnom
-    nine.dnom
-];
-@subscripts = [
-    zero.subs
-    one.subs
-    two.subs
-    three.subs
-    four.subs
-    five.subs
-    six.subs
-    seven.subs
-    eight.subs
-    nine.subs
+  zero.dnom
+  one.dnom
+  two.dnom
+  three.dnom
+  four.dnom
+  five.dnom
+  six.dnom
+  seven.dnom
+  eight.dnom
+  nine.dnom
 ];
 
-lookup FractionBar {
-    ignore sub slash @figures @figures @figures @figures @figures @figures @figures @figures @figures @figures slash';
-    ignore sub slash' @figures @figures @figures @figures @figures @figures @figures @figures @figures @figures slash;
-    ignore sub slash @figures @figures @figures @figures @figures @figures @figures @figures @figures slash';
-    ignore sub slash' @figures @figures @figures @figures @figures @figures @figures @figures @figures slash;
-    ignore sub slash @figures @figures @figures @figures @figures @figures @figures @figures slash';
-    ignore sub slash' @figures @figures @figures @figures @figures @figures @figures @figures slash;
-    ignore sub slash @figures @figures @figures @figures @figures @figures @figures slash';
-    ignore sub slash' @figures @figures @figures @figures @figures @figures @figures slash;
-    ignore sub slash @figures @figures @figures @figures @figures @figures slash';
-    ignore sub slash' @figures @figures @figures @figures @figures @figures slash;
-    ignore sub slash @figures @figures @figures @figures @figures slash';
-    ignore sub slash' @figures @figures @figures @figures @figures slash;
-    ignore sub slash @figures @figures @figures @figures slash';
-    ignore sub slash' @figures @figures @figures @figures slash;
-    ignore sub slash @figures @figures @figures slash';
-    ignore sub slash' @figures @figures @figures slash;
-    ignore sub slash @figures @figures slash';
-    ignore sub slash' @figures @figures slash;
-    ignore sub slash @figures slash';
-    ignore sub slash' @figures slash;
-    sub @figures slash' @figures by fraction;
-} FractionBar;
+lookup FRAC {
+  sub slash by fraction;
+} FRAC;
 
-lookup Numerator1 {
-    sub @figures' fraction by @numerators;
-} Numerator1;
+lookup UP {
+  sub @figures by @numerators;
+} UP;
 
-lookup Numerator2 {
-    sub @figures'
-        [@numerators @numerators2]
-    fraction by @numerators;
-} Numerator2;
-
-lookup Numerator3 {
-    sub @figures'
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-    fraction by @numerators;
-} Numerator3;
-
-lookup Numerator4 {
-    sub @figures'
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-    fraction by @numerators;
-} Numerator4;
-
-lookup Numerator5 {
-    sub @figures'
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-    fraction by @numerators;
-} Numerator5;
-
-lookup Numerator6 {
-    sub @figures'
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-    fraction by @numerators;
-} Numerator6;
-
-lookup Numerator7 {
-    sub @figures'
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-    fraction by @numerators;
-} Numerator7;
-
-lookup Numerator8 {
-    sub @figures'
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-    fraction by @numerators;
-} Numerator8;
-
-lookup Numerator9 {
-    sub @figures'
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-    fraction by @numerators;
-} Numerator9;
-
-lookup Numerator10 {
-    sub @figures'
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-        [@numerators @numerators2]
-    fraction by @numerators;
-} Numerator10;
-
-lookup Denominator {
-    sub [fraction @denominators @denominators2 onefraction] @figures' by @denominators;
-    sub [fraction @denominators @denominators2 onefraction] @subscripts' by @denominators;
-} Denominator;
-
-sub @figures space' [@numerators @numerators2] by thinspace;
+lookup DOWN {
+  sub fraction @numerators' by @denominators;
+  sub @denominators @numerators' by @denominators;
+} DOWN;
