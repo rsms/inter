@@ -2,168 +2,99 @@
 layout: default
 title: Download Inter
 ---
-{%
+{% include defs.html -%}
 
-assign release_version = site.data.fontinfo[0].version %}{%
+<div class="row"><div><r-grid columns=8>
 
-capture download_filename
-  %}Inter-{{ release_version }}.zip{%
-endcapture %}{%
 
-capture download_url
-  %}https://github.com/rsms/inter/releases/download/v{{ release_version }}/{{ download_filename }}{%
-endcapture %}{%
-
-if site.safe == false %}{%
-assign url_root = "/" %}{% else %}{%
-assign url_root = "/inter/" %}{% endif %}{%
-
-for file in site.static_files %}{%
-  assign _path = file.path | remove_first: "/inter" %}{%
-  if _path == "/samples/index.css" %}{%
-    assign index_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  elsif _path == "/res/bindings.js" %}{%
-    assign bindings_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  elsif _path == "/res/graphplot.js" %}{%
-    assign graphplot_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  endif %}{%
-endfor
-
-%}
-<meta http-equiv="refresh" content="0;url={{ download_url }}" />
-<style type="text/css">
-body {
-  background: white;
-}
-div.row.download {
-  font-weight: 460;
-}
-.dim { opacity:0.4; text-decoration: none }
-.dim:hover { opacity:1 }
-.large {
-  font-size: 1.2rem;
-  line-height: 1.4;
-}
-form.large { zoom: 1.2 }
-.download ol {
-  padding-left: 1.5em;
-  margin-bottom: 1.5em;
-}
-.install-instructions {
-  max-width: 40em;
-  display: none;
-}
-.install-instructions.active {
-  display: block;
-}
-
-</style>
-<div class="row download"><div>
-  <p class="large">
-    Downloading Inter version {{ release_version }} ...<br>
-    <a href="{{ download_url }}" class="dim">If the download is not starting automatically, click here</a>
+<r-cell span=row>
+  <h1>Downloading Inter version {{ release_version }}…</h1>
+  <p>
+    <a href="{{download_url}}" class=dim>{{download_url}}</a>
   </p>
+</r-cell>
 
-  <!-- <h2>Support Inter</h2> -->
-  <p class="large">
+
+<r-cell span=row>
+  <p class=large>
     Inter is <a href="https://github.com/rsms/inter">open source</a>.<br>
-    Please consider giving us a small donation to keep this project alive!
+    Please consider giving us a small donation to keep this project alive.
   </p>
-  <p class="large">
-    <a id="sponsor-button"
+  <div class=sponsor-buttons>
+    <a class=button
        title="Help Inter by becoming a sponsor and donating a coffee or two"
        href="https://github.com/sponsors/rsms">
-       <span>Support Inter...</span>
+       Support Inter on GitHub...
     </a>
-  </p>
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+      <input type="hidden" name="business" value="rsms@notion.se">
+      <input type="hidden" name="no_recurring" value="0">
+      <input type="hidden" name="item_name" value="Inter typeface">
+      <!-- <input type="hidden" name="item_number" value="Fall Cleanup Campaign"> -->
+      <input type="hidden" name="currency_code" value="USD">
+      <input class=button type="submit" name="submit" value="or, make a donation via PayPal...">
+    </form>
+  </div>
 
-  <form class="large" action="https://www.paypal.com/donate" method="post" target="_top">
-     <input type="hidden" name="business" value="rsms@notion.se">
-     <input type="hidden" name="no_recurring" value="0">
-     <input type="hidden" name="item_name" value="Inter typeface">
-     <!-- <input type="hidden" name="item_number" value="Fall Cleanup Campaign"> -->
-     <input type="hidden" name="currency_code" value="USD">
-     <input type="submit" name="submit" value="One-time donation via PayPal...">
-  </form>
+</r-cell>
 
-  <h2>How to install</h2>
+
+<br>
+<br>
+<br>
+
+
+<r-cell span=1-4 span-s=row>
+  <h2>Installation instructions</h2>
+
   <p>
     Show instructions for
     <select id="install-menu">
       <option value="mac">macOS</option>
       <option value="windows">Windows</option>
-      <option value="linux">Linux (Ubuntu-like)</option>
+      <option value="ubuntu">Ubuntu Linux</option>
     </select>
   </p>
 
   <div id="install-mac" class="install-instructions active">
-    <h3>Using Font Book</h3>
     <ol>
-      <li>Open the "Font Book" application</li>
-      <li>In the main menu, select File, then "Add Fonts..."</li>
-      <li>Find the "Inter Desktop" folder, select the folder and press the Open button</li>
+      <li>Open the "Font Book" application.</li>
+      <li>In the main menu, select "File" → "Add Fonts..."</li>
+      <li>Select "Inter.ttc", "Inter-Variable.ttf" and "Inter-Variable-Italic.ttf"</li>
+      <li>Press the "Open" button</li>
     </ol>
-    <h3>Using Finder</h3>
-    <ol>
-      <li>Copy the "Inter Desktop" folder</li>
-      <li>Press ⇧⌘G in Finder and go to:  ~/Library/Fonts</li>
-      <li>Delete any existing "Inter" files and folders</li>
-      <li>Paste the "Inter Desktop" folder</li>
-    </ol>
+    <p>
+      Alternatively, if you prefer not to use Font Book, you can move or
+      copy the font files directly into <code>~/Library/Fonts/</code>
+    </p>
   </div>
 
   <div id="install-windows" class="install-instructions">
     <ol>
-      <li>Copy the "Inter Desktop" folder in the zip file to your Desktop</li>
-      <li>Open the "Inter Desktop" folder on your Desktop</li>
-      <li>Select all font files</li>
-      <li>Right-click the selected files and choose "Install for all users"</li>
+      <li>Open the zip file you downloaded</li>
+      <li>Select "Inter.ttc", "Inter-Variable.ttf" and "Inter-Variable-Italic.ttf"</li>
+      <li>Right-click the selected files, choose "Install for all users"</li>
     </ol>
     <p>
       If you have a previous installation of Inter, you should make sure
       to remove those fonts files before installing new ones. You need to
-      install the font for all users, as some software requires fonts to be
-      global.
-    </p>
-    <h3>ClearType-hinted fonts</h3>
-    <p>
-    Inter also comes with a version that has TrueType hints used by ClearType
-    on Windows. This changes the appearance of the fonts when rendered on a
-    system with ClearType enabled and can in some cases increase the legibility
-    of text. However, the hints for Inter are automatically generated and are
-    not always a good thing.
-    </p>
-    <p>
-    If you do prefer to use the version with hints, use the font files in the
-    "Inter Hinted for Windows/Desktop" folder instead of "Inter Desktop".
+      install the font for all users, as some software requires fonts to
+      be global.
     </p>
   </div>
 
-  <div id="install-linux" class="install-instructions">
-    <p>
-      There are many different Linux distributions and some handle font management
-      differently. These instructions are for the most common Linux distributions.
-    </p>
+  <div id="install-ubuntu" class="install-instructions">
     <ol>
-      <li>
-        Create a folder called ".fonts" in your home directory.<br>
-        Example: <tt>mkdir -p ~/.fonts</tt>
-      </li>
-      <li>
-        Copy the otf files in the "Inter Desktop" folder into your
-        <tt>.fonts</tt> directory.<br>
-        Example: <tt>cp "Inter Desktop"/*.otf ~/.fonts/</tt>
+      <li>Create a ".fonts" directory in your home. (<code>mkdir -p ~/.fonts</code>)</li>
+      <li>Copy "Inter.ttc", "Inter-Variable.ttf" and
+        "Inter-Variable-Italic.ttf" into your .fonts directory
+        (<code>cp Inter.ttc *.ttf ~/.fonts/</code>)
       </li>
     </ol>
     <p>
       You may have to restart apps and/or your window server session.
     </p>
-    <p>
-      Again, these instructions are for the most common Linux distributuons like
-      Ubuntu and might not apply to you. Refer to the documentation for your
-      distribution for more details on how to manage fonts in your OS.
-    </p>
-    <h3>Linux Q&amp;A</h3>
+    <h4>Ubuntu Linux Q&amp;A</h4>
     <p>
       Q: I installed the fonts but they don't show up<br>
       A: Try rebuilding the font database:<br>
@@ -183,8 +114,54 @@ form.large { zoom: 1.2 }
     </p>
   </div>
 
+  <h4>Variable &amp; Static font files</h4>
 
-</div></div>
+  <p>
+    Inter fonts comes in two flavors: Variable and Static
+    (<code>Inter-Variable*.ttf</code> and <code>Inter.ttc</code>, respectively.)
+  </p><p>
+    Variable fonts is a new format which allows you to choose any
+    weight and optical size. Variable fonts is a relatively new
+    technology and may not yet be supported by all your software.
+    Inter's variable font is called "Inter Variable" to avoid
+    confusion and to allow use alongside the traditional static fonts.
+  </p><p>
+    Static fonts works with older software and uses a fixed set of
+    predefined mixtures of weight and optical size. For example
+    "Inter Display Medium" is Inter with maximum optical size and a
+    weight of 500.
+  </p>
+
+</r-cell>
+
+
+
+<r-cell span=5-8 span-s=row>
+  <h2>Web use</h2>
+  <p>
+    If you're making a web page, you can use the following HTML and CSS:
+  </p>
+    <pre>&lt;!-- HTML in your document's head --&gt;
+&lt;link rel=&quot;preconnect&quot; href=&quot;https://rsms.me/&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://rsms.me/inter/inter.css&quot;&gt;
+
+/* CSS */
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root { font-family: InterVariable, sans-serif; }
+}</pre>
+  <p>Global <abbr title="Content Delivery Network">CDN</abbr>
+    sponsored by <a href="https://cloudflare.com/">Cloudflare</a></p>
+</r-cell>
+
+
+
+</r-grid></div></div>
+
+
 <script type="text/javascript">(function(){
 
 let activeInstructions = document.querySelector('.install-instructions.active')
@@ -201,7 +178,7 @@ installMenu.onchange = ev => {
 }
 
 if (/linux/i.test(navigator.userAgent)) {
-  activateInstructions('linux')
+  activateInstructions('ubuntu')
 } else if (/windows/i.test(navigator.userAgent)) {
   activateInstructions('windows')
 } else if (/mac os/i.test(navigator.userAgent)) {
@@ -209,3 +186,39 @@ if (/linux/i.test(navigator.userAgent)) {
 }
 
 })();</script>
+
+
+<style type="text/css">
+
+body {
+  background: white;
+}
+div.row.download {
+  font-weight: 460;
+}
+.dim { opacity:0.4; text-decoration: none }
+a.dim:hover { opacity:1 }
+
+.large { font-size: 1.375rem; }
+input.button { cursor: pointer }
+
+.sponsor-buttons {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: var(--spacingv);
+  font-size: 1.2rem;
+}
+@media only screen and (max-width: 720px) {
+  .sponsor-buttons {
+    font-size: 1.375rem;
+    flex-direction: column;
+    gap: 0rem;
+  }
+}
+
+.install-instructions { display: none; }
+.install-instructions.active { display: block; }
+
+
+</style>

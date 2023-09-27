@@ -1,36 +1,32 @@
 
-- title: Contextual alternates
-  tag:   calt
+- tag: calt
+  title: Contextual alternates
   description:
-    This feature is usually enabled by default and causes certain characters to adjust
-    themselves or be replaced depending on the surrounding context.
+    Depending on the surrounding context, different glyphs are used.
+    Enabled by default
   samples:
-    - "3›x‹9"
-    - "12›:‹34, FE›—‹X"
-    - "4›.‹2"
-    - "›(‹SEMI›)‹PERMANENT"
-    - "SFO ›→‹ STO"
-    - "IIA ›⟶‹ OGG"
-    - "ARN ›⟺‹ OGG"
-    - "M›@‹N m@n"
-    - "Smile ›:-)‹"
+    - "3›x‹9&nbsp; 12›:‹34&nbsp; 3›–‹8&nbsp; ›+‹8+x"
+    - "›(‹SEMI›)‹PER›[‹M›]‹ANE›{‹N›}‹T"
+    - "-> --> ---> => ==> <->"
+    - "S›@‹N&nbsp; s@n&nbsp; ›:-)‹&nbsp; ›•‹Smile"
 
 
-# - title: Arrows
-#   tag:   calt
-#   description:
-#     Arrows are part of Contextual alternates.
-#   samples:
-#     - "-> --> --->"
-#     - "<- <-- <---"
-#     - "<-> <-->"
-#     - "=> ==> <=="
-#     - "<=> <==>"
-#   footer:
-#     "In addition to contextual alternates, Inter also provides some ligatures
-#     like for instance specialized glyphs for enclosing combining glyphs. Examples:<br>
-#     U+0041 U+20DD => A\u20DD<br>
-#     U+0023 U+20DE => #\u20DE<br>"
+- tag: liga
+  title: Standard Ligatures
+  description: Enabled by default
+  samples:
+    - "Dif›f‹icult af›f‹ine ›f‹jord "
+    - "›f‹i ›f‹j"
+
+
+- tag: dlig
+  title: Discretionary Ligatures
+  disable: liga
+  description: Disabled by default
+  samples:
+    - "after affine art interface"
+    - "ff ffi fft ft fi tt tf df dt ff kf kt rf"
+    - "rt vf vt wf wt yf yt ›¡¿‹What›?!‹"
 
 
 - title: Tabular numbers
@@ -39,145 +35,105 @@
     Fixed-width numbers are useful for tabular data, where comparing
     columns across rows is desired.
   samples:
-    - "1234567890"
-    - "1131711›&nbsp;‹"
-    - "0040900›&nbsp;‹"
-    - "11:31,711›&nbsp;‹"
-    - "00:40.900›&nbsp;‹"
-    - "0.45, 0.91, +0.08›&nbsp;‹"
-    - "1.00, 9.44, −0.13›&nbsp;‹"
-    - "0.00, 1.13, ~7.12›&nbsp;‹"
+    - "0.45, 0.91. +0.08"
+    - "1.00; 9.44, −0.13"
+    - "0:00. 1.13; ~7.12"
 
 
 - title: Fractions
   tag:   frac
   description:
-    This feature is contextually sensitive and will convert "words" of
-    numbers separated by forward slash into proper fractions.
-    This feature is dynamic and allows for any fractions.
-    Note that the digits used for fractions are custom-made for their
-    small size, and are even made separately from the slightly larger
-    Superscript and Subscript numbers.
+    Convert spans of numbers & forward slash into fractions
   samples:
-    - "1/3&nbsp; 3/4&nbsp; 1/5"
-    - "18/29&nbsp; 16/5"
-    - "1337/591038"
+    - "1/3&nbsp; 5/12&nbsp; 0123/456789"
+    - "Approximately 6/16\""
 
 
 - title: Case alternates
   tag:   case
   description:
-    Switches out some glyphs to work better with capital letters and numbers.
+    Alternate glyphs that matches capital letters and numbers
   samples:
     - "›(‹Hello›)‹ ›[‹World›]‹ ›{‹9000›}‹"
-    - "SCHOOL ›@‹ RUN"
-    - "3 ›+‹ 9 ›=‹ 12 ›*‹ 1"
-    - "›*+÷±×=≠≈•~&lt;&gt;≤≥‹"
-    - "›→‹ ›←‹ ›⟶‹ ›⟵‹ ›−‹ ›-‹ ›–‹ ›—‹ ›:‹"
+    - "A›@‹B&nbsp; 3 ›+‹ 9 ›≈‹ 12 ›*‹ 1 ›→‹ X"
 
 
 - title: Compositions
   tag:   ccmp
   description:
-    Inter provides several custom made glyphs for compositions like
-    A + enclosed-combining-circle.
+    Custom-made glyphs for compositions.
+    Enabled by default
   samples:
-    - "Figure A›\u20DD‹"
-    - "Figure #›\u20DE‹"
-    - "Figure 3›\u20DD‹"
-    - "Figure 3›\u20DE‹"
-  footer:
-    This means that for instance enclosed glyphs
-    works everywhere, not just in apps with correct combining character logic.
-
-
-- title: Discretionary ligatures
-  tag:   dlig
-  description:
-    Alternate style for a few chacters. This feature is usually disabled by default.
-  samples:
-    - "›¡¿‹What›?!‹"
-    - "›¿¡‹What›!?‹"
-
-
-- title: Numerators
-  tag:   numr
-  samples:
-    - "Hello ›0123‹"
-
-
-- title: Denominators
-  tag:   dnom
-  samples:
-    - "Hello ›0123‹"
-
-
-- title: Superscript
-  tag:   sups
-  samples:
-    - "X›0123 (+)-[=]‹"
-    - "X›abcdefghijklmnopqrstuvwxyz‹"
+    - "›j\u200A\u0303‹&nbsp; ›i\u200A\u0300‹&nbsp; ›į\u200A\u0301‹&nbsp; ›j\u200A\u0302‹&nbsp; ›i\u200A\u0304‹"
+    - "Figure ›A\u20DD #\u20DE 3\u20DD ×\u20DE‹"
 
 
 - title: Subscript
   tag:   subs
   samples:
-    - "H›0123 (+)-[=]‹"
-    - "X›abcdefghijklmnopqrstuvwxyz‹"
+    - "H›2‹O SF›6‹ H›2‹SO›4‹"
+    - "ABC›123abc (+)-[=]‹"
 
 
-- title: "Stylistic set 1: Alternate digits"
+- title: Superscript
+  tag:   sups
+  samples:
+    - "ABC›123abc (+)-[=]‹"
+
+
+- title: Denominators
+  tag:   dnom
+  samples:
+    - "ABC›1234567890‹"
+
+
+- title: Numerators
+  tag:   numr
+  samples:
+    - "ABC›1234567890‹"
+
+
+- tag: zero
+  title: Slashed zero
+  samples:
+    - "›0‹123"
+
+
+- title: "Alternate digits"
   tag:   ss01
-  description:
-    An alternate style of digits.
-    Note that individual digit styles can be cherry-picked using the cvXX
-    features.
   samples:
     - "12›34‹5›6‹78›9‹0"
-    - "›3469‹"
 
 
-- title: "Stylistic set 2: Disambiguation"
+- title: "Disambiguation"
   tag:   ss02
   description:
     Alternate glyph set that increases visual difference between
     similar-looking characters.
   samples:
     - "WP›0‹ACO9XS›I‹1›0‹12O9"
-    - "›Ill‹ega›l‹"
-    - "βeta ›ß‹eta Busine›ß‹"
+    - "›Ill‹ega›l‹ busine›ß‹ βeta"
 
 
-- title: "Stylistic set 3: r curves into round neighbors"
-  tag:   ss03
-  description:
-    Lower case r curved into neighboring round shapes for increased
-    legibility and personality.
+- tag: ss03
+  title: "Round quotes & comma"
   samples:
-    - "Sa›r‹a"
-    - "i›r‹d"
-    - "Mon›r‹oe"
+    - "It›’‹s ›“‹fun›”‹ here›,‹ yes"
 
 
-- title: Slashed zero
-  tag:   zero
-  samples:
-    - "O›0‹123"
-
-
-- title: Character variants
-  tag: cvXX
-  description: "Allows cherry-picking alternate characters."
-  samples:
-    - {feat: cv01, alt: "Alternate one", sample: "1"}
-    - {feat: cv02, alt: "Open four", sample: "4"}
-    - {feat: cv03, alt: "Open six", sample: "6"}
-    - {feat: cv04, alt: "Open nine", sample: "9"}
-    - {feat: cv05, alt: "Lower case L with tail", sample: "l ł ƚ ɫ ɬ ŀ ĺ ļ ľ ḷ ḹ ḻ ḽ"}
-    - {feat: cv06, alt: "Lower case r with curved tail", sample: "r ɽ ɍ ɼ ŕ ŗ ř ȑ ȓ ṙ ṛ ṝ ṟ"}
-    - {feat: cv07, alt: "Alternate German double-s", sample: "ß"}
-    - {feat: cv08, alt: "Upper-case i with serif", sample: "I Ï Ḯ Ɨ Ḭ Ì Í Î Ĩ Ī Ĭ Į İ Ǐ Ȉ Ȋ Ỉ Ị Ι Ί Ϊ Ἰ Ἱ Ἲ"}
-    - {feat: cv09, alt: "Flat top three", sample: "3"}
-    - {feat: cv10, alt: "Capital G with spur", sample: "G Ǥ Ɠ Ĝ Ğ Ġ Ģ Ǧ Ǵ Ḡ"}
-    - {feat: cv11, alt: "Single-storey a", sample: "a á ă ắ ặ ằ ẳ ẵ ǎ â ấ ậ ầ ẩ ẫ ȁ ä ǟ ȧ ạ ǡ à ả ȃ ā ą ẚ å ǻ ḁ ã"}
+# - title: Character variants
+#   tag: cvXX
+#   description: "Allows cherry-picking alternate characters."
+#   samples:
+#     - {feat: cv01, alt: "Alternate one", sample: "1"}
+#     - {feat: cv02, alt: "Open four", sample: "4"}
+#     - {feat: cv03, alt: "Open six", sample: "6"}
+#     - {feat: cv04, alt: "Open nine", sample: "9"}
+#     - {feat: cv05, alt: "Lower case L with tail", sample: "l ł ƚ ɫ ɬ ŀ ĺ ļ ľ ḷ ḹ ḻ ḽ"}
+#     - {feat: cv06, alt: "Lower case r with curved tail", sample: "r ɽ ɍ ɼ ŕ ŗ ř ȑ ȓ ṙ ṛ ṝ ṟ"}
+#     - {feat: cv07, alt: "Alternate German double-s", sample: "ß"}
+#     - {feat: cv08, alt: "Upper-case i with serif", sample: "I Ï Ḯ Ɨ Ḭ Ì Í Î Ĩ Ī Ĭ Į İ Ǐ Ȉ Ȋ Ỉ Ị Ι Ί Ϊ Ἰ Ἱ Ἲ"}
+#     - {feat: cv09, alt: "Flat top three", sample: "3"}
+#     - {feat: cv10, alt: "Capital G with spur", sample: "G Ǥ Ɠ Ĝ Ğ Ġ Ģ Ǧ Ǵ Ḡ"}
+#     - {feat: cv11, alt: "Single-storey a", sample: "a á ă ắ ặ ằ ẳ ẵ ǎ â ấ ậ ầ ẩ ẫ ȁ ä ǟ ȧ ạ ǡ à ả ȃ ā ą ẚ å ǻ ḁ ã"}
 

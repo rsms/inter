@@ -1,65 +1,161 @@
 ---
 layout: none
 ---
-{% assign font_v = site.data.fontinfo[0].version %}
+{%- assign font_v = site.data.fontinfo[0].version -%}
 /*
-Font families defined by this CSS:
 
-- "InterDisplay"                  static "traditional" fonts for older web browsers
-- "InterDisplay var"              single-axis variable fonts for all modern browsers
-- "InterDisplay var experimental" multi-axis variable fonts for modern web browsers
+  DEPRECTATED -- instead, please use https://rsms.me/inter/inter.css
 
-Use like this in your CSS:
-
-  h1,h2,h3,h4,h5,h6 { font-family: 'InterDisplay', sans-serif; }
-  @supports (font-variation-settings: normal) {
-    h1,h2,h3,h4,h5,h6 { font-family: 'InterDisplay var', sans-serif; }
-  }
-
-------------------------- static ------------------------- */
-{% include InterDisplay-static.css %}
-
-/* ----------------------- variable ----------------------- */
-
-{%- comment -%}
-{% include InterDisplay-italic.var.css %}
-{% include InterDisplay-roman.var.css %}
-{%- endcomment %}
-
+*/
 @font-face {
   font-family: 'InterDisplay var';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('font-files/InterDisplay-roman.var.woff2?v={{font_v}}') format('woff2');
-  font-named-instance: 'Regular';
+  src: url('font-files/Inter-Variable.woff2?v={{font_v}}') format('woff2');
+  font-variation-settings: "opsz" 28;
 }
-
 @font-face {
   font-family: 'InterDisplay var';
   font-style: italic;
   font-weight: 100 900;
   font-display: swap;
-  src: url('font-files/InterDisplay-italic.var.woff2?v={{font_v}}') format('woff2');
-  font-named-instance: 'Italic';
+  src: url('font-files/Inter-Variable-Italic.woff2?v={{font_v}}') format('woff2');
+  font-variation-settings: "opsz" 28;
 }
 
-/* ----------- experimental multi-axis variable -----------
-
-Slant axis is not yet widely supported (as of February 2019) and thus this
-multi-axis single-file variable font is opt-in rather than the default.
-When using this, you will likely need to set font-variation-settings explicitly, e.g:
-  * { font-variation-settings: "slnt" 0deg }
-  .italic { font-variation-settings: "slnt" 10deg }
-*/
-{%- comment -%}
-{% include InterDisplay.var.css %}
-{%- endcomment %}
 
 @font-face {
-  font-family: 'InterDisplay var experimental';
-  font-style: oblique 0deg 10deg;
-  font-weight: 100 900;
+  font-family: 'InterDisplay';
+  font-style:  normal;
+  font-weight: 100;
   font-display: swap;
-  src: url('font-files/InterDisplay.var.woff2?v={{font_v}}') format('woff2');
+  src: url("font-files/InterDisplay-Thin.woff2?v={{font_v}}") format("woff2");
+}
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("font-files/InterDisplay-ThinItalic.woff2?v={{font_v}}") format("woff2");
+}
+
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("font-files/InterDisplay-ExtraLight.woff2?v={{font_v}}") format("woff2");
+}
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("font-files/InterDisplay-ExtraLightItalic.woff2?v={{font_v}}") format("woff2");
+}
+
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("font-files/InterDisplay-Light.woff2?v={{font_v}}") format("woff2");
+}
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("font-files/InterDisplay-LightItalic.woff2?v={{font_v}}") format("woff2");
+}
+
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("font-files/InterDisplay-Regular.woff2?v={{font_v}}") format("woff2");
+}
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("font-files/InterDisplay-Italic.woff2?v={{font_v}}") format("woff2");
+}
+
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("font-files/InterDisplay-Medium.woff2?v={{font_v}}") format("woff2");
+}
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("font-files/InterDisplay-MediumItalic.woff2?v={{font_v}}") format("woff2");
+}
+
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("font-files/InterDisplay-SemiBold.woff2?v={{font_v}}") format("woff2");
+}
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("font-files/InterDisplay-SemiBoldItalic.woff2?v={{font_v}}") format("woff2");
+}
+
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("font-files/InterDisplay-Bold.woff2?v={{font_v}}") format("woff2");
+}
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("font-files/InterDisplay-BoldItalic.woff2?v={{font_v}}") format("woff2");
+}
+
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("font-files/InterDisplay-ExtraBold.woff2?v={{font_v}}") format("woff2");
+}
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("font-files/InterDisplay-ExtraBoldItalic.woff2?v={{font_v}}") format("woff2");
+}
+
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("font-files/InterDisplay-Black.woff2?v={{font_v}}") format("woff2");
+}
+@font-face {
+  font-family: 'InterDisplay';
+  font-style:  italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("font-files/InterDisplay-BlackItalic.woff2?v={{font_v}}") format("woff2");
 }
