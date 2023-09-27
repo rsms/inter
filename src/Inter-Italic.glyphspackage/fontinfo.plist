@@ -2858,6 +2858,37 @@ value = "";
 tag = ss06;
 },
 {
+automatic = 1;
+code = "sub dotdblsubcomb by dotdblsubcomb.ss07;
+sub adieresis by adieresis.ss07;
+sub colon by colon.ss07;
+sub comma by comma.ss07;
+sub dieresis by dieresis.ss07;
+sub dieresiscomb by dieresiscomb.ss07;
+sub dotaccent by dotaccent.ss07;
+sub dotaccentcomb by dotaccentcomb.ss07;
+sub dotbelow by dotbelow.ss07;
+sub i by i.ss07;
+sub j by j.ss07;
+sub ldot by ldot.ss07;
+sub odieresis by odieresis.ss07;
+sub period by period.ss07;
+sub periodcentered by periodcentered.ss07;
+sub semicolon by semicolon.ss07;
+sub udieresis by udieresis.ss07;
+sub udieresisbelow by udieresisbelow.ss07;
+sub dieresis.three by dieresis.three.ss07;
+sub ldot.ss02 by ldot.ss02.ss07;
+";
+labels = (
+{
+language = dflt;
+value = "Square punctuation";
+}
+);
+tag = ss07;
+},
+{
 code = "cvParameters { FeatUILabelNameID { name \"Alternate one\"; }; };
 include(features/cv01-one.fea);
 ";
