@@ -41,16 +41,18 @@ def localDateTimeToUTCStr(localstr, pattern='%Y/%m/%d %H:%M:%S'):
   return time.strftime('%Y-%m-%dT%H:%M:%SZ', time.localtime(ts))
 
 
-def processGlyph(g, ucd, seenGlyphnames):
-  name = g.name
-  if name in seenGlyphnames:
-    return None
-  seenGlyphnames.add(name)
-
-  # not exported?
+def include_glyph(g):
   if 'com.schriftgestaltung.Glyphs.Export' in g.lib:
     if not g.lib['com.schriftgestaltung.Glyphs.Export']:
-      return None
+      return False
+  return True
+
+
+NAME_TO_ID_RE = re.compile(r'([A-Z_])')
+
+
+def processGlyph(g, ucd):
+  name = g.name
 
   # color
   color = None
@@ -62,6 +64,8 @@ def processGlyph(g, ucd, seenGlyphnames):
   if not g.bounds or g.bounds[3] == 0:
     isEmpty = 1
 
+  id = NAME_TO_ID_RE.sub(r'\1_', name).lower()
+
   # name, isEmpty, unicode, unicodeName, color
   glyph = None
   ucs = g.unicodes
@@ -72,26 +76,29 @@ def processGlyph(g, ucd, seenGlyphnames):
       #   ucName = '[private use %04X]' % uc
       ucstr = '%04X' % uc
       if color:
-        glyph = [name, isEmpty, ucstr, ucName, color]
+        glyph = [id, name, isEmpty, ucstr, ucName, color]
       elif ucName:
-        glyph = [name, isEmpty, ucstr, ucName]
+        glyph = [id, name, isEmpty, ucstr, ucName]
       else:
-        glyph = [name, isEmpty, ucstr]
+        glyph = [id, name, isEmpty, ucstr]
+      break
   else:
     if color:
-      glyph = [name, isEmpty, None, None, color]
+      glyph = [id, name, isEmpty, None, None, color]
     else:
-      glyph = [name, isEmpty]
+      glyph = [id, name, isEmpty]
 
   return glyph
 
+
 def glyphSortFun(g):
-  if len(g) > 2 and g[2] is not None:
-    return g[2]
+  if len(g) > 3 and g[3] is not None:
+    return g[3]
   elif len(g) > 0:
-    return g[0]
+    return g[1]
   else:
     return ""
+
 
 def main():
   argparser = ArgumentParser(
@@ -111,23 +118,23 @@ def main():
     ucd = parseUnicodeDataFile(args.ucdFile)
 
   glyphs = []  # contains final glyph data printed as JSON
-  seenGlyphnames = set()
-
-  for name in font.lib['public.glyphOrder']:
-    g = font[name]
-    glyph = processGlyph(g, ucd, seenGlyphnames)
-    if glyph is not None:
-      glyphs.append(glyph)
-
   unorderedGlyphs = []
+  seenGlyphs = set()
+  for name in font.lib['public.glyphOrder']:
+    if name not in font:
+      print(f'warning: glyph "{name}" (in public.glyphOrder) does not exist',
+        file=sys.stderr)
+      continue
+    g = font[name]
+    seenGlyphs.add(g)
+    if include_glyph(g):
+      glyphs.append(processGlyph(g, ucd))
   for g in font:
-    glyph = processGlyph(g, ucd, seenGlyphnames)
-    if glyph is not None:
-      unorderedGlyphs.append(glyph)
+    if include_glyph(g) and g not in seenGlyphs:
+      unorderedGlyphs.append(processGlyph(g, ucd))
 
-  if unorderedGlyphs:
-    # sort by unicode
-    glyphs = glyphs + sorted(unorderedGlyphs, key=glyphSortFun)
+  # append unorderedGlyphs, sorted by unicode
+  glyphs = glyphs + sorted(unorderedGlyphs, key=glyphSortFun)
 
   print('{"glyphs":[')
   prefix = '  '
