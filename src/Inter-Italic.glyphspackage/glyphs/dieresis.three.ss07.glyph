@@ -327,40 +327,46 @@ width = 1392;
 anchors = (
 {
 name = _top;
-pos = (855,1056);
+pos = (839,1056);
 },
 {
 name = top;
-pos = (927,1490);
+pos = (911,1490);
 }
 );
 background = {
 shapes = (
 {
-pos = (194,0);
+pos = (178,0);
 ref = dieresiscomb;
 }
 );
 };
+guides = (
+{
+pos = (115,1378);
+showMeasurement = 1;
+}
+);
 layerId = m008;
 name = ital_gen;
 shapes = (
 {
-pos = (140,0);
+pos = (156,0);
 ref = dotaccentcomb.ss07;
 },
 {
 alignment = -1;
-pos = (556,0);
+pos = (540,0);
 ref = dotaccentcomb.ss07;
 },
 {
 alignment = -1;
-pos = (972,0);
+pos = (924,0);
 ref = dotaccentcomb.ss07;
 }
 );
-width = 1536;
+width = 1504;
 },
 {
 anchors = (
@@ -381,6 +387,12 @@ ref = dieresiscomb;
 }
 );
 };
+guides = (
+{
+pos = (147,1344);
+showMeasurement = 1;
+}
+);
 layerId = m010;
 name = ital_gen;
 shapes = (
@@ -408,43 +420,49 @@ width = 1732;
 anchors = (
 {
 name = _top;
-pos = (1046,1118);
+pos = (1022,1118);
 },
 {
 name = top;
-pos = (1124,1586);
+pos = (1100,1586);
 }
 );
 background = {
 shapes = (
 {
-pos = (261,0);
+pos = (237,0);
 ref = dieresiscomb;
 }
 );
 };
+guides = (
+{
+pos = (141,1416);
+showMeasurement = 1;
+}
+);
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 name = ital_gen;
 shapes = (
 {
-pos = (176,0);
+pos = (200,0);
 ref = dotaccentcomb.ss07;
 scale = (0.8,1);
 },
 {
 alignment = -1;
-pos = (686,0);
+pos = (662,0);
 ref = dotaccentcomb.ss07;
 scale = (0.8,1);
 },
 {
 alignment = -1;
-pos = (1196,0);
+pos = (1124,0);
 ref = dotaccentcomb.ss07;
 scale = (0.8,1);
 }
 );
-width = 1840;
+width = 1792;
 },
 {
 anchors = (
@@ -468,6 +486,10 @@ ref = dieresiscomb;
 guides = (
 {
 pos = (558,1984);
+},
+{
+pos = (131,1420);
+showMeasurement = 1;
 }
 );
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
@@ -494,40 +516,46 @@ width = 1631;
 anchors = (
 {
 name = _top;
-pos = (823,1056);
+pos = (807,1056);
 },
 {
 name = top;
-pos = (874,1362);
+pos = (858,1362);
 }
 );
 background = {
 shapes = (
 {
-pos = (309,0);
+pos = (293,0);
 ref = dieresiscomb;
 }
 );
 };
+guides = (
+{
+pos = (115,1333);
+showMeasurement = 1;
+}
+);
 layerId = m012;
 name = ital_gen;
 shapes = (
 {
-pos = (209,0);
+pos = (225,0);
 ref = dotaccentcomb.ss07;
 },
 {
 alignment = -1;
-pos = (613,0);
+pos = (597,0);
 ref = dotaccentcomb.ss07;
 },
 {
 alignment = -1;
-pos = (1017,0);
+pos = (969,0);
 ref = dotaccentcomb.ss07;
 }
 );
-width = 1472;
+width = 1440;
 },
 {
 anchors = (
@@ -548,6 +576,12 @@ ref = dieresiscomb;
 }
 );
 };
+guides = (
+{
+pos = (131,1378);
+showMeasurement = 1;
+}
+);
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 name = ital_gen;
 shapes = (

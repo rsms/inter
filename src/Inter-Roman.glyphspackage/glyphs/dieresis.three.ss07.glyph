@@ -24,6 +24,10 @@ ref = dieresiscomb;
 guides = (
 {
 pos = (558,1984);
+},
+{
+pos = (131,1420);
+showMeasurement = 1;
 }
 );
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
@@ -49,42 +53,48 @@ width = 1631;
 anchors = (
 {
 name = _top;
-pos = (920,1118);
+pos = (896,1118);
 },
 {
 name = top;
-pos = (920,1586);
+pos = (896,1586);
 }
 );
 background = {
 shapes = (
 {
-pos = (227,0);
+pos = (203,0);
 ref = dieresiscomb;
 }
 );
 };
+guides = (
+{
+pos = (107,1416);
+showMeasurement = 1;
+}
+);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
-pos = (142,0);
+pos = (166,0);
 ref = dotaccentcomb.ss07;
 scale = (0.8,1);
 },
 {
 alignment = -1;
-pos = (652,0);
+pos = (628,0);
 ref = dotaccentcomb.ss07;
 scale = (0.8,1);
 },
 {
 alignment = -1;
-pos = (1162,0);
+pos = (1090,0);
 ref = dotaccentcomb.ss07;
 scale = (0.8,1);
 }
 );
-width = 1840;
+width = 1792;
 },
 {
 anchors = (
@@ -105,6 +115,12 @@ ref = dieresiscomb;
 }
 );
 };
+guides = (
+{
+pos = (131,1378);
+showMeasurement = 1;
+}
+);
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
@@ -128,39 +144,45 @@ width = 1600;
 anchors = (
 {
 name = _top;
-pos = (768,1056);
+pos = (752,1056);
 },
 {
 name = top;
-pos = (768,1490);
+pos = (752,1490);
 }
 );
 background = {
 shapes = (
 {
-pos = (194,0);
+pos = (178,0);
 ref = dieresiscomb;
 }
 );
 };
+guides = (
+{
+pos = (115,1378);
+showMeasurement = 1;
+}
+);
 layerId = m007;
 shapes = (
 {
-pos = (140,0);
+pos = (156,0);
 ref = dotaccentcomb.ss07;
 },
 {
 alignment = -1;
-pos = (556,0);
+pos = (540,0);
 ref = dotaccentcomb.ss07;
 },
 {
 alignment = -1;
-pos = (972,0);
+pos = (924,0);
 ref = dotaccentcomb.ss07;
 }
 );
-width = 1536;
+width = 1504;
 },
 {
 anchors = (
@@ -181,6 +203,12 @@ ref = dieresiscomb;
 }
 );
 };
+guides = (
+{
+pos = (131,1344);
+showMeasurement = 1;
+}
+);
 layerId = m009;
 shapes = (
 {
@@ -207,39 +235,45 @@ width = 1732;
 anchors = (
 {
 name = _top;
-pos = (736,1056);
+pos = (720,1056);
 },
 {
 name = top;
-pos = (736,1362);
+pos = (720,1362);
 }
 );
 background = {
 shapes = (
 {
-pos = (309,0);
+pos = (293,0);
 ref = dieresiscomb;
 }
 );
 };
+guides = (
+{
+pos = (115,1333);
+showMeasurement = 1;
+}
+);
 layerId = m011;
 shapes = (
 {
-pos = (209,0);
+pos = (225,0);
 ref = dotaccentcomb.ss07;
 },
 {
 alignment = -1;
-pos = (613,0);
+pos = (597,0);
 ref = dotaccentcomb.ss07;
 },
 {
 alignment = -1;
-pos = (1017,0);
+pos = (969,0);
 ref = dotaccentcomb.ss07;
 }
 );
-width = 1472;
+width = 1440;
 },
 {
 anchors = (

@@ -138,7 +138,7 @@ width = 400;
 background = {
 shapes = (
 {
-pos = (-6,0);
+pos = (-11,0);
 ref = colon.ss07;
 }
 );
@@ -151,13 +151,21 @@ alignment = -1;
 ref = comma.ss07;
 },
 {
-pos = (150,848);
+pos = (139,840);
 ref = period.ss07;
 }
 );
-width = 460;
+width = 450;
 },
 {
+background = {
+shapes = (
+{
+pos = (-10,0);
+ref = colon.ss07;
+}
+);
+};
 layerId = m010;
 name = ital_gen;
 shapes = (
