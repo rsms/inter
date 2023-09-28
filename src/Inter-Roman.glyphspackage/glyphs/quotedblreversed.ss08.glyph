@@ -1,5 +1,7 @@
 {
-glyphname = quotedblreversed;
+glyphname = quotedblreversed.ss08;
+kernLeft = quotereversed.ss08;
+kernRight = quoteleft.ss08;
 layers = (
 {
 background = {
@@ -14,14 +16,16 @@ scale = (-1,1);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
-ref = quotereversed;
+alignment = 1;
+ref = quotereversed.ss08;
 },
 {
-pos = (368,0);
-ref = quotereversed;
+alignment = 1;
+pos = (440,0);
+ref = quotereversed.ss08;
 }
 );
-width = 902;
+width = 1030;
 },
 {
 background = {
@@ -36,14 +40,16 @@ scale = (-1,1);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
-ref = quotereversed;
+alignment = 1;
+ref = quotereversed.ss08;
 },
 {
-pos = (526,0);
-ref = quotereversed;
+alignment = 1;
+pos = (604,0);
+ref = quotereversed.ss08;
 }
 );
-width = 1249;
+width = 1368;
 },
 {
 background = {
@@ -58,16 +64,16 @@ scale = (-1,1);
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
-alignment = -1;
-ref = quotereversed;
+alignment = 1;
+ref = quotereversed.ss08;
 },
 {
-alignment = -1;
-pos = (280,0);
-ref = quotereversed;
+alignment = 1;
+pos = (294,0);
+ref = quotereversed.ss08;
 }
 );
-width = 700;
+width = 848;
 },
 {
 background = {
@@ -82,14 +88,16 @@ scale = (-1,1);
 layerId = m007;
 shapes = (
 {
-ref = quotereversed;
+alignment = 1;
+ref = quotereversed.ss08;
 },
 {
-pos = (306,0);
-ref = quotereversed;
+alignment = 1;
+pos = (350,0);
+ref = quotereversed.ss08;
 }
 );
-width = 696;
+width = 800;
 },
 {
 background = {
@@ -104,14 +112,16 @@ scale = (-1,1);
 layerId = m009;
 shapes = (
 {
-ref = quotereversed;
+alignment = 1;
+ref = quotereversed.ss08;
 },
 {
+alignment = 1;
 pos = (494,0);
-ref = quotereversed;
+ref = quotereversed.ss08;
 }
 );
-width = 1021;
+width = 1038;
 },
 {
 background = {
@@ -126,21 +136,18 @@ scale = (-1,1);
 layerId = m011;
 shapes = (
 {
-alignment = -1;
-ref = quotereversed;
+alignment = 1;
+ref = quotereversed.ss08;
 },
 {
-alignment = -1;
-pos = (176,0);
-ref = quotereversed;
+alignment = 1;
+pos = (200,0);
+ref = quotereversed.ss08;
 }
 );
-width = 462;
+width = 600;
 }
 );
-metricLeft = "=|quoteleft";
-metricRight = "=|quoteleft";
-unicode = 8223;
 userData = {
 interface.gridadjust.original = "{'width': 1095, 'leftMargin': 110, 'rightMargin': 110}";
 "interface.width-adjustments" = (
