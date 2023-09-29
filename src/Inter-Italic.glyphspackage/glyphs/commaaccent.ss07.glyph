@@ -1,0 +1,129 @@
+{
+case = minor;
+color = 1;
+glyphname = commaaccent.ss07;
+layers = (
+{
+anchors = (
+{
+name = _bottom;
+pos = (183,0);
+}
+);
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-61,-368);
+ref = comma.ss07;
+scale = (0.9,0.9);
+}
+);
+width = 530;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (205,0);
+}
+);
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-62,-376);
+ref = comma.ss07;
+scale = (0.7,0.7);
+}
+);
+width = 536;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (167,0);
+}
+);
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-42,-255);
+ref = comma.ss07;
+scale = (0.9,0.9);
+}
+);
+width = 500;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (125,0);
+}
+);
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-54,-328);
+ref = comma.ss07;
+scale = (0.9,0.9);
+}
+);
+width = 405;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (123,0);
+}
+);
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-65,-392);
+ref = comma.ss07;
+scale = (0.7,0.7);
+}
+);
+width = 381;
+},
+{
+anchors = (
+{
+name = _bottom;
+pos = (104,0);
+}
+);
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (-40,-244);
+ref = comma.ss07;
+scale = (0.9,0.9);
+}
+);
+width = 360;
+}
+);
+metricLeft = comma.ss07;
+metricRight = comma.ss07;
+userData = {
+interface.gridadjust.original = "{'width': 718, 'leftMargin': 118, 'rightMargin': 235}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

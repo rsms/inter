@@ -13,7 +13,7 @@
   anglesupcomb horncomb xsupcomb tildevertsupcomb overscoredblcomb
   graveleftcomb acuterightcomb perispomenigreekcmb koroniscmb
   diaeresistonoscomb uni0346 uni034A uni034B uni034C arrowheadrightabovecomb uni0351
-  uni0352 righthalfringabovecomb uni0358 uni035B uni1DC0 uni1DC1 uni1DC3
+  uni0352 righthalfringabovecomb dotaboverightcomb uni035B uni1DC0 uni1DC1 uni1DC3
   uni1DC5 uni1DC6 uni1DC7 uni1DC8 uni1DC9 uni1DCB uni1DCC uni1DCD
   uni1DCE uni1DD1 uni1DD2 uni1DD3 uni1DD4 uni1DD5 uni1DD6 uni1DD7
   uni1DD8 uni1DD9 uni1DDA uni1DDB uni1DDC uni1DDD uni1DDE uni1DDF
@@ -23,7 +23,8 @@
   uni0364 uni0365 uni0366 uni0367 uni0368 uni0369 uni036A uni036B
   uni036C uni036D uni036E uni036F titlocyrilliccmb
   palatalizationcyrilliccmb dasiapneumatacyrilliccmb
-  psilipneumatacyrilliccmb uni0487 uni20F0 uniA69F uni2DFF uni20DC
+  psilipneumatacyrilliccmb uni0487 uni20F0 uniA69F uni2DFF
+  fourdotsabovecomb
 ];
 
 # /idieresis /idieresis -> /idieresis.double
@@ -381,7 +382,7 @@ lookup ccmp03 {
   sub H caroncomb by uni021E;
   sub h caroncomb by uni021F;
   sub A dotaccentcomb by uni0226;
-  sub a dotaccentcomb by uni0227;
+  sub a dotaccentcomb by adotaccent;
   sub E cedillacomb by uni0228;
   sub e cedillacomb by uni0229;
   sub O dieresiscomb macroncomb by uni022A;

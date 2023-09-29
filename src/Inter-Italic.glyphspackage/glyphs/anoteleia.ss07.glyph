@@ -1,0 +1,90 @@
+{
+case = minor;
+color = 1;
+glyphname = anoteleia.ss07;
+kernLeft = quotedbl;
+kernRight = quotedbl;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (147,886);
+ref = period.ss07;
+}
+);
+width = 589;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (122,734);
+ref = period.ss07;
+}
+);
+width = 764;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (170,1028);
+ref = period.ss07;
+}
+);
+width = 554;
+},
+{
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (139,840);
+ref = period.ss07;
+}
+);
+width = 450;
+},
+{
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (111,672);
+ref = period.ss07;
+}
+);
+width = 544;
+},
+{
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+pos = (162,976);
+ref = period.ss07;
+}
+);
+width = 400;
+}
+);
+metricWidth = period;
+note = "the Greek semicolon aka \"upper stop\"";
+unicode = 58025;
+userData = {
+interface.gridadjust.original = "{'width': 745, 'leftMargin': 224, 'rightMargin': 189}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

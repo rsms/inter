@@ -1,0 +1,113 @@
+{
+color = 1;
+glyphname = slongdotaccent.ss07;
+kernLeft = B;
+kernRight = longs;
+layers = (
+{
+layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+ref = longs;
+},
+{
+alignment = 1;
+pos = (206,431);
+ref = dotaccentcomb.ss07;
+}
+);
+width = 641;
+},
+{
+layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+ref = longs;
+},
+{
+alignment = 1;
+pos = (188,420);
+ref = dotaccentcomb.ss07;
+}
+);
+width = 765;
+},
+{
+layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+ref = longs;
+},
+{
+alignment = 1;
+pos = (240,430);
+ref = dotaccentcomb.ss07;
+}
+);
+width = 543;
+},
+{
+layerId = m008;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+ref = longs;
+},
+{
+alignment = 1;
+pos = (174,434);
+ref = dotaccentcomb.ss07;
+}
+);
+width = 512;
+},
+{
+layerId = m010;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+ref = longs;
+},
+{
+alignment = 1;
+pos = (130,434);
+ref = dotaccentcomb.ss07;
+}
+);
+width = 705;
+},
+{
+layerId = m012;
+name = ital_gen;
+shapes = (
+{
+alignment = 1;
+ref = longs;
+},
+{
+alignment = 1;
+pos = (215,434);
+ref = dotaccentcomb.ss07;
+}
+);
+width = 413;
+}
+);
+metricLeft = i;
+metricRight = f;
+unicode = 58074;
+userData = {
+interface.gridadjust.original = "{'width': 989, 'leftMargin': 315, 'rightMargin': -1}";
+"interface.width-adjustments" = (
+-16
+);
+};
+}

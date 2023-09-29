@@ -1,0 +1,186 @@
+{
+case = minor;
+color = 1;
+glyphname = quoteright.ss08;
+kernLeft = quoteright.ss08;
+kernRight = quoteright.ss08;
+layers = (
+{
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+metricLeft = "=-40";
+metricRight = "=-40";
+shapes = (
+{
+pos = (-40,1258);
+ref = comma.ss07;
+}
+);
+width = 510;
+},
+{
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+metricLeft = "=-40";
+metricRight = "=-40";
+shapes = (
+{
+pos = (-40,1106);
+ref = comma.ss07;
+}
+);
+width = 684;
+},
+{
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+metricLeft = "=-60";
+metricRight = "=-60";
+shapes = (
+{
+pos = (-60,1400);
+ref = comma.ss07;
+}
+);
+width = 434;
+},
+{
+layerId = m007;
+metricLeft = "=-40";
+metricRight = "=-40";
+shapes = (
+{
+pos = (-40,1274);
+ref = comma.ss07;
+}
+);
+width = 370;
+},
+{
+layerId = m009;
+metricLeft = "=-20";
+metricRight = "=-20";
+shapes = (
+{
+pos = (-20,1106);
+ref = comma.ss07;
+}
+);
+width = 504;
+},
+{
+background = {
+shapes = (
+{
+closed = 1;
+nodes = (
+(-92,1490,l),
+(-238,1001,l),
+(-362,1001,l),
+(-274,1490,l)
+);
+}
+);
+};
+layerId = m011;
+metricLeft = "=-60";
+metricRight = "=-60";
+shapes = (
+{
+pos = (-60,1410);
+ref = comma.ss07;
+}
+);
+width = 280;
+},
+{
+anchors = (
+{
+name = _caron;
+pos = (-14,1536);
+}
+);
+associatedMasterId = m007;
+layerId = "C75CB449-6763-4420-B565-67601111D236";
+name = "Jun 8, 22, 13:47";
+shapes = (
+{
+closed = 1;
+nodes = (
+(114,1490,l),
+(114,1356,ls),
+(113,1248,o),
+(61,1155,o),
+(0,1068,c),
+(94,992,l),
+(209,1085,o),
+(276,1239,o),
+(276,1358,cs),
+(276,1490,l)
+);
+}
+);
+width = 314;
+},
+{
+anchors = (
+{
+name = _caron;
+pos = (6,1536);
+}
+);
+associatedMasterId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+layerId = "20BA1EA4-6593-4F5A-A7E4-76CAC5B5C9B0";
+name = "Jun 8, 22, 14:33";
+shapes = (
+{
+closed = 1;
+nodes = (
+(204,1490,l),
+(204,1358,ls),
+(204,1243,o),
+(137,1106,o),
+(40,1026,c),
+(66,992,l),
+(183,1085,o),
+(250,1239,o),
+(250,1358,cs),
+(250,1490,l)
+);
+}
+);
+width = 320;
+},
+{
+anchors = (
+{
+name = _caron;
+pos = (144,1536);
+}
+);
+associatedMasterId = m009;
+layerId = "C6496963-6451-40A5-AEF6-86A59643335D";
+name = "Jun 8, 22, 14:41";
+shapes = (
+{
+closed = 1;
+nodes = (
+(138,1490,l),
+(138,1314,ls),
+(138,1181,o),
+(100,1094,o),
+(60,1024,c),
+(226,940,l),
+(319,1021,o),
+(417,1172,o),
+(418,1314,cs),
+(418,1490,l)
+);
+}
+);
+width = 494;
+}
+);
+userData = {
+"interface.width-adjustments" = (
+-16
+);
+};
+}

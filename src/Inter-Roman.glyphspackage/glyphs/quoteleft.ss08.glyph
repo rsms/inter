@@ -1,0 +1,156 @@
+{
+case = minor;
+color = 1;
+glyphname = quoteleft.ss08;
+kernLeft = quoteleft.ss08;
+kernRight = quoteleft.ss08;
+layers = (
+{
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+metricLeft = "=-40";
+metricRight = "=-40";
+shapes = (
+{
+angle = 180;
+pos = (550,1217);
+ref = comma.ss07;
+}
+);
+width = 510;
+},
+{
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+metricLeft = "=-40";
+metricRight = "=-40";
+shapes = (
+{
+angle = 180;
+pos = (724,1136);
+ref = comma.ss07;
+}
+);
+width = 684;
+},
+{
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+metricLeft = "=-60";
+metricRight = "=-60";
+shapes = (
+{
+angle = 180;
+pos = (494,1217);
+ref = comma.ss07;
+}
+);
+width = 434;
+},
+{
+layerId = m009;
+metricLeft = "=-20";
+metricRight = "=-20";
+shapes = (
+{
+angle = 180;
+pos = (524,1152);
+ref = comma.ss07;
+}
+);
+width = 504;
+},
+{
+layerId = m011;
+metricLeft = "=-60";
+metricRight = "=-60";
+shapes = (
+{
+angle = 180;
+pos = (340,1217);
+ref = comma.ss07;
+}
+);
+width = 280;
+},
+{
+layerId = m007;
+metricLeft = "=-40";
+metricRight = "=-40";
+name = "Regular Display";
+shapes = (
+{
+angle = 180;
+pos = (410,1217);
+ref = comma.ss07;
+}
+);
+width = 370;
+},
+{
+associatedMasterId = m007;
+layerId = "F34355E6-7C3A-4957-A416-C83C4EE59903";
+name = "Jun 8, 22, 14:02";
+shapes = (
+{
+closed = 1;
+nodes = (
+(230,1024,l),
+(230,1158,ls),
+(230,1265,o),
+(282,1359,o),
+(344,1446,c),
+(250,1522,l),
+(134,1428,o),
+(67,1274,o),
+(66,1154,cs),
+(66,1024,l)
+);
+}
+);
+width = 344;
+},
+{
+associatedMasterId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+layerId = "229FB141-8DC3-418E-A9B5-01547F1BB4BE";
+name = "Jun 8, 22, 14:36";
+shapes = (
+{
+closed = 1;
+nodes = (
+(226,1024,l),
+(226,1154,ls),
+(226,1271,o),
+(293,1407,o),
+(390,1486,c),
+(364,1522,l),
+(247,1428,o),
+(180,1274,o),
+(180,1154,cs),
+(180,1024,l)
+);
+}
+);
+width = 570;
+},
+{
+associatedMasterId = m007;
+layerId = "1A98C103-6392-48F7-ACBC-993E797A27B8";
+name = "Apr 13, 23, 12:50";
+shapes = (
+{
+closed = 1;
+nodes = (
+(262,1001,l),
+(350,1490,l),
+(226,1490,l),
+(80,1001,l)
+);
+}
+);
+width = 430;
+}
+);
+userData = {
+"interface.width-adjustments" = (
+-16
+);
+};
+}
