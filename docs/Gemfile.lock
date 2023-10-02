@@ -8,6 +8,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.5)
       public_suffix (>= 2.0.2, < 6.0)
+    base64 (0.1.1)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -23,12 +24,13 @@ GEM
     ethon (0.16.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
-    execjs (2.9.0)
-    faraday (2.7.10)
+    execjs (2.9.1)
+    faraday (2.7.11)
+      base64
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
-    ffi (1.15.5)
+    ffi (1.16.2)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
     github-pages (228)
