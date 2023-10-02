@@ -40,8 +40,8 @@
     - "0:00. 1.13; ~7.12"
 
 
-- title: Fractions
-  tag:   frac
+- tag:   frac
+  title: Fractions
   description:
     Convert spans of numbers & forward slash into fractions
   samples:
@@ -49,8 +49,8 @@
     - "Approximately 6/16\""
 
 
-- title: Case alternates
-  tag:   case
+- tag:   case
+  title: Case alternates
   description:
     Alternate glyphs that matches capital letters and numbers
   samples:
@@ -58,8 +58,8 @@
     - "A›@‹B&nbsp; 3 ›+‹ 9 ›≈‹ 12 ›*‹ 1 ›→‹ X"
 
 
-- title: Compositions
-  tag:   ccmp
+- tag:   ccmp
+  title: Compositions
   description:
     Custom-made glyphs for compositions.
     Enabled by default
@@ -68,27 +68,33 @@
     - "Figure ›A\u20DD #\u20DE 3\u20DD ×\u20DE‹"
 
 
-- title: Subscript
-  tag:   subs
+- tag:   sups
+  title: Superscript
+  samples:
+    - "ABC›123abc (+)−[=]‹"
+
+
+- tag:   subs
+  title: Subscript
+  samples:
+    - "ABC›123abc (+)−[=]‹"
+
+
+- tag:   sinf
+  title: Scinetific inferiors
+  description: Same as Subscript
   samples:
     - "H›2‹O SF›6‹ H›2‹SO›4‹"
-    - "ABC›123abc (+)-[=]‹"
 
 
-- title: Superscript
-  tag:   sups
-  samples:
-    - "ABC›123abc (+)-[=]‹"
-
-
-- title: Denominators
-  tag:   dnom
+- tag:   dnom
+  title: Denominators
   samples:
     - "ABC›1234567890‹"
 
 
-- title: Numerators
-  tag:   numr
+- tag:   numr
+  title: Numerators
   samples:
     - "ABC›1234567890‹"
 
@@ -99,14 +105,14 @@
     - "›0‹123"
 
 
-- title: "Alternate digits"
-  tag:   ss01
+- tag:   ss01
+  title: "Alternate digits"
   samples:
     - "12›34‹5›6‹78›9‹0"
 
 
-- title: "Disambiguation"
-  tag:   ss02
+- tag:   ss02
+  title: "Disambiguation"
   description:
     Alternate glyph set that increases visual difference between
     similar-looking characters.
@@ -115,10 +121,34 @@
     - "›Ill‹ega›l‹ busine›ß‹ βeta"
 
 
+- tag: ss07
+  title: "Square punctuation"
+  samples:
+    - "Hello›,‹ M›ä‹stare›.!?‹"
+
+
+- tag: ss08
+  title: "Square quotes"
+  samples:
+    - "I›’‹m not, uhm ›“‹smol›”‹"
+
+
 - tag: ss03
   title: "Round quotes & comma"
   samples:
-    - "It›’‹s ›“‹fun›”‹ here›,‹ yes"
+    - "I›’‹m not›,‹ uhm ›“‹smol›”‹"
+
+
+- tag: ss05
+  title: "Characters in circles"
+  samples:
+    - "ABC123+→"
+
+
+- tag: ss06
+  title: "Characters in squares"
+  samples:
+    - "ABC123+→"
 
 
 # - title: Character variants
