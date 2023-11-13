@@ -170,19 +170,36 @@ $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static
 	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
 
 
-$(FONTDIR)/static-hinted/InterDisplay-%.ttf: $(FONTDIR)/static/InterDisplay-%.ttf | $(FONTDIR)/static/InterDisplay-Regular.ttf $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint \
-	  --stem-width-mode=qqq \
-	  --reference $(FONTDIR)/static/InterDisplay-Regular.ttf \
-	  --no-info \
-	  "$<" "$@"
+AUTOHINT_ARGS := --stem-width-mode=qqq --no-info
 
-$(FONTDIR)/static-hinted/Inter-%.ttf: $(FONTDIR)/static/Inter-%.ttf | $(FONTDIR)/static/Inter-Regular.ttf $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint \
-	  --stem-width-mode=qqq \
-	  --reference $(FONTDIR)/static/Inter-Regular.ttf \
-	  --no-info \
-	  "$<" "$@"
+$(FONTDIR)/static-hinted/Inter-Regular.ttf: $(FONTDIR)/static/Inter-Regular.ttf | $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
+
+$(FONTDIR)/static-hinted/InterDisplay-Regular.ttf: $(FONTDIR)/static/InterDisplay-Regular.ttf | $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
+
+$(FONTDIR)/static-hinted/Inter-Italic.ttf: $(FONTDIR)/static/Inter-Italic.ttf | $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
+
+$(FONTDIR)/static-hinted/InterDisplay-Italic.ttf: $(FONTDIR)/static/InterDisplay-Italic.ttf $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
+
+$(FONTDIR)/static-hinted/InterDisplay-%Italic.ttf: $(FONTDIR)/static/InterDisplay%Italic.ttf | $(FONTDIR)/static-hinted/InterDisplay-Italic.ttf $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) \
+	  --reference $(FONTDIR)/static-hinted/InterDisplay-Italic.ttf "$<" "$@"
+
+$(FONTDIR)/static-hinted/InterDisplay-%.ttf: $(FONTDIR)/static/InterDisplay-%.ttf | $(FONTDIR)/static-hinted/InterDisplay-Regular.ttf $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) \
+	  --reference $(FONTDIR)/static-hinted/InterDisplay-Regular.ttf "$<" "$@"
+
+$(FONTDIR)/static-hinted/Inter-%Italic.ttf: $(FONTDIR)/static/Inter-%Italic.ttf | $(FONTDIR)/static-hinted/Inter-Italic.ttf $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) \
+	  --reference $(FONTDIR)/static-hinted/Inter-Italic.ttf "$<" "$@"
+
+$(FONTDIR)/static-hinted/Inter-%.ttf: $(FONTDIR)/static/Inter-%.ttf | $(FONTDIR)/static-hinted/Inter-Regular.ttf $(FONTDIR)/static-hinted venv
+	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) \
+	  --reference $(FONTDIR)/static-hinted/Inter-Regular.ttf "$<" "$@"
+
 
 $(FONTDIR)/var/.%.var.ttf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
 	. $(VENV) ; fontmake -o variable -m $< --output-path $@ $(FM_ARGS_2)
