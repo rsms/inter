@@ -8,21 +8,24 @@ This script performs the following:
 
 How to debug/develop this script:
 
-1. create a working dir and build the initial fonts:
+1. build the initial fonts:
 
-  mkdir -p build/bake
   make -j var
 
 2. after making changes, run script and inspect with ttx:
 
-  ( for a in build/fonts/var/.Inter-*.var.ttf; do
-      python misc/tools/bake-vf.py "$a" -o build/bake/"$(basename "${a/.Inter/Inter}")"
-    done && ttx -t STAT -i -f -s build/bake/Inter-*.ttf )
+  (. build/venv/bin/activate && mkdir -p build/bake &&
+    for f in build/fonts/var/.Inter-*.var.ttf; do
+      python misc/tools/bake-vf.py "$f" -o build/bake/"$(basename "${f/.Inter/Inter}")"
+    done)
+  (. build/venv/bin/activate && ttx -t STAT -i -f -s build/bake/Inter-*.var.ttf)
 
 """
 import sys, os, os.path, re, argparse
 from fontTools.ttLib import TTFont
 from fontTools.otlLib.builder import buildStatTable
+
+FLAG_DEFAULT = 0x2  # elidable value, effectively marks a location as default
 
 
 # stat_axes_format_2 is used for making a STAT table with format 1 & 2 records
@@ -30,25 +33,25 @@ def stat_axes_format_2(is_italic):
   return [
     dict(name="Optical Size", tag="opsz", ordering=0, values=[
       dict(nominalValue=14, rangeMinValue=14, rangeMaxValue=21, name="Text",
-        flags=0x2, linkedValue=28),
+        flags=FLAG_DEFAULT, linkedValue=28),
       dict(nominalValue=28, rangeMinValue=21, rangeMaxValue=28, name="Display"),
     ]),
-    { "name": "Weight", "tag": "wght", "ordering": 1, "values": [
+    dict(name="Weight", tag="wght", ordering=1, values=[
       dict(nominalValue=100, rangeMinValue=100, rangeMaxValue=150, name="Thin"),
       dict(nominalValue=200, rangeMinValue=150, rangeMaxValue=250, name="ExtraLight"),
       dict(nominalValue=300, rangeMinValue=250, rangeMaxValue=350, name="Light"),
       dict(nominalValue=400, rangeMinValue=350, rangeMaxValue=450, name="Regular",
-           flags=0x2, linkedValue=660),
-      dict(nominalValue=500, rangeMinValue=450, rangeMaxValue=540, name="Medium"),
-      dict(nominalValue=580, rangeMinValue=540, rangeMaxValue=620, name="SemiBold"),
-      dict(nominalValue=660, rangeMinValue=620, rangeMaxValue=720, name="Bold"),
-      dict(nominalValue=780, rangeMinValue=720, rangeMaxValue=840, name="ExtraBold"),
-      dict(nominalValue=900, rangeMinValue=840, rangeMaxValue=900, name="Black"),
-    ] },
-    { "name": "Italic", "tag": "ital", "ordering": 2, "values": [
-        dict(value=1, name="Italic") if is_italic else \
-        dict(value=0, name="Roman", flags=0x2, linkedValue=1),
-    ] },
+           flags=FLAG_DEFAULT, linkedValue=700),
+      dict(nominalValue=500, rangeMinValue=450, rangeMaxValue=550, name="Medium"),
+      dict(nominalValue=600, rangeMinValue=550, rangeMaxValue=650, name="SemiBold"),
+      dict(nominalValue=700, rangeMinValue=650, rangeMaxValue=750, name="Bold"),
+      dict(nominalValue=800, rangeMinValue=750, rangeMaxValue=850, name="ExtraBold"),
+      dict(nominalValue=900, rangeMinValue=850, rangeMaxValue=900, name="Black"),
+    ]),
+    dict(name="Italic", tag="ital", ordering=2, values=[
+      dict(value=1, name="Italic") if is_italic else \
+      dict(value=0, name="Roman", flags=FLAG_DEFAULT, linkedValue=1),
+    ]),
   ]
 
 
@@ -62,12 +65,13 @@ def stat_axes_format_3(is_italic):
     { "name": "Weight", "tag": "wght", "values": [
       { "name": "Thin"+suffix,       "value": 100, "linkedValue": 400 },
       { "name": "ExtraLight"+suffix, "value": 200, "linkedValue": 500 },
-      { "name": "Light"+suffix,      "value": 300, "linkedValue": 580 },
-      { "name": "Regular"+suffix,    "value": 400, "linkedValue": 660, "flags":0x2 },
-      { "name": "Medium"+suffix,     "value": 500, "linkedValue": 780 },
-      { "name": "SemiBold"+suffix,   "value": 580, "linkedValue": 900 },
-      { "name": "Bold"+suffix,       "value": 660 },
-      { "name": "ExtraBold"+suffix,  "value": 780 },
+      { "name": "Light"+suffix,      "value": 300, "linkedValue": 600 },
+      { "name": "Regular"+suffix,    "value": 400, "linkedValue": 700,
+        "flags":FLAG_DEFAULT },
+      { "name": "Medium"+suffix,     "value": 500, "linkedValue": 800 },
+      { "name": "SemiBold"+suffix,   "value": 600, "linkedValue": 900 },
+      { "name": "Bold"+suffix,       "value": 700 },
+      { "name": "ExtraBold"+suffix,  "value": 800 },
       { "name": "Black"+suffix,      "value": 900 },
     ]},
   ]
@@ -90,11 +94,12 @@ def stat_locations(is_italic):
     { "name": "Thin"+suffix,       "location":{"wght":100, "ital":ital} },
     { "name": "ExtraLight"+suffix, "location":{"wght":200, "ital":ital} },
     { "name": "Light"+suffix,      "location":{"wght":300, "ital":ital} },
-    { "name": "Regular"+suffix,    "location":{"wght":400, "ital":ital}, "flags":0x2 },
+    { "name": "Regular"+suffix,    "location":{"wght":400, "ital":ital},
+      "flags":FLAG_DEFAULT },
     { "name": "Medium"+suffix,     "location":{"wght":500, "ital":ital} },
-    { "name": "SemiBold"+suffix,   "location":{"wght":580, "ital":ital} },
-    { "name": "Bold"+suffix,       "location":{"wght":660, "ital":ital} },
-    { "name": "ExtraBold"+suffix,  "location":{"wght":780, "ital":ital} },
+    { "name": "SemiBold"+suffix,   "location":{"wght":600, "ital":ital} },
+    { "name": "Bold"+suffix,       "location":{"wght":700, "ital":ital} },
+    { "name": "ExtraBold"+suffix,  "location":{"wght":800, "ital":ital} },
     { "name": "Black"+suffix,      "location":{"wght":900, "ital":ital} },
   ]
 
@@ -313,12 +318,16 @@ def gen_stat(ttfont):
   #buildStatTable(ttfont, STAT_AXES, locations=locations)
 
 
-# def fixup_fvar(ttfont):
-#   fvar = ttfont['fvar']
-#   for a in fvar.axes:
-#     if a.axisTag == "wght":
-#       a.defaultValue = 400
-#       break
+def fixup_fvar(ttfont):
+  fvar = ttfont['fvar']
+  for i in fvar.instances:
+    wght = round(i.coordinates['wght'] / 100) * 100
+    # print(f"wght {i.coordinates['wght']} -> {wght}")
+    i.coordinates['wght'] = wght
+  # for a in fvar.axes:
+  #   if a.axisTag == "wght":
+  #     a.defaultValue = 400
+  #     break
 
 
 # def fixup_os2(ttfont):
@@ -355,8 +364,8 @@ def main():
   # build STAT table
   gen_stat(font)
 
-  # # fixup fvar table (set default wght value)
-  # fixup_fvar(font)
+  # fixup fvar table
+  fixup_fvar(font)
 
   # # fixup OS/2 table (set usWeightClass)
   # fixup_os2(font)

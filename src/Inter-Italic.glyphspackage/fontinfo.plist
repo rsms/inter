@@ -2541,6 +2541,9 @@ opsz = {
 wght = {
 100 = 100;
 400 = 400;
+600 = 580;
+700 = 670;
+800 = 780;
 900 = 900;
 };
 };
@@ -4630,7 +4633,7 @@ weightClass = 500;
 {
 axesValues = (
 14,
-580
+600
 );
 customParameters = (
 {
@@ -4654,8 +4657,8 @@ value = "9.4";
 }
 );
 instanceInterpolations = {
-"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.64;
-"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.36;
+"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.6;
+"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.4;
 };
 isItalic = 1;
 linkStyle = SemiBold;
@@ -4675,7 +4678,7 @@ weightClass = 600;
 {
 axesValues = (
 14,
-660
+700
 );
 customParameters = (
 {
@@ -4699,8 +4702,8 @@ value = (
 }
 );
 instanceInterpolations = {
-"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.48;
-"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.52;
+"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.4;
+"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.6;
 };
 isBold = 1;
 isItalic = 1;
@@ -4711,7 +4714,7 @@ weightClass = 700;
 {
 axesValues = (
 14,
-780
+800
 );
 customParameters = (
 {
@@ -4735,8 +4738,8 @@ value = "9.4";
 }
 );
 instanceInterpolations = {
-"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.24;
-"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.76;
+"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.2;
+"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.8;
 };
 isItalic = 1;
 linkStyle = ExtraBold;
@@ -5085,7 +5088,7 @@ weightClass = 500;
 {
 axesValues = (
 28,
-580
+600
 );
 customParameters = (
 {
@@ -5113,8 +5116,8 @@ value = 0;
 }
 );
 instanceInterpolations = {
-m008 = 0.64;
-m010 = 0.36;
+m008 = 0.6;
+m010 = 0.4;
 };
 isItalic = 1;
 linkStyle = SemiBold;
@@ -5143,7 +5146,7 @@ weightClass = 600;
 {
 axesValues = (
 28,
-660
+700
 );
 customParameters = (
 {
@@ -5171,8 +5174,8 @@ value = 0;
 }
 );
 instanceInterpolations = {
-m008 = 0.48;
-m010 = 0.52;
+m008 = 0.4;
+m010 = 0.6;
 };
 isBold = 1;
 isItalic = 1;
@@ -5202,7 +5205,7 @@ weightClass = 700;
 {
 axesValues = (
 28,
-780
+800
 );
 customParameters = (
 {
@@ -5230,8 +5233,8 @@ value = 0;
 }
 );
 instanceInterpolations = {
-m008 = 0.24;
-m010 = 0.76;
+m008 = 0.2;
+m010 = 0.8;
 };
 isItalic = 1;
 linkStyle = ExtraBold;
