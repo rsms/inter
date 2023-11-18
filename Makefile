@@ -212,11 +212,11 @@ $(FONTDIR)/var/.%.var.otf: $(UFODIR)/%.var.designspace build/features_data | $(F
 	. $(VENV) ; misc/tools/woff2 compress -o "$@" "$<"
 
 
-$(FONTDIR)/var/Inter-Variable.ttf: $(FONTDIR)/var/.Inter-Roman.var.ttf
-	. $(VENV) ; python misc/tools/bake-vf.py $^ -o $@
+$(FONTDIR)/var/Inter-Variable.ttf: $(FONTDIR)/var/.Inter-Roman.var.ttf misc/tools/bake-vf.py
+	. $(VENV) ; python misc/tools/bake-vf.py $< -o $@
 
-$(FONTDIR)/var/Inter-Variable-Italic.ttf: $(FONTDIR)/var/.Inter-Italic.var.ttf
-	. $(VENV) ; python misc/tools/bake-vf.py $^ -o $@
+$(FONTDIR)/var/Inter-Variable-Italic.ttf: $(FONTDIR)/var/.Inter-Italic.var.ttf misc/tools/bake-vf.py
+	. $(VENV) ; python misc/tools/bake-vf.py $< -o $@
 
 
 $(FONTDIR)/static:
