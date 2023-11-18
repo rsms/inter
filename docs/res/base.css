@@ -71,6 +71,7 @@ layout: none
   --link-hover-color: var(--blue);
   --grid-color: #ccc; /* must be opaque */
   --unit-background-color: var(--foreground-color-1);
+  --active-bgcolor: var(--yellow);
 
   --red:    color(display-p3 0.94 0.19 0.04);
   --hot-orange: color(display-p3 1 0.38 0.19);
@@ -110,6 +111,8 @@ layout: none
   --link-hover-color: var(--light-yellow);
   --grid-color: #555; /* must be opaque */
   --unit-background-color: #333;
+  --warm-yellow: color(display-p3 0.57 0.44 0);
+  --active-bgcolor: var(--warm-yellow);
   font-weight: 400;
 }}
 
@@ -123,6 +126,7 @@ layout: none
 }
 @media only screen and (max-width: 500px) { /* window width <= 500 */
   :root { --row-padding: 1rem; --row-padding-vertical: 2rem }
+  .not-small-screen { display: none !important; }
 }
 /* wide windows */
 @media only screen and (min-width: 720px) { /* window width >= 720 */
@@ -184,6 +188,12 @@ header {
   }
   header a { padding: 0; text-decoration: none }
   header a:hover { text-decoration: none; color:inherit }
+  header a.active {
+    background: var(--active-bgcolor);
+    padding: 4px 8px;
+    margin: -4px -8px;
+    border-radius: 3px;
+  }
   header .scroll-reveal {
     pointer-events: none;
     user-select: none;
@@ -346,10 +356,11 @@ dem { /* de-emphasize */
   font-weight: 400;
   opacity: 0.7;
 }
-num { /* number */
+num, .num { /* number */
   letter-spacing:0.01em;
   white-space: nowrap;
   font-variant: tabular-nums slashed-zero;
+  break-before: avoid;
 }
 em, i, .italic {
   font-style: italic;

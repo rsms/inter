@@ -53,8 +53,9 @@
       <h4><a {% if page.url == "/" %}href="#" class=scroll-reveal{% else %}href="{{url_root}}"{% endif %}>Inter</a></h4>
       <div class=menu>
         <a href="{{url_root}}#features">Features</a>
-        <a href="{{url_root}}#glyphs" {% if page.url contains "/glyphs/" %}class="active"{% endif %}>Glyphs</a>
-        <a href="{{url_root}}lab/" {% if page.url contains "/lab/" %}class="active"{% endif %}>Lab</a>
+        <a href="{{url_root}}#glyphs">Glyphs</a>
+        <a href="{{url_root}}#faq" class=not-small-screen>FAQ</a>
+        <a href="{{url_root}}lab/">Lab</a>
         <a href="{{url_root}}download/" {% if page.url contains "/download/" %}class="active"{% endif %}>Download &darr;</a>
       </div>
     </div></header>

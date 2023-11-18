@@ -509,6 +509,14 @@ input[type="range"]:focus::-moz-range-track {
   page-break-inside: avoid;
   break-inside: avoid;
 }
+.columns > h1,
+.columns > h2,
+.columns > h3,
+.columns > h4,
+.columns > h5,
+.columns > h6 {
+  break-after: avoid;
+}
 /*.columns.size1 { font-size: var(--font-size); }*/
 
 @media only screen and (min-width: 1800px) { /* window width >= 1800 */
@@ -623,6 +631,18 @@ input[type="range"]:focus::-moz-range-track {
     height: unset;
   }
 }
+
+#faq .columns > p {
+  margin-bottom: 2em;
+}
+#faq h4:target {
+  background: var(--active-bgcolor);
+  outline: 8px solid var(--active-bgcolor);
+  border-radius: 4px;
+}
+@media (prefers-color-scheme: dark) { #faq h4:target {
+  color: white;
+}}
 
 </style>
 
@@ -1114,16 +1134,21 @@ At a later date we find the word applied to very different objects, though alway
 
     <hr style="margin-top:3rem">
 
-    <r-cell span=row class="example2" style="font-weight:500;white-space:nowrap;font-size:11.5vw">
-      It’s “fun” here, yes</r-cell>
+    <r-cell span=row class="example2" style="font-weight:500;white-space:nowrap;font-size:9.5vw">
+      It’s “fun” here, Möbius</r-cell>
     <r-cell span=row class="example2"
-        style="font-weight:500;white-space:nowrap;font-size:11.5vw;font-feature-settings:'ss03' 1,'liga' 1,'calt' 1;margin-bottom:1rem">
-      It’s “fun” here, yes</r-cell>
+        style="font-weight:500;white-space:nowrap;font-size:9.5vw;font-feature-settings:'ss03' 1,'liga' 1,'calt' 1;margin-bottom:1rem">
+      It’s “fun” here, Möbius</r-cell>
+    <r-cell span=row class="example2"
+        style="font-weight:500;white-space:nowrap;font-size:9.5vw;font-feature-settings:'ss07' 1,'ss08' 1,'liga' 1,'calt' 1;margin-bottom:1rem">
+      It’s “fun” here, Möbius</r-cell>
     <r-cell span=2>
-      Give a little personality to titles
+      Add a little personality to titles
     </r-cell>
     <r-cell span=3..>
       <r-feat>ss03</r-feat> Round quotes &amp; commas<br>
+      <r-feat>ss07</r-feat> Square punctuation<br>
+      <r-feat>ss08</r-feat> Square quotes<br>
     </r-cell>
 
     <hr style="margin-top:3rem">
@@ -1167,6 +1192,10 @@ At a later date we find the word applied to very different objects, though alway
         <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss02</a> Disambiguation (with zero<)<br>
         <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss03</a> Round quotes &amp; commas<br>
         <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss04</a> Disambiguation (no zero<)<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss05</a> Circled characters<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss06</a> Squared characters<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss07</a> Square punctuation<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss08</a> Square quotes<br>
         <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-subs">subs</a> Subscript<br>
         <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-sups">sups</a> Superscript<br>
         <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-tnum">tnum</a> Tabular Figures<br>
@@ -1281,35 +1310,45 @@ At a later date we find the word applied to very different objects, though alway
 
 
 
-<!-- <div class="row"><div>
-  <p>Latin</p>
-  <p class="example only-large-screen">
+<div class="row examples"><div>
+  <!-- <p>Latin</p>
+  <p class="example2">
     ABCDEFGHIJKLMN<br>
     OPQRSTUVWXYZ<br>
     abcdefghijklm<br>
     nopqrstuvwxyz<br>
     0123456789 &amp;→!
   </p>
-  <br>
-  <br>
+  <br><br> -->
   <p>Greek</p>
-  <p class="example only-large-screen">
+  <p class="example2">
     ΑΒΓΔΕΖΗΘΙΚΛΜΝ<br>
     ΞΟΠΡΣΤΥΦΧΨΩ<br>
     αβγδεζηθικλμνξ<br>
-    οπρςστυφχψω . : ;
+    οπρςστυφχψω
   </p>
-  <br>
-  <br>
+  <br><br>
   <p>Cyrillic</p>
-  <p class="example only-large-screen">
+  <p class="example2">
     АБВГДЕЁЖЗИЙКЛ<br>
     МНОПРСТУФХЧЦ<br>
     ШЩЬЪЫЭЮЯабвг<br>
     деёжзийклмнопрс<br>
     туфхчцшщьъыэюя
   </p>
-</div></div> -->
+</div></div>
+
+
+
+<div class="row examples" id="faq"><div>
+  <h2><a href="#faq">Frequenty Asked Questions</a></h2>
+  <div class="columns" style="column-width:15em;column-gap:2em">
+  {% for c in site.data.faq %}
+    <h4 id="{{c.id}}"><a href="#{{c.id}}">{{c.q}}</a></h4>
+    {{c.a | markdownify}}
+  {% endfor %}
+  </div>
+</div></div>
 
 
 
@@ -1319,24 +1358,6 @@ At a later date we find the word applied to very different objects, though alway
 
 const $  = (q, el) => (el || document).querySelector(q)
 const $$ = (q, el) => [].slice.call((el || document).querySelectorAll(q))
-
-// FAQ anchors
-for (let e of $$('ul.faq > li.q')) {
-  let tn = document.createTextNode('Q\xa0\xa0') // a0=nbsp
-  e.insertBefore(tn, e.firstChild)
-  if (e.id) {
-    let a = document.createElement('a')
-    a.href = '#' + e.id
-    a.className = 'plain'
-    a.innerHTML = e.innerHTML
-    e.innerText = ''
-    e.appendChild(a)
-  }
-}
-for (let e of $$('ul.faq > li.a')) {
-  let tn = document.createTextNode('A\xa0\xa0')
-  e.insertBefore(tn, e.firstChild)
-}
 
 // contenteditable, paste as plain-text
 $$('[contenteditable]').forEach(el => {
@@ -1349,17 +1370,20 @@ $$('[contenteditable]').forEach(el => {
 // show/hide "Inter" in header
 let callback = (entries, observer) => {
   entries.forEach((entry) => {
-    //console.log(entry.isIntersecting, entry)
-    // if (entry.isIntersecting) {
-    //   $('header').style.borderBottom = 'none'
-    // } else {
-    //   $('header').style.borderBottom = '2px solid black'
-    // }
     $('header .scroll-reveal').classList.toggle('visible', !entry.isIntersecting)
   });
 }
 let observer = new IntersectionObserver(callback, { rootMargin: "0px", threshold: 0 })
 observer.observe($('h1'))
 
+// low priority stuff that doesn't need to happen immediately
+requestIdleCallback(() => {
+  // convert .num/num numbers to local format, e.g. "1,234.56" vs "1.234,56"
+  let nfmt = new Intl.NumberFormat() // test with .NumberFormat('de-DE')
+  if (nfmt.format(1234.89) != "1,234.89") { // written as "1,234.89" in source
+    for (let el of [...$$("num"), ...$$(".num")])
+      el.innerText = nfmt.format(parseFloat(el.innerText.replace(/,/g,'')))
+  }
+})
 
 })()</script>

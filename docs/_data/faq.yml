@@ -1,0 +1,92 @@
+
+- id: faq-using-features
+  q: "How do I enable and disable font features?"
+  a: |
+    In web browsers you can use
+    [<q>font-feature-settings</q>](https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings).
+    In Figma you can access features via the
+    [Advanced Type panel](https://help.figma.com/article/250-working-with-fonts#opentype).
+    In Illustrator, Photoshop and friends, you can access features via the
+    [Characters and OpenType panels](https://helpx.adobe.com/illustrator/using/special-characters.html#opentype_panel_overview).
+    Sketch doesn't provide a UI for configuring font features, but there's
+    [a workaround using macOS's native font UI](https://sketchtalk.io/discussion/comment/1478/#Comment_1478).
+
+- id: faq-cdn
+  q: "How reliable are the fonts served from rsms.me/inter?"
+  a: |
+    <q>https://rsms.me/inter/inter.css</q> and the Inter font
+    files are distributed globally over CloudFlare's CDN.
+    This is very reliable and fast by automatically serving the fonts
+    from a server near your users, minimizing the latency of your web pages.
+
+- id: faq-subset
+  q: "How do I subset the font files?"
+  a: |
+    Have a look at [pyftsubset](https://fonttools.readthedocs.io/en/latest/subset/)
+
+- id: faq-otfeat-customize-compile
+  q: "Can I change what OpenType features are enabled by default?"
+  a: |
+    Have a look at [OpenType Feature Freezer](https://twardoch.github.io/fonttools-opentype-feature-freezer/).
+    It allows you to customize fonts with certain
+    OpenType features "on by default."
+
+- id: faq-contribute
+  q: "Can I help with improving Inter?"
+  a: |
+    Yes you can! Inter is an open-source project, meaning the source
+    code—or "source design" if you will—that is used to build the font files
+    [are freely available](https://github.com/rsms/inter) to improve upon.
+    Font making requires a fair bit of technical work and
+    depending on what you'd like to do, some things might be more fun
+    depending on your technical skills.
+    The ["Contributing" document](https://github.com/rsms/inter/blob/master/CONTRIBUTING.md) is a great place to start.
+    This document outlines where you can have the biggest impact,
+    how things are setup and how to get started.
+
+- id: faq-inuse
+  q: "I've made a cool thing that uses Inter"
+  a: |
+    [Share what you've made in "Show and Tell"](https://github.com/rsms/inter/discussions/categories/show-and-tell)
+
+- id: faq-bug
+  q: "Where can I report technical problems with Inter?"
+  a: |
+    Please [submit a bug report on GitHub](https://github.com/rsms/inter/issues/new?template=bug_report.md)
+
+- id: faq-contact
+  q: "I have a question, where can I get help?"
+  a: |
+    Start by searching [issues](https://github.com/rsms/inter/issues?q=%22YOUR+ISSUE%22) & [discussions](https://github.com/rsms/inter/discussions?discussions_q=%22YOUR+ISSUE%22) for an answer.
+    If that didn't help, ask your question in
+    [the "Q&A" forum](https://github.com/rsms/inter/discussions/categories/q-a).
+
+- id: faq-start-date
+  q: "This website claims work started in 2016, but the git repository's log says it started later?"
+  a: |
+    Inter was developed in a private, internal git repository
+    starting in November 2016, prior to being published on August 22, 2017.
+    Between November 2016 and August 2017, there were
+    <span class=num>2,990,150</span> line edits made across 247 versions.
+
+- id: faq-old-website
+  q: "I miss something from the old website"
+  a: |
+    Have a pleasant surf on
+    [a snapshot of the old version 3 website](https://d.rsms.me/inter-website/v3/)
+
+
+- id: faq-technical-details
+  q: "What are the technical details of Inter?"
+  a: |
+    UPM: 2048<br>
+    Variable axis <q>opsz</q> [14–28]<br>
+    Variable axis <q>wght</q> [100–900]<br>
+    Constant axis <q>ital</q> [0, 9.4°]<br>
+    Style classification: Sans-serif, Grotesk<br>
+    x-height, opsz=14: 1118 UPM<br>
+    x-height, opsz=28: 1056 UPM<br>
+    Cap height: 1490 UPM<br>
+    Ascender: 1984 UPM<br>
+    Descender: -494 UPM<br>
+    Vendor ID: [RSMS](https://learn.microsoft.com/en-us/typography/vendors/#r)
