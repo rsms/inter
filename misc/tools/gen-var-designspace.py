@@ -60,11 +60,11 @@ def fixup_instances(designspace):
       del designspace.instances[i]
 
 
-def fixup_axes_defaults(designspace):
-  for a in designspace.axes:
-    if a.tag == "opsz":
-      a.default = a.maximum
-      break
+# def fixup_axes_defaults(designspace):
+#   for a in designspace.axes:
+#     if a.tag == "opsz":
+#       a.default = a.maximum
+#       break
 
 
 def fixup_sources(designspace):
@@ -93,7 +93,7 @@ def main(argv):
   designspace = DesignSpaceDocument.fromfile(args.input_designspace)
 
   fixup_instances(designspace)
-  fixup_axes_defaults(designspace)
+  # fixup_axes_defaults(designspace)
   fixup_sources(designspace)
 
   designspace.write(args.output_designspace)

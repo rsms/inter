@@ -28,10 +28,11 @@ from fontTools.otlLib.builder import buildStatTable
 # stat_axes_format_2 is used for making a STAT table with format 1 & 2 records
 def stat_axes_format_2(is_italic):
   return [
-    { "name": "Optical Size", "tag": "opsz", "ordering": 0, "values": [
-      dict(nominalValue=14, rangeMinValue=14, rangeMaxValue=21, name="14pt"),
-      dict(nominalValue=28, rangeMinValue=21, rangeMaxValue=28, name="28pt"),
-    ] },
+    dict(name="Optical Size", tag="opsz", ordering=0, values=[
+      dict(nominalValue=14, rangeMinValue=14, rangeMaxValue=21, name="Text",
+        flags=0x2, linkedValue=28),
+      dict(nominalValue=28, rangeMinValue=21, rangeMaxValue=28, name="Display"),
+    ]),
     { "name": "Weight", "tag": "wght", "ordering": 1, "values": [
       dict(nominalValue=100, rangeMinValue=100, rangeMaxValue=150, name="Thin"),
       dict(nominalValue=200, rangeMinValue=150, rangeMaxValue=250, name="ExtraLight"),
