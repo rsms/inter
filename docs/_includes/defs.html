@@ -1,0 +1,27 @@
+{%-
+assign build_version   = site.time | date: "%Y%m%d%H%M%S" %}{%
+assign description     = "Inter is a typeface family" %}{%
+assign release_version = site.data.fontinfo[0].version %}{%
+
+capture title %}{% if page.title %}{{ page.title }} — Inter{% else %}Inter font family{% endif %}{% endcapture %}{%
+
+if site.baseurl %}{%
+  assign url_root = site.baseurl %}{%
+else %}{%
+  assign url_root = "/inter/" %}{%
+endif %}{%
+
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/res/base.css" %}{%
+    assign base_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  elsif _path == "/res/favicon.png" %}{%
+    assign favicon_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor %}{%
+
+capture download_url
+  %}https://github.com/rsms/inter/releases/download/v{{release_version}}/Inter-{{release_version}}.zip{%
+endcapture
+
+-%}

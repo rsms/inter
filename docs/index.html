@@ -14,75 +14,682 @@ for file in site.static_files %}{%
   elsif _path == "/index-var.js" %}{%
     assign index_var_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
   endif %}{%
-endfor
+endfor %}{%
 
-%}
-<link rel="stylesheet" href="index.css?v={{ index_css_v }}">
-<link rel="stylesheet" href="index-var.css?v={{ index_var_css_v }}">
-<input type="text" id="hidden-text-input">
+assign lang_count = 0 %}{%
+for c in site.data.languages %}{%
+  for language in c.languages %}{%
+    assign lang_count = lang_count | plus:1 %}{%
+  endfor %}{%
+endfor -%}
+<style type="text/css">
 
-<div class="row white"><div>
-  <!-- <h1>The Inter<br>typeface family</h1> -->
-  <grid columns=8>
-    <c span=row>
-      <h1>The Inter typeface family</h1>
-    </c>
-    <c span=1-2 span-s=row>
-      Inter is a typeface carefully crafted &amp; designed for
-      computer screens.
-    </c>
-    <c span=3.. span-s=row>
-      <!-- <p>Inter is a typeface specially designed for computer screens.</p> -->
+body { overflow-x: hidden }
+
+h1.title {
+  font-size: 6rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.4em;
+  margin-top: 4rem;
+  font-size: calc(100vw / 8);
+  line-height: 1.0;
+}
+
+.row.examples .spacer { height: 3rem; }
+.row.section1-roman {}
+@media (prefers-color-scheme: light) {
+  /*.row.section1-italic {
+    background: var(--foreground-color);
+    color: var(--background-color);
+  }*/
+}
+@media (prefers-color-scheme: dark) {
+  /*.row.section1-italic {
+    background: #555;
+  }*/
+}
+
+.row.examples .label { font-size: var(--font-size); opacity: 0.3; }
+.row.examples a.label:hover { opacity: 1; }
+.row.examples .label.r { text-align: right }
+.example2 {
+  font-size: 10vw;
+  line-height: initial;
+  margin-left: calc(1em / -18);
+  letter-spacing: -0.02em;
+}
+.example2.i { font-style:italic; }
+.example2.single-line {
+  line-height: 1.0;
+  white-space: nowrap;
+}
+.example2.multi-line {
+  font-size: 6vw;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+  line-height: 1.1;
+}
+.example2.features {
+  line-height: 1.2;
+  white-space: nowrap;
+  font-size: 16vw;
+}
+
+.example-a-z {
+  font-size: 9.5vw;
+  white-space: nowrap;
+  font-weight: 450;
+  line-height: 1.0;
+  display: flex;
+  flex-direction: column; /* ☰ */
+  gap: 1rem; /* label to text */
+  padding: 0 0;
+  margin: 0;
+  width: 100%;
+}
+
+.row.features-section1 { padding-bottom:1.5rem; }
+.row.features-section1 hr:last-child { display: none; }
+.row.features-section2 { padding-top:3vw; }
+
+.row.features-section1 {
+  /* light pink:
+  --background-color: #ffb6c1;
+  --em-color: #815159;
+  */
+  --background-color: var(--warm-yellow);
+  --foreground-color: #000011;
+  --em-color: color(display-p3 0.5 0.4 0);
+  --unit-background-color: rgba(0, 0, 0, 0.08);
+  color: var(--foreground-color);
+  background: var(--background-color);
+}
+@supports not (color: color(display-p3 1 1 1)) {
+  .row.features-section1 {
+    --em-color: #a07400;
+  }
+}
+.feat-example em { color: var(--em-color); }
+
+.feat-name p { margin-bottom:0 }
+.feat-example {
+  font-size: 2.5vw;
+}
+.feat-example em {
+  font-style: normal;
+}
+.feat-table hr.thin {
+  height: 1px;
+  opacity: 0.3;
+}
+
+
+
+input[type="checkbox"] {
+  --height:               calc(1rem * var(--line-height));
+  --checkbox-size:        1rem;
+  --checkbox-handle-size: calc(var(--checkbox-size) - 8px);
+  --checkbox-border:      2px;
+  --checkbox-bg:          black;
+  --checkbox-fg:          black;
+  --checkbox-on-bg:       black;
+  --checkbox-on-fg:       var(--background-color);
+  --focus-color:          blue;
+
+  flex: 0 0 auto;
+  margin: calc((var(--height) - var(--checkbox-size)) / 2) 0;
+  appearance: none; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none;
+  user-select: none; -moz-user-select: none; -webkit-user-select:none;
+  background: none;
+  border: none;
+
+  background-color: transparent;
+
+  border: var(--checkbox-border) solid var(--checkbox-bg);
+  box-sizing: border-box;
+
+  width: calc(var(--checkbox-size) * 2);
+  height: var(--checkbox-size);
+  border-radius: var(--checkbox-size);
+  position:relative;
+  transition: all 168ms ease-out;
+}
+input[type="checkbox"]:focus {
+  outline: none;
+  /*box-shadow: 0 0 0 2px var(--background-color), 0 0 0 4px var(--focus-color);*/
+}
+input[type="checkbox"]:active {
+  /* trick to avoid flickering outline */
+  box-shadow: none;
+}
+input[type="checkbox"]::after {
+  --padding: calc(
+    ( (var(--checkbox-size) - var(--checkbox-handle-size)) / 2 )
+    - var(--checkbox-border)
+  );
+  content: "";
+  background: var(--checkbox-fg);
+  display:block;
+  position:absolute;
+  left: var(--padding);
+  top: var(--padding);
+  width:var(--checkbox-handle-size);
+  height:var(--checkbox-handle-size);
+  border-radius:var(--checkbox-handle-size);
+  transform: translate(0, 0);
+  transition: all 90ms ease-out; /*cubic-bezier(0.09, 0.49, 0.71, 0.98);*/
+}
+input[type="checkbox"]:checked {
+  background-color: var(--checkbox-on-bg);
+}
+input[type="checkbox"]:checked::after {
+  background-color: var(--checkbox-on-fg);
+  transform: translate(calc(var(--checkbox-size)), 0);
+  /*transition: all 168ms cubic-bezier(0.17, 0.65, 0.48, 1);*/
+}
+
+
+
+
+input[type="range"] {
+  --height: calc(1rem * var(--line-height));
+
+  --input-range-color-bg: black;
+  --input-range-color-fg: black;
+  --input-range-color-focus: rgb(0, 130, 255);
+  --input-range-knob-size: 0.75rem;
+  --input-range-track-size: 2px;
+  --input-range-height: var(--height);
+
+  --surface1-color-bg: red;
+
+  -webkit-appearance: none;
+  /*width: 100%;*/
+  background: transparent;
+  cursor: default;
+  margin:0;
+  padding:0 0.5em;
+  box-sizing: border-box;
+  /*margin-left: calc((var(--input-range-height) - var(--input-range-track-size)) / -2);*/
+}
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 0;
+  height: var(--input-range-knob-size);
+  width: var(--input-range-knob-size);
+  border-radius: var(--input-range-knob-size);
+  background: var(--input-range-color-fg);
+  box-shadow: 0 0 0 2px var(--background-color);
+  margin-top: calc((var(--input-range-knob-size) - var(--input-range-track-size)) / -2);
+}
+input[type="range"]::-moz-range-thumb {
+  border: 0;
+  height: var(--input-range-knob-size);
+  width: var(--input-range-knob-size);
+  border-radius: var(--input-range-knob-size);
+  background: var(--input-range-color-fg);
+  box-shadow: 0 0 0 2px var(--background-color);
+  margin-top: calc((var(--input-range-knob-size) - var(--input-range-track-size)) / -2);
+}
+
+
+input[type="range"]::-webkit-slider-runnable-track {
+  /* Note: hit testing is done on this element so we make it large enough
+     to easily hit with --input-range-height and a border that matches the
+     background color. This is not portable, unfortunately. */
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--input-range-height);
+  background: var(--input-range-color-bg);
+  --border-w: calc((var(--input-range-height) - var(--input-range-track-size)) / 2);
+  border-top: var(--border-w) solid var(--background-color);
+  border-bottom: var(--border-w) solid var(--background-color);
+}
+input[type="range"]::-moz-range-track {
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--input-range-height);
+  background: var(--input-range-color-bg);
+  --border-w: calc((var(--input-range-height) - var(--input-range-track-size)) / 2);
+  border-top: var(--border-w) solid var(--background-color);
+  border-bottom: var(--border-w) solid var(--background-color);
+}
+
+/*input[type="range"]:focus::-webkit-slider-thumb { background-color: var(--blue) }
+input[type="range"]:focus::-moz-range-thumb     { background-color: var(--blue) }*/
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  box-shadow: 0 0 0 2px var(--focus-color);
+}
+input[type="range"]:focus::-moz-range-track {
+  box-shadow: 0 0 0 2px var(--focus-color);
+}
+
+
+
+
+.switch-button {
+  --height: calc(1rem * var(--line-height));
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  user-select: none;
+  line-height: var(--height);
+  height: var(--height);
+}
+  .switch-button > input[type="checkbox"] {
+    margin-right: 0.4rem;
+  }
+
+
+
+.row.glyphs {
+  /*--background-color: var(--medium-green);*/
+  --background-color: color(display-p3 0.28 0.89 1);
+  --background-color-transparent: color(display-p3 0.28 0.89 1 / 0);
+  --grid-color: color(display-p3 0 0.65 0.8);
+
+  --background-color: var(--medium-green);
+  --grid-color: #000;
+
+  --foreground-color: black;
+  --font-weight: 400;
+
+  color: var(--foreground-color);
+  background: var(--background-color);
+  flex-direction: column;
+  padding: 2rem 0 0 0;
+  box-sizing: border-box;
+  scroll-padding-top: 0;
+}
+.row.glyphs h2 {
+  font-size: 8rem;
+  margin-left: calc(8rem / -19);
+  line-height: 1.0;
+}
+.row.glyphs h2 > a {
+  color: white;
+}
+.row.glyphs > *:first-child {
+  padding: 0 var(--row-padding);
+  padding-bottom: 1rem;
+}
+
+.glyph-grid {
+  --line-width: 1px;
+  --cell-size: 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  position: relative;
+  max-width: 100vw;
+  box-sizing: border-box;
+  gap: var(--line-width);
+  flex: 1 0 100%;
+}
+
+.glyph-grid .popup-menu {
+  --height: calc(1rem * var(--line-height));
+  position: relative;
+  width: 100%;
+  height: var(--height);
+  overflow: hidden;
+  /*grid-column-start: span 2;*/
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+  .glyph-grid .popup-menu .label {
+    display: block;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .glyph-grid .popup-menu .icon {
+    display: block;
+    pointer-events: none;
+    background-image: url(res/icons/popup-black.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    width: calc(var(--cell-size) / 3);
+    height: var(--height);
+  }
+  .glyph-grid .popup-menu .label,
+  .glyph-grid .popup-menu select {
+    padding: 0;
+    line-height: var(--height);
+    height: var(--height);
+    box-sizing: border-box;
+    outline: none;
+  }
+  .glyph-grid .popup-menu select {
+    position: absolute;
+    top:0; right:0; left:0;
+    font: inherit;
+    line-height: inherit;
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    color: transparent;
+    /*color: rgba(255,0,0,0.8);*/
+  }
+    .glyph-grid .popup-menu select option {
+      font-family: var(--font-family), sans-serif;
+    }
+
+.glyph-grid .inspector {
+  position: sticky;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  top: var(--header-height);
+  left: 0;
+  height: 100%;
+  max-height: calc(100vh - var(--header-height));
+  box-shadow: 0 0 0 var(--line-width) var(--grid-color);
+}
+.glyph-grid .toolbar {
+  height: var(--cell-size);
+  padding: 0 0 0 1rem;
+  border-bottom: var(--line-width) solid var(--grid-color);
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+  .glyph-grid .toolbar .popup-menu {
+    /*align-self: start;
+    margin-top: 4px;*/
+  }
+  .glyph-grid .toolbar .slider {
+    display:flex;
+    user-select: none;
+  }
+    .glyph-grid .toolbar .slider > input { flex: 0 0 auto; }
+    .glyph-grid .toolbar .slider > input { width: 2rem; padding:0; margin-right: 0.4rem }
+    .glyph-grid .toolbar .opsz-switch { display: none; }
+  .glyph-grid .toolbar .identification {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+    .glyph-grid .toolbar .identification > * {
+      user-select: all;
+    }
+    .glyph-grid .toolbar .identification .name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .glyph-grid .toolbar .identification .unicode {
+      font-variant: tabular-nums slashed-zero;
+    }
+  .glyph-grid .toolbar .preview {
+    display: flex;
+    flex: 0 0 auto;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: var(--inspector-wght);
+    font-variation-settings: "opsz" var(--inspector-opsz);
+    border-left: var(--line-width) solid var(--grid-color);
+    user-select: all;
+  }
+.glyph-grid .canvas {
+  user-select: none;
+  font-size: 40vw;
+  text-align: center;
+  line-height: 1.0;
+  height: 100%;
+  max-height: 50vw;
+  overflow: hidden;
+  position: relative;
+}
+.glyph-grid .canvas > canvas {
+  position: absolute;
+  top:0; left:0;
+  /*cursor:
+    url(res/cursor-glyph-inspector.svg) 10 10,
+    url(res/cursor-glyph-inspector.png) 10 10,
+    crosshair;*/
+  cursor: crosshair;
+}
+
+.glyph-grid .glyph-list .clipview {
+  position: relative;
+}
+
+.glyph-grid .glyph-list .clipview .content {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(var(--cell-size), 1fr) );
+  gap: var(--line-width);
+  font-size: calc(var(--cell-size) / 2);
+}
+  .glyph-grid .glyph-list .clipview .content > * {
+    height: var(--cell-size);
+    line-height: calc(var(--cell-size) + 1px);
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 0 0 var(--line-width) var(--grid-color);
+    scroll-padding-top: 0;
+  }
+  .glyph-grid .glyph-list .clipview .content > .fill-row { grid-column: 1 / -1 }
+  .glyph-grid .glyph-list .clipview .content > :hover {
+    color: inherit;
+    text-decoration: none;
+    overflow: unset;
+    z-index: 1;
+    box-shadow: 0 0 0 2px var(--foreground-color);
+  }
+  .glyph-grid .glyph-list .clipview .content > .selected {
+    color: white;
+    background: black;
+  }
+  .glyph-grid .glyph-list .clipview .content > :focus {
+    outline: none;
+  }
+
+.glyph-grid .glyph-list .fade-cover { display: none; } /* small screens only */
+
+.columns {
+  column-width: 22em;
+  column-count: 4;
+  column-gap: 3em;
+  column-fill: balance;
+}
+.columns > p {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+/*.columns.size1 { font-size: var(--font-size); }*/
+
+@media only screen and (min-width: 1800px) { /* window width >= 1800 */
+  .columns.size1 { font-size: 0.9vw }
+}
+@media only screen and (min-width: 1600px) { /* window width >= 1600 */
+  .columns.size1 { font-size: var(--font-size); }
+}
+@media only screen and (min-width: 1392px) { /* window width >= 1392 */
+  .example-a-z { font-size: 8.9em; }
+}
+@media only screen and (min-width: 1000px) { /* window width >= 1000 */
+  .glyph-grid .toolbar > :first-child { min-width: 45% }
+}
+@media only screen and (max-width: 1000px) { /* window width <= 1000 */
+  .example2.features { font-size: 15.5vw; }
+}
+@media only screen and (max-width: 880px) { /* window width <= 880 */
+  .columns.size1 { font-size: 14px; }
+  .example2.features { font-size: 15vw; }
+  .glyph-grid .toolbar .opsz-switch { display: flex; }
+  .glyph-grid .toolbar .opsz-slider { display: none; }
+}
+@media only screen and (max-width: 719px) { /* window width <= 719 */
+  .example-a-z { font-size: 13vw; }
+  .glyph-grid { --cell-size: 10vw; }
+  .example2.features { font-size: 16vw; }
+}
+@media only screen and (max-width: 500px) { /* window width <= 500 */
+  .feat-table > r-grid > r-cell { grid-column: 1 / -1 }
+  .feat-table .col-head { display: none }
+  .feat-table hr.thin { opacity:1; height:2px; margin-top: 4rem }
+  .feat-name { margin-top: 0; margin-bottom: 1rem }
+  .feat-name p { display: none; }
+  /*.feat-name p {
+    margin-bottom: 1em; font-style: italic; font-size: inherit;
+    opacity: 0.4;
+  }*/
+  .feat-example { margin-top: 0; font-size: 2em; line-height:1.5 }
+  .feat-example:nth-child(odd) { padding:2rem 0 3rem 0 }
+  .feat-example:nth-child(even) {}
+  .row.features-section1 { padding-bottom: 4rem }
+  .row.features-section2 r-cell:first-child { padding: 2rem 0 }
+
+  .row.glyphs { padding: 0; margin-top: 6rem; position:relative }
+  .row.glyphs::before {
+    content: "Glyphs";
+    font-weight: 600;
+    font-size: 2em;
+    position:absolute;
+    top:-4rem; left: 1rem;
+  }
+  .row.glyphs > :first-child { display: none }
+  /*.row.glyphs h2 { font-size: 2rem; margin-bottom: 1rem }*/
+  .glyph-grid {
+    --cell-size: 16vw; --line-width: 1px;
+    --glyph-list-height: 40vh;
+    --inspector-height: calc(60vh - (var(--header-height)/2));
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: var(--inspector-height) auto;
+  }
+  .glyph-grid .toolbar { gap: 1.4rem }
+  .glyph-grid .inspector {
+    position: initial;
+    height: var(--inspector-height);
+    max-height: var(--inspector-height);
+    background: var(--background-color);
+  }
+  .glyph-grid .inspector .canvas { max-height: unset }
+  .glyph-grid .glyph-list {
+    position: relative;
+  }
+    .glyph-grid .glyph-list .clipview {
+      display: grid;
+      height: var(--glyph-list-height);
+      grid-auto-flow: column;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      max-width: 100vw;
+      box-sizing: border-box;
+    }
+  .glyph-grid .glyph-list .fade-cover {
+    display: block;
+    position: absolute;
+    top:0; bottom:0;
+    width: 1rem;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(270deg, var(--background-color-transparent) 0%, var(--background-color) 100%);
+    /*background: rgba(255,0,0,0.4);*/
+  }
+  .glyph-grid .glyph-list .fade-cover.left { left: 0; display:none }
+  .glyph-grid .glyph-list .fade-cover.right {
+    right: 0;
+    width: 3rem;
+    background: linear-gradient(270deg, var(--background-color) 0%, var(--background-color-transparent) 100%);
+    /*background: rgba(0,0,255,0.4);*/
+  }
+  .glyph-grid .glyph-list .clipview .content {
+    /*grid-template-columns: none;*/
+    /*grid-template-rows: repeat( auto-fit, minmax(var(--cell-size), 1fr) );*/
+
+    grid-template-columns: repeat(auto-fill, var(--cell-size));
+    grid-auto-rows: var(--cell-size);
+
+    grid-auto-flow: column;
+    grid-template-rows: repeat(auto-fill, var(--cell-size));
+  }
+  .glyph-grid .glyph-list .clipview .content > * {
+    width: var(--cell-size);
+    height: unset;
+  }
+}
+
+</style>
+
+
+<div class="row"><div>
+  <r-grid columns=8>
+    <r-cell span=row>
+      <h1 class=title>The Inter typeface family</h1>
+    </r-cell>
+    <r-cell span=1-2 span-s=row>
+      The 21st century standard<br>
+      <br>
+      <a class=button href="{{url_root}}download/">Download ↓</a><br>
+      <br>
+    </r-cell>
+    <r-cell span=3-5 span-s=row>
       <p>
-        Inter features a tall x-height to aid in readability of mixed-case and
-        lower-case text. Several OpenType features are provided as well,
-        like contextual alternates that adjusts punctuation depending on the
-        shape of surrounding glyphs, slashed zero for when you need to
-        disambiguate "0" from "o", tabular numbers, etc.
+        Inter is a workhorse of a typeface carefully crafted &amp; designed for
+        a wide range of applications, from detailed user interfaces to marketing &amp; signage.
+        The Inter typeface family features over <a href="#glyphs">2000&nbsp;glyphs</a>
+        covering <a href="#languages">{{lang_count}}&nbsp;languages</a>.
+        Weights ranges from a delicate thin 100 all the way up to a heavy 900. Each glyph has three dedicated designs for weights 100, 400 and 900 to ensure excellent quality at any weight. Optical size ranges from "text" to "display" and there is a true italic variant.
       </p>
-    </c>
+      <p>
+        Inter is one of the world's most used typefaces with applications ranging from computer interfaces, advertising &amp; airports, to NASA instrumentation &amp; medical equipment.
+      </p>
+    </r-cell>
+    <r-cell span=6.. span-s=row>
+      <p>
+        The smaller "text" optical-size designs features a tall x-height to aid in legibility of lower-case text, with several contrast-enhancing details like ink traps and bridges. The larger "display" optical-size designs offers clean lines, smooth curves and delicate details for excellent rythm of large text.
+      </p><p>
+        <a href="#features">38&nbsp;OpenType features</a> are provided as well,
+        including contextual alternates which adjusts punctuation depending on the
+        shape of surrounding glyphs, slashed zero for when you need to
+        disambiguate "0" from "o", tabular numbers, and much more.
+      </p>
+    </r-cell>
+  </r-grid>
+</div></div>
 
-    <c span=3.. span-s=row style="margin:3rem 0 5rem 0">
-      <div id="subway-nav">
-        <a class="dest dest1" href="#charset">
-          <div class="disc">2.5k</div>
-          <div class="label">Glyphs</div>
-        </a>
-        <a class="dest dest2" href="#weights">
-          <div class="disc">18</div>
-          <div class="label">Styles</div>
-        </a>
-        <a class="dest dest3" href="#features">
-          <div class="disc">33</div>
-          <div class="label">Features</div>
-        </a>
-      </div>
-    </c>
 
-    <c span=2 span-s=row class="only-large-screen">
-      <h3>Inter Regular<br>Sample</h3>
-    </c>
-    <c span=3.. span-s=row>
-      <a href="samples/" class="plain"><img src="samples/img/a-z-regular.svg" width="100%"></a>
-    </c>
-    <c class="spacer"></c>
-    <c span=2 span-s=row class="only-large-screen">
-      <h3>Inter Bold<br>Sample</h3>
-    </c>
-    <c span=3.. span-s=row>
-      <a href="samples/" class="plain"><img src="samples/img/lineup-bold-black.svg" width="100%"></a>
-    </c>
-    <c class="spacer"></c>
-    <c span=3.. span-s=row>
-      <a href="samples/" class="plain"><img src="samples/img/regular-text.png" srcset="samples/img/regular-text@2x.png 2x" width="100%"></a>
-    </c>
+<div class="row"><div>
+  <p class="example-a-z only-large-screen" contenteditable spellcheck=false>
+    ABCDEFGHIJKLMN<br>
+    OPQRSTUVWXYZ<br>
+    abcdefghijklm<br>
+    nopqrstuvwxyz<br>
+    0123456789 &amp;→!
+  </p>
+  <p class="example-a-z only-small-screen" contenteditable spellcheck=false>
+    ABCDEFGHIJ<br>
+    KLMNOPQRS<br>
+    TUVWXYZ →<br>
+    abcdefghijklm<br>
+    nopqrstuvwxyz<br>
+    0123456789&amp;!
+  </p>
+</div></div>
 
-    <c class="spacer"></c>
 
-    <c span=2 span-s=row>
-      <h3><a id="usage" href="#usage">Using</a></h3>
-    </c>
-    <c span=3.. span-s=row>
+<div class="row"><div>
+  <r-grid columns=8>
+
+    <r-cell span=2 span-s=row>
+      <h3><a id="usage" href="#usage">Usage</a></h3>
+    </r-cell>
+    <r-cell span=3.. span-s=row>
       <p>
         Using Inter is as easy as
         <a class="download-link" href="download/">downloading &amp; installing</a>
@@ -94,43 +701,26 @@ endfor
 &lt;link rel=&quot;stylesheet&quot; href=&quot;https://rsms.me/inter/inter.css&quot;&gt;
 
 /* CSS */
-:root { font-family: 'Inter', sans-serif; }
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
 @supports (font-variation-settings: normal) {
-  :root { font-family: 'Inter var', sans-serif; }
+  :root { font-family: InterVariable, sans-serif; }
 }</pre>
       <p>Global <abbr title="Content Delivery Network">CDN</abbr>
         sponsored by <a href="https://cloudflare.com/">Cloudflare</a></p>
-    </c>
+    </r-cell>
 
-    <c class="spacer"></c>
 
-    <c span=2 span-s=row>
-      <h3 id="dynamic-metrics"><a href="dynmetrics/">Dynamic Metrics</a></h3>
-    </c>
-    <c span=3.. span-s=row>
-      <p class="dynmet-calc">
-        Size
-        <input id="dynmet-font-size" type="number" value="16" min="4" max="99" autocomplete="off" spellcheck="false"
-        ><span title='Display points — "px" in CSS, "pt" on iOS, "sp" on Android, and "pt" (1/72 of an inch) in print'>dp</span>
-        <span class="arrow">=</span>
-        <span title='letter-spacing in CSS; also called "tracking" in some software.'>spacing
-        <input id="dynmet-tracking" type="number" value="0.008" autocomplete="off" spellcheck="false">
-        <span id="dynmet-unit">em</span>
-      </p>
-      <p>
-        There's of course no absolute right or wrong when it comes to expressing yourself with typography, but Inter <em>Dynamic Metrics</em> provides guidelines for good typography. You simply provide the optical font size, and the tracking and leading is calculated for you to produce the best results.
-      </p>
-      <p>
-        <a href="dynmetrics/" class="plain">Explore dynamic metrics &rarr;</a>
-      </p>
-    </c>
 
-    <c class="spacer"></c>
+    <r-cell class=spacer></r-cell>
 
-    <c span=2 span-s=row>
-      <h3><a id="free" href="#free">Free &amp; <br class="only-large-screen">Open source</a></h3>
-    </c>
-    <c span=3.. span-s=row>
+
+    <r-cell span=2 span-s=row>
+      <h3><a id="free" href="#free">Free &amp; open source</a></h3>
+    </r-cell>
+    <r-cell span=3.. span-s=row>
       <p>
         Inter is a <a href="https://github.com/rsms/inter">free and open source</a> font family.<br>
         You are free to use this font in almost any way imaginable.<br>
@@ -143,567 +733,633 @@ endfor
            <span>Sponsor</span>
         </a>
       </p>
-    </c>
+    </r-cell>
 
-  </grid>
-</div></div>
-
-
-<div id="weights" class="row yellow"><div>
-  <h2><a href="#weights">Weights & Styles</a></h2>
-  <p>
-  There are nine weights, each with italic counterparts,
-  making a total of 18 styles.
-  </p>
-  <img src="res/weights-and-styles.svg" class="weights-and-styles">
+  </r-grid>
 </div></div>
 
 
 
-<div id="variable" class="row white variable"><div>
-  <h2><a href="#variable">Variable</a></h2>
+<div class="row examples section1-roman">
+  <r-grid columns=6>
+    <r-cell span=2 class=label>Thin</r-cell>
+    <r-cell span=3.. class="label r">100</r-cell>
+    <r-cell span=row class="example2 single-line" contenteditable spellcheck=false style="font-weight:100;letter-spacing:-0.01em;">Salient gazelle eyes</r-cell>
 
-  <p flow-cols=2 flow-cols-s=1>
-  Inter is offered as both traditional constant font files
-  (one per style, e.g. Bold Italic, Medium, etc.) as well as a
-  <a href="https://en.wikipedia.org/wiki/Variable_fonts">Variable Font</a>
-  which contains all styles in a much smaller file size.
-  Additionally, a variable font is ...variable! You can mix and match weight
-  and italic angle as you please, forming theoretically infinite variations.
-  </p>
+    <r-cell class=spacer></r-cell>
 
-  <div class="unsupported-message">
-    <p>Variable Fonts not supported by this web browser</p>
-  </div>
+    <r-cell span=2 class=label>ExtraLight</r-cell>
+    <r-cell span=3.. class="label r">200</r-cell>
+    <r-cell span=row class="example2 single-line" contenteditable spellcheck=false style="font-weight:200;letter-spacing:-0.01em;">Internationalization</r-cell>
 
-  <div class="ctrl">
-    <div class="ctrlrow">
-      <label title="Weight in the range of 100 to 900">
-        <span class="label var">Weight:</span>
-        <input type="range" value="400" min="100" max="900" name="weight">
-      </label>
-      <label title="Slant angle in the range of 0° to 10°">
-        <span class="label var">Slant:</span>
-        <input type="range" value="0" min="0" max="10" step="0.01" name="slant">
-      </label>
-      <label class="tight">
-        <input type="checkbox" name="animate"> Animate weight &amp; slant
-      </label>
-      <label class="tight">
-        <input type="checkbox" name="invert"> Negative
-      </label>
-    </div>
-    <div class="ctrlrow">
-      <label title="Font size">
-        <span class="label">Size:</span>
-        <input type="range" value="96" min="11" max="400" name="size">
-      </label>
-      <label title="Space between letters">
-        <span class="label">Tracking:</span>
-        <input type="range" value="0" min="-0.1" max="0.1" step="0.001" name="letterSpacing">
-      </label>
-      <label>
-        <span class="label">Line height:</span>
-        <input type="range" value="1.2" min="0.7" max="2" step="0.01" name="lineHeight">
-      </label>
-    </div>
-  </div>
-</div></div>
-<div class="row white variable-sample-row">
-  <div class="variable-sample" contenteditable spellcheck="false">
-  ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890
-  ?!()[]{}&*^%$#@~
-  </div>
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>Light</r-cell>
+    <r-cell span=3.. class="label r">300</r-cell>
+    <r-cell span=row class="example2 single-line" contenteditable spellcheck=false style="font-weight:300">Millimeter waves</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>Regular</r-cell>
+    <r-cell span=3.. class="label r">400</r-cell>
+    <r-cell span=row class="example2 single-line" contenteditable spellcheck=false style="font-weight:400">Assimilation engine</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>Medium</r-cell>
+    <r-cell span=3.. class="label r">500</r-cell>
+    <r-cell span=row class="example2 single-line" contenteditable spellcheck=false style="font-weight:500">Botanica Francisco</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>SemiBold</r-cell>
+    <r-cell span=3.. class="label r">600</r-cell>
+    <r-cell span=row class="example2 single-line" contenteditable spellcheck=false style="font-weight:600">Spontaneous apes</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>Bold</r-cell>
+    <r-cell span=3.. class="label r">700</r-cell>
+    <r-cell span=row class="example2 single-line" contenteditable spellcheck=false style="font-weight:700">15 Mango Avenue</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>ExtraBold</r-cell>
+    <r-cell span=3.. class="label r">800</r-cell>
+    <r-cell span=row class="example2 single-line" contenteditable spellcheck=false style="font-weight:800">Comedy Morning</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>Black</r-cell>
+    <r-cell span=3.. class="label r">900</r-cell>
+    <r-cell span=row class="example2 single-line" contenteditable spellcheck=false style="font-weight:900">Hamburgefonstiv</r-cell>
+  </r-grid>
 </div>
-<script src="index-var.js?v={{ index_var_js_v }}"></script>
-<div class="row white"><div>
+
+
+
+<div class="row examples section1-italic">
+  <r-grid columns=6>
+    <r-cell span=2 class=label>Thin</r-cell>
+    <r-cell span=2 class=label>Italic</r-cell>
+    <r-cell span=2 class="label r">100</r-cell>
+    <r-cell span=row class="example2 i single-line" contenteditable spellcheck=false style="font-weight:100;letter-spacing:-0.01em;">Inorganic compound</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>ExtraLight</r-cell>
+    <r-cell span=2 class=label>Italic</r-cell>
+    <r-cell span=2 class="label r">200</r-cell>
+    <r-cell span=row class="example2 i single-line" contenteditable spellcheck=false style="font-weight:200;letter-spacing:-0.01em;">Extravaganza Lime</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>Light</r-cell>
+    <r-cell span=2 class=label>Italic</r-cell>
+    <r-cell span=2 class="label r">300</r-cell>
+    <r-cell span=row class="example2 i single-line" contenteditable spellcheck=false style="font-weight:300">Rectangular ellipse</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>Regular</r-cell>
+    <r-cell span=2 class=label>Italic</r-cell>
+    <r-cell span=2 class="label r">400</r-cell>
+    <r-cell span=row class="example2 i single-line" contenteditable spellcheck=false style="font-weight:400">3 hours till midnight</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>Medium</r-cell>
+    <r-cell span=2 class=label>Italic</r-cell>
+    <r-cell span=2 class="label r">500</r-cell>
+    <r-cell span=row class="example2 i single-line" contenteditable spellcheck=false style="font-weight:500">Artificial Intelligence</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>SemiBold</r-cell>
+    <r-cell span=2 class=label>Italic</r-cell>
+    <r-cell span=2 class="label r">600</r-cell>
+    <r-cell span=row class="example2 i single-line" contenteditable spellcheck=false style="font-weight:600">Sulfur hexafluoride</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>Bold</r-cell>
+    <r-cell span=2 class=label>Italic</r-cell>
+    <r-cell span=2 class="label r">700</r-cell>
+    <r-cell span=row class="example2 i single-line" contenteditable spellcheck=false style="font-weight:700">Hospital helicopter</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>ExtraBold</r-cell>
+    <r-cell span=2 class=label>Italic</r-cell>
+    <r-cell span=2 class="label r">800</r-cell>
+    <r-cell span=row class="example2 i single-line" contenteditable spellcheck=false style="font-weight:800">Encyclopedia Abc</r-cell>
+
+    <r-cell class=spacer></r-cell>
+
+    <r-cell span=2 class=label>Black</r-cell>
+    <r-cell span=2 class=label>Italic</r-cell>
+    <r-cell span=2 class="label r">900</r-cell>
+    <r-cell span=row class="example2 i single-line" contenteditable spellcheck=false style="font-weight:900">United Martians</r-cell>
+  </r-grid>
+</div>
+
+
+<div class="row examples">
+  <r-grid columns=6>
+    <r-cell span=2 class=label>Thin</r-cell>
+    <r-cell span=3.. class="label r">100</r-cell>
+    <r-cell span=row class="example2 multi-line" contenteditable spellcheck=false style="font-weight:100;letter-spacing:-0.005em;">
+      Chemistry is a physical science under natural sciences that covers the elements that make up matter</r-cell>
+
+    <r-cell span=2 class=label>ExtraLight</r-cell>
+    <r-cell span=3.. class="label r">200</r-cell>
+    <r-cell span=row class="example2 multi-line" contenteditable spellcheck=false style="font-weight:200;letter-spacing:-0.007em;">
+      The aspect ratio of an image is the ratio of its width to its height,
+      but you already knew that</r-cell>
+
+    <r-cell span=2 class=label>Light</r-cell>
+    <r-cell span=3.. class="label r">300</r-cell>
+    <r-cell span=row class="example2 multi-line" contenteditable spellcheck=false style="font-weight:300">
+      Unlike a moka express, a napoletana does not use the pressure of steam to force the water through the coffee</r-cell>
+
+    <r-cell span=2 class=label>Regular</r-cell>
+    <r-cell span=3.. class="label r">400</r-cell>
+    <r-cell span=row class="example2 multi-line" contenteditable spellcheck=false style="font-weight:400">
+      The Berlin key, also known as Schließzwangschlüssel, was not
+      designed to make people laugh</r-cell>
+
+    <r-cell span=2 class=label>Medium</r-cell>
+    <r-cell span=3.. class="label r">500</r-cell>
+    <r-cell span=row class="example2 multi-line" contenteditable spellcheck=false style="font-weight:500">
+      Stanley Kubrick was an American film director, screenwriter, and producer of many films</r-cell>
+
+    <r-cell span=2 class=label>SemiBold</r-cell>
+    <r-cell span=3.. class="label r">600</r-cell>
+    <r-cell span=row class="example2 multi-line" contenteditable spellcheck=false style="font-weight:600">
+      Jet Propulsion Laboratory,<br>
+      California Institute of Technology</r-cell>
+
+    <r-cell span=2 class=label>Bold</r-cell>
+    <r-cell span=3.. class="label r">700</r-cell>
+    <r-cell span=row class="example2 multi-line" contenteditable spellcheck=false style="font-weight:700">
+      The Sicilian Defense is a chess opening that begins with 1.e4 c5</r-cell>
+
+    <r-cell span=2 class=label>ExtraBold</r-cell>
+    <r-cell span=3.. class="label r">800</r-cell>
+    <r-cell span=row class="example2 multi-line" contenteditable spellcheck=false style="font-weight:800">
+      Padrón province of A Coruña, Galicia, northwestern Spain</r-cell>
+
+    <r-cell span=2 class=label>Black</r-cell>
+    <r-cell span=3.. class="label r">900</r-cell>
+    <r-cell span=row class="example2 multi-line" contenteditable spellcheck=false style="font-weight:900">
+      Woven silk pyjamas exchanged for blue quartz crystals</r-cell>
+  </r-grid>
+</div>
+
+
+<div class="row examples" style="padding-top:0"><div>
+  <p class=label>Example text, Regular</p>
+  <div class="columns size1">
   <p>
-    Variable fonts is a new and emerging technology.<br>
-    <a href="var-test.html">This test</a> can be used to discover
-    what a web browser is capable of.
+One of the most famous lighthouses of antiquity, as I have already pointed out, was the pharos of Alexandria, which ancient writers included among the Seven Wonders of the World. It might naturally be supposed that the founder of so remarkable a monument of architectural skill would be well known; yet while Strabo and Pliny, Eusebius, Suidas, and Lucian ascribe its erection to Ptolemæus Philadelphus, the wisest and most benevolent of the Ptolemean kings of Egypt, by Tzetzes and Ammianus Marcellinus the honour is given to Cleopatra; and other authorities even attribute it to Alexander the Great.
+</p><p>
+All that can with certainty be affirmed is, that the architect was named Sostrates. Montfaucon, in his great work, endeavours to explain how it is that while we are thus informed as to the architect, we are so doubtful as to the founder, whom, for his part, he believes to have been Ptolemæus. Our ignorance, he says, is owing to the knavery of Sostrates. He wished to immortalize his name; a blameless wish, if at the same time he had not sought to suppress that of the founder, whose glory it was to have suggested the erection. For this purpose Sostrates devised a stratagem which proved successful; deep in the wall of the tower he cut the following inscription: “Sostrates of Cnidos, son of Dexiphanes, to the gods who Protect those who are upon the Sea.” But, mistrustful that King Ptolemæus would scarcely be satisfied with an inscription in which he was wholly ignored, he covered it with a light coat of cement, which he knew would not long endure the action of the atmosphere, and carved thereon the name of Ptolemæus. After a few years the cement and the name of the king disappeared, and revealed the inscription which gave all the glory to Sostrates.
+</p><p>
+Montfaucon, with genial credulity, adopts this anecdote as authentic, and adds: Pliny pretends that Ptolemæus, out of the modesty and greatness of his soul, desired the architect’s name to be engraved upon the tower, and no reference to himself to be made. But this statement is very dubious; it would have passed as incredible in those times, and even to-day would be regarded as an ill-understood act of magnanimity. We have never heard of any prince prohibiting the perpetuation of his name upon magnificent works designed for the public utility, or being content that the architect should usurp the entire honour.
+</p><p>
+To solve the difficulty, Champollion represents the pharos as constructed by Ptolemæus Soter. But, as Edrisi solemnly remarks, “God alone knows what is the truth.”
+</p><p>
+Much etymological erudition has been expended on the derivation of the word Pharos. As far as the Alexandrian light-tower is concerned, there can be no doubt that it was named from the islet on which it stood; yet Isidore asserts that the word came from φὼς, “light,” and ὁρἀν, “to see.” To quote again from Montfaucon: That numerous persons, who have not read the Greek authors, should exercise their ingenuity to no avail in the extraction of these etymologies, is far less surprising than that so good a scholar as Isaac Vossius should seek the origin of Pharos in the Greek language. From ϕαἰνειν, “to shine,” he says, comes ϕανερός, and from ϕανερός, ϕάρος.... But the island was called Pharos seven or eight hundred years before it possessed either tower or beacon-light.
+</p><p>
+The most reasonable conjecture seems to be that the word is a Hellenic form of Phrah, the Egyptian name of the sun, to whom the Alexandrian lighthouse would naturally be compared by wondering spectators, or dedicated by a devout prince.
+</p><p>
+At a later date we find the word applied to very different objects, though always retaining the signification of light or brilliancy. A pharos of fire—i.e., a ball or meteor—was seen, says Gregory of Tours, to issue from the church of St. Hilaire, and descend upon King Clovis. The same historian uses the word to describe a conflagration:—“They (the barbarians) set fire to the church of St. Hilaire, kindled a great pharos, and while the church was burning, pillaged the monastery.” The old French historian frequently employs the word in this sense, which leads us to suppose that in his time an incendiary was probably designated “a maker of pharoses” (un faiseur de phares). Still later, the term pharos was applied to certain machines in which a number of lamps or tapers were placed, as in a candelabrum. A modern French writer quotes from Anastasius the Librarian, that Pope Sylvester caused “a pharos of pure gold” to be constructed; and that Pope Adrian I. made one, “in the form of a cross,” capable of receiving one hundred and seventy candles or tapers. And Leon of Ostia, in his “Chronicle of Monte Cassino,” says, that the Abbot Didier had a pharos, or great silver crown, weighing one hundred pounds, constructed, which was surmounted by twelve little turrets, and from which were suspended six and thirty lamps.
+</p><p>
+<em>Excerpt from “Lighthouses and Lightships”</em>
   </p>
+</div>
 </div></div>
 
 
+<div class="row examples features features-section1 feat-table" id="features">
+  <r-grid columns=8>
 
-<div id="features" class="row features"><div>
-  <h2><a href="#features">Features</a></h2>
-  <p style="max-width:38rem">
-    Inter comes with many OpenType features that can be used to
-    tailor functionality and aesthetics to your specific needs.
-    Some of these features can be combined to form a great number of
-    alternative variations.
-  </p>
-  <boxes class="features">
-    {% for f in site.data.feature_samples %}
-    <box class="feat-{{f.tag}}" id="features/{{f.tag}}">
-      <h3><a href="#features/{{f.tag}}"><q title='OpenType feature ID'>{{f.tag}}</q> {{f.title}}</a></h3>
-      {%
+    <r-cell span=4 span-s=row>
+      <h2><a href="#features">Features</a></h2>
+      <p>
+        Inter comes with many OpenType features which can be used to tailor functionality and aesthetics to your specific needs. Some of these features can be combined to form a great number of alternative variations.
+      </p>
+    </r-cell>
+    <r-cell span=6-8 span-s=row class="only-large-screen">
+      <h2>&nbsp;</h2>
+      <p style="font-feature-settings:'cv01' 1,'cv03' 1,'cv04' 1,'cv08' 1,'cv10' 1,'cv11' 1,'ss01' 1,'ss02' 1,'dlig' 1;font-size:10vw;margin:-0.33em 0 0 -0.07em;color:white">
+        altG16I
+      </p>
+    </r-cell>
 
-      if f.description %}
-        <p>{{f.description}}</p>
-      {% endif %}{%
+    <hr>
 
-      assign feat_tag = f.tag %}{%
-      assign has_feature_col = false %}{%
-      for s in f.samples %}{%
-        if s.feat %}{%
-          assign has_feature_col = true %}{%
-          break %}{%
-        endif %}{%
-      endfor
+    <r-cell span=1-2 class=col-head>Feature</r-cell>
+    <r-cell span=3-5 class=col-head>Off</r-cell>
+    <r-cell span=6-8 class=col-head>On</r-cell>
 
-      %}
-      {% if has_feature_col %}
-      <grid columns=7>
-        <c span=1 class="low-contrast ">Feature</c>
-        <c span=3 class="low-contrast">Disabled</c>
-        <c span=3 class="low-contrast">Enabled</c>
-      {% else %}
-      <grid columns=8>
-        <c span=4 class="low-contrast">Disabled</c>
-        <c span=4 class="low-contrast">Enabled</c>
+    <hr class="thin col-head">
+
+  {% for f in site.data.feature_samples %}
+
+    <r-cell span=1-2 class="leading-trim feat-name" id="features/{{f.tag}}">
+      <r-feat>{{f.tag}}</r-feat> {{f.title}}
+      {% if f.description %}
+        <p class=small style="margin-top:0.5rem">{{f.description}}</p>
       {% endif %}
-      {% for s in f.samples %}
-        {%
+    </r-cell>
 
-        if has_feature_col %}{%
-          assign sample = s.sample %}{%
-          assign feat_tag = s.feat %}{%
-        else %}{%
-          assign sample = s %}{%
-        endif %}{%
-
-        assign sample_in = sample | replace: "›", "<em>" | replace: "‹", "</em>" %}{%
-        assign sample_out = sample | remove: "›" | remove: "‹"
-
-        %} {% if has_feature_col %}
-        <c span=1 class="">{{feat_tag}}</c>
-        <c span=3 class="sample ff-none">{{sample_in}}</c>
-        <c span=3 class="sample ff-{{feat_tag}}">{{sample_out}}</c>
-        {% else %}
-        <c span=4 class="sample ff-none">{{sample_in}}</c>
-        <c span=4 class="sample ff-{{feat_tag}}">{{sample_out}}</c>
-        {% endif %}
-      {% endfor %}
-      </grid>
-
-      <br>
-      <!-- <p class="example" title="CSS code">
-        <tt>font-feature-settings: '{{feat_tag}}' 1</tt>
-      </p> -->
-
-      {% if f.footer %}
-        <p>{{f.footer}}</p>
-      {% endif %}
-    </box>
+    <r-cell span=3-5 class="leading-trim feat-example" style="font-feature-settings:'{{f.tag}}' 0,'calt' 0{% if f.disable %},'{{f.disable}}'0 {% endif %}">
+    {% for sample in f.samples %}{%
+      assign sample_in = sample | replace: "›", "<em>" | replace: "‹", "</em>" -%}
+      {{sample_in}}<br>
     {% endfor %}
-  </boxes>
+    </r-cell>
 
-  <p>
-    Additional features, not highlighted above:
-    <q title='OpenType feature ID'>locl</q>,
-    <q title='OpenType feature ID'>salt</q>,
-    <q title='OpenType feature ID'>aalt</q>,
-    <q title='OpenType feature ID'>cpsp</q> and
-    <q title='OpenType feature ID'>ordn</q>.
-    <br>
-    You can explore features in the <a href="lab/">interactive lab</a>.
-  </p>
-</div></div>
+    <r-cell span=6-8 class="leading-trim feat-example" style="font-feature-settings:'{{f.tag}}' 1;">
+    {% for sample in f.samples %}{%
+      assign sample_out = sample | remove: "›" | remove: "‹" %}{%
+      assign sample_out = sample_out | remove: " " -%}
+      {{sample_out}}<br>
+    {% endfor %}
+    </r-cell>
+
+    <hr class=thin>
+
+  {% endfor %}
+
+    <!-- leading trim test: -->
+    <!-- <r-cell class=spacer></r-cell>
+    <r-cell span=row style="height:1px;background:black"></r-cell>
+    <r-cell class=leading-trim style="font-size: 1em">M</r-cell>
+    <r-cell class=leading-trim style="font-size: 2em">M</r-cell>
+    <r-cell class=leading-trim style="font-size: 4em">M</r-cell>
+    <r-cell class=leading-trim style="font-size: 8em">M</r-cell>
+    <r-cell class=leading-trim style="font-size:12em">M</r-cell>
+    <r-cell class=leading-trim style="font-size:16em">M</r-cell> -->
+
+  </r-grid>
+</div>
 
 
-<div id="languages" class="row white"><div>
+<div class="row examples features features-section2" id="feature-examples">
+  <r-grid columns=6>
+
+    <r-cell span=row id="features/cv">
+      <r-feat>cvXX</r-feat> Character variants
+    </r-cell>
+
+    <r-cell span=row class="example2 features"
+        style="font-weight:600;margin-bottom:-1rem">
+      1234567890</r-cell>
+    <r-cell span=row class="example2 features"
+        style="font-weight:600;font-feature-settings:'cv01' 1,'cv02' 1,'cv03' 1,'cv04' 1,'cv09' 1,'zero' 1,'liga' 1,'calt' 1">
+      1234567890</r-cell>
+    <r-cell span=2>Alternative digits</r-cell>
+    <r-cell span=3-4 span-s=3-6>
+      <r-feat>cv01</r-feat> Alternate one<br>
+      <r-feat>cv09</r-feat> Flat-top three<br>
+      <r-feat>cv02</r-feat> Open four<br>
+    </r-cell>
+    <r-cell span=5-6 span-s=3-6>
+      <r-feat>cv03</r-feat> Open six<br>
+      <r-feat>cv04</r-feat> Open nine<br>
+      <r-feat>zero</r-feat> Slashed zero<br>
+    </r-cell>
+
+    <hr style="margin-top:3rem">
+
+    <r-cell span=row class="example2 features"
+        style="margin-bottom:-1rem">
+      Guillable ürá</r-cell>
+    <r-cell span=row class="example2 features"
+        style="font-feature-settings:'cv06' 1,'cv10' 1,'cv11' 1,'liga' 1,'calt' 1">
+      Guillable ürá</r-cell>
+    <r-cell span=2>
+      Character variants is a mood
+    </r-cell>
+    <r-cell span=3..>
+      <r-feat>cv10</r-feat> Capital G with spur<br>
+      <r-feat>cv06</r-feat> Simplified u<br>
+      <r-feat>cv11</r-feat> Single-story a<br>
+    </r-cell>
+
+    <hr style="margin-top:3rem">
+
+    <r-cell span=row class="example2 features"
+        style="font-weight:300;margin-bottom:-1rem">
+      Efficient after</r-cell>
+    <r-cell span=row class="example2 features"
+        style="font-weight:300;font-feature-settings:'cv12' 1,'cv13' 1,'liga' 1,'calt' 1">
+      Efficient after</r-cell>
+    <r-cell span=2>
+      Give it a compact character
+    </r-cell>
+    <r-cell span=3..>
+      <r-feat>cv12</r-feat> Compact f<br>
+      <r-feat>cv13</r-feat> Compact t<br>
+    </r-cell>
+
+    <hr style="margin-top:3rem">
+
+    <!-- <r-cell span=row class="example2 features"
+        style="font-weight:200;font-size:10vw;font-variant:tabular-nums;line-height:1.1;margin-top:1rem">
+      010.2*364+8(2).5<br>
+      −51,67×8÷91{0}:<span class=cv01>1</span></r-cell> -->
+    <r-cell span=row class="example2 features"
+        style="font-weight:500;font-size:10vw;font-variant:tabular-nums;line-height:1.1">
+      0<span class=cv01>1</span>0.2*<span class=cv09>3</span>64+8(2).5<br>
+      −51,67×8÷<span class=cv04>9</span>1{<span class=zero>0</span>}:1</r-cell>
+    <!-- <r-cell span=row class="example2 features"
+        style="font-weight:600;font-size:10vw;font-variant:tabular-nums;line-height:1.1">
+      <span class=zero>0</span>10.2*3<span class=cv03>6</span>4+8(2).5<br>
+      −5<span class=cv01>1</span>,67×8÷91{0}:1</r-cell> -->
+    <r-cell span=row class="example2 features"
+        style="font-weight:800;font-size:10vw;font-variant:tabular-nums;line-height:1.1">
+      010.2*36<span class=cv02>4</span>−8(2).5<br>
+      +51,67×8÷9<span class=cv01>1</span>{0}:<span class=cv01>1</span></r-cell>
+    <r-cell span=row class="example2 features"
+        style="font-size:10vw;font-variant:tabular-nums;line-height:1.1;margin-bottom:2rem">
+      <span style="font-weight:100">1</span><span style="font-weight:200">2</span><span style="font-weight:300">3.</span><span style="font-weight:400">4</span><span style="font-weight:500">5</span><span style="font-weight:600">6</span><span style="font-weight:700">7</span><span style="font-weight:800">8</span><span style="font-weight:900">90</span>[1]<span style="font-weight:600">,</span><span style="font-weight:800">3</span></r-cell>
+    <r-cell span=2>
+      Tabular figures are excellent for tables of numeric data. <code>tnum</code> enables an entire set of dedicated glyphs that have the same width across all weights.
+    </r-cell>
+    <r-cell span=3..>
+      <r-feat>tnum</r-feat> Tabular figures
+    </r-cell>
+
+    <hr style="margin-top:3rem">
+
+    <r-cell span=row class="example2 features"
+        style="margin-bottom:-1rem">
+      Illusion A03</r-cell>
+    <r-cell span=row class="example2 features"
+        style="font-feature-settings:'ss02' 1,'liga' 1,'calt' 1">
+      Illusion A03</r-cell>
+    <r-cell span=2>
+      Disambiguate between similar-looking characters with
+      <r-feat>ss02</r-feat> or individual character variants
+    </r-cell>
+    <r-cell span=3..>
+      <r-feat>ss02</r-feat> Disambiguation, or<br>
+      <r-feat>cv08</r-feat> Upper-case i with serif<br>
+      <r-feat>cv05</r-feat> Lower-case L with tail<br>
+      <r-feat>zero</r-feat> Slashed zero<br>
+    </r-cell>
+
+    <hr style="margin-top:3rem">
+
+    <r-cell span=row class="example2" style="font-weight:500;white-space:nowrap;font-size:11.5vw">
+      It’s “fun” here, yes</r-cell>
+    <r-cell span=row class="example2"
+        style="font-weight:500;white-space:nowrap;font-size:11.5vw;font-feature-settings:'ss03' 1,'liga' 1,'calt' 1;margin-bottom:1rem">
+      It’s “fun” here, yes</r-cell>
+    <r-cell span=2>
+      Give a little personality to titles
+    </r-cell>
+    <r-cell span=3..>
+      <r-feat>ss03</r-feat> Round quotes &amp; commas<br>
+    </r-cell>
+
+    <hr style="margin-top:3rem">
+
+    <r-cell span=row>
+      Listing of all features
+    </r-cell>
+    <r-cell span=row style="margin-top:1rem">
+      <div class="columns" style="column-width:18em;column-gap:1em">
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-aalt">aalt</a> Access All Alternates<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-c2sc">c2sc</a> Small Capitals From Capitals<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-calt">calt</a> Contextual Alternates<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-case">case</a> Case-Sensitive Forms<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-ccmp">ccmp</a> Glyph Composition/Decomposition<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cpsp">cpsp</a> Capital Spacing<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv01</a> Alternate one<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv02</a> Open four<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv03</a> Open six<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv04</a> Open nine<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv05</a> Lower-case L with tail<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv06</a> Simplified u<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv07</a> Alternate German double s<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv08</a> Upper-case i with serif<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv09</a> Flat-top three<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv10</a> Capital G with spur<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv11</a> Single-story a<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv12</a> Compact f<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-cv01--cv99">cv13</a> Compact t<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-dlig">dlig</a> Discretionary Ligatures<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ae#tag-dnom">dnom</a> Denominators<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_fj#tag-frac">frac</a> Fractions<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ko#tag-liga">liga</a> Standard Ligatures<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ko#tag-locl">locl</a> Localized Forms<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ko#tag-numr">numr</a> Numerators<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_ko#tag-ordn">ordn</a> Ordinals<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-pnum">pnum</a> Proportional Figures<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-salt">salt</a> Stylistic Alternates<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-sinf">sinf</a> Scientific Inferiors<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-smcp">smcp</a> Small Capitals (limited)<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss01</a> Open digits<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss02</a> Disambiguation (with zero<)<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss03</a> Round quotes &amp; commas<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-ss01---ss20">ss04</a> Disambiguation (no zero<)<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-subs">subs</a> Subscript<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-sups">sups</a> Superscript<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_pt#tag-tnum">tnum</a> Tabular Figures<br>
+        <a class=feat href="https://learn.microsoft.com/typography/opentype/spec/features_uz#tag-zero">zero</a> Slashed Zero<br>
+      </div>
+    </r-cell>
+
+  </r-grid>
+</div>
+
+
+
+<div class="row glyphs" id="glyphs">
+  <div>
+    <h2><a href="#glyphs">Glyphs</a></h2>
+  </div>
+  <div class="glyph-grid">
+    <div class=inspector>
+      <div class=toolbar>
+        <div>
+          <!-- <div class=popup-menu>
+            <select name=font>
+              <option value="d-100">Thin (Display)</option>
+              <option value="d-200">ExtraLight (Display)</option>
+              <option value="d-300">Light (Display)</option>
+              <option value="d-400" selected>Regular (Display)</option>
+              <option value="d-500">Medium (Display)</option>
+              <option value="d-600">SemiBold (Display)</option>
+              <option value="d-700">Bold (Display)</option>
+              <option value="d-800">ExtraBold (Display)</option>
+              <option value="d-900">Black (Display)</option>
+              <option value="t-100">Thin (Text)</option>
+              <option value="t-200">ExtraLight (Text)</option>
+              <option value="t-300">Light (Text)</option>
+              <option value="t-400">Regular (Text)</option>
+              <option value="t-500">Medium (Text)</option>
+              <option value="t-600">SemiBold (Text)</option>
+              <option value="t-700">Bold (Text)</option>
+              <option value="t-800">ExtraBold (Text)</option>
+              <option value="t-900">Black (Text)</option>
+            </select>
+            <span class="label"></span>
+            <span class="icon"></span>
+          </div> -->
+          <!-- <label class=switch-button>
+            <input type="checkbox" name="opsz" checked>
+            Small optical size
+          </label> -->
+          <div class="slider opsz-slider" title='opsz from 14 "text" to 28 "display"'>
+            <input type="range" name="opsz" value=28 min=14 max=28 step=0.1>
+            Optical size
+          </div>
+          <label class="switch-button opsz-switch">
+            <input type="checkbox" name="opsz-switch">
+            Small opsz
+          </label>
+          <!-- <div class="slider wght-slider" title="wght">
+            Weight
+            <input type="range" name="wght" value=400 min=100 max=900 step=1>
+          </div> -->
+          <label class=switch-button>
+            <input type="checkbox" name="show-details">
+            Details
+          </label>
+        </div>
+        <div class=identification>
+          <div class=name>A</div>
+          <div class=unicode>U+0041</div>
+        </div>
+        <div class=preview>A</div>
+      </div>
+      <div class=canvas>A</div>
+    </div>
+    <div class="glyph-list">
+      <div class="fade-cover left"></div>
+      <div class=clipview>
+        <div class=content>
+    {% for g in site.data.glyphinfo.glyphs -%}
+      {%- if g[2] == 0 and g[3] -%}
+        <a title="{{g[1]}}
+  U+{{g[3]}}{%if g[4]%} {{g[4]}} {%endif%}" data-name="{{g[1]}}" data-cp="{{g[3]}}" href="#glyphs/{{g[1]}}">&#x{{g[3]}}</a>
+      {% endif -%}
+    {%- endfor %}
+        </div>
+      </div>
+      <div class="fade-cover right"></div>
+    </div>
+  </div>
+  {% for file in site.static_files %}{%
+    assign _path = file.path | remove_first: "/inter" %}{%
+    if _path == "/res/glyph-inspector.js" %}{%
+      assign glyph_inspector_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+    endif %}{%
+  endfor -%}
+  <script type="module" src="{{url_root}}res/glyph-inspector.js?v={{glyph_inspector_js_v}}"></script>
+</div>
+
+
+
+<div class="row examples" id="languages"><div>
   <h2><a href="#languages">Language support</a></h2>
-  <br>
-  <div class="language-list">
+  <p>Inter currently covers {{lang_count}} scripts</p>
+  <div class="columns" style="column-width:12em;column-gap:1em">
   {% for c in site.data.languages %}
     <h4>{{c.category}}</h4>
-    {% for language in c.languages %}
-      <p>{{language}}</p>
+    {% for language in c.languages -%}
+      {{language}}<br>
     {% endfor %}
   {% endfor %}
   </div>
 </div></div>
 
 
-<div id="charset" class="row green charset-title">
-  <div>
-    <h2><a href="#charset">Character set</a></h2>
-    <p>
-      All {{ site.data.glyphinfo.glyphs | size }} characters provided with Inter.
-      Tap a glyph to copy it to your clipboard.<br>
-      Use the <a href="glyphs/">Glyphs Browser</a> to inspect details like kerning and style variation.
-    </p>
-  </div>
-</div>
-<div class="row green charset">
-{% include charset-table.html %}
-</div>
-<script>
-;(function(){
 
-  function shouldHandleEvent(ev) {
-    if (!ev.metaKey && !ev.shiftKey && !ev.ctrlKey) {
-      ev.stopPropagation()
-      ev.preventDefault()
-      return true
-    }
-    return false
-  }
-
-  function onClickChar(ev) {
-    // Copy to clipboard.
-    // Clipboard management on the web is _ABSOLUTELY INSANE_
-    // This is an elaborate and ugly workaround to make it not suck
-    // on various browsers.
-
-    // document.location.href = "/glyphs/?g=" + encodeURI(ev.target.dataset.glyphname)
-
-    if (!shouldHandleEvent(ev)) {
-      return false
-    }
-
-    var origel = ev.target
-    var el = origel.cloneNode(true)
-    var r = ev.target.getBoundingClientRect()
-
-    el.style.position = 'fixed'
-    el.style.left = r.left + 'px'
-    el.style.top = r.top + 'px'
-    el.style.width = r.width + 'px'
-    el.style.height = r.height + 'px'
-    el.style.webkitUserSelect = 'text'
-    el.style.userSelect = 'text'
-    document.body.appendChild(el)
-
-    el.innerText = el.innerText // + " " + el.title
-
-    el.contentEditable = true
-    el.readOnly = false
-
-    var range = document.createRange()
-    range.selectNodeContents(el)
-
-    var s = window.getSelection()
-    s.removeAllRanges()
-    s.addRange(range)
-
-    document.execCommand('copy')
-
-    document.body.removeChild(el)
-
-    s.removeAllRanges()
-
-    HUDNotification.show('Copied ' + origel.innerText + ' to clipboard')
+<!-- <div class="row"><div>
+  <p>Latin</p>
+  <p class="example only-large-screen">
+    ABCDEFGHIJKLMN<br>
+    OPQRSTUVWXYZ<br>
+    abcdefghijklm<br>
+    nopqrstuvwxyz<br>
+    0123456789 &amp;→!
+  </p>
+  <br>
+  <br>
+  <p>Greek</p>
+  <p class="example only-large-screen">
+    ΑΒΓΔΕΖΗΘΙΚΛΜΝ<br>
+    ΞΟΠΡΣΤΥΦΧΨΩ<br>
+    αβγδεζηθικλμνξ<br>
+    οπρςστυφχψω . : ;
+  </p>
+  <br>
+  <br>
+  <p>Cyrillic</p>
+  <p class="example only-large-screen">
+    АБВГДЕЁЖЗИЙКЛ<br>
+    МНОПРСТУФХЧЦ<br>
+    ШЩЬЪЫЭЮЯабвг<br>
+    деёжзийклмнопрс<br>
+    туфхчцшщьъыэюя
+  </p>
+</div></div> -->
 
 
-    // flash the glyph
-    clearTimeout(origel._flashTimer)
-    if (origel.classList.contains('flash')) {
-      origel.classList.remove('flash')
-      if (typeof requestAnimationFrame != 'undefined') {
-        requestAnimationFrame(function(){ origel.classList.add('flash') })
-      } else {
-        setTimeout(function(){ origel.classList.add('flash') }, 1)
-      }
-    } else {
-      origel.classList.add('flash')
-    }
-    origel._flashTimer = setTimeout(function(){
-      origel.classList.remove('flash')
-    }, 300)
-  }
-
-  var activeListener = { capture: true }
-
-  let cv = document.querySelector('.charset-table').querySelectorAll('a')
-  for (let i = 0; i < cv.length; i++) {
-    let c = cv[i]
-    if (typeof PointerEvent == "undefined") {
-      c.addEventListener('mousedown', onClickChar, activeListener)
-    } else {
-      c.addEventListener('pointerdown', onClickChar, activeListener)
-    }
-    c.onclick = ev => !shouldHandleEvent(ev)
-  }
-})();
-</script>
 
 
-<div id="story" class="row white"><div>
-  <h2><a href="#story">The story behind Inter</a></h2>
-  <div flow-cols=2 flow-cols-s=1>
-    <p>
-    Inter started out in late 2016 as an experiment to build a perfectly
-    pixel-fitting font at a specific small size (11px.) The idea was that
-    by crafting a font in a particular way, with a particular coordinate system
-    (Units Per EM), and for a particular target rasterization size (11), it would
-    be possible to get the best of both sharpness and readability.
-    </p>
-    <p>
-    However after a few months of using an early version of Inter, it dawned
-    on everyone exposed to the test that this approach had some serious real-world
-    problems. Most notably that it was really hard to read longer text. Because of
-    the pixel-aligning nature of that approach, the font took an almost
-    <a href="https://www.figma.com/file/HPqDViSCB8fAWuxaV2ousFMv">mono-spaced appearance</a>,
-    making it really easy to read numbers, punctuation and very short
-    words, but eye-straining to read anything longer.
-    </p>
-    <p>
-    The project was rebooted with a different approach, sticking with the
-    specific UPM, but crafting glyphs and kerning in a way that made for
-    more variation in the rhythm and smoother vertical and horizontal stems.
-    As Inter was being developed, it was tested on an internal version of
-    <a href="https://www.figma.com/">Figma</a>—where the author of Inter works as a designer—and slowly improved upon based on experience and feedback.
-    </p>
-  </div>
 
-  <p id="faq">&nbsp;</p>
-  <h2><a href="#faq">FAQ</a></h2>
-  <grid columns=2 columns-s=1 class="faq">
+<script>(function(){
 
-    <c>
-      <h4 id="faq-using-features"><a href="#faq-using-features">
-        How do I enable and disable font features?
-      </a></h4>
-      In web browsers you'll want to use
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-feature-settings"><q>font-feature-settings</q></a>.
-      In Figma you can access features via the
-      <a href="https://help.figma.com/article/250-working-with-fonts#opentype">Advanced Type panel.</a>
-      In Illustrator, Photoshop and friends, you can access features via the
-      <a href="https://helpx.adobe.com/illustrator/using/special-characters.html#opentype_panel_overview">Characters and OpenType panels.</a>
-      Sketch doesn't provide a UI for configuring font features, but there's
-      <a href="https://sketchtalk.io/discussion/comment/1478/#Comment_1478">a workaround using macOS's native font UI.</a>
-    </c>
-
-    <c>
-      <h4 id="faq-unhinted-vs-hinted"><a href="#faq-unhinted-vs-hinted">
-        What is the difference between hinted and unhinted fonts?
-      </a></h4>
-      The font files in the "hinted" folders have additional data in them
-      for assisting
-      <a href="https://en.wikipedia.org/wiki/ClearType">ClearType</a>,
-      the text rasterizer used by Microsoft Windows (and some Linux distributions.)
-      You want to use the "hinted" fonts only if you are targeting Windows users
-      <em>and</em> prefer the different look of these "hinted" fonts.
-      Additionally, hinting data makes the font files larger, so if you are
-      using Inter on websites, the extra size of these files is another
-      consideration to make.
-      <a href="https://www.typotheque.com/articles/hinting">
-      This article explains hinting at a greater length.</a>
-    </c>
-
-    <c>
-      <h4 id="faq-cdn"><a href="#faq-cdn">
-        How reliable are the fonts served from rsms.me/inter?
-      </a></h4>
-      <tt>rsms.me/inter</tt> is distributed globally over CloudFlare's CDN,
-      backed by GitHub's servers, making usage of
-      <q>https://rsms.me/inter/inter.css</q> and associated font
-      files very reliable and fast throughout the world.
-    </c>
-
-    <c>
-      <h4 id="faq-contribute"><a href="#faq-contribute">
-        Can I help with improving Inter?
-      </a></h4>
-      Yes you can! Inter is an open-source project, meaning the source
-      code—or "source design" if you will—that is used to build the font files
-      <a href="https://github.com/rsms/inter">are freely available</a> to improve upon.
-      Font making requires a fair bit of technical work and
-      depending on what you'd like to do, some things might be more fun
-      depending on your technical skills.
-      The <a href="https://github.com/rsms/inter/blob/master/CONTRIBUTING.md">"Contributing" document</a> is a great place to start. The document outlines where
-      you can have the biggest impact, how things are setup and how to get
-      started.
-    </c>
-
-    <c>
-      <h4 id="faq-subset"><a href="#faq-subset">
-        How do I subset the font files?
-      </a></h4>
-      <!--The web fonts provided by <a href="inter.css"><tt>inter.css</tt></a> and
-      <a href="inter-display.css"><tt>inter-display.css</tt></a> are already subset
-      (variable version.)
-      If you need special customized subsets, or subsetting OTF or TTF files,
-      have a look at-->
-      Have a look at
-      <a href="https://fonttools.readthedocs.io/en/latest/subset/"><tt>pyftsubset</tt></a>
-      and
-      <a href="https://github.com/filamentgroup/glyphhanger"><tt>glyphhanger</tt></a>.
-    </c>
-
-    <c>
-      <h4 id="faq-otfeat-customize-compile"><a href="#faq-otfeat-customize-compile">
-        How do I access alternate glyphs if my software doesn't provide OpenType control?
-      </a></h4>
-      Have a look at
-      <a href="https://twardoch.github.io/fonttools-opentype-feature-freezer/"><tt>OpenType Feature Freezer</tt></a>
-      which is a tool that allows you to customize fonts with certain
-      OpenType features "on by default."
-    </c>
-
-    <c>
-      <h4 id="faq-start-date"><a href="#faq-start-date">
-        This website claims work started in 2016, but the git repository's log says it started later?
-      </a></h4>
-      Inter was developed in a private, internal git repository
-      starting in November 2016, prior to being published on August 22, 2017.
-      Between November 2016 and August 2017, there were
-      <num>2&#x2006;990&#x2006;150</num> line edits made across 247 versions.
-    </c>
-
-    <c>
-      <h4 id="faq-contact"><a href="#faq-contact">
-        I've made a cool thing that uses Inter, can I share it with you?<br>
-        or, I have a different question.
-      </a></h4>
-      Reach out on <a href="https://twitter.com/rsms">Twitter (@rsms)</a> or over <a href="mailto:rasmus@notion.se">email</a>
-    </c>
-
-  </grid>
-
-</div></div>
-
-
-<div class="row white"><div>
-  — <a href="https://twitter.com/rsms" class="plain">@rsms</a>
-</div></div>
-
-<script>
+const $  = (q, el) => (el || document).querySelector(q)
+const $$ = (q, el) => [].slice.call((el || document).querySelectorAll(q))
 
 // FAQ anchors
-(function(){
-
-var av = document.querySelectorAll('ul.faq > li.q'), a, i, e, id, tn
-for (i = 0; i < av.length; ++i) {
-  e = av[i]
-  tn = document.createTextNode('Q  ')
+for (let e of $$('ul.faq > li.q')) {
+  let tn = document.createTextNode('Q\xa0\xa0') // a0=nbsp
   e.insertBefore(tn, e.firstChild)
-  id = e.id
-  if (id) {
-    a = document.createElement('a')
-    // a.id = id
-    a.href = '#' + id
+  if (e.id) {
+    let a = document.createElement('a')
+    a.href = '#' + e.id
     a.className = 'plain'
     a.innerHTML = e.innerHTML
     e.innerText = ''
     e.appendChild(a)
   }
 }
-av = document.querySelectorAll('ul.faq > li.a')
-for (i = 0; i < av.length; ++i) {
-  e = av[i]
-  tn = document.createTextNode('A  ')
+for (let e of $$('ul.faq > li.a')) {
+  let tn = document.createTextNode('A\xa0\xa0')
   e.insertBefore(tn, e.firstChild)
 }
 
-})();
-
-
-// clipboard copy
-var copyToClipboard = (function(){
-  var ti = $('#hidden-text-input')
-  return function(text) {
-    let range = document.createRange()
-
-    // ti.style.display = null
-    ti.value = text
-    ti.select()
-
-    document.execCommand("copy")
-    ti.value = ""
-    // ti.style.display = 'none'
-    ti.readOnly = true
-    HUDNotification.show('Copied to clipboard')
-  }
-})();
-
-
-// dynamic metrics calculator
-(function(){
-
-var fontSizeEl = $('#dynmet-font-size')
-var trackingEl = $('#dynmet-tracking')
-var unitEl = $('#dynmet-unit')
-
-var unitFormatters = [
-  ['em', 'em', function(fontSize, tracking) {
-    return tracking.toFixed(3).replace(/(?:\.000|0+)$/, '')
-  }],
-  ['px', 'px', function(fontSize, tracking) {
-    return (fontSize * tracking).toFixed(2).replace(/(?:\.00|0+)$/, '')
-  }],
-  ['%', 'percent', function(fontSize, tracking) {
-    return (tracking * 100).toFixed(1)
-  }],
-]
-var unitFormatter = unitFormatters[0][2]
-
-function updateTracking() {
-  var fontSize = parseFloat(fontSizeEl.value)
-  if (isNaN(fontSize) || fontSize < 1) {
-    fontSizeEl.value = fontSize = 1
-  } else if (fontSize > 999) {
-    fontSizeEl.value = fontSize = 999
-  }
-  var tracking = InterDynamicTracking(fontSize)
-  trackingEl.value = unitFormatter(fontSize, tracking)
-}
-
-function toggleUnit() {
-  var unit = unitEl.innerText
-  var u, x = -1
-  for (var i = 0; i < unitFormatters.length; i++) {
-    if (x == -1) {
-      u = unitFormatters[i]
-      if (u[0] == unit) {
-        x = i + 1
-        if (x == unitFormatters.length) {
-          x = 0
-        }
-        u = unitFormatters[x]
-      }
-    }
-    trackingEl.classList.remove(unitFormatters[i][1]) // class name
-  }
-  unit = u[0]
-  trackingEl.classList.add(u[1])
-  unitFormatter = u[2]
-  unitEl.innerText = unit
-  updateTracking()
-}
-
-function onPointerdownUnit(ev) {
-  toggleUnit()
-  if (ev) {
+// contenteditable, paste as plain-text
+$$('[contenteditable]').forEach(el => {
+  el.addEventListener('paste', ev => {
     ev.preventDefault()
-    ev.stopPropagation()
-  }
+    document.execCommand("insertText", false, ev.clipboardData.getData("text/plain"))
+  }, {capture:true,passive:false})
+})
+
+// show/hide "Inter" in header
+let callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    //console.log(entry.isIntersecting, entry)
+    // if (entry.isIntersecting) {
+    //   $('header').style.borderBottom = 'none'
+    // } else {
+    //   $('header').style.borderBottom = '2px solid black'
+    // }
+    $('header .scroll-reveal').classList.toggle('visible', !entry.isIntersecting)
+  });
 }
+let observer = new IntersectionObserver(callback, { rootMargin: "0px", threshold: 0 })
+observer.observe($('h1'))
 
-function onPointerdownTracking(ev) {
-  if (ev) {
-    ev.preventDefault()
-    ev.stopPropagation()
-  }
-  copyToClipboard(trackingEl.value + unitEl.innerText)
-  trackingEl.select()
-}
 
-var passiveListener = { passive: true, capture: false }
-var activeListener = { capture: true }
-
-fontSizeEl.addEventListener('input', updateTracking, passiveListener)
-fontSizeEl.addEventListener('change', updateTracking, passiveListener)
-
-unitEl.addEventListener('pointerdown', onPointerdownUnit, activeListener)
-unitEl.addEventListener('mousedown', onPointerdownUnit, activeListener)
-
-trackingEl.addEventListener('pointerdown', onPointerdownTracking, activeListener)
-trackingEl.addEventListener('mousedown', onPointerdownTracking, activeListener)
-
-updateTracking()
-
-})();</script>
+})()</script>

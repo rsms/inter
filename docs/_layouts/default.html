@@ -1,29 +1,5 @@
-{%
-assign build_version = site.time | date: "%Y%m%d%H%M%S" %}{%
-assign description = "Inter is a typeface family optimized for user interfaces and computer screens" %}{%
-
-capture title %}{% if page.title %}{{ page.title }} — Inter{% else %}Inter font family{% endif %}{% endcapture %}{%
-
-if site.safe == false %}{%
-assign url_root = "/" %}{% else %}{%
-assign url_root = "/inter/" %}{% endif %}{%
-
-assign release_version = site.data.fontinfo[0].version %}{%
-
-for file in site.static_files %}{%
-  assign _path = file.path | remove_first: "/inter" %}{%
-  if _path == "/res/base.css" %}{%
-    assign base_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  elsif _path == "/res/grid.css" %}{%
-    assign grid_css_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  elsif _path == "/res/base.js" %}{%
-    assign base_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  elsif _path == "/res/favicon.png" %}{%
-    assign favicon_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
-  endif %}{%
-endfor
-
-%}<!DOCTYPE HTML>
+{% include defs.html -%}
+<!DOCTYPE HTML>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -33,10 +9,9 @@ endfor
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="{{url_root}}inter.css?v={{ release_version }}">
     <link rel="stylesheet" href="{{url_root}}res/base.css?v={{ base_css_v }}">
-    <link rel="stylesheet" href="{{url_root}}res/grid.css?v={{ grid_css_v }}">
-    <link rel="stylesheet" href="https://rsms.me/res/fonts/ibm-plex-mono.css">
     <link rel="icon" type="image/png" href="{{url_root}}res/favicon.png?v={{ favicon_v }}">
-    {% include preload-font-files.html %}
+    <link rel="preload" href="{{url_root}}font-files/Inter-Variable.woff2?v={{release_version}}" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{{url_root}}font-files/Inter-Variable-Italic.woff2?v={{release_version}}" as="font" type="font/woff2" crossorigin="anonymous">
     <meta name="format-detection" content="telephone=no">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@rsms">
@@ -64,33 +39,29 @@ endfor
     <meta property="og:type" content="product">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="https://rsms.me/inter{{ page.url }}">
+    {% if page.url contains "/download/" -%}
+      {%- if site.is_development_mode %}<!--{% endif -%}
+    <meta http-equiv="refresh" content="0;url={{ download_url }}" />
+        {%- if site.is_development_mode %}-->{% endif -%}
+    {%- endif -%}
+    {%- if page.custom_html_header -%}
+      {{page.custom_html_header}}
+    {%- endif %}
   </head>
   <body>
-    {% if site.safe == false %}<script>
-      // Allows passing "?debug" in the query string for local builds, which
-      // sets "debug" on the <html> element, enabling CSS debugging.
-      if (document.location.search.indexOf("debug") != -1) {
-        document.documentElement.classList.add("debug")
-      }
-    </script>{% endif %}
-    <div id="hud-notification"><div class="msg">Hello</div></div>
-    <script src="{{url_root}}res/base.js?v={{ base_js_v }}"></script>
+    <header><div>
+      <h4><a {% if page.url == "/" %}href="#" class=scroll-reveal{% else %}href="{{url_root}}"{% endif %}>Inter</a></h4>
+      <div class=menu>
+        <a href="{{url_root}}#features">Features</a>
+        <a href="{{url_root}}#glyphs" {% if page.url contains "/glyphs/" %}class="active"{% endif %}>Glyphs</a>
+        <a href="{{url_root}}lab/" {% if page.url contains "/lab/" %}class="active"{% endif %}>Lab</a>
+        <a href="{{url_root}}download/" {% if page.url contains "/download/" %}class="active"{% endif %}>Download &darr;</a>
+      </div>
+    </div></header>
 
-    <div class="row menu">
-      <ul class="menu">
-        <li class="nav-home"><a href="{{url_root}}">Inter</a></li>
-        <li class="nav-samples"><a href="{{url_root}}samples/" {% if page.url contains "/samples/" %}class="active"{% endif %}>Samples</a></li>
-        <li class="nav-glyphs"><a href="{{url_root}}glyphs/" {% if page.url contains "/glyphs/" %}class="active"{% endif %}>Glyphs</a></li>
-        <li class="nav-dynmetrics"><a href="{{url_root}}dynmetrics/" {% if page.url contains "/dynmetrics/" %}class="active"{% endif %}>Metrics</a></li>
-        <li class="nav-lab"><a href="{{url_root}}lab/" {% if page.url contains "/lab/" %}class="active"{% endif %}>Lab</a></li>
-        <!-- <li class="nav-source"><a href="https://github.com/rsms/inter/">Source</a></li> -->
-        <li class="nav-download"><a href="{{url_root}}download/" {% if page.url contains "/download/" %}class="active"{% endif %}>Download &darr;</a></li>
-      </ul>
-    </div>
 
     {{ content }}
 
-    {% comment %}{% include eji-banner.html %}{% endcomment %}
 
     <footer class="row">
       <p>
@@ -98,5 +69,14 @@ endfor
         Font vendor ID: <a href="https://learn.microsoft.com/en-us/typography/vendors/#r">RSMS</a>
       </p>
     </footer>
+
+
+    {% if site.safe == false %}<script>
+      // Allows passing "?debug" in the query string for local builds, which
+      // sets "debug" on the <html> element, enabling CSS debugging.
+      if (document.location.search.indexOf("debug") != -1) {
+        document.documentElement.classList.add("debug")
+      }
+    </script>{% endif %}
   </body>
 </html>

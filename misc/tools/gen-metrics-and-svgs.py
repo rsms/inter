@@ -30,7 +30,6 @@ def num(s):
   return int(s) if s.find('.') == -1 else float(s)
 
 
-
 def glyphToSVGPath(g, yMul):
   pen = SVGPathPen(g.getParent(), yMul)
   g.draw(pen)
@@ -233,6 +232,11 @@ argparser.add_argument('-scale', dest='scale', metavar='<scale>', type=str,
 argparser.add_argument('ufopath', metavar='<ufopath>', type=str,
                        help='Path to UFO packages')
 
+argparser.add_argument('jsonfile', metavar='<jsonfile>', type=str,
+                       help='Output JSON file')
+argparser.add_argument('htmlfile', metavar='<htmlfile>', type=str,
+                       help='Path to HTML file to patch')
+
 argparser.add_argument('glyphs', metavar='<glyphname>', type=str, nargs='*',
                        help='Only generate specific glyphs.')
 
@@ -248,10 +252,6 @@ ufopath = args.ufopath.rstrip('/')
 
 ufo = Font(ufopath)
 effectiveAscender = max(ufo.info.ascender, ufo.info.unitsPerEm)
-
-
-deleteNames.add('.notdef')
-deleteNames.add('.null')
 
 glyphnames = args.glyphs if len(args.glyphs) else ufo.keys()
 glyphnameSet = set(glyphnames)
@@ -296,10 +296,8 @@ for glyphname in glyphnames:
 svgtext = '\n'.join(svgLines)
 # print(svgtext)
 
-glyphsHtmlFilename = os.path.join(BASEDIR, 'docs', 'glyphs', 'index.html')
-
 html = u''
-with open(glyphsHtmlFilename, 'r', encoding="utf-8") as f:
+with open(args.htmlfile, 'r', encoding="utf-8") as f:
   html = f.read()
 
 startMarker = u'<div id="svgs">'
@@ -308,7 +306,7 @@ startPos = html.find(startMarker)
 endMarker = u'</div><!--END-SVGS'
 endPos = html.find(endMarker, startPos + len(startMarker))
 
-relfilename = os.path.relpath(glyphsHtmlFilename, os.getcwd())
+relfilename = os.path.relpath(args.htmlfile, os.getcwd())
 
 if startPos == -1 or endPos == -1:
   msg = 'Could not find `<div id="svgs">...</div><!--END-SVGS` in %s'
@@ -325,14 +323,13 @@ metaJson += '}'
 html = html[:startPos + len(startMarker)] + '\n' + svgtext + '\n' + html[endPos:]
 
 print('write', relfilename)
-with open(glyphsHtmlFilename, 'w', encoding="utf-8") as f:
+with open(args.htmlfile, 'w', encoding="utf-8") as f:
   f.write(html)
 
 # JSON
-jsonFilename = os.path.join(BASEDIR, 'docs', 'glyphs', 'metrics.json')
-jsonFilenameRel = os.path.relpath(jsonFilename, os.getcwd())
+jsonFilenameRel = os.path.relpath(args.jsonfile, os.getcwd())
 print('write', jsonFilenameRel)
-with open(jsonFilename, 'w', encoding="utf-8") as f:
+with open(args.jsonfile, 'w', encoding="utf-8") as f:
   f.write(metaJson)
 
 metaJson

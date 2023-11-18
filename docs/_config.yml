@@ -2,8 +2,7 @@ port: 3000
 lsi: false
 permalink: /:title
 markdown: kramdown
-# Since GH pages override this to "true", we test this value to see if we are running locally
-safe: false
+theme: null
 kramdown:
   input: GFM
   auto_ids: true
@@ -13,3 +12,10 @@ exclude:
   - Makefile
   - Gemfile
   - Gemfile.lock
+  - _config-dev.yml
+plugins:
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
+redirect_from:
+  json: false
