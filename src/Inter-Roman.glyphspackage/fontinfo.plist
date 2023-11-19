@@ -2535,8 +2535,7 @@ name = "Axis Mappings";
 value = {
 opsz = {
 14 = 14;
-22 = 25;
-28 = 28;
+32 = 32;
 };
 wght = {
 100 = 100;
@@ -3685,7 +3684,7 @@ GSOffsetVertical = 64;
 },
 {
 axesValues = (
-28,
+32,
 100
 );
 customParameters = (
@@ -3745,12 +3744,12 @@ size = "-16";
 name = "Axis Location";
 value = (
 {
-Axis = Weight;
-Location = 100;
+Axis = "Optical size";
+Location = 32;
 },
 {
-Axis = "Optical size";
-Location = 28;
+Axis = Weight;
+Location = 100;
 }
 );
 },
@@ -3975,7 +3974,7 @@ GSOffsetVertical = 100;
 },
 {
 axesValues = (
-28,
+32,
 400
 );
 customParameters = (
@@ -4035,12 +4034,12 @@ size = "-16";
 name = "Axis Location";
 value = (
 {
-Axis = Weight;
-Location = 400;
+Axis = "Optical size";
+Location = 32;
 },
 {
-Axis = "Optical size";
-Location = 28;
+Axis = Weight;
+Location = 400;
 }
 );
 }
@@ -4266,7 +4265,7 @@ GSOffsetVertical = 200;
 },
 {
 axesValues = (
-28,
+32,
 900
 );
 customParameters = (
@@ -4326,12 +4325,12 @@ size = "-16";
 name = "Axis Location";
 value = (
 {
-Axis = Weight;
-Location = 900;
+Axis = "Optical size";
+Location = 32;
 },
 {
-Axis = "Optical size";
-Location = 28;
+Axis = Weight;
+Location = 900;
 }
 );
 },
@@ -4749,7 +4748,7 @@ weightClass = 900;
 },
 {
 axesValues = (
-28,
+32,
 100
 );
 customParameters = (
@@ -4800,7 +4799,7 @@ weightClass = 100;
 },
 {
 axesValues = (
-28,
+32,
 200
 );
 customParameters = (
@@ -4852,7 +4851,7 @@ weightClass = 200;
 },
 {
 axesValues = (
-28,
+32,
 300
 );
 customParameters = (
@@ -4904,7 +4903,7 @@ weightClass = 300;
 },
 {
 axesValues = (
-28,
+32,
 400
 );
 customParameters = (
@@ -4954,7 +4953,7 @@ value = Regular;
 },
 {
 axesValues = (
-28,
+32,
 500
 );
 customParameters = (
@@ -5006,7 +5005,7 @@ weightClass = 500;
 },
 {
 axesValues = (
-28,
+32,
 600
 );
 customParameters = (
@@ -5058,7 +5057,7 @@ weightClass = 600;
 },
 {
 axesValues = (
-28,
+32,
 660
 );
 customParameters = (
@@ -5112,7 +5111,7 @@ weightClass = 700;
 },
 {
 axesValues = (
-28,
+32,
 800
 );
 customParameters = (
@@ -5164,7 +5163,7 @@ weightClass = 800;
 },
 {
 axesValues = (
-28,
+32,
 900
 );
 customParameters = (

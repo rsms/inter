@@ -50,14 +50,21 @@ def fixup_instance(designspace, instance):
 
 
 def fixup_instances(designspace):
+  USE_DISPLAY_AS_DEFAULT = False
   i = len(designspace.instances)
   while i > 0:
     i -= 1
     instance = designspace.instances[i]
-    if instance.name.find('Inter Display') != -1:
-      fixup_instance(designspace, instance)
+    if USE_DISPLAY_AS_DEFAULT:
+      if instance.name.find('Inter Display') != -1:
+        fixup_instance(designspace, instance)
+      else:
+        del designspace.instances[i]
     else:
-      del designspace.instances[i]
+      if instance.name.find('Inter Display') == -1:
+        fixup_instance(designspace, instance)
+      else:
+        del designspace.instances[i]
 
 
 # def fixup_axes_defaults(designspace):

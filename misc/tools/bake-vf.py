@@ -27,14 +27,19 @@ from fontTools.otlLib.builder import buildStatTable
 
 FLAG_DEFAULT = 0x2  # elidable value, effectively marks a location as default
 
+OPSZ_MIN = 0 # set at runtime to fvar.axes['opsz'].minValue
+OPSZ_MAX = 0 # set at runtime to fvar.axes['opsz'].maxValue
+
 
 # stat_axes_format_2 is used for making a STAT table with format 1 & 2 records
 def stat_axes_format_2(is_italic):
+  OPSZ_MID = OPSZ_MIN + int(round((OPSZ_MAX - OPSZ_MIN) / 2))
   return [
     dict(name="Optical Size", tag="opsz", ordering=0, values=[
-      dict(nominalValue=14, rangeMinValue=14, rangeMaxValue=21, name="Text",
-        flags=FLAG_DEFAULT, linkedValue=28),
-      dict(nominalValue=28, rangeMinValue=21, rangeMaxValue=28, name="Display"),
+      dict(nominalValue=OPSZ_MIN, rangeMinValue=OPSZ_MIN, rangeMaxValue=OPSZ_MID,
+        name="Text", flags=FLAG_DEFAULT, linkedValue=OPSZ_MAX),
+      dict(nominalValue=OPSZ_MAX, rangeMinValue=OPSZ_MID, rangeMaxValue=OPSZ_MAX,
+        name="Display"),
     ]),
     dict(name="Weight", tag="wght", ordering=1, values=[
       dict(nominalValue=100, rangeMinValue=100, rangeMaxValue=150, name="Thin"),
@@ -55,53 +60,53 @@ def stat_axes_format_2(is_italic):
   ]
 
 
-# stat_axes_format_3 is used for making a STAT table with format 1 & 3 records
-def stat_axes_format_3(is_italic):
-  # see https://learn.microsoft.com/en-us/typography/opentype/spec/
-  #     stat#axis-value-table-format-3
-  suffix = " Italic" if is_italic else ""
-  return [
-    { "name": "Optical Size", "tag": "opsz" },
-    { "name": "Weight", "tag": "wght", "values": [
-      { "name": "Thin"+suffix,       "value": 100, "linkedValue": 400 },
-      { "name": "ExtraLight"+suffix, "value": 200, "linkedValue": 500 },
-      { "name": "Light"+suffix,      "value": 300, "linkedValue": 600 },
-      { "name": "Regular"+suffix,    "value": 400, "linkedValue": 700,
-        "flags":FLAG_DEFAULT },
-      { "name": "Medium"+suffix,     "value": 500, "linkedValue": 800 },
-      { "name": "SemiBold"+suffix,   "value": 600, "linkedValue": 900 },
-      { "name": "Bold"+suffix,       "value": 700 },
-      { "name": "ExtraBold"+suffix,  "value": 800 },
-      { "name": "Black"+suffix,      "value": 900 },
-    ]},
-  ]
+# # stat_axes_format_3 is used for making a STAT table with format 1 & 3 records
+# def stat_axes_format_3(is_italic):
+#   # see https://learn.microsoft.com/en-us/typography/opentype/spec/
+#   #     stat#axis-value-table-format-3
+#   suffix = " Italic" if is_italic else ""
+#   return [
+#     { "name": "Optical Size", "tag": "opsz" },
+#     { "name": "Weight", "tag": "wght", "values": [
+#       { "name": "Thin"+suffix,       "value": 100, "linkedValue": 400 },
+#       { "name": "ExtraLight"+suffix, "value": 200, "linkedValue": 500 },
+#       { "name": "Light"+suffix,      "value": 300, "linkedValue": 600 },
+#       { "name": "Regular"+suffix,    "value": 400, "linkedValue": 700,
+#         "flags":FLAG_DEFAULT },
+#       { "name": "Medium"+suffix,     "value": 500, "linkedValue": 800 },
+#       { "name": "SemiBold"+suffix,   "value": 600, "linkedValue": 900 },
+#       { "name": "Bold"+suffix,       "value": 700 },
+#       { "name": "ExtraBold"+suffix,  "value": 800 },
+#       { "name": "Black"+suffix,      "value": 900 },
+#     ]},
+#   ]
 
 
-# STAT_AXES is used for making a STAT table with format 4 records
-STAT_AXES = [
-  { "name": "Optical Size", "tag": "opsz" },
-  { "name": "Weight",       "tag": "wght" },
-  { "name": "Italic",       "tag": "ital" }
-]
+# # STAT_AXES is used for making a STAT table with format 4 records
+# STAT_AXES = [
+#   { "name": "Optical Size", "tag": "opsz" },
+#   { "name": "Weight",       "tag": "wght" },
+#   { "name": "Italic",       "tag": "ital" }
+# ]
 
-# stat_locations is used for making a STAT table with format 4 records
-def stat_locations(is_italic):
-  # see https://learn.microsoft.com/en-us/typography/opentype/spec/
-  #     stat#axis-value-table-format-4
-  ital = 1 if is_italic else 0
-  suffix = " Italic" if is_italic else ""
-  return [
-    { "name": "Thin"+suffix,       "location":{"wght":100, "ital":ital} },
-    { "name": "ExtraLight"+suffix, "location":{"wght":200, "ital":ital} },
-    { "name": "Light"+suffix,      "location":{"wght":300, "ital":ital} },
-    { "name": "Regular"+suffix,    "location":{"wght":400, "ital":ital},
-      "flags":FLAG_DEFAULT },
-    { "name": "Medium"+suffix,     "location":{"wght":500, "ital":ital} },
-    { "name": "SemiBold"+suffix,   "location":{"wght":600, "ital":ital} },
-    { "name": "Bold"+suffix,       "location":{"wght":700, "ital":ital} },
-    { "name": "ExtraBold"+suffix,  "location":{"wght":800, "ital":ital} },
-    { "name": "Black"+suffix,      "location":{"wght":900, "ital":ital} },
-  ]
+# # stat_locations is used for making a STAT table with format 4 records
+# def stat_locations(is_italic):
+#   # see https://learn.microsoft.com/en-us/typography/opentype/spec/
+#   #     stat#axis-value-table-format-4
+#   ital = 1 if is_italic else 0
+#   suffix = " Italic" if is_italic else ""
+#   return [
+#     { "name": "Thin"+suffix,       "location":{"wght":100, "ital":ital} },
+#     { "name": "ExtraLight"+suffix, "location":{"wght":200, "ital":ital} },
+#     { "name": "Light"+suffix,      "location":{"wght":300, "ital":ital} },
+#     { "name": "Regular"+suffix,    "location":{"wght":400, "ital":ital},
+#       "flags":FLAG_DEFAULT },
+#     { "name": "Medium"+suffix,     "location":{"wght":500, "ital":ital} },
+#     { "name": "SemiBold"+suffix,   "location":{"wght":600, "ital":ital} },
+#     { "name": "Bold"+suffix,       "location":{"wght":700, "ital":ital} },
+#     { "name": "ExtraBold"+suffix,  "location":{"wght":800, "ital":ital} },
+#     { "name": "Black"+suffix,      "location":{"wght":900, "ital":ital} },
+#   ]
 
 
 WINDOWS_ENGLISH_IDS = 3, 1, 0x409
@@ -348,31 +353,40 @@ def main():
   args = argparser.parse_args()
 
   # load font
-  font = TTFont(args.input, recalcBBoxes=False, recalcTimestamp=False)
+  ttfont = TTFont(args.input, recalcBBoxes=False, recalcTimestamp=False)
+
+  # infer axis extremes
+  global OPSZ_MIN
+  global OPSZ_MAX
+  for a in ttfont["fvar"].axes:
+    if a.axisTag == "opsz":
+      OPSZ_MIN = int(a.minValue)
+      OPSZ_MAX = int(a.maxValue)
+      break
 
   # set family name
   if not args.family:
     args.family = "Inter Variable"
-  setFamilyName(font, args.family)
+  setFamilyName(ttfont, args.family)
 
   # set style name
-  stylename = remove_substring(getStyleName(font), "Display")
+  stylename = remove_substring(getStyleName(ttfont), "Display")
   if stylename == '':
     stylename = 'Regular'
-  setStyleName(font, stylename)
+  setStyleName(ttfont, stylename)
 
   # build STAT table
-  gen_stat(font)
+  gen_stat(ttfont)
 
   # fixup fvar table
-  fixup_fvar(font)
+  fixup_fvar(ttfont)
 
   # # fixup OS/2 table (set usWeightClass)
-  # fixup_os2(font)
+  # fixup_os2(ttfont)
 
   # save font
   outfile = args.output or args.input
-  font.save(outfile)
+  ttfont.save(outfile)
 
 
 if __name__ == '__main__':
