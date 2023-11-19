@@ -6,7 +6,7 @@ assign release_version = site.data.fontinfo[0].version %}{%
 capture title %}{% if page.title %}{{ page.title }} — Inter{% else %}Inter font family{% endif %}{% endcapture %}{%
 
 if site.baseurl %}{%
-  assign url_root = site.baseurl %}{%
+  assign url_root = site.baseurl + "/" %}{%
 else %}{%
   assign url_root = "/inter/" %}{%
 endif %}{%
