@@ -60,17 +60,57 @@ dist: info lab/index.html
 info: fonts _data/fontinfo.json lab/glyphinfo.json
 fonts: font-files/Inter-Regular.woff2
 
-FONTS_SRC := $(wildcard \
-	$(FONTDIR)/static/Inter*.woff2 \
+FONTS_SRC := \
+	$(FONTDIR)/static/Inter-Black.woff2 \
+	$(FONTDIR)/static/Inter-BlackItalic.woff2 \
+	$(FONTDIR)/static/Inter-Bold.woff2 \
+	$(FONTDIR)/static/Inter-BoldItalic.woff2 \
+	$(FONTDIR)/static/Inter-ExtraBold.woff2 \
+	$(FONTDIR)/static/Inter-ExtraBoldItalic.woff2 \
+	$(FONTDIR)/static/Inter-ExtraLight.woff2 \
+	$(FONTDIR)/static/Inter-ExtraLightItalic.woff2 \
+	$(FONTDIR)/static/Inter-Italic.woff2 \
+	$(FONTDIR)/static/Inter-Light.woff2 \
+	$(FONTDIR)/static/Inter-LightItalic.woff2 \
+	$(FONTDIR)/static/Inter-Medium.woff2 \
+	$(FONTDIR)/static/Inter-MediumItalic.woff2 \
+	$(FONTDIR)/static/Inter-Regular.woff2 \
+	$(FONTDIR)/static/Inter-SemiBold.woff2 \
+	$(FONTDIR)/static/Inter-SemiBoldItalic.woff2 \
+	$(FONTDIR)/static/Inter-Thin.woff2 \
+	$(FONTDIR)/static/Inter-ThinItalic.woff2 \
+	$(FONTDIR)/static/InterDisplay-Black.woff2 \
+	$(FONTDIR)/static/InterDisplay-BlackItalic.woff2 \
+	$(FONTDIR)/static/InterDisplay-Bold.woff2 \
+	$(FONTDIR)/static/InterDisplay-BoldItalic.woff2 \
+	$(FONTDIR)/static/InterDisplay-ExtraBold.woff2 \
+	$(FONTDIR)/static/InterDisplay-ExtraBoldItalic.woff2 \
+	$(FONTDIR)/static/InterDisplay-ExtraLight.woff2 \
+	$(FONTDIR)/static/InterDisplay-ExtraLightItalic.woff2 \
+	$(FONTDIR)/static/InterDisplay-Italic.woff2 \
+	$(FONTDIR)/static/InterDisplay-Light.woff2 \
+	$(FONTDIR)/static/InterDisplay-LightItalic.woff2 \
+	$(FONTDIR)/static/InterDisplay-Medium.woff2 \
+	$(FONTDIR)/static/InterDisplay-MediumItalic.woff2 \
+	$(FONTDIR)/static/InterDisplay-Regular.woff2 \
+	$(FONTDIR)/static/InterDisplay-SemiBold.woff2 \
+	$(FONTDIR)/static/InterDisplay-SemiBoldItalic.woff2 \
+	$(FONTDIR)/static/InterDisplay-Thin.woff2 \
+	$(FONTDIR)/static/InterDisplay-ThinItalic.woff2 \
   $(FONTDIR)/var/Inter-Variable.woff2 \
   $(FONTDIR)/var/Inter-Variable-Italic.woff2 \
-  $(FONTDIR)/var/Inter-Variable.ttf)
+  $(FONTDIR)/var/Inter-Variable.ttf
 
 font-files/Inter-Regular.woff2: $(FONTS_SRC)
-	$(Q)rm -rf font-files/Inter*
-	$(Q)mkdir -p font-files
+	rm -rf font-files/Inter*
+	mkdir -p font-files
 	cp -a $^ font-files/
 	$(Q)touch $@
+
+$(FONTS_SRC):
+	@echo "Missing fonts in $(FONTDIR)" >&2
+	@echo "Did you forget to 'make web' in the repository root?" >&2
+	@exit 1
 
 lab/index.html: ../version.txt ../misc/tools/patch-version.py
 	. $(VENV); python ../misc/tools/patch-version.py $@

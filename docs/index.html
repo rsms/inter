@@ -994,7 +994,7 @@ At a later date we find the word applied to very different objects, though alway
       {% endif %}
     </r-cell>
 
-    <r-cell span=3-5 class="leading-trim feat-example" style="font-feature-settings:'{{f.tag}}' 0,'calt' 0{% if f.disable %},'{{f.disable}}'0 {% endif %}">
+    <r-cell span=3-5 class="leading-trim feat-example" style="font-feature-settings:'{{f.tag}}' 0{% if f.disable %},'{{f.disable}}'0 {% endif %}">
     {% for sample in f.samples %}{%
       assign sample_in = sample | replace: "›", "<em>" | replace: "‹", "</em>" -%}
       {{sample_in}}<br>
