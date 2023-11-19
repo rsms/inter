@@ -2540,6 +2540,7 @@ opsz = {
 wght = {
 100 = 100;
 400 = 400;
+500 = 490;
 600 = 580;
 700 = 670;
 800 = 780;
@@ -4587,7 +4588,7 @@ name = Italic;
 {
 axesValues = (
 14,
-500
+490
 );
 customParameters = (
 {
@@ -4611,8 +4612,8 @@ value = "9.4";
 }
 );
 instanceInterpolations = {
-"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.8;
-"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.2;
+"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.82;
+"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.18;
 };
 isItalic = 1;
 linkStyle = Medium;
@@ -4632,7 +4633,7 @@ weightClass = 500;
 {
 axesValues = (
 14,
-600
+580
 );
 customParameters = (
 {
@@ -4656,8 +4657,8 @@ value = "9.4";
 }
 );
 instanceInterpolations = {
-"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.6;
-"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.4;
+"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.64;
+"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.36;
 };
 isItalic = 1;
 linkStyle = SemiBold;
@@ -4677,7 +4678,7 @@ weightClass = 600;
 {
 axesValues = (
 14,
-700
+670
 );
 customParameters = (
 {
@@ -4701,8 +4702,8 @@ value = (
 }
 );
 instanceInterpolations = {
-"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.4;
-"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.6;
+"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.46;
+"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.54;
 };
 isBold = 1;
 isItalic = 1;
@@ -4713,7 +4714,7 @@ weightClass = 700;
 {
 axesValues = (
 14,
-800
+780
 );
 customParameters = (
 {
@@ -4737,8 +4738,8 @@ value = "9.4";
 }
 );
 instanceInterpolations = {
-"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.2;
-"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.8;
+"11F4534A-B963-4AB5-820F-DAF9A20CD933" = 0.24;
+"D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E" = 0.76;
 };
 isItalic = 1;
 linkStyle = ExtraBold;
@@ -5029,7 +5030,7 @@ value = Italic;
 {
 axesValues = (
 32,
-500
+490
 );
 customParameters = (
 {
@@ -5057,8 +5058,8 @@ value = 0;
 }
 );
 instanceInterpolations = {
-m008 = 0.8;
-m010 = 0.2;
+m008 = 0.82;
+m010 = 0.18;
 };
 isItalic = 1;
 linkStyle = Medium;
@@ -5087,7 +5088,7 @@ weightClass = 500;
 {
 axesValues = (
 32,
-600
+580
 );
 customParameters = (
 {
@@ -5115,8 +5116,8 @@ value = 0;
 }
 );
 instanceInterpolations = {
-m008 = 0.6;
-m010 = 0.4;
+m008 = 0.64;
+m010 = 0.36;
 };
 isItalic = 1;
 linkStyle = SemiBold;
@@ -5145,7 +5146,7 @@ weightClass = 600;
 {
 axesValues = (
 32,
-700
+670
 );
 customParameters = (
 {
@@ -5173,8 +5174,8 @@ value = 0;
 }
 );
 instanceInterpolations = {
-m008 = 0.4;
-m010 = 0.6;
+m008 = 0.46;
+m010 = 0.54;
 };
 isBold = 1;
 isItalic = 1;
@@ -5204,7 +5205,7 @@ weightClass = 700;
 {
 axesValues = (
 32,
-800
+780
 );
 customParameters = (
 {
@@ -5232,8 +5233,8 @@ value = 0;
 }
 );
 instanceInterpolations = {
-m008 = 0.2;
-m010 = 0.8;
+m008 = 0.24;
+m010 = 0.76;
 };
 isItalic = 1;
 linkStyle = ExtraBold;
