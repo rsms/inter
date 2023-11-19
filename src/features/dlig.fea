@@ -6,6 +6,14 @@
 # https://learn.microsoft.com/en-us/typography/opentype/spec/chapter2#lookup-table
 lookupflag IgnoreMarks;
 
+# fi
+sub f' [
+  i idotless idotless.double itildebelow ibar igrave iacute iogonek
+  ihookabove idotbelow icyrillic ij i.sc
+
+  j jdotless jdotlessbar uni0249 uni0249.ccmp jcrosstail yotgreek jecyrillic
+] by f.i;
+
 # ff -> ff'
 @DLIG_f_L = [ f fdotaccent feng ];
 @DLIG_f_R = [ f.1 fdotaccent.1 feng.1 ];

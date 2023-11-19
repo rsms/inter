@@ -2780,11 +2780,6 @@ code = "include(features/dlig.fea);
 tag = dlig;
 },
 {
-code = "include(features/liga.fea);
-";
-tag = liga;
-},
-{
 automatic = 1;
 code = "sub a by a.subs;
 sub b by b.subs;
