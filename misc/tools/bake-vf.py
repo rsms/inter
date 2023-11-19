@@ -80,9 +80,10 @@ def stat_axes_format_3(is_italic):
       dict(name="ExtraBold",  value=800 ),
       dict(name="Black",      value=900 ),
     ]),
+    # Note: OK to have two 'linkedValue's here since we make two separate VFs
     dict(name="Italic", tag="ital", values=[
-      dict(value=1, name="Italic") if is_italic else \
-      dict(value=0, name="Roman", flags=FLAG_DEFAULT),
+      dict(value=1, name="Italic", linkedValue=0) if is_italic else \
+      dict(value=0, name="Roman", linkedValue=1, flags=FLAG_DEFAULT),
     ]),
   ]
 
