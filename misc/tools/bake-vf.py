@@ -54,32 +54,37 @@ def stat_axes_format_2(is_italic):
       dict(nominalValue=900, rangeMinValue=850, rangeMaxValue=900, name="Black"),
     ]),
     dict(name="Italic", tag="ital", ordering=2, values=[
-      dict(value=1, name="Italic") if is_italic else \
-      dict(value=0, name="Roman", flags=FLAG_DEFAULT, linkedValue=1),
+      dict(value=1, name="Italic", linkedValue=0) if is_italic else \
+      dict(value=0, name="Roman", flags=FLAG_DEFAULT),
     ]),
   ]
 
 
-# # stat_axes_format_3 is used for making a STAT table with format 1 & 3 records
-# def stat_axes_format_3(is_italic):
-#   # see https://learn.microsoft.com/en-us/typography/opentype/spec/
-#   #     stat#axis-value-table-format-3
-#   suffix = " Italic" if is_italic else ""
-#   return [
-#     { "name": "Optical Size", "tag": "opsz" },
-#     { "name": "Weight", "tag": "wght", "values": [
-#       { "name": "Thin"+suffix,       "value": 100, "linkedValue": 400 },
-#       { "name": "ExtraLight"+suffix, "value": 200, "linkedValue": 500 },
-#       { "name": "Light"+suffix,      "value": 300, "linkedValue": 600 },
-#       { "name": "Regular"+suffix,    "value": 400, "linkedValue": 700,
-#         "flags":FLAG_DEFAULT },
-#       { "name": "Medium"+suffix,     "value": 500, "linkedValue": 800 },
-#       { "name": "SemiBold"+suffix,   "value": 600, "linkedValue": 900 },
-#       { "name": "Bold"+suffix,       "value": 700 },
-#       { "name": "ExtraBold"+suffix,  "value": 800 },
-#       { "name": "Black"+suffix,      "value": 900 },
-#     ]},
-#   ]
+# stat_axes_format_3 is used for making a STAT table with format 1 & 3 records
+def stat_axes_format_3(is_italic):
+  # see https://learn.microsoft.com/en-us/typography/opentype/spec/
+  #     stat#axis-value-table-format-3
+  return [
+    dict(name="Optical Size", tag="opsz", values=[
+      dict(value=OPSZ_MIN, name="Text"),
+      dict(value=OPSZ_MAX, name="Display"),
+    ]),
+    dict(name="Weight", tag="wght", values=[
+      dict(name="Thin",       value=100 ),
+      dict(name="ExtraLight", value=200 ),
+      dict(name="Light",      value=300 ),
+      dict(name="Regular",    value=400, linkedValue=700, flags=FLAG_DEFAULT ),
+      dict(name="Medium",     value=500 ),
+      dict(name="SemiBold",   value=600 ),
+      dict(name="Bold",       value=700 ),
+      dict(name="ExtraBold",  value=800 ),
+      dict(name="Black",      value=900 ),
+    ]),
+    dict(name="Italic", tag="ital", values=[
+      dict(value=1, name="Italic") if is_italic else \
+      dict(value=0, name="Roman", flags=FLAG_DEFAULT),
+    ]),
+  ]
 
 
 # # STAT_AXES is used for making a STAT table with format 4 records
@@ -313,26 +318,38 @@ def gen_stat(ttfont):
   # bugs out. See https://github.com/rsms/inter/issues/577
   #
   # build a version 1.1 STAT table with format 2 records:
-  buildStatTable(ttfont, stat_axes_format_2(font_is_italic(ttfont)))
+  #buildStatTable(ttfont, stat_axes_format_2(font_is_italic(ttfont)))
   #
   # build a version 1.1 STAT table with format 1 and 3 records:
-  #buildStatTable(ttfont, stat_axes_format_3(font_is_italic(ttfont)))
+  buildStatTable(ttfont, stat_axes_format_3(font_is_italic(ttfont)))
   #
   # build a version 1.2 STAT table with format 4 records:
   #locations = stat_locations(font_is_italic(ttfont))
   #buildStatTable(ttfont, STAT_AXES, locations=locations)
 
 
-def fixup_fvar(ttfont):
+def check_fvar(ttfont):
   fvar = ttfont['fvar']
+  error = False
   for i in fvar.instances:
-    wght = round(i.coordinates['wght'] / 100) * 100
-    # print(f"wght {i.coordinates['wght']} -> {wght}")
-    i.coordinates['wght'] = wght
-  # for a in fvar.axes:
-  #   if a.axisTag == "wght":
-  #     a.defaultValue = 400
-  #     break
+    actual_wght = i.coordinates['wght']
+    expected_wght = round(actual_wght / 100) * 100
+    if expected_wght != actual_wght:
+      print(f"unexpected wght {actual_wght} (expected {expected_wght})",
+        ttfont, i.coordinates)
+      error = True
+
+
+# def fixup_fvar(ttfont):
+#   fvar = ttfont['fvar']
+#   for i in fvar.instances:
+#     wght = round(i.coordinates['wght'] / 100) * 100
+#     print(f"wght {i.coordinates['wght']} -> {wght}")
+#     #i.coordinates['wght'] = wght
+#   # for a in fvar.axes:
+#   #   if a.axisTag == "wght":
+#   #     a.defaultValue = 400
+#   #     break
 
 
 # def fixup_os2(ttfont):
@@ -378,8 +395,8 @@ def main():
   # build STAT table
   gen_stat(ttfont)
 
-  # fixup fvar table
-  fixup_fvar(ttfont)
+  # check fvar table
+  check_fvar(ttfont)
 
   # # fixup OS/2 table (set usWeightClass)
   # fixup_os2(ttfont)
