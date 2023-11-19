@@ -14,7 +14,7 @@ on:
     paths:
       - "src/**"
       - Makefile
-      - requirements.txt
+      - Pipfile
       - version.txt
       - misc/makezip2.sh
       - "misc/tools/**"
@@ -25,7 +25,7 @@ on:
     paths:
       - "src/**"
       - Makefile
-      - requirements.txt
+      - Pipfile
       - version.txt
       - misc/makezip2.sh
       - "misc/tools/**"
