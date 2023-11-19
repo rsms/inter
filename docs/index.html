@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{%
+{% include defs.html %}{%
 
 assign release_version = site.data.fontinfo[0].version %}{%
 
@@ -22,8 +22,6 @@ for c in site.data.languages %}{%
     assign lang_count = lang_count | plus:1 %}{%
   endfor %}{%
 endfor -%}
-<!-- url_root={{url_root}} -->
-<!-- site.baseurl={{site.baseurl}} -->
 <style type="text/css">
 
 body { overflow-x: hidden }

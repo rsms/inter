@@ -16,7 +16,7 @@ build: .ruby-bundle
 
 build-tmp: .ruby-bundle
 	rm -rf _site-tmp
-	bundle exec jekyll build --disable-disk-cache -b /tmp/inter-v4-website/ -d _site-tmp
+	bundle exec jekyll build --disable-disk-cache -b /tmp/inter-v4-website -d _site-tmp
 
 serve: .ruby-bundle
 	$(Q)if [ ! -s lab/fonts ]; then \
@@ -30,7 +30,7 @@ serve: .ruby-bundle
 	@# copied font files and re-creating the symlink, but it was a frail process.
 	@# For live testing with fonts, you'll instead want to use docs/lab/serve.py
 	$(Q)rm -rf _site
-	$(Q)bundle exec jekyll serve -b / --watch \
+	$(Q)bundle exec jekyll serve -b '' --watch \
 		--config _config.yml,_config-dev.yml \
 	  --host $(HTTP_SERVER_BIND_ADDR) --port 3002 \
 	  --livereload --livereload-port 30002
