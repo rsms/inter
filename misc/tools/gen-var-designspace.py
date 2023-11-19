@@ -29,10 +29,14 @@ def fixup_instance(designspace, instance):
   if isItalic:
     psStyle = psStyle.replace('Italic','')
     if psStyle == '':
-      psStyle = 'Regular'
-    instance.postScriptFontName = 'InterVariableItalic-' + psStyle
+      instance.postScriptFontName = 'InterVariableItalic'
+    else:
+      instance.postScriptFontName = 'InterVariableItalic-' + psStyle
   else:
-    instance.postScriptFontName = 'InterVariable-' + psStyle
+    if psStyle == 'Regular':
+      instance.postScriptFontName = 'InterVariable'
+    else:
+      instance.postScriptFontName = 'InterVariable-' + psStyle
 
   instance.styleMapFamilyName = instance.styleMapFamilyName.replace(' Display', '')
 
