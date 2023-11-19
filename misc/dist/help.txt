@@ -11,17 +11,17 @@ Contents:
   5.   License (can I use Inter for x?)
 
 File index:
-  Inter.ttc            Complete font family "Inter"
-  Inter-Variable*.ttf  Complete font family "Inter Variable"
-  web/*                Web fonts and CSS
-  extras/              Alternative formats (see "Extras")
+  Inter.ttc           Complete font family "Inter"
+  InterVariable*.ttf  Complete font family "Inter Variable"
+  web/*               Web fonts and CSS
+  extras/             Alternative formats (see "Extras")
 
 ---------------------------------------------------------------------
 
 1. Installing font files
 
   Inter fonts comes in two flavors: Variable and Static
-  (Inter-Variable*.ttf and Inter.ttc, respectively)
+  (InterVariable*.ttf and Inter.ttc, respectively)
 
   Variable fonts is a new format which allows you to choose any
   weight and optical size. Variable fonts is a relatively new
@@ -41,8 +41,7 @@ File index:
 
   1. Open the "Font Book" application.
   2. In the main menu, select "File" → "Add Fonts..."
-  3. Select "Inter.ttc", "Inter-Variable.ttf" and
-     "Inter-Variable-Italic.ttf"
+  3. Select "Inter.ttc", "InterVariable.ttf" and "InterVariable-Italic.ttf"
   4. Press the "Open" button
 
   Alternatively, if you prefer not to use Font Book, you can move or
@@ -52,8 +51,7 @@ File index:
 1.2. Installing on Microsoft Windows
 
   1. Open the zip file you downloaded
-  2. Select "Inter.ttc", "Inter-Variable.ttf" and
-     "Inter-Variable-Italic.ttf"
+  2. Select "Inter.ttc", "InterVariable.ttf" and "InterVariable-Italic.ttf"
   3. Right-click the selected files, choose "Install for all users"
 
   If you have a previous installation of Inter, you should make sure
@@ -65,9 +63,8 @@ File index:
 1.3. Installing on Ubuntu Linux
 
   1. Create a ".fonts" directory in your home. (mkdir -p ~/.fonts)
-  2. Copy "Inter.ttc", "Inter-Variable.ttf" and
-     "Inter-Variable-Italic.ttf" into your .fonts directory
-     (cp Inter.ttc *.ttf ~/.fonts/)
+  2. Copy "Inter.ttc", "InterVariable.ttf" and "InterVariable-Italic.ttf"
+     into your .fonts directory (cp Inter.ttc *.ttf ~/.fonts/)
 
   You may have to restart apps and/or your window server session.
 

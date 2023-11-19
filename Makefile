@@ -212,10 +212,10 @@ $(FONTDIR)/var/.%.var.otf: $(UFODIR)/%.var.designspace build/features_data | $(F
 	. $(VENV) ; misc/tools/woff2 compress -o "$@" "$<"
 
 
-$(FONTDIR)/var/Inter-Variable.ttf: $(FONTDIR)/var/.Inter-Roman.var.ttf misc/tools/bake-vf.py
+$(FONTDIR)/var/InterVariable.ttf: $(FONTDIR)/var/.Inter-Roman.var.ttf misc/tools/bake-vf.py
 	. $(VENV) ; python misc/tools/bake-vf.py $< -o $@
 
-$(FONTDIR)/var/Inter-Variable-Italic.ttf: $(FONTDIR)/var/.Inter-Italic.var.ttf misc/tools/bake-vf.py
+$(FONTDIR)/var/InterVariable-Italic.ttf: $(FONTDIR)/var/.Inter-Italic.var.ttf misc/tools/bake-vf.py
 	. $(VENV) ; python misc/tools/bake-vf.py $< -o $@
 
 
@@ -230,12 +230,12 @@ $(UFODIR):
 
 
 var: \
-	$(FONTDIR)/var/Inter-Variable.ttf \
-	$(FONTDIR)/var/Inter-Variable-Italic.ttf
+	$(FONTDIR)/var/InterVariable.ttf \
+	$(FONTDIR)/var/InterVariable-Italic.ttf
 
 var_web: \
-	$(FONTDIR)/var/Inter-Variable.woff2 \
-	$(FONTDIR)/var/Inter-Variable-Italic.woff2
+	$(FONTDIR)/var/InterVariable.woff2 \
+	$(FONTDIR)/var/InterVariable-Italic.woff2
 
 web: var_web static_web
 
@@ -310,19 +310,51 @@ test: test_var test_static
 test_var: \
 	build/fontbakery-report-var.txt
 test_static: \
-	build/fontbakery-report-static-text.txt \
-  build/fontbakery-report-static-display.txt
+	build/fontbakery-report-text.txt \
+  build/fontbakery-report-display.txt
 
-# disabled fontbakery tests
-# TODO: re-enable and work out these issues
-# Note: com.google.fonts/check/fontbakery_version calls a server to see if
-# there's a newer version of fontbakery and FAILs if there is.
-FBAKE_DISABLED := \
-  -x com.google.fonts/check/fontbakery_version \
-  -x com.google.fonts/check/family/win_ascent_and_descent \
+# disabled fontbakery tests:
+FBAKE_DISABLED =
+FBAKE_DISABLED_STATIC =
+
+FBAKE_DISABLED += com.google.fonts/check/fontbakery_version
+# Calls a server to see if there's a newer version of fontbakery and
+# FAILs if there is. This breaks reproducible builds.
+
+FBAKE_DISABLED += com.google.fonts/check/family/win_ascent_and_descent
+# "FAIL OS/2.usWinAscent value should be equal or greater than 2269,
+#  but got 1984 instead"
+# "FAIL OS/2.usWinDescent value should be equal or greater than 660,
+#  but got 494 instead"
+
+
+FBAKE_DISABLED_STATIC += com.google.fonts/check/family/underline_thickness
+# "Fonts have consistent underline thickness"
+# Inter explicitly have varying underline thickness, matching wght
+
+FBAKE_DISABLED_STATIC += com.google.fonts/check/contour_count
+# This test is pedantic; generates warnings when the number of contours are different
+# than what is usually seen in other fonts. No real world impact.
+
+# The following test are minor issues, left enabled for the var tests
+# but disabled for the static tests to reduce noise
+
+FBAKE_DISABLED_STATIC += com.google.fonts/check/legacy_accents
+# "Glyph <NAME> has a legacy accent component (hungarumlaut)"
+# TODO: improve the design of Hungar* composite glyphs to use marks
+
+FBAKE_DISABLED_STATIC += com.google.fonts/check/gdef_mark_chars
+# "Check mark characters are in GDEF mark glyph class"
+# "WARN The following mark characters could be in the GDEF mark glyph
+#  class: uni0488 (U+0488), uni0489 (U+0489), uni20DD (U+20DD), uni20DE (U+20DE)"
+
+FBAKE_DISABLED_STATIC += com.google.fonts/check/gdef_spacing_marks
+# "Check glyphs in mark glyph class are non-spacing"
+# "WARN The following spacing glyphs may be in the GDEF mark glyph class by mistake:
+#  dotbelow (U+0323)
 
 # FBAKE_ARGS are common args for all fontbakery targets
-FBAKE_ARGS := \
+FBAKE_ARGS = \
 	check-universal \
 	--no-colors \
 	--no-progress \
@@ -330,32 +362,33 @@ FBAKE_ARGS := \
 	--succinct \
 	--full-lists \
 	-j \
-	$(FBAKE_DISABLED)
+	$(patsubst %,-x %,$(FBAKE_DISABLED))
+
+FBAKE_ARGS_STATIC = $(FBAKE_ARGS) $(patsubst %,-x %,$(FBAKE_DISABLED_STATIC))
 
 STATIC_TEXT_FONTS_TTF = $(patsubst %,$(FONTDIR)/static-hinted/%.ttf,$(STATIC_TEXT_FONTS))
 STATIC_DISPLAY_FONTS_TTF = $(patsubst %,$(FONTDIR)/static-hinted/%.ttf,$(STATIC_DISPLAY_FONTS))
 
-build/fontbakery-report-var.txt: \
-		$(FONTDIR)/var/Inter-Variable.ttf \
-		$(FONTDIR)/var/Inter-Variable-Italic.ttf \
-		| venv
-	@echo "fontbakery {Inter-Variable,Inter-Variable-Italic}.ttf > $(@) ..."
+build/fontbakery-report-var.txt: $(FONTDIR)/var/InterVariable.ttf $(FONTDIR)/var/InterVariable-Italic.ttf | venv
+	@echo "fontbakery InterVariable -> $(@) ..."
 	@. $(VENV) ; fontbakery $(FBAKE_ARGS) $^ > $@ \
 		|| (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
+	@echo "fontbakery InterVariable: PASS"
+	@grep -E -A7 '^Total:' $@ | tail -6 | sed -E 's/^ +/  /g'
 
-build/fontbakery-report-static-text.txt: $(STATIC_TEXT_FONTS_TTF) | venv
-	@echo "fontbakery static/Inter-*.ttf > $@ ..."
-	@. $(VENV) ; fontbakery \
-		$(FBAKE_ARGS) -x com.google.fonts/check/family/underline_thickness \
-		$^ > $@ \
+build/fontbakery-report-text.txt: $(STATIC_TEXT_FONTS_TTF) | venv
+	@echo "fontbakery Inter -> $@ ..."
+	@. $(VENV) ; fontbakery $(FBAKE_ARGS_STATIC) $^ > $@ \
 		|| (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
+	@echo "fontbakery Inter: PASS"
+	@grep -E -A7 '^Total:' $@ | tail -6 | sed -E 's/^ +/  /g'
 
-build/fontbakery-report-static-display.txt: $(STATIC_DISPLAY_FONTS_TTF) | venv
-	@echo "fontbakery static/InterDisplay-*.ttf > $@ ..."
-	@. $(VENV) ; fontbakery \
-		$(FBAKE_ARGS) -x com.google.fonts/check/family/underline_thickness \
-		$^ > $@ \
+build/fontbakery-report-display.txt: $(STATIC_DISPLAY_FONTS_TTF) | venv
+	@echo "fontbakery InterDisplay -> $@ ..."
+	@. $(VENV) ; fontbakery $(FBAKE_ARGS_STATIC) $^ > $@ \
 		|| (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
+	@echo "fontbakery InterDisplay: PASS"
+	@grep -E -A7 '^Total:' $@ | tail -6 | sed -E 's/^ +/  /g'
 
 .PHONY: test test_var
 
@@ -367,10 +400,10 @@ zip: all
 		"build/release/Inter-$(VERSION)-$(shell git rev-parse --short=10 HEAD).zip"
 
 zip_beta: \
-		$(FONTDIR)/var/Inter-Variable.ttf \
-		$(FONTDIR)/var/Inter-Variable.woff2 \
-		$(FONTDIR)/var/Inter-Variable-Italic.ttf \
-		$(FONTDIR)/var/Inter-Variable-Italic.woff2
+		$(FONTDIR)/var/InterVariable.ttf \
+		$(FONTDIR)/var/InterVariable.woff2 \
+		$(FONTDIR)/var/InterVariable-Italic.ttf \
+		$(FONTDIR)/var/InterVariable-Italic.woff2
 	mkdir -p build/release
 	zip -j -q -X "build/release/Inter_beta-$(VERSION)-$(shell date '+%Y%m%d_%H%M')-$(shell git rev-parse --short=10 HEAD).zip" $^
 
@@ -406,7 +439,7 @@ dist:
 	$(MAKE) -f $(MAKEFILE) dist_postflight
 
 dist_zip: | venv
-	. $(VENV) ; python misc/tools/patch-version.py misc/dist/inter.css
+	@#. $(VENV) ; python misc/tools/patch-version.py misc/dist/inter.css
 	bash misc/makezip2.sh -reveal-in-finder "$(DIST_ZIP)"
 
 dist_docs:
@@ -438,27 +471,35 @@ INSTALLDIR := $(HOME)/Library/Fonts/Inter
 install: install_var install_ttf
 
 install_var: \
-	$(INSTALLDIR)/Inter-Variable.ttf \
-	$(INSTALLDIR)/Inter-Variable-Italic.ttf
+	$(INSTALLDIR)/InterVariable.ttf \
+	$(INSTALLDIR)/InterVariable-Italic.ttf
 
 install_ttf: $(INSTALLDIR)/Inter.ttc
 install_otf: $(INSTALLDIR)/Inter.otc
 
 $(INSTALLDIR)/%.ttc: $(FONTDIR)/static-hinted/%.ttc | $(INSTALLDIR)
-	rm -rf $(INSTALLDIR)/Inter*.otf $(INSTALLDIR)/Inter*.otc
+	@# remove conflicting OTF fonts
+	rm -f $(INSTALLDIR)/Inter*.otf $(INSTALLDIR)/Inter*.otc
 	cp -a $^ $@
 
 $(INSTALLDIR)/%.otc: $(FONTDIR)/static/%.otc | $(INSTALLDIR)
-	rm -rf $(INSTALLDIR)/Inter*.ttc
+	@# remove conflicting TTF fonts
+	@rm -fv $(INSTALLDIR)/Inter*.ttc
 	cp -a $^ $@
 
-$(INSTALLDIR)/Inter-Variable.ttf: $(FONTDIR)/var/Inter-Variable.ttf | $(INSTALLDIR)
+$(INSTALLDIR)/InterVariable.ttf: $(FONTDIR)/var/InterVariable.ttf | $(INSTALLDIR)
+	@# remove font with legacy name
+	@rm -fv $(INSTALLDIR)/InterVariable.ttf
 	cp -a $^ $@
 
-$(INSTALLDIR)/Inter-Variable-Italic.ttf: $(FONTDIR)/var/Inter-Variable-Italic.ttf | $(INSTALLDIR)
+$(INSTALLDIR)/InterVariable-Italic.ttf: $(FONTDIR)/var/InterVariable-Italic.ttf | $(INSTALLDIR)
+	@# remove font with legacy name
+	@rm -fv $(INSTALLDIR)/InterVariable-Italic.ttf
 	cp -a $^ $@
 
 $(INSTALLDIR)/%.otf: $(FONTDIR)/static/%.otf | $(INSTALLDIR)
+	@# remove conflicting TTF fonts
+	rm -f $(INSTALLDIR)/{Inter,InterDisplay}-*.ttf
 	cp -a $^ $@
 
 $(INSTALLDIR):
@@ -484,8 +525,8 @@ build/ttx/%: $(FONTDIR)/static/%.ttf
 	ttx -x glyf -x GPOS -x GSUB -i -f -s "build/ttx/$(basename $(notdir $^))/$(notdir $^)"
 	@echo "Dumped $(notdir $^) to build/ttx/$(basename $(notdir $^))/"
 
-ttx_var_roman: build/ttx/Inter-Variable
-ttx_var_italic: build/ttx/Inter-Variable-Italic
+ttx_var_roman: build/ttx/InterVariable
+ttx_var_italic: build/ttx/InterVariable-Italic
 ttx_var: ttx_var_roman ttx_var_italic
 ttx_static: $(patsubst %,build/ttx/%,$(STATIC_FONTS))
 
