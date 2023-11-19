@@ -772,7 +772,7 @@ build/venv/config2.stamp: Pipfile.lock Pipfile
 	@mkdir -p build
 	[ ! -f build/venv/config.stamp ] || rm -rf build/venv
 	[ -d build/venv ] || python3 -m venv build/venv
-	. $(VENV) ; pip install pipenv
+	. $(VENV) ; pip install pipenv==2023.8.28
 	. $(VENV) ; pipenv install
 	touch $@
 
