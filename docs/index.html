@@ -52,6 +52,9 @@ h1.title {
 .row.examples .label { font-size: var(--font-size); opacity: 0.3; }
 .row.examples a.label:hover { opacity: 1; }
 .row.examples .label.r { text-align: right }
+@media only screen and (max-width: 719px) { /* window width <= 719 */
+  .row.examples .example-note { margin: 1em 0 }
+}
 .example2 {
   font-size: 10vw;
   line-height: initial;
@@ -1033,20 +1036,19 @@ At a later date we find the word applied to very different objects, though alway
     <r-cell span=row id="features/cv">
       <r-feat>cvXX</r-feat> Character variants
     </r-cell>
-
     <r-cell span=row class="example2 features"
         style="font-weight:600;margin-bottom:-1rem">
       1234567890</r-cell>
     <r-cell span=row class="example2 features"
         style="font-weight:600;font-feature-settings:'cv01' 1,'cv02' 1,'cv03' 1,'cv04' 1,'cv09' 1,'zero' 1,'liga' 1,'calt' 1">
       1234567890</r-cell>
-    <r-cell span=2>Alternative digits</r-cell>
-    <r-cell span=3-4 span-s=3-6>
+    <r-cell span=2 span-s=row class=example-note>Alternative digits</r-cell>
+    <r-cell span=3-4 span-s=row>
       <r-feat>cv01</r-feat> Alternate one<br>
       <r-feat>cv09</r-feat> Flat-top three<br>
       <r-feat>cv02</r-feat> Open four<br>
     </r-cell>
-    <r-cell span=5-6 span-s=3-6>
+    <r-cell span=5-6 span-s=row>
       <r-feat>cv03</r-feat> Open six<br>
       <r-feat>cv04</r-feat> Open nine<br>
       <r-feat>zero</r-feat> Slashed zero<br>
@@ -1060,10 +1062,10 @@ At a later date we find the word applied to very different objects, though alway
     <r-cell span=row class="example2 features"
         style="font-feature-settings:'cv06' 1,'cv10' 1,'cv11' 1,'liga' 1,'calt' 1">
       Guillable ürá</r-cell>
-    <r-cell span=2>
+    <r-cell span=2 span-s=row class=example-note>
       Character variants is a mood
     </r-cell>
-    <r-cell span=3..>
+    <r-cell span=3.. span-s=row>
       <r-feat>cv10</r-feat> Capital G with spur<br>
       <r-feat>cv06</r-feat> Simplified u<br>
       <r-feat>cv11</r-feat> Single-story a<br>
@@ -1077,10 +1079,10 @@ At a later date we find the word applied to very different objects, though alway
     <r-cell span=row class="example2 features"
         style="font-weight:300;font-feature-settings:'cv12' 1,'cv13' 1,'liga' 1,'calt' 1">
       Efficient after</r-cell>
-    <r-cell span=2>
+    <r-cell span=2 span-s=row class=example-note>
       Give it a compact character
     </r-cell>
-    <r-cell span=3..>
+    <r-cell span=3.. span-s=row>
       <r-feat>cv12</r-feat> Compact f<br>
       <r-feat>cv13</r-feat> Compact t<br>
     </r-cell>
@@ -1106,10 +1108,10 @@ At a later date we find the word applied to very different objects, though alway
     <r-cell span=row class="example2 features"
         style="font-size:10vw;font-variant:tabular-nums;line-height:1.1;margin-bottom:2rem">
       <span style="font-weight:100">1</span><span style="font-weight:200">2</span><span style="font-weight:300">3.</span><span style="font-weight:400">4</span><span style="font-weight:500">5</span><span style="font-weight:600">6</span><span style="font-weight:700">7</span><span style="font-weight:800">8</span><span style="font-weight:900">90</span>[1]<span style="font-weight:600">,</span><span style="font-weight:800">3</span></r-cell>
-    <r-cell span=2>
+    <r-cell span=2 span-s=row class=example-note>
       Tabular figures are excellent for tables of numeric data. <code>tnum</code> enables an entire set of dedicated glyphs that have the same width across all weights.
     </r-cell>
-    <r-cell span=3..>
+    <r-cell span=3.. span-s=row>
       <r-feat>tnum</r-feat> Tabular figures
     </r-cell>
 
@@ -1121,11 +1123,11 @@ At a later date we find the word applied to very different objects, though alway
     <r-cell span=row class="example2 features"
         style="font-feature-settings:'ss02' 1,'liga' 1,'calt' 1">
       Illusion A03</r-cell>
-    <r-cell span=2>
+    <r-cell span=2 span-s=row class=example-note>
       Disambiguate between similar-looking characters with
       <r-feat>ss02</r-feat> or individual character variants
     </r-cell>
-    <r-cell span=3..>
+    <r-cell span=3.. span-s=row>
       <r-feat>ss02</r-feat> Disambiguation, or<br>
       <r-feat>cv08</r-feat> Upper-case i with serif<br>
       <r-feat>cv05</r-feat> Lower-case L with tail<br>
@@ -1134,18 +1136,19 @@ At a later date we find the word applied to very different objects, though alway
 
     <hr style="margin-top:3rem">
 
-    <r-cell span=row class="example2" style="font-weight:500;white-space:nowrap;font-size:9.5vw">
+    <r-cell span=row class="example2"
+      style="font-weight:500;white-space:nowrap;font-size:9.5vw">
       It’s “fun” here, Möbius</r-cell>
     <r-cell span=row class="example2"
-        style="font-weight:500;white-space:nowrap;font-size:9.5vw;font-feature-settings:'ss03' 1,'liga' 1,'calt' 1;margin-bottom:1rem">
+      style="font-weight:500;white-space:nowrap;font-size:9.5vw;font-feature-settings:'ss03' 1,'liga' 1,'calt' 1">
       It’s “fun” here, Möbius</r-cell>
     <r-cell span=row class="example2"
-        style="font-weight:500;white-space:nowrap;font-size:9.5vw;font-feature-settings:'ss07' 1,'ss08' 1,'liga' 1,'calt' 1;margin-bottom:1rem">
+      style="font-weight:500;white-space:nowrap;font-size:9.5vw;font-feature-settings:'ss07' 1,'ss08' 1,'liga' 1,'calt' 1;margin-bottom:1rem">
       It’s “fun” here, Möbius</r-cell>
-    <r-cell span=2>
+    <r-cell span=2 span-s=row class=example-note>
       Add a little personality to titles
     </r-cell>
-    <r-cell span=3..>
+    <r-cell span=3.. span-s=row>
       <r-feat>ss03</r-feat> Round quotes &amp; commas<br>
       <r-feat>ss07</r-feat> Square punctuation<br>
       <r-feat>ss08</r-feat> Square quotes<br>
