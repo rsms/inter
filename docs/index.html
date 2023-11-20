@@ -1386,7 +1386,7 @@ let observer = new IntersectionObserver(callback, { rootMargin: "0px", threshold
 observer.observe($('h1'))
 
 // low priority stuff that doesn't need to happen immediately
-requestIdleCallback(() => {
+;(typeof requestIdleCallback == "undefined" ? f => f() : requestIdleCallback)(() => {
   // convert .num/num numbers to local format, e.g. "1,234.56" vs "1.234,56"
   let nfmt = new Intl.NumberFormat() // test with .NumberFormat('de-DE')
   if (nfmt.format(1234.89) != "1,234.89") { // written as "1,234.89" in source
