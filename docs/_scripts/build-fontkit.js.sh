@@ -8,9 +8,9 @@
 # Use the result like this:
 #   <script type="module">
 #   import fontkit from "./fontkit-2.0.2.js"
-#   let data = await fetch("Inter-Variable.ttf").then(r => r.arrayBuffer())
+#   let data = await fetch("InterVariable.ttf").then(r => r.arrayBuffer())
 #   let font = fontkit.create(new Uint8Array(data))
-#   let instance = font.getVariation({wght: 600, opsz: 28})
+#   let instance = font.getVariation({wght: 600, opsz: 32})
 #   console.log({font, instance})
 #   </script>
 #

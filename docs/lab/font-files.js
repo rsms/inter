@@ -1,11 +1,6 @@
-var fontFamilyName,
-    fontFamilyNameHinted,
-    fontFamilyNameVar,
-    fontFamilyNameVarHinted,
-    fontFamilyNameDisplay,
-    fontFamilyNameDisplayHinted,
-    fontFamilyNameDisplayVar,
-    fontFamilyNameDisplayVarHinted;
+var fontFamilyName
+var fontFamilyNameDisplay
+var fontFamilyNameVar
 
 ;(()=>{
   let isLocalServer = document.location.protocol == "http:"
@@ -19,37 +14,29 @@ var fontFamilyName,
   );
 
   fontFamilyName = 'Inter-v' + fontVersion
-  fontFamilyNameHinted = 'Inter-hinted-v' + fontVersion
-  fontFamilyNameVar = 'Inter-var-v' + fontVersion
-  fontFamilyNameVarHinted = 'Inter-var-hinted-v' + fontVersion
   fontFamilyNameDisplay = 'InterDisplay-v' + fontVersion
-  fontFamilyNameDisplayHinted = 'InterDisplay-hinted-v' + fontVersion
-  fontFamilyNameDisplayVar = 'InterDisplay-var-v' + fontVersion
-  fontFamilyNameDisplayVarHinted = 'InterDisplay-var-hinted-v' + fontVersion
+  fontFamilyNameVar = 'Inter-var-v' + fontVersion
 
   let outbuf = []
   function w(s) { outbuf.push(s) }
 
-  function getStyleName(weight, isItalic) {
-    let style = ""
-    switch (weight) {
-      case 100: style = "Thin"; break
-      case 200: style = "ExtraLight"; break
-      case 300: style = "Light"; break
-      case 400: style = ""; break
-      case 500: style = "Medium"; break
-      case 600: style = "SemiBold"; break
-      case 700: style = "Bold"; break
-      case 800: style = "ExtraBold"; break
-      case 900: style = "Black"; break
-    }
-    return style + (isItalic ? "Italic" : "")
-  }
-
   function genStaticFontFace(family, cssname, filepath, weight, isItalic) {
-    let styleName = getStyleName(weight, isItalic)
+    let styleName = ""
+    switch (weight) {
+      case 100: styleName = "Thin"; break
+      case 200: styleName = "ExtraLight"; break
+      case 300: styleName = "Light"; break
+      case 400: styleName = ""; break
+      case 500: styleName = "Medium"; break
+      case 600: styleName = "SemiBold"; break
+      case 700: styleName = "Bold"; break
+      case 800: styleName = "ExtraBold"; break
+      case 900: styleName = "Black"; break
+    }
     if (styleName == "") {
       styleName = isItalic ? "Italic" : "Regular"
+    } else if (isItalic) {
+      styleName += "Italic"
     }
     let filename = `${family}-${styleName}`
     w(`@font-face {`)
@@ -69,15 +56,10 @@ var fontFamilyName,
     w(`  url("../font-files/${filename}.woff?${fontVersion}") format("woff2");`)
     w(`}`)
   }
-
-  let families = [
-    ["Inter",        "static",        fontFamilyName],
-    ["Inter",        "static-hinted", fontFamilyNameHinted],
-    ["InterDisplay", "static",        fontFamilyNameDisplay],
-    ["InterDisplay", "static-hinted", fontFamilyNameDisplayHinted],
-  ]
-
-  for (let [family, filepath, cssname] of families) {
+  for (let [family, filepath, cssname] of [
+    ["Inter",        "static", fontFamilyName],
+    ["InterDisplay", "static", fontFamilyNameDisplay],
+  ]) {
     for (let weight of [100,200,300,400,500,600,700,800,900]) {
       for (let isItalic of [true,false]) {
         genStaticFontFace(family, cssname, filepath, weight, isItalic)
@@ -85,61 +67,27 @@ var fontFamilyName,
     }
   }
 
-  for (let [family,cssname] of [
-    ["Inter",fontFamilyNameVar],
-    ["InterDisplay",fontFamilyNameDisplayVar],
+  for (let [srcname,cssname] of [
+    ["InterVariable", fontFamilyNameVar],
+    ["InterVariable-Italic", fontFamilyNameVar],
   ]) {
     w(`@font-face {
       font-family: '${cssname}';
-      font-style: oblique 0deg 10deg;
+      font-style: ${srcname.indexOf("Italic") != -1 ? "italic" : "normal"};
       font-weight: 100 900;
       font-display: block;
       src:`)
     if (includeLabLocalFiles) {
-      w(`  url('fonts/var/${family}.var.woff2?${fontVersion}') format("woff2"),`)
+      w(`  url('fonts/var/${srcname}.woff2?${fontVersion}') format("woff2"),`)
     }
-    w(`  url('../font-files/${family}.var.woff2?${fontVersion}') format("woff2");`)
-    w(`}`)
-
-    w(`@font-face {
-      font-family: '${cssname} safari';
-      font-style: oblique 0deg 10deg;
-      font-display: block;
-      src:`)
-    if (includeLabLocalFiles) {
-      w(`  url('fonts/var/${family}.var.woff2?${fontVersion}') format("woff2"),`)
-    }
-    w(`  url('../font-files/${family}.var.woff2?${fontVersion}') format("woff2");`)
+    w(`  url('../font-files/${srcname}.woff2?${fontVersion}') format("woff2");`)
     w(`}`)
   }
 
   let css = outbuf.join("\n")
-
   // console.log(css)
-
   const fontCSS = document.createElement("style")
   fontCSS.setAttribute('type', 'text/css')
   fontCSS.appendChild(document.createTextNode(css))
   document.head.appendChild(fontCSS)
-
-  // // update family names to include CSS fallbacks
-  // [rsms] Disabled to avoid local-font fallback
-  // fontFamilyName += ", 'Inter'"
-  // fontFamilyNameHinted += ", 'Inter'"
-  // fontFamilyNameVar += ", 'Inter var'"
-  // fontFamilyNameVarHinted += ", 'Inter var'"
-
 })()
-
-// const fontCSSTemplate = document.querySelector('#font-css')
-// const fontCSS = fontCSSTemplate.cloneNode(true)
-// fontCSS.innerHTML = fontCSS.innerHTML
-//   .replace(/Inter-var-VERSION/g, fontFamilyNameVar)
-//   .replace(/Inter-var-hinted-VERSION/g, fontFamilyNameVarHinted)
-//   .replace(/Inter-hinted-VERSION/g, fontFamilyNameHinted)
-//   .replace(/Inter-VERSION/g, fontFamilyName)
-//   .replace(/(\.woff2?)/g, '$1?r='+fontVersion)
-// fontCSS.setAttribute('id', '')
-// fontCSS.setAttribute('type', 'text/css')
-// document.head.appendChild(fontCSS)
-

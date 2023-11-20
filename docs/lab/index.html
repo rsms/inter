@@ -16,19 +16,10 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
   }
 }
 
-// Safari?
-(function(u){ if (
-  u.indexOf('Safari/') != -1 &&
-  u.indexOf('Chrome/') == -1 &&
-  u.indexOf('Chromium/') == -1
-) {
-  document.documentElement.classList.add('safari')
-} })(navigator.userAgent);
-
     </script>
-    <script type="text/javascript" src="samples.js?v=3.19"></script>
-    <script type="text/javascript" src="build-version.js?v=3.19"></script>
-    <script type="text/javascript" src="font-files.js?v=3.19"></script>
+    <script type="text/javascript" src="samples.js?v=4.0"></script>
+    <script type="text/javascript" src="build-version.js?v=4.0"></script>
+    <script type="text/javascript" src="font-files.js?v=4.0"></script>
     <link href="lab.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese">
   </head>
@@ -74,12 +65,6 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         <span title="Weight">wght:</span>
         <input type="number" value="400" step="1" min="100" max="900" name="varWeightNum">
         <input type="range" value="400" step="1" min="100" max="900" name="varWeight">
-      </label>
-
-      <label class="label-and-value with-slider varfontControl">
-        <span title="Slant">slnt:</span>
-        <input type="number" value="0" step="0.1" min="0" max="10" name="varSlantNum">
-        <input type="range" value="0" step="0.01" min="0" max="10" name="varSlant">
       </label>
 
       <label class="label-and-value staticfontControl">
@@ -169,7 +154,7 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       <span>Compare:</span>
       <select name="compare">
         <option value="-" selected>Nothing</option>
-        <option value="inter-other">Other Inter family</option>
+        <!-- <option value="inter-other">Other Inter family</option> -->
         <option value="system">System font</option>
       </select>
       </label>
@@ -178,44 +163,60 @@ if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       <h3>Features</h3>
 
       <div class="checkbox-group">
-      <!-- case --><label title="Upper case adjustments"><input type="checkbox" class="featopt" name="feat:case"><span>case &nbsp;(Case alternates)</span></label>
-      <!-- cpsp --><label title='Capital spacing (adds 16 UPM to each sidebearing)'><input type="checkbox" class="featopt" name="feat:cpsp"><span>cpsp &nbsp;(Capital spacing)</span></label>
-      <!-- dlig --><label title="Discretionary ligatures, e.g. !? -> interrobang"><input type="checkbox" class="featopt" name="feat:dlig"><span>dlig &nbsp;(Discretionary ligatures)</span></label>
+      <!-- case --><label title="Case-Sensitive Forms"><input type="checkbox" class="featopt" name="feat:case"><span>case &nbsp;(Case-Sensitive Forms)</span></label>
+      <!-- dlig --><label title="Discretionary ligatures"><input type="checkbox" class="featopt" name="feat:dlig"><span>dlig &nbsp;(Discretionary ligatures)</span></label>
       <!-- frac --><label title="Contextual automatic fractions"><input type="checkbox" class="featopt" name="feat:frac"><span>frac &nbsp;(Auto fractions)</span></label>
       <!-- dnom --><label title="Convert all numbers to denominators"><input type="checkbox" class="featopt" name="feat:dnom"><span>dnom &nbsp;(Denominators)</span></label>
       <!-- numr --><label title="Convert all numbers to numerators"><input type="checkbox" class="featopt" name="feat:numr"><span>numr &nbsp;(Numerators)</span></label>
-      <!-- salt --><label title='Stylistic Alternates'><input type="checkbox" class="featopt" name="feat:salt"><span>salt &nbsp;(Stylistic Alternates)</span></label>
       <!-- subs --><label title="Subscript"><input type="checkbox" class="featopt" name="feat:subs"><span>subs &nbsp;(Subscript)</span></label>
       <!-- sups --><label title="Superscript"><input type="checkbox" class="featopt" name="feat:sups"><span>sups &nbsp;(Superscript)</span></label>
       <!-- tnum --><label title="Tabular numbers (fixed width)"><input type="checkbox" class="featopt" name="feat:tnum"><span>tnum &nbsp;(Tabular numbers)</span></label>
       <!-- zero --><label title="Slashed zero"><input type="checkbox" class="featopt" name="feat:zero"><span>zero &nbsp;(Slashed zero)</span></label>
-      <label title='Stylistic set 1 "Open Digits"'><input type="checkbox" class="featopt" name="feat:ss01"><span>ss01 &nbsp;(Open Digits)</span></label>
-      <label title='Stylistic set 2 "Disambiguation"'><input type="checkbox" class="featopt" name="feat:ss02"><span>ss02 &nbsp;(Disambiguation)</span></label>
-      <label title='Stylistic set 3 "Lower case r curves into round neighbors"'><input type="checkbox" class="featopt" name="feat:ss03"><span>ss03 &nbsp;(Curved r)</span></label>
-      <label title='Stylistic set 4 "Disambiguation without slashed zero"'><input type="checkbox" class="featopt" name="feat:ss04"><span>ss04 &nbsp;(Disambiguation w/o zero)</span></label>
-      <label title='Character Variant 1 "Alternate one"'><input type="checkbox" class="featopt" name="feat:cv01"><span>cv01 &nbsp;(Alternate one)</span></label>
-      <label title='Character Variant 2 "Open four"'><input type="checkbox" class="featopt" name="feat:cv02"><span>cv02 &nbsp;(Open four)</span></label>
-      <label title='Character Variant 3 "Open six"'><input type="checkbox" class="featopt" name="feat:cv03"><span>cv03 &nbsp;(Open six)</span></label>
-      <label title='Character Variant 4 "Open nine"'><input type="checkbox" class="featopt" name="feat:cv04"><span>cv04 &nbsp;(Open nine)</span></label>
-      <label title='Character Variant 5 "Lower case L with tail")'><input type="checkbox" class="featopt" name="feat:cv05"><span>cv05 &nbsp;(Lower case L with tail)</span></label>
-      <label title='Character Variant 6 "Lower case r with curved tail")'><input type="checkbox" class="featopt" name="feat:cv06"><span>cv06 &nbsp;(Curved lower case r)</span></label>
-      <label title='Character Variant 7 "Alternate German double-s")'><input type="checkbox" class="featopt" name="feat:cv07"><span>cv07 &nbsp;(German double-s)</span></label>
-      <label title='Character Variant 8 "Upper-case i with serif")'><input type="checkbox" class="featopt" name="feat:cv08"><span>cv08 &nbsp;(Upper-case i with serif)</span></label>
-      <label title='Character Variant 9 "Flat top three")'><input type="checkbox" class="featopt" name="feat:cv09"><span>cv09 &nbsp;(Flat top three)</span></label>
-      <label title='Character Variant 10 "Capital G with spur")'><input type="checkbox" class="featopt" name="feat:cv10"><span>cv10 &nbsp;(Capital G with spur)</span></label>
-      <label title='Character Variant 11 "Single-storey a")'><input type="checkbox" class="featopt" name="feat:cv11"><span>cv11 &nbsp;(Single-storey a)</span></label>
       </div>
 
       <div class="checkbox-group">
-      <span>Default-on features:</span>
-      <label title="Standard ligatures"><input type="checkbox" class="featopt" name="feat:liga=0"> Disable liga &nbsp;(Standard ligatures)</label>
-      <label title="Contextual alternates"><input type="checkbox" class="featopt" name="feat:calt=0"> Disable calt &nbsp;(Contextual alternates)</label>
-      <label title="Glyph Composition/Decomposition"><input type="checkbox" class="featopt" name="feat:ccmp=0"> Disable ccmp</label>
-      <label title="Kerning"><input type="checkbox" class="featopt" name="feat:kern=0"> Disable kern &nbsp;(Kerning)</label>
+      <span>Stylistic sets:</span>
+      <!-- ss01 --><label title='Stylistic set 1 "Open Digits"'><input type="checkbox" class="featopt" name="feat:ss01"><span>ss01 &nbsp;(Open Digits)</span></label>
+      <!-- ss02 --><label title='Stylistic set 2 "Disambiguation (with zero)"'><input type="checkbox" class="featopt" name="feat:ss02"><span>ss02 &nbsp;(Disambiguation w/ zero)</span></label>
+      <!-- ss03 --><label title='Stylistic set 3 "Round quotes &amp; commas"'><input type="checkbox" class="featopt" name="feat:ss03"><span>ss03 &nbsp;(Round quotes &amp; commas)</span></label>
+      <!-- ss04 --><label title='Stylistic set 4 "Disambiguation without slashed zero"'><input type="checkbox" class="featopt" name="feat:ss04"><span>ss04 &nbsp;(Disambiguation w/o zero)</span></label>
+      <!-- ss05 --><label title='Stylistic set 5 "Circled characters"'><input type="checkbox" class="featopt" name="feat:ss05"><span>ss05 &nbsp;(Circled characters)</span></label>
+      <!-- ss06 --><label title='Stylistic set 6 "Squared characters"'><input type="checkbox" class="featopt" name="feat:ss06"><span>ss06 &nbsp;(Squared characters)</span></label>
+      <!-- ss07 --><label title='Stylistic set 7 "Square punctuation"'><input type="checkbox" class="featopt" name="feat:ss07"><span>ss07 &nbsp;(Square punctuation)</span></label>
+      <!-- ss08 --><label title='Stylistic set 8 "Square quotes"'><input type="checkbox" class="featopt" name="feat:ss08"><span>ss08 &nbsp;(Square quotes)</span></label>
       </div>
 
-      <div>
-        <a href="var.html">Variable test page</a>
+      <div class="checkbox-group">
+      <span>Character variants:</span>
+      <!-- cv01 --><label title='Character Variant 1 "Alternate one"'><input type="checkbox" class="featopt" name="feat:cv01"><span>cv01 &nbsp;(Alternate one)</span></label>
+      <!-- cv02 --><label title='Character Variant 2 "Open four"'><input type="checkbox" class="featopt" name="feat:cv02"><span>cv02 &nbsp;(Open four)</span></label>
+      <!-- cv03 --><label title='Character Variant 3 "Open six"'><input type="checkbox" class="featopt" name="feat:cv03"><span>cv03 &nbsp;(Open six)</span></label>
+      <!-- cv04 --><label title='Character Variant 4 "Open nine"'><input type="checkbox" class="featopt" name="feat:cv04"><span>cv04 &nbsp;(Open nine)</span></label>
+      <!-- cv05 --><label title='Character Variant 5 "Lower case L with tail")'><input type="checkbox" class="featopt" name="feat:cv05"><span>cv05 &nbsp;(Lower case L with tail)</span></label>
+      <!-- cv06 --><label title='Character Variant 6 "Simplified u")'><input type="checkbox" class="featopt" name="feat:cv06"><span>cv06 &nbsp;(Simplified u)</span></label>
+      <!-- cv07 --><label title='Character Variant 7 "Alternate German double-s")'><input type="checkbox" class="featopt" name="feat:cv07"><span>cv07 &nbsp;(German double-s)</span></label>
+      <!-- cv08 --><label title='Character Variant 8 "Upper-case i with serif")'><input type="checkbox" class="featopt" name="feat:cv08"><span>cv08 &nbsp;(Upper-case i with serif)</span></label>
+      <!-- cv09 --><label title='Character Variant 9 "Flat top three")'><input type="checkbox" class="featopt" name="feat:cv09"><span>cv09 &nbsp;(Flat top three)</span></label>
+      <!-- cv10 --><label title='Character Variant 10 "Capital G with spur")'><input type="checkbox" class="featopt" name="feat:cv10"><span>cv10 &nbsp;(Capital G with spur)</span></label>
+      <!-- cv11 --><label title='Character Variant 11 "Single-storey a")'><input type="checkbox" class="featopt" name="feat:cv11"><span>cv11 &nbsp;(Single-storey a)</span></label>
+      <!-- cv12 --><label title='Character Variant 12 "Compact f")'><input type="checkbox" class="featopt" name="feat:cv12"><span>cv12 &nbsp;(Compact f)</span></label>
+      <!-- cv13 --><label title='Character Variant 13 "Compact t")'><input type="checkbox" class="featopt" name="feat:cv13"><span>cv13 &nbsp;(Compact t)</span></label>
+      </div>
+
+      <div class="checkbox-group">
+      <span>Partial or uncommon:</span>
+      <!-- cpsp --><label title='Capital spacing (adds 16 UPM to each sidebearing)'><input type="checkbox" class="featopt" name="feat:cpsp"><span>cpsp &nbsp;(Capital spacing)</span></label>
+      <!-- c2sc --><label title="Small Capitals From Capitals"><input type="checkbox" class="featopt" name="feat:c2sc"><span>c2sc &nbsp;(Small Caps; incomplete)</span></label>
+      <!-- salt --><label title='Stylistic Alternates'><input type="checkbox" class="featopt" name="feat:salt"><span>salt &nbsp;(Stylistic Alternates)</span></label>
+      <!-- aalt --><label title='Access All Alternates'><input type="checkbox" class="featopt" name="feat:aalt"><span>aalt &nbsp;(Access All Alternates)</span></label>
+      </div>
+
+      <div class="checkbox-group">
+      <span>Enabled by default:</span>
+      <!-- calt --><label title="Contextual alternates"><input type="checkbox" class="featopt" name="feat:calt=0"> Disable calt &nbsp;(Contextual alternates)</label>
+      <!-- ccmp --><label title="Glyph Composition/Decomposition"><input type="checkbox" class="featopt" name="feat:ccmp=0"> Disable ccmp</label>
+      <!-- locl --><label title='Localized Forms'><input type="checkbox" class="featopt" name="feat:locl=0"><span>Disable locl &nbsp;(Localized Forms)</span></label>
+      <!-- kern --><label title="Kerning"><input type="checkbox" class="featopt" name="feat:kern=0"> Disable kern &nbsp;(Kerning)</label>
       </div>
 
     </div>
@@ -254,16 +255,7 @@ function InterDynamicTracking(fontSize, family /* :"text"|"display" */) {
   return a + b * Math.pow(Math.E, c * fontSize)
 }
 
-// provide hinted=1 to use TTF hinted fonts.
-// not exposed in UI as it only works when serving the site locally
-// with fonts in the build/fonts directory.
-const hinted = location.search.indexOf('hinted=1') != -1
-const familyName = hinted ? fontFamilyNameHinted : fontFamilyName;
-
-if (hinted) {
-  document.body.classList.add('hinted')
-}
-document.body.style.fontFamily = familyName
+document.body.style.fontFamily = fontFamilyName
 
 
 function parseQueryString(qs) {
@@ -838,19 +830,16 @@ function main() {
 
   let usingVarFont = false
   let usingFontFamily = "text"
-  var varWeightRange, varSlantRange, varOpszRange
+  var varWeightRange, varOpszRange
   var varWeightSettingValueImpl = false
-  var varSlantSettingValueImpl = false
   var varOpszSettingValueImpl = false
 
   function getFontFamily(overrideFamily) {
     return (
       (overrideFamily || usingFontFamily) == "text" ? (
-        usingVarFont ? (hinted ? fontFamilyNameVarHinted : fontFamilyNameVar) :
-                        hinted ? fontFamilyNameHinted : fontFamilyName
+        usingVarFont ? fontFamilyNameVar : fontFamilyName
       ) : (
-        usingVarFont ? (hinted ? fontFamilyNameDisplayVarHinted : fontFamilyNameDisplayVar) :
-                        hinted ? fontFamilyNameDisplayHinted : fontFamilyNameDisplay
+        usingVarFont ? fontFamilyNameDisplayVar : fontFamilyNameDisplay
       )
     )
   }
@@ -866,33 +855,18 @@ function main() {
 
   var italicVar = vars.bind('italic', (e, on) => {
     document.body.classList[on ? 'add' : 'remove']('italic')
-    if (usingVarFont && !varSlantSettingValueImpl) {
-      if (varSlantRange) {
-        varSlantRange.setValue(on ? 100 : 0)
-      }
-      updateVarFont()
-    }
   })
 
   let varState = {
     weight: 400, // 400..900
-    slant: 0,    // 0..-10
     opsz: 14,    // 14..32
   }
 
   function updateVarFont() {
     if (usingVarFont) {
-      varSlantSettingValueImpl = true
-      if (varState.slant <= 0.1) {
-        varState.slant = 0
-        italicVar.setValue(false)
-      } else {
-        italicVar.setValue(true)
-      }
-      varSlantSettingValueImpl = false
       setCSSProp(
         "font-variation-settings",
-        `"wght" ${varState.weight}, "slnt" ${-varState.slant}, "opsz" ${varState.opsz}`
+        `"wght" ${varState.weight}, "opsz" ${varState.opsz}`
       )
     } else {
       setCSSProp("font-variation-settings", null)
@@ -910,10 +884,6 @@ function main() {
           varWeightRange.setValue(w)
         }
       }
-      // document.body.style.fontFamily = (
-      //   hinted ? fontFamilyNameVarHinted :
-      //   fontFamilyNameVar
-      // )
     } else {
       if (!isInitial && varWeightRange) {
         // copy value of var weight to static weight
@@ -922,10 +892,6 @@ function main() {
           vars.setValue("weight", Math.round(w / 100) * 100)
         }
       }
-      // document.body.style.fontFamily = (
-      //   hinted ? fontFamilyNameHinted :
-      //   fontFamilyName
-      // );
     }
     document.body.style.fontFamily = getFontFamily()
     updateVarFont()
@@ -934,11 +900,6 @@ function main() {
   let varWeightNum = vars.bind('_wght', '[name="varWeightNum"]', (e, v) => {
     if (varWeightRange && !varWeightSettingValueImpl)
       vars.setValue("wght", v)
-  })
-
-  let varSlantNum = vars.bind('_slnt', '[name="varSlantNum"]', (e, v) => {
-    if (varSlantRange && !varSlantSettingValueImpl)
-      vars.setValue("slnt", v)
   })
 
   let varOpszNum = vars.bind('_opsz', '[name="varOpszNum"]', (e, v) => {
@@ -962,18 +923,6 @@ function main() {
     if (prevValue === undefined)
       return 400
     return snapValue(e.valueAsNumber, 100)
-  })
-
-  varSlantRange = vars.bind('slnt', '[name="varSlant"]', (e, v) => {
-    varState.slant = v
-    varSlantSettingValueImpl = true
-    varSlantNum.setValue(v)
-    varSlantSettingValueImpl = false
-    updateVarFont()
-  }, (e, prevValue, ev) => {
-    if (prevValue === undefined)
-      return 0
-    return snapValue(e.valueAsNumber, 1)
   })
 
   varOpszRange = vars.bind('opsz', '[name="varOpsz"]', (e, v) => {
@@ -1003,12 +952,12 @@ function main() {
         e.classList.remove(secondarySampleClassNameAddition))
     }
     if (className) {
-      let explicitFontFamily = null
-      if (className == "inter-other-font") {
-        let otherFamily = usingFontFamily == "text" ? "display" : "text"
-        explicitFontFamily = getFontFamily(otherFamily)
-      }
-      secondarySample.style.fontFamily = explicitFontFamily
+      // let explicitFontFamily = null
+      // if (className == "inter-other-font") {
+      //   let otherFamily = usingFontFamily == "text" ? "display" : "text"
+      //   explicitFontFamily = getFontFamily(otherFamily)
+      // }
+      // secondarySample.style.fontFamily = explicitFontFamily
       secondarySample.classList.add(className)
       secondaryFontElements.forEach(e => e.classList.add(className))
     }
@@ -1029,9 +978,8 @@ function main() {
   vars.bind('compare', (e, v) => {
     disableSecondarySample()
     switch (v) {
-      // case 'roboto': enableSecondarySample('robotoFont'); break
       case 'system': enableSecondarySample('systemFont'); break
-      case 'inter-other': enableSecondarySample('inter-other-font'); break
+      //case 'inter-other': enableSecondarySample('inter-other-font'); break
       default: return '-';
     }
   }, e => (e.value && e.value != '-') ? e.value : null)

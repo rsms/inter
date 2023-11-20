@@ -12,16 +12,16 @@ layout: none
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('font-files/Inter-Variable.woff2?v={{font_v}}') format('woff2');
-  font-variation-settings: "opsz" 28;
+  src: url('font-files/InterVariable.woff2?v={{font_v}}') format('woff2');
+  font-variation-settings: "opsz" 32;
 }
 @font-face {
   font-family: 'InterDisplay var';
   font-style: italic;
   font-weight: 100 900;
   font-display: swap;
-  src: url('font-files/Inter-Variable-Italic.woff2?v={{font_v}}') format('woff2');
-  font-variation-settings: "opsz" 28;
+  src: url('font-files/InterVariable-Italic.woff2?v={{font_v}}') format('woff2');
+  font-variation-settings: "opsz" 32;
 }
 
 

@@ -27,6 +27,7 @@ function pxround(px) {
 }
 
 const monotime = performance.now.bind(performance)
+const WGHT_MIN = 14, WGHT_MAX = 32
 
 class GlyphInspector {
   constructor() {
@@ -35,7 +36,7 @@ class GlyphInspector {
     this.glyphUnicode = 0
     this.defaultGlyphUnicode = 0x0041
     this.selectedGlyphGridCell = null
-    this.defaultAxisValues = {wght: 400, opsz: 28}
+    this.defaultAxisValues = {wght: 400, opsz: WGHT_MAX}
     this.axisValues = {wght: 0, opsz: 0}
     this.idNameElement = $(".identification .name", rootElement)
     this.idUnicodeElement = $(".identification .unicode", rootElement)
@@ -83,13 +84,13 @@ class GlyphInspector {
     // enable clicking on label to toggle
     this.opszSlider.onclick = (ev) => ev.stopPropagation()
     this.opszSlider.parentElement.onclick = (ev) => {
-      this.setFontInstance({opsz: this.axisValues.opsz > 14 ? 14 : 28})
+      this.setFontInstance({opsz: this.axisValues.opsz > WGHT_MIN ? WGHT_MIN : WGHT_MAX})
     }
 
     this.opszCheckbox = $('input[name="opsz-switch"]')
-    this.defaultAxisValues.opsz = this.opszCheckbox.checked ? 14 : 28
+    this.defaultAxisValues.opsz = this.opszCheckbox.checked ? WGHT_MIN : WGHT_MAX
     this.opszCheckbox.onchange = (ev) => {
-      this.setFontInstance({opsz: this.opszCheckbox.checked ? 14 : 28})
+      this.setFontInstance({opsz: this.opszCheckbox.checked ? WGHT_MIN : WGHT_MAX})
     }
 
     let showDetailsCheckbox = $('input[name="show-details"]')
@@ -272,7 +273,7 @@ class GlyphInspector {
     if (ev.shiftKey)
       wght = Math.round(wght / 100) * 100
     wght = max(100, min(900, wght))
-    // opsz = max(14, min(28, opsz))
+    // opsz = max(WGHT_MIN, min(WGHT_MAX, opsz))
     this.hasDraggedWght = true
     if (this.draggedWghtStartTime == 0)
       this.draggedWghtStartTime = monotime()
@@ -942,7 +943,7 @@ class GlyphInspector {
     // let wght = 100
     // let inc = true
     // setInterval(x => {
-    //   this.setFontInstance({wght, opsz: 28})
+    //   this.setFontInstance({wght, opsz: WGHT_MAX})
     //   if (inc) {
     //     wght += 10
     //     if (wght > 900) {
@@ -961,5 +962,5 @@ class GlyphInspector {
 }
 
 let inspector = new GlyphInspector()
-await inspector.loadFont('font-files/Inter-Variable.ttf')
+await inspector.loadFont('font-files/InterVariable.ttf')
 // await inspector.loadFont('font-files/InterDisplay-Regular.otf')

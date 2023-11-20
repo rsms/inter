@@ -19,10 +19,10 @@ build-tmp: .ruby-bundle
 	bundle exec jekyll build --disable-disk-cache -b /tmp/inter-v4-website -d _site-tmp
 
 serve: .ruby-bundle
-	$(Q)if [ ! -s lab/fonts ]; then \
-		[ ! -s lab/fonts/fonts ] || rm lab/fonts/fonts; \
-		rm -f lab/fonts && ln -fs ../../build/fonts lab/fonts; \
-	fi
+	$(Q)( sleep 3 && \
+		rm -f _site/lab/fonts && \
+		ln -s ../../../build/fonts _site/lab/fonts ) &
+	@#
 	@# need to delete generated content so that jekyll, being a little dumb,
 	@# can manage to copy the font files into there again.
 	@# Why not a symlink you ask? Jekyll traverses it and copies the content.
@@ -97,9 +97,9 @@ FONTS_SRC := \
 	$(FONTDIR)/static/InterDisplay-SemiBoldItalic.woff2 \
 	$(FONTDIR)/static/InterDisplay-Thin.woff2 \
 	$(FONTDIR)/static/InterDisplay-ThinItalic.woff2 \
-  $(FONTDIR)/var/Inter-Variable.woff2 \
-  $(FONTDIR)/var/Inter-Variable-Italic.woff2 \
-  $(FONTDIR)/var/Inter-Variable.ttf
+  $(FONTDIR)/var/InterVariable.woff2 \
+  $(FONTDIR)/var/InterVariable-Italic.woff2 \
+  $(FONTDIR)/var/InterVariable.ttf
 
 font-files/Inter-Regular.woff2: $(FONTS_SRC)
 	rm -rf font-files/Inter*
