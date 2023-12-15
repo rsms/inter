@@ -2,84 +2,182 @@
 glyphname = uni0268.ccmp;
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (293,0);
+},
+{
+name = ogonek;
+pos = (382,0);
+},
+{
+name = top;
+pos = (293,1118);
+}
+);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
+alignment = -1;
+pos = (44,0);
 ref = idotless;
 },
 {
-pos = (-214,-150);
-ref = crossbar;
+pos = (-170,-150);
+ref = _part.crossbar_narrow;
 }
 );
-width = 496;
+width = 584;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (384,0);
+},
+{
+name = ogonek;
+pos = (582,0);
+},
+{
+name = top;
+pos = (380,1118);
+}
+);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
+alignment = -1;
+pos = (78,0);
 ref = idotless;
 },
 {
-pos = (-220,-135);
-ref = crossbar;
+pos = (-142,-135);
+ref = _part.crossbar_narrow;
 }
 );
-width = 606;
+width = 762;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (205,0);
+},
+{
+name = ogonek;
+pos = (229,0);
+},
+{
+name = top;
+pos = (205,1118);
+}
+);
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
+alignment = -1;
+pos = (-15,0);
 ref = idotless;
 },
 {
-pos = (-204,-163);
-ref = crossbar;
+pos = (-219,-163);
+ref = _part.crossbar_narrow;
 }
 );
-width = 442;
+width = 412;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (290,0);
+},
+{
+name = ogonek;
+pos = (375,0);
+},
+{
+name = top;
+pos = (290,1056);
+}
+);
 layerId = m007;
 shapes = (
 {
+alignment = -1;
+pos = (79,0);
 ref = idotless;
 },
 {
-pos = (-236,-151);
-ref = crossbar;
+pos = (-157,-151);
+ref = _part.crossbar_narrow;
 }
 );
-width = 422;
+width = 582;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (348,0);
+},
+{
+name = ogonek;
+pos = (548,0);
+},
+{
+name = top;
+pos = (348,1056);
+}
+);
 layerId = m009;
 shapes = (
 {
+alignment = -1;
+pos = (62,0);
 ref = idotless;
 },
 {
-pos = (-210,-151);
-ref = crossbar;
+pos = (-148,-151);
+ref = _part.crossbar_narrow;
 }
 );
-width = 572;
+width = 694;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (196,0);
+},
+{
+name = ogonek;
+pos = (219,0);
+},
+{
+name = top;
+pos = (196,1056);
+}
+);
 layerId = m011;
 shapes = (
 {
+alignment = -1;
+pos = (39,0);
 ref = idotless;
 },
 {
-pos = (-203,-163);
-ref = crossbar;
+pos = (-164,-163);
+ref = _part.crossbar_narrow;
 }
 );
-width = 314;
+width = 394;
 }
 );
+metricLeft = t;
+metricRight = "=|t";
 unicode = 57587;
 userData = {
 interface.gridadjust.original = "{'width': 965, 'leftMargin': 41, 'rightMargin': 41}";
