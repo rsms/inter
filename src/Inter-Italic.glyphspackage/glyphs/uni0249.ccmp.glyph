@@ -4,90 +4,163 @@ kernLeft = t;
 kernRight = t;
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (73,-457);
+},
+{
+name = top;
+pos = (391,1118);
+}
+);
 layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 name = ital_gen;
 shapes = (
 {
+alignment = -1;
+pos = (50,0);
 ref = jdotless;
 },
 {
-pos = (-241,-150);
+pos = (-191,-150);
 ref = _part.crossbar_narrow;
 }
 );
-width = 496;
+width = 590;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (165,-398);
+},
+{
+name = top;
+pos = (475,1118);
+}
+);
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 name = ital_gen;
 shapes = (
 {
+alignment = -1;
+pos = (80,0);
 ref = jdotless;
 },
 {
-pos = (-240,-135);
+pos = (-160,-135);
 ref = _part.crossbar_narrow;
 }
 );
-width = 606;
+width = 763;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (8,-442);
+},
+{
+name = top;
+pos = (295,1118);
+}
+);
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 name = ital_gen;
 shapes = (
 {
+alignment = -1;
+pos = (-25,0);
 ref = jdotless;
 },
 {
-pos = (-224,-163);
+pos = (-249,-163);
 ref = _part.crossbar_narrow;
 }
 );
-width = 448;
+width = 410;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (49,-460);
+},
+{
+name = top;
+pos = (357,1056);
+}
+);
 layerId = m008;
 name = ital_gen;
 shapes = (
 {
+alignment = -1;
+pos = (59,0);
 ref = jdotless;
 },
 {
-pos = (-262,-151);
+pos = (-203,-151);
 ref = _part.crossbar_narrow;
 }
 );
-width = 422;
+width = 561;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (135,-398);
+},
+{
+name = top;
+pos = (436,1056);
+}
+);
 layerId = m010;
 name = ital_gen;
 shapes = (
 {
+alignment = -1;
+pos = (60,0);
 ref = jdotless;
 },
 {
-pos = (-232,-151);
+pos = (-172,-151);
 ref = _part.crossbar_narrow;
 }
 );
-width = 575;
+width = 695;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (9,-442);
+},
+{
+name = top;
+pos = (286,1056);
+}
+);
 layerId = m012;
 name = ital_gen;
 shapes = (
 {
+alignment = -1;
+pos = (35,0);
 ref = jdotless;
 },
 {
-pos = (-223,-163);
+pos = (-188,-163);
 ref = _part.crossbar_narrow;
 }
 );
-width = 321;
+width = 398;
 }
 );
+metricRight = "=|t";
 unicode = 57422;
 userData = {
 interface.gridadjust.original = "{'width': 980, 'leftMargin': 41, 'rightMargin': 41}";
