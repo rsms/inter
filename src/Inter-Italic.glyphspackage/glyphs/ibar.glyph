@@ -4,6 +4,12 @@ kernLeft = t;
 kernRight = t;
 layers = (
 {
+anchors = (
+{
+name = cedilla;
+pos = (201,0);
+}
+);
 guides = (
 {
 angle = 80.6;
@@ -25,6 +31,12 @@ ref = dotaccentcomb;
 width = 585;
 },
 {
+anchors = (
+{
+name = cedilla;
+pos = (296,0);
+}
+);
 guides = (
 {
 angle = 80.6;
@@ -46,6 +58,12 @@ ref = dotaccentcomb;
 width = 763;
 },
 {
+anchors = (
+{
+name = cedilla;
+pos = (113,0);
+}
+);
 layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 name = ital_gen;
 shapes = (
@@ -61,6 +79,12 @@ ref = dotaccentcomb;
 width = 413;
 },
 {
+anchors = (
+{
+name = cedilla;
+pos = (203,0);
+}
+);
 guides = (
 {
 angle = 80.6;
@@ -82,6 +106,12 @@ ref = dotaccentcomb;
 width = 582;
 },
 {
+anchors = (
+{
+name = cedilla;
+pos = (262,0);
+}
+);
 guides = (
 {
 angle = 80.6;
@@ -103,6 +133,12 @@ ref = dotaccentcomb;
 width = 694;
 },
 {
+anchors = (
+{
+name = cedilla;
+pos = (109,0);
+}
+);
 layerId = m012;
 name = ital_gen;
 shapes = (
