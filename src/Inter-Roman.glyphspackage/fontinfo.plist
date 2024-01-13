@@ -2533,7 +2533,15 @@ value = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 name = "Axis Mappings";
 value = {
 opsz = {
-14 = 14;
+8 = 8;
+9 = 11;
+10 = 13;
+12 = 16;
+14 = 19;
+18 = 25;
+21 = 28;
+24 = 30;
+28 = 31.5;
 32 = 32;
 };
 wght = {
@@ -2546,10 +2554,14 @@ wght = {
 900 = 900;
 };
 };
+},
+{
+name = "Use Extension Kerning";
+value = 1;
 }
 );
-date = "2016-12-04 18:21:54 +0000";
-familyName = Inter;
+date = "2024-01-12 17:33:48 +0000";
+familyName = "Inter";
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;
@@ -3530,7 +3542,7 @@ tag = smcp;
 fontMaster = (
 {
 axesValues = (
-14,
+8,
 100
 );
 customParameters = (
@@ -3590,12 +3602,12 @@ size = "-16";
 name = "Axis Location";
 value = (
 {
-Axis = Weight;
-Location = 100;
+Axis = "Optical size";
+Location = 8;
 },
 {
-Axis = "Optical size";
-Location = 14;
+Axis = Weight;
+Location = 100;
 }
 );
 },
@@ -3829,7 +3841,7 @@ GSOffsetVertical = 64;
 },
 {
 axesValues = (
-14,
+8,
 400
 );
 customParameters = (
@@ -3890,7 +3902,7 @@ name = "Axis Location";
 value = (
 {
 Axis = "Optical size";
-Location = 14;
+Location = 8;
 },
 {
 Axis = Weight;
@@ -4110,7 +4122,7 @@ GSOffsetVertical = 85;
 },
 {
 axesValues = (
-14,
+8,
 900
 );
 customParameters = (
@@ -4170,12 +4182,12 @@ size = "-16";
 name = "Axis Location";
 value = (
 {
-Axis = Weight;
-Location = 900;
+Axis = "Optical size";
+Location = 8;
 },
 {
-Axis = "Optical size";
-Location = 14;
+Axis = Weight;
+Location = 900;
 }
 );
 },
@@ -4256,6 +4268,7 @@ GSOffsetMakeStroke = 1;
 GSOffsetProportional = 1;
 GSOffsetVertical = 200;
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -4413,7 +4426,7 @@ GSOffsetVertical = 130;
 instances = (
 {
 axesValues = (
-14,
+8,
 100
 );
 customParameters = (
@@ -4451,7 +4464,7 @@ weightClass = 100;
 },
 {
 axesValues = (
-14,
+8,
 200
 );
 customParameters = (
@@ -4490,7 +4503,7 @@ weightClass = 200;
 },
 {
 axesValues = (
-14,
+8,
 300
 );
 customParameters = (
@@ -4529,7 +4542,7 @@ weightClass = 300;
 },
 {
 axesValues = (
-14,
+8,
 400
 );
 customParameters = (
@@ -4556,7 +4569,7 @@ name = Regular;
 },
 {
 axesValues = (
-14,
+8,
 490
 );
 customParameters = (
@@ -4595,7 +4608,7 @@ weightClass = 500;
 },
 {
 axesValues = (
-14,
+8,
 580
 );
 customParameters = (
@@ -4634,7 +4647,7 @@ weightClass = 600;
 },
 {
 axesValues = (
-14,
+8,
 670
 );
 customParameters = (
@@ -4665,7 +4678,7 @@ weightClass = 700;
 },
 {
 axesValues = (
-14,
+8,
 780
 );
 customParameters = (
@@ -4704,7 +4717,7 @@ weightClass = 800;
 },
 {
 axesValues = (
-14,
+8,
 900
 );
 customParameters = (
@@ -16149,7 +16162,7 @@ key = designers;
 values = (
 {
 language = dflt;
-value = "Rasmus Andersson";
+value = "Rasmus Andersson, Schoen Cho";
 }
 );
 },
@@ -16162,13 +16175,13 @@ key = manufacturers;
 values = (
 {
 language = dflt;
-value = rsms;
+value = "Fobytype, rsms";
 }
 );
 },
 {
 key = manufacturerURL;
-value = "https://rsms.me/";
+value = "https://fobytype.styc.co.uk/";
 },
 {
 key = licenses;
@@ -16185,7 +16198,7 @@ value = "http://scripts.sil.org/OFL";
 },
 {
 key = vendorID;
-value = RSMS;
+value = STyC;
 },
 {
 key = trademarks;
@@ -16349,6 +16362,6 @@ com.typemytype.robofont.shouldAddPointsInSplineConversion = 1;
 };
 UFOFormat = 3;
 };
-versionMajor = 3;
-versionMinor = 0;
+versionMajor = 4;
+versionMinor = 1;
 }
