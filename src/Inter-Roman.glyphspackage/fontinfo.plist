@@ -2599,6 +2599,7 @@ feature ss07;
 feature ss08;
 feature c2sc;
 feature smcp;
+feature ss09;
 ";
 tag = aalt;
 },
@@ -3588,6 +3589,18 @@ sub u by u.1;
 sub y by y.sc;
 ";
 tag = smcp;
+},
+{
+code = "# FB variant cv01,cv05,cv10,ss07,ss08
+include(features/ss09-swiss.fea);
+include(features/ss09-uprightadd.fea);";
+labels = (
+{
+language = dflt;
+value = "Swiss style";
+}
+);
+tag = ss09;
 }
 );
 fontMaster = (
@@ -16414,5 +16427,5 @@ com.typemytype.robofont.shouldAddPointsInSplineConversion = 1;
 UFOFormat = 3;
 };
 versionMajor = 4;
-versionMinor = 2;
+versionMinor = 3;
 }
