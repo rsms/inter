@@ -233,6 +233,14 @@ var: \
 	$(FONTDIR)/var/InterVariable.ttf \
 	$(FONTDIR)/var/InterVariable-Italic.ttf
 
+googlefonts: var
+	gftools fix-family $(FONTDIR)/var/*.ttf \
+	--rename-family "Inter" \
+	--include-source-fixes \
+	-o $(FONTDIR)/googlefonts;
+	python -m gftools.fontsetter $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf;
+	python -m gftools.fontsetter $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf;
+
 var_web: \
 	$(FONTDIR)/var/InterVariable.woff2 \
 	$(FONTDIR)/var/InterVariable-Italic.woff2
@@ -297,7 +305,7 @@ static_otf: $(STATIC_FONTS_OTF)
 static_ttf: $(STATIC_FONTS_TTF)
 static_web: $(STATIC_FONTS_WEB)
 
-all: var static web static_otf
+all: var googlefonts static web static_otf
 
 .PHONY: \
 	all var var_web web \
