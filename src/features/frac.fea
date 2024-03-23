@@ -34,16 +34,113 @@
   eight.dnom
   nine.dnom
 ];
+@subscripts = [
+  zero.subs
+  one.subs
+  two.subs
+  three.subs
+  four.subs
+  five.subs
+  six.subs
+  seven.subs
+  eight.subs
+  nine.subs
+];
 
-lookup FRAC {
-  sub slash by fraction;
-} FRAC;
+lookup FractionBar {
+  ignore sub slash @figures @figures @figures @figures @figures @figures @figures @figures @figures @figures slash';
+  ignore sub slash' @figures @figures @figures @figures @figures @figures @figures @figures @figures @figures slash;
+  ignore sub slash @figures @figures @figures @figures @figures @figures @figures @figures @figures slash';
+  ignore sub slash' @figures @figures @figures @figures @figures @figures @figures @figures @figures slash;
+  ignore sub slash @figures @figures @figures @figures @figures @figures @figures @figures slash';
+  ignore sub slash' @figures @figures @figures @figures @figures @figures @figures @figures slash;
+  ignore sub slash @figures @figures @figures @figures @figures @figures @figures slash';
+  ignore sub slash' @figures @figures @figures @figures @figures @figures @figures slash;
+  ignore sub slash @figures @figures @figures @figures @figures @figures slash';
+  ignore sub slash' @figures @figures @figures @figures @figures @figures slash;
+  ignore sub slash @figures @figures @figures @figures @figures slash';
+  ignore sub slash' @figures @figures @figures @figures @figures slash;
+  ignore sub slash @figures @figures @figures @figures slash';
+  ignore sub slash' @figures @figures @figures @figures slash;
+  ignore sub slash @figures @figures @figures slash';
+  ignore sub slash' @figures @figures @figures slash;
+  ignore sub slash @figures @figures slash';
+  ignore sub slash' @figures @figures slash;
+  ignore sub slash @figures slash';
+  ignore sub slash' @figures slash;
+  sub @figures slash' @figures by fraction;
+} FractionBar;
 
-lookup UP {
-  sub @figures by @numerators;
-} UP;
+lookup Numerator1 {
+  sub @figures' fraction by @numerators;
+} Numerator1;
 
-lookup DOWN {
-  sub fraction @numerators' by @denominators;
-  sub @denominators @numerators' by @denominators;
-} DOWN;
+lookup Numerator2 {
+  sub @figures' @numerators
+  fraction by @numerators;
+} Numerator2;
+
+lookup Numerator3 {
+  sub @figures' @numerators @numerators
+  fraction by @numerators;
+} Numerator3;
+
+lookup Numerator4 {
+  sub @figures' @numerators @numerators @numerators
+  fraction by @numerators;
+} Numerator4;
+
+lookup Numerator5 {
+  sub @figures' @numerators @numerators @numerators @numerators
+  fraction by @numerators;
+} Numerator5;
+
+lookup Numerator6 {
+  sub @figures' @numerators @numerators @numerators @numerators @numerators
+  fraction by @numerators;
+} Numerator6;
+
+lookup Numerator7 {
+  sub @figures' @numerators @numerators @numerators @numerators @numerators
+                @numerators
+  fraction by @numerators;
+} Numerator7;
+
+lookup Numerator8 {
+  sub @figures' @numerators @numerators @numerators @numerators @numerators
+                @numerators @numerators
+  fraction by @numerators;
+} Numerator8;
+
+lookup Numerator9 {
+  sub @figures'
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+  fraction by @numerators;
+} Numerator9;
+
+lookup Numerator10 {
+  sub @figures'
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+      @numerators
+  fraction by @numerators;
+} Numerator10;
+
+lookup Denominator {
+  sub [fraction @denominators onefraction] @figures' by @denominators;
+} Denominator;
+
+sub @figures space' @numerators by thinspace;
