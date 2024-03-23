@@ -3464,50 +3464,6 @@ code = "cvParameters { FeatUILabelNameID { name \"Compact t\"; }; };
 include(features/cv13-compact-t.fea);
 ";
 tag = cv13;
-},
-{
-automatic = 1;
-code = "sub A by a.sc;
-sub G by g.sc;
-sub Ghook by ghook.sc;
-sub H by h.sc;
-sub I by i.sc;
-sub L by l.sc;
-sub M by m.sc;
-sub N by n.sc;
-sub OE by oe.sc;
-sub R by r.sc;
-sub T by t.sc;
-sub Y by y.sc;
-sub ghook by ghook.sc;
-sub i by i.sc;
-sub l by l.sc;
-sub n by n.sc;
-sub oe by oe.sc;
-sub r by r.sc;
-sub y by y.sc;
-sub a by a.sc;
-sub m by m.sc;
-sub t by t.sc;
-";
-tag = c2sc;
-},
-{
-automatic = 1;
-code = "sub a by a.sc;
-sub g by g.sc;
-sub ghook by ghook.sc;
-sub h by h.sc;
-sub i by i.sc;
-sub l by l.sc;
-sub m by m.sc;
-sub n by n.sc;
-sub oe by oe.sc;
-sub r by r.sc;
-sub t by t.sc;
-sub y by y.sc;
-";
-tag = smcp;
 }
 );
 fontMaster = (
