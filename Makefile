@@ -237,7 +237,7 @@ var_web: \
 	$(FONTDIR)/var/InterVariable.woff2 \
 	$(FONTDIR)/var/InterVariable-Italic.woff2
 
-web: var_web static_web
+web: var_web static_web static_web_hinted
 
 static: \
 	$(FONTDIR)/static-hinted/Inter.ttc
@@ -284,8 +284,9 @@ STATIC_DISPLAY_FONTS := \
 
 STATIC_FONTS := $(STATIC_TEXT_FONTS) $(STATIC_DISPLAY_FONTS)
 STATIC_FONTS_OTF := $(patsubst %,$(FONTDIR)/static/%.otf,$(STATIC_FONTS))
-STATIC_FONTS_WEB := $(patsubst %,$(FONTDIR)/static/%.woff2,$(STATIC_FONTS))
 STATIC_FONTS_TTF := $(patsubst %,$(FONTDIR)/static-hinted/%.ttf,$(STATIC_FONTS))
+STATIC_FONTS_WEB := $(patsubst %,$(FONTDIR)/static/%.woff2,$(STATIC_FONTS))
+STATIC_FONTS_WEB_HINTED := $(patsubst %,$(FONTDIR)/static-hinted/%.woff2,$(STATIC_FONTS))
 
 $(FONTDIR)/static/Inter.otc: $(STATIC_FONTS_OTF)
 	. $(VENV) ; python -m fontTools.ttLib.__main__ -o $@ $^
@@ -296,12 +297,13 @@ $(FONTDIR)/static-hinted/Inter.ttc: $(STATIC_FONTS_TTF)
 static_otf: $(STATIC_FONTS_OTF)
 static_ttf: $(STATIC_FONTS_TTF)
 static_web: $(STATIC_FONTS_WEB)
+static_web_hinted: $(STATIC_FONTS_WEB_HINTED)
 
 all: var static web static_otf
 
 .PHONY: \
 	all var var_web web \
-	static static_otf static_ttf static_web
+	static static_otf static_ttf static_web static_web_hinted
 
 # ---------------------------------------------------------------------------------
 # testing
