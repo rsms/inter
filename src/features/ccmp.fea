@@ -35,6 +35,7 @@ lookup idieresis_double {
 
 # Transpose sequences like /i /gravecomb -> /idotless /gravecomb
 lookup ccmp02 {
+  lookupflag UseMarkFilteringSet @CCMP_ACC;
   sub i' @CCMP_ACC by idotless;
   sub j' @CCMP_ACC by jdotless;
   sub ibar' @CCMP_ACC by uni0268.ccmp;
