@@ -1,38 +1,20 @@
 @figures = [
-  zero
-  one
-  two
-  three
-  four
-  five
-  six
-  seven
-  eight
-  nine
+  zero            one             two             three           four
+  five            six             seven           eight           nine
+  period          comma           plus            minus           equal
+  parenleft       parenright
 ];
 @numerators = [
-  zero.numr
-  one.numr
-  two.numr
-  three.numr
-  four.numr
-  five.numr
-  six.numr
-  seven.numr
-  eight.numr
-  nine.numr
+  zero.numr       one.numr        two.numr        three.numr      four.numr
+  five.numr       six.numr        seven.numr      eight.numr      nine.numr
+  period.numr     comma.numr      plus.numr       minus.numr      equal.numr
+  parenleft.numr  parenright.numr
 ];
 @denominators = [
-  zero.dnom
-  one.dnom
-  two.dnom
-  three.dnom
-  four.dnom
-  five.dnom
-  six.dnom
-  seven.dnom
-  eight.dnom
-  nine.dnom
+  zero.dnom       one.dnom        two.dnom        three.dnom      four.dnom
+  five.dnom       six.dnom        seven.dnom      eight.dnom      nine.dnom
+  period.dnom     comma.dnom      plus.dnom       minus.dnom      equal.dnom
+  parenleft.dnom  parenright.dnom
 ];
 
 lookup FractionBar {

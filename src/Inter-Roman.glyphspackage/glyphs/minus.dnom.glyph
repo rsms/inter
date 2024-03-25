@@ -1,6 +1,8 @@
 {
 case = minor;
 glyphname = minus.dnom;
+kernLeft = hyphen.dnom;
+kernRight = hyphen.dnom;
 layers = (
 {
 guides = (
@@ -11,12 +13,25 @@ pos = (1020,200);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
-alignment = 1;
-pos = (0,-994);
-ref = minus.numr;
+closed = 1;
+nodes = (
+(116,468,l),
+(116,336,l),
+(665,336,l),
+(665,468,l)
+);
 }
 );
-width = 822;
+userData = {
+RMXScaler = {
+adjustSpace = 10;
+height = 55;
+verticalShift = 70;
+weight = -60;
+width = 55;
+};
+};
+width = 781;
 },
 {
 guides = (
@@ -27,12 +42,25 @@ pos = (1080,212);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
-alignment = 1;
-pos = (0,-984);
-ref = minus.numr;
+closed = 1;
+nodes = (
+(102,508,l),
+(102,318,l),
+(704,318,l),
+(704,508,l)
+);
 }
 );
-width = 830;
+userData = {
+RMXScaler = {
+adjustSpace = 10;
+height = 55;
+verticalShift = 70;
+weight = -370;
+width = 55;
+};
+};
+width = 806;
 },
 {
 guides = (
@@ -43,12 +71,25 @@ pos = (912,192);
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
-alignment = 1;
-pos = (0,-992);
-ref = minus.numr;
+closed = 1;
+nodes = (
+(133,406,l),
+(133,360,l),
+(613,360,l),
+(613,406,l)
+);
 }
 );
-width = 786;
+userData = {
+RMXScaler = {
+adjustSpace = 10;
+height = 52;
+verticalShift = 80;
+weight = 5;
+width = 55;
+};
+};
+width = 746;
 },
 {
 guides = (
@@ -59,12 +100,25 @@ pos = (728,200);
 layerId = m007;
 shapes = (
 {
-alignment = 1;
-pos = (0,-994);
-ref = minus.numr;
+closed = 1;
+nodes = (
+(123,462,l),
+(123,333,l),
+(670,333,l),
+(670,462,l)
+);
 }
 );
-width = 756;
+userData = {
+RMXScaler = {
+adjustSpace = 30;
+height = 55;
+verticalShift = 80;
+weight = -60;
+width = 55;
+};
+};
+width = 793;
 },
 {
 guides = (
@@ -75,12 +129,25 @@ pos = (984,212);
 layerId = m009;
 shapes = (
 {
-alignment = 1;
-pos = (0,-984);
-ref = minus.numr;
+closed = 1;
+nodes = (
+(105,503,l),
+(105,312,l),
+(707,312,l),
+(707,503,l)
+);
 }
 );
-width = 798;
+userData = {
+RMXScaler = {
+adjustSpace = 20;
+height = 55;
+verticalShift = 90;
+weight = -370;
+width = 55;
+};
+};
+width = 812;
 },
 {
 guides = (
@@ -91,12 +158,25 @@ pos = (784,192);
 layerId = m011;
 shapes = (
 {
-alignment = 1;
-pos = (0,-992);
-ref = minus.numr;
+closed = 1;
+nodes = (
+(133,416,l),
+(133,370,l),
+(612,370,l),
+(612,416,l)
+);
 }
 );
-width = 658;
+userData = {
+RMXScaler = {
+adjustSpace = 40;
+height = 52;
+verticalShift = 90;
+weight = 8;
+width = 55;
+};
+};
+width = 745;
 }
 );
 unicode = 57545;

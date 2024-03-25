@@ -1,0 +1,76 @@
+{
+glyphname = comma.dnom.ss03;
+kernLeft = period.dnom;
+kernRight = period.dnom;
+layers = (
+{
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
+metricLeft = "=-40";
+metricRight = "=-40";
+shapes = (
+{
+pos = (-40,0);
+ref = comma.ss03;
+}
+);
+width = 474;
+},
+{
+layerId = m011;
+metricLeft = "=-50";
+metricRight = "=-50";
+shapes = (
+{
+pos = (-50,0);
+ref = comma.ss03;
+}
+);
+width = 300;
+},
+{
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
+shapes = (
+{
+ref = comma.ss03;
+scale = (0.8,0.8);
+}
+);
+width = 472;
+},
+{
+layerId = m007;
+metricLeft = "=-20";
+metricRight = "=-20";
+shapes = (
+{
+pos = (-20,0);
+ref = comma.ss03;
+scale = (0.9,0.8);
+}
+);
+width = 365;
+},
+{
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
+shapes = (
+{
+ref = comma.ss03;
+scale = (0.8,0.8);
+}
+);
+width = 611;
+},
+{
+layerId = m009;
+metricLeft = "=-10";
+shapes = (
+{
+pos = (-10,0);
+ref = comma.ss03;
+scale = (0.7,0.7);
+}
+);
+width = 371;
+}
+);
+}
