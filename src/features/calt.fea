@@ -50,12 +50,11 @@
   @Lowercase
 ];
 
-@CASE_DELIM_L = [
+@CASE_L = [
   braceleft   braceright
   bracketleft bracketright
   parenleft   parenright
-];
-@CASE_NONDELIM_L = [
+  asterisk
   at
   multiply
   minus
@@ -101,17 +100,12 @@
   lessequal
   greaterequal
 ];
-@CASE_L = [
-  @CASE_DELIM_L
-  @CASE_NONDELIM_L
-];
 
-@CASE_DELIM_R = [
+@CASE_R = [
   braceleft.case   braceright.case
   bracketleft.case bracketright.case
   parenleft.case   parenright.case
-];
-@CASE_NONDELIM_R = [
+  asterisk.case
   at.case
   multiply.case
   minus.case
@@ -156,10 +150,6 @@
   greater.case
   lessequal.case
   greaterequal.case
-];
-@CASE_R = [
-  @CASE_DELIM_R
-  @CASE_NONDELIM_R
 ];
 
 @Punctuation = [
@@ -232,129 +222,89 @@ sub less.case [equal equal.case] [equal equal.case] by leftLongDoubleArrow.case;
 # -------------------------------------------------------------------------------------
 # BEGIN smiley
 # :-)
-sub colon' [ @DASH_ANY minus minus.case ] [parenright parenright.case] by colon.case;
+sub colon' [ @DASH_ANY minus minus.case bullet ] [parenright parenright.case] by colon.case;
 sub [colon colon.case] hyphen' [parenright parenright.case] by hyphen.case;
 sub [colon colon.case] endash' [parenright parenright.case] by endash.case;
 sub [colon colon.case] emdash' [parenright parenright.case] by emdash.case;
-sub [colon colon.case] [ @DASH_ANY minus minus.case ] parenright' by parenright.case;
+sub [colon colon.case] bullet' [parenright parenright.case] by bullet.case;
+sub [colon colon.case] [ @DASH_ANY minus minus.case bullet ] parenright' by parenright.case;
 
 # END smiley
 # -------------------------------------------------------------------------------------
 # BEGIN case
 
-# A foo' -> A foo.case
-#
-# ignore subs adjacent to lower case
-#
-# h[1,3]
-ignore sub @LC @CASE_DELIM_L @All @CASE_DELIM_L'; # h[X]
-ignore sub @LC @CASE_DELIM_L @All @All @CASE_DELIM_L'; # h[XX]
-ignore sub @LC @CASE_DELIM_L @All @All @All @CASE_DELIM_L'; # h[XXX]
-ignore sub @LC @CASE_DELIM_L @All @All @All @All @CASE_DELIM_L'; # h[XXXX]
-# x[]X
-ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L' @UC;  # x[]X
-ignore sub @LC @CASE_DELIM_L' @Whitespace @UC; # x[ X
-ignore sub @LC @CASE_DELIM_L' @Whitespace @Whitespace @UC; # x[  X
-ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L' @Whitespace @UC; # x[] X
-ignore sub @LC @CASE_DELIM_L @CASE_DELIM_L' @Whitespace @Whitespace @UC; # x[]  X
-ignore sub @LC @CASE_DELIM_L' @UC; # x[X
+# Force lower-case parens if any one is lower case.
+# I.e. right paren in "(abC)" is always lower case.
+ignore sub parenleft @All @All parenright' ; # "(aB)"
+ignore sub parenleft @All @All @All parenright' ; # "(abC)"
+ignore sub parenleft @All @All @All @All parenright' ; # "(abcD)"
+ignore sub parenleft @All @All @All @All @All parenright' ; # "(abcdE)"
+ignore sub parenleft @All @All @All @All @All @All parenright' ; # "(abcdeF)"
+ignore sub braceleft @All @All braceright' ; # "{aB}"
+ignore sub braceleft @All @All @All braceright' ; # "{abC}"
+ignore sub braceleft @All @All @All @All braceright' ; # "{abcD}"
+ignore sub braceleft @All @All @All @All @All braceright' ; # "{abcdE}"
+ignore sub braceleft @All @All @All @All @All @All braceright' ; # "{abcdeF}"
+ignore sub bracketleft @All @All bracketright' ; # "[aB]"
+ignore sub bracketleft @All @All @All bracketright' ; # "[abC]"
+ignore sub bracketleft @All @All @All @All bracketright' ; # "[abcD]"
+ignore sub bracketleft @All @All @All @All @All bracketright' ; # "[abcdE]"
+ignore sub bracketleft @All @All @All @All @All @All bracketright' ; # "[abcdeF]"
 
-# short runs of uc-lc, e.g "(Xx)", "[xxX]"
-ignore sub @CASE_DELIM_L' @UC @LC @CASE_DELIM_L; # (Xx)
-ignore sub @CASE_DELIM_L' @UC @All @LC @CASE_DELIM_L; # (X.x)
-ignore sub @CASE_DELIM_L @LC @UC @CASE_DELIM_L'; # (xX)
-ignore sub @CASE_DELIM_L @LC @All @UC @CASE_DELIM_L'; # (x.X)
+# "3+" EXCEPT "3+<non-uc>"
+ignore sub @UC @CASE_L' @LC;
+ignore sub @UC @CASE_L' @Whitespace @LC;
+ignore sub @UC @CASE_L' @Whitespace @Whitespace @LC;
+sub @UC @CASE_L' by @CASE_R;
 
-#
-# e.g. "x-M"
-ignore sub @LC @CASE_L'; # x-
-ignore sub @LC @CASE_L @CASE_L'; # x--
-ignore sub @LC @CASE_L @CASE_L @CASE_L'; # x---
-# ignore sub @LC [@CASE_L @Whitespace] @CASE_L'; # x--, x -
-# ignore sub @LC [@CASE_L @Whitespace] [@CASE_L @Whitespace] @CASE_L'; # x---, x --, x  -, x- -
-# ignore sub @LC
-#            [@CASE_L @Whitespace]
-#            [@CASE_L @Whitespace]
-#            [@CASE_L @Whitespace]
-#            @CASE_L'; # x----, x ---, x  --, x   -, x- --, x-  -, x-- -
-# ignore sub @LC
-#            [@CASE_L @Whitespace]
-#            [@CASE_L @Whitespace]
-#            [@CASE_L @Whitespace]
-#            [@CASE_L @Whitespace]
-#            @CASE_L'; # x----- ...
-#
-# e.g. "x- "
-# ignore sub @LC @CASE_L' @Whitespace; # "x- "
-# ignore sub @LC @CASE_L' @Whitespace @Whitespace; # "x-  "
-#
-# e.g. "-x"
-ignore sub @CASE_L' @LC; # -x
-ignore sub @CASE_L' @CASE_L @LC; # --x
-ignore sub @CASE_L' @CASE_L @CASE_L @LC; # ---x
-# ignore sub @CASE_L @CASE_L @CASE_L @CASE_L @LC; # ----x
-# ignore sub @CASE_L @CASE_L @CASE_L @CASE_L @CASE_L @LC; # -----x
+# "+3" EXCEPT "<non-uc>+3" (including backtrack, e.g. "---X")
+ignore sub @LC @CASE_L' @UC; # "x-X"
+ignore sub @LC @CASE_L @CASE_L' @UC; # "x--X"
+ignore sub @LC @CASE_L @CASE_L @CASE_L' @UC; # "x---X"
+ignore sub @LC @CASE_L @CASE_L @CASE_L @CASE_L' @UC; # "x---X"
+ignore sub @LC @CASE_L @CASE_L @CASE_L @CASE_L @CASE_L' @UC; # "x----X"
+ignore sub @LC @CASE_L' @CASE_L @UC; # "x-"
+sub @CASE_L' @UC by @CASE_R;
+sub @CASE_L' @CASE_L @UC by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @UC by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @CASE_L @UC by @CASE_R;
+sub @CASE_L' @CASE_L @CASE_L @CASE_L @CASE_L @UC by @CASE_R;
 
-#
-# pairs with space, e.g. "( ) M" since we don't support subbing
-# all on the left side.
-ignore sub @CASE_DELIM_L @Whitespace @CASE_DELIM_L' @Whitespace [ @UC @CASE_R ];
-#
-# e.g. "A-", "A -", "A  -"
-sub [ @UC @CASE_R ] @CASE_L' by @CASE_R;
-sub [ @UC @CASE_R ] @Whitespace @CASE_L' by @CASE_R;
-sub [ @UC @CASE_R ] @Whitespace @Whitespace @CASE_L' by @CASE_R;
+# "A-B", "A- B", "A-  B"
+sub @UC @CASE_L' @UC                         by @CASE_R;
+sub @UC @CASE_L' @Whitespace @UC             by @CASE_R;
+sub @UC @CASE_L' @Whitespace @Whitespace @UC by @CASE_R;
 
-# foo' foo foo foo foo A -> foo.case foo foo foo foo A
-# foo' foo foo foo A -> foo.case foo foo foo A
-# foo' foo foo A -> foo.case foo foo A
-# foo' foo A -> foo.case foo A
-# foo' A -> foo.case A
-# Note: since we look quite far back, sequences like x{}[]M will case both
-# the square brackets next to M _and_ the curly braces to become .case
-#
-# e.g. "-A", "--A", "---A", "----A", "-----A"
-sub @CASE_L' [ @UC @CASE_R ] by @CASE_R;
-sub @CASE_L' @CASE_L [ @CASE_R @UC ] by @CASE_R;
-sub @CASE_L' @CASE_L @CASE_L [ @CASE_R @UC ] by @CASE_R;
-sub @CASE_L' @CASE_L @CASE_L @CASE_L [ @CASE_R @UC ] by @CASE_R;
-sub @CASE_L' @CASE_L @CASE_L @CASE_L @CASE_L [ @CASE_R @UC ] by @CASE_R;
-#
-# e.g. "- A", "-- A", "--- A", "---- A", "----- A"
-sub @CASE_L' @Whitespace [ @UC @CASE_R ] by @CASE_R;
-sub @CASE_L' @CASE_L @Whitespace [ @CASE_R @UC ] by @CASE_R;
-sub @CASE_L' @CASE_L @CASE_L @Whitespace [ @CASE_R @UC ] by @CASE_R;
-sub @CASE_L' @CASE_L @CASE_L @CASE_L @Whitespace [ @CASE_R @UC ] by @CASE_R;
-sub @CASE_L' @CASE_L @CASE_L @CASE_L @CASE_L @Whitespace [ @CASE_R @UC ] by @CASE_R;
-#
-# e.g. "-  A", "--  A", "---  A", "----  A", "-----  A"
-sub @CASE_L' @Whitespace @Whitespace [ @UC @CASE_R ] by @CASE_R;
-sub @CASE_L' @CASE_L @Whitespace @Whitespace [ @CASE_R @UC ] by @CASE_R;
-sub @CASE_L' @CASE_L @CASE_L @Whitespace @Whitespace [ @CASE_R @UC ] by @CASE_R;
-sub @CASE_L' @CASE_L @CASE_L @CASE_L @Whitespace @Whitespace [ @CASE_R @UC ] by @CASE_R;
-sub @CASE_L' @CASE_L @CASE_L @CASE_L @CASE_L @Whitespace @Whitespace [ @CASE_R @UC ] by @CASE_R;
+# "A -B", "A - B", "A -  B"
+sub @UC @Whitespace @CASE_L' @UC                         by @CASE_R;
+sub @UC @Whitespace @CASE_L' @Whitespace @UC             by @CASE_R;
+sub @UC @Whitespace @CASE_L' @Whitespace @Whitespace @UC by @CASE_R;
 
-# X(_)
-sub @CASE_DELIM_R @Punctuation @CASE_DELIM_L' by @CASE_DELIM_R;
+# "A  -B", "A  - B", "A  -  B"
+sub @UC @Whitespace @Whitespace @CASE_L' @UC                         by @CASE_R;
+sub @UC @Whitespace @Whitespace @CASE_L' @Whitespace @UC             by @CASE_R;
+sub @UC @Whitespace @Whitespace @CASE_L' @Whitespace @Whitespace @UC by @CASE_R;
 
-# in between number position adjustment, e.g. 3 /multiply 4 -> 3 multiply.case 4
-@between_num_L = [
-  multiply
-  asterisk
-];
-@between_num_R = [
-  multiply.case
-  asterisk.case
-];
-sub @Numeral @between_num_L' @Numeral                                                 by @between_num_R; # 3*9
-sub @Numeral @Whitespace @between_num_L' @Numeral                                     by @between_num_R; # 3 *9
-sub @Numeral @Whitespace @Whitespace @between_num_L' @Numeral                         by @between_num_R; # 3  *9
-sub @Numeral @between_num_L' @Whitespace @Numeral                                     by @between_num_R; # 3* 9
-sub @Numeral @Whitespace @between_num_L' @Whitespace @Numeral                         by @between_num_R; # 3 * 9
-sub @Numeral @Whitespace @Whitespace @between_num_L' @Whitespace @Numeral             by @between_num_R; # 3  * 9
-sub @Numeral @between_num_L' @Whitespace @Whitespace @Numeral                         by @between_num_R; # 3*  9
-sub @Numeral @Whitespace @between_num_L' @Whitespace @Whitespace @Numeral             by @between_num_R; # 3 *  9
-sub @Numeral @Whitespace @Whitespace @between_num_L' @Whitespace @Whitespace @Numeral by @between_num_R; # 3  *  9
+# cascade
+sub @CASE_R @CASE_L' by @CASE_R;
+
+# unconditional parenright.case if opening paren is parenleft.case
+# e.g. "(Abc)" = /parenleft.case/A/b/c/parenright.case
+sub parenleft.case @All @All parenright' by parenright.case;
+sub parenleft.case @All @All @All parenright' by parenright.case;
+sub parenleft.case @All @All @All @All parenright' by parenright.case;
+sub parenleft.case @All @All @All @All @All parenright' by parenright.case;
+sub parenleft.case @All @All @All @All @All @All parenright' by parenright.case;
+sub braceleft.case @All @All braceright' by braceright.case;
+sub braceleft.case @All @All @All braceright' by braceright.case;
+sub braceleft.case @All @All @All @All braceright' by braceright.case;
+sub braceleft.case @All @All @All @All @All braceright' by braceright.case;
+sub braceleft.case @All @All @All @All @All @All braceright' by braceright.case;
+sub bracketleft.case @All @All bracketright' by bracketright.case;
+sub bracketleft.case @All @All @All bracketright' by bracketright.case;
+sub bracketleft.case @All @All @All @All bracketright' by bracketright.case;
+sub bracketleft.case @All @All @All @All @All bracketright' by bracketright.case;
+sub bracketleft.case @All @All @All @All @All @All bracketright' by bracketright.case;
 
 # END case
 # -------------------------------------------------------------------------------------
@@ -365,18 +315,13 @@ sub @Numeral @Whitespace @Whitespace @between_num_L' @Whitespace @Whitespace @Nu
 #   0x10  -> 0x10   No substitution
 #
 @NumNoZero = [
-  #
-  # NOTE! Keep this up to date with @Whitespace
-  #
-  #   1. in glyphs, copy list from font into > features > Whitespace class
-  #   2. paste & replace this list here
-  #   3. remove all "zero" glyphs
-  #
-  one two twostroke three four five Tonefive six seven eight nine
-  one.ss01 three.1 four.ss01 six.ss01 nine.ss01
-  one.tf two.tf three.tf four.tf five.tf six.tf seven.tf eight.tf
-  nine.tf one.tf.ss01 three.1.tf four.tf.ss01 six.tf.ss01
-  nine.tf.ss01
+  one          two          three        four         five
+  six          seven        eight        nine         one.ss01
+  three.1      four.ss01    six.ss01     nine.ss01
+
+  one.tf       two.tf       three.tf     four.tf      five.tf
+  six.tf       seven.tf     eight.tf     nine.tf      one.tf.ss01
+  three.1.tf   four.tf.ss01 six.tf.ss01  nine.tf.ss01
 ];
 
 sub @NumNoZero x' @Numeral by multiply.case; # "3x9" "1x0"
