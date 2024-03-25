@@ -310,7 +310,7 @@ left side cascades up to 5 characters:
 @@@@@@M@@@@@@
 ++++++M++++++
 
-x[x]. [X] \t x lc x lc followed by .case C .case
+x[x].  [X] \t x lc x lc followed by .case C .case
 (Xx) \t\t lc uc uc lc
 [Zzz] \t lc uc lc lc lc
 (XX)
