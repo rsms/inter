@@ -27,12 +27,6 @@
   fourdotsabovecomb
 ];
 
-# /idieresis /idieresis -> /idieresis.double
-lookup idieresis_double {
-  sub [idieresis yi-cy] [idieresis yi-cy] by idieresis.double;
-  sub [Idieresis Yi-cy] [Idieresis Yi-cy] by Idieresis.double;
-} idieresis_double;
-
 # Transpose sequences like /i /gravecomb -> /idotless /gravecomb
 lookup ccmp02 {
   sub i' @CCMP_ACC by idotless;
