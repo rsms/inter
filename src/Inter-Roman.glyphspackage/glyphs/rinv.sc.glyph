@@ -1,4 +1,5 @@
 {
+category = Letter;
 glyphname = rinv.sc;
 layers = (
 {
@@ -245,7 +246,9 @@ width = 943;
 metricLeft = r.sc;
 metricRight = r.sc;
 note = "after edits, set sidebearings to \"=R*0.8\" and Update Metrics, then remove the sidebearing expressions (or it will oscillate)";
-unicode = 60956;
+script = latin;
+subCategory = Small;
+unicode = 641;
 userData = {
 interface.gridadjust.original = "{'width': 1555, 'leftMargin': 147, 'rightMargin': 122}";
 "interface.width-adjustments" = (

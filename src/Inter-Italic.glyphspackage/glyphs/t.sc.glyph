@@ -1,4 +1,6 @@
 {
+case = smallCaps;
+category = Letter;
 glyphname = t.sc;
 kernLeft = t;
 kernRight = r;
@@ -187,5 +189,7 @@ width = 1122;
 metricLeft = t;
 metricRight = "=|t";
 note = "used by cyrillic glyphs";
-unicode = 61062;
+script = latin;
+subCategory = Small;
+unicode = 7451;
 }

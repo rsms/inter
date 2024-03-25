@@ -1,4 +1,6 @@
 {
+case = smallCaps;
+category = Letter;
 glyphname = i.sc;
 kernLeft = b.sc;
 kernRight = h.sc;
@@ -347,7 +349,9 @@ width = 398;
 }
 );
 metricRight = "=|i.sc";
-unicode = 60950;
+script = latin;
+subCategory = Small;
+unicode = 618;
 userData = {
 RMXScaler = {
 source = I.1;
