@@ -3047,6 +3047,7 @@ include(features/cv10-g-spur.fea);
 include(features/cv11-single-storey-a.fea);
 include(features/cv12-compact-f.fea);
 include(features/cv13-compact-t.fea);
+include(features/cv14-germandbls.fea);
 ";
 tag = salt;
 },
@@ -3455,7 +3456,7 @@ include(features/cv06-u.fea);
 tag = cv06;
 },
 {
-code = "cvParameters { FeatUILabelNameID { name \"Alternate German double s\"; }; };
+code = "cvParameters { FeatUILabelNameID { name \"Alternate sharp s\"; }; };
 include(features/cv07-germandbls.fea);
 ";
 tag = cv07;
@@ -3494,6 +3495,12 @@ code = "cvParameters { FeatUILabelNameID { name \"Compact t\"; }; };
 include(features/cv13-compact-t.fea);
 ";
 tag = cv13;
+},
+{
+code = "cvParameters { FeatUILabelNameID { name \"Alternate capital sharp S\"; }; };
+include(features/cv14-germandbls.fea);
+";
+tag = cv14;
 }
 );
 fontMaster = (
@@ -3786,7 +3793,7 @@ stemValues = (
 46
 );
 userData = {
-GSCornerRadius = 142;
+GSCornerRadius = 426;
 GSOffsetCapStyle = 4;
 GSOffsetHorizontal = 23;
 GSOffsetKeepCompatible = 1;
@@ -4068,7 +4075,7 @@ stemValues = (
 180
 );
 userData = {
-GSCornerRadius = 110;
+GSCornerRadius = 220;
 GSOffsetCapStyle = 3;
 GSOffsetHorizontal = 87;
 GSOffsetKeepCompatible = 1;
@@ -4076,6 +4083,7 @@ GSOffsetMakeStroke = 1;
 GSOffsetPosition = 1;
 GSOffsetVertical = 85;
 };
+visible = 1;
 },
 {
 axesValues = (
@@ -4367,7 +4375,7 @@ stemValues = (
 400
 );
 userData = {
-GSCornerRadius = 30;
+GSCornerRadius = 500;
 GSExtrudeAngle = 30;
 GSExtrudeOffset = 15;
 GSOffsetHorizontal = 180;

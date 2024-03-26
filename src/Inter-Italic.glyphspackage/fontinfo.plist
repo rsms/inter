@@ -3046,6 +3046,7 @@ include(features/cv10-g-spur.fea);
 # Note: cv11 is single-story a, which only exists in the roman font
 include(features/cv12-compact-f.fea);
 include(features/cv13-compact-t.fea);
+include(features/cv14-germandbls.fea);
 ";
 tag = salt;
 },
@@ -3445,7 +3446,7 @@ include(features/cv06-u.fea);
 tag = cv06;
 },
 {
-code = "cvParameters { FeatUILabelNameID { name \"Alternate German double s\"; }; };
+code = "cvParameters { FeatUILabelNameID { name \"Alternate sharp s\"; }; };
 include(features/cv07-germandbls.fea);
 ";
 tag = cv07;
@@ -3479,6 +3480,12 @@ code = "cvParameters { FeatUILabelNameID { name \"Compact t\"; }; };
 include(features/cv13-compact-t.fea);
 ";
 tag = cv13;
+},
+{
+code = "cvParameters { FeatUILabelNameID { name \"Alternate capital sharp S\"; }; };
+include(features/cv14-germandbls.fea);
+";
+tag = cv14;
 }
 );
 fontMaster = (
