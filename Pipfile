@@ -10,10 +10,11 @@ ufo2ft = "==2.30.0"
 fontmake = "==3.5.*"
 fontbakery = "==0.10.4"
 skia-pathops = "==0.8.*"
-gftools = "*"
+gftools = "==0.9.52"
 glyphspkg = "==0.1.*"
 brotli = "==1.0.*"
 psautohint = "==2.4.*"
+pipfile = "*"
 
 [dev-packages]
 # Mainly due to https://pypi.org/project/fonttools/

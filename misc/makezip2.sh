@@ -49,7 +49,7 @@ mkdir -p "$(dirname "$OUTFILE_ABS")" "$ZIPDIR"
 cp LICENSE.txt "$ZIPDIR/LICENSE.txt"
 
 
-mkdir -p "$ZIPDIR/web" "$ZIPDIR/googlefonts"
+mkdir -p "$ZIPDIR/web"
 
 cp misc/dist/help.txt                         "$ZIPDIR/help.txt"
 cp build/fonts/static-hinted/Inter.ttc        "$ZIPDIR/Inter.ttc"
@@ -59,7 +59,6 @@ cp build/fonts/static/Inter*.woff2            "$ZIPDIR/web/" &
 cp build/fonts/var/InterVariable.woff2        "$ZIPDIR/web/InterVariable.woff2"
 cp build/fonts/var/InterVariable-Italic.woff2 "$ZIPDIR/web/InterVariable-Italic.woff2"
 cp misc/dist/inter.css                        "$ZIPDIR/web/"
-cp build/fonts/googlefonts/Inter*.ttf         "$ZIPDIR/googlefonts/"
 
 . build/venv/bin/activate
 python misc/tools/patch-version.py "$ZIPDIR/web/inter.css"
