@@ -1,6 +1,7 @@
 {
 glyphname = tetsecyrillic;
 kernLeft = t;
+kernRight = ltail;
 layers = (
 {
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
@@ -8,18 +9,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(94,1118,l),
-(94,958,l),
-(802,958,l),
-(802,1118,l)
+(20,1118,l),
+(20,958,l),
+(728,958,l),
+(728,1118,l)
 );
 },
 {
-pos = (201,0);
+pos = (127,0);
 ref = tsecyrillic;
 }
 );
-width = 1454;
+width = 1350;
 },
 {
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -27,18 +28,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(94,1118,l),
-(94,814,l),
-(834,814,l),
-(834,1118,l)
+(20,1118,l),
+(20,814,l),
+(760,814,l),
+(760,1118,l)
 );
 },
 {
-pos = (174,0);
+pos = (100,0);
 ref = tsecyrillic;
 }
 );
-width = 1548;
+width = 1546;
 },
 {
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -46,18 +47,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(94,1118,l),
-(94,1070,l),
-(786,1070,l),
-(786,1118,l)
+(10,1118,l),
+(10,1072,l),
+(702,1072,l),
+(702,1118,l)
 );
 },
 {
-pos = (205,0);
+pos = (121,0);
 ref = tsecyrillic;
 }
 );
-width = 1390;
+width = 1249;
 },
 {
 layerId = m007;
@@ -65,18 +66,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(62,1056,l),
-(62,896,l),
-(770,896,l),
-(770,1056,l)
+(15,1056,l),
+(15,896,l),
+(723,896,l),
+(723,1056,l)
 );
 },
 {
-pos = (201,0);
+pos = (154,0);
 ref = tsecyrillic;
 }
 );
-width = 1398;
+width = 1313;
 },
 {
 layerId = m009;
@@ -84,18 +85,18 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(89,1056,l),
-(89,752,l),
-(829,752,l),
-(829,1056,l)
+(20,1056,l),
+(20,752,l),
+(760,752,l),
+(760,1056,l)
 );
 },
 {
-pos = (175,0);
+pos = (106,0);
 ref = tsecyrillic;
 }
 );
-width = 1538;
+width = 1534;
 },
 {
 layerId = m011;
@@ -103,20 +104,22 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(30,1118,l),
-(30,1070,l),
-(722,1070,l),
-(722,1118,l)
+(0,1056,l),
+(0,1010,l),
+(692,1010,l),
+(692,1056,l)
 );
 },
 {
-pos = (206,0);
+pos = (176,0);
 ref = tsecyrillic;
 }
 );
-width = 1262;
+width = 1240;
 }
 );
+metricLeft = t;
+metricRight = tsecyrillic;
 unicode = 1205;
 userData = {
 interface.gridadjust.original = "{'width': 1898, 'leftMargin': 44, 'rightMargin': 94}";
