@@ -10,15 +10,16 @@ ufo2ft = "==2.30.0"
 fontmake = "==3.5.*"
 fontbakery = "==0.10.4"
 skia-pathops = "==0.8.*"
-gftools = "==0.9.*"
+gftools = "==0.9.57"
 glyphspkg = "==0.1.*"
 brotli = "==1.0.*"
 psautohint = "==2.4.*"
+pipfile = "*"
 
 [dev-packages]
-
 # Mainly due to https://pypi.org/project/fonttools/
 # > FontTools requires Python 3.8 or later. We try to follow the same schedule
 # > of minimum Python version support as NumPy (see NEP 29).
+
 [requires]
 python_version = "3.8"

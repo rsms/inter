@@ -233,6 +233,14 @@ var: \
 	$(FONTDIR)/var/InterVariable.ttf \
 	$(FONTDIR)/var/InterVariable-Italic.ttf
 
+googlefonts: var
+	. $(VENV) ; gftools fix-family $(FONTDIR)/var/*.ttf \
+	--rename-family "Inter" \
+	--include-source-fixes \
+	-o $(FONTDIR)/googlefonts;
+	. $(VENV) ; gftools fontsetter $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf;
+	. $(VENV) ; gftools fontsetter $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf;
+
 var_web: \
 	$(FONTDIR)/var/InterVariable.woff2 \
 	$(FONTDIR)/var/InterVariable-Italic.woff2
@@ -299,7 +307,7 @@ static_ttf: $(STATIC_FONTS_TTF)
 static_web: $(STATIC_FONTS_WEB)
 static_web_hinted: $(STATIC_FONTS_WEB_HINTED)
 
-all: var static web static_otf
+all: var googlefonts static web static_otf
 
 .PHONY: \
 	all var var_web web \
@@ -418,6 +426,7 @@ zip_beta: \
 # - step2 runs tests, then makes a zip archive and updates the website (docs/ dir.)
 
 DIST_ZIP = build/release/Inter-${VERSION}.zip
+DIST_ZIP_GF = $(SRCDIR)/build/release/Inter-$(VERSION)-GoogleFonts.zip
 
 dist:
 	@echo "——————————————————————————————————————————————————————————————————"
@@ -437,12 +446,14 @@ dist:
 	$(MAKE) -f $(MAKEFILE) -j$(nproc) clean
 	$(MAKE) -f $(MAKEFILE) -j$(nproc) all
 	$(MAKE) -f $(MAKEFILE) -j$(nproc) test
-	$(MAKE) -f $(MAKEFILE) -j$(nproc) dist_zip dist_docs
+	$(MAKE) -f $(MAKEFILE) -j$(nproc) dist_zip dist_zip_gf dist_docs
 	$(MAKE) -f $(MAKEFILE) dist_postflight
 
 dist_zip: | venv
-	@#. $(VENV) ; python misc/tools/patch-version.py misc/dist/inter.css
 	bash misc/makezip2.sh -reveal-in-finder "$(DIST_ZIP)"
+
+dist_zip_gf: | venv
+	cd "$(FONTDIR)/googlefonts" && zip -q -X -r "$(DIST_ZIP_GF)" *.ttf
 
 dist_docs:
 	$(MAKE) -C docs -j$(nproc) dist
