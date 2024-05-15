@@ -1,5 +1,5 @@
 {
-.appVersion = "3151";
+.appVersion = "3260";
 .formatVersion = 3;
 axes = (
 {
@@ -2545,10 +2545,10 @@ opsz = {
 wght = {
 100 = 100;
 400 = 400;
-500 = 490;
-600 = 580;
-700 = 670;
-800 = 780;
+490 = 500;
+580 = 600;
+670 = 700;
+780 = 800;
 900 = 900;
 };
 };
@@ -3538,12 +3538,12 @@ pos = 2712;
 size = 16;
 },
 {
-pos = "-544";
-size = "-64";
+pos = -544;
+size = -64;
 },
 {
-pos = "-664";
-size = "-16";
+pos = -664;
+size = -16;
 }
 );
 },
@@ -3693,12 +3693,12 @@ pos = 2712;
 size = 16;
 },
 {
-pos = "-544";
-size = "-64";
+pos = -544;
+size = -64;
 },
 {
-pos = "-664";
-size = "-16";
+pos = -664;
+size = -16;
 }
 );
 },
@@ -3843,12 +3843,12 @@ pos = 2712;
 size = 16;
 },
 {
-pos = "-544";
-size = "-64";
+pos = -544;
+size = -64;
 },
 {
-pos = "-664";
-size = "-16";
+pos = -664;
+size = -16;
 }
 );
 },
@@ -3988,12 +3988,12 @@ pos = 2712;
 size = 16;
 },
 {
-pos = "-544";
-size = "-64";
+pos = -544;
+size = -64;
 },
 {
-pos = "-664";
-size = "-16";
+pos = -664;
+size = -16;
 }
 );
 },
@@ -4130,12 +4130,12 @@ pos = 2708;
 size = 16;
 },
 {
-pos = "-544";
-size = "-64";
+pos = -544;
+size = -64;
 },
 {
-pos = "-664";
-size = "-16";
+pos = -664;
+size = -16;
 }
 );
 },
@@ -4285,12 +4285,12 @@ pos = 2708;
 size = 16;
 },
 {
-pos = "-544";
-size = "-64";
+pos = -544;
+size = -64;
 },
 {
-pos = "-664";
-size = "-16";
+pos = -664;
+size = -16;
 }
 );
 },
@@ -4810,14 +4810,6 @@ linkStyle = Thin;
 name = "Thin Italic";
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = "Thin Italic";
-},
-{
 key = familyNames;
 values = (
 {
@@ -4825,6 +4817,14 @@ language = dflt;
 value = "Inter Display";
 }
 );
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Thin Italic";
 }
 );
 },
@@ -4867,14 +4867,6 @@ linkStyle = ExtraLight;
 name = "ExtraLight Italic";
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = "ExtraLight Italic";
-},
-{
 key = familyNames;
 values = (
 {
@@ -4882,6 +4874,14 @@ language = dflt;
 value = "Inter Display";
 }
 );
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "ExtraLight Italic";
 }
 );
 weightClass = 200;
@@ -4925,14 +4925,6 @@ linkStyle = Light;
 name = "Light Italic";
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = "Light Italic";
-},
-{
 key = familyNames;
 values = (
 {
@@ -4940,6 +4932,14 @@ language = dflt;
 value = "Inter Display";
 }
 );
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Light Italic";
 }
 );
 weightClass = 300;
@@ -5038,14 +5038,6 @@ linkStyle = Medium;
 name = "Medium Italic";
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = "Medium Italic";
-},
-{
 key = familyNames;
 values = (
 {
@@ -5053,6 +5045,14 @@ language = dflt;
 value = "Inter Display";
 }
 );
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Medium Italic";
 }
 );
 weightClass = 500;
@@ -5096,14 +5096,6 @@ linkStyle = SemiBold;
 name = "SemiBold Italic";
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = "SemiBold Italic";
-},
-{
 key = familyNames;
 values = (
 {
@@ -5111,6 +5103,14 @@ language = dflt;
 value = "Inter Display";
 }
 );
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "SemiBold Italic";
 }
 );
 weightClass = 600;
@@ -5213,14 +5213,6 @@ linkStyle = ExtraBold;
 name = "ExtraBold Italic";
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = "ExtraBold Italic";
-},
-{
 key = familyNames;
 values = (
 {
@@ -5228,6 +5220,14 @@ language = dflt;
 value = "Inter Display";
 }
 );
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "ExtraBold Italic";
 }
 );
 weightClass = 800;
@@ -5270,14 +5270,6 @@ linkStyle = Black;
 name = "Black Italic";
 properties = (
 {
-key = WWSFamilyName;
-value = "Inter Display";
-},
-{
-key = WWSSubfamilyName;
-value = "Black Italic";
-},
-{
 key = familyNames;
 values = (
 {
@@ -5285,6 +5277,14 @@ language = dflt;
 value = "Inter Display";
 }
 );
+},
+{
+key = WWSFamilyName;
+value = "Inter Display";
+},
+{
+key = WWSSubfamilyName;
+value = "Black Italic";
 }
 );
 weightClass = 900;
@@ -16382,19 +16382,6 @@ key = designerURL;
 value = "https://rsms.me/";
 },
 {
-key = manufacturers;
-values = (
-{
-language = dflt;
-value = rsms;
-}
-);
-},
-{
-key = manufacturerURL;
-value = "https://rsms.me/";
-},
-{
 key = licenses;
 values = (
 {
@@ -16408,8 +16395,17 @@ key = licenseURL;
 value = "http://scripts.sil.org/OFL";
 },
 {
-key = vendorID;
-value = RSMS;
+key = manufacturers;
+values = (
+{
+language = dflt;
+value = rsms;
+}
+);
+},
+{
+key = manufacturerURL;
+value = "https://rsms.me/";
 },
 {
 key = trademarks;
@@ -16419,6 +16415,10 @@ language = dflt;
 value = "Inter UI and Inter is a trademark of rsms.";
 }
 );
+},
+{
+key = vendorID;
+value = RSMS;
 }
 );
 settings = {
