@@ -234,12 +234,12 @@ var: \
 	$(FONTDIR)/var/InterVariable-Italic.ttf
 
 googlefonts: var
-	gftools fix-family $(FONTDIR)/var/*.ttf \
+	. $(VENV) ; gftools fix-family $(FONTDIR)/var/*.ttf \
 	--rename-family "Inter" \
 	--include-source-fixes \
 	-o $(FONTDIR)/googlefonts;
-	gftools fontsetter $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf;
-	gftools fontsetter $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf;
+	. $(VENV) ; gftools fontsetter $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf;
+	. $(VENV) ; gftools fontsetter $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf;
 
 var_web: \
 	$(FONTDIR)/var/InterVariable.woff2 \
