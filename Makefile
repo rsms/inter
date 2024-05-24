@@ -444,7 +444,7 @@ dist:
 		printf "Press ENTER to continue or ^C to cancel " ; read X) || true
 	@#
 	$(MAKE) -f $(MAKEFILE) -j$(nproc) clean
-	$(MAKE) -f $(MAKEFILE) -j$(nproc) all
+	$(MAKE) -f $(MAKEFILE) -j$(nproc) all googlefonts
 	$(MAKE) -f $(MAKEFILE) -j$(nproc) test
 	$(MAKE) -f $(MAKEFILE) -j$(nproc) dist_zip dist_zip_gf dist_docs
 	$(MAKE) -f $(MAKEFILE) dist_postflight
@@ -454,6 +454,9 @@ dist_zip: | venv
 
 dist_zip_gf: | venv
 	cd "$(FONTDIR)/googlefonts" && zip -q -X -r "$(DIST_ZIP_GF)" *.ttf
+
+dist_gf: googlefonts
+	$(MAKE) -f $(MAKEFILE) dist_zip_gf
 
 dist_docs:
 	$(MAKE) -C docs -j$(nproc) dist
@@ -474,6 +477,7 @@ dist_postflight:
 	@echo "——————————————————————————————————————————————————————————————————"
 
 .PHONY: dist dist_preflight dist_step1 dist_step2 dist_zip dist_docs dist_postflight
+.PHONY: dist_zip_gf dist_gf
 
 
 # ---------------------------------------------------------------------------------
