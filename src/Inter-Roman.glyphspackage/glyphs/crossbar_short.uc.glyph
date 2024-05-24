@@ -1,11 +1,11 @@
 {
-glyphname = crossbar_left_long;
+glyphname = crossbar_short.uc;
 layers = (
 {
 anchors = (
 {
 name = _cross;
-pos = (463,745);
+pos = (456,745);
 }
 );
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
@@ -13,20 +13,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(1013,675,l),
-(1013,815,l),
-(140,815,l),
-(140,675,l)
+(823,668,l),
+(823,822,l),
+(50,822,l),
+(50,668,l)
 );
 }
 );
-width = 1177;
+width = 873;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (520,745);
+pos = (510,745);
 }
 );
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
@@ -34,20 +34,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(1014,621,l),
-(1014,869,l),
-(128,869,l),
-(128,621,l)
+(898,621,l),
+(898,869,l),
+(50,869,l),
+(50,621,l)
 );
 }
 );
-width = 1166;
+width = 948;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (424,745);
+pos = (383,745);
 }
 );
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
@@ -55,20 +55,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(958,722,l),
-(958,768,l),
-(148,768,l),
-(148,722,l)
+(644,722,l),
+(644,768,l),
+(50,768,l),
+(50,722,l)
 );
 }
 );
-width = 1162;
+width = 694;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (448,745);
+pos = (446,745);
 }
 );
 layerId = m007;
@@ -76,20 +76,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(984,672,l),
-(984,818,l),
-(128,818,l),
-(128,672,l)
+(810,665,l),
+(810,825,l),
+(50,825,l),
+(50,665,l)
 );
 }
 );
-width = 1192;
+width = 860;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (496,745);
+pos = (530,745);
 }
 );
 layerId = m009;
@@ -97,20 +97,20 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(1022,621,l),
-(1022,869,l),
-(104,869,l),
-(104,621,l)
+(906,617,l),
+(906,873,l),
+(50,873,l),
+(50,617,l)
 );
 }
 );
-width = 1118;
+width = 956;
 },
 {
 anchors = (
 {
 name = _cross;
-pos = (360,745);
+pos = (382,745);
 }
 );
 layerId = m011;
@@ -118,14 +118,14 @@ shapes = (
 {
 closed = 1;
 nodes = (
-(942,722,l),
-(942,768,l),
-(84,768,l),
-(84,722,l)
+(564,723,l),
+(564,767,l),
+(50,767,l),
+(50,723,l)
 );
 }
 );
-width = 1074;
+width = 614;
 },
 {
 anchors = (
@@ -151,7 +151,8 @@ nodes = (
 width = 1006;
 }
 );
-unicode = 61143;
+metricLeft = "=50";
+metricRight = "=50";
 userData = {
 "interface.width-adjustments" = (
 -16
