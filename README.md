@@ -9,7 +9,7 @@ several [OpenType features](https://rsms.me/inter/#features), like contextual al
 
 <br>
 
-[![Sample](misc/readme/intro.png)](https://rsms.me/inter/samples/)
+[![Sample](misc/readme/intro.png)](https://rsms.me/inter/)
 
 
 ### Quick questions
