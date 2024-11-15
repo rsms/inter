@@ -66,16 +66,17 @@ For web pages, there's an official [CDN distribution](https://rsms.me/inter/inte
 - [Interalia](https://github.com/Shavian-info/interalia) extends Inter with Shavian characters
 
 
-## Notable projects using Inter
+## Notable uses of Inter
 
-- [Element software suite](https://element.io/)
 - [ElementaryOS](https://elementary.io/)
 - [Figma](https://figma.com/)
-- [GitLab](https://gitlab.com)
+- [GitLab](https://gitlab.com/)
+- [Guggenheim museums](https://www.pentagram.com/work/guggenheim-3)
 - [Minimalissimo magazine](https://minimalissimo.com/)
-- [Mozilla brand](https://mozilla.design/firefox/typography/)
+- [Mozilla](https://mozilla.design/firefox/typography/)
 - [NASA](https://www.nasa.gov/specials/artemis-ii/)
 - [Pixar Presto](https://en.wikipedia.org/wiki/Presto_(animation_software))
+- [Switzerland, Canton of Zurich](https://www.zh.ch/)
 - [Unity](https://unity.com/)
 - [Zurich Airport](https://flughafen-zuerich.ch/)
 
