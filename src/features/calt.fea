@@ -308,32 +308,3 @@ sub bracketleft.case @All @All @All @All @All @All bracketright' by bracketright
 
 # END case
 # -------------------------------------------------------------------------------------
-# BEGIN NxN
-# x surrounded by numbers, e.g:
-#   3x4   -> 3×4
-#   10x20 -> 10×20
-#   0x10  -> 0x10   No substitution
-#
-@NumNoZero = [
-  one          two          three        four         five
-  six          seven        eight        nine         one.ss01
-  three.1      four.ss01    six.ss01     nine.ss01
-
-  one.tf       two.tf       three.tf     four.tf      five.tf
-  six.tf       seven.tf     eight.tf     nine.tf      one.tf.ss01
-  three.1.tf   four.tf.ss01 six.tf.ss01  nine.tf.ss01
-];
-
-sub @NumNoZero x' @Numeral by multiply.case; # "3x9" "1x0"
-sub @Numeral @Numeral x' @Numeral by multiply.case; # "10x0"
-
-sub @NumNoZero @Whitespace x' @Numeral by multiply.case; # "3 x9" "1 x0"
-sub @NumNoZero @Whitespace x' @Whitespace @Numeral by multiply.case; # "3 x 9" "1 x 0"
-sub @NumNoZero x' @Whitespace @Numeral by multiply.case; # "3x 9" "1x 0"
-
-sub @Numeral @Numeral @Whitespace x' @Numeral by multiply.case; # "10 x0"
-sub @Numeral @Numeral @Whitespace x' @Whitespace @Numeral by multiply.case; # "10 x 0"
-sub @Numeral @Numeral x' @Whitespace @Numeral by multiply.case; # "10x 0"
-
-# END NxN
-# -------------------------------------------------------------------------------------
