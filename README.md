@@ -55,7 +55,7 @@ For web pages, there's an official [CDN distribution](https://rsms.me/inter/inte
 - [Homebrew `font-inter`](https://github.com/Homebrew/homebrew-cask-fonts)
 - [Ubuntu `fonts-inter`](https://packages.ubuntu.com/search?keywords=fonts-inter)
 - [List of Inter available on various Linux distributions…](https://repology.org/project/fonts:inter/versions)
-- [Google Fonts](https://fonts.google.com/specimen/Inter) (outdated version, no italics)
+- [Google Fonts](https://fonts.google.com/specimen/Inter)
 
 **Disclaimer:** Alternate distributions may not always be up-to-date.
 
@@ -71,7 +71,8 @@ For web pages, there's an official [CDN distribution](https://rsms.me/inter/inte
 - [ElementaryOS](https://elementary.io/)
 - [Figma](https://figma.com/)
 - [GitLab](https://gitlab.com/)
-- [Guggenheim museums](https://www.pentagram.com/work/guggenheim-3)
+- [Guggenheim museums](https://www.pentagram.com/work/guggenheim-3) ([case study](https://www.pentagram.com/work/guggenheim-3/))
+- [ISO (International Organization for Standardization)](https://www.iso.org/) ([case study](https://www.motherbird.com.au/projects/iso/))
 - [Minimalissimo magazine](https://minimalissimo.com/)
 - [Mozilla](https://mozilla.design/firefox/typography/)
 - [NASA](https://www.nasa.gov/specials/artemis-ii/)
