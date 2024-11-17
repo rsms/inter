@@ -60,12 +60,6 @@ For web pages, there's an official [CDN distribution](https://rsms.me/inter/inte
 **Disclaimer:** Alternate distributions may not always be up-to-date.
 
 
-### Derivative versions
-
-- [Open Runde](https://github.com/lauridskern/open-runde) is a rounded variant of Inter
-- [Interalia](https://github.com/Shavian-info/interalia) extends Inter with Shavian characters
-
-
 ## Notable uses of Inter
 
 - [ElementaryOS](https://elementary.io/)
@@ -84,6 +78,13 @@ For web pages, there's an official [CDN distribution](https://rsms.me/inter/inte
 
 > **Have you made something nice with Inter?**<br>
 > [Please share in Show & Tell! →](https://github.com/rsms/inter/discussions/categories/show-and-tell)
+
+
+### Notable forks
+
+- [Open Runde](https://github.com/lauridskern/open-runde) is a rounded variant of Inter
+- [Interalia](https://github.com/Shavian-info/interalia) extends Inter with Shavian characters
+- [Raveo](https://github.com/jakubfoglar/raveo) is a "warmer version" of Inter
 
 
 ## Supporters & contributors
