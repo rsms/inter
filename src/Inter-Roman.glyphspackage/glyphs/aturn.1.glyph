@@ -1,4 +1,6 @@
 {
+case = lower;
+category = Letter;
 color = 9;
 glyphname = aturn.1;
 kernLeft = m;
@@ -20,7 +22,7 @@ shapes = (
 {
 alignment = 1;
 angle = 180;
-pos = (1254,1984);
+pos = (1254,1118);
 ref = a.1;
 }
 );
@@ -42,7 +44,7 @@ shapes = (
 {
 alignment = 1;
 angle = 180;
-pos = (1322,1984);
+pos = (1322,1118);
 ref = a.1;
 }
 );
@@ -64,7 +66,7 @@ shapes = (
 {
 alignment = 1;
 angle = 180;
-pos = (1190,1984);
+pos = (1190,1118);
 ref = a.1;
 }
 );
@@ -86,7 +88,7 @@ shapes = (
 {
 alignment = 1;
 angle = 180;
-pos = (1160,1984);
+pos = (1160,1056);
 ref = a.1;
 }
 );
@@ -108,7 +110,7 @@ shapes = (
 {
 alignment = 1;
 angle = 180;
-pos = (1274,1984);
+pos = (1274,1056);
 ref = a.1;
 }
 );
@@ -130,13 +132,14 @@ shapes = (
 {
 alignment = 1;
 angle = 180;
-pos = (1118,1984);
+pos = (1118,1056);
 ref = a.1;
 }
 );
 width = 1118;
 }
 );
+script = latin;
 userData = {
 interface.gridadjust.original = "{'width': 1537, 'leftMargin': 149, 'rightMargin': 152}";
 "interface.width-adjustments" = (
