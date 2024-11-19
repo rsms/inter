@@ -1,13 +1,16 @@
-# List all targets with 'make list'
+ifeq ($(findstring Darwin./Applications/,$(shell uname -s).$(MAKE)),Darwin./Applications/)
+$(error Use "gmake" (not "make") on macos. Install with "brew install make")
+endif
+
 SRCDIR   := $(abspath $(lastword $(MAKEFILE_LIST))/..)
 FONTDIR  := build/fonts
 UFODIR   := build/ufo
-BIN      := $(SRCDIR)/build/venv/bin
-VENV     := build/venv/bin/activate
+VENVDIR  := $(SRCDIR)/build/venv
 VERSION  := $(shell cat version.txt)
 MAKEFILE := $(lastword $(MAKEFILE_LIST))
 
-export PATH := $(BIN):$(PATH)
+export PATH := $(VENVDIR)/bin:$(PATH)
+export VIRTUAL_ENV := $(VENVDIR)
 
 default: all
 
@@ -21,7 +24,7 @@ endif
 # intermediate sources
 
 $(UFODIR)/%.glyphs: src/%.glyphspackage | $(UFODIR) venv
-	. $(VENV) ; build/venv/bin/glyphspkg -o $(dir $@) $^
+	glyphspkg -o $(dir $@) $^
 
 # features
 build/features_data: $(UFODIR)/features $(wildcard src/features/*)
@@ -33,31 +36,31 @@ $(UFODIR)/features:
 
 # designspace & master UFOs
 $(UFODIR)/%.var.designspace: $(UFODIR)/%.designspace misc/tools/gen-var-designspace.py | venv
-	. $(VENV) ; python misc/tools/gen-var-designspace.py $< $@
+	python misc/tools/gen-var-designspace.py $< $@
 
 $(UFODIR)/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features misc/tools/postprocess-designspace.py | venv
-	. $(VENV) ; fontmake $(FM_ARGS) -o ufo -g $< --designspace-path $@ \
+	fontmake $(FM_ARGS) -o ufo -g $< --designspace-path $@ \
 		  --master-dir $(UFODIR) --instance-dir $(UFODIR)
-	. $(VENV) ; python misc/tools/postprocess-designspace.py $@
+	python misc/tools/postprocess-designspace.py $@
 
 # instance UFOs from designspace
 $(UFODIR)/Inter%Italic.ufo: $(UFODIR)/Inter-Italic.designspace misc/tools/gen-instance-ufo.sh | venv
-	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
+	bash misc/tools/gen-instance-ufo.sh $< $@
 $(UFODIR)/Inter%.ufo: $(UFODIR)/Inter-Roman.designspace misc/tools/gen-instance-ufo.sh | venv
-	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
+	bash misc/tools/gen-instance-ufo.sh $< $@
 
 # designspace & master UFOs (for editing)
 build/ufo-editable/%.designspace: $(UFODIR)/%.glyphs $(UFODIR)/features misc/tools/postprocess-designspace.py | venv
 	@mkdir -p $(dir $@)
-	. $(VENV) ; fontmake $(FM_ARGS) -o ufo -g $< --designspace-path $@ \
+	fontmake $(FM_ARGS) -o ufo -g $< --designspace-path $@ \
 		  --master-dir $(dir $@) --instance-dir $(dir $@)
-	. $(VENV) ; python misc/tools/postprocess-designspace.py --editable $@
+	python misc/tools/postprocess-designspace.py --editable $@
 
 # instance UFOs from designspace (for editing)
 build/ufo-editable/Inter%Italic.ufo: build/ufo-editable/Inter-Italic.designspace misc/tools/gen-instance-ufo.sh | venv
-	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
+	bash misc/tools/gen-instance-ufo.sh $< $@
 build/ufo-editable/Inter%.ufo: build/ufo-editable/Inter-Roman.designspace misc/tools/gen-instance-ufo.sh | venv
-	. $(VENV) ; bash misc/tools/gen-instance-ufo.sh $< $@
+	bash misc/tools/gen-instance-ufo.sh $< $@
 
 editable-ufos: build/ufo-editable/.ok
 	@echo "Editable designspace & UFOs can be found here:"
@@ -162,61 +165,61 @@ endif
 
 
 $(FONTDIR)/static/%.otf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o otf --output-path $@.tmp.otf $(FM_ARGS_2)
-	. $(VENV) ; psautohint -o $@ $@.tmp.otf
+	fontmake -u $< -o otf --output-path $@.tmp.otf $(FM_ARGS_2)
+	psautohint -o $@ $@.tmp.otf
 	@rm $@.tmp.otf
 
 $(FONTDIR)/static/%.ttf: $(UFODIR)/%.ufo build/features_data | $(FONTDIR)/static venv
-	. $(VENV) ; fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
+	fontmake -u $< -o ttf --output-path $@ $(FM_ARGS_2)
 
 
 AUTOHINT_ARGS := --stem-width-mode=qqq --no-info
 
 $(FONTDIR)/static-hinted/Inter-Regular.ttf: $(FONTDIR)/static/Inter-Regular.ttf | $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
+	python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
 
 $(FONTDIR)/static-hinted/InterDisplay-Regular.ttf: $(FONTDIR)/static/InterDisplay-Regular.ttf | $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
+	python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
 
 $(FONTDIR)/static-hinted/Inter-Italic.ttf: $(FONTDIR)/static/Inter-Italic.ttf | $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
+	python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
 
 $(FONTDIR)/static-hinted/InterDisplay-Italic.ttf: $(FONTDIR)/static/InterDisplay-Italic.ttf | $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
+	python -m ttfautohint $(AUTOHINT_ARGS) "$<" "$@"
 
 $(FONTDIR)/static-hinted/InterDisplay-%Italic.ttf: $(FONTDIR)/static/InterDisplay-%Italic.ttf | $(FONTDIR)/static-hinted/InterDisplay-Italic.ttf $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) \
+	python -m ttfautohint $(AUTOHINT_ARGS) \
 	  --reference $(FONTDIR)/static-hinted/InterDisplay-Italic.ttf "$<" "$@"
 
 $(FONTDIR)/static-hinted/InterDisplay-%.ttf: $(FONTDIR)/static/InterDisplay-%.ttf | $(FONTDIR)/static-hinted/InterDisplay-Regular.ttf $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) \
+	python -m ttfautohint $(AUTOHINT_ARGS) \
 	  --reference $(FONTDIR)/static-hinted/InterDisplay-Regular.ttf "$<" "$@"
 
 $(FONTDIR)/static-hinted/Inter-%Italic.ttf: $(FONTDIR)/static/Inter-%Italic.ttf | $(FONTDIR)/static-hinted/Inter-Italic.ttf $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) \
+	python -m ttfautohint $(AUTOHINT_ARGS) \
 	  --reference $(FONTDIR)/static-hinted/Inter-Italic.ttf "$<" "$@"
 
 $(FONTDIR)/static-hinted/Inter-%.ttf: $(FONTDIR)/static/Inter-%.ttf | $(FONTDIR)/static-hinted/Inter-Regular.ttf $(FONTDIR)/static-hinted venv
-	. $(VENV) ; python -m ttfautohint $(AUTOHINT_ARGS) \
+	python -m ttfautohint $(AUTOHINT_ARGS) \
 	  --reference $(FONTDIR)/static-hinted/Inter-Regular.ttf "$<" "$@"
 
 
 $(FONTDIR)/var/.%.var.ttf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
-	. $(VENV) ; fontmake -o variable -m $< --output-path $@ $(FM_ARGS_2)
+	fontmake -o variable -m $< --output-path $@ $(FM_ARGS_2)
 
 $(FONTDIR)/var/.%.var.otf: $(UFODIR)/%.var.designspace build/features_data | $(FONTDIR)/var venv
-	. $(VENV) ; fontmake -o variable-cff2 -m $< --output-path $@ $(FM_ARGS_2)
+	fontmake -o variable-cff2 -m $< --output-path $@ $(FM_ARGS_2)
 
 
 %.woff2: %.ttf | venv
-	. $(VENV) ; misc/tools/woff2 compress -o "$@" "$<"
+	misc/tools/woff2 compress -o "$@" "$<"
 
 
 $(FONTDIR)/var/InterVariable.ttf: $(FONTDIR)/var/.Inter-Roman.var.ttf misc/tools/bake-vf.py
-	. $(VENV) ; python misc/tools/bake-vf.py $< -o $@
+	python misc/tools/bake-vf.py $< -o $@
 
 $(FONTDIR)/var/InterVariable-Italic.ttf: $(FONTDIR)/var/.Inter-Italic.var.ttf misc/tools/bake-vf.py
-	. $(VENV) ; python misc/tools/bake-vf.py $< -o $@
+	python misc/tools/bake-vf.py $< -o $@
 
 
 $(FONTDIR)/static:
@@ -234,12 +237,12 @@ var: \
 	$(FONTDIR)/var/InterVariable-Italic.ttf
 
 googlefonts: var
-	. $(VENV) ; gftools fix-family $(FONTDIR)/var/*.ttf \
+	gftools fix-family $(FONTDIR)/var/*.ttf \
 	--rename-family "Inter" \
 	--include-source-fixes \
 	-o $(FONTDIR)/googlefonts;
-	. $(VENV) ; gftools fontsetter $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf;
-	. $(VENV) ; gftools fontsetter $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf;
+	gftools fontsetter $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf;
+	gftools fontsetter $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf;
 
 var_web: \
 	$(FONTDIR)/var/InterVariable.woff2 \
@@ -297,10 +300,10 @@ STATIC_FONTS_WEB := $(patsubst %,$(FONTDIR)/static/%.woff2,$(STATIC_FONTS))
 STATIC_FONTS_WEB_HINTED := $(patsubst %,$(FONTDIR)/static-hinted/%.woff2,$(STATIC_FONTS))
 
 $(FONTDIR)/static/Inter.otc: $(STATIC_FONTS_OTF)
-	. $(VENV) ; python -m fontTools.ttLib.__main__ -o $@ $^
+	python -m fontTools.ttLib.__main__ -o $@ $^
 
 $(FONTDIR)/static-hinted/Inter.ttc: $(STATIC_FONTS_TTF)
-	. $(VENV) ; python -m fontTools.ttLib.__main__ -o $@ $^
+	python -m fontTools.ttLib.__main__ -o $@ $^
 
 static_otf: $(STATIC_FONTS_OTF)
 static_ttf: $(STATIC_FONTS_TTF)
@@ -381,21 +384,21 @@ STATIC_DISPLAY_FONTS_TTF = $(patsubst %,$(FONTDIR)/static-hinted/%.ttf,$(STATIC_
 
 build/fontbakery-report-var.txt: $(FONTDIR)/var/InterVariable.ttf $(FONTDIR)/var/InterVariable-Italic.ttf | venv
 	@echo "fontbakery InterVariable -> $(@) ..."
-	@. $(VENV) ; fontbakery $(FBAKE_ARGS) $^ > $@ \
+	@fontbakery $(FBAKE_ARGS) $^ > $@ \
 		|| (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 	@echo "fontbakery InterVariable: PASS"
 	@grep -E -A7 '^Total:' $@ | tail -6 | sed -E 's/^ +/  /g'
 
 build/fontbakery-report-text.txt: $(STATIC_TEXT_FONTS_TTF) | venv
 	@echo "fontbakery Inter -> $@ ..."
-	@. $(VENV) ; fontbakery $(FBAKE_ARGS_STATIC) $^ > $@ \
+	@fontbakery $(FBAKE_ARGS_STATIC) $^ > $@ \
 		|| (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 	@echo "fontbakery Inter: PASS"
 	@grep -E -A7 '^Total:' $@ | tail -6 | sed -E 's/^ +/  /g'
 
 build/fontbakery-report-display.txt: $(STATIC_DISPLAY_FONTS_TTF) | venv
 	@echo "fontbakery InterDisplay -> $@ ..."
-	@. $(VENV) ; fontbakery $(FBAKE_ARGS_STATIC) $^ > $@ \
+	@fontbakery $(FBAKE_ARGS_STATIC) $^ > $@ \
 		|| (cat $@; echo "report at $@"; touch -m -t 199001010000 $@; exit 1)
 	@echo "fontbakery InterDisplay: PASS"
 	@grep -E -A7 '^Total:' $@ | tail -6 | sed -E 's/^ +/  /g'
@@ -589,20 +592,20 @@ list:
 # ---------------------------------------------------------------------------------
 # initialize toolchain
 
-venv: build/venv/config2.stamp
+venv: $(VENVDIR)/config2.stamp
 
-build/venv/config2.stamp: Pipfile.lock Pipfile
+$(VENVDIR)/config2.stamp: Pipfile.lock Pipfile
 	@mkdir -p build
-	[ ! -f build/venv/config.stamp ] || rm -rf build/venv
-	[ -d build/venv ] || python3 -m venv build/venv
-	. $(VENV) ; pip install pipenv==2023.8.28
-	. $(VENV) ; pipenv install
+	[ ! -f "$(VENVDIR)/config.stamp" ] || rm -rf "$(VENVDIR)"
+	[ -d "$(VENVDIR)" ] || python3 -m venv "$(VENVDIR)"
+	pip install pipenv==2023.8.28
+	pipenv install
 	touch $@
 
 venv-update:
-	. $(VENV) ; pipenv update
+	pipenv update
 
 reset: clean
-	rm -rf build/venv
+	rm -rf "$(VENVDIR)"
 
 .PHONY: venv venv-update reset
