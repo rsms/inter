@@ -2878,6 +2878,8 @@ sub bracketright by bracketright.subs;
 sub plus by plus.subs;
 sub minus by minus.subs;
 sub equal by equal.subs;
+sub a.1 by a.1.subs;
+sub a.2 by a.2.subs;
 ";
 tag = subs;
 },
@@ -2926,6 +2928,8 @@ sub bracketright by bracketright.sups;
 sub plus by plus.sups;
 sub minus by minus.sups;
 sub equal by equal.sups;
+sub a.1 by a.1.sups;
+sub a.2 by a.2.sups;
 ";
 tag = sups;
 },
