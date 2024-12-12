@@ -5,6 +5,7 @@ sub aacute by aacute.1;
 sub abreve by abreve.1;
 sub abreveacute by abreveacute.1;
 sub abrevedotbelow by abrevedotbelow.1;
+sub abrevedotbelow.ss07 by abrevedotbelow.1.ss07;
 sub abrevegrave by abrevegrave.1;
 sub abrevehookabove by abrevehookabove.1;
 sub abrevetilde by abrevetilde.1;
@@ -12,6 +13,7 @@ sub acaron by acaron.1;
 sub acircumflex by acircumflex.1;
 sub acircumflexacute by acircumflexacute.1;
 sub acircumflexdotbelow by acircumflexdotbelow.1;
+sub acircumflexdotbelow.ss07 by acircumflexdotbelow.1.ss07;
 sub acircumflexgrave by acircumflexgrave.1;
 sub acircumflexhookabove by acircumflexhookabove.1;
 sub acircumflextilde by acircumflextilde.1;
@@ -23,6 +25,7 @@ sub adieresismacron.ss07 by adieresismacron.1.ss07;
 sub adotaccent by adotaccent.1;
 sub adotaccent.ss07 by adotaccent.1.ss07;
 sub adotbelow by adotbelow.1;
+sub adotbelow.ss07 by adotbelow.1.ss07;
 sub adotmacron by adotmacron.1;
 sub agrave by agrave.1;
 sub ahookabove by ahookabove.1;
@@ -34,6 +37,9 @@ sub aring by aring.1;
 sub aringacute by aringacute.1;
 sub aringbelow by aringbelow.1;
 sub atilde by atilde.1;
+sub aturn by aturn.1;
 sub acyrillic by a.1;  # acyrillic is just a reference to /a
+sub abrevecyrillic by abreve.1;  # reference to /abreve
+sub adieresiscyrillic by adieresis.1;  # reference to /adieresis
 sub a.sups by a.1.sups;
 sub a.subs by a.1.subs;
