@@ -62,6 +62,7 @@ For web pages, there's an official [CDN distribution](https://rsms.me/inter/inte
 
 ## Notable uses of Inter
 
+- [Blender](https://blender.org/)
 - [ElementaryOS](https://elementary.io/)
 - [Figma](https://figma.com/)
 - [GitLab](https://gitlab.com/)
