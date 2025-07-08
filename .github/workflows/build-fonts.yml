@@ -77,7 +77,7 @@ jobs:
 
       - name: Upload archive (unless tag)
         if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: ${{ env.inter_zip }}
           retention-days: 1

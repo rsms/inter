@@ -4,6 +4,12 @@ kernLeft = t;
 kernRight = t;
 layers = (
 {
+anchors = (
+{
+name = cedilla;
+pos = (290,0);
+}
+);
 guides = (
 {
 angle = 90;
@@ -13,16 +19,23 @@ pos = (420,2148);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
-ref = i;
+alignment = 1;
+ref = uni0268.ccmp;
 },
 {
-pos = (-214,-150);
-ref = crossbar;
+pos = (46,0);
+ref = dotaccentcomb;
 }
 );
-width = 496;
+width = 584;
 },
 {
+anchors = (
+{
+name = cedilla;
+pos = (383,0);
+}
+);
 guides = (
 {
 angle = 90;
@@ -32,29 +45,43 @@ pos = (523.875,0);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
-ref = i;
+alignment = 1;
+ref = uni0268.ccmp;
 },
 {
-pos = (-220,-135);
-ref = crossbar;
+pos = (46,0);
+ref = dotaccentcomb;
 }
 );
-width = 606;
+width = 762;
 },
 {
+anchors = (
+{
+name = cedilla;
+pos = (205,0);
+}
+);
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
-ref = i;
+alignment = 1;
+ref = uni0268.ccmp;
 },
 {
-pos = (-204,-163);
-ref = crossbar;
+pos = (19,0);
+ref = dotaccentcomb;
 }
 );
-width = 442;
+width = 412;
 },
 {
+anchors = (
+{
+name = cedilla;
+pos = (290,0);
+}
+);
 guides = (
 {
 angle = 90;
@@ -64,16 +91,23 @@ pos = (420,2148);
 layerId = m007;
 shapes = (
 {
-ref = i;
+alignment = 1;
+ref = uni0268.ccmp;
 },
 {
-pos = (-236,-151);
-ref = crossbar;
+pos = (78,0);
+ref = dotaccentcomb;
 }
 );
-width = 422;
+width = 582;
 },
 {
+anchors = (
+{
+name = cedilla;
+pos = (349,0);
+}
+);
 guides = (
 {
 angle = 90;
@@ -83,27 +117,35 @@ pos = (523.875,0);
 layerId = m009;
 shapes = (
 {
-ref = i;
+alignment = 1;
+ref = uni0268.ccmp;
 },
 {
-pos = (-210,-151);
-ref = crossbar;
+pos = (28,0);
+ref = dotaccentcomb;
 }
 );
-width = 572;
+width = 694;
 },
 {
+anchors = (
+{
+name = cedilla;
+pos = (196,0);
+}
+);
 layerId = m011;
 shapes = (
 {
-ref = i;
+alignment = 1;
+ref = uni0268.ccmp;
 },
 {
-pos = (-203,-163);
-ref = crossbar;
+pos = (74,0);
+ref = dotaccentcomb;
 }
 );
-width = 314;
+width = 394;
 }
 );
 unicode = 616;

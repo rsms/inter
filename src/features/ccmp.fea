@@ -29,11 +29,12 @@
 
 # Transpose sequences like /i /gravecomb -> /idotless /gravecomb
 lookup ccmp02 {
+  lookupflag UseMarkFilteringSet @CCMP_ACC;
   sub i' @CCMP_ACC by idotless;
   sub j' @CCMP_ACC by jdotless;
   sub ibar' @CCMP_ACC by uni0268.ccmp;
   sub iogonek' @CCMP_ACC by uni012F.ccmp; # iogonek is generated
-  sub uni0249' @CCMP_ACC by uni0249.ccmp;
+  sub jstroke' @CCMP_ACC by jstroke.ccmp;
   sub jcrosstail' @CCMP_ACC by jcrosstail.ccmp;
   sub yotgreek' @CCMP_ACC by jdotless;
   sub icyrillic' @CCMP_ACC by idotless;
