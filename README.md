@@ -25,29 +25,26 @@ several [OpenType features](https://rsms.me/inter/#features), like contextual al
 
 ## Using & installing Inter
 
-[**Download the latest font files…**](https://github.com/rsms/inter/releases/latest)
-
-Using Inter on a web page:
-
-```html
-<link rel="preconnect" href="https://your-font-file-host/">
-<link rel="stylesheet" href="https://your-font-file-host/inter.css">
-```
-
 ```css
 :root { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
-  :root { font-family: 'Inter var', sans-serif; }
+  :root { font-family: 'InterVariable', sans-serif; }
 }
+```
+
+
+
+Using Inter on a web page; [**Download the latest font files…**](https://github.com/rsms/inter/releases/latest) and add the following HTML in your document's `<head>`:
+
+```html
+<link rel="stylesheet" href="/inter/inter.css">
 ```
 
 For web pages, there's an official [CDN distribution](https://rsms.me/inter/inter.css) that you can use directly without having to host the font files yourself:
 
 ```html
-<link rel="preconnect" href="https://rsms.me/">
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 ```
-
 
 ### Alternate distributions
 
