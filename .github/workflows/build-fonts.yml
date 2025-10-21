@@ -29,6 +29,7 @@ on:
       - version.txt
       - misc/makezip2.sh
       - "misc/tools/**"
+      - ".github/workflows/build-fonts.yml"
   workflow_dispatch:
 
 defaults:
@@ -46,7 +47,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v3
         with:
-          python-version: '3.x'
+          python-version: '3.11'
 
       - name: Install utilities
         run: sudo apt-get install -y zip
@@ -77,7 +78,7 @@ jobs:
 
       - name: Upload archive (unless tag)
         if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           path: ${{ env.inter_zip }}
           retention-days: 1
