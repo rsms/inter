@@ -244,6 +244,15 @@ googlefonts: var
 	gftools fontsetter $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter[opsz,wght].ttf;
 	gftools fontsetter $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf src/googlefonts-fixes.yaml -o $(FONTDIR)/googlefonts/Inter-Italic[opsz,wght].ttf;
 
+	# Display family
+	gftools fix-family $(FONTDIR)/static-hinted/InterDisplay-*.ttf \
+	--rename-family "Inter Display" \
+	--include-source-fixes \
+	-o $(FONTDIR)/googlefonts;
+	for f in $(FONTDIR)/googlefonts/InterDisplay-*.ttf; do \
+		gftools fontsetter $$f src/googlefonts-fixes.yaml -o $$f; \
+	done
+
 var_web: \
 	$(FONTDIR)/var/InterVariable.woff2 \
 	$(FONTDIR)/var/InterVariable-Italic.woff2
