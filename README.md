@@ -1,9 +1,9 @@
 # Inter
 
 Inter is a typeface carefully crafted & designed for computer screens.
-Inter features a tall x-height to aid in readability of mixed-case and lower-case text.
+Inter features a tall x-height to aid in the readability of mixed-case and lower-case text.
 Inter is a [variable font](https://rsms.me/inter/#variable) with
-several [OpenType features](https://rsms.me/inter/#features), like contextual alternates that adjusts punctuation depending on the shape of surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o", tabular numbers, etc.
+several [OpenType features](https://rsms.me/inter/#features), like contextual alternates that adjust punctuation depending on the shape of surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o", tabular numbers, etc.
 
 [**Download Inter font files…**](https://github.com/rsms/inter/releases/latest)
 
@@ -112,8 +112,8 @@ Inter is licensed under the [SIL Open Font License](LICENSE.txt)
 
 ## Creating derivative fonts
 
-Inter is open source which means you can make your own versions with your own changes.
-However when doing so, please [**read LICENSE.txt carefully.**](LICENSE.txt) It is a standard **SIL Open Font License 1.1**:
+Inter is open source, which means you can make your own versions with your own changes.
+However, when doing so, please [**read LICENSE.txt carefully.**](LICENSE.txt) It is a standard **SIL Open Font License 1.1**:
 
 > The goals of the Open Font License (OFL) are to stimulate worldwide
 > development of collaborative font projects, to support the font creation
@@ -130,9 +130,9 @@ However when doing so, please [**read LICENSE.txt carefully.**](LICENSE.txt) It 
 > requirement for fonts to remain under this license does not apply
 > to any document created using the fonts or their derivatives.
 
-While you are allowed to use Inter commercially, i.e. bundled with product or service which makes you money, you are NOT allowed to sell Inter itself or derivatives of Inter. If you would like to do so, please [reach out](https://github.com/rsms) and we can talk about it.
+While you are allowed to use Inter commercially, _i.e.,_ bundled with a product or service that makes you money, you are NOT allowed to sell Inter itself or derivatives of Inter. If you would like to do so, please [reach out](https://github.com/rsms) and we can talk about it.
 
-Inter a trademark of Rasmus Andersson (DBA: RSMS)
+Inter is a trademark of Rasmus Andersson (DBA: RSMS)
 
 "Inter" is a Reserved Font Name by Rasmus Andersson
 ([font vendor code RSMS.](https://learn.microsoft.com/en-us/typography/vendors/#r))
@@ -144,11 +144,11 @@ _This section discusses some of the design choices made for Inter._
 
 Inter can be classified as a geometric neo-grotesque, similar in style to Roboto, Apple San Francisco, Akkurat, Asap, Lucida Grande and more. Some trade-offs were made in order to make this typeface work really well at small sizes:
 
-- Early versions of Inter was not suitable for very large sizes because of some small-scale glyph optimizations (like "pits" and "traps") that help rasterization at small sizes but stand out and interfere at large sizes. However today Inter works well at large sizes and a [Display subfamily](https://github.com/rsms/inter/releases/tag/display-beta-1) is in the works for really large "display" sizes.
+- Early versions of Inter were not suitable for very large sizes because of some small-scale glyph optimizations (like "pits" and "traps") that help rasterization at small sizes but stand out and interfere at large sizes. Today, however, Inter works well at large sizes, and a [Display subfamily](https://github.com/rsms/inter/releases/tag/display-beta-1) is in the works for really large "display" sizes.
 
-- Rasterized at sizes below 12px, some stems—like the horizontal center of "E", "F", or vertical center of "m"—are drawn with two semi-opaque pixels instead of one solid. This is because we "prioritize" (optimize for) higher-density rasterizations. If we move these stems to an off-center position—so that they can be drawn sharply at e.g. 11px—text will be less legible at higher resolutions.
+- Rasterized at sizes below 12px, some stems—like the horizontal center of "E", "F", or vertical center of "m"—are drawn with two semi-opaque pixels instead of one solid. This is because we "prioritize" (optimize for) higher-density rasterizations. If we move these stems to an off-center position—so that they can be drawn sharply at _e.g.,_ 11px—text will be less legible at higher resolutions.
 
-Inter is a [variable font](https://rsms.me/inter/#variable) and is in addition also distributed as a set of traditional distinct font files in the following styles:
+Inter is a [variable font](https://rsms.me/inter/#variable), and is distributed as a set of traditional, distinct font files in the following styles:
 
 | Roman (upright) name | Italic name          | Weight
 | -------------------- | -------------------- | ------------
