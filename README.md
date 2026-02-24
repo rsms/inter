@@ -85,6 +85,7 @@ For web pages, there's an official [CDN distribution](https://rsms.me/inter/inte
 - [Open Runde](https://github.com/lauridskern/open-runde) is a rounded variant of Inter
 - [Interalia](https://github.com/Shavian-info/interalia) extends Inter with Shavian characters
 - [Raveo](https://github.com/jakubfoglar/raveo) is a "warmer version" of Inter
+- [Hyperlegible Sans](https://github.com/matthewlarn/hyperlegible-sans) is a legibility-focused version of Inter.
 
 
 ## Supporters & contributors
