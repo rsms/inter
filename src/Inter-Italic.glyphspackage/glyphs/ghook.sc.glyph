@@ -1,4 +1,6 @@
 {
+case = smallCaps;
+category = Letter;
 glyphname = ghook.sc;
 layers = (
 {
@@ -94,7 +96,9 @@ width = 1134;
 );
 metricLeft = o;
 metricRight = t;
-unicode = 60947;
+script = latin;
+subCategory = Small;
+unicode = 667;
 userData = {
 interface.gridadjust.original = "{'width': 1748, 'leftMargin': 126, 'rightMargin': -13}";
 "interface.width-adjustments" = (

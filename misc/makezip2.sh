@@ -58,7 +58,7 @@ cp build/fonts/var/InterVariable-Italic.ttf   "$ZIPDIR/InterVariable-Italic.ttf"
 cp build/fonts/static/Inter*.woff2            "$ZIPDIR/web/" &
 cp build/fonts/var/InterVariable.woff2        "$ZIPDIR/web/InterVariable.woff2"
 cp build/fonts/var/InterVariable-Italic.woff2 "$ZIPDIR/web/InterVariable-Italic.woff2"
-cp misc/dist/inter.css                         "$ZIPDIR/web/"
+cp misc/dist/inter.css                        "$ZIPDIR/web/"
 
 . build/venv/bin/activate
 python misc/tools/patch-version.py "$ZIPDIR/web/inter.css"

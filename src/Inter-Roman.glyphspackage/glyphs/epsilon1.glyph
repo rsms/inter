@@ -4,6 +4,16 @@ kernLeft = epsilongreek;
 kernRight = epsilongreek;
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (550,0);
+},
+{
+name = top;
+pos = (550,1118);
+}
+);
 layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
@@ -13,6 +23,16 @@ ref = epsilon;
 width = 1100;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (589,0);
+},
+{
+name = top;
+pos = (589,1118);
+}
+);
 layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
@@ -22,6 +42,16 @@ ref = epsilon;
 width = 1177;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (519,0);
+},
+{
+name = top;
+pos = (519,1118);
+}
+);
 layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
@@ -31,6 +61,16 @@ ref = epsilon;
 width = 1037;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (486,0);
+},
+{
+name = top;
+pos = (486,1056);
+}
+);
 layerId = m007;
 shapes = (
 {
@@ -40,6 +80,16 @@ ref = epsilon;
 width = 972;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (569,0);
+},
+{
+name = top;
+pos = (569,1056);
+}
+);
 layerId = m009;
 shapes = (
 {
@@ -49,6 +99,16 @@ ref = epsilon;
 width = 1138;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (458,0);
+},
+{
+name = top;
+pos = (458,1056);
+}
+);
 layerId = m011;
 shapes = (
 {

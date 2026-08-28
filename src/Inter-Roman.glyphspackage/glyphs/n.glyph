@@ -185,8 +185,8 @@ pos = (638,1286);
 associatedMasterId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 guides = (
 {
-orientation = center;
 angle = 90;
+orientation = center;
 pos = (816,-164);
 }
 );
@@ -670,8 +670,8 @@ pos = (486,1056);
 associatedMasterId = m009;
 guides = (
 {
-orientation = center;
 angle = 90;
+orientation = center;
 pos = (-2537,-164);
 }
 );
@@ -733,8 +733,8 @@ pos = (504,1118);
 associatedMasterId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 guides = (
 {
-orientation = center;
 angle = 90;
+orientation = center;
 pos = (828,-164);
 }
 );
@@ -905,45 +905,6 @@ name = topr;
 pos = (296,1056);
 }
 );
-background = {
-shapes = (
-{
-closed = 1;
-nodes = (
-(296,799,o),
-(420,920,o),
-(580,920,cs),
-(750,920,o),
-(824,838,o),
-(824,652,cs),
-(824,0,l),
-(994,0,l),
-(994,664,ls),
-(994,928,o),
-(840,1076,o),
-(610,1076,cs),
-(427,1076,o),
-(306,965,o),
-(248,800,c),
-(292,800,l),
-(292,1056,l),
-(126,1056,l),
-(126,0,l),
-(296,0,l),
-(296,602,ls)
-);
-},
-{
-closed = 0;
-nodes = (
-(606,1076,ls),
-(439,1076,o),
-(342,988,o),
-(296,886,c)
-);
-}
-);
-};
 layerId = m007;
 name = Display;
 shapes = (

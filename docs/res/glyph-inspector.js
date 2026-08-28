@@ -1,3 +1,14 @@
+---
+layout: none
+---
+{% include defs.html %}{%
+for file in site.static_files %}{%
+  assign _path = file.path | remove_first: "/inter" %}{%
+  if _path == "/font-files/InterVariable.ttf" %}{%
+    assign ttf_timestamp = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
+  endif %}{%
+endfor %}
+
 import fontkit from "./fontkit-2.0.2.js"
 
 const { min, max, ceil, floor } = Math
@@ -962,5 +973,5 @@ class GlyphInspector {
 }
 
 let inspector = new GlyphInspector()
-await inspector.loadFont('font-files/InterVariable.ttf')
+await inspector.loadFont('font-files/InterVariable.ttf?v={{ttf_timestamp}}')
 // await inspector.loadFont('font-files/InterDisplay-Regular.otf')

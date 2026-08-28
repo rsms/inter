@@ -1,4 +1,6 @@
 {
+case = smallCaps;
+category = Letter;
 glyphname = g.sc;
 kernLeft = c.sc;
 kernRight = g.sc;
@@ -354,8 +356,8 @@ angle = 7.9575;
 pos = (1036,1320);
 },
 {
-orientation = center;
 angle = 90;
+orientation = center;
 pos = (1036,528);
 },
 {
@@ -424,8 +426,8 @@ pos = (1111,688);
 );
 guides = (
 {
-orientation = center;
 angle = 80.6;
+orientation = center;
 pos = (-7201,528);
 }
 );
@@ -570,8 +572,8 @@ ref = C;
 };
 guides = (
 {
-orientation = center;
 angle = 90;
+orientation = center;
 pos = (-3768,528);
 }
 );
@@ -619,6 +621,8 @@ width = 1516;
 );
 metricLeft = o;
 note = "C + hook segments";
+script = latin;
+subCategory = Small;
 unicode = 610;
 userData = {
 RMXScaler = {

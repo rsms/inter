@@ -1,4 +1,6 @@
 {
+case = smallCaps;
+category = Letter;
 glyphname = l.sc;
 layers = (
 {
@@ -106,7 +108,9 @@ width = 844;
 );
 metricLeft = n;
 metricRight = L;
-unicode = 60952;
+script = latin;
+subCategory = Small;
+unicode = 671;
 userData = {
 interface.gridadjust.original = "{'width': 1239, 'leftMargin': 188, 'rightMargin': 56}";
 "interface.width-adjustments" = (

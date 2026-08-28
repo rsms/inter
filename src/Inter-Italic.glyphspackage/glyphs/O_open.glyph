@@ -4,6 +4,16 @@ kernLeft = C;
 kernRight = D;
 layers = (
 {
+anchors = (
+{
+name = bottom;
+pos = (655,0);
+},
+{
+name = top;
+pos = (902,1490);
+}
+);
 background = {
 shapes = (
 {
@@ -31,6 +41,16 @@ ref = C;
 width = 1495;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (673,0);
+},
+{
+name = top;
+pos = (920,1490);
+}
+);
 layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 metricLeft = "=|C";
 metricRight = "=|C";
@@ -45,6 +65,16 @@ ref = C;
 width = 1532;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (647,0);
+},
+{
+name = top;
+pos = (894,1490);
+}
+);
 background = {
 shapes = (
 {
@@ -66,6 +96,16 @@ ref = C;
 width = 1480;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (653,0);
+},
+{
+name = top;
+pos = (899,1490);
+}
+);
 background = {
 shapes = (
 {
@@ -93,6 +133,16 @@ ref = C;
 width = 1479;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (668,0);
+},
+{
+name = top;
+pos = (914,1490);
+}
+);
 layerId = m010;
 metricLeft = "=|C";
 metricRight = "=|C";
@@ -107,6 +157,16 @@ ref = C;
 width = 1509;
 },
 {
+anchors = (
+{
+name = bottom;
+pos = (589,0);
+},
+{
+name = top;
+pos = (835,1490);
+}
+);
 background = {
 shapes = (
 {

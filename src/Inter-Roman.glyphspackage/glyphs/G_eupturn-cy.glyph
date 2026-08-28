@@ -1,5 +1,5 @@
 {
-glyphname = afii10050;
+glyphname = "Geupturn-cy";
 kernLeft = B;
 kernRight = T;
 layers = (
@@ -11,16 +11,15 @@ ref = "Ge-cy";
 }
 );
 };
-layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
-name = ital_gen;
+layerId = "C698F293-3EC0-4A5A-A3A0-0FDB1F5CF265";
 shapes = (
 {
 closed = 1;
 nodes = (
-(1210,1330,l),
-(1287,1792,l),
-(1115,1792,l),
-(1038,1330,l)
+(1087,1490,l),
+(1087,1792,l),
+(915,1792,l),
+(915,1490,l)
 );
 },
 {
@@ -37,87 +36,33 @@ ref = "Ge-cy";
 }
 );
 };
-layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
-name = ital_gen;
+layerId = "5C20EF92-B63D-42A8-8878-93C2863E0093";
 shapes = (
 {
 closed = 1;
 nodes = (
-(1247,1164,l),
-(1350,1788,l),
-(964,1788,l),
-(861,1164,l)
+(1144,1490,l),
+(1144,1788,l),
+(758,1788,l),
+(758,1490,l)
 );
 },
 {
 ref = "Ge-cy";
 }
 );
-width = 1203;
+width = 1200;
 },
 {
-layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
-name = ital_gen;
+layerId = "B1F27B51-9973-4381-9301-4FE46FE1CA59";
 shapes = (
 {
 closed = 1;
 nodes = (
-(1192,1444,l),
-(1250,1792,l),
-(1204,1792,l),
-(1146,1444,l)
-);
-},
-{
-ref = "Ge-cy";
-}
-);
-width = 1174;
-},
-{
-background = {
-shapes = (
-{
-ref = "Ge-cy";
-}
-);
-};
-layerId = m008;
-name = ital_gen;
-shapes = (
-{
-closed = 1;
-nodes = (
-(1183,1330,l),
-(1263,1812,l),
-(1087,1812,l),
-(1007,1330,l)
-);
-},
-{
-ref = "Ge-cy";
-}
-);
-width = 1100;
-},
-{
-background = {
-shapes = (
-{
-ref = "Ge-cy";
-}
-);
-};
-layerId = m010;
-name = ital_gen;
-shapes = (
-{
-closed = 1;
-nodes = (
-(1233,1138,l),
-(1345,1812,l),
-(945,1812,l),
-(833,1138,l)
+(1044,1490,l),
+(1044,1792,l),
+(998,1792,l),
+(998,1490,l)
 );
 },
 {
@@ -127,23 +72,72 @@ ref = "Ge-cy";
 width = 1172;
 },
 {
-layerId = m012;
-name = ital_gen;
+background = {
+shapes = (
+{
+ref = "Ge-cy";
+}
+);
+};
+layerId = m007;
 shapes = (
 {
 closed = 1;
 nodes = (
-(1134,1444,l),
-(1195,1812,l),
-(1149,1812,l),
-(1088,1444,l)
+(1048,1490,l),
+(1048,1812,l),
+(872,1812,l),
+(872,1490,l)
 );
 },
 {
 ref = "Ge-cy";
 }
 );
-width = 1042;
+width = 1098;
+},
+{
+background = {
+shapes = (
+{
+ref = "Ge-cy";
+}
+);
+};
+layerId = m009;
+shapes = (
+{
+closed = 1;
+nodes = (
+(1128,1490,l),
+(1128,1812,l),
+(728,1812,l),
+(728,1490,l)
+);
+},
+{
+ref = "Ge-cy";
+}
+);
+width = 1168;
+},
+{
+layerId = m011;
+shapes = (
+{
+closed = 1;
+nodes = (
+(980,1490,l),
+(980,1812,l),
+(934,1812,l),
+(934,1490,l)
+);
+},
+{
+ref = "Ge-cy";
+}
+);
+width = 1040;
 }
 );
 metricLeft = H;

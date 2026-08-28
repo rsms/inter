@@ -7,12 +7,13 @@
 lookupflag IgnoreMarks;
 
 # fi
-sub f' [
+@DLIG_i_R = [
   i idotless idotless.double itildebelow ibar igrave iacute iogonek
   ihookabove idotbelow icyrillic ij i.sc
 
   j jdotless jdotlessbar uni0249 uni0249.ccmp jcrosstail yotgreek jecyrillic
-] by f.i;
+];
+sub f' @DLIG_i_R by f.i;
 
 # ff -> ff'
 @DLIG_f_L = [ f fdotaccent feng ];
@@ -66,6 +67,9 @@ sub f' [
 
 # ffi (note. f.i is sub'd by liga)
 sub f [ f f.i ]' i by f.i.1;
+
+# exception for e.g. fffi
+ignore sub @DLIG_t1_L @DLIG_t1_L' @DLIG_t1_L @DLIG_i_R;
 
 # tt, ft, rt, tf, ff, ft ...
 sub @DLIG_t1_L @DLIG_t_L' by @DLIG_t_R;

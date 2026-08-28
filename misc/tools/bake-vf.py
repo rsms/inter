@@ -331,14 +331,16 @@ def gen_stat(ttfont):
 
 def check_fvar(ttfont):
   fvar = ttfont['fvar']
-  error = False
+  ok = True
   for i in fvar.instances:
     actual_wght = i.coordinates['wght']
     expected_wght = round(actual_wght / 100) * 100
     if expected_wght != actual_wght:
-      print(f"unexpected wght {actual_wght} (expected {expected_wght})",
-        ttfont, i.coordinates)
-      error = True
+      print(f"BAD wght {actual_wght} (expected {expected_wght})", i.coordinates)
+      ok = False
+    # else:
+    #   print(f"OK wght {actual_wght}", i.coordinates)
+  return ok
 
 
 # def fixup_fvar(ttfont):
@@ -372,6 +374,8 @@ def main():
 
   # load font
   ttfont = TTFont(args.input, recalcBBoxes=False, recalcTimestamp=False)
+  if not check_fvar(ttfont):
+    sys.exit(1)
 
   # infer axis extremes
   global OPSZ_MIN
@@ -397,7 +401,8 @@ def main():
   gen_stat(ttfont)
 
   # check fvar table
-  check_fvar(ttfont)
+  if not check_fvar(ttfont):
+    sys.exit(1)
 
   # # fixup OS/2 table (set usWeightClass)
   # fixup_os2(ttfont)

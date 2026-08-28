@@ -1,4 +1,6 @@
 {
+case = smallCaps;
+category = Letter;
 glyphname = h.sc;
 kernLeft = m;
 kernRight = a;
@@ -8,6 +10,14 @@ anchors = (
 {
 name = bottom;
 pos = (602,0);
+},
+{
+name = cyrtic;
+pos = (1047,0);
+},
+{
+name = lfthook;
+pos = (867,0);
 },
 {
 name = top;
@@ -53,6 +63,14 @@ name = bottom;
 pos = (665,0);
 },
 {
+name = cyrtic;
+pos = (1228,0);
+},
+{
+name = lfthook;
+pos = (826,0);
+},
+{
 name = top;
 pos = (665,1118);
 }
@@ -94,6 +112,14 @@ anchors = (
 {
 name = bottom;
 pos = (597,0);
+},
+{
+name = cyrtic;
+pos = (990,0);
+},
+{
+name = lfthook;
+pos = (944,0);
 },
 {
 name = top;
@@ -139,6 +165,14 @@ name = bottom;
 pos = (564,0);
 },
 {
+name = cyrtic;
+pos = (1004,0);
+},
+{
+name = lfthook;
+pos = (834,0);
+},
+{
 name = top;
 pos = (564,1056);
 }
@@ -180,6 +214,14 @@ anchors = (
 {
 name = bottom;
 pos = (649,0);
+},
+{
+name = cyrtic;
+pos = (1212,0);
+},
+{
+name = lfthook;
+pos = (812,0);
 },
 {
 name = top;
@@ -232,6 +274,14 @@ name = bottom;
 pos = (533,0);
 },
 {
+name = cyrtic;
+pos = (926,0);
+},
+{
+name = lfthook;
+pos = (880,0);
+},
+{
 name = top;
 pos = (533,1056);
 }
@@ -271,6 +321,8 @@ width = 1060;
 );
 metricLeft = n;
 metricRight = n;
+script = latin;
+subCategory = Small;
 unicode = 668;
 userData = {
 interface.gridadjust.original = "{'width': 1634, 'leftMargin': 213, 'rightMargin': 214}";

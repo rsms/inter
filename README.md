@@ -9,7 +9,7 @@ several [OpenType features](https://rsms.me/inter/#features), like contextual al
 
 <br>
 
-[![Sample](misc/readme/intro.png)](https://rsms.me/inter/samples/)
+[![Sample](misc/readme/intro.png)](https://rsms.me/inter/)
 
 
 ### Quick questions
@@ -55,33 +55,36 @@ For web pages, there's an official [CDN distribution](https://rsms.me/inter/inte
 - [Homebrew `font-inter`](https://github.com/Homebrew/homebrew-cask-fonts)
 - [Ubuntu `fonts-inter`](https://packages.ubuntu.com/search?keywords=fonts-inter)
 - [List of Inter available on various Linux distributions…](https://repology.org/project/fonts:inter/versions)
-- [Google Fonts](https://fonts.google.com/specimen/Inter) (outdated version, no italics)
+- [Google Fonts](https://fonts.google.com/specimen/Inter)
 
 **Disclaimer:** Alternate distributions may not always be up-to-date.
 
 
-### Derivative versions
+## Notable uses of Inter
 
-- [Open Runde](https://github.com/lauridskern/open-runde) is a rounded variant of Inter
-- [Interalia](https://github.com/Shavian-info/interalia) extends Inter with Shavian characters
-
-
-## Notable projects using Inter
-
-- [Element software suite](https://element.io/)
 - [ElementaryOS](https://elementary.io/)
 - [Figma](https://figma.com/)
-- [GitLab](https://gitlab.com)
+- [GitLab](https://gitlab.com/)
+- [Guggenheim museums](https://www.pentagram.com/work/guggenheim-3) ([case study](https://www.pentagram.com/work/guggenheim-3/))
+- [ISO (International Organization for Standardization)](https://www.iso.org/) ([case study](https://www.motherbird.com.au/projects/iso/))
 - [Minimalissimo magazine](https://minimalissimo.com/)
-- [Mozilla brand](https://mozilla.design/firefox/typography/)
+- [Mozilla](https://mozilla.design/firefox/typography/)
 - [NASA](https://www.nasa.gov/specials/artemis-ii/)
 - [Pixar Presto](https://en.wikipedia.org/wiki/Presto_(animation_software))
+- [Switzerland, Canton of Zurich](https://www.zh.ch/)
 - [Unity](https://unity.com/)
 - [Zurich Airport](https://flughafen-zuerich.ch/)
 
 
 > **Have you made something nice with Inter?**<br>
 > [Please share in Show & Tell! →](https://github.com/rsms/inter/discussions/categories/show-and-tell)
+
+
+### Notable forks
+
+- [Open Runde](https://github.com/lauridskern/open-runde) is a rounded variant of Inter
+- [Interalia](https://github.com/Shavian-info/interalia) extends Inter with Shavian characters
+- [Raveo](https://github.com/jakubfoglar/raveo) is a "warmer version" of Inter
 
 
 ## Supporters & contributors

@@ -1,6 +1,8 @@
 {
 case = minor;
 glyphname = equal.dnom;
+kernLeft = approxequal.dnom;
+kernRight = approxequal.dnom;
 layers = (
 {
 guides = (
@@ -12,12 +14,35 @@ layerId = "11F4534A-B963-4AB5-820F-DAF9A20CD933";
 name = ital_gen;
 shapes = (
 {
-alignment = 1;
-pos = (-164,-992);
-ref = equal.numr;
+closed = 1;
+nodes = (
+(645,466,l),
+(666,593,l),
+(140,593,l),
+(119,466,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(602,206,l),
+(623,334,l),
+(97,334,l),
+(76,206,l)
+);
 }
 );
-width = 823;
+userData = {
+RMXScaler = {
+adjustSpace = 10;
+custom = -10;
+height = 55;
+verticalShift = 70;
+weight = -60;
+width = 55;
+};
+};
+width = 794;
 },
 {
 guides = (
@@ -29,12 +54,35 @@ layerId = "D0EC06BF-13F9-4C88-A6F5-B8203AF6C77E";
 name = ital_gen;
 shapes = (
 {
-alignment = 1;
-pos = (-163,-986);
-ref = equal.numr;
+closed = 1;
+nodes = (
+(697,463,l),
+(728,653,l),
+(122,653,l),
+(91,463,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(649,173,l),
+(680,364,l),
+(74,364,l),
+(43,173,l)
+);
 }
 );
-width = 835;
+userData = {
+RMXScaler = {
+adjustSpace = 10;
+custom = -12;
+height = 55;
+verticalShift = 70;
+weight = -370;
+width = 55;
+};
+};
+width = 819;
 },
 {
 guides = (
@@ -46,29 +94,74 @@ layerId = "200BE2C5-40F6-4CF4-AF4F-A33C0CC0964F";
 name = ital_gen;
 shapes = (
 {
-alignment = 1;
-pos = (-164,-990);
-ref = equal.numr;
+closed = 1;
+nodes = (
+(574,465,l),
+(582,511,l),
+(166,511,l),
+(158,465,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(539,255,l),
+(547,300,l),
+(131,300,l),
+(123,255,l)
+);
 }
 );
-width = 783;
+userData = {
+RMXScaler = {
+adjustSpace = 10;
+custom = -5;
+height = 52;
+verticalShift = 80;
+weight = 5;
+width = 55;
+};
+};
+width = 763;
 },
 {
 guides = (
 {
-pos = (728,200);
+pos = (729,200);
 }
 );
 layerId = m008;
 name = ital_gen;
 shapes = (
 {
-alignment = 1;
-pos = (-164,-992);
-ref = equal.numr;
+closed = 1;
+nodes = (
+(654,464,l),
+(675,591,l),
+(139,591,l),
+(118,464,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(611,206,l),
+(632,334,l),
+(96,334,l),
+(75,206,l)
+);
 }
 );
-width = 755;
+userData = {
+RMXScaler = {
+adjustSpace = 30;
+height = 55;
+verticalShift = 80;
+weight = -60;
+width = 55;
+};
+};
+width = 793;
 },
 {
 guides = (
@@ -80,12 +173,34 @@ layerId = m010;
 name = ital_gen;
 shapes = (
 {
-alignment = 1;
-pos = (-163,-986);
-ref = equal.numr;
+closed = 1;
+nodes = (
+(699,461,l),
+(731,651,l),
+(124,651,l),
+(92,461,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(651,171,l),
+(683,362,l),
+(76,362,l),
+(44,171,l)
+);
 }
 );
-width = 803;
+userData = {
+RMXScaler = {
+adjustSpace = 20;
+height = 55;
+verticalShift = 90;
+weight = -370;
+width = 55;
+};
+};
+width = 814;
 },
 {
 guides = (
@@ -97,12 +212,34 @@ layerId = m012;
 name = ital_gen;
 shapes = (
 {
-alignment = 1;
-pos = (-164,-990);
-ref = equal.numr;
+closed = 1;
+nodes = (
+(574,475,l),
+(581,520,l),
+(164,520,l),
+(157,475,l)
+);
+},
+{
+closed = 1;
+nodes = (
+(539,265,l),
+(546,310,l),
+(129,310,l),
+(122,265,l)
+);
 }
 );
-width = 655;
+userData = {
+RMXScaler = {
+adjustSpace = 40;
+height = 52;
+verticalShift = 90;
+weight = 8;
+width = 55;
+};
+};
+width = 748;
 }
 );
 unicode = 57546;
