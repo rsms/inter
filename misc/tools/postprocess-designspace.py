@@ -3,7 +3,7 @@ import defcon
 from multiprocessing import Pool
 from fontTools.designspaceLib import DesignSpaceDocument
 from ufo2ft.filters import loadFilters
-from datetime import datetime
+from datetime import datetime, timezone
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'tools')))
 from common import getGitHash, getVersion
@@ -15,7 +15,11 @@ OPT_EDITABLE = False  # --editable
 def update_version(ufo):
   version = getVersion()
   buildtag, buildtagErrs = getGitHash()
-  now = datetime.utcnow()
+  sourceDateEpoch = os.environ.get("SOURCE_DATE_EPOCH")
+  if sourceDateEpoch is not None:
+    now = datetime.fromtimestamp(int(sourceDateEpoch), timezone.utc)
+  else:
+    now = datetime.utcnow()
   if buildtag == "" or len(buildtagErrs) > 0:
     buildtag = "src"
     print("warning: getGitHash() failed: %r" % buildtagErrs, file=sys.stderr)
